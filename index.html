@@ -1,1 +1,340 @@
-<!DOCTYPE html><html><body><h1>Hype Index</h1><script>fetch('data.json').then(r=>r.json()).then(d=>document.body.innerHTML+=JSON.stringify(d))</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimocaMoviePass Hype Index v1.8</title>
+  <style>
+    :root {
+      --bg-main: #05060a;
+      --bg-panel: #080a10;
+      --bg-panel-alt: #0b0d16;
+      --border-soft: #20232f;
+      --text-main: #e5e5e5;
+      --text-muted: #9b9fb4;
+      --accent-green: #00ff6a;
+      --accent-green-soft: #09b45c;
+      --accent-cyan: #00e0ff;
+      --accent-yellow: #ffd65c;
+      --accent-red: #ff4b5c;
+      --accent-orange: #ff9b4b;
+      --shadow-soft: 0 0 24px rgba(0, 0, 0, 0.6);
+      --font-terminal: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #09101f 0, #05060a 45%, #02030a 100%);
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .sub-bar-note { color: var(--text-muted); }
+
+    .sub-bar-right { display: flex; align-items: center; gap: 10px; }
+
+    .refresh-indicator { display: inline-flex; align-items: center; gap: 4px; color: var(--text-muted); font-family: var(--font-mono); }
+
+    .refresh-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent-green); box-shadow: 0 0 8px rgba(0, 255, 106, 0.8); animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.6); opacity: 0.4; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    main {
+      flex: 1; display: flex; flex-direction: column; gap: 12px;
+    }
+
+    .terminal-panel {
+      background: linear-gradient(145deg, var(--bg-panel) 0, var(--bg-panel-alt) 100%); border-radius: 3px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-soft); padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 8px; min-height: 0;
+    }
+
+    .panel-header {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 8px; border-bottom: 1px solid #151827; padding-bottom: 4px;
+    }
+
+    .panel-title {
+      font-size: 12px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent-yellow); font-family: var(--font-mono);
+    }
+
+    .panel-subtitle { font-size: 11px; color: var(--text-muted); }
+
+    .panel-controls { display: flex; align-items: center; gap: 8px; font-size: 10px; color: var(--text-muted); }
+
+    .status-pill {
+      padding: 1px 6px 2px; border-radius: 999px; border: 1px solid rgba(0, 255, 106, 0.55); background: rgba(0, 255, 106, 0.08); color: var(--accent-green); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em;
+    }
+
+    .table-wrapper {
+      overflow: auto; -webkit-overflow-scrolling: touch; border-radius: 2px; border: 1px solid #11131f; background: radial-gradient(circle at 0 0, rgba(0, 224, 255, 0.06) 0, transparent 40%), radial-gradient(circle at 100% 0, rgba(0, 255, 106, 0.05) 0, transparent 45%), #05060a;
+    }
+
+    table { width: 100%; border-collapse: collapse; font-size: 11px; min-width: 800px; }
+
+    thead { background: rgba(5, 6, 12, 0.96); }
+
+    th, td { padding: 5px 7px; text-align: left; white-space: nowrap; border-bottom: 1px solid rgba(24, 27, 45, 0.9); }
+
+    th {
+      font-weight: 500; text-transform: uppercase; letter-spacing: 0.11em; font-size: 10px; color: var(--text-muted); position: sticky; top: 0; z-index: 2; backdrop-filter: blur(4px);
+    }
+
+    tbody tr:nth-child(even) { background: rgba(13, 16, 30, 0.9); }
+    tbody tr:nth-child(odd) { background: rgba(7, 8, 18, 0.9); }
+    tbody tr:hover { background: rgba(0, 224, 255, 0.09); }
+
+    .col-rank { width: 40px; text-align: right; padding-right: 10px; color: var(--accent-cyan); font-family: var(--font-mono); }
+    .col-title { min-width: 200px; font-size: 11px; }
+    .title-main { font-weight: 500; color: #f5f5f5; }
+    .title-sub { font-size: 10px; color: var(--text-muted); }
+    .col-hype, .col-nis, .col-views, .col-social { text-align: right; font-family: var(--font-mono); }
+    .hype-value { color: var(--accent-green); }
+    .nis-value { color: var(--accent-yellow); }
+    .metric-sub { font-size: 9px; color: var(--text-muted); }
+    .col-move { text-align: center; font-family: var(--font-mono); width: 80px; }
+    .move-chip { display: inline-flex; align-items: center; gap: 3px; padding: 1px 5px; border-radius: 999px; font-size: 9px; border: 1px solid transparent; }
+    .move-up { color: var(--accent-green); border-color: rgba(0, 255, 106, 0.7); background: rgba(0, 255, 106, 0.08); }
+    .move-down { color: var(--accent-red); border-color: rgba(255, 75, 92, 0.8); background: rgba(255, 75, 92, 0.08); }
+    .move-flat { color: var(--text-muted); border-color: rgba(155, 159, 180, 0.7); background: rgba(155, 159, 180, 0.04); }
+    .move-icon { font-size: 9px; }
+    .col-sentiment { min-width: 110px; }
+    .sentiment-bar-wrapper { display: flex; align-items: center; gap: 5px; }
+    .sentyment-bar { flex: 1; height: 5px; border-radius: 999px; background: rgba(38, 42, 68, 0.9); overflow: hidden; }
+    .sentyment-bar-fill { height: 100%; border-radius: inherit; transition: width 0.5s ease-out, background 0.5s ease-out; }
+    .sentiment-score { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); min-width: 40px; text-align: right; }
+    .sentiment-positive .sentiment-bar-fill { background: linear-gradient(90deg, #00ff6a, #00e0ff); }
+    .sentiment-neutral .sentiment-bar-fill { background: linear-gradient(90deg, #ffd65c, #ff9b4b); }
+    .sentiment-negative .sentiment-bar-fill { background: linear-gradient(90deg, #ff4b5c, #ff9b4b); }
+
+    .footer-note {
+      font-size: 10px; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between; padding: 4px 1px 0; border-top: 1px solid #141626; margin-top: auto;
+    }
+    .footer-note span { white-space: nowrap; }
+
+    @media (max-width: 768px) {
+      .top-bar { flex-direction: column; align-items: flex-start; }
+      .snapshot-grid { justify-content: flex-start; }
+      .panel-header { flex-direction: column; align-items: flex-start; }
+      .table-wrapper { max-height: calc(100vh - 260px); }
+    }
+    @media (min-width: 769px) {
+      .table-wrapper { max-height: calc(100vh - 210px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="top-bar">
+        <div class="brand-block">
+          <div class="brand-pill">H&#986;</div>
+          <div class="brand-text">
+            <div class="brand-text-main">AnimocaMoviePass</div>
+            <div class="brand-text-sub">Hype Index &mdash; v1.8 &middot; Bloomberg-meets-Entertainment</div>
+          </div>
+        </div>
+        <div class="snapshot-grid">
+          <div class="snapshot-item">
+            <div class="snapshot-label">Portfolio Hype Value</div>
+            <div class="snapshot-value" id="portfolioValueDisplay">&mdash;</div>
+            <div class="snapshot-meta">Cumulative slate hype metric</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-mlabel">24h P/L</div>
+            <div class="snapshot-value" id="plDisplay">&mdash;</div>
+            <div class="snapshot-meta">vs. prior daily close</div>
+          </div>
+          <div class="snapshot-item">
+            <div class="snapshot-label">Last Updated  (ULC)</div>
+            <div class="snapshot-value" id="lastUpdatedDisplay">&mdash;</div>
+            <div class="snapshot-meta">From Hype Index data.json</div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-bar">
+        <div class="sub-bar-left">
+          <span class="tag">Live Slate &middot; 10 Active Targets</span>
+          <span class="sub-bar-note">Vracking trailer heat, social velocity, sentiment (AMSI proxy) &amp; NIS (Net Intent Score).</span>
+        </div>
+        <div class="sub-bar-right">
+          <div class="refresh-indicator">
+            <span class="refresh-dot" aria-hiddem="true"></span>
+            <span>Auto-refresh: hourly from <code>data.json</code></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="terminal-panel" aria-label="Hype Index Table">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">HYPE INDEX &mdash; ACTIVE SLATE DASHFOARD</div>
+            <div class="panel-subtitle">Sorted by composite hype score. Movement measured vs. previous fetch.</div>
+          </div>
+          <div class="panel-controls">
+            <span class="stauts-pill" id="connectionStatus">LIVE FEED</span>
+            <span id="statusMessage">Waiting for initial data load&hellip;</span>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table aria-describedby="Hype Index rankings and sentiment">
+            <thead>
+              <tr>
+                <th class="col-rank">Rank</th>
+                <th class="col-title">Title / Package</th>
+                <th class=""col-hype">Hype</th>
+                <th class=""col-move">Ε Hype</th>
+                <th class=""col-sentiment">Sentiment</th>
+                <th class="col-nis">NIS</th>
+                <th class="col-views">Trailer Views</th>
+                <th class="col-social">Social Mentions</th>
+              </tr>
+            </thead>
+            <tbody id="hypeTableBody"></tbody>
+          </table>
+        </div>
+        <div class="footer-note">
+          <span >Sentiment ~ AMSI proxy; NIS = Net Intent Score (interest-adjusted).</span>
+          <span>All figures are indicative and not financial advice.</span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    (function () {
+      const DATA_URL = 'data.json';
+      const REFRESH_INTERVAL_MS = 60 * 60 * 1000;
+      let previousSnapshot = null;
+      const portfolioValueDisplay = document.getElementById('portfolioValueDisplay');
+      const plDisplay = document.getElementById('plDisplay');
+      const lastUpdatedDisplay = document.getElementById('lastUpdatedDisplay');
+      const tableBody = document.getElementById('hypeTableBody');
+      const connectionStatus = document.getElementById('connectionStatus');
+      const statusMessage = document.getElementById('statusMessage');
+      function formatNumber(num, decimals) {
+        if (num === null || num === undefined || isNaN(num)) return '\u2014';
+        return num.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+      }
+      function formatLarge(num) {
+        if (num === null || num === undefined || isNaN(num)) return '\u2014';
+        if (num >= 1000000) return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+        if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+        return num.toString();
+      }
+      function formatPercent(num, decimals) {
+        if (num === null || num === undefined || isNaN(num)) return '\u2014';
+        const sign = num > 0 ? '+' : '';
+        return sign + num.toFixed(decimals) + '%';
+      }
+      function classifySentiment(sentiment) {
+        if (sentiment >= 0.8) return 'positive';
+        if (sentiment >= 0.6) return 'neutral';
+        return 'negative';
+      }
+      function renderSnapshot(data) {
+        portfolioValueDisplay.textContent = formatNumber(data.portfolioValue, 1) + ' H\u039E';
+        const plClass = data.plPercentage >= 0 ? 'positive' : 'negative';
+        plDisplay.classList.remove('positive', 'negative');
+        plDisplay.classList.add(plClass);
+        plDisplay.textContent = formatPercent(data.plPercentage, 1);
+        try {
+          const d = new Date(data.lastUpdated);
+          if (!isNaN(d.getTime())) {
+            lastUpdatedDisplay.textContent = d.toISOString().replace('T', ' ').replace('Z', 'Z');
+          } else {
+            lastUpdatedDisplay.textContent = data.lastUpdated || '\u2014';
+          }
+        } catch (e) { lastUpdatedDisplay.textContent = data.lastUpdated || '\u2014'; }
+        tableBody.innerHTML = '';
+        const prevByTitle = new Map();
+        if (previousSnapshot && Array.isArray(previousSnapshot.movies)) {
+          previousSnapshot.movies.forEach(m => prevByTitle.set(m.title, m));
+        }
+        (data.movies || []).slice().sort((a, b) => a.rank - b.rank).forEach(movie => {
+          const tr = document.createElement('tr');
+          const tdRank = document.createElement('td'); tdRank.className = 'col-rank'; tdRank.textContent = movie.rank; tr.appendChild(tdRank);
+          const tdTitle = document.createElement('td'); tdTitle.className = 'col-title';
+          const titleMain = document.createElement('div'); titleMain.className = 'title-main'; titleMain.textContent = movie.title;
+          const titleSub = document.createElement('div'); titleSub.className = 'title-sub'; titleSub.textContent = 'Hype: ' + formatNumber(movie.hypeScore, 1) + ' · NIS: ' + formatNumber(movie.nisScore, 1);
+          tdTitle.appendChild(titleMain); tdTitle.appendChild(titleSub); tr.appendChild(tdTitle);
+          const tdHype = document.createElement('td'); tdHype.className = 'col-hype';
+          const hypeMain = document.createElement('div'); hypeMain.className = 'hype-value'; hypeMain.textContent = formatNumber(movie.hypeScore, 1);
+          const hypeSub = document.createElement('div'); hypeSub.className = 'metric-sub'; hypeSub.textContent = 'Slate weight';
+          tdHype.appendChild(hypeMain); tdHype.appendChild(hypeSub); tr.appendChild(tdHype);
+          const tdMove = document.createElement('td'); tdMove.className = 'col-move';
+          const moveChip = document.createElement('span'); moveChip.className = 'move-chip move-flat';
+          const prev = prevByTitle.get(movie.title);
+          if (prev) {
+            const delta = movie.hypeScore - prev.hypeScore;
+            const deltaAbs = Math.abs(delta);
+            const moveIcon = document.createElement('span'); moveIcon.className = 'move-icon';
+            const moveVal = document.createElement('span');
+            if (deltaAbs < 0.05) { moveChip.className = 'move-chip move-flat'; moveIcon.textContent = '\u25ac'; moveVal.textContent = '0.0'; }
+            else if (delta > 0) { moveChip.className = 'move-chip move-up'; moveIcon.textContent = '\u25b2'; moveVal.textContent = '+' + delta.toFixed(1); }
+            else { moveChip.className = 'move-chip move-down'; moveIcon.textContent = '\u25bc'; moveVal.textContent = delta.toFixed(1); }
+            moveChip.appendChild(moveIcon); moveChip.appendChild(moveVal);
+          } else {
+            const moveIcon = document.createElement('span'); moveIcon.className = 'move-icon'; moveIcon.textContent = '\u2022';
+            const moveVal = document.createElement('span'); moveVal.textContent = 'new';
+            moveChip.appendChild(moveIcon); moveChip.appendChild(moveVal);
+          }
+          tdMove.appendChild(moveChip); tr.appendChild(tdMove);
+          const tdSentiment = document.createElement('td'); tdSentiment.className = 'col-sentiment';
+          const wrapper = document.createElement('div'); wrapper.className = 'sentiment-bar-wrapper';
+          const bar = document.createElement('div'); bar.className = 'sentiment-bar';
+          const fill = document.createElement('div'); const sentimentClass = 'sentiment-' + classifySentiment(movie.sentiment || 0);
+          fill.className = 'sentiment-bar-fill ' + sentimentClass;
+          const pct = Math.max(0, Math.min(1, movie.sentiment || 0)) * 100; fill.style.width = pct.toFixed(0) + '%';
+          bar.appendChild(fill); const score = document.createElement('div'); score.className = 'sentiment-score'; score.textContent = (pct || 0).toFixed(0) + '%';
+          wrapper.appendChild(bar); wrapper.appendChild(score); tdSentiment.appendChild(wrapper); tr.appendChild(tdSentiment);
+          const tdNis = document.createElement('td'); tdNis.className = 'col-nis';
+          const nisMain = document.createElement('div'); nisMain.className = 'nis-value'; nisMain.textContent = formatNumber(movie.nisScore, 1);
+          const nisSub = document.createElement('div'); nisSub.className = 'metric-sub'; nisSub.textContent = 'Intent adj.';
+          tdNis.appendChild(nisMain); tdNis.appendChild(nisSub); tr.appendChild(tdNis);
+          const tdViews = document.createElement('td'); tdViews.className = 'col-views';
+          const vMain = document.createElement('div'); vMain.textContent = formatLarge(movie.trailerViews);
+          const vSub = document.createElement('div'); vSub.className = 'metric-sub'; vSub.textContent = 'Official + earned';
+          tdViews.appendChild(vMain); tdViews.appendChild(vSub); tr.appendChild(tdViews);
+          const tdSocial = document.createElement('td'); tdSocial.className = 'col-social';
+          const sMain = document.createElement('div'); sMain.textContent = formatLarge(movie.socialMentions);
+          const sSub = document.createElement('div'); sSub.className = 'metric-sub'; sSub.textContent = '24h cross-platform';
+          tdSocial.appendChild(sMain); tdSocial.appendChild(sSub); tr.appendChild(tdSocial);
+          tableBody.appendChild(tr);
+        });
+        connectionStatus.textContent = 'LIVE FEED'; connectionStatus.style.borderColor = 'rgba(0,255,106,0.7)';
+        statusMessage.textContent = 'Data loaded from data.json';
+        previousSnapshot = JSON.parse(JSON.stringify(data));
+      }
+      async function fetchData() {
+        try {
+          statusMessage.textContent = 'Refreshing from data.json&hellip;';
+          const response = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-cache' });
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          const data = await response.json(); renderSnapshot(data);
+        } catch (err) {
+          connectionStatus.textContent = 'DEGRADED'; connectionStatus.style.borderColor = 'rgba(255, 153, 75, 0.9)';
+          connectionStatus.style.color = 'var(--accent-orange)'; statusMessage.textContent = 'Error loading data.json';
+        }
+      }
+      fetchData(); setInterval(fetchData, REFRESH_INTERVAL_MS);
+    })();
+  </script>
+</body>
+</html>
