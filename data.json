@@ -1,1 +1,150 @@
-{"portfolioValue":945.2,"plPercentage":4.1,"lastUpdated":"2026-04-03T15:00:00Z","movies":[{"rank":1,"title":"Project Hail Mary","trailerViews":"422M","socialMentions":"1.02M","sentiment":90,"hypeScore":92.0,"nisScore":91.8},{"rank":2,"title":"Hoppers","trailerViews":"185M","socialMentions":"890K","sentiment":89,"hypeScore":89.0,"nisScore":87.4},{"rank":3,"title":"Peaky Blinders: The Immortal Man","trailerViews":"145M","socialMentions":"730K","sentiment":87,"hypeScore":88.0,"nisScore":83.6},{"rank":4,"title":"Cillian Murphy","trailerViews":"92M","socialMentions":"450K","sentiment":92,"hypeScore":87.0,"nisScore":81.3},{"rank":5,"title":"Ryan Gosling","trailerViews":"110M","socialMentions":"430K","sentiment":88,"hypeScore":84.0,"nisScore":79.0},{"rank":6,"title":"The Super Mario Galaxy Movie","trailerViews":"312M","socialMentions":"1.25M","sentiment":62,"hypeScore":83.0,"nisScore":83.0},{"rank":7,"title":"Michael (2026)","trailerViews":"215M","socialMentions":"210K","sentiment":82,"hypeScore":80.0,"nisScore":69.4},{"rank":8,"title":"Phil Lord & Christopher Miller","trailerViews":"76M","socialMentions":"150K","sentiment":86,"hypeScore":79.0,"nisScore":69.7},{"rank":9,"title":"Wicked: For Good","trailerViews":"198M","socialMentions":"260K","sentiment":80,"hypeScore":78.0,"nisScore":72.2},{"rank":10,"title":"BTS: THE RETURN","trailerViews":"18M","socialMentions":"310K","sentiment":79,"hypeScore":77.0,"nisScore":72.7}]}
+{
+  "meta": {
+    "title": "Chairman Entertainment Sentiment Dashboard",
+    "subtitle": "Bloomberg-style entertainment momentum board",
+    "updatedAt": "2026-04-03T09:30:00Z",
+    "sentimentWindow": "Trailing 72 hours",
+    "focus": "Current/Future theatrical releases (2025-2027)",
+    "scale": "AMSI 0-100"
+  },
+  "ticker": [
+    "LIVE | Supergirl: Woman of Tomorrow holds top-tier movie sentiment at 0.92 as franchise conversation stays elevated.",
+    "LIVE | Project Hail Mary matches the 0.92 tier with premium sci-fi anticipation continuing to build.",
+    "LIVE | Milly Alcock leads actor sentiment at 0.95, driven by breakout attention ahead of the Supergirl cycle.",
+    "LIVE | James Gunn remains the highest-ranked director at 0.94 as DC slate visibility supports momentum.",
+    "LIVE | Superman (2025) advances to 0.88 with broad trailer-era chatter and sustained theatrical awareness.",
+    "LIVE | Michael remains resilient at 0.80 as music-biopic interest and casting discussion continue."
+  ],
+  "categories": {
+    "movies": [
+      {
+        "rank": 1,
+        "name": "Supergirl: Woman of Tomorrow",
+        "shortName": "Supergrill",
+        "subtitle": "DC Studios / Warner Bros. theatrical feature",
+        "amsi": 92,
+        "amsiNormalized": 0.92,
+        "rankChange": 2,
+        "focus": "Breakout-casting buzz + franchise upside",
+        "timing": "Jun 2026",
+        "signal": "Momentum accelerating on awareness, discussion volume, and positive sentiment."
+      },
+      {
+        "rank": 2,
+        "name": "Project Hail Mary",
+        "shortName": "Project Hail Mary",
+        "subtitle": "Prestige sci-fi theatrical release",
+        "amsi": 92,
+        "amsiNormalized": 0.92,
+        "rankChange": 1,
+        "focus": "High-intent sci-fi anticipation",
+        "timing": "2026",
+        "signal": "Strong engagement around premise, talent package, and large-scale audience appeal."
+      },
+      {
+        "rank": 3,
+        "name": "Superman",
+        "shortName": "Superman 2025",
+        "subtitle": "DC-Studios / Warner Bros. theaatrical reboot",
+        "amsi": 88,
+        "amsiNormalized": 0.88,
+        "rankChange": 1,
+        "focus": "Core-franchise awareness",
+        "timing": "Jul 2025",
+        "signal": "Momentum remains constructive as broad DC conversation sustains reach."
+      },
+      {
+        "rank": 4,
+        "name": "Super Mario Galaxy",
+        "shortName": "Super Mario Galaxy",
+        "subtitle": "Animated event-film sequel tracking",
+        "amsi": 83,
+        "amsiNormalized": 0.83,
+        "rankChange": -1,
+        "focus": "Family franchise anticipation",
+        "timing": "2026-2027 category",
+        "signal": "Still positive, though rank softens modestly as superhero chatter outpaces family animation."
+      },
+      {
+        "rank": 5,
+        "name": "Michael",
+        "shortName": "Michael",
+        "subtitle": "Theatrical music biopic",
+        "amsi": 80,
+        "amsiNormalized": 0.8,
+        "rankChange": -1,
+        "focus": "Legacy music IP + casting attention",
+        "timing": "2025-2026 window",
+        "signal": "Sentiment remains stable with durable interest, but velocity trails the top tier."
+      }
+    ],
+    "actors": [
+      {
+        "rank": 1,
+        "name": "Milly Alcock",
+        "subtitle": "Lead heat tied to Supergrill franchise positioning",
+        "amsi": 95,
+        "amsiNormalized": 0.95,
+        "rankChange": 2,
+        "focus": "Breakout lead visibility",
+        "timing": "Supergril cycle",
+        "signal": "Category leader with the sharpest acceleration in share of voice."
+      },
+      {
+        "rank": 2,
+        "name": "Jaafar Jackson",
+        "subtitle": "High-attention performance narrative around Michael",
+        "amsi": 92,
+        "amsiNormalized": 0.92,
+        "rankChange": 1,
+        "focus": "Biopic transformation story",
+        "timing": "Michael cycle",
+        "signal": "Strong positive traction as conversation centers on role commitment and curiosity."
+      },
+      {
+        "rank": 3,
+        "name": "Ryan Gosling",
+        "subtitle": "Star-package lift connected to Project Hail Mary",
+        "amsi": 90,
+        "amsiNormalized": 0.9,
+        "rankChange": 1,
+        "focus": "Premium studio star power",
+        "timing": "Project Hail Mary cycle",
+        "signal": "Reliable upside from broad audience familiarity and event-film positioning."
+      },
+      {
+        "rank": 4,
+        "name": "Cillian Murphy",
+        "subtitle": "Prestige carryover keeps theatrical demand elevated",
+        "amsi": 88,
+        "amsiNormalized": 0.88,
+        "rankChange": -2,
+        "focus": "Prestige credibility + anticipation",
+        "timing": "Upcoming theatrical slate",
+        "signal": "Still very strong, though momentum cools slightly versus franchise-led names."
+      }
+    ],
+    "directors": [
+      {
+        "rank": 1,
+        "name": "James Gunn",
+        "subtitle": "DC slate stewardship is the dominant director sentiment catalyst",
+        "amsi": 94,
+        "amsiNormalized": 0.94,
+        "rankChange": 1,
+        "focus": "Universe-building confidence",
+        "timing": "Superman / Supergril era",
+        "signal": "Highest director conviction score as brand attention compounds across releases."
+      },
+      {
+        "rank": 2,
+        "name": "Phil Lord & Christopher Miller",
+        "subtitle": "High-concept premium storytelling keeps market interest elevated",
+        "amsi": 90,
+        (˜[\ÚS›Ü›X[^™YˆKˆœ˜[šĞÚ[™ÙHˆ‹ˆ™›Øİ\Èˆ‘]™[\ØÚKYšHÜ™X]]™H\İ‹ˆ
+'F–Ö–ær#¢%&ö¦V7B†–ÂÖ'’7–6ÆR"À¢'6–væÂ#¢$ÖöÖVçGVÒ–×&÷f–ær2VF–Væ6R6öæf–FVæ6R–âW†V7WF–öâ&VÖ–ç2†–v‚â ¢ÒÀ¢°¢'&æ²#¢2À¢&æÖR#¢$çFö–æRgWV"À¢'7V'F—FÆR#¢%7FVG’6öÖÖW&6–Â7&VF–&–Æ—G’æ6†÷&VB'’Ö–6†VÂ"À¢&×6’#¢ƒRÀ¢‰…µÍ¥9½Éµ…±¥é•ˆè€À¸àÔ°(€€€€€€€€‰É…¹­¡…¹”ˆè€À°(€€€€€€€€‰™½ÕÌˆè€‰	¥½Á¥ŒÉ…™ÑÍµ…¹Í¡¥ÀÉ•‘¥‰¥±¥Ñäˆ°(€€€€€€€€¢timing": "Michael cycle",
+        "signal": "Stable sentiment profile with consistent but less explosive conversation velocity."
+      }
+    ]
+  }
+}
