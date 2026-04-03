@@ -1,1 +1,55 @@
-<html><body>v2.1 Pending</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hype Index v2.1</title>
+<style>
+body { background: #000; color: #0f0; font-family: monospace; }
+.ticker { border-bottom: 1px solid #333; padding: 10px; }
+.tabs { display: flex; gap: 20px; padding: 10px; }
+.tab { cursor: pointer; color: #888; }
+.active { color: #fff; border-bottom: 2px solid #fff; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; text-align: left; border-bottom: 1px solid #222; }
+</style>
+</head>
+<body>
+<div class="ticker" id="ticker">Loading Hype Wires...</div>
+<div class="tabs">
+<div class="tab active" id="tab-movies">MOVIES</div>
+<div class="tab" id="tab-actors">ACTORS</div>
+<div class="tab" id="tab-directors">DIRECTORS</div>
+</div>
+<div id="content">
+<table id="data-table">
+<thead><tr><th>Rank</th><th>Name/Title</th><th>Score</th><th>Move</th></tr></thead>
+<tbody id="data-body"></tbody>
+</table>
+</div>
+<script>
+let currentData = null;
+let currentTab = 'movies';
+async function update() {
+    const res = await fetch('data.json?t=' + Date.now());
+    currentData = await res.json();
+    render();
+}
+function render() {
+    document.getElementById('ticker').innerText = currentData.news.map(n => n.headline).join(' | ');
+    const list = currentData[currentTab];
+    const badge = document.getElementById('data-body');
+    badge.innerHTML = list.map(i => `tr><td>${i|rank}</td><td>${i|title || i|name}</td><td>${i|hypeScore}</td><td>${i|movement}</td></tr>`).join('');
+}
+document.querySelectorAll('.tab').forEach(t => {
+    t.onclick = () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        currentTab = t.id.split('-')[1];
+        render();
+    };
+});
+setInterval(update, 60000);
+update();
+</script>
+</body>
+</html>
