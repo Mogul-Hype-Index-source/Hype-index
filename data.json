@@ -1,107 +1,88 @@
 {
-  "version": "2.7",
-  "generated_at": "2026-04-04T04:20:00Z",
-  "methodology": "NIS v1.1",
-  "summary": {
-    "movies": 50,
-    "talent": 50,
-    "total": 100
-  },
-  "nis_logic": {
-    "version": "1.1",
-    "score_range": "0-100",
-    "factors": [
-      "conversation velocity",
-      "reach",
-      "sentiment balance",
-      "recency weighting",
-      "sustained momentum smoothing"
-    ]
+  "version": "2.8",
+  "generated_at": "2026-04-04T07:05:40Z",
+  "timestamp": "2026-04-04T07:00:00Z",
+  "nis_formula_version": "NIS v1.1",
+  "window": {
+    "duration_minutes": 60,
+    "start": "2026-04-04T06:00:00Z",
+    "end": "2026-04-04T07:00:00Z"
   },
   "categories": {
     "movies": [
       {
         "rank": 1,
-        "move": "+3",
-        "id": "485c7cce",
-        "entity": "Supergirl",
-        "score": 97,
-        "sentiment": "Positive",
-        "notes": "Positive sentiment on Krypton world-building details."
+        "move": "+1",
+        "id": "super_mario_galaxy_movie",
+        "entity": "Super Mario Galaxy Movie",
+        "score": 14.33,
+        "sentiment": "Very Positive",
+        "notes": "Pulse Shift: Strong sustained upside vs franchise baseline."
       },
       {
         "rank": 2,
-        "move": "+4",
-        "id": "167ba058",
-        "entity": "Project Hail Mary",
-        "score": 94,
-        "sentiment": "Positive",
-        "notes": "Surging on positive reviews and \"beautiful\" visuals."
+        "move": "0",
+        "id": "avengers_doomsday",
+        "entity": "Avengers: Doomsday",
+        "score": 6.57,
+        "sentiment": "Mixed-Positive",
+        "notes": "Pulse Shift: Mild positive recovery from last week's skepticism."
       },
       {
         "rank": 3,
         "move": "+1",
-        "id": "2ea9c519",
-        "entity": "Super Mario Galaxy",
-        "score": 82,
-        "sentiment": "Mixed",
-        "notes": "High volume, but mixed sentiment on RT scores and fan division."
+        "id": "supergirl_woman_of_tomorrow",
+        "entity": "Supergirl: Woman of Tomorrow",
+        "score": 2.73,
+        "sentiment": "Positive",
+        "notes": "Pulse Shift: Upward inflection as trailer discourse broadens."
       },
       {
         "rank": 4,
-        "move": "0",
-        "id": "13ca1868",
-        "entity": "Avengers: Doomsday",
-        "score": 89,
-        "sentiment": "Mixed",
-        "notes": "Steady buzz on production adjustments."
-      },
-      {
-        "rank": 5,
-        "move": "-6",
-        "id": "9c9f7a50",
-        "entity": "The Drama",
-        "score": 72,
-        "sentiment": "Negative",
-        "notes": "Negative shift on critical reviews (\"squandered pairing\")."
+        "move": "+1",
+        "id": "michael_2026",
+        "entity": "Michael (2026)",
+        "score": 2.6,
+        "sentiment": "Positive",
+        "notes": "Puls`Shift: Gradual build as casting and set-photo coverage compound."
       }
     ],
     "talent": [
       {
         "rank": 1,
-        "move": "+5",
-        "id": "738ab25c",
-        "entity": "Milly Alcock",
-        "score": 96,
+        "move": "0",
+        "id": "zendaya",
+        "entity": "Zendaya",
+        "score": 2.95,
         "sentiment": "Positive",
-        "notes": "Benefiting from Supergirl halo."
+        "notes": "Pulse Shift: Normalized from recent peak but still elevated."
       },
       {
         "rank": 2,
-        "move": "+2",
-        "id": "182d2840",
-        "entity": "Zendaya",
-        "score": 92,
+        "move": "+1",
+        "id": "robert_pattinson",
+        "entity": "Robert Pattinson",
+        "score": 2.09,
         "sentiment": "Positive",
-        "notes": "Broad fashion/film reach."
+        "notes": "Pulse Shift: Slight uptick on Batman sequel chatter."
       },
       {
         "rank": 3,
-        "move": "+1",
-        "id": "f45c69e4",
-        "entity": "Robert Pattinson",
-        "score": 88,
+        "move": "-1",
+        "id": "milly_alcock",
+        "entity": "Milly Alcock",
+        "score": 1.53,
         "sentiment": "Positive",
-        "notes": "Linked to The Drama and Batman."
+        "notes": "Pulse Shift: Stable-to-up as Supergirl lead narrative anchors visibility."
       },
       {
         "rank": 4,
-        "move": "+3",
-        "id": "07d5dc80",
-        "entity": "Ryan Gosling",
-        "score": 85,
+        "move": "0",
+        "id": "jaafar_jackson",
+        "entity": "Jaafar Jackson",
+        "score": 1.07,
         "sentiment": "Positive",
-        "notes": "Praised for Project Hail Mary performance."
+        "notes": "Puls`Shift: Steady climb tied to Michael biopic coverage."
       }
     ]
   }
