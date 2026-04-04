@@ -1,955 +1,1129 @@
 {
-  "version": "Hype Index v2.6",
-  "generated_at": "2026-04-04T03:00:00Z",
-  "summary": {
-    "total_entities": 100,
+  "version": "2.6",
+  "generated_at": "2026-04-04T03:18:27Z",
+  "counts": {
     "movies": 50,
     "talent": 50,
-    "top_movie": {
-      "ENTITY": "Mario Galaxy",
-      "NIS": 55.0
+    "total": 100
+  },
+  "pulse": [
+    "SUPERDierl Heat: Supergirl holds #1 MOVIE at 97 hype after new-look surge.",
+    "MILLY ALCOCK leads TALENT at 96 hype on Supergirl halo.",
+    "THE DRAMA stays hot at #2 MOVIE as Zendaya/Pattinson press travels.",
+    "SUPER MARIO GALAXY MOVIE tops raw volume, but critic sentiment remains mixed.",
+    "AVENGERS: DOOMSDAY sustains elite impact on RDJ casting plus McKellen rumor heat.",
+    "ZENDAYA remains #2 TALENT with fashion-media and film press compounding."
+  ],
+  "movies": [
+    {
+      "id": "485c7cce",
+      "rank": 1,
+      "move": 4,
+      "name": "Supergirl",
+      "hype_score": 97,
+      "news_impact_score": 96,
+      "mentions_x": 882,
+      "sentiment": "positive",
+      "notes": "New-look reveal and first-image chatter keep it at peak heat."
     },
-    "top_talent": {
-      "ENTITY": "Zendaya",
-      "NIS": 26.7
+    {
+      "id": "0c66fe87",
+      "rank": 2,
+      "move": 7,
+      "name": "The Drama",
+      "hype_score": 95,
+      "news_impact_score": 92,
+      "mentions_x": 761,
+      "sentiment": "positive",
+      "notes": "Zendaya/Pattinson pairing plus Vogue coverage accelerated social lift."
+    },
+    {
+      "id": "a500c6ce",
+      "rank": 3,
+      "move": 2,
+      "name": "Super Mario Galaxy Movie",
+      "hype_score": 93,
+      "news_impact_score": 84,
+      "mentions_x": 981,
+      "sentiment": "controversy",
+      "notes": "Massive conversation volume, though critic sentiment remains mixed."
+    },
+    {
+      "id": "4bfbf850",
+      "rank": 4,
+      "move": 5,
+      "name": "Avengers: Doomsday",
+      "hype_score": 92,
+      "news_impact_score": 89,
+      "mentions_x": 824,
+      "sentiment": "positive",
+      "notes": "RDJ casting buzz and Ian McKellen stunt-rumor chatter sustain momentum."
+    },
+    {
+      "id": "e5a67785",
+      "rank": 5,
+      "move": 3,
+      "name": "Spider-Man: Brand New Day"",
+      "hype_score": 91,
+      "news_impact_score": 86,
+      "mentions_x": 708,
+      "sentiment": "positive",
+      "notes": "Title and casting speculation continue to over-index on fan channels."
+    },
+    {
+      "id": "175ff0ea",
+      "rank": ‹
+      "move": 2,
+      "name": "Dune: Messiah",
+      "hype_score": 89,
+      "news_impact_score": 82,
+      "mentions_x": 645,
+      "sentiment": "positive",
+      "notes": "Franchise prestige, returning cast talk, and sequel timing drive steady buzz."
+    },
+    {
+      "id": "db3ef6e1",
+      "rank": 7,
+      "move": -1,
+      "name": "The Batman Part II",
+      "hype_score": 88,
+      "news_impact_score": 80,
+      "mentions_x": 618,
+      "sentiment": "positive",
+      "notes": "Delay talk softened sentiment slightly, but core demand remains strong."
+    },
+    {
+      "id": "1fc00559",
+      "rank": 8,
+      "move": 6,
+      "name": "Project Hail Mary",
+      "hype_score": 87,
+      "news_impact_score": 78,
+      "mentions_x": 564,
+      "sentiment": "positive",
+      "notes": "Trailer and adaptation curiosity lifted mainstream awareness."
+    },
+    {
+      "id": "daa82484",
+      "rank": 9,
+      "move": 4,
+      "name": "The Odyssey",
+      "hype_score": 86,
+      "news_impact_score": 77,
+      "mentions_x": 548,
+      "sentiment": "positive",
+      "notes": "Auteur-plus-cast packaging gives it outsized premium media coverage."
+    },
+    {
+      "id": "49f6cb05",
+      "rank": 10,
+      "move": 1,
+      "name": "Shrek 5",
+      "hype_score": 85,
+      "news_impact_score": 79,
+      "mentions_x": 693,
+      "sentiment": "positive",
+      "notes": "Family nostalgia and voice-cast discussion keep engagement broad."
+    },
+    {
+      "id": "d96512b8",
+      "rank": 11,
+      "move": 2,
+      "name": "The Fantastic Four",
+      "hype_score": 84,
+      "news_impact_score": 76,
+      "mentions_x": 577,
+      "sentiment": "positive",
+      "notes": "Marvel reset optimism and cast chemistry clips support healthy volume."
+    },
+    {
+      "id": "4cfcb69b",
+      "rank": 12,
+      "move": 8,
+      "name": "The Legend of Zelda",
+      "hype_score": 84,
+      "news_impact_score": 74,
+      "mentions_x": 531,
+      "sentiment": "positive",
+      "notes": "Fan-casting threads and format speculation keep it in heavy circulation."
+    },
+    {
+      "id": "7ad672a9",
+      "rank": 13,
+      "move": -2,
+      "name": "Jurassic World: Rebirth",
+      "hype_score": 83,
+      "news_impact_score": 73,
+      "mentions_x": 522,
+      "sentiment": "positive",
+      "notes": "Brand familiarity keep? volume high despite modest sequel fatigue."
+    },
+    {
+      "id": "56cd74e9",
+      "rank": 14,
+      "move": 1,
+      "name": "Wicked: For Good",
+      "hype_score": 83,
+      "news_impact_score": 75,
+      "mentions_x": 545,
+      "sentiment": "positive",
+      "notes": "Carryover goodwill from the first film supports a stable sequel pulse."
+    },
+    {
+      "id": "602f07e6",
+      "rank": 15,
+      "move": 9,
+      "name": "Clayface",
+      "hype_score": 82,
+      "news_impact_score": 71,
+      "mentions_x": 496,
+      "sentiment": "positive",
+      "notes": "Unexpected character choice sparked curiosity and comic-fan debate."
+    },
+    {
+      "id": "63f7f872",
+      "rank": 16,
+      "move": 5,
+      "name": "The Hunger Games: Sunrise on the Reaping",
+      "hype_score": 82,
+      "news_impact_score": 72,
+      "mentions_x": 503,
+      "sentiment": "positive",
+      "notes": "Book adaptation interest and franchise memory are compounding."
+    },
+    {
+      "id": "4d59b3ad",
+      "rank": 17,
+      "move": 3,
+      "name": "Wake Up Dead Man: A Knives Out Mystery",
+      "hype_score": 81,
+      "news_impact_score": 70,
+      "mentions_x": 472,
+      "sentiment": "positive",
+      "notes": "Ensemble intrigue and franchise trust are holding strong."
+    },
+    {
+      "id": "4b6b477f",
+      "rank": 18,
+      "move": 0,
+      "name": "Frozen III",
+      "hype_score": 81,
+      "news_impact_score": 69,
+      "mentions_x": 451,
+      "sentiment": "positive",
+      "notes": "Family-demo anticipation remains turable even on lighter news weeks."
+    },
+    {
+      "id": "7889857e",
+      "rank": 19,
+      "move": -1,
+      "name": "Toy Story 5",
+      "hype_score": 80,
+      "news_impact_score": 68,
+      "mentions_x": 438,
+      "sentiment": "neutral",
+      "notes": "Brand recognition is enormous, but creative caution tempers upside."
+    },
+    {
+      "id": "6876bb0c",
+      "rank": 20,
+      "move": 2,
+      "name": "The Mandalorian & Grogu",
+      "hype_score": 80,
+      "news_impact_score": 67,
+      "mentions_x": 429,
+      "sentiment": "positive",
+      "notes": "Crossover event framing helps sustain weekly conversation."
+    },
+    {
+      "id": "fc4ee43e",
+      "rank": 21,
+      "move": 4,
+      "name": "Trkún: Ares",
+      "hype_score": 79,
+      "news_impact_score": 66,
+      "mentions_x": 412,
+      "sentiment": "positive",
+      "notes": "Visuals and soundtrack discourse lift it beyond core sci-fi circles."
+    },
+    {
+      "id": "f5a7a4bb",
+      "rank": 22,
+      "move": 1,
+      "name": "The Lord of the Rings: The Hunt for Gollum",
+      "hype_score": 79,
+      "news_impact_score": 64,
+      "mentions_x": 395,
+      "sentiment": "neutral",
+      "notes": "Title recognition is high, while early skepticism keeps sentiment mixed."
+    },
+    {
+      "id": "2c066a21",
+      "rank": 23,
+      "move": -4,
+      "name": "Blade",
+      "hype_score": 78,
+      "news_impact_score": 61,
+      "mentions_x": 388,
+      "sentiment": "negative",
+      "notes": "Development turbulence still draws attention, but not all of it is favorable."
+    },
+    {
+      "id": "451ee126",
+      "rank": 24,
+      "move": 2,
+      "name": "I Am Legend 2",
+      "hype_score": 78,
+      "news_impact_score": 63,
+      "mentions_x": 402,
+      "sentiment": "positive",
+      "notes": "Will Smith sequel curiosity remains a reliable headline magnet."
+    },
+    {
+      "id": "21d8485f",
+      "rank": 25,
+      "move": -2,
+      "name": "Moana",
+      "hype_score": 78,
+      "news_impact_score": 62,
+      "mentions_x": 397,
+      "sentiment": "neutral",
+      "notes": "Live-action remake chatter is broad, though not overwhelmingly enthusiastic."
+    },
+    {
+      "id": "bed98668",
+      "rank": 26,
+      "move": 6,
+      "name": "Masters of the Universe",
+      "hype_score": 77,
+      "news_impact_score": 60,
+      "mentions_x": 376,
+      "sentiment": "positive",
+      "notes": "Costume and cast speculation are reviving legacy-IP interest."
+    },
+    {
+      "id": "6a7a0255",
+      "rank": 27,
+      "move": 3,
+      "name": "How to Train Your Dragon",
+      "hype_score": 77,
+      "news_impact_score": 65,
+      "mentions_x": 421,
+      "sentiment": "positive",
+      "notes": "Family appeal and adaptation footage are landing well online."
+    },
+    {
+      "id": "c775dd5f",
+      "rank": 28,
+      "move": 5,
+      "name": "Ballerina",
+      "hype_score": 76,
+      "news_impact_score": 64,
+      "mentions_x": 416,
+      "sentiment": "positive",
+      "notes": "John Wick adjacency and Ana de Armas heat combine well."
+    },
+    {
+      "id": "84d96156",
+      "rank": 29,
+      "move": -3,
+      "name": "Superman",
+      "hype_score": 76,
+      "news_impact_score": 66,
+      "mentions_x": 432,
+      "sentiment": "positive",
+      "notes": "Still strong, but attention rotated toward adjacent DC projects this cycle."
+    },
+    {
+      "id": "ec6f86c6",
+      "rank": 30,
+      "move": 7,
+      "name": "Sinners",
+      "hype_score": 75,
+      "news_impact_score": 63,
+      "mentions_x": 401,
+      "sentiment": "positive",
+      "notes": "Auteur interest and strong early reactions are improving discovery."
+    },
+    {
+      "id": "99f28a34",
+      "rank": 31,
+      "move": 2,
+      "name": "Resident Evil",
+      "hype_score": 75,
+      "news_impact_score": 58,
+      "mentions_x": 352,
+      "sentiment": "neutral",
+      "notes": "Reboot talk keeps genre fans active, though conviction is moderate."
+    },
+    {
+      "id": "012b63e4",
+      "rank": 32,
+      "move": 4,
+      "name": "Gremlins 3",
+      "hype_score": 74,
+      "news_impact_score": 57,
+      "mentions_x": 338,
+      "sentiment": "positive",
+      "notes": "Legacy-horror nostalgia is powering shareability."
+    },
+    {
+      "id": "ed55ef7c",
+      "rank": 33,
+      "move": 1,
+      "name": "M3GAN 2.0",
+      "hype_score": 74,
+      "news_impact_score": 59,
+      "mentions_x": 347,
+      "sentiment": "positive",
+      "notes": "Memetic lift remains high thanks to trailer clips and remix culture."
+    },
+    {
+      "id": "7e6496e1",
+      "rank": 34,
+      "move": -1,
+      "name": "Saw XI",
+      "hype_score": 73,
+      "news_impact_score": 56,
+      "mentions_x": 329,
+      "sentiment": "neutral",
+      "notes": "Horror loyalists are engaged, mainstream pull is softer."
+    },
+    {
+      "id": "b517079c",
+      "rank": 35,
+      "move": 5,
+      "name": "28 Years Later",
+      "hype_score": 73,
+      "news_impact_score": 62,
+      "mentions_x": 389,
+      "sentiment": "positive",
+      "notes": "Prestige-horror framing gives it stronger-than-typical sequel reach."
+    },
+    {
+      "id": "dabc89a9",
+      "rank": 36,
+      "move": 3,
+      "name": "The Black Phone 2",
+      "hype_score": 72,
+      "news_impact_score": 55,
+      "mentions_x": 316,
+      "sentiment": "positive",
+      "notes": "Genre chatter remains healthy after first-look teases."
+    },
+    {
+      "id": "afb8545e",
+      "rank": 37,
+      "move": 2,
+      "name": "Five Nights at Freddy's 2",
+      "hype_score": 72,
+      "news_impact_score": 61,
+      "mentions_x": 404,
+      "sentiment": "positive",
+      "notes": "Fan-community posting cadence keeps volume elevated."
+    },
+    {
+      "id": "685858c4",
+      "rank": 38,
+      "move": 4,
+      "name": "Godzilla x Kong: Supernova",
+      "hype_score": 72,
+      "news_impact_score": 60,
+      "mentions_x": 391,
+      "sentiment": "positive",
+      "notes": "MonsterVerse spectacle is dependable fuel for large-format hype."
+    },
+    {
+      "id": "6819c7b3",
+      "rank": 39,
+      "move": -2,
+      "name": "Fast X: Part 2",
+      "hype_score": 71,
+      "news_impact_score": 54,
+      "mentions_x": 301,
+      "sentiment": "negative",
+      "notes": "Franchise scale helps, though fatigue is increasingly visible."
+    },
+    {
+      "id": "735f9503",
+      "rank": 40,
+      "move": 2,
+      "name": "Now You See Me 3",
+      "hype_score": 71,
+      "news_impact_score": 53,
+      "mentions_x": 294,
+      "sentiment": "positive",
+      "notes": "Return-of-cast narratives are creating light but consistent heat."
+    },
+    {
+      "id": "6ddddd8d",
+      "rank": 41,
+      "move": 1,
+      "name": "Paddington in Peru",
+      "hype_score": 70,
+      "news_impact_score": 52,
+      "mentions_x": 281,
+      "sentiment": "positive",
+      "notes": "Family-friendly sentiment is strong even with lower total volume."
+    },
+    {
+      "id": "2e0bf39e",
+      "rank": 42,
+      "move": 6,
+      "name": "Peaky Blinders Movie",
+      "hype_score": 70,
+      "news_impact_score": 58,
+      "mentions_x": 343,
+      "sentiment": "positive",
+      "notes": "Series fans are reactivating as feature details circulate."
+    },
+    {
+      "id": "8eb0abf1",
+      "rank": 43,
+      "move": 0,
+      "name": "Ocean's Prequel",
+      "hype_score": 69,
+      "news_impact_score": 50,
+      "mentions_x": 267,
+      "sentiment": "neutral",
+      "notes": "Concept-driven curiosity is present, but breakout urgency is limited."
+    },
+    {
+      "id": "d8613bbc",
+      "rank": 44,
+      "move": 3,
+      "name": "Barbie 2",
+      "hype_score": 69,
+      "news_impact_score": 57,
+      "mentions_x": 332,
+      "sentiment": "controversy",
+      "notes": "Sequel debate itself is driving mentions whether or not fans want it."
+    },
+    {
+      "id": "c5b82a0f",
+      "rank": 45,
+      "move": 2,
+      "name": "The Bride!",
+      "hype_score": 68,
+      "news_impact_score": 51,
+      "mentions_x": 271,
+      "sentiment": "positive",
+      "notes": "Auteur styling and cast intrigue give it boutique momentum."
+    },
+    {
+      "id": "dc2f9cc3",
+      "rank": 46,
+      "move": 4,
+      "name": "Elio",
+      "hype_score": 68,
+      "news_impact_score": 49,
+      "mentions_x": 249,
+      "sentiment": "positive",
+      "notes": "Fresh footage improved family-audience conversation."
+    },
+    {
+      "id": "f3263483",
+      "rank": 47,
+      "move": 5,
+      "name": "Street Fighter",
+      "hype_score": 67,
+      "news_impact_score": 48,
+      "mentions_x": 236,
+      "sentiment": "positive",
+      "notes": "Casting rumors are helping the adaptation transcend gamer-only circles."
+    },
+    {
+      "id": "16366ea7",
+      "rank": 48,
+      "move": 1,
+      "name": "Mortal Kombat 2",
+      "hype_score": 67,
+      "news_impact_score": 50,
+      "mentions_x": 258,
+      "sentiment": "positive",
+      "notes": "Fight-scene expectations maintain a reliable genre base."
+    },
+    {
+      "id": "c10f7736",
+      "rank": 49,
+      "move": 3,
+      "name": "The Running Man",
+      "hype_score": 66,
+      "news_impact_score": 47,
+      "mentions_x": 223,
+      "sentiment": "positive",
+      "notes": "Reinvention angle is resonating with action-thriller fans."
+    },
+    {
+      "id": "912a5e7f",
+      "rank": 50,
+      "move": -1,
+      "name": "Beetlejuice 3",
+      "hype_score": 65,
+      "news_impact_score": 46,
+      "mentions_x": 214,
+      "sentiment": "neutral",
+      "notes": "Residual franchise affection remains, but signal strength is lighter."
     }
-  },
-  "methodology": {
-    "nis_formula": "NIS = (Volume * Sentiment * Tier * Persistence) / 500 * 100",
-    "sentiment_formula": "Sentiment = ((S_raw + 1.0) / 2.0) * 0.9 + 0.1",
-    "snapshot_context": "April 4, 03:00 UTC",
-    "style": "Bloomberg-terminal aesthetic, dark mode, monospace, accent colors"
-  },
-  "rows": [
+  ],
+  "talent": [
     {
-      "RANK": 1,
-      "ENTITY": "Mario Galaxy",
-      "NIS": 55.0,
-      "TREND": "â–² HOT",
-      "POSITIVE": 64,
-      "NEGATIVE": 5,
-      "NEUTRAL": 31,
-      "CONTROVERSY": 18,
-      "CHANGE": "+6.4",
-      "NOTES": "Movie: release peak and family-demo breakout.",
-      "CATEGORY": "MOVIE"
+      "id": "738ab25c",
+      "rank": 1,
+      "move": 8,
+      "name": "Milly Alcock",
+      "hype_score": 96,
+      "news_impact_score": 95,
+      "mentions_x": 846,
+      "sentiment": "positive",
+      "notes": "New-look conversation linked to Supergirl keeps her at maximum velocity."
     },
     {
-      "RANK": 2,
-      "ENTITY": "Project Hail Mary",
-      "NIS": 50.1,
-      "TREND": "â–² HOT",
-      "POSITIVE": 63,
-      "NEGATIVE": 5,
-      "NEUTRAL": 32,
-      "CONTROVERSY": 16,
-      "CHANGE": "+5.1",
-      "NOTES": "Movie: box-office over-indexing and strong word-of-mouth.",
-      "CATEGORY": "MOVIE"
+      "id": "776437f0",
+      "rank": 2,
+      "move": 3,
+      "name": "Zendaya",
+      "hype_score": 94,
+      "news_impact_score": 91,
+      "mentions_x": 792,
+      "sentiment": "positive",
+      "notes": "The Drama press and fashion-media spillover maintain elite reach."
     },
     {
-      "RANK": 3,
-      "ENTITY": "Supergirl: Woman of Tomorrow",
-      "NIS": 35.4,
-      "TREND": "â–² HOT",
-      "POSITIVE": 59,
-      "NEGATIVE": 7,
-      "NEUTRAL": 34,
-      "CONTROVERSY": 22,
-      "CHANGE": "+4.6",
-      "NOTES": "Movie: trailer drop ignited casting and DCU chatter.",
-      "CATEGORY": "MOVIE"
+      "id": "4c4e9297",
+      "rank": 3,
+      "move": 5,
+      "name": "Robert Pattinson",
+      "hype_score": 92,
+      "news_impact_score": 88,
+      "mentions_x": 734,
+      "sentiment": "positive",
+      "notes": "The Drama heat plus ongoing Batman fandom keeps engagement high."
     },
     {
-      "RANK": 4,
-      "ENTITY": "Michael",
-      "NIS": 34.8,
-      "TREND": "â–² HOT",
-      "POSITIVE": 49,
-      "NEGATIVE": 16,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 74,
-      "CHANGE": "+3.2",
-      "NOTES": "Movie: trailer/music nostalgia surge, with legal chatter amplifying noise.",
-      "CATEGORY": "MOVIE"
+      "id": "19c78b45",
+      "rank": 4,
+      "move": 6,
+      "name": "Robert Downey Jr.",
+      "hype_score": 91,
+      "news_impact_score": 90,
+      "mentions_x": 801,
+      "sentiment": "positive",
+      "notes": "Doomsday casting news reactivated broad multi-generational attention."
     },
     {
-      "RANK": 5,
-      "ENTITY": "Avengers: Doomsday",
-      "NIS": 33.4,
-      "TREND": "â–² RISING",
-      "POSITIVE": 56,
-      "NEGATIVE": 10,
-      "NEUTRAL": 34,
-      "CONTROVERSY": 38,
-      "CHANGE": "+2.8",
-      "NOTES": "Movie: roster-rumor cycle keeps franchise attention elevated.",
-      "CATEGORY": "MOVIE"
+      "id": "03d81c40",
+      "rank": 5,
+      "move": 2,
+      "name": "Florence Pugh",
+      "hype_score": 89,
+      "news_impact_score": 82,
+      "mentions_x": 621,
+      "sentiment": "positive",
+      "notes": "Franchise activity and fashion coverage continue to compound."
     },
     {
-      "RANK": 6,
-      "ENTITY": "The Batman Part II",
-      "NIS": 31.9,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 7,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 24,
-      "CHANGE": "+2.1",
-      "NOTES": "Movie: sequel speculation and Bat-verse discourse remain active.",
-      "CATEGORY": "MOVIE"
+      "id": "ef09f7a5",
+      "rank": 6,
+      "move": 1,
+      "name": "TimothÃ©e Chalamet",
+      "hype_score": 89,
+      "news_impact_score": 81,
+      "mentions_x": 608,
+      "sentiment": "positive",
+      "notes": "Sustained auteur-film visibility keeps him sticky across platforms."
     },
     {
-      "RANK": 7,
-      "ENTITY": "Spider-Man 4",
-      "NIS": 30.5,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 8,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 26,
-      "CHANGE": "+2.6",
-      "NOTES": "Movie: title/window chatter sustains search demand.",
-      "CATEGORY": "MOVIE"
+      "id": "d36950b8",
+      "rank": 7,
+      "move": 4,
+      "name": "Sydney Sweeney",
+      "hype_score": 88,
+      "news_impact_score": 80,
+      "mentions_x": 594,
+      "sentiment": "positive",
+      "notes": "High posting velocity and project stacking support strong chatter."
     },
     {
-      "RANK": 8,
-      "ENTITY": "The Odyssey",
-      "NIS": 30.0,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 7,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 20,
-      "CHANGE": "+2.2",
-      "NOTES": "Movie: prestige-scale casting updates are landing.",
-      "CATEGORY": "MOVIE"
+      "id": "b7f8523f",
+      "rank": 8,
+      "move": 2,
+      "name": "Jenna Ortega",
+      "hype_score": 87,
+      "news_impact_score": 79,
+      "mentions_x": 579,
+      "sentiment": "positive",
+      "notes": "Genre work and youth-demo resonance continue to outperform."
     },
     {
-      "RANK": 9,
-      "ENTITY": "Shrek 5",
-      "NIS": 29.3,
-      "TREND": "â–² HOT",
-      "POSITIVE": 57,
-      "NEGATIVE": 9,
-      "NEUTRAL": 34,
-      "CONTROVERSY": 28,
-      "CHANGE": "+3.7",\
-      "NOTES": "Movie: nostalgia meme cycle is fueling broad reach.",
-      "CATEGORY": "MOVIE"
+      "id": "20d6dba1",
+      "rank": 9,
+      "move": -1,
+      "name": "Pedro Pascal",
+      "hype_score": 87,
+      "news_impact_score": 78,
+      "mentions_x": 566,
+      "sentiment": "positive",
+      "notes": "Multiple franchise touchpoints keep him broadly present."
     },
     {
-      "RANK": 10,
-      "ENTITY": "The Fantastic Four: First Steps",
-      "NIS": 28.6,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 8,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 25,
-      "CHANGE": "+2.4",
-      "NOTES": "Movie: MCU trailer analysis and ensemble focus are sticky.",
-      "CATEGORY": "MOVIE"
+      "id": "2e60a84f",
+      "rank": 10,
+      "move": 3,
+      "name": "Anya Taylor-Joy",
+      "hype_score": 86,
+      "news_impact_score": 76,
+      "mentions_x": 541,
+      "sentiment": "positive",
+      "notes": "Prestige and genre crossover appeal drive balanced hype."
     },
     {
-      "RANK": 11,
-      "ENTITY": "Jurassic World Rebirth",
-      "NIS": 27.3,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 7,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 23,
-      "CHANGE": "+2.0",\
-      "NOTES": "Movie: creature reveals and legacy-brand curiosity hold.",
-      "CATEGORY": "MOVIE"
+      "id": "7356022a",
+      "rank": 11,
+      "move": 1,
+      "name": "Jacob Elordi",
+      "hype_score": 85,
+      "news_impact_score": 74,
+      "mentions_x": 518,
+      "sentiment": "positive",
+      "notes": "Fashion/editorial visibility and project speculation keep him rising."
     },
     {
-      "RANK": 12,
-      "ENTITY": "Zendaya",
-      "NIS": 26.7,
-      "TREND": "â–² HOT",
-      "POSITIVE": 64,
-      "NEGATIVE": 5,
-      "NEUTRAL": 31,
-      "CONTROVERSY": 18,
-      "CHANGE": "+3.4",
-      "NOTES": "Talent: multi-project surge across film, fashion, and press.",
+      "id": "28fad381",
+      "rank": 12,
+      "move": 7,
+      "name": "Mikey Madison",
+      "hype_score": 84,
+      "news_impact_score": 73,
+      "mentions_x": 503,
+      "sentiment": "positive",
+      "notes": "Awards afterglow continues translating into new-project curiosity."
+    },
+    {
+      "id": "c67931d3",
+      "rank": 13,
+      "move": 2,
+      "name": "Glen Powell",
+      "hype_score": 84,
+      "news_impact_score": 75,
+      "mentions_x": 527,
+      "sentiment": "positive",
+      "notes": "Reliable mainstream likability keeps his mentions efficient."
+    },
+    {
+      "id": "e45dd28e",
+      "rank": 14,
+      "move": -2,
+      "name": "Margot Robbie",
+      "hype_score": 83,
+      "news_impact_score": 71,
+      "mentions_x": 481,
+      "sentiment": "positive",
+      "notes": "Producer-star momentum remains solid even without a fresh spike."
+    },
+    {
+      "id": "4c179983",
+      "rank": 15,
+      "move": 0,
+      "name": "Ryan Gosling",
+      "hype_score": 83,
+      "news_impact_score": 70,
+      "mentions_x": 469,
+      "sentiment": "positive",
+      "notes": "Brand strength is steady, though not in a breakout week."
+    },
+    {
+      "id": "5711e7f8",
+      "rank": 16,
+      "move": 5,
+      "name": "Ana de Armas",
+      "hype_score": 82,
+      "news_impact_score": 77,
+      "mentions_x": 556,
+      "sentiment": "positive",
+      "notes": "Ballerina adjacency materially boosted her news impact."
+    },
+    {
+      "id": "cdc7dd2d",
+      "rank": 17,
+      "move": 1,
+      "name": "Austin Butler",
+      "hype_score": 82,
+      "news_impact_score": 69,
+      "mentions_x": 457,
+      "sentiment": "positive",
+      "notes": "Prestige-project packaging keeps him in upper-tier conversation."
+    },
+    {
+      "id": "5183a3f5",
+      "rank": 18,
+      "move": 2,
+      "name": "Paul Mescal",
+      "hype_score": 81,
+      "news_impact_score": 68,
+      "mentions_x": 444,
+      "sentiment": "positive",
+      "notes": "Author-led film work sustains high-value media attention."
+    },
+    {
+      "id": "d258e0dc",
+      "rank": 19,
+      "move": 4,
+      "name": "Ayo Edebiri",
+      "hype_score": 81,
+      "news_impact_score": 67,
+      "mentions_x": 431,
+      "sentiment": "positive",
+      "notes": "Comedy and awards goodwill keep her highly discoverable."
+    },
+    {
+      "id": "34948a93",
+      "rank": 20,
+      "move": 3,
+      "name": "Jeremy Allen White",
+      "hype_score": 80,
+      "news_impact_score": 66,
+      "mentions_x": 419,
+      "sentiment": "positive",
+      "notes": "Brand endorsements and cast chatter support durable volume."
+    },
+    {
+      "id": "97d558de",
+      "rank": 21,
+      "move": -3,
+      "name": "Rachel Zegler",
+      "hype_score": 79,
+      "news_impact_score": 63,
+      "mentions_x": 387,
+      "sentiment": "controversy",
+      "notes": "Discussion remains intense, though sentiment is clearly divided."
+    },
+    {
+      "id": "bec28b63",
+      "rank": 22,
+      "move": 1,
+      "name": "Barry Keoghan",
+      "hype_score": 79,
+      "news_impact_score": 64,
+      "mentions_x": 396,
+      "sentiment": "positive",
+      "notes": "Offbeat project choices continue to overperform in earned media."
+    },
+    {
+      "id": "e436386a",
+      "rank": 23,
+      "move": 4,
+      "name": "Hunter Schafer",
+      "hype_score": 78,
+      "news_impact_score": 62,
+      "mentions_x": 381,
+      "sentiment": "positive",
+      "notes": "Fashion and casting discourse combine into a steady lift."
+    },
+    {
+      "id": "4af6d1e3",
+      "rank": 24,
+      "move": -1,
+      "name": "Emma Stone",
+      "hype_score": 78,
+      "news_impact_score": 61,
+      "mentions_x": 372,
+      "sentiment": "positive",
+      "notes": "Prestige positioning remains strong with lower short-term volume."
+    },
+    {
+      "id": "3566b6f5",
+      "rank": 25,
+      "move": 2,
+      "name": "Saoirse Ronan",
+      "hype_score": 77,
+      "news_impact_score": 60,
+      "mentions_x": 361,
+      "sentiment": "positive",
+      "notes": "Awards-oriented chatter keeps her in the high-trust tier."
+    },
+    {
+      "id": "ef6d8a8f",
+      "rank": 26,
+      "move": 3,
+      "name": "Millie Bobby Brown",
+      "hype_score": 77,
+      "news_impact_score": 65,
+      "mentions_x": 422,
+      "sentiment": "positive",
+      "notes": "Platform scale and franchise familiarity keep her highly visible."
+    },
+    {
+      "id": "8a4aea59",
+      "rank": 27,
+      "move": 5,
+      "name": "Sadie Sink",
+      "hype_score": 76,
+      "news_impact_score": 59,
+      "mentions_x": 348,
+      "sentiment": "positive",
+      "notes": "Casting rumors and fandom carry maintain healthy movement."
+    },
+    {
+      "id": "e43a91a8",
+      "rank": 28,
+      "move": 1,
+      "name": "Cailee Spaeny",
+      "hype_score": 76,
+      "news_impact_score": 58,
+      "mentions_x": 339,
+      "sentiment": "positive",
+      "notes": "Indie-to-studio crossover narrative is helping her "reakout story."
+    },
+    {
+      "id": "6b24b97d",
+      "rank": 29,
+      "move": 2,
+      "name": "Elle Fanning",
+      "hype_score": 75,
+      "news_impact_score": 57,
+      "mentions_x": 327,
+      "sentiment": "positive",
+      "notes": "Styling coverage and prestige slates preserve steady momentum."
+    },
+    {
+      "id": "86ebbf30",
+      "rank": 30,
+      "move": 4,
+      "name": "Joseph Quinn",
+      "hype_score": 75,
+      "news_impact_score": 60,
+      "mentions_x": 363,
+      "sentiment": "positive",
+      "notes": "Franchise attachment talk lifted him into a higher volume band."
+    },
+    {
+      "id": "68047b1c",
+      "rank": 31,
+      "move": 3,
+      "name": "Harris Dickinson",
+      "hype_score": 74,
+      "news_impact_score": 56,
+      "mentions_x": 311,
+      "sentiment": "positive",
+      "notes": "Critical goodwill is translating into broader awareness."
+    },
+    {
+      "id": "e5a03tb1",
+      "rank": 32,
+      "move": 2,
+      "name": "Nicholas Galitzine",
+      "hype_score": 74,
+      "news_impact_score": 55,
+      "mentions_x": 302,
+      "sentiment": "positive",\n      "notes": "Romance-demo engagement stays efficient and loyal."
+    },
+    {
+      "id": "9feee29c",
+      "rank": 33,
+      "move": -2,
+      "name": "Bella Ramsey",
+      "hype_score": 73,
+      "news_impact_score": 54,
+      "mentions_x": 293,
+      "sentiment": "positive",
+      "notes": "Core fandom remains active deppite a quieter news window."
+    },
+    {
+      "id": "3f8c9d53",
+      "rank": 34,
+      "move": 1,
+      "name": "Emma Myers",
+      "hype_score": 73,
+      "news_impact_score": 53,
+      "mentions_x": 286,
+      "sentiment": "positive",
+      "notes": "Streaming-audience familiarity continues to scale."
+    },
+    {
+      "id": "944d6f001",
+      "rank": 35,
+      "move": 2,
+      "name": "Daisy Edgar-Jones",
+      "hype_score": 72,
+      "news_impact_score": 52,
+      "mentions_x": 278,
+      "sentiment": "positive",
+      "notes": "Studio lead roles are helping her maintain traction."
+    },
+    {
+      "id": "3d952202",
+      "rank": 36,
+      "move": 4,
+      "name": "Andrew Garfield",
+      "hype_score": 72,
+      "news_impact_score": 58,
+      "mentions_x": 349,
+      "sentiment": "positive",
+      "notes": "Return-rumor cycles always produce an immediate social bump."
+    },
+    {
+      "id": "1449620a",
+      "rank": 37,
+      "move": 1,
+      "name": "Tom Holland",
+      "hype_score": 72,
+      "news_impact_score": 59,
+      "mentions_x": 358,
+      "sentiment": "positive",
+      "notes": "Spider-Man orbit keeps him culturally sticky even on light news."
+    },
+    {
+      "id": "679db307",
+      "rank": 38,
+      "move": -1,
+      "name": "Chris Hemsworth",
+      "hype_score": 71,
+      "news_impact_score": 51,
+      "mentions_x": 269,
+      "sentiment": "positive",
+      "notes": "Still broad-reach, but current-cycle urgency is softer."
+    },
+    {
+      "id": "60c07e0e",
+      "rank": 39,
+      "move": 2,
+      "name": "Lupita Nyong'o",
+      "hype_score": 71,
+      "news_impact_score": 50,
+      "mentions_x": 261,
+      "sentiment": "positive",
+      "notes": "Prestige genre positioning supports a stable premium audience."
+    },
+    {
+      "id": "911f7cd3",
+      "rank": 40,
+      "move": 3,
+      "name": "Colman Domingo",
+      "hype_score": 70,
+      "news_impact_score": 49,
+      "mentions_x": 248,
+      "sentiment": "positive",
+      "notes": "Critical acclaim keeps his coverage quality exceptionally high."
+    },
+    {
+      "id": "deb8b252",
+      "rank": 41,
+      "move": 1,
+      "name": "Dev Patel",
+      "hype_score": 70,
+      "news_impact_score": 48,
+      "mentions_x": 239,
+      "sentiment": "positive",
+      "notes": "Director-star credibility sustains a compact but valuable buzz base.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 13,
-      "ENTITY": "The Mandalorian & Grogu",
-      "NIS": 26.7,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 6,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 19,
-      "CHANGE": "+1.8",
-      "NOTES": "Movie: Star Wars fan engagement remains durable.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 14,
-      "ENTITY": "Thunderbolts*",
-      "NIS": 26.2,
-      "TREND": "â–² RISING",
-      "POSITIVE": 56,
-      "NEGATIVE": 9,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 27,
-      "CHANGE": "+2.5",
-      "NOTES": "Movie: ensemble clips and antihero framing push discussion.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 15,
-      "ENTITY": "Sinners",
-      "NIS": 25.7,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 7,
-      "NEUTRAL": 35,
-      "CONTROVERSY": 21,
-      "CHANGE": "+2.2",
-      "NOTES": "Movie: critical heat and breakout conversation keep momentum.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 16,
-      "ENTITY": "Tron: Ares",
-      "NIS": 25.2,
-      "TREND": "â–² RISING",
-      "POSITIVE": 56,
-      "NEGATIVE": 8,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 24,
-      "CHANGE": "+1.9",
-      "NOTES": "Movie: footage teases and synth-heavy branding travel well.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 17,
-      "ENTITY":  ‰]¥­•èA…ÉĞQİ¼ˆ°(€€€€€€‰9%Lˆè€ÈÔ¸À°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ø°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€Äà°(€€€€€€‰!9ˆè€ˆ¬Ä¸Øˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èÍ•ÅÕ•°ÕÉ¥½Í¥Ñä…¹Í½Õ¹‘ÑÉ…¬ÍÁ¥±±½Ù•È½¹Ñ¥¹Õ”¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€Äà°(€€€€€€‰9Q%Qdˆè€‰5¥±±ä±½¬ˆ°(€€€€€€‰9%Lˆè€ÈĞ¸ä°(€€€€€€‰QI9ˆè€‹ŠZÈ!=Pˆ°(€€€€€€‰A=M%Q%Yˆè€ØÄ°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌÈ°(€€€€€€‰=9QI=YIMdˆè€ÈÜ°(€€€€€€‰!9ˆè€ˆ¬Ğ¸äˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèMÕÁ•É¥É°±•……ÍÑ¥¹œ‰É½­”İ¥‘”¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€Ää°(€€€€€€‰9Q%Qdˆè€‰Q¡”	…Ñ•µ…¸A…ÉĞ%$ˆ°(€€€€€€‰9%Lˆè€ÈĞ¸Ğ°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ÔØ°(€€€€€€‰9Q%Yˆè€à°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€ÈØ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Üˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è…ÕÑ•ÕÈ½…ÍĞÁ…¥É¥¹œ¥Ì‘É¥Ù¥¹œ¹¥¡”µÑ¼µµ…¥¹ÍÑÉ•…´É½ÍÍ½Ù•È¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈÀ°(€€€€€€‰9Q%Qdˆè€‰	±…‘”ˆ°(€€€€€€‰9%Lˆè€ÈÌ¸à°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ğä°(€€€€€€‰9Q%Yˆè€ÄĞ°(€€€€€€‰9UQI0ˆè€ÌÜ°(€€€€€€‰=9QI=YIMdˆè€ÔÔ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ôˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èÉ•‰½½ĞÕ¹•ÉÑ…¥¹Ñä±¥™ÑÌÙ½±Õµ”‘•ÍÁ¥Ñ”µ¥á•Í•¹Ñ¥µ•¹Ğ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈÄ°(€€€€€€‰9Q%Qdˆè€‰!½ÜÑ¼QÉ…¥¸e½ÕÈÉ…½¸ˆ°(€€€€€€‰9%Lˆè€ÈÌ¸à°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ø°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€ÄÜ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ğˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è™…µ¥±ä…ÁÁ•…°…¹…‘…ÁÑ…Ñ¥½¸½µÁ…É¥Í½¹Ì…É”…Ñ¥Ù”¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈÈ°(€€€€€€‰9Q%Qdˆè€‰I½‰•ÉĞA…ÑÑ¥¹Í½¸ˆ°(€€€€€€‰9%Lˆè€ÈÌ¸Ü°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÄ°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌÈ°(€€€€€€‰=9QI=YIMdˆè€ÈĞ°(€€€€€€‰!9ˆè€ˆ¬È¸Èˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹Ğè	…Ñµ…¸…¹ÁÉ•ÍÑ¥”µ™¥±´½Ù•É±…À­••ÁÌÍ•…É Ù•±½¥Ñä¡¥ ¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈÌ°(€€€€€€‰9Q%Qdˆè€‰5¥ÍÍ¥½¸è%µÁ½ÍÍ¥‰±”€´Q¡”¥¹…°I•­½¹¥¹œˆ°(€€€€€€‰9%Lˆè€ÈÌ¸Ì°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌÔ°(€€€€€€‰=9QI=YIMdˆè€ÈÀ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ìˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èÍÑÕ¹Ğµ‘É¥Ù•¸ÁÉ½µ¼±¥ÁÌ­••À¥¹Ñ•É•ÍĞÍÑ•…‘ä¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈĞ°(€€€€€€‰9Q%Qdˆè€‰Iå…¸½Í±¥¹œˆ°(€€€€€€‰9%Lˆè€ÈÌ¸È°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÄ°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌĞ°(€€€€€€‰=9QI=YIMdˆè€ÄĞ°(€€€€€€‰!9ˆè€ˆ¬È¸àˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèAÉ½©•Ğ!…¥°5…ÉäÕÁÍ¥‘”¥ÌÉ•™É•Í¡¥¹œÍÑ…Èµ½µ•¹ÑÕ´¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈÔ°(€€€€€€‰9Q%Qdˆè€‰A•‘É¼A…Í…°ˆ°(€€€€€€‰9%Lˆè€ÈÌ¸À°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÄ°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌÈ°(€€€€€€‰=9QI=YIMdˆè€ÈÄ°(€€€€€€‰!9ˆè€ˆ¬È¸Ğˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹Ğè…¹Ñ…ÍÑ¥Œ½ÕÈÁ±ÕÌ™É…¹¡¥Í”Í…ÑÕÉ…Ñ¥½¸‘É¥Ù”Ù½±Õµ”¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈØ°(€€€€€€‰9Q%Qdˆè€‰MÕÁ•Éµ…¸ˆ°(€€€€€€‰9%Lˆè€ÈÈ¸à°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ÔÜ°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€ÈÈ°(€€€€€€‰!9ˆè€ˆ¬Ä¸àˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èTÁ½Í¥Ñ¥½¹¥¹œ…¹ÑÉ…¥±•È™É…µ”µ‰É•…­‘½İ¹ÌÁ•ÉÍ¥ÍĞ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÈÜ°(€€€€€€‰9Q%Qdˆè€‰Äˆ°(€€€€€€‰9%Lˆè€ÈÈ¸Ğ°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ø°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€Ää°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ğˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èÍÁ½ÉÑÌÉ½ÍÍ½Ù•È…¹%5`Ñ…±¬…É”¡•±Á¥¹œ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€Èà°(€€€€€€‰9Q%Qdˆè€‰±½É•¹”AÕ ˆ°(€€€€€€‰9%Lˆè€ÈÈ¸Ğ°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÄ°(€€€€€€‰9Q%Yˆè€Ø°(€€€€€€‰9UQI0ˆè€ÌÌ°(€€€€€€‰=9QI=YIMdˆè€Ää°(€€€€€€‰!9ˆè€ˆ¬È¸Äˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèQ¡Õ¹‘•É‰½±ÑÌ¨ÁÕÍ …¹ÁÉ½µ¼±¥ÁÌ…É”Á…å¥¹œ½™˜¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€Èä°(€€€€€€‰9Q%Qdˆè€‰5¥¹•É…™Ğ5½Ù¥”ˆ°(€€€€€€‰9%Lˆè€ÈÈ¸È°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ÔÔ°(€€€€€€‰9Q%Yˆè€ÄÀ°(€€€€€€‰9UQI0ˆè€ÌÔ°(€€€€€€‰=9QI=YIMdˆè€ÌÌ°(€€€€€€‰!9ˆè€ˆ¬È¸Äˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èµ•µ”ÑÉ…™™¥Œ…¹™½ÕÈµÅÕ…‘É…¹ĞÕÉ¥½Í¥ÑäÉ•µ…¥¸¡¥ ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌÀ°(€€€€€€‰9Q%Qdˆè€‰I½‰•ÉĞ½İ¹•ä)È¸ˆ°(€€€€€€‰9%Lˆè€ÈÄ¸ä°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÀ°(€€€€€€‰9Q%Yˆè€à°(€€€€€€‰9UQI0ˆè€ÌÈ°(€€€€€€‰=9QI=YIMdˆè€ÈØ°(€€€€€€‰!9ˆè€ˆ¬Ä¸äˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèÙ•¹•ÉÌÉ•ÑÕÉ¸¡…ÑÑ•ÈÉ•µ…¥¹Ì„É•±¥…‰±”ÑÉ…™™¥Œ•¹¥¹”¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌÄ°(€€€€€€‰9Q%Qdˆè€‰5½…¹„€¡1¥Ù”µÑ¥½¸¤ˆ°(€€€€€€‰9%Lˆè€ÈÄ¸à°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ÔÌ°(€€€€€€‰9Q%Yˆè€ÄÄ°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€ÌÄ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Èˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è…ÍÑ¥¹œ…¹É•µ…­”‘•‰…Ñ”ÍÕÍÑ…¥¸„İ¥‘”‰…Í•±¥¹”¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌÈ°(€€€€€€‰9Q%Qdˆè€‰Q¥µ½Ñ£¥”¡…±…µ•Ğˆ°(€€€€€€‰9%Lˆè€ÈÄ¸Ğ°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÄ°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌĞ°(€€€€€€‰=9QI=YIMdˆè€ÄÜ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Øˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèÍÕÍÑ…¥¹•É½ÍÍ½Ù•È™…¹‘½´­••ÁÌ¡¥´…‰½Ù”‰…Í•±¥¹”¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌÌ°(€€€€€€‰9Q%Qdˆè€‰Q¡”µ…Ñ•ÕÈˆ°(€€€€€€‰9%Lˆè€ÈÄ¸Ğ°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌÜ°(€€€€€€‰=9QI=YIMdˆè€ÄÔ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ôˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èÑ¡É¥±±•È¡½½¬¥Ì½Ù•ÈµÁ•É™½Éµ¥¹œ¥¸Í•…É ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌĞ°(€€€€€€‰9Q%Qdˆè€‰Må‘¹•äMİ••¹•äˆ°(€€€€€€‰9%Lˆè€ÈÄ¸È°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÀ°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌÌ°(€€€€€€‰=9QI=YIMdˆè€ÈÌ°(€€€€€€‰!9ˆè€ˆ¬Ä¸àˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèÍÑ…­•Í±…Ñ”…¹…Ù¥Í¥‰¥±¥Ñä…É”½µÁ½Õ¹‘¥¹œ¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌÔ°(€€€€€€‰9Q%Qdˆè€‰±¥¼ˆ°(€€€€€€‰9%Lˆè€ÈÄ¸À°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôä°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€ÄĞ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Äˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èA¥á…ÈÕÉ¥½Í¥Ñä¥ÌÍ±½İ±ä½µÁ½Õ¹‘¥¹œ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌØ°(€€€€€€‰9Q%Qdˆè€‰)•¹¹„=ÉÑ•„ˆ°(€€€€€€‰9%Lˆè€ÈÀ¸Ü°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÀ°(€€€€€€‰9Q%Yˆè€Ø°(€€€€€€‰9UQI0ˆè€ÌĞ°(€€€€€€‰=9QI=YIMdˆè€ÈÀ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Üˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹Ğè™É…¹¡¥Í”ÁÉ•Í•¹”½¹Ñ¥¹Õ•ÌÑ¼½¹Ù•ÉĞÑ¼Í•…É ¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ÌÜ°(€€€€€€‰9Q%Qdˆè€‰i½½Ñ½Á¥„€Èˆ°(€€€€€€‰9%Lˆè€ÈÀ¸Ø°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌÜ°(€€€€€€‰=9QI=YIMdˆè€ÄØ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Àˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”èÍ•ÅÕ•°…İ…É•¹•ÍÌ¥Ì‰É½…‘•¹¥¹œ½¸™…µ¥±ä¡…¹¹•±Ì¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€Ìà°(€€€€€€‰9Q%Qdˆè€‰)…½ˆ±½É‘¤ˆ°(€€€€€€‰9%Lˆè€ÈÀ¸Ğ°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôä°(€€€€€€‰9Q%Yˆè€Ü°(€€€€€€‰9UQI0ˆè€ÌĞ°(€€€€€€‰=9QI=YIMdˆè€ÈÄ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ğˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹ĞèÁÉ•ÍÑ¥”µ½µµ•É¥…°ÍÁ±¥Ğ­••ÁÌ½¹Ù•ÉÍ…Ñ¥½¸‰É½…¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€Ìä°(€€€€€€‰9Q%Qdˆè€‰Q½äMÑ½Éä€Ôˆ°(€€€€€€‰9%Lˆè€ÈÀ¸Ì°(€€€€€€‰QI9ˆè€‹ŠZ€!=1ˆ°(€€€€€€‰A=M%Q%Yˆè€ÔØ°(€€€€€€‰9Q%Yˆè€à°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€ÈÄ°(€€€€€€‰!9ˆè€ˆ¬À¸äˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è™É…¹¡¥Í”±½¹•Ù¥Ñä‘•‰…Ñ”­••ÁÌ¥Ğ¥¸Ñ¡”µ¥à¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ĞÀ°(€€€€€€‰9Q%Qdˆè€‰ÕÍÑ¥¸	ÕÑ±•Èˆ°(€€€€€€‰9%Lˆè€Ää¸ä°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÀ°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌÔ°(€€€€€€‰=9QI=YIMdˆè€Äà°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ôˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹Ğè™É…¹¡¥Í”…ÑÑ…¡µ•¹Ğ…¹É••¹ĞÁÉ•ÍÌ±¥™Ğ¥¹Ñ•É•ÍĞ¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ĞÄ°(€€€€€€‰9Q%Qdˆè€‰9½Üe½ÔM•”5”€Ìˆ°(€€€€€€‰9%Lˆè€Ää¸ä°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌÜ°(€€€€€€‰=9QI=YIMdˆè€ÄÜ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ìˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è¡•¥ÍĞ¹½ÍÑ…±¥„…¹…ÍĞÉ•ÑÕÉ¸¡…ÑÑ•È…É”İ½É­¥¹œ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ĞÈ°(€€€€€€‰9Q%Qdˆè€‰¹„Q…å±½Èµ)½äˆ°(€€€€€€‰9%Lˆè€Ää¸Ü°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÀ°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌÔ°(€€€€€€‰=9QI=YIMdˆè€ÄØ°(€€€€€€‰!9ˆè€ˆ¬Ä¸Ğˆ°(€€€€€€‰9=QLˆè€‰Q…±•¹Ğè•¹É”É•‘¥‰¥±¥Ñä…¹ÁÉ•µ¥Õ´ÁÉ½©•ÑÌ¡½±¸ˆ°(€€€€€€‰Q=Idˆè€‰Q19Pˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ĞÌ°(€€€€€€‰9Q%Qdˆè€‰-…É…Ñ”-¥è1••¹‘Ìˆ°(€€€€€€‰9%Lˆè€Ää¸à°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€Ôà°(€€€€€€‰9Q%Yˆè€Ø°(€€€€€€‰9UQI0ˆè€ÌØ°(€€€€€€‰=9QI=YIMdˆè€Äà°(€€€€€€‰!9ˆè€ˆ¬Ä¸Äˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è™É…¹¡¥Í”‰É¥‘”½¹Ù•ÉÍ…Ñ¥½¸¥Ì±¥™Ñ¥¹œ…İ…É•¹•ÍÌ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ĞĞ°(€€€€€€‰9Q%Qdˆè€‰5½Ù¥”€Èˆ°(€€€€€€‰9%Lˆè€Ää¸Ì°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ÔÔ°(€€€€€€‰9Q%Yˆè€ÄÀ°(€€€€€€‰9UQI0ˆè€ÌÔ°(€€€€€€‰=9QI=YIMdˆè€Èä°(€€€€€€‰!9ˆè€ˆ¬Ä¸Àˆ°(€€€€€€‰9=QLˆè€‰5½Ù¥”è™…¹‘½´ÍÁ•Õ±…Ñ¥½¸…¹ÑÉ…¥±•È±¥ÁÁ¥¹œ‘É¥Ù”•¹…•µ•¹Ğ¸ˆ°(€€€€€€‰Q=Idˆè€‰5=Y%ˆ(€€€ô°(€€€ì(€€€€€€‰I9,ˆè€ĞÔ°(€€€€€€‰9Q%Qdˆè€‰5¥¡…•°¸)½É‘…¸ˆ°(€€€€€€‰9%Lˆè€Ää¸È°(€€€€€€‰QI9ˆè€‹ŠZÈI%M%9ˆ°(€€€€€€‰A=M%Q%Yˆè€ØÀ°(€€€€€€‰9Q%Yˆè€Ô°(€€€€€€‰9UQI0ˆè€ÌÍK
-      "CONTROVERSY": 15,
-      "CHANGE": "+1.3",
-      "NOTES": "Talent: Sinners halo gives current discussion a boost.",
+      "id": "4dt04f2d",
+      "rank": 42,
+      "move": 6,
+      "name": "Aaron Pierre",
+      "hype_score": 69,
+      "news_impact_score": 47,
+      "mentions_x": 228,
+      "sentiment": "positive",
+      "notes": "Casting momentum and discovery curves are accelerating.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 46,
-      "ENTITY": "Ballerina",
-      "NIS": 18.9,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 5,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 17,
-      "CHANGE": "+1.2",
-      "NOTES": "Movie: John Wick adjacency remains a demand multiplier.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 47,
-      "ENTITY": "David Corenswet",
-      "NIS": 18.9,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 8,
-      "NEUTRAL": 34,
-      "CONTROVERSY": 24,
-      "CHANGE": "+2.3",
-      "NOTES": "Talent: Superman spotlight is still scaling his profile.",
+      "id": "881f8908",
+      "rank": 43,
+      "move": 2,
+      "name": "Mia Goth",
+      "hype_score": 69,
+      "news_impact_score": 46,
+      "mentions_x": 221,
+      "sentiment": "positive",
+      "notes": "Horror affinity audiences continue to amplify her projects.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 48,
-      "ENTITY": "28 Years Later",
-      "NIS": 18.7,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 6,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 20,
-      "CHANGE": "+1.4",
-      "NOTES": "Movie: horror prestige crossover is resonating.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 49,
-      "ENTITY": "Nicholas Hoult",
-      "NIS": 18.7,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 6,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 18,
-      "CHANGE": "+1.9",
-      "NOTES": "Talent: villain-booking chatter is widening awareness.",
+      "id": "556bba86",
+      "rank": 44,
+      "move": -2,
+      "name": "Mahershala Ali",
+      "hype_score": 68,
+      "news_impact_score": 45,
+      "mentions_x": 213,
+      "sentiment": "neutral",
+      "notes": "High regard remains, though project uncertainty reduces velocity.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 50,
-      "ENTITY": "Hailee Steinfeld",
-      "NIS": 18.5,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 5,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 17,
-      "CHANGE": "+1.5",
-      "NOTES": "Talent: animation, franchise, and music overlap sustain attention.",
+      "id": "b6cc4b93",
+      "rank": 45,
+      "move": 3,
+      "name": "Cynthia Erivo",
+      "hype_score": 68,
+      "news_impact_score": 52,
+      "mentions_x": 279,
+      "sentiment": "positive",
+      "notes": "Wicked continuation chatter supports steady upward pressure.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 51,
-      "ENTITY": "Predator: Badlands",
-      "NIS": 18.4,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 7,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 22,
-      "CHANGE": "+1.1",
-      "NOTES": "Movie: franchise reset curiosity is steady.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 52,
-      "ENTITY": "Tom Holland",
-      "NIS": 18.0,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 5,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 16,
-      "CHANGE": "+1.2",
-      "NOTES": "Talent: Spider-Man cycle keeps his floor high.",
+      "id": "59ebdb4a",
+      "rank": 46,
+      "move": 2,
+      "name": "Ariana Grande",
+      "hype_score": 68,
+      "news_impact_score": 54,
+      "mentions_x": 296,
+      "sentiment": "positive",
+      "notes": "Music-plus-film crossover gives her a uniquely large conversion engine.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 53,
-      "ENTITY": "The Smashing Machine",
-      "NIS": 18.1,
-      "TREND": "â–² RISING",
-      "POSITIVE": 55,
-      "NEGATIVE": 9,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 27,
-      "CHANGE": "+1.3",
-      "NOTES": "Movie: transformation discourse around the lead is sticky.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 54,
-      "ENTITY": "Margot Robbie",
-      "NIS": 17.8,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 13,
-      "CHANGE": "+0.9",
-      "NOTES": "Talent: producer-star pipeline relevant despite a calmer week.",
+      "id": "e31e73c6",
+      "rank": 47,
+      "move": 1,
+      "name": "Keke Palmer",
+      "hype_score": 67,
+      "news_impact_score": 44,
+      "mentions_x": 201,
+      "sentiment": "positive",
+      "notes": "Multi-platform visibility keeps her baseline higher than peers.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 55,
-      "ENTITY": "Wake Up Dead Man: A Knives Out Mystery",
-      "NIS": 17.7,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 5,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 16,
-      "CHANGE": "+1.2",
-      "NOTES": "Movie: stacked-cast mystery chatter remains healthy.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 56,
-      "ENTITY": "Scarlett Johansson",
-      "NIS": 17.6,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 14,
-      "CHANGE": "+1.0",
-      "NOTES": "Talent: franchise and auteur alignment supports steady volume.",
+      "id": "93df3c75",
+      "rank": 48,
+      "move": 2,
+      "name": "Jon Boyega",
+      "hype_score": 67,
+      "news_impact_score": 43,
+      "mentions_x": 193,
+      "sentiment": "positive",
+      "notes": "New-project talk is reactivating fan communities.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 57,
-      "ENTITY": "Frankenstein",
-      "NIS": 17.5,
-      "TREND": "â–² RISING",
-      "POSITIVE": 58,
-      "NEGATIVE": 5,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 18,
-      "CHANGE": "+1.0",
-      "NOTES": "Movie: auteur package keeps genre-watchers engaged.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 58,
-      "ENTITY": "Ana de Armas",
-      "NIS": 17.2,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 6,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 17,
-      "CHANGE": "+1.1",
-      "NOTES": "Talent: Ballerina rollout is directly lifting demand.",
+      "id": "efb74181",
+      "rank": 49,
+      "move": 0,
+      "name": "Daniel Kaluuya",
+      "hype_score": 66,
+      "news_impact_score": 42,
+      "mentions_x": 184,
+      "sentiment": "positive",
+      "notes": "Prestige cachet remains high, but cadence is measured.",
       "CATEGORY": "TALENT"
     },
     {
-      "RANK": 59,
-      "ENTITY": "The Running Man",
-      "NIS": 17.2,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 6,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 19,
-      "CHANGE": "+0.8",
-      "NOTES": "Movie: remake concept is earning modest search lift.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 60,
-      "ENTITY": "Glen Powell",
-      "NIS": 16.9,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 15,
-      "CHANGE": "+0.8",\
-      "NOTES": "Talent: reliable star upswing remains in place.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 61,
-      "ENTITY": "Mickey 17",
-      "NIS": 16.8,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 56,
-      "NEGATIVE": 6,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 20,
-      "CHANGE": "-0.4",
-      "NOTES": "Movie: post-launch conversation is cooling from earlier highs.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 62,
-      "ENTITY": "Jack Black",
-      "NIS": 16.6,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 7,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 19,
-      "CHANGE": "+1.3",
-      "NOTES": "Talent: Mario spillover and broad comic reach push mentions.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 63,
-      "ENTITY": "Snow White",
-      "NIS": 16.6,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 44,
-      "NEGATIVE": 17,
-      "NEUTRAL": 39,
-      "CONTROVERSY": 72,
-      "CHANGE": "-0.8",
-      "NOTES": "Movie: controversy keeps volume alive even as sentiment softens.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 64,
-      "ENTITY": "Chris Pratt",
-      "NIS": 16.3,
-      "TREND": "â–² RISING",
-      "POSITIVE": 57,
-      "NEGATIVE": 6,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 18,
-      "CHANGE": "+1.0",
-      "NOTES": "Talent: animation/franchise exposure keeps him highly visible.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 65,
-      "ENTITY": "Paddington in Peru",
-      "NIS": 16.3,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 59,
-      "NEGATIVE": 4,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 12,
-      "CHANGE": "+0.7",
-      "NOTES": "Movie: warm reviews and family goodwill support endurance.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 66,
-      "ENTITY": "Emma Stone",
-      "NIS": 15.9,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 12,
-      "CHANGE": "+0.7",\
-      "NOTES": "Talent: prestige cachet preserves a healthy baseline.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 67,
-      "ENTITY": "The Conjuring: Last Rites",
-      "NIS": 15.9,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 5,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 18,
-      "CHANGE": "+0.9",
-      "NOTES": "Movie: horror fandom remains responsive to franchise beats.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 68,
-      "ENTITY": "Paul Mescal",
-      "NIS": 15.6,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 13,
-      "CHANGE": "+0.9",
-      "NOTES": "Talent: upcoming prestige titles keep heat simmering.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 69,
-      "ENTITY": "The Black Phone 2",
-      "NIS": 15.6,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 5,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 17,
-      "CHANGE": "+0.8",
-      "NOTES": "Movie: sequel awareness is building steadily.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 70,
-      "ENTITY": "Barry Keoghan",
-      "NIS": 15.4,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 56,
-      "NEGATIVE": 7,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 20,
-      "CHANGE": "+0.6",
-      "NOTES": "Talent: casting rumors and tabloid visibility sustain chatter.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 71,
-      "ENTITY": "The Naked Gun",
-      "NIS": 15.4,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 55,
-      "NEGATIVE": 8,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 24,
-      "CHANGE": "+0.9",
-      "NOTES": "Movie: reboot curiosity and casting novelty are helping.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 72,
-      "ENTITY": "Millie Bobby Brown",
-      "NIS": 15.1,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 56,
-      "NEGATIVE": 8,
-      "NEUTRAL": 36,
-      "CONTROVERSY": 22,
-      "CHANGE": "+0.8",
-      "NOTES": "Talent: streaming-star reach keeps conversation broad.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 73,
-      "ENTITY": "I Know What You Did Last Summer",
-      "NIS": 15.1,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 55,
-      "NEGATIVE": 8,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 26,
-      "CHANGE": "+0.6",
-      "NOTES": "Movie: legacy-slasher chatter is reviving the title.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 74,
-      "ENTITY": "Elle Fanning",
-      "NIS": 14.7,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 4,
-      "NEUTRAL": 39,
-      "CONTROVERSY": 14,
-      "CHANGE": "+0.7",
-      "NOTES": "Talent: prestige bookings continue to register.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 75,
-      "ENTITY": "The SpongeBob Movie: Search for SquarePants",
-      "NIS": 14.7,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 15,
-      "CHANGE": "+0.5",
-      "NOTES": "Movie: family animation has stable baseline attention.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 76,
-      "ENTITY": "Mia Goth",
-      "NIS": 14.5,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 5,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 16,
-      "CHANGE": "+0.9",
-      "NOTES": "Talent: genre fandom remains highly engaged.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 77,
-      "ENTITY": "Animal Friends",
-      "NIS": 14.5,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 14,
-      "CHANGE": "+0.8",
-      "NOTES": "Movie: package value is creating mild industry buzz.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 78,
-      "ENTITY": "Joseph Quinn",
-      "NIS": 14.2,
-      "TREND": "â–² RISING",
-      "POSITIVE": 56,
-      "NEGATIVE": 6,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 19,
-      "CHANGE": "+1.0",
-      "NOTES": "Talent: Marvel onboarding is widening his search base.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 79,
-      "ENTITY": "Roofman",
-      "NIS": 14.2,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 13,
-      "CHANGE": "+0.4",\
-      "NOTES": "Movie: true-story hook is generating selective interest.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 80,
-      "ENTITY": "Caught Stealing",
-      "NIS": 13.8,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 5,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 16,
-      "CHANGE": "+0.6",
-      "NOTES": "Movie: crime-thriller appeal is surfacing in film circles.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 81,
-      "ENTITY": "Ebon Moss-Bachrach",
-      "NIS": 13.9,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 56,
-      "NEGATIVE": 4,
-      "NEUTRAL": 40,
-      "CONTROVERSY": 13,
-      "CHANGE": "+0.9",
-      "NOTES": "Talent: ensemble-franchise profile is rising.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 82,
-      "ENTITY": "The Phoenician Scheme",
-      "NIS": 13.7,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 58,
-      "NEGATIVE": 4,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 14,
-      "CHANGE": "+0.5",\
-      "NOTES": "Movie: auteur fans are sustaining boutique attention.",
-      "CATEGORY": "MOVIE"
-    },
-    {
-      "RANK": 83,
-      "ENTITY": "Vanessa Kirby",
-      "NIS": 13.6,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 56,
-      "NEGATIVE": 4,
-      "NEUTRAL": 40,
-      "CONTROVERSY": 12,
-      "CHANGE": "+0.8",
-      "NOTES": "Talent: Fantastic Four and action prestige are a good mix.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 84,
-      "ENTITY": "Mahershala Ali",
-      "NIS": 13.3,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 54,
-      "NEGATIVE": 8,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 24,
-      "CHANGE": "+0.7",
-      "NOTES": "Talent: Blade uncertainty still pulls his name into coverage.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 85,
-      "ENTITY": "James Gunn",
-      "NIS": 13.1,
-      "TREND": "â–² RISING",
-      "POSITIVE": 55,
-      "NEGATIVE": 8,
-      "NEUTRAL": 37,
-      "CONTROVERSY": 28,
-      "CHANGE": "+1.2",
-      "NOTES": "Talent: DCU stewardship keeps his signal elevated.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 86,
-      "ENTITY": "Greta Gerwig",
-      "NIS": 12.6,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 4,
-      "NEUTRAL": 39,
-      "CONTROVERSY": 11,
-      "CHANGE": "+0.6",
-      "NOTES": "Talent: auteur prestige and Narnia curiosity keep interest alive.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 87,
-      "ENTITY": "Denis Villeneuve",
-      "NIS": 12.4,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 4,
-      "NEUTRAL": 39,
-      "CONTROVERSY": 10,
-      "CHANGE": "+0.5",\
-      "NOTES": "Talent: event-cinema brand remains :trong in industry search.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 88,
-      "ENTITY": "Christopher Nolan",
-      "NIS": 12.1,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 57,
-      "NEGATIVE": 4,
-      "NEUTRAL": 39,
-      "CONTROVERSY": 9,
-      "CHANGE": "+0.4",
-      "NOTES": "Talent: premium-format halo keeps a durable baseline.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 89,
-      "ENTITY": "Matt Reeves",
-      "NIS": 11.8,
-      "TREND": "â–  HOLD",
-      "POSITIVE": 56,
-      "NEGATIVE": 4,
-      "NEUTRAL": 40,
-      "CONTROVERSY": 13,
-      "CHANGE": "+0.7",
-      "NOTES": "Talent: Batman update cadence keeps him in the discussion.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 90,
-      "ENTITY": "Taika Waititi",
-      "NIS": 11.5,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 54,
-      "NEGATIVE": 8,
-      "NEUTRAL": 38,
-      "CONTROVERSY": 24,
-      "CHANGE": "+0.2",
-      "NOTES": "Talent: future-project ambiguity creates mixed but ongoing chatter."
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 91,
-      "ENTITY": "Dwayne Johnson",
-      "NIS": 11.2,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 52,
-      "NEGATIVE": 10,\
-      "NEUTRAL": 38,
-      "CONTROVERSY": 30,
-      "CHANGE": "+0.4",
-      "NOTES": "Talent: constant visibility yields volume even on a flatter week.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 92,
-      "ENTITY": "Joaquin Phoenix",
-      "NIS": 10.9,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 52,
-      "NEGATIVE": 10,\
-      "NEUTRAL": 38,
-      "CONTROVERSY": 29,
-      "CHANGE": "-0.3",
-      "NOTES": "Talent: post-awards and Joker spillover are easing back.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 93,
-      "ENTITY": "Lady Gaga",
-      "NIS": 10.5,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 52,
-      "NEGATIVE": 9,\
-      "NEUTRAL": 39,
-      "CONTROVERSY": 26,
-      "CHANGE": "-0.2",
-      "NOTES": "Talent: soundtrack and film crossover attention remains present."
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 94,
-      "ENTITY": "Emma Mackey",
-      "NIS": 10.3,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 56,
-      "NEGATIVE": 4,\
-      "NEUTRAL": 40,
-      "CONTROVERSY": 12,
-      "CHANGE": "+0.3",
-      "NOTES": "Talent: high-profile package value is climbing gradually."
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 95,
-      "ENTITY": "Robert Eggers",
-      "NIS": 10.0,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 56,
-      "NEGATIVE": 4,\
-      "NEUTRAL": 40,
-      "CONTROVERSY": 11,
-      "CHANGE": "+0.5",
-      "NOTES": "Talent: auteur fandom is small but intensely persistent.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 96,
-      "ENTITY": "Rian Johnson",
-      "NIS": 9.7,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 55,
-      "NEGATIVE": 5,\
-      "NEUTRAL": 40,
-      "CONTROVERSY": 14,
-      "CHANGE": "+0.4",
-      "NOTES": "Talent: Knives Out pipeline keeps modest visibility.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 97,
-      "ENTITY": "Guillermo del Toro",\
-      "NIS": 9.4,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 56,
-      "NEGATIVE": 4,\
-      "NEUTRAL": 40,
-      "CONTROVERSY": 10,
-      "CHANGE": "+0.3",
-      "NOTES": "Talent: Frankenstein package chatter is holding.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 98,
-      "ENTITY": "Kathryn Newton",\
-      "NIS": 9.1,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 55,
-      "NEGATIVE": 8,\
-      "NEUTRAL": 37,
-      "CONTROVERSY": 17,
-      "CHANGE": "+0.4",
-      "NOTES": "Talent: genre and studio bookings maintain a niche signal.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 99,
-      "ENTITY": "Daisy Edgar-Jones",\
-      "NIS": 8.8,
-      "TREND": "â–  HOLD",\
-      "POSITIVE": 55,
-      "NEGATIVE": 7,\
-      "NEUTRAL": 38,
-      "CONTROVERSY": 13,
-      "CHANGE": "+0.3",
-      "NOTES": "Talent: reliable lead positioning sustains a light uptick.",
-      "CATEGORY": "TALENT"
-    },
-    {
-      "RANK": 100,
-      "ENTITY": "Jeremy Allen White",\
-      "NIS": 8.6,
-      "TREND": "â–² RISING",\
-      "POSITIVE": 55,
-      "NEGATIVE": 8,\
-      "NEUTRAL": 37,
-      "CONTROVERSY": 20,
-      "CHANGE": "+1.6",
-      "NOTES": "Talent: Michael proximity and awards-era recognition add lift.",
+      "id": "8a86f2c8",
+      "rank": 50,
+      "move": 9,
+      "name": "Ian McKellen",
+      "hype_score": 66,
+      "news_impact_score": 55,
+      "mentions_x": 307,
+      "sentiment": "controversy",
+      "notes": "Doomsday stunt-rumor chatter caused a sharp week-over-week spike.",
       "CATEGORY": "TALENT"
     }
   ]
