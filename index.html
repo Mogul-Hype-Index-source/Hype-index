@@ -24,7 +24,7 @@
         <div id="last-updated">Status: SYNCING...</div>
     </div>
     <div class="tabs">
-        <div class="tab active" data-cat="movies">Movies</button>
+        <div class="tab active" data-cat="movies">Movies</div>
         <div class="tab" data-cat="actors">Actors</div>
         <div class="tab" data-cat="directors">Directors</div>
     </div>
@@ -35,61 +35,39 @@
     <script>
         let data = {};
         let activeCat = 'movies';
-
-        function escapeHtml(value) {
-            return String(value ?? '')
-                .replace(/&/g, '&amp;2)
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;');
-        }
-
-        function getItems() {
-            if (activeCat === 'actors') return Array.isArray(data.actors) ? data.actors : (Array.isArray(data.top_100) ? data.top_100 : []);
-            if (activeCat === 'directors') return Array.isArray(data.directors) ? data.directors : (Array.isArray(data.top_100) ? data.top_100 : []);
-            return Array.isArray(data.movies) ? data.movies : (Array.isArray(data.top_100) ? data.top_100 : []);
-        }
-
         async function refresh() {
             try {
-                const r = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
+                const r = await fetch('data.json?t=' + Date.now());
                 if (!r.ok) throw new Error('HTTP ' + r.status);
                 data = await r.json();
                 document.getElementById('last-updated').textContent = 'Status: LIVE | Updated: ' + new Date().toLocaleTimeString();
                 render();
             } catch (e) {
                 document.getElementById('last-updated').textContent = 'Status: ERROR';
-                document.getElementById('content').innerHTML = '<div class="loading" style="color:red">Error loading data.json</div>';
+                document.getElementById('content').innerHTML = '<div class="loading" style="color:red">Error loading data.json: ' + e.message + '</div>';
             }
         }
-
         function render() {
-            const items = getItems();
-
-            if (!items.length) {
-                document.getElementById('content').innerHTML = '<div class="loading">No data available.</div>';
-                return;
-            }
+            let items = data[activeCat] || data.top_100 || [];
+            if (!items.length && data.movies) items = data.movies;
 
             let html = '<table><thead><tr><th>Rank</th><th>Change</th><th>Entity</th><th>Score</th><th>Mentions</th><th>Notes</th></tr></thead><tbody>';
             items.forEach(i => {
-                const move = Number(i.change_24h ?? i.change ?? 0);
+                const move = Number(i.change_24h || i.change || 0);
                 const moveClass = move > 0 ? 'up' : (move < 0 ? 'down' : '');
-                const mentions = Number(i.mentions_x ?? i.mentions ?? 0);
-                html += `<tr>
-                    <td>${escapeHtml(i.rank ?? '')}</td>
-                    <td class="${moveClass}">${move > 0 ? '+' : ''}${escapeHtml(move)}</td>
-                    <td><b>${escapeHtml(i.entity ?? i.name ?? '')}</b></td>
-                    <td>${escapeHtml(i.score ?? '')}</td>
-                    <td>${escapeHtml(mentions.toLocaleString())}</td>
-                    <td style="font-size:11px;color:#bbb">${escapeHtml(i.notes ?? '')}</td>
+                const mentions = Number(i.mentions_x || i.mentions || 0);
+                html += `'<tr>
+                    <td style="font-weight:bold;color:#ffd166">${i.rank}</td>
+                    <td class="${moveClass}">${move > 0 ? '+' : ''}${move}</td>
+                    <td style="color:#fff;font-weight:bold">${i.entity || i.name}</td>
+                    <td style="font-weight:bold">${i.score}</td>
+                    <td>${Number(i.mentions_x || i.mentions || 0).localeString()}</td>
+                    <td style="font-size:11px;color:#bbb">${i.notes || ''}</td>
                 </tr>`;
             });
             html += '</tbody></table>';
             document.getElementById('content').innerHTML = html;
         }
-
         document.querySelectorAll('.tab').forEach(btn => {
             btn.onclick = () => {
                 activeCat = btn.dataset.cat;
