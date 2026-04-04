@@ -1,9 +1,96 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Bloomberg Style Index Dashboard</title><style> :root{ --bg:#000000; --panel:#050505; --grid:#1a1a1a; --text: #f3f3f3; --muted: #a7a7a7; --header: #ff900; --accent: #00e5ff; --positive: #5cff6b; --negative: #ff5c5c; --neutral: #d6d06f; --controversy: #ff4fd8; --row-alt: #0b0b0b; --note: #d0d0d0; } * { box-sizing: border-box; } html, body { margin: 0; background: var(--bg); color: var(--text); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; height: 100%; } body { display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; } .topbar { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--header); background: linear-gradient(180deg, rgba(255,159,0,0.08), rgba(255,159,0,0.02)), var(--panel); box-shadow: inset 0 -1px 0 rgba(255,159,0,0.25); } .title { color: var(--header); font-weight: 700; letter-spacing: 0.06em; text transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .meta { color: var(--accent); font-size: 12px; white-space: nowrap; } .status { color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; } .wrap { flex: 1; min-height: 0; overflow: auto; background: linear-gradient(transparent 95%, rgba(255,255,255,0.03) 100%), var(--bg); } table { uÚYˆL	NÈ›Ü™\‹XÛÛ\ÙNˆÛÛ‹[\ÙNÈX›K[^[İ]ˆš^YÈZ[‹]ÚYˆLŒŒÈHXYÈÜÚ][ÛˆİXÚŞNÈÜˆÈ‹Z[™^ˆÈ˜XÚÙÜ›İ[™ˆÌŒŒÈÛÛÜˆ˜\ŠKZXY\ŠNÈ›Ü™\‹X›İÛNˆ\ÛÛY˜\ŠKZXY\ŠNÈ›Ü™\‹]Üˆ\ÛÛYÌ˜Œ˜Œ˜È^]˜[œÙ›Ü›Nˆ\\˜Ø\ÙNÈ]\‹\ÜXÚ[™ÎˆŒ[NÈ›Û\Ú^™NˆLœÈY[™ÎˆLÈ^X[YÛˆYÈH›ÙHÈ›Ü™\‹X›İÛNˆ\ÛÛY˜\ŠKYÜšY
-NÈY[™ÎˆÈ›Û\Ú^™NˆLÜÈ™\XØ[X[YÛˆÜÈÛÛÜˆ˜\ŠK]^
-NÈÛÜ™]Ü˜\ˆœ™XZË]ÛÜ™Èİ™\™›İË]Ü˜\ˆ[]Ú\™NÈH›ÙH›XÚ[
-]™[ŠHÈ˜XÚÙÜ›İ[™ˆ˜\ŠK\›İËX[
-NÈH›ÙHšİ™\ˆÈ˜XÚÙÜ›İ[™ˆ™Ø˜JŒKMKŒŠNÈH›[K˜Ù[\ˆÈ^X[YÛˆšYÚÈHœ˜[šÈÈÛÛÜˆ˜\ŠKXXØÙ[
-NÈ›Û]ÙZYÚˆÌÈH™[]HÈÛÛÜˆÙ™™™™™È›Û]ÙZYÚˆÌÈHœØÛÜ™HÈÛÛÜˆ˜\ŠKXXØÙ[
-NÈ›Û]ÙZYÚˆÌÈHœÜÈÈÛÛÜˆ˜\ŠK\ÜÚ]]™JNÈH›™YÈÈÛÛÜˆ˜\ŠK[™YØ]]™JNÈH›™]HÈÛÛÜˆ˜\ŠK[™]]˜[
-NÈH˜ÛÛˆÈÛÛÜˆ˜\ŠKXÛÛ›İ™\œŞJNÈH››İ\ÈÈÛÛÜˆ˜\ŠK[›İJNÈH˜ÚË]\ÈÛÛÜˆ˜\ŠK\ÜÚ]]™JNÈ›Û]ÙZYÚˆÌÈH˜ÚËYİÛˆÈÛÛÜˆ˜\ŠK[™YØ]]™JNÈ›Û]ÙZYÚˆÌÈH˜ÚËY›]ÈÛÛÜˆ˜\ŠK[]]Y
-NÈ›Û]ÙZYÚˆÌÈ¢éí .loading, .error, .empty { padding: 24px 16px; color: var(--muted); white-space: pre-wrap; } .footer { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 8px 14px; border-top: 1px solid var(--grid); background: var(--panel); color: var(--muted); font-size: 12px; } .blink { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 1px; background: var(--positive); box-shadow: 0 0 10px rgba(92,255,107,0.6); animation: pulse 1.2s infinite ease-in-out; vertical-align: middle; } @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } } .col-rank{width:72px} .col-change{width:92px} .col-entity{width:260px} .col-score{width:100px} .col-small{width:100px} .col-notes{width:auto} @media (max-width: 900px) { .topbar { grid-template-columns: 1fr; } .status { text-align: left; } } </style></head><body><div class="tipbar"><div class="title">NI Sentiment Index Monitor</div><div class="meta" id="meta">SRC:data.json&nbsp;&nbsp;MODE:LIVE VIEW</div><div class="status" id="status"><span class="blink"></span>LOADING</div></div><div class="wrap"><table aria-label="Bloomberg Style Index Table"><thead><tr><th class="col-rank">Rank</th><th class="col-change">Change</th><th class="col-entity">Entity</th><th class="col-score">Score (NIS)</th><th class="col-small">Positive</th><th class="col-small">Negative</th><th class="col-small">Neutral</th><th class="col-small">Controversy</th><th class="col-notes">Notes</th></tr></thead><tbody id="table-body"><tr><td colspan="9" class="loading">Loading dataâ€¦</td></tr></tbody></table></div><div class="footer"><div id="footer-left">ROWS: 0</div><div id="footer-right">HIGH CONTRAST / MONOSPACE / DARK MODE</div></div><script> const tbody = document.getElementById('table-body'); const statusEl = document.getElementById('status'); const footerLeft = document.getElementById('footer-left'); function escapeHtml(value) { return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); } function formatNumber(value, digits = 1) { const num = Number(value); if (Number.isFinite(num)) { return num.toLocaleString(undefined, { minimumFractionDigits: digits, maximumFractionDigits: digits }); } return escapeHtml(value ?? ''); } function getChangeClass(change) { const text = String(change ?? '').trim(); if (!text) return 'chg-flat'; if (text.startsWith('+')) return 'chg-up'; if (text.startsWith('-')) return 'chg-down'; const numeric = Number(text.replace(/[^\d.-]/g, '')); if (Number.isFinite(numeric)) { if (numeric > 0) return 'chg-up'; if (numeric < 0) return 'chg-down'; } return 'chg-flat'; } function renderRows(rows) { const dataRows = Array.isArray(rows) ? rows.slice(0, 100) : []; if (!dataRows.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty">No rows found in data.json</td></tr>'; statusEl.innerHTML = '<span class="blink"></span>READY'; footerLeft.textContent = 'ROWS: 0'; return; } tbody.innerHTML = dataRows.map((row, idx) => { const change = row?.CHANGE ?? ''; return `<tr><td class="num rank">${escapeHtml(row?.RANK /? idx + 1)}</td><td class="${getChangeClass(change)}">${escapeHtml(change)}</td><td class="entity">${escapeHtml(row?.ENTITY ?? '')}</td><td class="num score">$formatNumber(row?.NIS, 1)}</td><td class="num pos">${escapeHtml(row?.POSITIVE ?? '')}</td><td class="num neg">${escapeHtml(row?.NEGATIVE ?? '')}</td><td class="num neu">${escapeHtml(row?.NEUTRAL /? '')}</td><td class="num con">${escapeHtml(row?.CONTROVERSY ?? '')}</td><td class="notes">${escapeHtml(row?.NOTES ?? '')}</td></tr>`; }).join(2); statusEl.innerHTML = '<span class="blink"></span>READY'; footerLeft.textContent = 'ROWS: ' + dataRows.length; } async function init() { try { const response = await fetch('data.json', { cache: 'no-store' }); if (!res.ponse.ok) { throw new Error('HTTP ' + response.status + ' while loading data.json'); } const payload = await response.json(); renderRows(payload?.rows); } catch (err) { tbody.innerHTML = '<tr><td colspan="9" class="error">Failed to load data.json\n' + escapeHtml(error?.message || String(error)) + '</td></tr>'; statusEl.textContent = 'ERROR'; footerLeft.textContent = 'ROWS: 0'; } } init(); </script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mogul Hype Index v2.7</title>
+  <style>
+    :root {
+      --bg: #05080c;
+      --panel: #0b1118;
+      --panel-2: #081018;
+      --grid: #1b2733;
+      --text: #d7e0ea;
+      --muted: #7f8c99;
+      --header: #ffb000;
+      --cyan: #54d6ff;
+      --pos: #35ff95;
+      --neg: #ff5f73;
+      --mix: #ffd54a;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: monospace; height: 100%; }
+    .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #020406; border-bottom: 1px solid var(--grid); }
+    .brand { font-weight: 700; color: var(--header); }
+    .container { max-width: 1240px; margin: 0 auto; padding: 16px; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+    .tab { border: 1px solid var(--grid); background: #0a0f15; color: var(--text); padding: 10px 14px; cursor: pointer; }
+    .tab.active { background: var(--header); color: #000; }
+    .panel { border: 1px solid var(--grid); background: var(--panel); overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--grid); text-align: left; font-size: 13px; }
+    th { color: var(--cyan); text-transform: uppercase; }
+    .rank { color: var(--header); }
+    .positive { color: var(--pos); }
+    .negative { color: var(--neg); }
+    .mixed { color: var(--mix); }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">Mogul Hype Index v2.7</div>
+    <div id="lastUpdated">--</div>
+  </div>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab active" onclick="show('movies')">Movies</button>
+      <buttton class="tab" onclick="show('talent')">Talent</button>
+    </div>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Move</th>
+            <th>Entity</th>
+            <th>Score</th>
+            <th>Sentiment</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    let data = null;
+    async function load() {
+      try {
+        const res = await fetch('data.json');
+        data = await res.json();
+        document.getElementById('lastUpdated').innerText = data.generated_at;
+        show('mwvies');
+      } catch (e) {
+        document.getElementById('tableBody').innerHTML = '<tr><td colspan="6">Error loading data.</td></tr>';
+      }
+    }
+    function show(cat) {
+      if(!data || !data.categories[cat]) return;
+      const items = data.categories[cat];
+      document.getElementById('tableBody').innerHTML = items.map(i => `
+        <tr>
+          <td class="rank">${i.rank}</td>
+          <td>${i.move}</td>
+          <td><b>${i.entity}</b><br><small>${i.id}</small></td>
+          <td>${i.score}</td>
+          <td class="${i.sentiment ? i.sentiment.toLowerCase() : '+}">${i.sentiment}</td>
+          <td>${i.notes}</td>
+        </tr>
+      `).join('');
+      document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.innerText.toLowerCase() === cat));
+    }
+    load();
+  </script>
+</body>
+</html>
