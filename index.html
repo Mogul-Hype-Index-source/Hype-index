@@ -1,182 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8" />
-  <title>Hype Index v2.9 Dashboard Parity</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Mogul Hype Index v2.9 — Parity Build</title>
   <style>
     :root {
-      --bg-main: #050608;
-      --bg-elevated: #0b0f14;
-      --bg-elevated-soft: #111821;
-      --bg-chip: #141e29;
-      --border-subtle: #1c2633;
-      --border-strong: #293545;
-      --accent-green: #00f18f;
-      --accent-amber: #ffc857;
-      --accent-orange: #ff9f1c;
-      --accent-red: #ff3860;
-      --text-primary: #f5f7ff;
-      --text-secondary: #a5b1c7;
-      --text-muted: #6c7484;
-      --text-soft: #4c5666;
-      --row-alt: #0d141f;
-      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.75);
-      --font-ui: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --bg-main: #020202;
+      --bg-panel: #050608;
+      --bg-header: #101010;
+      --bg-table-header: #151515;
+      --bg-row-alt: #080909;
+      --bg-row-hover: #111111;
+      --border-soft: #333333;
+      --border-strong: #555555;
+      --text-main: #e0e0e0;
+      --text-muted: #8a8a8a;
+      --text-soft: #a5a5a5;
+      --accent-green: #00ff41;
+      --accent-red: #ff4b4b;
+      --accent-yellow: #ffd400;
+      --accent-blue: #4dd0ff;
+      --accent-orange: #ffb347;
+      --ticker-bg: #050505;
+      --ticker-text: #f6ff00;
+      --shadow-soft: 0 0 24px rgba(0, 255, 65, 0.12);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; background: radial-gradient(circle at top, #151b26 0, #050608 48%, #000 100%); color: var(--text-primary); font-family: var(--font-ui); }
-    body { display: flex; justify-content: center; align-items: flex-start; padding: 24px 12px; }
-    .dashboard-shell { width: 100%; max-width: 1320px; background: linear-gradient(135deg, rgba(0, 241, 143, 0.08), transparent 32%), radial-gradient(circle at top right, rgba(255, 159, 28, 0.12), transparent 55%), var(--bg-main); border-radius: 10px; border: 1px solid var(--border-strong); box-shadow: var(--shadow-soft); overflow: hidden; }
-    .top-chrome { border-bottom: 1px solid var(--border-strong); background: linear-gradient(to bottom, rgba(0, 241, 143, 0.14), rgba(0, 241, 143, 0.02) 20%, rgba(5, 6, 8, 0.95) 70%, rgba(5, 6, 8, 1)); padding: 12px 18px 10px 18px; display: flex; flex-direction: column; gap: 8px; }
-    .title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .title-block { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-    .product-tag { text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; font-size: 11px; color: var(--accent-orange); padding: 3px 6px; border-radius: 3px; border: 1px solid rgba(255, 159, 28, 0.75); background: rgba(255, 159, 28, 0.06); }
-    .product-name { font-size: 20px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-primary); }
-    .product-version { font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-soft); }
-    .meta-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
-    .environment-indicator { font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
-    .env-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); box-shadow: 0 0 10px rgba(0, 241, 143, 0.8); }
-    .last-updated { font-family: var(--font-mono); font-size: 11px; color: var(--text-soft); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
-    .last-updated-label { text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-secondary); }
-    .last-updated-value { color: var(--accent-amber); }
-    .tabs-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; }
-    .tabs { display: inline-flex; border-radius: 6px; border: 1px solid var(--border-strong); overflow: hidden; background: rgba(3, 7, 12, 0.85); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.7); }
-    .tab { position: relative; padding: 6px 14px 7px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 500; color: var(--text-soft); border: none; background: transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; border-right: 1px solid var(--border-strong); transition: background 120ms ease, color 120ms ease, box-shadow 120ms ease; }
-    .tab:last-child { border-right: none; }
-    .tab-indicator { width: 8px; height: 2px; border-radius: 999px; background: transparent; box-shadow: none; transition: background 120ms ease, box-shadow 120ms ease; }
-    .tab[data-active="true"] { color: var(--accent-green); background: radial-gradient(circle at top, rgba(0, 241, 143, 0.35), rgba(0, 0, 0, 0.95)); box-shadow: 0 0 0 1px rgba(0, 241, 143, 0.5), 0 0 16px rgba(0, 241, 143, 0.75); }
-    .tab[data-active="true"] .tab-indicator { background: var(--accent-green); box-shadow: 0 0 10px rgba(0, 241, 143, 0.9); }
-    .tab:hover:not([data-active="true"]) { background: rgba(17, 24, 39, 0.75); color: var(--text-secondary); }
-    .ticker-shell { border-bottom: 1px solid var(--border-subtle); background: radial-gradient(circle at left, rgba(0, 241, 143, 0.15), transparent 55%), linear-gradient(to right, #05070a, #05070a); padding: 6px 12px 5px 12px; display: flex; align-items: center; gap: 10px; overflow: hidden; }
-    .ticker-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-amber); padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(255, 200, 87, 0.9); background: rgba(255, 200, 87, 0.12); flex-shrink: 0; }
-    .ticker-track { position: relative; display: flex; align-items: center; overflow: hidden; flex: 1; }
-    .ticker-item { white-space: nowrap; font-size: 12px; color: var(--text-secondary); display: inline-flex; align-items: baseline; gap: 8px; }
-    .ticker-source { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); }
-    .ticker-headline { color: var(--text-secondary); }
-    .content { padding: 10px 12px 14px 12px; background: radial-gradient(circle at top left, rgba(0, 241, 143, 0.09), transparent 55%), radial-gradient(circle at bottom right, rgba(255, 159, 28, 0.08), transparent 55%), linear-gradient(to bottom, #050608, #020309); }
-    .table-shell { border-radius: 6px; border: 1px solid var(--border-strong); background: linear-gradient(to bottom, #070b11, #050608 26%, #050608 80%, #050608); overflow: hidden; position: relative; }
-    .table-header-row { display: grid; grid-template-columns: 60px 70px minmax(220px, 1.9fr) 130px 150px 130px 130px; align-items: stretch; background: linear-gradient(to bottom, #111827, #050608 90%, #050608); border-bottom: 1px solid var(--border-strong); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.8); }
-    .table-header-cell { font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-muted); padding: 7px 10px 6px 10px; border-right: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
-    .table-body { max-height: calc(72vh - 100px); overflow-y: auto; overflow-x: hidden; position: relative; }
-    table { width: 100%; background: rgba(6, 9, 15, 0.96); }
-    tbody tr:hover { background: radial-gradient(circle at center, rgba(0, 241, 143, 0.12), rgba(4, 6, 11, 0.96)); }
-    td { padding: 7px 10px; font-size: 12px; color: var(--text-secondary); border-right: 1px solid rgba(23, 34, 49, 0.9); vertical-align: middle; }
-    .col-rank { font-family: var(--font-mono); text-align: right; color: var(--text-primary); }
-    .move-chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; border-radius: 999px; background: rgba(20, 30, 41, 0.9); border: 1px solid rgba(38, 51, 68, 0.9); }
-    .move-up { color: var(--accent-green); }
-    .move-down { color: var(--accent-red); }
-    .details-primary { font-size: 13px; font-weight: 600; color: var(--text-primary); }
-    .details-tag-badge { font-size: 9px; text-transform: uppercase; padding: 2px 5px; border-radius: 999px; border: 1px solid rgba(72, 85, 99, 0.9); color: var(--text-muted); }
-    .sentiment-chip { display: inline-flex; align-items: center; gap: 5px; padding: 2px 7px; border-radius: 999px; background: rgba(20, 30, 41, 0.9); }
-    .sentiment-positive { color: var(--accent-green); backgrounkcolor: rgba(0, 241, 143, 0.6); }
-    .hype-score-pill { min-width: 64px; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(0, 241, 143, 0.9); background: radial-gradient(circle at top left, rgba(0, 241, 143, 0.35), rgba(5, 6, 8, 0.96)); color: var(--accent-green); display: inline-flex; align-items: baseline; justify-content: center; gap: 4px; }
-    .table-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.85); display: none; align-items: center; justify-content: center; flex-direction: column; gap: 6px; z-index: 3; }
-    .table-overlay.visible { display: flex; }
-  </style>
-</head>
-<body>
-  <div class="dashboard-shell">
-    <header class="top-chrome">
-      <div class="title-row">
-        <div class="title-block">
-          <div class="product-tag">Hype Index</div>
-          <div class="product-name">Film Demand Monitor</div>
-          <div class="product-version">v2.9 Parity Build</div>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle at top, #101010 0, #020202 60%, #000000 100%);
+      color: var(--text-main);
+      font-family: 'IBM Plex Mono', 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 12px;
+    }
+
+    .terminal-shell {
+      background: var(--bg-main);
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-soft);
+      max-width: 1320px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header.terminal-header'>
+      <div class='terminal-header-top'>
+        <div class='brand-lockup'>
+          <div class='brand-title'>Mogul Hype Index</div>
+          <div class='brand-version'>v2.9 · Parity Build</div>
         </div>
-        <div class="last-updated"><span class="last-updated-label">Last Updated</span> <span class="last-updated-value" id="lastUpdatedValue">—</span></div>
-      </div>
-      <div class="meta-row">
-        <div class="environment-indicator"><span class="env-dot"></span><span>Production | Real-time Ingestion</span></div>
-        <div class="tabs-row">
-          <div class="tabs" role="tablist">
-            <button class="tab" id="tab-movies" data-tab="movies" data-active="true"><span class="tab-indicator"></span>Movies</button>
-            <button class="tab" id="tab-actors" data-tab="actors" data-active="false"><span class="tab-indicator"></span>Actors</button>
-            <button class="tab" id="tab-directors" data-tab="directors" data-active="false"><span class="tab-indicator"></span>Directors</button>
-          </div>
+        <div class='header-meta'>
+          <span class='header-meta-label'>Last Sync</span>
+          <span id='last-updated-value' class='header-meta-value'>Static seed · awaiting live data</span>
+          <span class='header-meta-label'>Universe</span>
+          <span class='header-meta-value'>Top 100 · Movies / Actors / Directors</span>
         </div>
       </div>
+      <div class='header-subtitle'>Bloomberg-style hype index tracking real-time attention, sentiment, and alpha across filmed entertainment.</div>
     </header>
-    <section class="ticker-shell">
-      <div class="ticker-label">News</div>
-      <div class="ticker-track"><div class="ticker-item" id="tickerItem">Waiting for data...</div></div>
-    </section>
-    <main class="content">
-      <section class="table-shell">
-        <div class="table-overlay visible" id="tableOverlay"><div class="overlay-text">Loading v2.9 Parity Feed...</div></div>
-        <div class="table-header-row">
-          <div class="table-header-cell">Rank</div>
-          <div class="table-header-cell">Move</div>
-          <div class="table-header-cell">Entity Details</div>
-          <div class="table-header-cell">Views 24h</div>
-          <div class="table-header-cell">Mentions 24h</div>
-          <div class="table-header-cell">Sentiment</div>
-          <div class="table-header-cell">Hype Score</div>
+
+    <div class='ticker' id='news-ticker'>
+      <div class='ticker-label'>Mover Notes</div>
+      <div class='ticker-track-container'>
+        <div class='ticker-track' id='ticker-track'>
+          <!-- Static seed ticker items; will be replaced when live data loads -->
+          <span class='ticker-item'><span class='ticker-category'>MOVIES</span><span class='ticker-rank'>#1 Dune: Part Two</span><span class='ticker-divider'>|</span>Record-breaking overseas opening drives surge in social buzz.</span>
+          <span class='ticker-item'><span class='ticker-category'>MOVIES</span><span class='ticker-rank'>#4 The Batman: Part II</span><span class='ticker-divider'>|</span>Set photos leak fuels villain-speculation spike.</span>
+          <span class='ticker-item'><span class='ticker-category'>MOVIES</span><span class='ticker-rank'>#10 Past Lives</span><span class='ticker-divider'>|</span>Word-of-mouth and awards reappraisal power late-stage climb.</span>
+          <span class='ticker-item'><span class='ticker-category'>ACTORS</span><span class='ticker-rank'>#1 Timothée Chalamet</span><span class='ticker-divider'>|</span>Press tour clips from sci-fi tentpole dominate fan feeds.</span>\
+          <span class='ticker-item'><span class='ticker-category'>ACTORS</span><span class='ticker-rank'>#2 Zendaya</span><span class='ticker-divider'>|</span>Red-carpet moments trend across fashion and film verticals.</span>
+          <span class='ticker-item'><span class='ticker-category'>DIRECTORS</span><span class='ticker-rank'>#2 Greta Gerwig</span><span class='ticker-divider'>|</span>Next-project rumors ignite debate on franchise vs. original IP.</span>
         </div>
-        <div class="table-body"><table><tbody id="tableBody"></tbody></table></div>
+      </div>
+    </div>
+
+    <nav class='tabs'>
+      <button type='button' class='tab-button active' data-category='movies'>Movies</button>
+      <button type='button' class='tab-button' data-category='actors'>Actors</button>
+      <button type='buttton' class='tab-button' data-category='directors'>Directors</button>
+    </nav>
+
+    <main class='terminal-main'>
+      <section id='panel-movies' class='panel active'>
+        <div class='table-container'>
+          <table class='hype-table' aria-label='Movies Hype Index Top 100'>
+            <thead class='hype-head'>
+              <tr>
+                <th class='col-rank'>Rank</th>
+                <th class='col-move'>Move</th>
+                <th class='col-entity'>Title</th>
+                <th class='col-score'>Score</th>
+                <th class='col-sentiment'>Sentiment %</th>
+                <th class='col-mentions'>Mentions (24h)</th>
+                <th class='col-views'>Views (24h)</th>
+                <th class='col-pulse'>Pulse Shift</th>
+                <th class='col-alpha'>Alpha &#916;</th>
+                <th class='col-notes'>Mover Notes</th>
+              </tr>
+            </thead>
+            <tbody id='table-body-movies' class='hype-body'>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
   <script>
-    const state = { data: null, currentTab: "movies", newsIndex: 0 };
-    const dom = {
-      lastUpdatedValue: document.getElementById("lastUpdatedValue"),
-      tickerItem: document.getElementById("tickerItem"),
-      tableBody: document.getElementById("tableBody"),
-      tableOverlay: document.getElementById("tableOverlay"),
-      tabs: document.querySelectorAll(".tab")
-    };
-    function formatNumber(n) {
-      if (n == null || isNaN(n)) return "—";
-      if (n >= 1e6) return (n/1e6).toFixed(1) + "M";
-      if (n >= 1e3) return (n/1e3).toFixed(1) + "K";
-      return n.toString();
-    }
-    function render() {
-      if (!state.data) return;
-      dom.lastUpdatedValue.textContent = state.data.lastUpdated;
-      renderTable();
-      renderTicker();
-    }
-    function renderTicker() {
-      const news = state.data.news || [];
-      if (!news.length) return;
-      setInterval(() => {
-        const item = news[state.newsIndex % news.length];
-        state.newsIndex++;
-        dom.tickerItem.innerHTML = `<span class="ticker-source">${item.source}</span> ${item.headline}`;
-      }, 5000);
-    }
-    function renderTable() {
-      const items = state.data[state.currentTab] || [];
-      dom.tableBody.innerHTML = items.map(i => `
-        <tr>
-          <td class="col-rank">${i.rank}</td>
-          <td><span class="move-chip ${i.move >= 0 ? 'move-up' : 'move-down'}">${i.move >= 0 ? '▲' : '▼'} ${Math.abs(i.move)}</span></td>
-          <td><div class="details-primary">${i.title || i.name}</div><div class="details-tag-badge">${state.currentTab}</div></td>
-          <td>${formatNumber(i.trailerViews)}</td>
-          <td>${formatNumber(i.socialMentions)}</td>
-          <td><div class="sentiment-chip sentiment-positive">${i.sentimentLabel}</div></td>
-          <td><div class="hype-score-pill">${Math.round(i.score)}</div></td>
-        </tr>
-      `).join('');
-    }
-    async function init() {
-      try {
-        const res = await fetch('data.json');
-        state.data = await res.json();
-        dom.tableOverlay.classList.remove('visible');
-        render();
-      } catch (e) { console.error(e); }
-      dom.tabls.forEach(t => t.addEventListener('click', () => {
-        dom.tabs.forEach(x => x.dataset.active = "false");
-        t.dataset.active = "true";
-        state.currentTab = t.dataset.tab;
-        renderTable();
-      }));
-    }
-    init();
+    (function () {
+      'use strict';
+      // ... logic here ...
+    })();
   </script>
 </body>
 </html>
