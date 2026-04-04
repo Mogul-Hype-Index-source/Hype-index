@@ -1,132 +1,116 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>Mogul Hype Index v2.9 — Parity Build</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hype Index v2 — Milestone 1</title>
   <style>
     :root {
-      --bg-main: #020202;
-      --bg-panel: #050608;
-      --bg-header: #101010;
-      --bg-table-header: #151515;
-      --bg-row-alt: #080909;
-      --bg-row-hover: #111111;
-      --border-soft: #333333;
-      --border-strong: #555555;
-      --text-main: #e0e0e0;
-      --text-muted: #8a8a8a;
-      --text-soft: #a5a5a5;
-      --accent-green: #00ff41;
-      --accent-red: #ff4b4b;
-      --accent-yellow: #ffd400;
-      --accent-blue: #4dd0ff;
-      --accent-orange: #ffb347;
-      --ticker-bg: #050505;
-      --ticker-text: #f6ff00;
-      --shadow-soft: 0 0 24px rgba(0, 255, 65, 0.12);
+      --bg: #05080d;
+      --panel: #0b1118;
+      --panel-2: #101822;
+      --grid: #1d2935;
+      --text: #e6edf3;
+      --muted: #8b99a8;
+      --accent: #ff9f1c;
+      --accent-2: #ffbf69;
+      --good: #3ddc97;
+      --bad: #ff5d73;
+      --warn: #ffd166;
+      --flat: #7b8794;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     html, body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background: radial-gradient(circle at top, #101010 0, #020202 60%, #000000 100%);
-      color: var(--text-main);
-      font-family: 'IBM Plex Mono', 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-      -webkit-font-smoothing: antialiased;
+      min-height: 100%;
+      background: radial-gradient(circle at top right, rgba(255, 159, 28, 0.08), transparent 28%), linear-gradient(180deg, #05080d 0%, #060b12 100%);
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      padding: 12px;
-    }
-
-    .terminal-shell {
-      background: var(--bg-main);
-      border: 1px solid var(--border-strong);
-      box-shadow: var(--shadow-soft);
-      max-width: 1320px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    header.terminal-header'>
-      <div class='terminal-header-top'>
-        <div class='brand-lockup'>
-          <div class='brand-title'>Mogul Hype Index</div>
-          <div class='brand-version'>v2.9 · Parity Build</div>
-        </div>
-        <div class='header-meta'>
-          <span class='header-meta-label'>Last Sync</span>
-          <span id='last-updated-value' class='header-meta-value'>Static seed · awaiting live data</span>
-          <span class='header-meta-label'>Universe</span>
-          <span class='header-meta-value'>Top 100 · Movies / Actors / Directors</span>
-        </div>
-      </div>
-      <div class='header-subtitle'>Bloomberg-style hype index tracking real-time attention, sentiment, and alpha across filmed entertainment.</div>
+    body { padding: 16px; }
+    .app { max-width: 1560px; margin: 0 auto; border: 1px solid var(--grid); background: rgba(6, 11, 18, 0.94); box-shadow: var(--shadow); }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--grid); background: linear-gradient(180deg, rgba(255, 159, 28, 0.12), rgba(255, 159, 28, 0.03)); }
+    .brand-title { font-size: 22px; font-weight: 800; color: var(--accent-2); text-transform: uppercase; }
+    .ticker-shell { margin: 12px 18px 0; display: grid; grid-template-columns: 130px 1fr; border: 1px solid var(--grid); background: var(--panel); }
+    .ticker-label { display: flex; align-items: center; justify-content: center; padding: 10px 12px; background: var(--accent); color: #000; font-size: 12px; font-weight: 800; }
+    .ticker-track { display: flex; gap: 28px; padding: 10px; animation: ticker 40s linear infinite; white-space: nowrap; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .toolbar { padding: 14px 18px; display: flex; gap: 10px; }
+    .tab { border: 1px solid var(--grid); background: var(--panel); color: var(--muted); padding: 10px 14px; cursor: pointer; }
+    .tab.active { background: var(--accent); color: #000; font-weight: 800; }
+    .table-wrap { margin: 0 18px 18px; border: 1px solid var(--grid); overflow: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 1200px; }
+    th { background: #0f1721; color: var(--accent-2); padding: 12px; text-align: left; font-size: 11px; text-transform: uppercase; }
+    td { padding: 12px; border-bottom: 1px solid var(--grid); font-size: 13px; }
+    .move-up { color: var(--good); }
+    .move-down { color: var(--bad); }
+    .score-pill { font-weight: 800; color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-title">Hype Index v2</div>
+      <div id="lastUpdated">Last Updated: --</div>
     </header>
-
-    <div class='ticker' id='news-ticker'>
-      <div class='ticker-label'>Mover Notes</div>
-      <div class='ticker-track-container'>
-        <div class='ticker-track' id='ticker-track'>
-          <!-- Static seed ticker items; will be replaced when live data loads -->
-          <span class='ticker-item'><span class='ticker-category'>MOVIES</span><span class='ticker-rank'>#1 Dune: Part Two</span><span class='ticker-divider'>|</span>Record-breaking overseas opening drives surge in social buzz.</span>
-          <span class='ticker-item'><span class='ticker-category'>MOVIES</span><span class='ticker-rank'>#4 The Batman: Part II</span><span class='ticker-divider'>|</span>Set photos leak fuels villain-speculation spike.</span>
-          <span class='ticker-item'><span class='ticker-category'>MOVIES</span><span class='ticker-rank'>#10 Past Lives</span><span class='ticker-divider'>|</span>Word-of-mouth and awards reappraisal power late-stage climb.</span>
-          <span class='ticker-item'><span class='ticker-category'>ACTORS</span><span class='ticker-rank'>#1 Timothée Chalamet</span><span class='ticker-divider'>|</span>Press tour clips from sci-fi tentpole dominate fan feeds.</span>\
-          <span class='ticker-item'><span class='ticker-category'>ACTORS</span><span class='ticker-rank'>#2 Zendaya</span><span class='ticker-divider'>|</span>Red-carpet moments trend across fashion and film verticals.</span>
-          <span class='ticker-item'><span class='ticker-category'>DIRECTORS</span><span class='ticker-rank'>#2 Greta Gerwig</span><span class='ticker-divider'>|</span>Next-project rumors ignite debate on franchise vs. original IP.</span>
-        </div>
-      </div>
+    <section class="ticker-shell">
+      <div class="ticker-label">Live Feed</div>
+      <div class="ticker-track" id="ticker">Loading...</div>
+    </section>
+    <section class="toolbar">
+      <button class="tab active" data-tab="movies">Movies</button>
+      <button class="tab" data-tab="actors">Actors</button>
+      <button class="tab" data-tab="directors">Directors</button>
+    </section>
+    <div class="table-wrap">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Move</th>
+            <th>Entity</th>
+            <th>Score</th>
+            <th>Sentiment</th>
+            <th>Mentions</th>
+            <th>Views</th>
+            <th>Pulse</th>
+            <th>Alpha</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
     </div>
-
-    <nav class='tabs'>
-      <button type='button' class='tab-button active' data-category='movies'>Movies</button>
-      <button type='button' class='tab-button' data-category='actors'>Actors</button>
-      <button type='buttton' class='tab-button' data-category='directors'>Directors</button>
-    </nav>
-
-    <main class='terminal-main'>
-      <section id='panel-movies' class='panel active'>
-        <div class='table-container'>
-          <table class='hype-table' aria-label='Movies Hype Index Top 100'>
-            <thead class='hype-head'>
-              <tr>
-                <th class='col-rank'>Rank</th>
-                <th class='col-move'>Move</th>
-                <th class='col-entity'>Title</th>
-                <th class='col-score'>Score</th>
-                <th class='col-sentiment'>Sentiment %</th>
-                <th class='col-mentions'>Mentions (24h)</th>
-                <th class='col-views'>Views (24h)</th>
-                <th class='col-pulse'>Pulse Shift</th>
-                <th class='col-alpha'>Alpha &#916;</th>
-                <th class='col-notes'>Mover Notes</th>
-              </tr>
-            </thead>
-            <tbody id='table-body-movies' class='hype-body'>
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
   </div>
   <script>
-    (function () {
-      'use strict';
-      // ... logic here ...
-    })();
+    let data = {};
+    async function load() {
+      const res = await fetch('data.json', {cache: 'no-store'});
+      data = await res.json();
+      render('movies');
+      document.getElementById('lastUpdated').innerText = 'Last Updated: ' + data.meta.lastUpdated;
+    }
+    function render(tab) {
+      document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+      const rows = data[tab] || [];
+      document.getElementById('body').innerHTML = rows.map(i => `
+        <tr>
+          <td>#${i.rank}</td>
+          <td class="${i.change > 0 ? 'move-up' : 'move-down'}">${i.change > 0 ? '▲' : '▼'} ${Math.abs(i.change)}</td>
+          <td><strong>${i.name}</strong></td>
+          <td class="score-pill">${i.score.toFixed(1)}</td>
+          <td>${i.sentiment.positive}% pos</td>
+          <td>${(i.mentions/1e3).toFixed(1)}K</td>
+          <td>${(i.views/1e6).toFixed(1)}M</td>
+          <td>${i.pulse_shift}</td>
+          <td>${i.alpha_delta}</td>
+          <td style="color:#8b99a8">${i.notes}</td>
+        </tr>
+      `).join('');
+    }
+    document.querySelectorAll('.tab').forEach(b => b.onclick = () => render(b.dataset.tab));
+    load();
   </script>
 </body>
 </html>
