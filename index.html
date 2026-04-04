@@ -1,223 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hype Index v2.6</title>
-  <style>
-    :root{
-      --bg:#050505;
-      --panel:#0b0b0b;
-      --panel-2:#101010;
-      --grid:#2a2108;
-      --text:#ffbf3f;
-      --text-dim:#c9971a;
-      --accent:#ff9f0a;
-      --accent-2:#ffd166;
-      --green:#4cff88;
-      --red:#ff5e5e;
-      --blue:#7ac7ff;
-      --gray:#a18a52;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
-    body{min-height:100vh}
-    .wrap{max-width:1440px;margin:0 auto;padding:12px 16px 24px}
-    .topline{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0 12px;border-bottom:1px solid var(--grid)}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand h1{margin:0;font-size:20px;letter-spacing:.08em}
-    .version{color:var(--accent-2);border:1px solid var(--grid);padding:3px 8px;background:var(--panel)}
-    .meta{font-size:12px;color:var(--text-dim);text-align:right}
-    .ticker{margin:12px 0;border:1px solid var(--grid);background:linear-gradient(180deg,var(--panel),var(--panel-2));overflow:hidden;white-space:nowrap}
-    .ticker-track{display:inline-block;padding:10px 0;min-width:100%;animation:scroll 40s linear infinite}
-    .ticker-item{display:inline-block;padding:0 28px;color:var(--accent-2)=
-    .ticker-label{display:inline-block;padding:10px 14px;background:#171300;border-right:1px solid var(--grid);color:#fff1bf;font-weight:700}
-    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    .controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0}
-    .tabs{display:flex;gap:8px}
-    .tab{background:var(--panel);border:1px solid var(--grid);color:var(--text);padding:10px 14px;cursor:pointer;text-transform:uppercase;letter-spacing:.08em}
-    .tab.active{background:var(--accent);color:#120b00;border-color:var(--accent)}
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{border:1px solid var(--grid);padding:8px 10px;background:var(--panel);font-size:12px;color:var(--accent-2)}
-    .table-card{border:1px solid var(--grid);background:linear-gradient(180deg,var(--panel),#070707)}
-    .table-wrap{overflow:auto}
-    table{width:100%;border-collapse:collapse;min-width:1200px}
-    thead th{position:sticky;top:0;background:#130f02;color:#fff1bf;text-align:left;font-size:12px;padding:12px 10px;border-bottom:1px solid var(--grid);text-transform:uppercase;letter-spacing:.08em}
-    tbody td{padding:10px;border-bottom:1px solid #171307;font-size:13px;vertical-align:top}
-    tbody tr:hover{background:#0f0d05}
-    .num{text-align:right}
-    .move.up{color:var(--green)}
-    .move.down{color:var(--red)}
-    .move.flat{color:var(--gray)}
-    .sentiment{display:inline-block;border:1px solid var(--grid);padding:2px 8px;text-transform:uppercase;font-size:11px}
-    .sentiment.positive{color:var(--green)}
-    .sentiment.negative{color:var(--red)}
-    .sentiment.neutral{color:var(--blue)}
-    .sentiment.controversy{color:#ff7ad9}
-    .id{color:var(--text-dim)}
-    .notes{color:#f8d27a;max-width:560px}
-    .footer{margin-top:10px;font-size:12px;color:var(--text-dim);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .error{color:var(--red);padding:16px;border:1px solid #3f120f;background:#180807}
-    @media (max-width:720px){
-      .brand h1{font-size:16px}
-      .meta{width:100%;text-align:left}
-      .ticker-track{animation-duration:55s}
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="topline">
-      <div class="brand">
-        <h1>HYPE INDEX</h1>
-        <div class="version">v2.6</div>
-      </div>
-      <div class="meta">
-        <div id="updated">LAST UPDATE: --</div>
-        <div>AUTO REFRESH: 60 MIN</div>
-      </div>
-    </div>
-
-    <div class="ticker">
-      <span class="ticker-label">PULSE</span>
-      <div class="ticker-track" id="tickerTrack"></div>
-    </div>
-
-    <div class="controls">
-      <div class="tabs">
-        <button class="tab active" data-tab="movies">Movies</button>
-        <button class="tab" data-tab="talent">Talent</button>
-      </div>
-      <div class="chips">
-        <div class="chip" id="countChip">TOTAL ENTITIES: --</div>
-        <div class="chip" id="leaderChip">LEADER: --</div>
-        <div class="chip" id="windowChip">WINDOWED MENTIONS_X</div>
-      </div>
-    </div>
-
-    <div class="table-card">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th class="num">Rank</th>
-              <th class="num">Move</th>
-              <th>ID</th>
-              <th>Name</th>
-              <th class="num">Hype</th>
-              <th class="num">NIS</th>
-              <th class="num">Mentions_X</th>
-              <th>Sentiment</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody id="tableBody">
-            <tr><td colspan="9">Loading‚Ä¶</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div>STYLE: BLOOMBERG TERMINAL / DARK MODE</div>
-      <div>DATA SOURCE: data.json</div>
-    </div>
-  </div>
-
-  <script>
-    const STATE = { active: "movies", data: null };
-
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-    }
-
-    function formatMove(n) {
-      if (n > 0) return `<span class="move up">+${n}</span>`;
-      if (n < 0) return `<span class="move down">${n}</span>`;
-      return `<span class="move flat">0</span>`;
-    }
-
-    function sentimentBadge(value) {
-      return `<span class="sentiment ${escapeHtml(value)}">${escapeHtml(value)}</span>`;
-    }
-
-    function renderTicker(data) {
-      const target = document.getElementById("tickerTrack");
-      const items = (data.pulse && data.pulse.length)
-        ? data.pulse
-        : [
-            `${data.movies[0].name} leads movies`,
-            `${data.talent[0].name} leads talent`
-          ];
-      const html = items.concat(items).map(item => `<span class="ticker-item">${escapeHtml(item)}</span>`).join("");
-      target.innerHTML = html;
-    }
-
-    function renderSummary() {
-      const data = STATE.data;
-      const list = data[STATE.active] || [];
-      const leader = list[0];
-      document.getElementById("countChip").textContent = `TOTAL ENTITIES: ${data.counts.total} | ${STATE.active.toUpperCase()}: ${list.length}`;
-      document.getElementById("leaderChip").textContent = leader
-        ? `LEADER: #${leader.rank} ${leader.name.toUpperCase()} | HYPE ${leader.hype_score} | NIS ${leader.news_impact_score}`
-        : "LEADER: --";
-      document.getElementById("updated").textContent = `LAST UPDATE: ${data.generated_at}`;
-    }
-
-    function renderTable() {
-      const tbody = document.getElementById("tableBody");
-      const list = (STATE.data && STATE.data[STATE.active]) ? STATE.data[STATE.active] : [];
-      if (!list.length) {
-        tbody.innerHTML = `<tr><td colspan="9">No data.</td></tr>`;
-        return;
-      }
-      tbody.innerHTML = list.map(row => `
-        <tr>
-          <td class="num">${row.rank}</td>
-          <td class="num">${formatMove(row.move)}</td>
-          <td class="id">${escapeHtml(row.id)}</td>
-          <td>${escapeHtml(row.name)}</td>
-          <td class="num">${row.hype_score}</td>
-          <td class="num">${row.news_impact_score}</td>
-          <td class="num">${row.mentions_x.toLocaleString()}</td>
-          <td>${sentimentBadge(row.sentiment)}</td>
-          <td class="notes">${escapeHtml(row.notes)}</td>
-        </tr>
-      `).join("");
-    }
-
-    async function fetchData() {
-      try {
-        const res = await fetch(`data.json?ts=${Date.now()}`, { cache: "no-store" });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        STATE.data = await res.json();
-        renderTicker(STATE.data);
-        renderSummary();
-        renderTable();
-      } catch (err) {
-        document.getElementById("tableBody").innerHTML = `<tr><td colspan="9"><div class="error">DATA LOAD FAILED: ${escapeHtml(err.message)}</div></td></tr>`;
-      }
-    }
-
-    document.querySelectorAll(".tab").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".tab").forEach(el => el.classList.remove("active"));
-        btn.classList.add("active");
-        STATE.active = btn.dataset.tab;
-        if (STATE.data) {
-          renderSummary();
-          renderTable();
-        }
-      });
-    });
-
-    fetchData();
-    setInterval(fetchData, 60 * 60 * 1000);
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Bloomberg Style Index Dashboard</title><style> :root{ --bg:#000000; --panel:#050505; --grid:#1a1a1a; --text: #f3f3f3; --muted: #a7a7a7; --header: #ff900; --accent: #00e5ff; --positive: #5cff6b; --negative: #ff5c5c; --neutral: #d6d06f; --controversy: #ff4fd8; --row-alt: #0b0b0b; --note: #d0d0d0; } * { box-sizing: border-box; } html, body { margin: 0; background: var(--bg); color: var(--text); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; height: 100%; } body { display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; } .topbar { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--header); background: linear-gradient(180deg, rgba(255,159,0,0.08), rgba(255,159,0,0.02)), var(--panel); box-shadow: inset 0 -1px 0 rgba(255,159,0,0.25); } .title { color: var(--header); font-weight: 700; letter-spacing: 0.06em; text transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .meta { color: var(--accent); font-size: 12px; white-space: nowrap; } .status { color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; } .wrap { flex: 1; min-height: 0; overflow: auto; background: linear-gradient(transparent 95%, rgba(255,255,255,0.03) 100%), var(--bg); } table { u⁄YàL	N»õ‹ô\ãX€€\ŸNà€€ã[\ŸN»XõK[^[›]àö^Y»Z[ã]⁄YàLåå»HXY»‹⁄][€éà›X⁄ﬁN»‹à»ãZ[ô^àé»òX⁄Ÿ‹õ›[ôàÃååé»€€‹éàò\äKZXY\äN»õ‹ô\ãXõ›€Nà\€€Yò\äKZXY\äN»õ‹ô\ã]‹à\€€YÃòåòåòé»^]ò[úŸõ‹õNà\\òÿ\ŸN»]\ã\‹X⁄[ôŒàå[N»õ€ù\⁄^ôNàLú»Y[ôŒàL»^X[Y€éàYù»HõŸH»õ‹ô\ãXõ›€Nà\€€Yò\äKY‹öY
+N»Y[ôŒà»õ€ù\⁄^ôNàL‹»ô\ùXÿ[X[Y€éà‹»€€‹éàò\äK]^
+N»€‹ô]‹ò\àúôXZÀ]€‹ô»›ô\ôõ›À]‹ò\à[û]⁄\ôN»HõŸHéõùX⁄[
+]ô[äH»òX⁄Ÿ‹õ›[ôàò\äK\õ›ÀX[
+N»HõŸHéö›ô\à»òX⁄Ÿ‹õ›[ôàôÿòJåéKçMKåäN»Hõù[KòŸ[ù\à»^X[Y€éàöY⁄»Húò[ö»»€€‹éàò\äKXXÿŸ[ù
+N»õ€ù]ŸZY⁄àÃ»Hô[ù]H»€€‹éàŸôôôôôé»õ€ù]ŸZY⁄àÃ»Húÿ€‹ôH»€€‹éàò\äKXXÿŸ[ù
+N»õ€ù]ŸZY⁄àÃ»Hú‹»»€€‹éàò\äK\‹⁄]]ôJN»HõôY»»€€‹éàò\äK[ôYÿ]]ôJN»Hõô]H»€€‹éàò\äK[ô]]ò[
+N»Hò€€à»€€‹éàò\äKX€€ùõ›ô\úﬁJN»Hõõ›\»»€€‹éàò\äK[õ›JN»Hò⁄À]\»€€‹éàò\äK\‹⁄]]ôJN»õ€ù]ŸZY⁄àÃ»Hò⁄ÀY›€à»€€‹éàò\äK[ôYÿ]]ôJN»õ€ù]ŸZY⁄àÃ»Hò⁄ÀYõ]»€€‹éàò\äK[]]Y
+N»õ€ù]ŸZY⁄àÃ»¢ÈÌ .loading, .error, .empty { padding: 24px 16px; color: var(--muted); white-space: pre-wrap; } .footer { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 8px 14px; border-top: 1px solid var(--grid); background: var(--panel); color: var(--muted); font-size: 12px; } .blink { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 1px; background: var(--positive); box-shadow: 0 0 10px rgba(92,255,107,0.6); animation: pulse 1.2s infinite ease-in-out; vertical-align: middle; } @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } } .col-rank{width:72px} .col-change{width:92px} .col-entity{width:260px} .col-score{width:100px} .col-small{width:100px} .col-notes{width:auto} @media (max-width: 900px) { .topbar { grid-template-columns: 1fr; } .status { text-align: left; } } </style></head><body><div class="tipbar"><div class="title">NI Sentiment Index Monitor</div><div class="meta" id="meta">SRC:data.json&nbsp;&nbsp;MODE:LIVE VIEW</div><div class="status" id="status"><span class="blink"></span>LOADING</div></div><div class="wrap"><table aria-label="Bloomberg Style Index Table"><thead><tr><th class="col-rank">Rank</th><th class="col-change">Change</th><th class="col-entity">Entity</th><th class="col-score">Score (NIS)</th><th class="col-small">Positive</th><th class="col-small">Negative</th><th class="col-small">Neutral</th><th class="col-small">Controversy</th><th class="col-notes">Notes</th></tr></thead><tbody id="table-body"><tr><td colspan="9" class="loading">Loading data‚Ä¶</td></tr></tbody></table></div><div class="footer"><div id="footer-left">ROWS: 0</div><div id="footer-right">HIGH CONTRAST / MONOSPACE / DARK MODE</div></div><script> const tbody = document.getElementById('table-body'); const statusEl = document.getElementById('status'); const footerLeft = document.getElementById('footer-left'); function escapeHtml(value) { return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); } function formatNumber(value, digits = 1) { const num = Number(value); if (Number.isFinite(num)) { return num.toLocaleString(undefined, { minimumFractionDigits: digits, maximumFractionDigits: digits }); } return escapeHtml(value ?? ''); } function getChangeClass(change) { const text = String(change ?? '').trim(); if (!text) return 'chg-flat'; if (text.startsWith('+')) return 'chg-up'; if (text.startsWith('-')) return 'chg-down'; const numeric = Number(text.replace(/[^\d.-]/g, '')); if (Number.isFinite(numeric)) { if (numeric > 0) return 'chg-up'; if (numeric < 0) return 'chg-down'; } return 'chg-flat'; } function renderRows(rows) { const dataRows = Array.isArray(rows) ? rows.slice(0, 100) : []; if (!dataRows.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty">No rows found in data.json</td></tr>'; statusEl.innerHTML = '<span class="blink"></span>READY'; footerLeft.textContent = 'ROWS: 0'; return; } tbody.innerHTML = dataRows.map((row, idx) => { const change = row?.CHANGE ?? ''; return `<tr><td class="num rank">${escapeHtml(row?.RANK /? idx + 1)}</td><td class="${getChangeClass(change)}">${escapeHtml(change)}</td><td class="entity">${escapeHtml(row?.ENTITY ?? '')}</td><td class="num score">$formatNumber(row?.NIS, 1)}</td><td class="num pos">${escapeHtml(row?.POSITIVE ?? '')}</td><td class="num neg">${escapeHtml(row?.NEGATIVE ?? '')}</td><td class="num neu">${escapeHtml(row?.NEUTRAL /? '')}</td><td class="num con">${escapeHtml(row?.CONTROVERSY ?? '')}</td><td class="notes">${escapeHtml(row?.NOTES ?? '')}</td></tr>`; }).join(2); statusEl.innerHTML = '<span class="blink"></span>READY'; footerLeft.textContent = 'ROWS: ' + dataRows.length; } async function init() { try { const response = await fetch('data.json', { cache: 'no-store' }); if (!res.ponse.ok) { throw new Error('HTTP ' + response.status + ' while loading data.json'); } const payload = await response.json(); renderRows(payload?.rows); } catch (err) { tbody.innerHTML = '<tr><td colspan="9" class="error">Failed to load data.json\n' + escapeHtml(error?.message || String(error)) + '</td></tr>'; statusEl.textContent = 'ERROR'; footerLeft.textContent = 'ROWS: 0'; } } init(); </script></body></html>
