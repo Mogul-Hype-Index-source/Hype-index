@@ -1,1 +1,50 @@
-{"pulse_version":"v3.4","generated_at":"2026-04-05T09:23:12Z","pulse_time":"2026-04-05T09:00:00Z","window":{"start":"2026-04-05T08:00:00Z","end":"2026-04-05T09:00:00Z","metric":"mentions_1h_delta"},"nis_formula_version":"v1.1","methodology":{"baseline_max":500,"persistence_default":1.0,"score_clamp":100.0,"sentiment_transform":"S=((S_raw+1.0)/2.0*0.9)+0.1","nis_formula":"NIS=(Volume*S*Tiering*Persistence)/Baseline_max*100"},"leaders":{"movie":{"entity_id":"mov_super_mario_galaxy_movie","entity_name":"Super Mario Galaxy Movie","category":"movie","rank":1,"move":"+2","hype_score":100.0,"nis_score":100.0,"sentiment":0.8,"mentions_1h":535,"notes":"Tier 1 opening weekend 107M domestic global projection 370M audience positive with critic drag"},"actor":{"entity_id":"tal_milly_alcock","entity_name":"Milly Alcock","category":"talent","rank":1,"move":"+5","hype_score":100.0,"nis_score":100.0,"sentiment":0.9,"mentions_1h":490,"notes":"Tier 1 Supergirl trailer resonance makes her the clear talent leader this hour"}},"summary_stats":{"movie_avg_hype_top10":76.75,"talent_avg_hype_top10":80.02,"movie_mentions_top10_1h":3898,"talent_mentions_top10_1h":3881}}
+{
+  "pulse_version": "v3.5",
+  "generated_at": "2026-04-05T10:00:00Z",
+  "pulse_time": "2026-04-05T10:00:00Z",
+  "window": {
+    "start": "2026-04-05T09:00:00Z",
+    "end": "2026-04-05T10:00:00Z",
+    "metric": "mentions_1h_delta"
+  },
+  "nis_formula_version": "v1.1",
+  "methodology": {
+    "baseline_max": 500,
+    "persistence_default": 1.0,
+    "score_clamp": 100.0,
+    "sentiment_transform": "S=((S_raw+1.0)/2.0*0.9)+0.1",
+    "nis_formula": "NIS=(Volume*S*Tiering*Persistence)/Baseline_max*100"
+  },
+  "leaders": {
+    "movie": {
+      "entity_id": "mov_super_mario_galaxy_movie",
+      "entity_name": "Super Mario Galaxy Movie",
+      "category": "movie",
+      "rank": 1,
+      "move": "0",
+      "hype_score": 98.6,
+      "nis_score": 98.6,
+      "sentiment": 0.85,
+      "mentions_1h": 580,
+      "notes": "Sunday morning surge; domestic frame holding at $107.4M with global projection near $370M."
+    },
+    "actor": {
+      "entity_id": "tal_milly_alcock",
+      "entity_name": "Milly Alcock",
+      "category": "talent",
+      "rank": 1,
+      "move": "+1",
+      "hype_score": 93.6,
+      "nis_score": 93.6,
+      "sentiment": 0.9,
+      "mentions_1h": 520,
+      "notes": "Elite trailer resonance for Supergirl; #1 actor by hourly mentions."
+    }
+  },
+  "summary_stats": {
+    "movie_avg_hype_top10": 78.2,
+    "talent_avg_hype_top10": 81.5,
+    "movie_mentions_top10_1h": 4120,
+    "talent_mentions_top10_1h": 3950
+  }
+}
