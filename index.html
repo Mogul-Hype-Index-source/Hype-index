@@ -292,6 +292,161 @@
     padding:10px 22px;font-family:'Bebas Neue',sans-serif;font-size:14px;
     letter-spacing:.16em;cursor:pointer;text-decoration:none;display:inline-block;
   }
+
+  /* ============================================================
+     MOBILE LAYOUT  ≤ 430px (iPhone 15 = 390px, iPhone 15 Pro Max = 430px)
+     ============================================================ */
+  @media (max-width: 430px){
+
+    /* ----- Header ----- */
+    .topbar{
+      padding:12px 14px;gap:10px;flex-wrap:wrap;
+      row-gap:10px;
+    }
+    .logo{gap:6px;flex:0 0 auto;white-space:nowrap}
+    .logo .mp{font-size:15px}
+    .logo .hi{font-size:15px;letter-spacing:.08em}
+    .logo .v2{display:none}
+
+    .live{margin-left:0;gap:6px}
+    .live .lbl{font-size:10px;letter-spacing:.1em}
+    .live .clk{font-size:11px}
+
+    .spacer{display:none}
+
+    .snapshot{order:5;flex:0 0 auto;padding:2px}
+    .snapshot button{padding:5px 10px;font-size:11px;letter-spacing:.06em}
+
+    .datenav{order:6;margin-left:0;gap:5px;flex:1 1 auto;justify-content:flex-end}
+    .datenav button{width:26px;height:26px;font-size:12px}
+    .datenav .date{font-size:11px;padding:0 2px}
+    .datenav .today{padding:0 8px;font-size:10px}
+
+    .theme-toggle{width:30px;height:30px}
+    .theme-toggle svg{width:14px;height:14px}
+
+    /* ----- Market summary: keep ONLY rising / falling / next update ----- */
+    .market{padding:10px 14px;gap:14px;justify-content:space-between}
+    .market > *:not(.mobile-show){display:none}
+    .market .pill{font-size:12px}
+    .market .cd{font-size:13px}
+
+    /* ----- Ticker ----- */
+    .ticker{height:34px}
+    .ticker .brk{padding:0 12px;font-size:12px;letter-spacing:.12em}
+    .ticker .track{font-size:12px;gap:32px;padding-left:18px}
+
+    /* ----- Movers strip: 1.5 cards visible so swipe is obvious ----- */
+    .movers{
+      grid-template-columns:1fr;gap:10px;
+      padding:14px 14px 14px 14px;
+    }
+    .movers .label{font-size:14px;letter-spacing:.12em}
+    .movers .label small{font-size:10px}
+    .movers .strip{
+      margin:0 -14px;padding:0 14px;            /* edge-to-edge swipe */
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    .mcard{
+      min-width:62vw;                            /* ~1.5 cards visible */
+      max-width:62vw;
+      scroll-snap-align:start;
+    }
+    .mcard .ttl{max-width:none}
+
+    /* ----- Tabs / sort: single horizontal scrolling row, never wrap ----- */
+    .tabs{padding:14px 14px 0;gap:2px}
+    .tab{padding:8px 10px;font-size:14px;letter-spacing:.1em}
+    .tabs .count{font-size:10px}
+
+    .toolbar{
+      padding:10px 14px 12px;gap:8px;
+      flex-wrap:wrap;
+    }
+    .toolbar .lbl{flex:0 0 auto}
+    .sort{
+      flex:1 1 100%;                             /* full row to itself */
+      flex-wrap:nowrap !important;               /* never stack */
+      overflow-x:auto;
+      scrollbar-width:none;
+      -webkit-overflow-scrolling:touch;
+      padding-bottom:2px;
+    }
+    .sort::-webkit-scrollbar{display:none}
+    .sort button{
+      flex:0 0 auto;
+      padding:6px 11px;font-size:11px;letter-spacing:.05em;
+    }
+    .toolbar .search{display:none}               /* search hidden on mobile, sort takes full row */
+
+    /* ----- Rankings table ----- */
+    /* Hide VIEWS (col 4) and MENTIONS (col 5) on mobile per spec.
+       Visible columns: # | MOVE | ENTITY | SENTIMENT | SCORE */
+    .rankings-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .rankings thead th:nth-child(4),
+    .rankings thead th:nth-child(5),
+    .rankings tbody td:nth-child(4),
+    .rankings tbody td:nth-child(5){display:none}
+
+    .rankings thead th{padding:10px 8px;font-size:9px;letter-spacing:.12em}
+    .rankings tbody td{padding:11px 8px}
+    .rankings thead th:first-child,
+    .rankings tbody td:first-child{padding-left:14px}
+    .rankings thead th:last-child,
+    .rankings tbody td:last-child{padding-right:14px}
+
+    .rk{font-size:22px;min-width:26px}
+    .mv{font-size:12px;min-width:34px}
+
+    .ent{min-width:0;gap:9px}
+    .ent .meta{min-width:0;flex:1 1 auto;overflow:hidden}
+    .ent .title{font-size:12px;line-height:1.2;gap:5px;flex-wrap:wrap}
+    .ent .title .badge{font-size:8px;padding:1px 4px}
+    .ent .sub{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ent .sub .dot{margin:0 4px}
+    .poster{width:32px;height:46px;font-size:13px}
+
+    .sent{min-width:0;gap:6px}
+    .sent .pct{font-size:11px;min-width:26px}
+    .bar{height:5px}
+
+    /* SCORE column always visible on the right edge — sticky-pin in case
+       the table ever overflows horizontally on a narrower phone. The
+       sticky cell inherits the row's background so striped/hover states
+       look right; thead pins to the panel color it already uses. */
+    .rankings tbody td:last-child{
+      position:sticky;right:0;
+      background:var(--bg);
+      box-shadow:-6px 0 10px -8px rgba(0,0,0,.35);
+      z-index:1;
+    }
+    .rankings tbody tr:hover td:last-child{background:var(--bg-row-hover)}
+    .rankings tbody tr.hl td:last-child{box-shadow:inset 3px 0 0 var(--gold),-6px 0 10px -8px rgba(0,0,0,.35)}
+    .rankings thead th:last-child{
+      position:sticky;right:0;
+      background:var(--bg-panel);
+      box-shadow:-6px 0 10px -8px rgba(0,0,0,.35);
+      z-index:3;
+    }
+    .score{font-size:22px}
+    .trend{font-size:9px;margin-left:3px}
+
+    /* ----- Footer ----- */
+    .footer{padding:16px 14px;gap:14px}
+    .footer .cd{font-size:12px}
+    .footer .ts{font-size:10px}
+    .footer .play{padding:8px 16px;font-size:12px;letter-spacing:.12em}
+  }
+
+  /* Even narrower (small Android, iPhone SE) — keep everything readable */
+  @media (max-width: 360px){
+    .topbar{padding:10px 10px}
+    .logo .mp,.logo .hi{font-size:14px}
+    .snapshot button{padding:5px 8px;font-size:10px}
+    .datenav .today{padding:0 6px}
+    .mcard{min-width:70vw;max-width:70vw}
+  }
 </style>
 </head>
 <body>
@@ -335,15 +490,15 @@
 <div class="market" id="market">
   <div class="pill"><span class="k">TITLES</span><span class="v" id="m_total">—</span></div>
   <span class="sep"></span>
-  <div class="pill up"><span>▲</span><span><span id="m_rising">—</span> RISING</span></div>
-  <div class="pill down"><span>▼</span><span><span id="m_falling">—</span> FALLING</span></div>
+  <div class="pill up mobile-show"><span>▲</span><span><span id="m_rising">—</span> RISING</span></div>
+  <div class="pill down mobile-show"><span>▼</span><span><span id="m_falling">—</span> FALLING</span></div>
   <div class="pill flat"><span>—</span><span><span id="m_flat">—</span> FLAT</span></div>
   <span class="sep"></span>
   <div class="pill"><span class="k">AVG SCORE</span><span class="v" id="m_avg">—</span></div>
   <div class="pill"><span class="k">TOTAL MENTIONS 24H</span><span class="v" id="m_mentions">—</span></div>
   <span class="sep"></span>
   <div class="pill"><span class="k">LAST UPDATED</span><span class="v" id="m_updated">—</span></div>
-  <div class="pill"><span class="k">NEXT UPDATE</span><span class="cd" id="cd">--:--:--</span></div>
+  <div class="pill mobile-show"><span class="k">NEXT UPDATE</span><span class="cd" id="cd">--:--:--</span></div>
 </div>
 
 <!-- ================= NEWS TICKER ================= -->
@@ -381,6 +536,7 @@
 </div>
 
 <!-- ================= RANKINGS TABLE ================= -->
+<div class="rankings-wrap">
 <table class="rankings">
   <thead>
     <tr>
@@ -397,6 +553,7 @@
     <tr><td colspan="7" class="empty">Loading live Hype Index data…</td></tr>
   </tbody>
 </table>
+</div>
 
 <!-- ================= FOOTER ================= -->
 <div class="footer">
