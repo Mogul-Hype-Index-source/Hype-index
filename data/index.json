@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "MoviePass Hype Index V2",
+    "asOf": "03:30Z",
+    "scoreLabel": "NIS"
+  },
+  "ticker": [
+    { "source": "Deadline", "headline": "Ryan Gosling to star in Project Hail Mary for Amazon MGM" },
+    { "source": "Variety", "headline": "Nintendo and Illumination set next Super Mario animated film for 2026" }
+  ],
+  "tabs": {
+    "movies": [
+      { "rank": 1, "move": 1, "entity": "Project Hail Mary", "metadata": "Dir. Phil Lord & Christopher Miller", "mentions": 18420, "sentiment": 86, "score": 91.2 },
+      { "rank": 2, "move": -1, "entity": "Super Mario Galaxy", "metadata": "Dir. Aaron Horvath & Michael Jelenic", "mentions": 17630, "sentiment": 81, "score": 88.8 }
+    ],
+    "actors": [
+      { "rank": 1, "move": 2, "entity": "Milly Alcock", "metadata": "Projects: Supergirl", "mentions": 14250, "sentiment": 88, "score": 89.5 }
+    ],
+    "directors": [
+      { "rank": 1, "move": 0, "entity": "Christopher Nolan", "metadata": "Pipeline: The Odyssey", "mentions": 15120, "sentiment": 91, "score": 94.0 }
+    ]
+  }
+}
