@@ -2,81 +2,739 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MoviePass Hype Index V2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>MoviePass Hype Index V2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg-main: #080808; --bg-elevated: #101010; --bg-elevated-2: #131313; --border-subtle: #222222; --border-strong: #2f2f2f; --text-primary: #f7f7f7; --text-secondary: #b3b3b3; --accent-gold: #f5a623; --accent-green: #00ff87; --accent-red: #ff3b5c; --accent-blue: #0ab5ff; --shadow-soft: 0 0 24px rgba(0, 0, 0, 0.9); --transition-fast: 150ms ease-out; --transition-med: 220ms ease-out; --font-display: 'Bebas Neue', system-ui, sans-serif; --font-numeric: 'Rajdhani', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif; }
-    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-    html, body { margin: 0; padding: 0; background: radial-gradient(circle at top, #141414 0, #080808 55%); color: var(-text-primary); font-family: var(--font-body); min-height: 100vh; display: flex; flex-direction: column; }
-    .app-shell { max-width: 1440px; margin: 0 auto; padding: 22px 24px 36px; width: 100%; }
-    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-    .title { font-family: var(--font-display); letter-spacing: 0.12em; font-size: 30px; text-transform: uppercase; color: #fff; }
-    .live-indicator { display: inline-flex; align-items: center; gap: 6px; }
-    .live-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--accent-red); box-shadow: 0 0 12px rgba(255, 59, 92, 0.8); animation: pulse 1.25s infinite ease-out; }
-    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 100% { transform: scale(1); } }
-    .live-text { color: var(--accent-red); font-weight: 600; letter-spacing: 0.18em; font-family: var(--font-numeric); font-size: 11px; text-transform: uppercase; }
-    .panel { background: radial-gradient(circle at top, #1c1c1c 0, #101010 60%); border-radius: 10px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-soft); padding: 12px 14px; margin-bottom: 14px; }
-    .tabs { display: inline-flex; gap: 6px; background: rgba(8, 8, 8, 0.9); border-radius: 999px; padding: 3px; border: 1px solid var(--botder-subtle); margin-bottom: 14px; }
-    .tab { border: none; outline: none; padding: 5px 14px; border-radius: 999px; font-family: var(--font-numeric); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; background: transparent; color: var(--text-secondary); cursor: pointer; }
-    .tab.active { background: linear-gradient(90deg, #f5a623, #ffdd80); color: #080808; font-weight: 600; }
-    table { width: 100%; border-collapse: collapse; font-family: var(--font-body); font-size: 12px; }
-    th { font-family: var(--font-numeric); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-secondary); text-align: left; padding: 7px 10px; border-bottom: 2px solid var(--accent-gold); }
-    td { padding: 10px; border-bottom: 1px solid var(--botder-subtle); }
-    .sentiment-bar { height: 8px; border-radius: 4px; background: #222; overflow: hidden; width: 100px; }
-    .sentiment-fill { height: 100%; background: var(--accent-green); }
+    :root {
+      --bg: #080808;
+      --panel: #101010;
+      --panel-2: #0c0c0c;
+      --line: rgba(245, 166, 35, 0.18);
+      --line-strong: rgba(245, 166, 35, 0.42);
+      --text: #f4efe6;
+      --muted: #a6a6a6;
+      --gold: #F5A623;
+      --green: #00FF87;
+      --red: #FF3B5C;
+      --amber: #ffc14d;
+      --shadow: 0 0 0 1px rgba(245, 166, 35, 0.06), 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at top right, rgba(245, 166, 35, 0.08), transparent 24%),
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 28px 28px, 28px 28px, auto;
+      color: var(--text);
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 16%, transparent 84%, rgba(255,255,255,0.02));
+      mix-blend-mode: screen;
+      opacity: 0.25;
+    }
+
+    .app {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(16,16,16,0.96), rgba(9,9,9,0.96));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(245,166,35,0.035), transparent);
+      pointer-events: none;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 18px;
+      padding: 22px 24px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow,
+    .signal-label,
+    .ticker-label,
+    .board-caption,
+    .stat-label,
+    .footer-note {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .brand h1 {
+      margin: 6px 0 0;
+      font: 400 72px/0.92 "Bebas Neue", sans-serif;
+      letter-spacing: 0.04em;
+      color: #fff7e8;
+    }
+
+    .brand h1 span { color: var(--gold); }
+
+    .brand-subline {
+      margin-top: 10px;
+      color: #d3d3d3;
+      max-width: 720px;
+      font-size: 14px;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      align-self: stretch;
+    }
+
+    .signal {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(245, 166, 35, 0.12);
+      padding: 14px;
+      min-height: 108px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .signal-name {
+      font: 700 18px/1 "Rajdhani", sans-serif;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+    }
+
+    .signal-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 10px;
+      font-family: "Rajdhani", sans-serif;
+    }
+
+    .signal-score {
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .signal-rank {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .ticker {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      align-items: center;
+      margin-bottom: 16px;
+      min-height: 54px;
+    }
+
+    .ticker-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      height: 100%;
+      border-right: 1px solid var(--line);
+      color: var(--gold);
+      font-family: "Rajdhani", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .ticker-window {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      gap: 38px;
+      padding: 0 24px;
+      min-width: max-content;
+      animation: ticker-scroll 48s linear infinite;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #eaeaea;
+    }
+
+    .ticker-source {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .ticker-sep {
+      color: rgba(245, 166, 35, 0.38);
+    }
+
+    @keyframes ticker-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .board {
+      padding: 18px 18px 10px;
+    }
+
+    .board-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 4px 4px 16px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 10px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tab {
+      appearance: none;
+      border: 1px solid rgba(245, 166, 35, 0.22);
+      background: rgba(255,255,255,0.02);
+      color: #e5e5e5;
+      padding: 10px 14px;
+      cursor: pointer;
+      font: 700 16px/1 "Rajdhani", sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: 160ms ease;
+    }
+
+    .tab:hover,
+    .tab:focus-visible {
+      outline: none;
+      border-color: var(--line-strong);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .tab.active {
+      background: linear-gradient(180deg, rgba(245,166,35,0.18), rgba(245,166,35,0.06));
+      color: #fff4db;
+      border-color: var(--gold);
+      box-shadow: inset 0 0 0 1px rgba(245,166,35,0.2);
+    }
+
+    .board-caption {
+      text-align: right;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      position: relative;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 14px 10px;
+      font: 700 13px/1 "Rajdhani", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(8, 8, 8, 0.96);
+      z-index: 1;
+    }
+
+    tbody td {
+      padding: 14px 10px;
+      border-bottom: 1px solid rgba(245, 166, 35, 0.08);
+      vertical-align: middle;
+      font-size: 14px;
+    }
+
+    tbody tr {
+      transition: background 140ms ease;
+    }
+
+    tbody tr:hover {
+      background: rgba(245, 166, 35, 0.05);
+    }
+
+    .rank {
+      font: 700 22px/1 "Rajdhani", sans-serif;
+      color: #fff;
+      width: 64px;
+    }
+
+    .entity-cell {
+      min-width: 180px;
+    }
+
+    .entity-name {
+      font: 700 20px/1.05 "Rajdhani", sans-serif;
+      letter-spacing: 0.01em;
+      color: #fff7e8;
+      margin-bottom: 4px;
+    }
+
+    .entity-sub {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .meta {
+      color: #d2d2d2;
+      font-size: 13px;
+    }
+
+    .numeric {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .move {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .move.up { color: var(--green); }
+    .move.down { color: var(--red); }
+    .move.flat { color: var(--amber); }
+
+    .sentiment {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .sentiment-pos { color: var(--green); }
+    .sentiment-mid { color: var(--amber); }
+    .sentiment-neg { color: var(--red); }
+
+    .score-cell {
+      min-width: 190px;
+    }
+
+    .score-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .score-value {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold);
+      min-width: 54px;
+    }
+
+    .score-bar {
+      height: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(245,166,35,0.14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .score-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      background: linear-gradient(90deg, rgba(245,166,35,0.55), var(--gold));
+      box-shadow: 0 0 18px rgba(245,166,35,0.28);
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border: 1px solid rgba(245, 166, 35, 0.14);
+      background: rgba(255,255,255,0.02);
+      color: #ddd;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(0,255,135,0.6);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,255,135,0.55); }
+      70% { box-shadow: 0 0 0 10px rgba(0,255,135,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,255,135,0); }
+    }
+
+    .empty,
+    .error {
+      padding: 28px 12px 34px;
+      text-align: center;
+      color: var(--muted);
+      font-family: "Rajdhani", sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+    }
+
+    .error { color: #ffc7d0; }
+
+    footer {
+      padding: 14px 4px 0;
+    }
+
+    @media (max-width: 1040px) {
+      .masthead {
+        grid-template-columns: 1fr;
+      }
+
+      .brand h1 {
+        font-size: 60px;
+      }
+
+      .signal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .app {
+        padding: 14px;
+      }
+
+      .ticker {
+        grid-template-columns: 1fr;
+      }
+
+    -ticker-label {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        justify-content: flex-start;
+      }
+
+      .board-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .board-caption {
+        text-align: left;
+      }
+
+      .brand h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track,
+      .pulse {
+        animation: none !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="header">
-      <div class="title">MoviePass Hype Index</div>
-      <div class="live-indicator">
-        <div class="live-dot"></div>
-        <span class="live-text">Live Terminal</span>
+  <div class="app">
+    <header class="masthead panel">
+      <div class="brand">
+        <div class="eyebrow">MoviePass // Live Terminal</div>
+        <h1>Hype Index <span>V2</span></h1>
+        <div class="brand-subline">
+          Real-time entertainment momentum board tracking ranked conversation velocity, sentiment, and normalized index score.
+        </div>
+        <div class="status-row">
+          <div class="status-chip"><span class="pulse"></span> Live Snapshot</div>
+          <div class="status-chip">As Of <span id="as/f">--</span></div>
+          <div class="status-chip">Board <span id="rowCount">30 Listings</span></div>
+        </div>
+      </div>
+
+      <div class="signal-grid" id="leaders">
+        <div class="signal">
+          <div>
+            <div class="signal-label">Top Movies</div>
+            <div class="signal-name">Loading...</div>
+          </div>
+          <div class="signal-meta"><span class="signal-score">--</span><span class="signal-rank">NIS</span></div>
+        </div>
+        <div class="signal">
+          <div>
+            <div class="signal-label">Top Actors</div>
+            <div class="signal-name">Loading...</div>
+          </div>
+          <div class="signal-meta"><span class="signal-score">--</span><span class="signal-rank">NIS</span></div>
+        </div>
+        <div class="signal">
+          <div>
+            <div class="signal-label">Top Directors</div>
+            <div class="signal-name">Loading...</div>
+          </div>
+          <div class="signal-meta"><span class="signal-score">--</span><span class="signal-rank">NIS</span></div>
+        </div>
       </div>
     </header>
-    <div class="tabs">
-      <button class="tab active">Movies</button>
-      <button class="tab">Actors</button>
-      <button class="tab">Directors</button>
-    </div>
-    <div class="panel">
-      <table id="hype-table">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Entity</th>
-            <th>Score</th>
-            <th>Mentions</th>
-            <th>Sentiment</th>
-          </tr>
-        </thead>
-        <tbody id="table-body">
-          <tr><td colspan="5" style="text-align:center; padding: 40px; color: #666;">Hydrating live feed...</td></tr>
-        </tbody>
-      </table>
-    </div>
+
+    <section class="ticker panel">
+      <div class="ticker-label">Market Wire</div>
+      <div class="ticker-window">
+        <div class="ticker-track" id="tickerTrack">
+          <span class="ticker-item"><span class="ticker-source">Loading</span><span>Headlines...</span></span>
+        </div>
+      </div>
+    </section>
+
+    <main class="board panel">
+      <div class="board-top">
+        <div class="tabs" id="tabs"></div>
+        <div class="board-caption" id="boardCaption">Loading index...</div>
+      </div>
+
+      <div class="table-wrap">
+        <table aria-label="Hype Index rankings">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Move</th>
+              <th>Entity</th>
+              <th>Metadata</th>
+              <th>Mentions</th>
+              <th>Sentiment</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr><td class="empty" colspan="7">Loading board...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-note">Snapshot demo UI. Data loads from ./data/index.json on page boot.</div>
+    </footer>
   </div>
+
   <script>
-    async function load() {
-      try {
-        const r = await fetch('./data.json?t=' + Date.now());
-        const d = await r.json();
-        const tbody = document.getElementById('table-body');
-        tbody.innerHTML = '';
-        const items = d.tabs ? d.tabs.movies : (d.movies || []);
-        items.forEach(i => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = '<td>' + i.rank + '</td><td style="color:#fff; font-weight:600;">' + i.name + '</td><td>' + i.score + '</td><td>' + i.mentions + '</td><td><div class="sentiment-bar"><div class="sentiment-fill" style="width:' + (i.sentiment*100) + '%"></div></div></td>';
-          tbody.appendChild(tr);
-        });
-      } catch (e) { console.error(e); }
+    const TAB_LABELS = {
+      movies: "Movies",
+      actors: "Actors",
+      directors: "Directors"
+    };
+
+    const state = {
+      activeTab: "movies",
+      data: null
+    };
+
+    const asOfEl= document.getElementById("asOf");
+    const rowCountEl = document.getElementById("rowCount");
+    const tickerTrack = document.getElementById("tickerTrack");
+    const leadersEl = document.getElementById("leaders");
+    const tabsEl = document.getElementById("tabs");
+    const tableBodyEl = document.getElementById("tableBody");
+    const boardCaptionEl = document.getElementById("boardCaption");
+
+    function formatNumber(value) {
+      return new Intl.NumberFormat("en-US").format(value);
     }
-    load();
-    setInterval(load, 60000);
+
+    function formatMove(move) {
+      if (move > 0) {
+        return '<span class="move up">+' + move + ' ▲</span>';
+      }
+      if (move < 0) {
+        return '<span class="move down">' + move + ' ▼</span>';
+      }
+      return '<span class="move flat">0 •</span>';
+    }
+
+    function sentimentClass(value) {
+      if (value >= 70) return "sentiment-pos";
+      if (value >= 50) return "sentiment-mid";
+      return "sentiment-neg";
+    }
+
+    function renderLeaders(data) {
+      const cards = ["movies", "actors", "directors"].map((key) => {
+        const leader = data.tabs[key][0];
+        return `
+          <div class="signal">
+            <div>
+              <div class="signal-label">Top ${TAB_LABELS[key]}</div>
+              <div class="signal-name">${leader.entity}</div>
+            </div>
+            <div class="signal-meta">
+              <span class="signal-score">${leader.score.toFixed(1)}</span>
+              <span class="signal-rank">NIS • #${leader.rank}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      leadersEl.innerHTML = cards;
+    }
+
+    function renderTicker(items) {
+      const content = items.map((item) => `
+        <span class="ticker-item">
+          <span class="ticker-source">${item.source}</span>
+          <span>${item.headline}</span>
+          <span class="ticker-sep">◆</span>
+        </span>
+      `).join("");
+
+      tickerTrack.innerHTML = content + content;
+      tickerTrack.style.animationDuration = Math.max(36, items.length * 7) + "s";
+    }
+
+    function renderTabs() {
+      tabsEl.innerHTML = Object.keys(state.data.tabs).map((key) => `
+        <button class="tab ${state.activeTab === key ? "active" : ""}" data-tab="${key}" aria-pressed="${state.activeTab === key}">
+          ${TAB_LABELS[key]}
+        </button>
+      `).join("");
+
+      tabsEl.querySelectorAll(".tab").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.activeTab = button.dataset.tab;
+          renderTabs();
+          renderTable();
+        });
+      });
+    }
+
+    function renderTable() {
+      const rows = state.data.tabs[state.activeTab] || [];
+      const leader = rows[0];
+      boardCaption%l.textContent = `${TAB_LABELS[state.activeTab]} • ${rows.length} live rows • Leader ${leader.entity} at ${leader.score.toFixed(1)} ${state.data.meta.scoreLabel}`;
+
+      if (!rows.length) {
+        tableBodyEl.innerHTML = '<tr><td class="empty" colspan="7">No rows available.</td></tr>';
+        return;
+      }
+
+      tableBodyEl.innerHTML = rows.map((row) => `
+        <tr>
+          <td class="rank">${row.rank}</td>
+          <td>${formatMove(row.move)}</td>
+          <td class="entity-cell">
+            <div class="entity-name">${row.entity}</div>
+            <div class="entity-sub">Momentum rank #${row.rank}</div>
+          </td>
+          <td class="meta">${row.metadata}</td>
+          <td class="numeric">${formatNumber(row.mentions)}</td>
+          <td>
+            <span class="sentiment ${sentimentClass(row.sentiment)}">${row.sentiment}%</span>
+          </td>
+          <td class="score-cell">
+            <div class="score-row">
+              <span class="score-value">${row.score.toFixed(1)}</span>
+              <div class="score-bar" aria-hidden="true">
+                <div class="score-fill" style="width:${Math.max(0, Math.min(100, row.score))}%"></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function renderAll(data) {
+      state.data = data;
+      asOfEl.textContent = data.meta.asOf;
+      const totalRows = Object.values(data.tabs).reduce((sum, rows) => sum + rows.length, 0);
+      rowCountEl.textContent = `${totalRows} Listings`;
+      renderLeaders(data);
+      renderTicker(data.ticker || []);
+      renderTabs();
+      renderTable();
+    }
+
+    async function boot() {
+      try {
+        const response = await fetch("./data/index.json", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("HTTP " + response.status);
+        }
+        const data = await response.json();
+        renderAll(data);
+      } catch (error) {
+        boardCaptionEl.textContent = "Feed unavailable";
+        tableBodyEl.innerHTML = '<tr><td class="error" colspan="7">Unable to load ./data/index.json</td></tr>';
+        tickerTrack.innerHTML = '<span class="ticker-item"><span class="ticker-source">Error</span><span>Data feed unavailable.</span></span>';
+        console.error(error);
+      }
+    }
+
+    boot();
   </script>
 </body>
 </html>
