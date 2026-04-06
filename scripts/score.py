@@ -144,6 +144,21 @@ def score_movies(movies: List[Dict[str, Any]],
     if not movies:
         return movies
 
+    # Defensive date filter — last 90 days through upcoming. fetch_data.py
+    # also filters at fetch time, but we re-apply here so no caller can
+    # accidentally inject back-catalog films into the rankings.
+    try:
+        from fetch_data import filter_by_release_window  # local import to avoid hard dep
+        before = len(movies)
+        movies = filter_by_release_window(movies, window_days=90)
+        if len(movies) != before:
+            LOG.info("score.py defensive filter: %d → %d movies", before, len(movies))
+    except Exception as exc:  # noqa: BLE001
+        LOG.debug("Skipping defensive date filter: %s", exc)
+
+    if not movies:
+        return movies
+
     weights = outlet_weights or {}
 
     yt_views = _youtube_views(movies)
@@ -152,6 +167,31 @@ def score_movies(movies: List[Dict[str, Any]],
     gt       = _google_trends(movies)
     nis      = _news_impact(movies, weights)
 
+    # Pass 1: compute raw weighted aggregates in [0..1]
+    raw_aggregates: List[float] = []
+    for i in range(len(movies)):
+        raw = (
+            yt_views[i] * WEIGHTS["youtube_views"]      +
+            yt_eng[i]   * WEIGHTS["youtube_engagement"] +
+            rd_vol[i]   * WEIGHTS["reddit_volume"]      +
+            gt[i]       * WEIGHTS["google_trends"]      +
+            nis[i]      * WEIGHTS["news_impact"]
+        )
+        raw_aggregates.append(raw)
+
+    # Pass 2: rescale into V1's familiar 800-999 range. Top performer = 999,
+    # bottom = 800. Floor of 800 gives the dashboard the "live exchange" feel
+    # of an active leaderboard rather than a sparse 0-1000 scale where most
+    # rows clump near zero.
+    LO, HI = 800, 999
+    raw_min = min(raw_aggregates)
+    raw_max = max(raw_aggregates)
+    raw_span = raw_max - raw_min
+    def _rescale(raw: float) -> int:
+        if raw_span <= 0:
+            return HI  # all tied → everyone gets the top
+        return int(round(LO + ((raw - raw_min) / raw_span) * (HI - LO)))
+
     for i, m in enumerate(movies):
         sub = {
             "youtube_views":      round(yt_views[i], 4),
@@ -159,15 +199,9 @@ def score_movies(movies: List[Dict[str, Any]],
             "reddit_volume":      round(rd_vol[i],   4),
             "google_trends":      round(gt[i],       4),
             "news_impact":        round(nis[i],      4),
+            "raw_amsi":           round(raw_aggregates[i], 4),
         }
-        amsi = (
-            sub["youtube_views"]      * WEIGHTS["youtube_views"]      +
-            sub["youtube_engagement"] * WEIGHTS["youtube_engagement"] +
-            sub["reddit_volume"]      * WEIGHTS["reddit_volume"]      +
-            sub["google_trends"]      * WEIGHTS["google_trends"]      +
-            sub["news_impact"]        * WEIGHTS["news_impact"]
-        ) * 1000
-        amsi_int = int(round(max(0, min(1000, amsi))))
+        amsi_int = _rescale(raw_aggregates[i])
 
         m["sub_scores"]    = sub
         m["score"]         = amsi_int

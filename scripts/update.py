@@ -47,7 +47,10 @@ REPO_ROOT  = Path(__file__).resolve().parent.parent
 DATA_DIR   = REPO_ROOT / "data"
 HIST_DIR   = DATA_DIR / "historical"
 CACHE_DIR  = DATA_DIR / "cache"
-INDEX_PATH = DATA_DIR / "index.json"
+# NOTE: written to data/v2.json (not data/index.json) because the legacy V1
+# hourly cron still pushes to this repo and overwrites data/index.json with
+# its own schema. data/v2.json is exclusively V2 territory.
+INDEX_PATH = DATA_DIR / "v2.json"
 RAW_CACHE  = CACHE_DIR / "raw.json"
 
 
@@ -63,6 +66,21 @@ def _load_snapshot(date_iso: str) -> Optional[Dict[str, Any]]:
         return json.loads(p.read_text())
     except Exception as exc:  # noqa: BLE001
         LOG.warning("Could not parse historical %s: %s", p, exc)
+        return None
+
+
+def _load_previous_snapshot(today_iso: str) -> Optional[Dict[str, Any]]:
+    """
+    Return the live data/v2.json from BEFORE this run, if it exists.
+    Used to compute rank movement on a per-pulse basis (so movers populate
+    starting from the second pulse, not 24h after first run).
+    """
+    if not INDEX_PATH.exists():
+        return None
+    try:
+        return json.loads(INDEX_PATH.read_text())
+    except Exception as exc:  # noqa: BLE001
+        LOG.warning("Could not parse previous %s: %s", INDEX_PATH, exc)
         return None
 
 
@@ -90,18 +108,21 @@ def _score_index(snapshot: Optional[Dict[str, Any]]) -> Dict[int, int]:
 def _enrich_with_history(movies: List[Dict[str, Any]],
                          today: datetime) -> Dict[str, Any]:
     """
-    Compute move (rank delta vs yesterday), is_new, hot, and 1d/7d/30d windows.
-    Returns a small dict of summary counts (rising / falling / flat).
+    Compute move (rank delta vs the previous pulse), is_new, hot, and
+    1d/7d/30d windows. Returns a summary count dict.
+
+    Move is computed against the PREVIOUS PULSE (i.e. the live v2.json from
+    before this run), not strictly "yesterday's snapshot". This way movers
+    populate after the second pulse instead of 24h after first run.
     """
-    yesterday  = (today - timedelta(days=1)).date().isoformat()
     seven_ago  = (today - timedelta(days=7)).date().isoformat()
     thirty_ago = (today - timedelta(days=30)).date().isoformat()
 
-    snap_yest  = _load_snapshot(yesterday)
+    snap_prev  = _load_previous_snapshot(today.date().isoformat())
     snap_7d    = _load_snapshot(seven_ago)
     snap_30d   = _load_snapshot(thirty_ago)
 
-    yrank   = _rank_index(snap_yest)
+    yrank   = _rank_index(snap_prev)
     s7  = _score_index(snap_7d)
     s30 = _score_index(snap_30d)
 
@@ -296,7 +317,8 @@ def _quality_ok(new_payload: Dict[str, Any]) -> bool:
 # Run one cycle
 # ---------------------------------------------------------------------------
 
-def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False) -> Path:
+def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
+             force: bool = False) -> Path:
     cfg = fetch_data.load_config()
     DATA_DIR.mkdir(exist_ok=True)
     HIST_DIR.mkdir(parents=True, exist_ok=True)
@@ -327,7 +349,11 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False) -> Path:
     # majority of movies (e.g. quota exhaustion), keep the old data live
     # and let the next scheduled run try again. This protects the public
     # site from intermittent API failures without needing manual rollback.
-    if INDEX_PATH.exists() and not _quality_ok(payload):
+    # Pass --force to bypass when shipping a structural change (filter
+    # rules, schema, etc.) that the breaker would otherwise reject.
+    if force:
+        LOG.info("--force: bypassing circuit breaker")
+    if not force and INDEX_PATH.exists() and not _quality_ok(payload):
         LOG.warning(
             "Circuit breaker tripped — new fetch is degraded vs the live index.json. "
             "Preserving the existing live data and skipping write."
@@ -379,11 +405,13 @@ def main() -> int:
                         help="Re-score from data/cache/raw.json without re-fetching")
     parser.add_argument("--loop", action="store_true",
                         help="Run forever, sleeping 60 minutes between cycles")
+    parser.add_argument("--force", action="store_true",
+                        help="Bypass the quality circuit breaker (use when shipping a structural change)")
     args = parser.parse_args()
 
     while True:
         try:
-            run_once(limit=args.limit, skip_fetch=args.skip_fetch)
+            run_once(limit=args.limit, skip_fetch=args.skip_fetch, force=args.force)
         except Exception as exc:  # noqa: BLE001
             LOG.exception("Run failed: %s", exc)
             if not args.loop:

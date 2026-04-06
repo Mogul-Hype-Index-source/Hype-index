@@ -7,85 +7,195 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  // Apply persisted theme BEFORE first paint to avoid flash-of-wrong-theme.
+  (function(){
+    try {
+      var t = localStorage.getItem('hypeindex-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch(e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 <style>
-  :root{
+  :root,
+  [data-theme="dark"]{
     --bg:#080808;
     --bg-2:#0f0f0f;
     --bg-3:#141414;
+    --bg-panel:#0a0a0a;          /* market / table head / footer / movers */
+    --bg-ticker:#060606;
+    --bg-row-hover:#0d0d0d;
+    --topbar-grad-1:#0b0b0b;
+    --topbar-grad-2:#070707;
     --line:#1f1f1f;
     --line-2:#2a2a2a;
     --text:#ffffff;
+    --text-strong:#ffffff;
+    --text-secondary:#dddddd;
+    --text-soft:#c9c9c9;
     --mute:#8a8a8a;
     --gold:#F5A623;
     --gold-dim:#c78615;
+    --gold-flash:#FFD700;
+    --gold-pill-bg:#1a1305;
+    --gold-pill-border:#3a2a09;
+    --gold-grad-1:#1a1305;
+    --gold-grad-2:#0c0903;
     --green:#00FF87;
     --red:#FF3B5C;
+    --red-mute:#ff5c74;
     --amber:#F5A623;
+    --bar-bg:#1a1a1a;
+    --poster-bg:#222222;
+    --poster-fallback-1:#333333;
+    --poster-fallback-2:#0a0a0a;
+    --live-dot:#ff2240;
+    --live-glow:rgba(255,34,64,.7);
+    --live-glow-fade:rgba(255,34,64,0);
+    --sweep-line:rgba(245,166,35,.85);
+    --sweep-fill:rgba(245,166,35,.035);
+    --score-glow:rgba(255,215,0,.55);
+    --flat-arrow:#555555;
+    --on-gold:#111111;            /* text on gold buttons */
+    --on-poster:#ffffff;          /* initials on poster fallback */
+  }
+
+  [data-theme="light"]{
+    --bg:#ffffff;
+    --bg-2:#f5f5f5;
+    --bg-3:#fafafa;
+    --bg-panel:#f5f5f5;
+    --bg-ticker:#f5f5f5;
+    --bg-row-hover:#f9f9f9;
+    --topbar-grad-1:#ffffff;
+    --topbar-grad-2:#fafafa;
+    --line:#e0e0e0;
+    --line-2:#d4d4d4;
+    --text:#111111;
+    --text-strong:#111111;
+    --text-secondary:#333333;
+    --text-soft:#444444;
+    --mute:#666666;
+    --gold:#D4920A;
+    --gold-dim:#a87208;
+    --gold-flash:#B8800A;
+    --gold-pill-bg:#fff4dc;
+    --gold-pill-border:#e8c478;
+    --gold-grad-1:#fff4dc;
+    --gold-grad-2:#fce8b8;
+    --green:#00A859;
+    --red:#D93025;
+    --red-mute:#D93025;
+    --amber:#D4920A;
+    --bar-bg:#e8e8e8;
+    --poster-bg:#cccccc;
+    --poster-fallback-1:#cccccc;
+    --poster-fallback-2:#999999;
+    --live-dot:#D93025;
+    --live-glow:rgba(217,48,37,.5);
+    --live-glow-fade:rgba(217,48,37,0);
+    --sweep-line:rgba(212,146,10,.85);
+    --sweep-fill:rgba(212,146,10,.06);
+    --score-glow:rgba(184,128,10,.4);
+    --flat-arrow:#999999;
+    --on-gold:#ffffff;
+    --on-poster:#333333;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
+  html,body{
+    margin:0;padding:0;background:var(--bg);color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased;
+    transition:background-color .35s ease, color .35s ease;
+  }
   a{color:inherit;text-decoration:none}
   .mono,.num{font-family:'Rajdhani',sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.02em}
   .head{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em}
+
+  /* Theme transitions on every element that swaps colors. Excluding the
+     live-dot pulse + score flash so those animations stay snappy. */
+  .topbar,.market,.ticker,.movers,.tabs,.toolbar,.footer,
+  .snapshot,.datenav button,.sort button,.toolbar .search,.mcard,.poster,
+  .rankings thead th,.rankings tbody td,.rankings tbody tr,
+  .market .sep,.bar,.ent .title .badge,.theme-toggle{
+    transition:background-color .35s ease, color .35s ease,
+               border-color .35s ease, box-shadow .35s ease;
+  }
 
   /* ---------- Header ---------- */
   .topbar{
     display:flex;align-items:center;gap:24px;
     padding:18px 28px;border-bottom:1px solid var(--line);
-    background:linear-gradient(180deg,#0b0b0b,#070707);
+    background:linear-gradient(180deg,var(--topbar-grad-1),var(--topbar-grad-2));
     position:sticky;top:0;z-index:20;
   }
   .logo{display:flex;align-items:baseline;gap:10px}
-  .logo .mp{font-weight:700;font-size:22px;letter-spacing:-.02em;color:#fff}
+  .logo .mp{font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--text-strong)}
   .logo .hi{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:22px;letter-spacing:.12em}
   .logo .v2{color:var(--mute);font-size:11px;border:1px solid var(--line-2);padding:2px 6px;border-radius:3px;margin-left:4px;font-family:'Rajdhani',sans-serif}
 
   .live{display:flex;align-items:center;gap:10px;margin-left:8px}
-  .dot{width:9px;height:9px;border-radius:50%;background:#ff2240;box-shadow:0 0 0 0 rgba(255,34,64,.7);animation:pulse 1.6s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,34,64,.6)}70%{box-shadow:0 0 0 10px rgba(255,34,64,0)}100%{box-shadow:0 0 0 0 rgba(255,34,64,0)}}
-  .live .lbl{font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.15em;color:#ff5c74;font-size:12px}
-  .live .clk{font-family:'Rajdhani',sans-serif;font-weight:600;color:#fff;font-size:13px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--live-dot);box-shadow:0 0 0 0 var(--live-glow);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 var(--live-glow)}70%{box-shadow:0 0 0 10px var(--live-glow-fade)}100%{box-shadow:0 0 0 0 var(--live-glow-fade)}}
+  .live .lbl{font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.15em;color:var(--red-mute);font-size:12px}
+  .live .clk{font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--text-strong);font-size:13px}
 
   .spacer{flex:1}
 
   .snapshot{display:flex;background:var(--bg-3);border:1px solid var(--line-2);border-radius:999px;padding:3px}
   .snapshot button{background:transparent;border:0;color:var(--mute);padding:6px 14px;border-radius:999px;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.1em;font-size:12px;cursor:pointer}
-  .snapshot button.active{background:var(--gold);color:#111}
+  .snapshot button.active{background:var(--gold);color:var(--on-gold)}
 
   .datenav{display:flex;align-items:center;gap:8px;margin-left:8px}
-  .datenav button{background:var(--bg-3);border:1px solid var(--line-2);color:#ddd;width:30px;height:30px;border-radius:6px;cursor:pointer;font-size:14px}
-  .datenav .date{font-family:'Rajdhani',sans-serif;font-weight:600;color:#ddd;padding:0 6px}
-  .datenav .today{width:auto;padding:0 12px;color:var(--gold);border-color:#3a2a09;background:#1a1305}
+  .datenav button{background:var(--bg-3);border:1px solid var(--line-2);color:var(--text-secondary);width:30px;height:30px;border-radius:6px;cursor:pointer;font-size:14px}
+  .datenav .date{font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--text-secondary);padding:0 6px}
+  .datenav .today{width:auto;padding:0 12px;color:var(--gold);border-color:var(--gold-pill-border);background:var(--gold-pill-bg)}
+
+  /* ---------- Theme toggle ---------- */
+  .theme-toggle{
+    width:34px;height:34px;border-radius:8px;
+    background:var(--bg-3);border:1px solid var(--line-2);
+    color:var(--gold);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    margin-left:4px;padding:0;
+  }
+  .theme-toggle:hover{background:var(--gold-pill-bg);border-color:var(--gold-pill-border)}
+  .theme-toggle svg{width:16px;height:16px;display:block}
+  .theme-toggle .icon-sun{display:none}
+  .theme-toggle .icon-moon{display:block}
+  [data-theme="light"] .theme-toggle .icon-sun{display:block}
+  [data-theme="light"] .theme-toggle .icon-moon{display:none}
 
   /* ---------- Market summary ---------- */
   .market{
     display:flex;align-items:center;gap:22px;
     padding:12px 28px;border-bottom:1px solid var(--line);
-    background:#0a0a0a;font-family:'Rajdhani',sans-serif;flex-wrap:wrap;
+    background:var(--bg-panel);font-family:'Rajdhani',sans-serif;flex-wrap:wrap;
   }
   .market .pill{display:flex;align-items:center;gap:8px;font-weight:600;letter-spacing:.06em;font-size:13px}
   .market .k{color:var(--mute);font-size:11px;letter-spacing:.18em}
-  .market .v{font-size:14px;color:#fff}
+  .market .v{font-size:14px;color:var(--text-strong)}
   .market .up{color:var(--green)}
   .market .down{color:var(--red)}
-  .market .flat{color:#8a8a8a}
+  .market .flat{color:var(--mute)}
   .market .sep{width:1px;height:18px;background:var(--line-2)}
   .market .cd{color:var(--gold);font-weight:700;letter-spacing:.08em}
 
   /* ---------- Ticker ---------- */
-  .ticker{display:flex;align-items:stretch;height:38px;border-bottom:1px solid var(--line);background:#060606}
+  .ticker{display:flex;align-items:stretch;height:38px;border-bottom:1px solid var(--line);background:var(--bg-ticker)}
   .ticker .brk{
     flex:0 0 auto;padding:0 16px;display:flex;align-items:center;
-    background:linear-gradient(90deg,#1a1305,#0c0903);
+    background:linear-gradient(90deg,var(--gold-grad-1),var(--gold-grad-2));
     color:var(--gold);font-family:'Bebas Neue',sans-serif;letter-spacing:.18em;font-size:14px;
     border-right:1px solid var(--line-2);
     z-index:2;position:relative;
   }
   .ticker .viewport{flex:1 1 auto;min-width:0;overflow:hidden;position:relative;display:flex;align-items:center}
-  .ticker .track{display:flex;gap:46px;white-space:nowrap;padding-left:30px;animation:scroll 90s linear infinite;font-family:'Rajdhani',sans-serif;font-size:13px;color:#d8d8d8}
+  .ticker .track{display:flex;gap:46px;white-space:nowrap;padding-left:30px;animation:scroll 90s linear infinite;font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--text-secondary)}
   .ticker .track a{display:inline-block;color:inherit}
   .ticker .track a:hover b{color:var(--gold)}
-  .ticker .track b{color:#fff;font-weight:700;letter-spacing:.04em}
+  .ticker .track b{color:var(--text-strong);font-weight:700;letter-spacing:.04em}
   .ticker .track i{color:var(--mute);font-style:normal;font-weight:500}
   .ticker .track .bullet{color:var(--gold);margin-right:10px}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -94,9 +204,9 @@
   .movers{
     padding:16px 28px 18px;border-bottom:1px solid var(--line);
     display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;
-    background:#0a0a0a;
+    background:var(--bg-panel);
   }
-  .movers .label{font-family:'Bebas Neue',sans-serif;color:#fff;font-size:16px;letter-spacing:.14em}
+  .movers .label{font-family:'Bebas Neue',sans-serif;color:var(--text-strong);font-size:16px;letter-spacing:.14em}
   .movers .label small{display:block;color:var(--mute);font-family:'Rajdhani',sans-serif;letter-spacing:.12em;font-size:11px}
   .movers .strip{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
   .movers .strip::-webkit-scrollbar{display:none}
@@ -105,8 +215,8 @@
     background:var(--bg-3);border:1px solid var(--line-2);border-radius:8px;
     padding:10px 12px;display:flex;gap:10px;align-items:center;
   }
-  .mcard .poster{width:36px;height:52px;border-radius:3px;flex:0 0 auto;background-size:cover;background-position:center}
-  .mcard .ttl{font-weight:600;color:#fff;font-size:13px;line-height:1.2;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mcard .poster{width:36px;height:52px;border-radius:3px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--poster-bg)}
+  .mcard .ttl{font-weight:600;color:var(--text-strong);font-size:13px;line-height:1.2;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .mcard .row{display:flex;align-items:center;gap:10px;margin-top:4px}
   .mcard .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px}
   .mcard .sc{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:18px;line-height:1}
@@ -116,50 +226,50 @@
   /* ---------- Tabs + sort ---------- */
   .tabs{display:flex;align-items:center;gap:4px;padding:18px 28px 0}
   .tab{padding:10px 18px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.14em;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent}
-  .tab.active{color:#fff;border-bottom-color:var(--gold)}
+  .tab.active{color:var(--text-strong);border-bottom-color:var(--gold)}
   .tabs .count{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:12px;margin-left:6px;letter-spacing:.1em}
 
   .toolbar{display:flex;align-items:center;gap:10px;padding:10px 28px 14px;border-bottom:1px solid var(--line)}
   .toolbar .lbl{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.18em}
   .sort{display:flex;gap:4px;flex:1;flex-wrap:wrap}
-  .sort button{background:transparent;border:1px solid var(--line-2);color:#c9c9c9;padding:6px 12px;border-radius:999px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;cursor:pointer}
-  .sort button.active{background:#1a1305;color:var(--gold);border-color:#3a2a09}
+  .sort button{background:transparent;border:1px solid var(--line-2);color:var(--text-soft);padding:6px 12px;border-radius:999px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;cursor:pointer}
+  .sort button.active{background:var(--gold-pill-bg);color:var(--gold);border-color:var(--gold-pill-border)}
   .toolbar .search{display:flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 10px;border-radius:6px;color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:12px}
-  .toolbar .search input{background:transparent;border:0;outline:0;color:#fff;font-family:inherit;font-size:12px;width:200px}
+  .toolbar .search input{background:transparent;border:0;outline:0;color:var(--text-strong);font-family:inherit;font-size:12px;width:200px}
 
   /* ---------- Table ---------- */
   table.rankings{width:100%;border-collapse:collapse;margin:0}
   .rankings thead th{
     text-align:left;font-family:'Rajdhani',sans-serif;font-weight:600;
     color:var(--mute);font-size:11px;letter-spacing:.2em;
-    padding:12px 16px;border-bottom:1px solid var(--line);background:#0a0a0a;
+    padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg-panel);
     position:sticky;top:0;
   }
   .rankings tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
-  .rankings tbody tr:hover{background:#0d0d0d}
+  .rankings tbody tr:hover{background:var(--bg-row-hover)}
   .rankings tr.hl{box-shadow:inset 3px 0 0 var(--gold)}
   .rk{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:28px;line-height:1;min-width:42px}
   .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;min-width:60px}
-  .mv.flat{color:#555}
+  .mv.flat{color:var(--flat-arrow)}
   .ent{display:flex;gap:12px;align-items:center;min-width:340px}
-  .poster{width:42px;height:60px;border-radius:3px;flex:0 0 auto;background:#222;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:#fff;font-size:18px;letter-spacing:.05em;overflow:hidden;position:relative;border:1px solid #222}
+  .poster{width:42px;height:60px;border-radius:3px;flex:0 0 auto;background:var(--poster-bg);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--on-poster);font-size:18px;letter-spacing:.05em;overflow:hidden;position:relative;border:1px solid var(--line-2)}
   .ent .meta{display:flex;flex-direction:column;gap:3px;min-width:0}
-  .ent .title{color:#fff;font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
-  .ent .title .badge{font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:.14em;padding:2px 6px;border-radius:3px;background:#1a1305;color:var(--gold);border:1px solid #3a2a09}
+  .ent .title{color:var(--text-strong);font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
+  .ent .title .badge{font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:.14em;padding:2px 6px;border-radius:3px;background:var(--gold-pill-bg);color:var(--gold);border:1px solid var(--gold-pill-border)}
   .ent .sub{color:var(--mute);font-size:12px}
   .ent .sub .dot{display:inline-block;width:3px;height:3px;border-radius:50%;background:var(--mute);vertical-align:middle;margin:0 6px}
   .fire{color:var(--gold);filter:saturate(1.2)}
-  .num-col{font-family:'Rajdhani',sans-serif;font-weight:600;color:#e6e6e6;font-size:15px;font-variant-numeric:tabular-nums;transition:color 1s ease-out}
-  .num-col.flash{color:#FFD700;transition:color .08s ease-out}
+  .num-col{font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--text-secondary);font-size:15px;font-variant-numeric:tabular-nums;transition:color 1s ease-out}
+  .num-col.flash{color:var(--gold-flash);transition:color .08s ease-out}
   .num-sub{color:var(--mute);font-size:11px;letter-spacing:.08em;font-family:'Rajdhani',sans-serif}
   .sent{display:flex;align-items:center;gap:10px;min-width:150px}
-  .bar{flex:1;height:6px;background:#1a1a1a;border-radius:3px;overflow:hidden}
+  .bar{flex:1;height:6px;background:var(--bar-bg);border-radius:3px;overflow:hidden}
   .bar > i{display:block;height:100%;border-radius:3px}
   .sent .pct{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;min-width:38px;text-align:right}
   .score{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:30px;line-height:1;text-align:right;letter-spacing:.02em;transition:color 1.2s ease-out,text-shadow 1.2s ease-out}
-  .score.flash{color:#FFD700;text-shadow:0 0 14px rgba(255,215,0,.55);transition:color .08s ease-out,text-shadow .08s ease-out}
-  .rankings tbody tr{box-shadow:inset 0 0 0 0 rgba(245,166,35,0);transition:box-shadow 1s ease-out,background-color 1s ease-out}
-  .rankings tbody tr.sweep{box-shadow:inset 3px 0 0 0 rgba(245,166,35,.85);background-color:rgba(245,166,35,.035);transition:box-shadow .12s ease-out,background-color .12s ease-out}
+  .score.flash{color:var(--gold-flash);text-shadow:0 0 14px var(--score-glow);transition:color .08s ease-out,text-shadow .08s ease-out}
+  .rankings tbody tr{box-shadow:inset 0 0 0 0 transparent;transition:box-shadow 1s ease-out,background-color 1s ease-out}
+  .rankings tbody tr.sweep{box-shadow:inset 3px 0 0 0 var(--sweep-line);background-color:var(--sweep-fill);transition:box-shadow .12s ease-out,background-color .12s ease-out}
   .trend{display:inline-block;margin-left:6px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);vertical-align:middle}
   .trend.up{color:var(--green)}
   .trend.down{color:var(--red)}
@@ -171,14 +281,14 @@
   /* ---------- Footer ---------- */
   .footer{
     display:flex;align-items:center;gap:22px;padding:20px 28px;border-top:1px solid var(--line);
-    background:#0a0a0a;margin-top:10px;flex-wrap:wrap;
+    background:var(--bg-panel);margin-top:10px;flex-wrap:wrap;
   }
-  .footer .cd{font-family:'Rajdhani',sans-serif;color:#ddd;letter-spacing:.08em}
+  .footer .cd{font-family:'Rajdhani',sans-serif;color:var(--text-secondary);letter-spacing:.08em}
   .footer .cd b{color:var(--gold);font-weight:700}
   .footer .ts{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:12px;letter-spacing:.1em}
   .footer .spacer{flex:1}
   .footer .play{
-    background:var(--gold);color:#111;border:0;border-radius:999px;
+    background:var(--gold);color:var(--on-gold);border:0;border-radius:999px;
     padding:10px 22px;font-family:'Bebas Neue',sans-serif;font-size:14px;
     letter-spacing:.16em;cursor:pointer;text-decoration:none;display:inline-block;
   }
@@ -210,6 +320,15 @@
     <button aria-label="Next day" id="nextDay">›</button>
     <button class="today" id="todayBtn">TODAY</button>
   </div>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle light / dark mode" title="Toggle light / dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+    </svg>
+  </button>
 </div>
 
 <!-- ================= MARKET SUMMARY ================= -->
@@ -320,13 +439,13 @@ const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','
 /* ---------- Bootstrap ---------- */
 async function loadData(){
   try {
-    const res = await fetch('data/index.json?t=' + Date.now(), {cache:'no-store'});
+    const res = await fetch('data/v2.json?t=' + Date.now(), {cache:'no-store'});
     if (!res.ok) throw new Error('HTTP ' + res.status);
     STATE.data = await res.json();
     render();
   } catch (e) {
     document.getElementById('tbody').innerHTML =
-      `<tr><td colspan="7" class="empty err">Could not load data/index.json — ${escapeHtml(e.message)}</td></tr>`;
+      `<tr><td colspan="7" class="empty err">Could not load data/v2.json — ${escapeHtml(e.message)}</td></tr>`;
     console.error(e);
   }
 }
@@ -380,7 +499,7 @@ function renderMovers(){
     const arr = dir > 0 ? '▲' : '▼';
     const bg = m.poster_url
       ? `background-image:url('${escapeHtml(m.poster_url)}')`
-      : 'background:linear-gradient(160deg,#333,#0a0a0a)';
+      : 'background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))';
     return `<div class="mcard">
       <div class="poster" style="${bg}"></div>
       <div>
@@ -447,7 +566,7 @@ function renderTable(){
     const trend = move > 0 ? `<span class="trend up">▲</span>` : (move < 0 ? `<span class="trend down">▼</span>` : '');
     const posterStyle = m.poster_url
       ? `background-image:url('${escapeHtml(m.poster_url)}')`
-      : `background:linear-gradient(160deg,#333,#0a0a0a)`;
+      : `background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))`;
     const posterContent = m.poster_url ? '' : `<span style="position:relative;z-index:1">${initials(m.title||'')}</span>`;
     const sub = [m.director, m.cast].filter(Boolean).join('<span class="dot"></span>');
     return `
@@ -459,7 +578,7 @@ function renderTable(){
             <div class="poster" style="${posterStyle}">${posterContent}</div>
             <div class="meta">
               <div class="title">${escapeHtml(m.title||'')} ${badges.join(' ')}</div>
-              <div class="sub">${sub || '<i style="color:#444">—</i>'}</div>
+              <div class="sub">${sub || '<i style="color:var(--mute)">—</i>'}</div>
             </div>
           </div>
         </td>
@@ -508,6 +627,14 @@ document.getElementById('sort').addEventListener('click', e => {
 document.getElementById('searchBox').addEventListener('input', e => {
   STATE.search = e.target.value.trim();
   renderTable();
+});
+
+/* ---------- Theme toggle ---------- */
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+  const next = cur === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('hypeindex-theme', next); } catch (_) {}
 });
 
 /* ---------- Clock + countdown ---------- */

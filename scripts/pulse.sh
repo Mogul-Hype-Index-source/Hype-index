@@ -42,7 +42,8 @@ if ! "$PYTHON" scripts/update.py >> "$LOG" 2>&1; then
 fi
 
 # ---- 2. stage data changes ----
-"$GIT" add data/index.json data/historical/ 2>> "$LOG"
+# data/v2.json is the V2 payload (data/index.json is owned by the V1 cron).
+"$GIT" add data/v2.json data/historical/ 2>> "$LOG"
 
 if "$GIT" diff --cached --quiet; then
   log "no data changes, skipping commit"
@@ -84,14 +85,29 @@ push_attempt() {
 
 if ! push_attempt; then
   log "push rejected, attempting rebase + retry"
+  # Stash any unrelated working-tree changes (e.g. operator editing
+  # index.html or scripts) so the rebase doesn't refuse to run. We
+  # restore them after the rebase succeeds.
+  STASH_CREATED=0
+  if ! "$GIT" diff --quiet || ! "$GIT" diff --cached --quiet; then
+    if "$GIT" stash push --include-untracked --keep-index --message "pulse-rebase-tmp" >> "$LOG" 2>&1; then
+      STASH_CREATED=1
+      log "stashed working-tree changes for rebase"
+    fi
+  fi
   GIT_AUTHOR_NAME="Hype Index Pulse" \
   GIT_AUTHOR_EMAIL="stacy.spikes@gmail.com" \
   GIT_COMMITTER_NAME="Hype Index Pulse" \
   GIT_COMMITTER_EMAIL="stacy.spikes@gmail.com" \
-  "$GIT" pull --rebase "$PUSH_URL" main >> "$LOG" 2>&1 || {
+  "$GIT" pull --rebase "$PUSH_URL" main >> "$LOG" 2>&1
+  REBASE_RC=$?
+  if [[ $STASH_CREATED -eq 1 ]]; then
+    "$GIT" stash pop >> "$LOG" 2>&1 || log "WARN: stash pop failed (manual cleanup needed)"
+  fi
+  if [[ $REBASE_RC -ne 0 ]]; then
     log "FATAL: rebase failed — manual intervention required"
     exit 1
-  }
+  fi
   if ! push_attempt; then
     log "FATAL: push failed after rebase"
     exit 1

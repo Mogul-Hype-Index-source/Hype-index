@@ -93,20 +93,54 @@ def _http_get(url: str, *, params: Optional[Dict[str, Any]] = None,
 # TMDb — discover the universe of movies
 # ---------------------------------------------------------------------------
 
+def filter_by_release_window(movies: Dict[int, Dict[str, Any]] | List[Dict[str, Any]],
+                             window_days: int = 90) -> Any:
+    """
+    Keep only movies whose theatrical release is in the live window:
+        today - window_days  ≤  release_date  (no upper bound — upcoming OK)
+
+    Anything older than `window_days` (default 90) is dropped. Movies with
+    a missing or unparseable release_date are dropped — they are almost
+    always bad records on TMDb.
+
+    Accepts either a {tmdb_id: movie} dict (returns dict) or a list (returns
+    list), so it can be used both inside fetch_tmdb_movies and as a
+    post-fetch defensive filter from score.py / update.py.
+    """
+    today = datetime.now(timezone.utc).date()
+    cutoff = today - timedelta(days=window_days)
+
+    def _keep(m: Dict[str, Any]) -> bool:
+        rd = m.get("release_date") or ""
+        try:
+            rd_date = datetime.strptime(rd, "%Y-%m-%d").date()
+        except ValueError:
+            return False
+        return rd_date >= cutoff
+
+    if isinstance(movies, dict):
+        return {tid: m for tid, m in movies.items() if _keep(m)}
+    return [m for m in movies if _keep(m)]
+
+
 def fetch_tmdb_movies(api_key: str, max_count: int = 100) -> List[Dict[str, Any]]:
     """
     Pull the universe of movies to track:
       now_playing  → currently in theaters
-      upcoming     → next ~6 weeks
+      upcoming     → next ~6 weeks (multiple pages for more headroom)
       popular      → broader signal for forward-facing slate
-    Dedupe by tmdb_id, sort by popularity, take top `max_count`.
+
+    Filters out anything released more than 2 years ago — V2 only tracks
+    current theatrical and the upcoming pipeline. Dedupes by tmdb_id, sorts
+    by popularity, takes the top `max_count`.
     """
     universe: Dict[int, Dict[str, Any]] = {}
 
+    # Pull more pages now that we filter aggressively by release date.
     endpoints = [
-        ("now_playing", 2),  # 2 pages = ~40 titles
-        ("upcoming",    2),
-        ("popular",     2),
+        ("now_playing", 3),
+        ("upcoming",    5),
+        ("popular",     5),
     ]
     for ep, pages in endpoints:
         for page in range(1, pages + 1):
@@ -132,14 +166,22 @@ def fetch_tmdb_movies(api_key: str, max_count: int = 100) -> List[Dict[str, Any]
                         "vote_count": r.get("vote_count") or 0,
                     }
                 else:
-                    # Keep the highest popularity seen across endpoints.
                     universe[tid]["popularity"] = max(
                         universe[tid]["popularity"], r.get("popularity") or 0.0
                     )
             time.sleep(0.15)
 
-    movies = sorted(universe.values(), key=lambda m: m["popularity"], reverse=True)
-    LOG.info("TMDb universe: %d unique movies, taking top %d", len(movies), max_count)
+    # Date filter: keep only movies whose theatrical release is within the
+    # last 90 days OR is still upcoming. Anything older than 90 days is
+    # dropped — V2 tracks the live theatrical window and the forward slate,
+    # not back-catalog. Movies with an unparseable release_date are dropped
+    # (TMDb publishes most legitimate titles with dates).
+    filtered = filter_by_release_window(universe, window_days=90)
+    LOG.info("Date filter: %d → %d movies (last 90d + upcoming)",
+             len(universe), len(filtered))
+
+    movies = sorted(filtered.values(), key=lambda m: m["popularity"], reverse=True)
+    LOG.info("TMDb universe: %d eligible movies, taking top %d", len(movies), max_count)
     return movies[:max_count]
 
 
