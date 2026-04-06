@@ -1,0 +1,16 @@
+# Secrets — NEVER commit
+config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Caches
+data/cache/
+*.log
+
+# OS
+.DS_Store

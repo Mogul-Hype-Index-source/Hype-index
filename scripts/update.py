@@ -1,0 +1,340 @@
+"""
+MoviePass Hype Index V2 — master orchestrator
+=============================================
+
+Run this every hour. It does the following:
+
+  1. Loads config.json
+  2. Calls fetch_data.fetch_all()  → raw signal from all 5 sources
+  3. Calls score.score_movies()    → AMSI 0-1000 per movie
+  4. Loads yesterday's snapshot from data/historical/ to compute:
+        • rank movement   (current rank vs 24h ago)
+        • is_new flag     (not present in yesterday's index)
+        • hot flag        (rising 3 days in a row)
+  5. Back-fills the 1d / 7d / 30d windows from historical snapshots
+     so the SNAPSHOT toggle in the UI shows real momentum
+  6. Assembles data/index.json (the file the frontend reads)
+  7. Writes data/historical/YYYY-MM-DD.json snapshot
+  8. Writes a tiny run log to data/cache/last_run.json
+
+Run modes:
+    python scripts/update.py                # one-shot, current hour
+    python scripts/update.py --loop         # run forever, every 60 min
+    python scripts/update.py --limit 20     # quick smoke test
+    python scripts/update.py --skip-fetch   # re-score from cached raw.json
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import logging
+import sys
+import time
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+# Allow `python scripts/update.py` to import siblings
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import fetch_data  # noqa: E402
+import score       # noqa: E402
+
+LOG = logging.getLogger("update")
+
+REPO_ROOT  = Path(__file__).resolve().parent.parent
+DATA_DIR   = REPO_ROOT / "data"
+HIST_DIR   = DATA_DIR / "historical"
+CACHE_DIR  = DATA_DIR / "cache"
+INDEX_PATH = DATA_DIR / "index.json"
+RAW_CACHE  = CACHE_DIR / "raw.json"
+
+
+# ---------------------------------------------------------------------------
+# Historical snapshot helpers
+# ---------------------------------------------------------------------------
+
+def _load_snapshot(date_iso: str) -> Optional[Dict[str, Any]]:
+    p = HIST_DIR / f"{date_iso}.json"
+    if not p.exists():
+        return None
+    try:
+        return json.loads(p.read_text())
+    except Exception as exc:  # noqa: BLE001
+        LOG.warning("Could not parse historical %s: %s", p, exc)
+        return None
+
+
+def _rank_index(snapshot: Optional[Dict[str, Any]]) -> Dict[int, int]:
+    """tmdb_id → rank from a historical snapshot."""
+    if not snapshot:
+        return {}
+    return {
+        m["tmdb_id"]: m["rank"]
+        for m in (snapshot.get("movies") or [])
+        if "tmdb_id" in m and "rank" in m
+    }
+
+
+def _score_index(snapshot: Optional[Dict[str, Any]]) -> Dict[int, int]:
+    if not snapshot:
+        return {}
+    return {
+        m["tmdb_id"]: m.get("score", 0)
+        for m in (snapshot.get("movies") or [])
+        if "tmdb_id" in m
+    }
+
+
+def _enrich_with_history(movies: List[Dict[str, Any]],
+                         today: datetime) -> Dict[str, Any]:
+    """
+    Compute move (rank delta vs yesterday), is_new, hot, and 1d/7d/30d windows.
+    Returns a small dict of summary counts (rising / falling / flat).
+    """
+    yesterday  = (today - timedelta(days=1)).date().isoformat()
+    seven_ago  = (today - timedelta(days=7)).date().isoformat()
+    thirty_ago = (today - timedelta(days=30)).date().isoformat()
+
+    snap_yest  = _load_snapshot(yesterday)
+    snap_7d    = _load_snapshot(seven_ago)
+    snap_30d   = _load_snapshot(thirty_ago)
+
+    yrank   = _rank_index(snap_yest)
+    s7  = _score_index(snap_7d)
+    s30 = _score_index(snap_30d)
+
+    # 3-day-rising "hot" detection — look back 3 days
+    streak_snaps = [
+        _load_snapshot((today - timedelta(days=i)).date().isoformat())
+        for i in range(1, 4)
+    ]
+    streak_scores = [_score_index(s) for s in streak_snaps]
+
+    rising = falling = flat = 0
+    for m in movies:
+        rank   = m["rank"]
+        tid    = m["tmdb_id"]
+        prev   = yrank.get(tid)
+
+        if prev is None:
+            m["move"]   = 0
+            m["is_new"] = True
+        else:
+            m["move"]   = prev - rank   # positive = climbed
+            m["is_new"] = False
+
+        if m["move"] > 0:   rising  += 1
+        elif m["move"] < 0: falling += 1
+        else:               flat    += 1
+
+        # Time-window scores: backfill from history if available
+        today_score = m["score"]
+        m["scores"] = {
+            "1d":  today_score,
+            "7d":  s7.get(tid,  today_score),
+            "30d": s30.get(tid, today_score),
+        }
+
+        # "Hot" = score went up across each of the last 3 days
+        hot = True
+        prev_s = today_score
+        for sm in streak_scores:
+            ps = sm.get(tid)
+            if ps is None or ps >= prev_s:
+                hot = False
+                break
+            prev_s = ps
+        m["hot"] = hot
+
+    return {"rising": rising, "falling": falling, "flat": flat}
+
+
+# ---------------------------------------------------------------------------
+# Assemble the public index.json the frontend reads
+# ---------------------------------------------------------------------------
+
+def build_index_payload(scored: List[Dict[str, Any]],
+                        news_items: List[Dict[str, Any]],
+                        generated_at: datetime) -> Dict[str, Any]:
+    # Rank by AMSI score
+    scored.sort(key=lambda m: m.get("score", 0), reverse=True)
+    for i, m in enumerate(scored, 1):
+        m["rank"] = i
+
+    # Move / windows / hot / is_new (in place + summary counts)
+    summary_counts = _enrich_with_history(scored, generated_at)
+
+    # Highlight #1 in the UI
+    if scored:
+        scored[0]["highlight"] = True
+
+    # Movers strip — top 5 up, top 5 down by absolute move
+    movers_up = sorted(
+        (m for m in scored if (m.get("move") or 0) > 0),
+        key=lambda m: m["move"],
+        reverse=True,
+    )[:5]
+    movers_down = sorted(
+        (m for m in scored if (m.get("move") or 0) < 0),
+        key=lambda m: m["move"],
+    )[:5]
+
+    def _trim_mover(m: Dict[str, Any]) -> Dict[str, Any]:
+        return {
+            "tmdb_id":    m["tmdb_id"],
+            "title":      m["title"],
+            "poster_url": m.get("poster_url"),
+            "move":       m.get("move", 0),
+            "score":      m.get("score", 0),
+        }
+
+    # Top 12 most-recent news items for the ticker
+    ticker_news = [
+        {"headline": n["headline"], "source": n["source"], "url": n["url"]}
+        for n in news_items[:12]
+        if n.get("headline")
+    ]
+
+    total_mentions_24h = sum(
+        ((m.get("reddit") or {}).get("posts", 0) +
+         (m.get("reddit") or {}).get("comments", 0) +
+         len(m.get("news_mentions") or []))
+        for m in scored
+    )
+    avg_score = (
+        round(sum(m.get("score", 0) for m in scored) / len(scored)) if scored else 0
+    )
+
+    # Trim each movie to the public payload (drop bulky raw fields)
+    public_movies = []
+    for m in scored:
+        yt = m.get("youtube") or {}
+        rd = m.get("reddit")  or {}
+        public_movies.append({
+            "rank":          m["rank"],
+            "tmdb_id":       m["tmdb_id"],
+            "title":         m["title"],
+            "director":      m.get("director", ""),
+            "cast":          m.get("cast", ""),
+            "release_date":  m.get("release_date", ""),
+            "poster_url":    m.get("poster_url"),
+            "youtube_views": int(yt.get("views", 0)),
+            "mentions":      int(rd.get("posts", 0) + rd.get("comments", 0) + len(m.get("news_mentions") or [])),
+            "sentiment_pct": int(m.get("sentiment_pct", 50)),
+            "scores":        m.get("scores", {}),
+            "score":         m.get("score", 0),
+            "move":          m.get("move", 0),
+            "is_new":        bool(m.get("is_new", False)),
+            "hot":           bool(m.get("hot", False)),
+            "highlight":     bool(m.get("highlight", False)),
+            "sub_scores":    m.get("sub_scores", {}),
+        })
+
+    return {
+        "generated_at":   generated_at.isoformat(),
+        "next_update_at": (generated_at + timedelta(hours=1)).isoformat(),
+        "snapshot_date":  generated_at.date().isoformat(),
+        "summary": {
+            "total":              len(public_movies),
+            "rising":             summary_counts["rising"],
+            "falling":            summary_counts["falling"],
+            "flat":               summary_counts["flat"],
+            "avg_score":          avg_score,
+            "total_mentions_24h": total_mentions_24h,
+        },
+        "news":        ticker_news,
+        "movers_up":   [_trim_mover(m) for m in movers_up],
+        "movers_down": [_trim_mover(m) for m in movers_down],
+        "movies":      public_movies,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Run one cycle
+# ---------------------------------------------------------------------------
+
+def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False) -> Path:
+    cfg = fetch_data.load_config()
+    DATA_DIR.mkdir(exist_ok=True)
+    HIST_DIR.mkdir(parents=True, exist_ok=True)
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+    # 1. Fetch (or reuse cached raw)
+    if skip_fetch and RAW_CACHE.exists():
+        LOG.info("--skip-fetch: reusing %s", RAW_CACHE)
+        raw = json.loads(RAW_CACHE.read_text())
+    else:
+        raw = fetch_data.fetch_all(cfg, limit=limit)
+        RAW_CACHE.write_text(json.dumps(raw, indent=2))
+        LOG.info("Cached raw fetch → %s", RAW_CACHE)
+
+    # 2. Score
+    scored = score.score_movies(
+        raw["movies"],
+        outlet_weights=cfg.get("outlet_tier_weights", {}),
+    )
+
+    # 3. Assemble
+    generated_at = datetime.now(timezone.utc).replace(microsecond=0)
+    payload = build_index_payload(scored, raw["news"], generated_at)
+
+    # 4. Write public index.json (atomic)
+    tmp = INDEX_PATH.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    tmp.replace(INDEX_PATH)
+    LOG.info("Wrote %s (%d movies)", INDEX_PATH, len(payload["movies"]))
+
+    # 5. Snapshot today
+    snap_path = HIST_DIR / f"{generated_at.date().isoformat()}.json"
+    snap_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    LOG.info("Snapshot → %s", snap_path)
+
+    # 6. Tiny run log
+    (CACHE_DIR / "last_run.json").write_text(json.dumps({
+        "ran_at":      generated_at.isoformat(),
+        "movies":      len(payload["movies"]),
+        "news":        len(payload["news"]),
+        "rising":      payload["summary"]["rising"],
+        "falling":     payload["summary"]["falling"],
+        "flat":        payload["summary"]["flat"],
+        "top1":        payload["movies"][0]["title"] if payload["movies"] else None,
+    }, indent=2))
+
+    return INDEX_PATH
+
+
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def main() -> int:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    )
+    parser = argparse.ArgumentParser(description="MoviePass Hype Index V2 — hourly orchestrator")
+    parser.add_argument("--limit", type=int, default=None,
+                        help="Cap movies fetched (smoke testing)")
+    parser.add_argument("--skip-fetch", action="store_true",
+                        help="Re-score from data/cache/raw.json without re-fetching")
+    parser.add_argument("--loop", action="store_true",
+                        help="Run forever, sleeping 60 minutes between cycles")
+    args = parser.parse_args()
+
+    while True:
+        try:
+            run_once(limit=args.limit, skip_fetch=args.skip_fetch)
+        except Exception as exc:  # noqa: BLE001
+            LOG.exception("Run failed: %s", exc)
+            if not args.loop:
+                return 1
+        if not args.loop:
+            return 0
+        LOG.info("Sleeping 60 minutes…")
+        time.sleep(60 * 60)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,20 @@
+{
+  "youtube_api_key": "YOUR_YOUTUBE_API_KEY",
+  "tmdb_api_key": "YOUR_TMDB_API_KEY",
+  "reddit_user_agent": "MoviePassHypeIndexV2/1.0 (by Chairman Stacy)",
+  "max_movies": 100,
+  "tmdb_image_base": "https://image.tmdb.org/t/p/w185",
+  "subreddits": ["movies", "boxoffice", "marvelstudios", "DC_Cinematic"],
+  "rss_feeds": [
+    {"source": "Deadline",            "url": "https://deadline.com/feed/"},
+    {"source": "Variety",             "url": "https://variety.com/feed/"},
+    {"source": "Hollywood Reporter",  "url": "https://www.hollywoodreporter.com/feed/"},
+    {"source": "IndieWire",           "url": "https://www.indiewire.com/feed/"}
+  ],
+  "outlet_tier_weights": {
+    "Deadline": 1.0,
+    "Variety": 1.0,
+    "Hollywood Reporter": 1.0,
+    "IndieWire": 0.7
+  }
+}
