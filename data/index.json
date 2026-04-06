@@ -1,1 +1,101 @@
-{"meta":{"title":"MoviePass Hype Index V2","asOf":"09:00Z","scoreLabel":"NIS"},"ticker":[{"source":"Deadline","headline":"Project Hail Mary domestic opening tracking hits $80M as reviews soar."},{"source":"Variety","headline":"Super Mario Galaxy Movie Easter record confirmed with $372M global haul."},{"source":"THR","headline":"A24's 'The Drama' overperforms with $14M weekend; Zendaya momentum peaks."}],"tabs":{"movies":[{"rank":1,"move":0,"entity":"Project Hail Mary","metadata":"Dir. Phil Lord & Christopher Miller","mentions":113500,"sentiment":86,"score":92.5},{"rank":2,"move":0,"entity":"The Super Mario Galaxy Movie","metadata":"Dir. Aaron Horvath & Michael Jelenic","mentions":434000,"sentiment":46,"score":90.2},{"rank":3,"move":0,"entity":"Michael (2026)","metadata":"Dir. Antoine Fuqua","mentions":118600,"sentiment":91,"score":87.5},{"rank":4,"move":0,"entity":"The Drama (A24)","metadata":"Dir. Kristoffer Borgli","mentions":15300,"sentiment":66,"score":85.4},{"rank":5,"move":0,"entity":"Supergirl: Woman of Tomorrow","metadata":"Dir. Craig Gillespie","mentions":46900,"sentiment":89,"score":76.8}],"actors":[{"rank":1,"move":0,"entity":"Milly Alcock","metadata":"Projects: Supergirl","mentions":14800,"sentiment":94,"score":89.5},{"rank":2,"move":0,"entity":"Zendaya","metadata":"Projects: The Drama","mentions":24500,"sentiment":82,"score":86.8}],"directors":[{"rank":1,"move":0,"entity":"Phil Lord & Chris Miller","metadata":"Projects: Project Hail Mary","mentions":8400,"sentiment":88,"score":83.5}]}}
+{
+  "meta": {
+    "title": "MoviePass Hype Index V2",
+    "asOf": "10:00Z",
+    "scoreLabel": "NIS"
+  },
+  "ticker": [
+    {
+      "source": "Deadline",
+      "headline": "Project Hail Mary domestic opening tracking hits $85M as buzz accelerates."
+    },
+    {
+      "source": "Variety",
+      "headline": "Super Mario Galaxy Movie Easter record holds; $375M global within reach."
+    },
+    {
+      "source": "THR",
+      "headline": "Michael (2026) sentiment surges 15% following viral performance leak."
+    }
+  ],
+  "tabs": {
+    "movies": [
+      {
+        "rank": 1,
+        "move": 0,
+        "entity": "Project Hail Mary",
+        "metadata": "Dir. Phil Lord & Christopher Miller",
+        "mentions": 115800,
+        "sentiment": 87,
+        "score": 93.0
+      },
+      {
+        "rank": 2,
+        "move": 0,
+        "entity": "The Super Mario Galaxy Movie",
+        "metadata": "Dir. Aaron Horvath & Michael Jelenic",
+        "mentions": 438000,
+        "sentiment": 47,
+        "score": 90.5
+      },
+      {
+        "rank": 3,
+        "move": 0,
+        "entity": "Michael (2026)",
+        "metadata": "Dir. Antoine Fuqua",
+        "mentions": 122400,
+        "sentiment": 92,
+        "score": 88.5
+      },
+      {
+        "rank": 4,
+        "move": 0,
+        "entity": "The Drama (A24)",
+        "metadata": "Dir. Kristoffer Borgli",
+        "mentions": 16100,
+        "sentiment": 67,
+        "score": 85.6
+      },
+      {
+        "rank": 5,
+        "move": 0,
+        "entity": "Supergirl: Woman of Tomorrow",
+        "metadata": "Dir. Craig Gillespie",
+        "mentions": 48200,
+        "sentiment": 90,
+        "score": 77.5
+      }
+    ],
+    "actors": [
+      {
+        "rank": 1,
+        "move": 0,
+        "entity": "Milly Alcock",
+        "metadata": "Projects: Supergirl",
+        "mentions": 15200,
+        "sentiment": 95,
+        "score": 90.2
+      },
+      {
+        "rank": 2,
+        "move": 0,
+        "entity": "Zendaya",
+        "metadata": "Projects: The Drama",
+        "mentions": 25100,
+        "sentiment": 83,
+        "score": 87.1
+      }
+    ],
+    "directors": [
+      {
+        "rank": 1,
+        "move": 0,
+        "entity": "Phil Lord & Chris Miller",
+        "metadata": "Projects: Project Hail Mary",
+        "mentions": 8900,
+        "sentiment": 89,
+        "score": 84.0
+      }
+    ]
+  }
+}
