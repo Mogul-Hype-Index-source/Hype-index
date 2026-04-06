@@ -1,84 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mogul Hype Index Terminal</title>
-    <style>
-        body { background: #050505; color: #f5f5f5; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 20px; }
-        .header { border-bottom: 2px solid #ff9f00; padding-bottom: 10px; margin-bottom: 20px; }
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
-        .tab { background: #222; color: #ff9f00; border: 1px solid #444; padding: 10px 20px; cursor: pointer; text-transform: uppercase; }
-        .tab.active { background: #ff9f00; color: #000; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 12px; border: 1px solid #333; text-align: left; }
-        th { color: #ff9f00; text-transform: uppercase; border-bottom: 2px solid #ff9f00; }
-        .up { color: #00ff00; }
-        .down { color: #ff0000; }
-        .loading { text-align: center; padding: 50px; font-style: italic; color: #888; }
-    </style>
+  <meta charset="UTF-8" />
+  <title>MoviePass Hype Index V2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg-main: #080808; --bg-elevated: #101010; --bg-elevated-2: #131313; --border-subtle: #222222; --border-strong: #2f2f2f; --text-primary: #f7f7f7; --text-secondary: #b3b3b3; --accent-gold: #f5a623; --accent-green: #00ff87; --accent-red: #ff3b5c; --accent-blue: #0ab5ff; --shadow-soft: 0 0 24px rgba(0, 0, 0, 0.9); --transition-fast: 150ms ease-out; --transition-med: 220ms ease-out; --font-display: 'Bebas Neue', system-ui, sans-serif; --font-numeric: 'Rajdhani', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif; }
+    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    html, body { margin: 0; padding: 0; background: radial-gradient(circle at top, #141414 0, #080808 55%); color: var(-text-primary); font-family: var(--font-body); min-height: 100vh; display: flex; flex-direction: column; }
+    .app-shell { max-width: 1440px; margin: 0 auto; padding: 22px 24px 36px; width: 100%; }
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .title { font-family: var(--font-display); letter-spacing: 0.12em; font-size: 30px; text-transform: uppercase; color: #fff; }
+    .live-indicator { display: inline-flex; align-items: center; gap: 6px; }
+    .live-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--accent-red); box-shadow: 0 0 12px rgba(255, 59, 92, 0.8); animation: pulse 1.25s infinite ease-out; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 100% { transform: scale(1); } }
+    .live-text { color: var(--accent-red); font-weight: 600; letter-spacing: 0.18em; font-family: var(--font-numeric); font-size: 11px; text-transform: uppercase; }
+    .panel { background: radial-gradient(circle at top, #1c1c1c 0, #101010 60%); border-radius: 10px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-soft); padding: 12px 14px; margin-bottom: 14px; }
+    .tabs { display: inline-flex; gap: 6px; background: rgba(8, 8, 8, 0.9); border-radius: 999px; padding: 3px; border: 1px solid var(--botder-subtle); margin-bottom: 14px; }
+    .tab { border: none; outline: none; padding: 5px 14px; border-radius: 999px; font-family: var(--font-numeric); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; background: transparent; color: var(--text-secondary); cursor: pointer; }
+    .tab.active { background: linear-gradient(90deg, #f5a623, #ffdd80); color: #080808; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; font-family: var(--font-body); font-size: 12px; }
+    th { font-family: var(--font-numeric); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-secondary); text-align: left; padding: 7px 10px; border-bottom: 2px solid var(--accent-gold); }
+    td { padding: 10px; border-bottom: 1px solid var(--botder-subtle); }
+    .sentiment-bar { height: 8px; border-radius: 4px; background: #222; overflow: hidden; width: 100px; }
+    .sentiment-fill { height: 100%; background: var(--accent-green); }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>MOGUL HYPE INDEX // SYSTEM_V2.9</h1>
-        <div id="last-updated">Status: SYNCING...</div>
-    </div>
+  <div class="app-shell">
+    <header class="header">
+      <div class="title">MoviePass Hype Index</div>
+      <div class="live-indicator">
+        <div class="live-dot"></div>
+        <span class="live-text">Live Terminal</span>
+      </div>
+    </header>
     <div class="tabs">
-        <div class="tab active" data-cat="movies">Movies</div>
-        <div class="tab" data-cat="actors">Actors</div>
-        <div class="tab" data-cat="directors">Directors</div>
+      <button class="tab active">Movies</button>
+      <button class="tab">Actors</button>
+      <button class="tab">Directors</button>
     </div>
-    <div id="content">
-        <div class="loading">Fetching data.json...</div>
+    <div class="panel">
+      <table id="hype-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Entity</th>
+            <th>Score</th>
+            <th>Mentions</th>
+            <th>Sentiment</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr><td colspan="5" style="text-align:center; padding: 40px; color: #666;">Hydrating live feed...</td></tr>
+        </tbody>
+      </table>
     </div>
-
-    <script>
-        let data = {};
-        let activeCat = 'movies';
-        async function refresh() {
-            try {
-                const r = await fetch('data.json?t=' + Date.now());
-                if (!r.ok) throw new Error('HTTP ' + r.status);
-                data = await r.json();
-                document.getElementById('last-updated').textContent = 'Status: LIVE | Updated: ' + new Date().toLocaleTimeString();
-                render();
-            } catch (e) {
-                document.getElementById('last-updated').textContent = 'Status: ERROR';
-                document.getElementById('content').innerHTML = '<div class="loading" style="color:red">Error loading data.json: ' + e.message + '</div>';
-            }
-        }
-        function render() {
-            let items = data[activeCat] || data.top_100 || [];
-            if (!items.length && data.movies) items = data.movies;
-
-            let html = '<table><thead><tr><th>Rank</th><th>Change</th><th>Entity</th><th>Score</th><th>Mentions</th><th>Notes</th></tr></thead><tbody>';
-            items.forEach(i => {
-                const move = Number(i.change_24h || i.change || 0);
-                const moveClass = move > 0 ? 'up' : (move < 0 ? 'down' : '');
-                const mentions = Number(i.mentions_x || i.mentions || 0);
-                html += `'<tr>
-                    <td style="font-weight:bold;color:#ffd166">${i.rank}</td>
-                    <td class="${moveClass}">${move > 0 ? '+' : ''}${move}</td>
-                    <td style="color:#fff;font-weight:bold">${i.entity || i.name}</td>
-                    <td style="font-weight:bold">${i.score}</td>
-                    <td>${Number(i.mentions_x || i.mentions || 0).localeString()}</td>
-                    <td style="font-size:11px;color:#bbb">${i.notes || ''}</td>
-                </tr>`;
-            });
-            html += '</tbody></table>';
-            document.getElementById('content').innerHTML = html;
-        }
-        document.querySelectorAll('.tab').forEach(btn => {
-            btn.onclick = () => {
-                activeCat = btn.dataset.cat;
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                btn.classList.add('active');
-                render();
-            };
+  </div>
+  <script>
+    async function load() {
+      try {
+        const r = await fetch('./data.json?t=' + Date.now());
+        const d = await r.json();
+        const tbody = document.getElementById('table-body');
+        tbody.innerHTML = '';
+        const items = d.tabs ? d.tabs.movies : (d.movies || []);
+        items.forEach(i => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + i.rank + '</td><td style="color:#fff; font-weight:600;">' + i.name + '</td><td>' + i.score + '</td><td>' + i.mentions + '</td><td><div class="sentiment-bar"><div class="sentiment-fill" style="width:' + (i.sentiment*100) + '%"></div></div></td>';
+          tbody.appendChild(tr);
         });
-
-        refresh();
-        setInterval(refresh, 300000);
-    </script>
+      } catch (e) { console.error(e); }
+    }
+    load();
+    setInterval(load, 60000);
+  </script>
 </body>
 </html>
