@@ -252,6 +252,47 @@ def build_index_payload(scored: List[Dict[str, Any]],
 
 
 # ---------------------------------------------------------------------------
+# Quality circuit breaker
+# ---------------------------------------------------------------------------
+
+def _quality_ok(new_payload: Dict[str, Any]) -> bool:
+    """
+    Compare a freshly-built payload against the existing live data/index.json
+    and return False if the new fetch is dramatically worse — specifically:
+
+      • The live index had >= 25% of movies with non-zero YouTube views, AND
+      • The new payload has < 50% as many movies with non-zero YouTube views.
+
+    This catches API quota exhaustion (the most common failure mode) without
+    blocking legitimate updates where the slate has shifted.
+    """
+    if not INDEX_PATH.exists():
+        return True  # nothing to compare against
+    try:
+        live = json.loads(INDEX_PATH.read_text())
+    except Exception:  # noqa: BLE001
+        return True
+
+    def yt_coverage(payload: Dict[str, Any]) -> float:
+        movies = payload.get("movies") or []
+        if not movies:
+            return 0.0
+        with_views = sum(1 for m in movies if (m.get("youtube_views") or 0) > 0)
+        return with_views / len(movies)
+
+    live_cov = yt_coverage(live)
+    new_cov  = yt_coverage(new_payload)
+
+    if live_cov >= 0.25 and new_cov < live_cov * 0.5:
+        LOG.warning(
+            "YouTube coverage dropped: live=%.0f%% → new=%.0f%%",
+            live_cov * 100, new_cov * 100,
+        )
+        return False
+    return True
+
+
+# ---------------------------------------------------------------------------
 # Run one cycle
 # ---------------------------------------------------------------------------
 
@@ -279,6 +320,23 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False) -> Path:
     # 3. Assemble
     generated_at = datetime.now(timezone.utc).replace(microsecond=0)
     payload = build_index_payload(scored, raw["news"], generated_at)
+
+    # 3a. Circuit breaker — refuse to overwrite the live index.json with
+    # obviously degraded data. Specifically, if the previous index had
+    # meaningful YouTube view coverage and the new fetch lost it for the
+    # majority of movies (e.g. quota exhaustion), keep the old data live
+    # and let the next scheduled run try again. This protects the public
+    # site from intermittent API failures without needing manual rollback.
+    if INDEX_PATH.exists() and not _quality_ok(payload):
+        LOG.warning(
+            "Circuit breaker tripped — new fetch is degraded vs the live index.json. "
+            "Preserving the existing live data and skipping write."
+        )
+        # Still cache the raw + write a degraded snapshot for debugging
+        debug_path = CACHE_DIR / "degraded_payload.json"
+        debug_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+        LOG.warning("Degraded payload saved → %s", debug_path)
+        return INDEX_PATH
 
     # 4. Write public index.json (atomic)
     tmp = INDEX_PATH.with_suffix(".json.tmp")

@@ -162,15 +162,91 @@ def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, str]:
 
 
 # ---------------------------------------------------------------------------
-# YouTube — official trailer stats
+# YouTube — trailer stats (TMDb supplies the video ID, we only fetch stats)
 # ---------------------------------------------------------------------------
+#
+# Architecture note: YouTube's /search endpoint costs 100 quota units per call
+# (10K daily quota = ~100 searches/day). Calling it once per movie per hour
+# blows the budget after the first run. Instead we ask TMDb's free
+# /movie/{id}/videos endpoint for the official trailer's YouTube video ID
+# (TMDb has no realistic quota for free use), and then call YouTube /videos
+# for stats — which costs only 1 quota unit per call. 87 movies × 1 unit ×
+# 24 runs/day = ~2K units/day, comfortably under the 10K cap.
+#
+# Trailer IDs are also cached on disk (data/cache/youtube_trailers.json),
+# keyed by tmdb_id, so we only re-query TMDb when a movie is new to the slate.
+
+def _trailer_cache_path() -> Path:
+    return REPO_ROOT / "data" / "cache" / "youtube_trailers.json"
+
+
+def _load_trailer_cache() -> Dict[str, str]:
+    p = _trailer_cache_path()
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text())
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def _save_trailer_cache(cache: Dict[str, str]) -> None:
+    p = _trailer_cache_path()
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(cache, indent=2))
+
+
+def fetch_tmdb_trailer_video_id(api_key: str, tmdb_id: int) -> Optional[str]:
+    """Pick the best YouTube trailer ID for a movie from TMDb /videos."""
+    data = _http_get(
+        f"{TMDB_BASE}/movie/{tmdb_id}/videos",
+        params={"api_key": api_key, "language": "en-US"},
+    )
+    if not data:
+        return None
+    videos = data.get("results") or []
+    # Preference order: official Trailer → any Trailer → any YouTube clip
+    def _pick(predicate):
+        for v in videos:
+            if v.get("site") == "YouTube" and predicate(v):
+                return v.get("key")
+        return None
+
+    return (
+        _pick(lambda v: v.get("type") == "Trailer" and v.get("official"))
+        or _pick(lambda v: v.get("type") == "Trailer")
+        or _pick(lambda v: True)
+    )
+
+
+def fetch_youtube_video_stats(api_key: str, video_id: str) -> Dict[str, int]:
+    """Fetch view/like/comment counts for a known YouTube video ID. Costs 1 quota unit."""
+    empty = {"views": 0, "likes": 0, "comments": 0}
+    if not video_id:
+        return empty
+    stats = _http_get(
+        f"{YOUTUBE_BASE}/videos",
+        params={"part": "statistics", "id": video_id, "key": api_key},
+    )
+    if not stats or not stats.get("items"):
+        return empty
+    s = stats["items"][0].get("statistics", {})
+    return {
+        "views":    int(s.get("viewCount", 0) or 0),
+        "likes":    int(s.get("likeCount", 0) or 0),
+        "comments": int(s.get("commentCount", 0) or 0),
+    }
+
 
 def fetch_youtube_trailer(api_key: str, title: str) -> Dict[str, int]:
-    """Search for `{title} official trailer`, return views/likes/comments of top hit."""
+    """
+    Legacy entry point — kept for ad-hoc use. Costs 100+1 quota units per call
+    because it does a full /search. Prefer fetch_tmdb_trailer_video_id +
+    fetch_youtube_video_stats inside fetch_all().
+    """
     empty = {"views": 0, "likes": 0, "comments": 0}
     if not title:
         return empty
-
     search = _http_get(
         f"{YOUTUBE_BASE}/search",
         params={
@@ -187,21 +263,7 @@ def fetch_youtube_trailer(api_key: str, title: str) -> Dict[str, int]:
     if not items:
         return empty
     video_id = items[0].get("id", {}).get("videoId")
-    if not video_id:
-        return empty
-
-    stats = _http_get(
-        f"{YOUTUBE_BASE}/videos",
-        params={"part": "statistics", "id": video_id, "key": api_key},
-    )
-    if not stats or not stats.get("items"):
-        return empty
-    s = stats["items"][0].get("statistics", {})
-    return {
-        "views":    int(s.get("viewCount", 0) or 0),
-        "likes":    int(s.get("likeCount", 0) or 0),
-        "comments": int(s.get("commentCount", 0) or 0),
-    }
+    return fetch_youtube_video_stats(api_key, video_id) if video_id else empty
 
 
 # ---------------------------------------------------------------------------
@@ -365,6 +427,10 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     # 2. News feeds (single shot, used for both ticker + per-movie NIS)
     news_items = fetch_news_feeds(feeds)
 
+    # Trailer-ID cache (tmdb_id → youtube video_id) so we never re-search
+    trailer_cache: Dict[str, str] = _load_trailer_cache()
+    cache_dirty = False
+
     # 3. Per-movie enrichment
     for idx, m in enumerate(movies, 1):
         title = m["title"]
@@ -376,8 +442,19 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
             f"{poster_base}{m['poster_path']}" if m.get("poster_path") else None
         )
 
+        # YouTube: TMDb supplies the trailer video ID (free), then YouTube
+        # /videos returns stats (1 quota unit). Cache the video ID per
+        # tmdb_id so we never spend a quota unit on /search again.
         try:
-            m["youtube"] = fetch_youtube_trailer(yt_key, title)
+            cache_key = str(m["tmdb_id"])
+            video_id = trailer_cache.get(cache_key)
+            if not video_id:
+                video_id = fetch_tmdb_trailer_video_id(tmdb_key, m["tmdb_id"])
+                if video_id:
+                    trailer_cache[cache_key] = video_id
+                    cache_dirty = True
+            m["youtube_video_id"] = video_id
+            m["youtube"] = fetch_youtube_video_stats(yt_key, video_id)
         except Exception as exc:  # noqa: BLE001
             LOG.warning("YouTube failed for %s: %s", title, exc)
             m["youtube"] = {"views": 0, "likes": 0, "comments": 0}
@@ -393,6 +470,11 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         m["news_mentions"] = _news_mentions_for(title, news_items)
 
         time.sleep(0.2)  # gentle pacing
+
+    # Persist trailer cache for next run
+    if cache_dirty:
+        _save_trailer_cache(trailer_cache)
+        LOG.info("Trailer cache: %d entries persisted", len(trailer_cache))
 
     # 4. Google Trends — batch all titles at once (cheap, single block)
     titles = [m["title"] for m in movies]
