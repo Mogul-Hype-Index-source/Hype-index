@@ -1,16 +1,22 @@
 {
-  "generated_at": "2026-04-07T23:03:13+00:00",
-  "next_update_at": "2026-04-08T00:03:13+00:00",
+  "generated_at": "2026-04-07T23:41:52+00:00",
+  "next_update_at": "2026-04-08T00:41:52+00:00",
   "snapshot_date": "2026-04-07",
   "summary": {
     "total": 85,
-    "rising": 1,
-    "falling": 1,
-    "flat": 83,
-    "avg_score": 840,
-    "total_mentions_24h": 19789
+    "rising": 10,
+    "falling": 27,
+    "flat": 48,
+    "avg_score": 841,
+    "total_mentions_24h": 35286
   },
   "news": [
+    {
+      "headline": "‘Forbidden Fruits’ Director Wanted Film to Be a “Razor Blade in a Jolly Rancher”",
+      "source": "Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/movies/movie-features/forbidden-fruits-meredith-alloway-interview-1236554027/",
+      "category": "production"
+    },
     {
       "headline": "The Actor Awards Set Dates for 2027 and 2028 Ceremonies on Netflix",
       "source": "Variety",
@@ -33,12 +39,6 @@
       "headline": "Three Arrested After Yelling “Gun” in Crowded Movie Theater for Social Media Prank",
       "source": "Hollywood Reporter",
       "url": "https://www.hollywoodreporter.com/movies/movie-news/yelling-gun-crowded-movie-theater-arrest-1236557935/",
-      "category": "production"
-    },
-    {
-      "headline": "‘Sacred Heart’ Lands U.S. Theatrical Release Through Fathom Entertainment – Film News in Brief",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/news/film-news-in-brief-april-6-2025-1236709285/",
       "category": "production"
     },
     {
@@ -82,6 +82,12 @@
       "source": "IndieWire",
       "url": "https://www.indiewire.com/news/analysis/why-brands-will-not-finance-indie-films-1235187640/",
       "category": "creative"
+    },
+    {
+      "headline": "Lisa Ann Walter Sets Title, Premiere Date For Hulu Stand-Up Special – Update",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/lisa-ann-walter-stand-up-special-hulu-exclusive-1236583685/",
+      "category": "pr-marketing"
     },
     {
       "headline": "SAG-AFTRA Reveals Dates For The 2026-2027 Actor Awards",
@@ -140,20 +146,76 @@
   ],
   "movers_up": [
     {
-      "tmdb_id": 1066313,
-      "title": "The Draft!",
-      "poster_url": "https://image.tmdb.org/t/p/w185/6WEqtp38s1iW5VrcH78rOIi8a2Z.jpg",
-      "move": 1,
-      "score": 869
+      "tmdb_id": 1450527,
+      "title": "Forbidden Fruits",
+      "poster_url": "https://image.tmdb.org/t/p/w185/qK6yk1wJp6vAJRJOyIMcxoNw8pe.jpg",
+      "move": 24,
+      "score": 910
+    },
+    {
+      "tmdb_id": 1493859,
+      "title": "Pizza Movie",
+      "poster_url": "https://image.tmdb.org/t/p/w185/2c2ib9pS3BTIoMnYHi4z6t9nxuA.jpg",
+      "move": 4,
+      "score": 848
+    },
+    {
+      "tmdb_id": 1159831,
+      "title": "The Bride!",
+      "poster_url": "https://image.tmdb.org/t/p/w185/lV8YHwGkYZsm6EfIqnhaSz2avKt.jpg",
+      "move": 3,
+      "score": 839
+    },
+    {
+      "tmdb_id": 680493,
+      "title": "Return to Silent Hill",
+      "poster_url": "https://image.tmdb.org/t/p/w185/fqAGFN2K2kDL0EHxvJaXzaMUkkt.jpg",
+      "move": 3,
+      "score": 806
+    },
+    {
+      "tmdb_id": 936075,
+      "title": "Michael",
+      "poster_url": "https://image.tmdb.org/t/p/w185/3Qud19bBUrrJAzy0Ilm8gRJlJXP.jpg",
+      "move": 2,
+      "score": 994
     }
   ],
   "movers_down": [
     {
-      "tmdb_id": 1314481,
-      "title": "The Devil Wears Prada 2",
-      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+      "tmdb_id": 1102883,
+      "title": "Mother Mary",
+      "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
+      "move": -14,
+      "score": 864
+    },
+    {
+      "tmdb_id": 1242332,
+      "title": "Normal",
+      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
+      "move": -3,
+      "score": 877
+    },
+    {
+      "tmdb_id": 1226863,
+      "title": "The Super Mario Galaxy Movie",
+      "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
+      "move": -2,
+      "score": 930
+    },
+    {
+      "tmdb_id": 1292695,
+      "title": "They Will Kill You",
+      "poster_url": "https://image.tmdb.org/t/p/w185/6oI4oQKTWMVUlr8Ivqydp28Ruu6.jpg",
+      "move": -2,
+      "score": 848
+    },
+    {
+      "tmdb_id": 1297842,
+      "title": "GOAT",
+      "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
       "move": -1,
-      "score": 865
+      "score": 863
     }
   ],
   "movies": [
@@ -186,10 +248,10 @@
       "sub_scores": {
         "youtube_views": 1.0,
         "youtube_engagement": 0.5125,
-        "reddit_volume": 0.003,
+        "reddit_volume": 0.0029,
         "google_trends": 0.51,
         "news_impact": 0.0,
-        "raw_amsi": 0.4795
+        "raw_amsi": 0.4794
       },
       "cast_full": [
         {
@@ -253,6 +315,199 @@
     },
     {
       "rank": 2,
+      "tmdb_id": 936075,
+      "title": "Michael",
+      "director": "Antoine Fuqua",
+      "cast": "Jaafar Jackson, Colman Domingo",
+      "release_date": "2026-04-22",
+      "poster_url": "https://image.tmdb.org/t/p/w185/3Qud19bBUrrJAzy0Ilm8gRJlJXP.jpg",
+      "youtube_views": 18823033,
+      "youtube_likes": 208046,
+      "youtube_comments": 13841,
+      "youtube_video_id": "mbtgEE6rkxw",
+      "reddit_posts": 59,
+      "reddit_comments": 9368,
+      "mentions": 9427,
+      "sentiment_pct": 72,
+      "scores": {
+        "1d": 994,
+        "7d": 994,
+        "30d": 994
+      },
+      "score": 994,
+      "move": 2,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.2227,
+        "youtube_engagement": 0.3772,
+        "reddit_volume": 1.0,
+        "google_trends": 0.72,
+        "news_impact": 0.0,
+        "raw_amsi": 0.4674
+      },
+      "cast_full": [
+        {
+          "id": 3898497,
+          "name": "Jaafar Jackson",
+          "character": "Michael Jackson",
+          "profile_path": "/i4571Zx2f7Czmh4KQ0QIhTRSqoY.jpg"
+        },
+        {
+          "id": 91671,
+          "name": "Colman Domingo",
+          "character": "Joe Jackson",
+          "profile_path": "/2tu6T9ugnf82qIMGVKWSb0dvvq5.jpg"
+        },
+        {
+          "id": 9781,
+          "name": "Nia Long",
+          "character": "Katherine Jackson",
+          "profile_path": "/2HnplqKDWkLyReeeAPsbEctkpPQ.jpg"
+        },
+        {
+          "id": 1446825,
+          "name": "Kendrick Sampson",
+          "character": "Quincy Jones",
+          "profile_path": "/AoZGTujNZEfabaXR5kUwmDUmxfe.jpg"
+        },
+        {
+          "id": 996701,
+          "name": "Miles Teller",
+          "character": "John Branca",
+          "profile_path": "/aciu7YM8fD0BzrrA6cJ5wDKZIA6.jpg"
+        },
+        {
+          "id": 4487890,
+          "name": "Juliano Krue Valdi",
+          "character": "Young Michael Jackson",
+          "profile_path": "/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg"
+        },
+        {
+          "id": 1581190,
+          "name": "Joseph David-Jones",
+          "character": "Jackie Jackson",
+          "profile_path": "/qwX7ciIV8jwssmIqHv1eyzzqEvh.jpg"
+        },
+        {
+          "id": 4805996,
+          "name": "Jamal Henderson",
+          "character": "Jermaine Jackson",
+          "profile_path": "/8yI9c3utD4EcEteNwHlFkdR8Rhv.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 20907,
+          "name": "Antoine Fuqua",
+          "profile_path": "/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 72
+    },
+    {
+      "rank": 3,
+      "tmdb_id": 1325734,
+      "title": "The Drama",
+      "director": "Kristoffer Borgli",
+      "cast": "Zendaya, Robert Pattinson",
+      "release_date": "2026-03-26",
+      "poster_url": "https://image.tmdb.org/t/p/w185/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
+      "youtube_views": 57727,
+      "youtube_likes": 287,
+      "youtube_comments": 6,
+      "youtube_video_id": "0ZDzsH3XGFA",
+      "reddit_posts": 47,
+      "reddit_comments": 5163,
+      "mentions": 5211,
+      "sentiment_pct": 63,
+      "scores": {
+        "1d": 940,
+        "7d": 940,
+        "30d": 940
+      },
+      "score": 940,
+      "move": 2,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0007,
+        "youtube_engagement": 0.1624,
+        "reddit_volume": 0.5527,
+        "google_trends": 0.49,
+        "news_impact": 0.7,
+        "raw_amsi": 0.3381
+      },
+      "cast_full": [
+        {
+          "id": 505710,
+          "name": "Zendaya",
+          "character": "Emma",
+          "profile_path": "/3WdOloHpjtjL96uVOhFRRCcYSwq.jpg"
+        },
+        {
+          "id": 11288,
+          "name": "Robert Pattinson",
+          "character": "Charlie",
+          "profile_path": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
+        },
+        {
+          "id": 1741367,
+          "name": "Alana Haim",
+          "character": "Rachel",
+          "profile_path": "/5c8zq41exvPUd7ph1tNeoBmaPgj.jpg"
+        },
+        {
+          "id": 1639848,
+          "name": "Mamoudou Athie",
+          "character": "Mike",
+          "profile_path": "/ycUbhfZRKC8MtNK9oMwscRsl3uM.jpg"
+        },
+        {
+          "id": 1599899,
+          "name": "Hailey Benton Gates",
+          "character": "Misha",
+          "profile_path": "/diYEXsO2taatxvCFpmBUIQ42Er8.jpg"
+        },
+        {
+          "id": 1303156,
+          "name": "Sydney Lemmon",
+          "character": "Pauline",
+          "profile_path": "/heGyUuth1HInFdywZ6y8gqjf0q6.jpg"
+        },
+        {
+          "id": 1049916,
+          "name": "Hannah Gross",
+          "character": "Alice",
+          "profile_path": "/izjxz6YaCbxC5ZPupN7mUBQVFyB.jpg"
+        },
+        {
+          "id": 1724137,
+          "name": "Anna Baryshnikov",
+          "character": "Sam",
+          "profile_path": "/wFMmvPSSciGgRm5Vm1seX0xPjHE.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1280021,
+          "name": "Kristoffer Borgli",
+          "profile_path": "/ftLljVAuKvECl8rAG7JbiGANy8P.jpg"
+        }
+      ],
+      "news_mentions": [
+        {
+          "source": "IndieWire",
+          "headline": "‘The Drama’ Solidifies Zendaya as Our New Indie Box Office Queen"
+        }
+      ],
+      "trends": 49
+    },
+    {
+      "rank": 4,
       "tmdb_id": 1226863,
       "title": "The Super Mario Galaxy Movie",
       "director": "Michael Jelenic, Aaron Horvath",
@@ -263,27 +518,27 @@
       "youtube_likes": 27517,
       "youtube_comments": 0,
       "youtube_video_id": "En5QZmL5R1s",
-      "reddit_posts": 55,
-      "reddit_comments": 8905,
-      "mentions": 8961,
-      "sentiment_pct": 61,
+      "reddit_posts": 56,
+      "reddit_comments": 8933,
+      "mentions": 8990,
+      "sentiment_pct": 62,
       "scores": {
-        "1d": 934,
-        "7d": 934,
-        "30d": 934
+        "1d": 930,
+        "7d": 930,
+        "30d": 930
       },
-      "score": 934,
-      "move": 0,
+      "score": 930,
+      "move": -2,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0981,
         "youtube_engagement": 0.1062,
-        "reddit_volume": 1.0,
+        "reddit_volume": 0.9535,
         "google_trends": 0.16,
         "news_impact": 0.3,
-        "raw_amsi": 0.3224
+        "raw_amsi": 0.3131
       },
       "cast_full": [
         {
@@ -356,296 +611,103 @@
       "trends": 16
     },
     {
-      "rank": 3,
-      "tmdb_id": 1102883,
-      "title": "Mother Mary",
-      "director": "David Lowery",
-      "cast": "Anne Hathaway, Michaela Coel",
-      "release_date": "2026-04-17",
-      "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-      "youtube_views": 1916961,
-      "youtube_likes": 13689,
-      "youtube_comments": 875,
-      "youtube_video_id": "EE3KU_YT3_c",
+      "rank": 5,
+      "tmdb_id": 1450527,
+      "title": "Forbidden Fruits",
+      "director": "Meredith Alloway",
+      "cast": "Lili Reinhart, Lola Tung",
+      "release_date": "2026-03-26",
+      "poster_url": "https://image.tmdb.org/t/p/w185/qK6yk1wJp6vAJRJOyIMcxoNw8pe.jpg",
+      "youtube_views": 6066032,
+      "youtube_likes": 18384,
+      "youtube_comments": 838,
+      "youtube_video_id": "0nyUCq9k7_0",
       "reddit_posts": 4,
-      "reddit_comments": 410,
-      "mentions": 415,
-      "sentiment_pct": 62,
+      "reddit_comments": 72,
+      "mentions": 77,
+      "sentiment_pct": 56,
       "scores": {
-        "1d": 926,
-        "7d": 926,
-        "30d": 926
+        "1d": 910,
+        "7d": 910,
+        "30d": 910
       },
-      "score": 926,
-      "move": 0,
+      "score": 910,
+      "move": 24,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
-        "youtube_views": 0.0227,
-        "youtube_engagement": 0.2431,
-        "reddit_volume": 0.0462,
-        "google_trends": 0.51,
+        "youtube_views": 0.0718,
+        "youtube_engagement": 0.1014,
+        "reddit_volume": 0.0081,
+        "google_trends": 0.38,
         "news_impact": 1.0,
-        "raw_amsi": 0.3045
+        "raw_amsi": 0.2644
       },
       "cast_full": [
         {
-          "id": 1813,
-          "name": "Anne Hathaway",
-          "character": "Mother Mary",
-          "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+          "id": 1136940,
+          "name": "Lili Reinhart",
+          "character": "Apple",
+          "profile_path": "/wt4SuihSkEA0bOc0JTtsgCD7pHZ.jpg"
         },
         {
-          "id": 1368012,
-          "name": "Michaela Coel",
-          "character": "Sam Anselm",
-          "profile_path": "/rbN1F0R8DMUh6IYwl0owyD8LukN.jpg"
+          "id": 3499255,
+          "name": "Lola Tung",
+          "character": "Pumpkin",
+          "profile_path": "/liRV1J2dYALCgwJyY4cdZXNQe36.jpg"
         },
         {
-          "id": 2340180,
-          "name": "Hunter Schafer",
-          "character": "Hilda",
-          "profile_path": "/6ZDieLlbm2m3jbYaxsHFo7cWWzJ.jpg"
+          "id": 2117434,
+          "name": "Victoria Pedretti",
+          "character": "Cherry",
+          "profile_path": "/dSrIMNn803L8fqqWjkCSRv4iOu1.jpg"
         },
         {
-          "id": 1452151,
-          "name": "Atheena Frizzell",
-          "character": "Emily",
-          "profile_path": "/lHMiMYEXUMoemgqcuzz8t2Lhp62.jpg"
+          "id": 1253199,
+          "name": "Alexandra Shipp",
+          "character": "Fig",
+          "profile_path": "/98AfO5NSqWnlhIxjSg08gGYdxUG.jpg"
         },
         {
-          "id": 1957145,
-          "name": "Kaia Gerber",
-          "character": "",
-          "profile_path": "/wO3y1JaO32GhqTVE7AE3ABkz1o7.jpg"
+          "id": 2741137,
+          "name": "Emma Chamberlain",
+          "character": "Pickle",
+          "profile_path": "/3KYqeV3w1PYe2clDnG0Ji7V0wFf.jpg"
         },
         {
-          "id": 567269,
-          "name": "Jessica Brown Findlay",
-          "character": "Tessa",
-          "profile_path": "/zaqkavcb9ur0W1h1QAxJfKnCJ2h.jpg"
+          "id": 17773,
+          "name": "Gabrielle Union",
+          "character": "Sharon",
+          "profile_path": "/toeSCybsYufRKfgz77AKy4C8axD.jpg"
         },
         {
-          "id": 1266868,
-          "name": "Isaura Barbé-Brown",
-          "character": "Kyla",
-          "profile_path": "/wJTO31JEvUP2WUOrpWFaMY6KhxF.jpg"
+          "id": 3254841,
+          "name": "Hailey Summer",
+          "character": "Arizona Latte Barista",
+          "profile_path": "/hiJPmqUrlBaMgSgkdtwqmotXgyt.jpg"
         },
         {
-          "id": 1674769,
-          "name": "Alba Baptista",
-          "character": "",
-          "profile_path": "/gV5LYhN7BRc7xjySFek9gdm5tNA.jpg"
+          "id": 1831598,
+          "name": "Jordan Duarte",
+          "character": "Texas Dad",
+          "profile_path": "/pxXjOQELD0lG2v1sey4WIzff9pw.jpg"
         }
       ],
       "directors_full": [
         {
-          "id": 592493,
-          "name": "David Lowery",
-          "profile_path": "/5zS78ZleGuxFB0XZBqQMbH4udME.jpg"
+          "id": 2347139,
+          "name": "Meredith Alloway",
+          "profile_path": "/5nCeIKQGRnFNQnNueZ4VYcsVf4A.jpg"
         }
       ],
       "news_mentions": [
         {
           "source": "Hollywood Reporter",
-          "headline": "How Taylor Swift’s ‘Reputation’ Concert Film Inspired Anne Hathaway’s Performance in ‘Mother Mary’"
+          "headline": "‘Forbidden Fruits’ Director Wanted Film to Be a “Razor Blade in a Jolly Rancher”"
         }
       ],
-      "trends": 51
-    },
-    {
-      "rank": 4,
-      "tmdb_id": 936075,
-      "title": "Michael",
-      "director": "Antoine Fuqua",
-      "cast": "Jaafar Jackson, Colman Domingo",
-      "release_date": "2026-04-22",
-      "poster_url": "https://image.tmdb.org/t/p/w185/3Qud19bBUrrJAzy0Ilm8gRJlJXP.jpg",
-      "youtube_views": 18823033,
-      "youtube_likes": 208046,
-      "youtube_comments": 13841,
-      "youtube_video_id": "mbtgEE6rkxw",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 67,
-      "scores": {
-        "1d": 911,
-        "7d": 911,
-        "30d": 911
-      },
-      "score": 911,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.2227,
-        "youtube_engagement": 0.3772,
-        "reddit_volume": 0.0,
-        "google_trends": 0.72,
-        "news_impact": 0.0,
-        "raw_amsi": 0.2674
-      },
-      "cast_full": [
-        {
-          "id": 3898497,
-          "name": "Jaafar Jackson",
-          "character": "Michael Jackson",
-          "profile_path": "/i4571Zx2f7Czmh4KQ0QIhTRSqoY.jpg"
-        },
-        {
-          "id": 91671,
-          "name": "Colman Domingo",
-          "character": "Joe Jackson",
-          "profile_path": "/2tu6T9ugnf82qIMGVKWSb0dvvq5.jpg"
-        },
-        {
-          "id": 9781,
-          "name": "Nia Long",
-          "character": "Katherine Jackson",
-          "profile_path": "/2HnplqKDWkLyReeeAPsbEctkpPQ.jpg"
-        },
-        {
-          "id": 1446825,
-          "name": "Kendrick Sampson",
-          "character": "Quincy Jones",
-          "profile_path": "/AoZGTujNZEfabaXR5kUwmDUmxfe.jpg"
-        },
-        {
-          "id": 996701,
-          "name": "Miles Teller",
-          "character": "John Branca",
-          "profile_path": "/aciu7YM8fD0BzrrA6cJ5wDKZIA6.jpg"
-        },
-        {
-          "id": 4487890,
-          "name": "Juliano Krue Valdi",
-          "character": "Young Michael Jackson",
-          "profile_path": "/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg"
-        },
-        {
-          "id": 1581190,
-          "name": "Joseph David-Jones",
-          "character": "Jackie Jackson",
-          "profile_path": "/qwX7ciIV8jwssmIqHv1eyzzqEvh.jpg"
-        },
-        {
-          "id": 4805996,
-          "name": "Jamal Henderson",
-          "character": "Jermaine Jackson",
-          "profile_path": "/8yI9c3utD4EcEteNwHlFkdR8Rhv.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 20907,
-          "name": "Antoine Fuqua",
-          "profile_path": "/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 72
-    },
-    {
-      "rank": 5,
-      "tmdb_id": 1325734,
-      "title": "The Drama",
-      "director": "Kristoffer Borgli",
-      "cast": "Zendaya, Robert Pattinson",
-      "release_date": "2026-03-26",
-      "poster_url": "https://image.tmdb.org/t/p/w185/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
-      "youtube_views": 57727,
-      "youtube_likes": 287,
-      "youtube_comments": 6,
-      "youtube_video_id": "0ZDzsH3XGFA",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 1,
-      "sentiment_pct": 58,
-      "scores": {
-        "1d": 894,
-        "7d": 894,
-        "30d": 894
-      },
-      "score": 894,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0007,
-        "youtube_engagement": 0.1624,
-        "reddit_volume": 0.0,
-        "google_trends": 0.49,
-        "news_impact": 0.7,
-        "raw_amsi": 0.2276
-      },
-      "cast_full": [
-        {
-          "id": 505710,
-          "name": "Zendaya",
-          "character": "Emma",
-          "profile_path": "/3WdOloHpjtjL96uVOhFRRCcYSwq.jpg"
-        },
-        {
-          "id": 11288,
-          "name": "Robert Pattinson",
-          "character": "Charlie",
-          "profile_path": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
-        },
-        {
-          "id": 1741367,
-          "name": "Alana Haim",
-          "character": "Rachel",
-          "profile_path": "/5c8zq41exvPUd7ph1tNeoBmaPgj.jpg"
-        },
-        {
-          "id": 1639848,
-          "name": "Mamoudou Athie",
-          "character": "Mike",
-          "profile_path": "/ycUbhfZRKC8MtNK9oMwscRsl3uM.jpg"
-        },
-        {
-          "id": 1599899,
-          "name": "Hailey Benton Gates",
-          "character": "Misha",
-          "profile_path": "/diYEXsO2taatxvCFpmBUIQ42Er8.jpg"
-        },
-        {
-          "id": 1303156,
-          "name": "Sydney Lemmon",
-          "character": "Pauline",
-          "profile_path": "/heGyUuth1HInFdywZ6y8gqjf0q6.jpg"
-        },
-        {
-          "id": 1049916,
-          "name": "Hannah Gross",
-          "character": "Alice",
-          "profile_path": "/izjxz6YaCbxC5ZPupN7mUBQVFyB.jpg"
-        },
-        {
-          "id": 1724137,
-          "name": "Anna Baryshnikov",
-          "character": "Sam",
-          "profile_path": "/wFMmvPSSciGgRm5Vm1seX0xPjHE.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1280021,
-          "name": "Kristoffer Borgli",
-          "profile_path": "/ftLljVAuKvECl8rAG7JbiGANy8P.jpg"
-        }
-      ],
-      "news_mentions": [
-        {
-          "source": "IndieWire",
-          "headline": "‘The Drama’ Solidifies Zendaya as Our New Indie Box Office Queen"
-        }
-      ],
-      "trends": 49
+      "trends": 38
     },
     {
       "rank": 6,
@@ -770,10 +832,10 @@
       "sub_scores": {
         "youtube_views": 0.0361,
         "youtube_engagement": 0.7432,
-        "reddit_volume": 0.0144,
+        "reddit_volume": 0.0137,
         "google_trends": 0.45,
         "news_impact": 0.0,
-        "raw_amsi": 0.2152
+        "raw_amsi": 0.2151
       },
       "cast_full": [
         {
@@ -837,97 +899,97 @@
     },
     {
       "rank": 8,
-      "tmdb_id": 1242332,
-      "title": "Normal",
-      "director": "Ben Wheatley",
-      "cast": "Bob Odenkirk, Henry Winkler",
-      "release_date": "2026-04-16",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
-      "youtube_views": 5352745,
-      "youtube_likes": 16396,
-      "youtube_comments": 1021,
-      "youtube_video_id": "5OndK0w1lYY",
-      "reddit_posts": 17,
-      "reddit_comments": 1174,
-      "mentions": 1191,
-      "sentiment_pct": 56,
+      "tmdb_id": 1339876,
+      "title": "Mardaani 3",
+      "director": "Abhiraj Minawala",
+      "cast": "Rani Mukerji, Mallika Prasad",
+      "release_date": "2026-01-30",
+      "poster_url": "https://image.tmdb.org/t/p/w185/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
+      "youtube_views": 42914677,
+      "youtube_likes": 264919,
+      "youtube_comments": 8484,
+      "youtube_video_id": "V4TJKSEftkU",
+      "reddit_posts": 1,
+      "reddit_comments": 70,
+      "mentions": 71,
+      "sentiment_pct": 59,
       "scores": {
-        "1d": 888,
-        "7d": 888,
-        "30d": 888
+        "1d": 883,
+        "7d": 883,
+        "30d": 883
       },
-      "score": 888,
-      "move": 0,
+      "score": 883,
+      "move": 2,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
-        "youtube_views": 0.0633,
-        "youtube_engagement": 0.1041,
-        "reddit_volume": 0.1329,
-        "google_trends": 0.76,
+        "youtube_views": 0.5077,
+        "youtube_engagement": 0.2039,
+        "reddit_volume": 0.0075,
+        "google_trends": 0.08,
         "news_impact": 0.0,
-        "raw_amsi": 0.2132
+        "raw_amsi": 0.2004
       },
       "cast_full": [
         {
-          "id": 59410,
-          "name": "Bob Odenkirk",
-          "character": "Ulysses",
-          "profile_path": "/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg"
+          "id": 35776,
+          "name": "Rani Mukerji",
+          "character": "Shivani Shivaji Roy",
+          "profile_path": "/6bm1lhrEgGFpOLBjvcOi3aoQmtg.jpg"
         },
         {
-          "id": 31903,
-          "name": "Henry Winkler",
-          "character": "Mayor Kibner",
-          "profile_path": "/mGlSRA5RDswEDmY8oWEizXliShp.jpg"
+          "id": 1611825,
+          "name": "Mallika Prasad",
+          "character": "Amma",
+          "profile_path": "/iQW2LoY0AHhXlm46RFxYjcu6GAt.jpg"
         },
         {
-          "id": 17286,
-          "name": "Lena Headey",
-          "character": "Moira",
-          "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+          "id": 2106881,
+          "name": "Janki Bodiwala",
+          "character": "Fatima",
+          "profile_path": "/zpOyHZgW79IiYuUu7QSDBznzdqL.jpg"
         },
         {
-          "id": 62651,
-          "name": "Ryan Allen",
-          "character": "Blaine Anderson",
-          "profile_path": "/99O5NjoOmO4uCmTYaQhipj1qMNx.jpg"
+          "id": 545144,
+          "name": "Jisshu Sengupta",
+          "character": "Dr. Bikram Roy",
+          "profile_path": "/6Ha4p2iQOHpnKC1uB4NKJ53kHRi.jpg"
         },
         {
-          "id": 63814,
-          "name": "Billy MacLellan",
-          "character": "Deputy Mike Nelson",
-          "profile_path": "/9ObnhjbbeVEhk8g941FrLq4W0r7.jpg"
+          "id": 1956481,
+          "name": "Mikhail Yawalkar",
+          "character": "Inspector Balwinder Sodhi",
+          "profile_path": "/jVa1lxdc8fLEJrWRGmgbU8ME8Ma.jpg"
         },
         {
-          "id": 32205,
-          "name": "Brendan Fletcher",
-          "character": "Keith",
-          "profile_path": "/azeMOxQdCw18ABRwwOMIo3lV1If.jpg"
+          "id": 4487443,
+          "name": "Jaipreet Singh",
+          "character": "DGP",
+          "profile_path": null
         },
         {
-          "id": 172994,
-          "name": "Peter Shinkoda",
-          "character": "Joe",
-          "profile_path": "/lCQl28poQr4bLwqZjhryGkV73jO.jpg"
+          "id": 2408240,
+          "name": "Sachin Negi",
+          "character": "",
+          "profile_path": null
         },
         {
-          "id": 84466,
-          "name": "Jess McLeod",
-          "character": "Alex",
-          "profile_path": "/nJXORUI8JJVkYTCO4Lpjxz6VgzF.jpg"
+          "id": 2445578,
+          "name": "Jimpa Sangpo Bhutia",
+          "character": "Gunner Jimpa",
+          "profile_path": "/hxYWPiQ4vi9L64ouosjQVtflNnW.jpg"
         }
       ],
       "directors_full": [
         {
-          "id": 137467,
-          "name": "Ben Wheatley",
-          "profile_path": "/r8veHr3ExfEfVYWVR93hIDf4RiP.jpg"
+          "id": 2143441,
+          "name": "Abhiraj Minawala",
+          "profile_path": null
         }
       ],
       "news_mentions": [],
-      "trends": 76
+      "trends": 8
     },
     {
       "rank": 9,
@@ -946,11 +1008,11 @@
       "mentions": 2866,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 883,
-        "7d": 883,
-        "30d": 883
+        "1d": 882,
+        "7d": 882,
+        "30d": 882
       },
-      "score": 883,
+      "score": 882,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -958,10 +1020,10 @@
       "sub_scores": {
         "youtube_views": 0.0063,
         "youtube_engagement": 0.1749,
-        "reddit_volume": 0.3199,
+        "reddit_volume": 0.304,
         "google_trends": 0.54,
         "news_impact": 0.0,
-        "raw_amsi": 0.2001
+        "raw_amsi": 0.1969
       },
       "cast_full": [
         {
@@ -1030,100 +1092,6 @@
     },
     {
       "rank": 10,
-      "tmdb_id": 1339876,
-      "title": "Mardaani 3",
-      "director": "Abhiraj Minawala",
-      "cast": "Rani Mukerji, Mallika Prasad",
-      "release_date": "2026-01-30",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
-      "youtube_views": 42914677,
-      "youtube_likes": 264919,
-      "youtube_comments": 8484,
-      "youtube_video_id": "V4TJKSEftkU",
-      "reddit_posts": 1,
-      "reddit_comments": 70,
-      "mentions": 71,
-      "sentiment_pct": 59,
-      "scores": {
-        "1d": 883,
-        "7d": 883,
-        "30d": 883
-      },
-      "score": 883,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.5077,
-        "youtube_engagement": 0.2039,
-        "reddit_volume": 0.0079,
-        "google_trends": 0.08,
-        "news_impact": 0.0,
-        "raw_amsi": 0.2005
-      },
-      "cast_full": [
-        {
-          "id": 35776,
-          "name": "Rani Mukerji",
-          "character": "Shivani Shivaji Roy",
-          "profile_path": "/6bm1lhrEgGFpOLBjvcOi3aoQmtg.jpg"
-        },
-        {
-          "id": 1611825,
-          "name": "Mallika Prasad",
-          "character": "Amma",
-          "profile_path": "/iQW2LoY0AHhXlm46RFxYjcu6GAt.jpg"
-        },
-        {
-          "id": 2106881,
-          "name": "Janki Bodiwala",
-          "character": "Fatima",
-          "profile_path": "/zpOyHZgW79IiYuUu7QSDBznzdqL.jpg"
-        },
-        {
-          "id": 545144,
-          "name": "Jisshu Sengupta",
-          "character": "Dr. Bikram Roy",
-          "profile_path": "/6Ha4p2iQOHpnKC1uB4NKJ53kHRi.jpg"
-        },
-        {
-          "id": 1956481,
-          "name": "Mikhail Yawalkar",
-          "character": "Inspector Balwinder Sodhi",
-          "profile_path": "/jVa1lxdc8fLEJrWRGmgbU8ME8Ma.jpg"
-        },
-        {
-          "id": 4487443,
-          "name": "Jaipreet Singh",
-          "character": "DGP",
-          "profile_path": null
-        },
-        {
-          "id": 2408240,
-          "name": "Sachin Negi",
-          "character": "",
-          "profile_path": null
-        },
-        {
-          "id": 2445578,
-          "name": "Jimpa Sangpo Bhutia",
-          "character": "Gunner Jimpa",
-          "profile_path": "/hxYWPiQ4vi9L64ouosjQVtflNnW.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 2143441,
-          "name": "Abhiraj Minawala",
-          "profile_path": null
-        }
-      ],
-      "news_mentions": [],
-      "trends": 8
-    },
-    {
-      "rank": 11,
       "tmdb_id": 1327819,
       "title": "Hoppers",
       "director": "Daniel Chong",
@@ -1134,27 +1102,27 @@
       "youtube_likes": 78115,
       "youtube_comments": 5570,
       "youtube_video_id": "PypDSyIRRSs",
-      "reddit_posts": 66,
-      "reddit_comments": 1828,
-      "mentions": 1894,
+      "reddit_posts": 67,
+      "reddit_comments": 1830,
+      "mentions": 1897,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 879,
-        "7d": 879,
-        "30d": 879
+        "1d": 878,
+        "7d": 878,
+        "30d": 878
       },
-      "score": 879,
-      "move": 0,
+      "score": 878,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1905,
         "youtube_engagement": 0.1663,
-        "reddit_volume": 0.2114,
+        "reddit_volume": 0.2012,
         "google_trends": 0.33,
         "news_impact": 0.0,
-        "raw_amsi": 0.1904
+        "raw_amsi": 0.1883
       },
       "cast_full": [
         {
@@ -1215,6 +1183,100 @@
       ],
       "news_mentions": [],
       "trends": 33
+    },
+    {
+      "rank": 11,
+      "tmdb_id": 1242332,
+      "title": "Normal",
+      "director": "Ben Wheatley",
+      "cast": "Bob Odenkirk, Henry Winkler",
+      "release_date": "2026-04-16",
+      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
+      "youtube_views": 5352745,
+      "youtube_likes": 16396,
+      "youtube_comments": 1021,
+      "youtube_video_id": "5OndK0w1lYY",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 55,
+      "scores": {
+        "1d": 877,
+        "7d": 877,
+        "30d": 877
+      },
+      "score": 877,
+      "move": -3,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0633,
+        "youtube_engagement": 0.1041,
+        "reddit_volume": 0.0,
+        "google_trends": 0.76,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1866
+      },
+      "cast_full": [
+        {
+          "id": 59410,
+          "name": "Bob Odenkirk",
+          "character": "Ulysses",
+          "profile_path": "/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg"
+        },
+        {
+          "id": 31903,
+          "name": "Henry Winkler",
+          "character": "Mayor Kibner",
+          "profile_path": "/mGlSRA5RDswEDmY8oWEizXliShp.jpg"
+        },
+        {
+          "id": 17286,
+          "name": "Lena Headey",
+          "character": "Moira",
+          "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+        },
+        {
+          "id": 62651,
+          "name": "Ryan Allen",
+          "character": "Blaine Anderson",
+          "profile_path": "/99O5NjoOmO4uCmTYaQhipj1qMNx.jpg"
+        },
+        {
+          "id": 63814,
+          "name": "Billy MacLellan",
+          "character": "Deputy Mike Nelson",
+          "profile_path": "/9ObnhjbbeVEhk8g941FrLq4W0r7.jpg"
+        },
+        {
+          "id": 32205,
+          "name": "Brendan Fletcher",
+          "character": "Keith",
+          "profile_path": "/azeMOxQdCw18ABRwwOMIo3lV1If.jpg"
+        },
+        {
+          "id": 172994,
+          "name": "Peter Shinkoda",
+          "character": "Joe",
+          "profile_path": "/lCQl28poQr4bLwqZjhryGkV73jO.jpg"
+        },
+        {
+          "id": 84466,
+          "name": "Jess McLeod",
+          "character": "Alex",
+          "profile_path": "/nJXORUI8JJVkYTCO4Lpjxz6VgzF.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 137467,
+          "name": "Ben Wheatley",
+          "profile_path": "/r8veHr3ExfEfVYWVR93hIDf4RiP.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 76
     },
     {
       "rank": 12,
@@ -1322,16 +1384,16 @@
       "youtube_likes": 62811,
       "youtube_comments": 2289,
       "youtube_video_id": "i36Zw32GfRQ",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 52,
+      "reddit_posts": 23,
+      "reddit_comments": 319,
+      "mentions": 342,
+      "sentiment_pct": 54,
       "scores": {
-        "1d": 873,
-        "7d": 873,
-        "30d": 873
+        "1d": 876,
+        "7d": 876,
+        "30d": 876
       },
-      "score": 873,
+      "score": 876,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1339,10 +1401,10 @@
       "sub_scores": {
         "youtube_views": 0.5505,
         "youtube_engagement": 0.0448,
-        "reddit_volume": 0.0,
+        "reddit_volume": 0.0363,
         "google_trends": 0.02,
         "news_impact": 0.0,
-        "raw_amsi": 0.1759
+        "raw_amsi": 0.1831
       },
       "cast_full": [
         {
@@ -1417,8 +1479,8 @@
       "youtube_comments": 1055,
       "youtube_video_id": "KeEHsuZ4Ja4",
       "reddit_posts": 7,
-      "reddit_comments": 383,
-      "mentions": 390,
+      "reddit_comments": 384,
+      "mentions": 391,
       "sentiment_pct": 52,
       "scores": {
         "1d": 872,
@@ -1433,10 +1495,10 @@
       "sub_scores": {
         "youtube_views": 0.2848,
         "youtube_engagement": 0.0357,
-        "reddit_volume": 0.0435,
+        "reddit_volume": 0.0415,
         "google_trends": 0.37,
         "news_impact": 0.0,
-        "raw_amsi": 0.1735
+        "raw_amsi": 0.1731
       },
       "cast_full": [
         {
@@ -1520,7 +1582,7 @@
         "30d": 869
       },
       "score": 869,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1604,27 +1666,27 @@
       "youtube_likes": 179960,
       "youtube_comments": 7125,
       "youtube_video_id": "e9HXmMnUEdE",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 68,
+      "reddit_posts": 11,
+      "reddit_comments": 473,
+      "mentions": 484,
+      "sentiment_pct": 69,
       "scores": {
-        "1d": 865,
-        "7d": 865,
-        "30d": 865
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
-      "score": 865,
-      "move": -1,
+      "score": 869,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1755,
         "youtube_engagement": 0.4037,
-        "reddit_volume": 0.0,
+        "reddit_volume": 0.0513,
         "google_trends": 0.22,
         "news_impact": 0.0,
-        "raw_amsi": 0.1572
+        "raw_amsi": 0.1675
       },
       "cast_full": [
         {
@@ -1688,6 +1750,100 @@
     },
     {
       "rank": 17,
+      "tmdb_id": 1102883,
+      "title": "Mother Mary",
+      "director": "David Lowery",
+      "cast": "Anne Hathaway, Michaela Coel",
+      "release_date": "2026-04-17",
+      "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
+      "youtube_views": 1916961,
+      "youtube_likes": 13689,
+      "youtube_comments": 875,
+      "youtube_video_id": "EE3KU_YT3_c",
+      "reddit_posts": 4,
+      "reddit_comments": 410,
+      "mentions": 414,
+      "sentiment_pct": 61,
+      "scores": {
+        "1d": 864,
+        "7d": 864,
+        "30d": 864
+      },
+      "score": 864,
+      "move": -14,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0227,
+        "youtube_engagement": 0.2431,
+        "reddit_volume": 0.0439,
+        "google_trends": 0.51,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1541
+      },
+      "cast_full": [
+        {
+          "id": 1813,
+          "name": "Anne Hathaway",
+          "character": "Mother Mary",
+          "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+        },
+        {
+          "id": 1368012,
+          "name": "Michaela Coel",
+          "character": "Sam Anselm",
+          "profile_path": "/rbN1F0R8DMUh6IYwl0owyD8LukN.jpg"
+        },
+        {
+          "id": 2340180,
+          "name": "Hunter Schafer",
+          "character": "Hilda",
+          "profile_path": "/6ZDieLlbm2m3jbYaxsHFo7cWWzJ.jpg"
+        },
+        {
+          "id": 1452151,
+          "name": "Atheena Frizzell",
+          "character": "Emily",
+          "profile_path": "/lHMiMYEXUMoemgqcuzz8t2Lhp62.jpg"
+        },
+        {
+          "id": 1957145,
+          "name": "Kaia Gerber",
+          "character": "",
+          "profile_path": "/wO3y1JaO32GhqTVE7AE3ABkz1o7.jpg"
+        },
+        {
+          "id": 567269,
+          "name": "Jessica Brown Findlay",
+          "character": "Tessa",
+          "profile_path": "/zaqkavcb9ur0W1h1QAxJfKnCJ2h.jpg"
+        },
+        {
+          "id": 1266868,
+          "name": "Isaura Barbé-Brown",
+          "character": "Kyla",
+          "profile_path": "/wJTO31JEvUP2WUOrpWFaMY6KhxF.jpg"
+        },
+        {
+          "id": 1674769,
+          "name": "Alba Baptista",
+          "character": "",
+          "profile_path": "/gV5LYhN7BRc7xjySFek9gdm5tNA.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 592493,
+          "name": "David Lowery",
+          "profile_path": "/5zS78ZleGuxFB0XZBqQMbH4udME.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 51
+    },
+    {
+      "rank": 18,
       "tmdb_id": 1297842,
       "title": "GOAT",
       "director": "Tyree Dillihay",
@@ -1708,17 +1864,17 @@
         "30d": 863
       },
       "score": 863,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0583,
         "youtube_engagement": 0.0562,
-        "reddit_volume": 0.0296,
+        "reddit_volume": 0.0281,
         "google_trends": 0.6,
         "news_impact": 0.0,
-        "raw_amsi": 0.1519
+        "raw_amsi": 0.1516
       },
       "cast_full": [
         {
@@ -1781,7 +1937,7 @@
       "trends": 60
     },
     {
-      "rank": 18,
+      "rank": 19,
       "tmdb_id": 875828,
       "title": "Peaky Blinders: The Immortal Man",
       "director": "Tom Harper",
@@ -1802,17 +1958,17 @@
         "30d": 863
       },
       "score": 863,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0945,
         "youtube_engagement": 0.7801,
-        "reddit_volume": 0.008,
+        "reddit_volume": 0.0076,
         "google_trends": 0.02,
         "news_impact": 0.0,
-        "raw_amsi": 0.151
+        "raw_amsi": 0.1509
       },
       "cast_full": [
         {
@@ -1875,7 +2031,7 @@
       "trends": 2
     },
     {
-      "rank": 19,
+      "rank": 20,
       "tmdb_id": 1653994,
       "title": "Shrounding the Heavens Movie：Fighting Against Wang Teng with Copper Coffin",
       "director": "",
@@ -1896,7 +2052,7 @@
         "30d": 862
       },
       "score": 862,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1933,7 +2089,7 @@
       "trends": 0
     },
     {
-      "rank": 20,
+      "rank": 21,
       "tmdb_id": 1290821,
       "title": "Shelter",
       "director": "Ric Roman Waugh",
@@ -1954,17 +2110,17 @@
         "30d": 861
       },
       "score": 861,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1348,
         "youtube_engagement": 0.0625,
-        "reddit_volume": 0.0115,
+        "reddit_volume": 0.0109,
         "google_trends": 0.48,
         "news_impact": 0.0,
-        "raw_amsi": 0.1481
+        "raw_amsi": 0.148
       },
       "cast_full": [
         {
@@ -2027,7 +2183,7 @@
       "trends": 48
     },
     {
-      "rank": 21,
+      "rank": 22,
       "tmdb_id": 1265609,
       "title": "War Machine",
       "director": "Patrick Hughes",
@@ -2048,17 +2204,17 @@
         "30d": 859
       },
       "score": 859,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1859,
         "youtube_engagement": 0.4771,
-        "reddit_volume": 0.0201,
+        "reddit_volume": 0.0191,
         "google_trends": 0.05,
         "news_impact": 0.0,
-        "raw_amsi": 0.1414
+        "raw_amsi": 0.1412
       },
       "cast_full": [
         {
@@ -2121,7 +2277,7 @@
       "trends": 5
     },
     {
-      "rank": 22,
+      "rank": 23,
       "tmdb_id": 1383731,
       "title": "Protector",
       "director": "Adrian Grünberg",
@@ -2142,7 +2298,7 @@
         "30d": 859
       },
       "score": 859,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2215,7 +2371,7 @@
       "trends": 64
     },
     {
-      "rank": 23,
+      "rank": 24,
       "tmdb_id": 1236153,
       "title": "Mercy",
       "director": "Timur Bekmambetov",
@@ -2236,17 +2392,17 @@
         "30d": 857
       },
       "score": 857,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0313,
         "youtube_engagement": 0.0042,
-        "reddit_volume": 0.0041,
+        "reddit_volume": 0.0039,
         "google_trends": 0.63,
         "news_impact": 0.0,
-        "raw_amsi": 0.1369
+        "raw_amsi": 0.1368
       },
       "cast_full": [
         {
@@ -2309,7 +2465,7 @@
       "trends": 63
     },
     {
-      "rank": 24,
+      "rank": 25,
       "tmdb_id": 1209511,
       "title": "Love Insurance Kompany",
       "director": "Vignesh Shivan",
@@ -2330,7 +2486,7 @@
         "30d": 852
       },
       "score": 852,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2403,7 +2559,7 @@
       "trends": 6
     },
     {
-      "rank": 25,
+      "rank": 26,
       "tmdb_id": 1455079,
       "title": "You, Me & Tuscany",
       "director": "Kat Coiro",
@@ -2424,17 +2580,17 @@
         "30d": 851
       },
       "score": 851,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0448,
         "youtube_engagement": 0.002,
-        "reddit_volume": 0.0179,
+        "reddit_volume": 0.017,
         "google_trends": 0.0,
         "news_impact": 0.7,
-        "raw_amsi": 0.1223
+        "raw_amsi": 0.1221
       },
       "cast_full": [
         {
@@ -2502,7 +2658,7 @@
       "trends": 0
     },
     {
-      "rank": 26,
+      "rank": 27,
       "tmdb_id": 1290417,
       "title": "Thrash",
       "director": "Tommy Wirkola",
@@ -2523,14 +2679,14 @@
         "30d": 850
       },
       "score": 850,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0249,
         "youtube_engagement": 0.4276,
-        "reddit_volume": 0.0017,
+        "reddit_volume": 0.0016,
         "google_trends": 0.24,
         "news_impact": 0.0,
         "raw_amsi": 0.1199
@@ -2596,7 +2752,7 @@
       "trends": 24
     },
     {
-      "rank": 27,
+      "rank": 28,
       "tmdb_id": 1470130,
       "title": "The Mortuary Assistant",
       "director": "Jeremiah Kipp",
@@ -2617,7 +2773,7 @@
         "30d": 848
       },
       "score": 848,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2684,7 +2840,106 @@
       "trends": 3
     },
     {
-      "rank": 28,
+      "rank": 29,
+      "tmdb_id": 1493859,
+      "title": "Pizza Movie",
+      "director": "Nick Kocher, Brian McElhaney",
+      "cast": "Gaten Matarazzo, Sean Giambrone",
+      "release_date": "2026-03-13",
+      "poster_url": "https://image.tmdb.org/t/p/w185/2c2ib9pS3BTIoMnYHi4z6t9nxuA.jpg",
+      "youtube_views": 788127,
+      "youtube_likes": 13434,
+      "youtube_comments": 1724,
+      "youtube_video_id": "fOzF87PFGnw",
+      "reddit_posts": 5,
+      "reddit_comments": 452,
+      "mentions": 457,
+      "sentiment_pct": 76,
+      "scores": {
+        "1d": 848,
+        "7d": 848,
+        "30d": 848
+      },
+      "score": 848,
+      "move": 4,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0093,
+        "youtube_engagement": 0.6155,
+        "reddit_volume": 0.0485,
+        "google_trends": 0.06,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1168
+      },
+      "cast_full": [
+        {
+          "id": 1653291,
+          "name": "Gaten Matarazzo",
+          "character": "Jack",
+          "profile_path": "/alVT7oDp8N5G9WLIApI9jqeuqHq.jpg"
+        },
+        {
+          "id": 1258699,
+          "name": "Sean Giambrone",
+          "character": "Montgomery",
+          "profile_path": "/aZsln4KlPnQ3CQ85b1aBcofP5K5.jpg"
+        },
+        {
+          "id": 1883866,
+          "name": "Lulu Wilson",
+          "character": "Lizzy",
+          "profile_path": "/7qqMBuvdZoayPVmVZKHBLqUgKiJ.jpg"
+        },
+        {
+          "id": 2461534,
+          "name": "Jack Martin",
+          "character": "Blake",
+          "profile_path": "/pBAzaxxmUpIAuwXsoBo60ShPF5I.jpg"
+        },
+        {
+          "id": 1768964,
+          "name": "Peyton Elizabeth Lee",
+          "character": "Ashley",
+          "profile_path": "/hnEl4HxqGNGHCJ7Y8l3dJ21WHeG.jpg"
+        },
+        {
+          "id": 1348591,
+          "name": "Marcus Scribner",
+          "character": "Logan",
+          "profile_path": "/mm7f9MssRDDAphGPp2OJE6Ial01.jpg"
+        },
+        {
+          "id": 2817558,
+          "name": "Caleb Hearon",
+          "character": "Sidney",
+          "profile_path": "/wsXM7aLnEQ9W5I9mi4k01hMuw0i.jpg"
+        },
+        {
+          "id": 2908697,
+          "name": "Chris Schmidt Jr.",
+          "character": "Stoner Guy",
+          "profile_path": "/xfzNBMYc4WjvOdkoT9OmXB61CQU.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 132311,
+          "name": "Nick Kocher",
+          "profile_path": "/ak5C2U7LpvKKkMBCSMSKHAKdzGL.jpg"
+        },
+        {
+          "id": 132310,
+          "name": "Brian McElhaney",
+          "profile_path": "/wnWtcl5wFArG2hRX64qrTBMLV9M.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 6
+    },
+    {
+      "rank": 30,
       "tmdb_id": 1292695,
       "title": "They Will Kill You",
       "director": "Kirill Sokolov",
@@ -2705,17 +2960,17 @@
         "30d": 848
       },
       "score": 848,
-      "move": 0,
+      "move": -2,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1208,
         "youtube_engagement": 0.0105,
-        "reddit_volume": 0.0433,
+        "reddit_volume": 0.0412,
         "google_trends": 0.35,
         "news_impact": 0.0,
-        "raw_amsi": 0.1165
+        "raw_amsi": 0.1161
       },
       "cast_full": [
         {
@@ -2778,101 +3033,7 @@
       "trends": 35
     },
     {
-      "rank": 29,
-      "tmdb_id": 1450527,
-      "title": "Forbidden Fruits",
-      "director": "Meredith Alloway",
-      "cast": "Lili Reinhart, Lola Tung",
-      "release_date": "2026-03-26",
-      "poster_url": "https://image.tmdb.org/t/p/w185/qK6yk1wJp6vAJRJOyIMcxoNw8pe.jpg",
-      "youtube_views": 6066032,
-      "youtube_likes": 18384,
-      "youtube_comments": 838,
-      "youtube_video_id": "0nyUCq9k7_0",
-      "reddit_posts": 4,
-      "reddit_comments": 72,
-      "mentions": 76,
-      "sentiment_pct": 55,
-      "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
-      },
-      "score": 847,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0718,
-        "youtube_engagement": 0.1014,
-        "reddit_volume": 0.0085,
-        "google_trends": 0.38,
-        "news_impact": 0.0,
-        "raw_amsi": 0.1144
-      },
-      "cast_full": [
-        {
-          "id": 1136940,
-          "name": "Lili Reinhart",
-          "character": "Apple",
-          "profile_path": "/wt4SuihSkEA0bOc0JTtsgCD7pHZ.jpg"
-        },
-        {
-          "id": 3499255,
-          "name": "Lola Tung",
-          "character": "Pumpkin",
-          "profile_path": "/liRV1J2dYALCgwJyY4cdZXNQe36.jpg"
-        },
-        {
-          "id": 2117434,
-          "name": "Victoria Pedretti",
-          "character": "Cherry",
-          "profile_path": "/dSrIMNn803L8fqqWjkCSRv4iOu1.jpg"
-        },
-        {
-          "id": 1253199,
-          "name": "Alexandra Shipp",
-          "character": "Fig",
-          "profile_path": "/98AfO5NSqWnlhIxjSg08gGYdxUG.jpg"
-        },
-        {
-          "id": 2741137,
-          "name": "Emma Chamberlain",
-          "character": "Pickle",
-          "profile_path": "/3KYqeV3w1PYe2clDnG0Ji7V0wFf.jpg"
-        },
-        {
-          "id": 17773,
-          "name": "Gabrielle Union",
-          "character": "Sharon",
-          "profile_path": "/toeSCybsYufRKfgz77AKy4C8axD.jpg"
-        },
-        {
-          "id": 3254841,
-          "name": "Hailey Summer",
-          "character": "Arizona Latte Barista",
-          "profile_path": "/hiJPmqUrlBaMgSgkdtwqmotXgyt.jpg"
-        },
-        {
-          "id": 1831598,
-          "name": "Jordan Duarte",
-          "character": "Texas Dad",
-          "profile_path": "/pxXjOQELD0lG2v1sey4WIzff9pw.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 2347139,
-          "name": "Meredith Alloway",
-          "profile_path": "/5nCeIKQGRnFNQnNueZ4VYcsVf4A.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 38
-    },
-    {
-      "rank": 30,
+      "rank": 31,
       "tmdb_id": 1306368,
       "title": "The Rip",
       "director": "Joe Carnahan",
@@ -2883,27 +3044,27 @@
       "youtube_likes": 53494,
       "youtube_comments": 3268,
       "youtube_video_id": "yeR5bcbRPak",
-      "reddit_posts": 2,
-      "reddit_comments": 97,
-      "mentions": 99,
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 846,
-        "7d": 846,
-        "30d": 846
+        "1d": 845,
+        "7d": 845,
+        "30d": 845
       },
-      "score": 846,
-      "move": 0,
+      "score": 845,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1811,
         "youtube_engagement": 0.1187,
-        "reddit_volume": 0.011,
+        "reddit_volume": 0.0,
         "google_trends": 0.18,
         "news_impact": 0.0,
-        "raw_amsi": 0.1103
+        "raw_amsi": 0.1081
       },
       "cast_full": [
         {
@@ -2966,7 +3127,7 @@
       "trends": 18
     },
     {
-      "rank": 31,
+      "rank": 32,
       "tmdb_id": 1266127,
       "title": "Ready or Not: Here I Come",
       "director": "Matt Bettinelli-Olpin, Tyler Gillett",
@@ -2987,7 +3148,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3065,7 +3226,7 @@
       "trends": 5
     },
     {
-      "rank": 32,
+      "rank": 33,
       "tmdb_id": 1242265,
       "title": "Fuze",
       "director": "David Mackenzie",
@@ -3086,17 +3247,17 @@
         "30d": 845
       },
       "score": 845,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0315,
         "youtube_engagement": 0.0327,
-        "reddit_volume": 0.0088,
+        "reddit_volume": 0.0084,
         "google_trends": 0.46,
         "news_impact": 0.0,
-        "raw_amsi": 0.1081
+        "raw_amsi": 0.108
       },
       "cast_full": [
         {
@@ -3157,105 +3318,6 @@
       ],
       "news_mentions": [],
       "trends": 46
-    },
-    {
-      "rank": 33,
-      "tmdb_id": 1493859,
-      "title": "Pizza Movie",
-      "director": "Nick Kocher, Brian McElhaney",
-      "cast": "Gaten Matarazzo, Sean Giambrone",
-      "release_date": "2026-03-13",
-      "poster_url": "https://image.tmdb.org/t/p/w185/2c2ib9pS3BTIoMnYHi4z6t9nxuA.jpg",
-      "youtube_views": 788127,
-      "youtube_likes": 13434,
-      "youtube_comments": 1724,
-      "youtube_video_id": "fOzF87PFGnw",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 76,
-      "scores": {
-        "1d": 844,
-        "7d": 844,
-        "30d": 844
-      },
-      "score": 844,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0093,
-        "youtube_engagement": 0.6155,
-        "reddit_volume": 0.0,
-        "google_trends": 0.06,
-        "news_impact": 0.0,
-        "raw_amsi": 0.1071
-      },
-      "cast_full": [
-        {
-          "id": 1653291,
-          "name": "Gaten Matarazzo",
-          "character": "Jack",
-          "profile_path": "/alVT7oDp8N5G9WLIApI9jqeuqHq.jpg"
-        },
-        {
-          "id": 1258699,
-          "name": "Sean Giambrone",
-          "character": "Montgomery",
-          "profile_path": "/aZsln4KlPnQ3CQ85b1aBcofP5K5.jpg"
-        },
-        {
-          "id": 1883866,
-          "name": "Lulu Wilson",
-          "character": "Lizzy",
-          "profile_path": "/7qqMBuvdZoayPVmVZKHBLqUgKiJ.jpg"
-        },
-        {
-          "id": 2461534,
-          "name": "Jack Martin",
-          "character": "Blake",
-          "profile_path": "/pBAzaxxmUpIAuwXsoBo60ShPF5I.jpg"
-        },
-        {
-          "id": 1768964,
-          "name": "Peyton Elizabeth Lee",
-          "character": "Ashley",
-          "profile_path": "/hnEl4HxqGNGHCJ7Y8l3dJ21WHeG.jpg"
-        },
-        {
-          "id": 1348591,
-          "name": "Marcus Scribner",
-          "character": "Logan",
-          "profile_path": "/mm7f9MssRDDAphGPp2OJE6Ial01.jpg"
-        },
-        {
-          "id": 2817558,
-          "name": "Caleb Hearon",
-          "character": "Sidney",
-          "profile_path": "/wsXM7aLnEQ9W5I9mi4k01hMuw0i.jpg"
-        },
-        {
-          "id": 2908697,
-          "name": "Chris Schmidt Jr.",
-          "character": "Stoner Guy",
-          "profile_path": "/xfzNBMYc4WjvOdkoT9OmXB61CQU.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 132311,
-          "name": "Nick Kocher",
-          "profile_path": "/ak5C2U7LpvKKkMBCSMSKHAKdzGL.jpg"
-        },
-        {
-          "id": 132310,
-          "name": "Brian McElhaney",
-          "profile_path": "/wnWtcl5wFArG2hRX64qrTBMLV9M.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 6
     },
     {
       "rank": 34,
@@ -3447,6 +3509,100 @@
     },
     {
       "rank": 36,
+      "tmdb_id": 1159831,
+      "title": "The Bride!",
+      "director": "Maggie Gyllenhaal",
+      "cast": "Jessie Buckley, Christian Bale",
+      "release_date": "2026-03-04",
+      "poster_url": "https://image.tmdb.org/t/p/w185/lV8YHwGkYZsm6EfIqnhaSz2avKt.jpg",
+      "youtube_views": 65428,
+      "youtube_likes": 816,
+      "youtube_comments": 50,
+      "youtube_video_id": "QyLhkoGeSl4",
+      "reddit_posts": 4,
+      "reddit_comments": 609,
+      "mentions": 613,
+      "sentiment_pct": 69,
+      "scores": {
+        "1d": 839,
+        "7d": 839,
+        "30d": 839
+      },
+      "score": 839,
+      "move": 3,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0008,
+        "youtube_engagement": 0.4235,
+        "reddit_volume": 0.065,
+        "google_trends": 0.09,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0948
+      },
+      "cast_full": [
+        {
+          "id": 1498158,
+          "name": "Jessie Buckley",
+          "character": "The Bride / Ida / Penelope Rogers / Mary Shelley",
+          "profile_path": "/jwrtKwcehDtkgsYAdlAL5NBerVZ.jpg"
+        },
+        {
+          "id": 3894,
+          "name": "Christian Bale",
+          "character": "Frank",
+          "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
+        },
+        {
+          "id": 133,
+          "name": "Peter Sarsgaard",
+          "character": "Jake Wiles",
+          "profile_path": "/5UANyM4co2nwYPgSEmGeNlZRm7V.jpg"
+        },
+        {
+          "id": 37154,
+          "name": "John Magaro",
+          "character": "Clyde",
+          "profile_path": "/ah4Jm4Lmrgab9xdHwRId80S4REd.jpg"
+        },
+        {
+          "id": 124377,
+          "name": "Jeannie Berlin",
+          "character": "Greta",
+          "profile_path": "/sT1o2nVecNUgysnHV7g6KYTciXb.jpg"
+        },
+        {
+          "id": 516,
+          "name": "Annette Bening",
+          "character": "Dr. Euphronius",
+          "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
+        },
+        {
+          "id": 131,
+          "name": "Jake Gyllenhaal",
+          "character": "Ronnie Reed",
+          "profile_path": "/rJdYHYNhlcOBwbPvDZVvt1xw7bi.jpg"
+        },
+        {
+          "id": 955,
+          "name": "Penélope Cruz",
+          "character": "Myrna Malloy",
+          "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1579,
+          "name": "Maggie Gyllenhaal",
+          "profile_path": "/vsfkWdYWmA9CpzMHTJzrFxlDnEZ.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 9
+    },
+    {
+      "rank": 37,
       "tmdb_id": 1630433,
       "title": "The Red Line",
       "director": "Sitisiri Mongkolsiri",
@@ -3457,27 +3613,27 @@
       "youtube_likes": 2627,
       "youtube_comments": 254,
       "youtube_video_id": "XgUHnuNN2lA",
-      "reddit_posts": 1,
-      "reddit_comments": 70,
-      "mentions": 71,
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 840,
-        "7d": 840,
-        "30d": 840
+        "1d": 839,
+        "7d": 839,
+        "30d": 839
       },
-      "score": 840,
-      "move": 0,
+      "score": 839,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0029,
         "youtube_engagement": 0.3798,
-        "reddit_volume": 0.0079,
+        "reddit_volume": 0.0,
         "google_trends": 0.18,
         "news_impact": 0.0,
-        "raw_amsi": 0.0954
+        "raw_amsi": 0.0938
       },
       "cast_full": [
         {
@@ -3540,7 +3696,7 @@
       "trends": 18
     },
     {
-      "rank": 37,
+      "rank": 38,
       "tmdb_id": 1159559,
       "title": "Scream 7",
       "director": "Kevin Williamson",
@@ -3561,17 +3717,17 @@
         "30d": 836
       },
       "score": 836,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.2911,
-        "reddit_volume": 0.0996,
+        "reddit_volume": 0.0946,
         "google_trends": 0.08,
         "news_impact": 0.0,
-        "raw_amsi": 0.0866
+        "raw_amsi": 0.0856
       },
       "cast_full": [
         {
@@ -3634,7 +3790,7 @@
       "trends": 8
     },
     {
-      "rank": 38,
+      "rank": 39,
       "tmdb_id": 1193501,
       "title": "Whistle",
       "director": "Corin Hardy",
@@ -3655,7 +3811,7 @@
         "30d": 836
       },
       "score": 836,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3726,100 +3882,6 @@
       ],
       "news_mentions": [],
       "trends": 37
-    },
-    {
-      "rank": 39,
-      "tmdb_id": 1159831,
-      "title": "The Bride!",
-      "director": "Maggie Gyllenhaal",
-      "cast": "Jessie Buckley, Christian Bale",
-      "release_date": "2026-03-04",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lV8YHwGkYZsm6EfIqnhaSz2avKt.jpg",
-      "youtube_views": 65428,
-      "youtube_likes": 816,
-      "youtube_comments": 50,
-      "youtube_video_id": "QyLhkoGeSl4",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 69,
-      "scores": {
-        "1d": 834,
-        "7d": 834,
-        "30d": 834
-      },
-      "score": 834,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0008,
-        "youtube_engagement": 0.4235,
-        "reddit_volume": 0.0,
-        "google_trends": 0.09,
-        "news_impact": 0.0,
-        "raw_amsi": 0.0818
-      },
-      "cast_full": [
-        {
-          "id": 1498158,
-          "name": "Jessie Buckley",
-          "character": "The Bride / Ida / Penelope Rogers / Mary Shelley",
-          "profile_path": "/jwrtKwcehDtkgsYAdlAL5NBerVZ.jpg"
-        },
-        {
-          "id": 3894,
-          "name": "Christian Bale",
-          "character": "Frank",
-          "profile_path": "/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
-        },
-        {
-          "id": 133,
-          "name": "Peter Sarsgaard",
-          "character": "Jake Wiles",
-          "profile_path": "/5UANyM4co2nwYPgSEmGeNlZRm7V.jpg"
-        },
-        {
-          "id": 37154,
-          "name": "John Magaro",
-          "character": "Clyde",
-          "profile_path": "/ah4Jm4Lmrgab9xdHwRId80S4REd.jpg"
-        },
-        {
-          "id": 124377,
-          "name": "Jeannie Berlin",
-          "character": "Greta",
-          "profile_path": "/sT1o2nVecNUgysnHV7g6KYTciXb.jpg"
-        },
-        {
-          "id": 516,
-          "name": "Annette Bening",
-          "character": "Dr. Euphronius",
-          "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg"
-        },
-        {
-          "id": 131,
-          "name": "Jake Gyllenhaal",
-          "character": "Ronnie Reed",
-          "profile_path": "/rJdYHYNhlcOBwbPvDZVvt1xw7bi.jpg"
-        },
-        {
-          "id": 955,
-          "name": "Penélope Cruz",
-          "character": "Myrna Malloy",
-          "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1579,
-          "name": "Maggie Gyllenhaal",
-          "profile_path": "/vsfkWdYWmA9CpzMHTJzrFxlDnEZ.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 9
     },
     {
       "rank": 40,
@@ -3944,10 +4006,10 @@
       "sub_scores": {
         "youtube_views": 0.0035,
         "youtube_engagement": 0.3947,
-        "reddit_volume": 0.0153,
+        "reddit_volume": 0.0145,
         "google_trends": 0.07,
         "news_impact": 0.0,
-        "raw_amsi": 0.0773
+        "raw_amsi": 0.0772
       },
       "cast_full": [
         {
@@ -4199,6 +4261,100 @@
     },
     {
       "rank": 44,
+      "tmdb_id": 1304313,
+      "title": "Lee Cronin's The Mummy",
+      "director": "Lee Cronin",
+      "cast": "Jack Reynor, Laia Costa",
+      "release_date": "2026-04-15",
+      "poster_url": "https://image.tmdb.org/t/p/w185/aENH9ETtWynb6T1XhRwIFlvkBzI.jpg",
+      "youtube_views": 227221,
+      "youtube_likes": 2967,
+      "youtube_comments": 259,
+      "youtube_video_id": "6wbMsDmJLCs",
+      "reddit_posts": 3,
+      "reddit_comments": 248,
+      "mentions": 251,
+      "sentiment_pct": 70,
+      "scores": {
+        "1d": 831,
+        "7d": 831,
+        "30d": 831
+      },
+      "score": 831,
+      "move": 2,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0027,
+        "youtube_engagement": 0.4543,
+        "reddit_volume": 0.0266,
+        "google_trends": 0.0,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0743
+      },
+      "cast_full": [
+        {
+          "id": 1007683,
+          "name": "Jack Reynor",
+          "character": "Charlie",
+          "profile_path": "/1MSZks6afitwdYttLh617G6MBRQ.jpg"
+        },
+        {
+          "id": 1425019,
+          "name": "Laia Costa",
+          "character": "Larissa",
+          "profile_path": "/kSbdpHWLlfzvOfZKJ0dgP0ieVL6.jpg"
+        },
+        {
+          "id": 1952051,
+          "name": "May Calamawy",
+          "character": "",
+          "profile_path": "/5S3nNkH5p85xK7k7AaXBZ0ouyOR.jpg"
+        },
+        {
+          "id": 3524429,
+          "name": "Natalie Grace",
+          "character": "Katie",
+          "profile_path": "/uoJRUulO6A9By4IhNrDdiKevAOj.jpg"
+        },
+        {
+          "id": 1029593,
+          "name": "Veronica Falcón",
+          "character": "Carmen",
+          "profile_path": "/8zRSwWfrDnHleSRDtIeHYuAVmFK.jpg"
+        },
+        {
+          "id": 2886183,
+          "name": "Shylo Molina",
+          "character": "Sebastián",
+          "profile_path": "/rIhBsRY6c7B4ClLOJbc4qEWter1.jpg"
+        },
+        {
+          "id": 3768556,
+          "name": "Billie Roy",
+          "character": "Maud",
+          "profile_path": "/criWuHntMq5c6Duv505NApONwUu.jpg"
+        },
+        {
+          "id": 1850319,
+          "name": "May Elghety",
+          "character": "",
+          "profile_path": "/dFpkIOfCrUVIASpN5wutX1OaYls.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1398631,
+          "name": "Lee Cronin",
+          "profile_path": "/qRJgpkLTXE1EkmmHvmD4AnvrFap.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 0
+    },
+    {
+      "rank": 45,
       "tmdb_id": 1242937,
       "title": "The Dreadful",
       "director": "Natasha Kermani",
@@ -4209,9 +4365,9 @@
       "youtube_likes": 26238,
       "youtube_comments": 1975,
       "youtube_video_id": "KPBqxZPvYS0",
-      "reddit_posts": 1,
-      "reddit_comments": 9,
-      "mentions": 10,
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
       "sentiment_pct": 70,
       "scores": {
         "1d": 831,
@@ -4219,17 +4375,17 @@
         "30d": 831
       },
       "score": 831,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0237,
         "youtube_engagement": 0.4514,
-        "reddit_volume": 0.0011,
+        "reddit_volume": 0.0,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.075
+        "raw_amsi": 0.0748
       },
       "cast_full": [
         {
@@ -4292,7 +4448,7 @@
       "trends": 0
     },
     {
-      "rank": 45,
+      "rank": 46,
       "tmdb_id": 1291659,
       "title": "The Wizard of the Kremlin",
       "director": "Olivier Assayas",
@@ -4313,7 +4469,7 @@
         "30d": 831
       },
       "score": 831,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4380,100 +4536,6 @@
           "id": 21678,
           "name": "Olivier Assayas",
           "profile_path": "/yNhxilJd1QPGf1snqLtesAD7Z6M.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 0
-    },
-    {
-      "rank": 46,
-      "tmdb_id": 1304313,
-      "title": "Lee Cronin's The Mummy",
-      "director": "Lee Cronin",
-      "cast": "Jack Reynor, Laia Costa",
-      "release_date": "2026-04-15",
-      "poster_url": "https://image.tmdb.org/t/p/w185/aENH9ETtWynb6T1XhRwIFlvkBzI.jpg",
-      "youtube_views": 227221,
-      "youtube_likes": 2967,
-      "youtube_comments": 259,
-      "youtube_video_id": "6wbMsDmJLCs",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 70,
-      "scores": {
-        "1d": 829,
-        "7d": 829,
-        "30d": 829
-      },
-      "score": 829,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0027,
-        "youtube_engagement": 0.4543,
-        "reddit_volume": 0.0,
-        "google_trends": 0.0,
-        "news_impact": 0.0,
-        "raw_amsi": 0.069
-      },
-      "cast_full": [
-        {
-          "id": 1007683,
-          "name": "Jack Reynor",
-          "character": "Charlie",
-          "profile_path": "/1MSZks6afitwdYttLh617G6MBRQ.jpg"
-        },
-        {
-          "id": 1425019,
-          "name": "Laia Costa",
-          "character": "Larissa",
-          "profile_path": "/kSbdpHWLlfzvOfZKJ0dgP0ieVL6.jpg"
-        },
-        {
-          "id": 1952051,
-          "name": "May Calamawy",
-          "character": "",
-          "profile_path": "/5S3nNkH5p85xK7k7AaXBZ0ouyOR.jpg"
-        },
-        {
-          "id": 3524429,
-          "name": "Natalie Grace",
-          "character": "Katie",
-          "profile_path": "/uoJRUulO6A9By4IhNrDdiKevAOj.jpg"
-        },
-        {
-          "id": 1029593,
-          "name": "Veronica Falcón",
-          "character": "Carmen",
-          "profile_path": "/8zRSwWfrDnHleSRDtIeHYuAVmFK.jpg"
-        },
-        {
-          "id": 2886183,
-          "name": "Shylo Molina",
-          "character": "Sebastián",
-          "profile_path": "/rIhBsRY6c7B4ClLOJbc4qEWter1.jpg"
-        },
-        {
-          "id": 3768556,
-          "name": "Billie Roy",
-          "character": "Maud",
-          "profile_path": "/criWuHntMq5c6Duv505NApONwUu.jpg"
-        },
-        {
-          "id": 1850319,
-          "name": "May Elghety",
-          "character": "",
-          "profile_path": "/dFpkIOfCrUVIASpN5wutX1OaYls.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1398631,
-          "name": "Lee Cronin",
-          "profile_path": "/qRJgpkLTXE1EkmmHvmD4AnvrFap.jpg"
         }
       ],
       "news_mentions": [],
@@ -4585,10 +4647,10 @@
       "youtube_likes": 1832,
       "youtube_comments": 106,
       "youtube_video_id": "qWkPjI-Brkc",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 69,
+      "reddit_posts": 1,
+      "reddit_comments": 3,
+      "mentions": 4,
+      "sentiment_pct": 70,
       "scores": {
         "1d": 828,
         "7d": 828,
@@ -4602,10 +4664,10 @@
       "sub_scores": {
         "youtube_views": 0.0017,
         "youtube_engagement": 0.438,
-        "reddit_volume": 0.0,
+        "reddit_volume": 0.0004,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "raw_amsi": 0.0682
+        "raw_amsi": 0.0683
       },
       "cast_full": [
         {
@@ -4763,6 +4825,76 @@
     },
     {
       "rank": 50,
+      "tmdb_id": 1658216,
+      "title": "Stepdaddy",
+      "director": "Christopher Novabos",
+      "cast": "Astrid Lee, Christy Imperial",
+      "release_date": "2026-04-04",
+      "poster_url": "https://image.tmdb.org/t/p/w185/oZxNblisKuDzSUW5g18FERjyJs9.jpg",
+      "youtube_views": 12372873,
+      "youtube_likes": 23418,
+      "youtube_comments": 564,
+      "youtube_video_id": "HKeFNJTKuws",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 53,
+      "scores": {
+        "1d": 827,
+        "7d": 827,
+        "30d": 827
+      },
+      "score": 827,
+      "move": 1,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.1464,
+        "youtube_engagement": 0.062,
+        "reddit_volume": 0.0,
+        "google_trends": 0.06,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0652
+      },
+      "cast_full": [
+        {
+          "id": 5536858,
+          "name": "Astrid Lee",
+          "character": "",
+          "profile_path": "/h0sQk1TkRHHDMuNIG2CSfiZu8ks.jpg"
+        },
+        {
+          "id": 3878240,
+          "name": "Christy Imperial",
+          "character": "",
+          "profile_path": "/yZD7CzFcA5UdiDC4QSYOb5sG1Ve.jpg"
+        },
+        {
+          "id": 1053797,
+          "name": "Jamilla Obispo",
+          "character": "",
+          "profile_path": "/buEZ1JRw08o8sM1uH7tBV5UNENT.jpg"
+        },
+        {
+          "id": 2252696,
+          "name": "Marlon Marcia",
+          "character": "",
+          "profile_path": "/9LEfMCMhN0KX3XGANJggXLKx8fJ.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 3896943,
+          "name": "Christopher Novabos",
+          "profile_path": "/u3A2B6HwPHei9UDK5HPUtVlQLPu.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 6
+    },
+    {
+      "rank": 51,
       "tmdb_id": 1268127,
       "title": "Humint",
       "director": "Ryoo Seung-wan",
@@ -4773,27 +4905,27 @@
       "youtube_likes": 2940,
       "youtube_comments": 133,
       "youtube_video_id": "n6scQ_ds0x8",
-      "reddit_posts": 3,
-      "reddit_comments": 26,
-      "mentions": 29,
+      "reddit_posts": 1,
+      "reddit_comments": 6,
+      "mentions": 7,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 827,
-        "7d": 827,
-        "30d": 827
+        "1d": 826,
+        "7d": 826,
+        "30d": 826
       },
-      "score": 827,
-      "move": 0,
+      "score": 826,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0033,
         "youtube_engagement": 0.3515,
-        "reddit_volume": 0.0032,
+        "reddit_volume": 0.0007,
         "google_trends": 0.05,
         "news_impact": 0.0,
-        "raw_amsi": 0.0644
+        "raw_amsi": 0.0639
       },
       "cast_full": [
         {
@@ -4856,76 +4988,6 @@
       "trends": 5
     },
     {
-      "rank": 51,
-      "tmdb_id": 1658216,
-      "title": "Stepdaddy",
-      "director": "Christopher Novabos",
-      "cast": "Astrid Lee, Christy Imperial",
-      "release_date": "2026-04-04",
-      "poster_url": "https://image.tmdb.org/t/p/w185/oZxNblisKuDzSUW5g18FERjyJs9.jpg",
-      "youtube_views": 12372873,
-      "youtube_likes": 23418,
-      "youtube_comments": 564,
-      "youtube_video_id": "HKeFNJTKuws",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 53,
-      "scores": {
-        "1d": 827,
-        "7d": 827,
-        "30d": 827
-      },
-      "score": 827,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.1464,
-        "youtube_engagement": 0.062,
-        "reddit_volume": 0.0,
-        "google_trends": 0.06,
-        "news_impact": 0.0,
-        "raw_amsi": 0.0652
-      },
-      "cast_full": [
-        {
-          "id": 5536858,
-          "name": "Astrid Lee",
-          "character": "",
-          "profile_path": "/h0sQk1TkRHHDMuNIG2CSfiZu8ks.jpg"
-        },
-        {
-          "id": 3878240,
-          "name": "Christy Imperial",
-          "character": "",
-          "profile_path": "/yZD7CzFcA5UdiDC4QSYOb5sG1Ve.jpg"
-        },
-        {
-          "id": 1053797,
-          "name": "Jamilla Obispo",
-          "character": "",
-          "profile_path": "/buEZ1JRw08o8sM1uH7tBV5UNENT.jpg"
-        },
-        {
-          "id": 2252696,
-          "name": "Marlon Marcia",
-          "character": "",
-          "profile_path": "/9LEfMCMhN0KX3XGANJggXLKx8fJ.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 3896943,
-          "name": "Christopher Novabos",
-          "profile_path": "/u3A2B6HwPHei9UDK5HPUtVlQLPu.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 6
-    },
-    {
       "rank": 52,
       "tmdb_id": 1620551,
       "title": "Feel My Voice",
@@ -4954,10 +5016,10 @@
       "sub_scores": {
         "youtube_views": 0.0012,
         "youtube_engagement": 0.3393,
-        "reddit_volume": 0.006,
+        "reddit_volume": 0.0057,
         "google_trends": 0.04,
         "news_impact": 0.0,
-        "raw_amsi": 0.0605
+        "raw_amsi": 0.0604
       },
       "cast_full": [
         {
@@ -5031,9 +5093,9 @@
       "youtube_likes": 1328,
       "youtube_comments": 267,
       "youtube_video_id": "PAUEwUhAjzg",
-      "reddit_posts": 4,
-      "reddit_comments": 11,
-      "mentions": 15,
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
       "sentiment_pct": 51,
       "scores": {
         "1d": 825,
@@ -5048,10 +5110,10 @@
       "sub_scores": {
         "youtube_views": 0.0426,
         "youtube_engagement": 0.0142,
-        "reddit_volume": 0.0017,
+        "reddit_volume": 0.0,
         "google_trends": 0.23,
         "news_impact": 0.0,
-        "raw_amsi": 0.0612
+        "raw_amsi": 0.0609
       },
       "cast_full": [
         {
@@ -5142,10 +5204,10 @@
       "sub_scores": {
         "youtube_views": 0.0042,
         "youtube_engagement": 0.3281,
-        "reddit_volume": 0.0203,
+        "reddit_volume": 0.0193,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "raw_amsi": 0.0565
+        "raw_amsi": 0.0563
       },
       "cast_full": [
         {
@@ -5314,8 +5376,8 @@
       "youtube_comments": 868,
       "youtube_video_id": "aHAwgnJL78Y",
       "reddit_posts": 3,
-      "reddit_comments": 770,
-      "mentions": 773,
+      "reddit_comments": 781,
+      "mentions": 784,
       "sentiment_pct": 55,
       "scores": {
         "1d": 822,
@@ -5330,10 +5392,10 @@
       "sub_scores": {
         "youtube_views": 0.0685,
         "youtube_engagement": 0.101,
-        "reddit_volume": 0.0863,
+        "reddit_volume": 0.0832,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.0529
+        "raw_amsi": 0.0523
       },
       "cast_full": [
         {
@@ -5706,7 +5768,7 @@
       "sub_scores": {
         "youtube_views": 0.0054,
         "youtube_engagement": 0.1219,
-        "reddit_volume": 0.0027,
+        "reddit_volume": 0.0025,
         "google_trends": 0.07,
         "news_impact": 0.0,
         "raw_amsi": 0.0344
@@ -5877,9 +5939,9 @@
       "youtube_likes": 689,
       "youtube_comments": 176,
       "youtube_video_id": "hIEdSvQ9_wA",
-      "reddit_posts": 1,
+      "reddit_posts": 2,
       "reddit_comments": 5,
-      "mentions": 6,
+      "mentions": 7,
       "sentiment_pct": 53,
       "scores": {
         "1d": 812,
@@ -6369,10 +6431,10 @@
       "sub_scores": {
         "youtube_views": 0.0064,
         "youtube_engagement": 0.0153,
-        "reddit_volume": 0.0132,
+        "reddit_volume": 0.0125,
         "google_trends": 0.1,
         "news_impact": 0.0,
-        "raw_amsi": 0.0269
+        "raw_amsi": 0.0267
       },
       "cast_full": [
         {
@@ -6982,6 +7044,100 @@
     },
     {
       "rank": 74,
+      "tmdb_id": 680493,
+      "title": "Return to Silent Hill",
+      "director": "Christophe Gans",
+      "cast": "Jeremy Irvine, Hannah Emily Anderson",
+      "release_date": "2026-01-21",
+      "poster_url": "https://image.tmdb.org/t/p/w185/fqAGFN2K2kDL0EHxvJaXzaMUkkt.jpg",
+      "youtube_views": 150663,
+      "youtube_likes": 347,
+      "youtube_comments": 24,
+      "youtube_video_id": "z10cMFhKbW8",
+      "reddit_posts": 3,
+      "reddit_comments": 69,
+      "mentions": 72,
+      "sentiment_pct": 54,
+      "scores": {
+        "1d": 806,
+        "7d": 806,
+        "30d": 806
+      },
+      "score": 806,
+      "move": 3,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0018,
+        "youtube_engagement": 0.0788,
+        "reddit_volume": 0.0076,
+        "google_trends": 0.0,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0139
+      },
+      "cast_full": [
+        {
+          "id": 225692,
+          "name": "Jeremy Irvine",
+          "character": "James Sunderland",
+          "profile_path": "/wnyLs0r9j1IB4zK2QBkgg2TyAzZ.jpg"
+        },
+        {
+          "id": 1685904,
+          "name": "Hannah Emily Anderson",
+          "character": "Mary Crane  / Angela / Maria / Moth Mary",
+          "profile_path": "/fSyNGF4pZQj9Ne9IKv9kfimECzk.jpg"
+        },
+        {
+          "id": 3131371,
+          "name": "Evie Templeton",
+          "character": "Laura",
+          "profile_path": "/rNNieMvkpWBCChKZhn69jDMrEJo.jpg"
+        },
+        {
+          "id": 2438347,
+          "name": "Pearse Egan",
+          "character": "Eddie",
+          "profile_path": "/bzHkytLIEk4T4arzd7h5BRLufov.jpg"
+        },
+        {
+          "id": 2486314,
+          "name": "Nicola Alexis",
+          "character": "M",
+          "profile_path": "/jPynKGMPaArRB4SAr6OIGHWQRl.jpg"
+        },
+        {
+          "id": 1675328,
+          "name": "Robert Strange",
+          "character": "Pyramid Head",
+          "profile_path": "/4GBjA1itRhsKaPaOrVE1YN9qOqc.jpg"
+        },
+        {
+          "id": 2021091,
+          "name": "Emily Carding",
+          "character": "Dara",
+          "profile_path": "/zW0SKNWWlEFrLm5XAZh24rL0E6b.jpg"
+        },
+        {
+          "id": 1092908,
+          "name": "Eve Macklin",
+          "character": "Kaitlyn",
+          "profile_path": "/7e1bpd3iTst0PvCk4A7LVfUgNut.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 8296,
+          "name": "Christophe Gans",
+          "profile_path": "/x4ILnMIY8hYXFpJj5d4M2VTQeFb.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 0
+    },
+    {
+      "rank": 75,
       "tmdb_id": 1634301,
       "title": "Vanaveera",
       "director": "",
@@ -7002,7 +7158,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7039,7 +7195,7 @@
       "trends": 0
     },
     {
-      "rank": 75,
+      "rank": 76,
       "tmdb_id": 1426964,
       "title": "State of Fear",
       "director": "Pedro Morelli",
@@ -7060,7 +7216,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7133,7 +7289,7 @@
       "trends": 2
     },
     {
-      "rank": 76,
+      "rank": 77,
       "tmdb_id": 1658217,
       "title": "Sawsawan",
       "director": "Rodante Pajemna Jr.",
@@ -7154,7 +7310,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7219,100 +7375,6 @@
       ],
       "news_mentions": [],
       "trends": 1
-    },
-    {
-      "rank": 77,
-      "tmdb_id": 680493,
-      "title": "Return to Silent Hill",
-      "director": "Christophe Gans",
-      "cast": "Jeremy Irvine, Hannah Emily Anderson",
-      "release_date": "2026-01-21",
-      "poster_url": "https://image.tmdb.org/t/p/w185/fqAGFN2K2kDL0EHxvJaXzaMUkkt.jpg",
-      "youtube_views": 150663,
-      "youtube_likes": 347,
-      "youtube_comments": 24,
-      "youtube_video_id": "z10cMFhKbW8",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 53,
-      "scores": {
-        "1d": 805,
-        "7d": 805,
-        "30d": 805
-      },
-      "score": 805,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0018,
-        "youtube_engagement": 0.0788,
-        "reddit_volume": 0.0,
-        "google_trends": 0.0,
-        "news_impact": 0.0,
-        "raw_amsi": 0.0124
-      },
-      "cast_full": [
-        {
-          "id": 225692,
-          "name": "Jeremy Irvine",
-          "character": "James Sunderland",
-          "profile_path": "/wnyLs0r9j1IB4zK2QBkgg2TyAzZ.jpg"
-        },
-        {
-          "id": 1685904,
-          "name": "Hannah Emily Anderson",
-          "character": "Mary Crane  / Angela / Maria / Moth Mary",
-          "profile_path": "/fSyNGF4pZQj9Ne9IKv9kfimECzk.jpg"
-        },
-        {
-          "id": 3131371,
-          "name": "Evie Templeton",
-          "character": "Laura",
-          "profile_path": "/rNNieMvkpWBCChKZhn69jDMrEJo.jpg"
-        },
-        {
-          "id": 2438347,
-          "name": "Pearse Egan",
-          "character": "Eddie",
-          "profile_path": "/bzHkytLIEk4T4arzd7h5BRLufov.jpg"
-        },
-        {
-          "id": 2486314,
-          "name": "Nicola Alexis",
-          "character": "M",
-          "profile_path": "/jPynKGMPaArRB4SAr6OIGHWQRl.jpg"
-        },
-        {
-          "id": 1675328,
-          "name": "Robert Strange",
-          "character": "Pyramid Head",
-          "profile_path": "/4GBjA1itRhsKaPaOrVE1YN9qOqc.jpg"
-        },
-        {
-          "id": 2021091,
-          "name": "Emily Carding",
-          "character": "Dara",
-          "profile_path": "/zW0SKNWWlEFrLm5XAZh24rL0E6b.jpg"
-        },
-        {
-          "id": 1092908,
-          "name": "Eve Macklin",
-          "character": "Kaitlyn",
-          "profile_path": "/7e1bpd3iTst0PvCk4A7LVfUgNut.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 8296,
-          "name": "Christophe Gans",
-          "profile_path": "/x4ILnMIY8hYXFpJj5d4M2VTQeFb.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 0
     },
     {
       "rank": 78,
@@ -7619,10 +7681,10 @@
       "sub_scores": {
         "youtube_views": 0.0002,
         "youtube_engagement": 0.0416,
-        "reddit_volume": 0.0049,
+        "reddit_volume": 0.0047,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "raw_amsi": 0.0093
+        "raw_amsi": 0.0092
       },
       "cast_full": [
         {
@@ -8057,49 +8119,6 @@
   ],
   "actors": [
     {
-      "tmdb_id": 1813,
-      "name": "Anne Hathaway",
-      "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
-      "film_count": 2,
-      "films": [
-        {
-          "tmdb_id": 1102883,
-          "title": "Mother Mary",
-          "release_date": "2026-04-17",
-          "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-          "score": 926,
-          "character": "Mother Mary"
-        },
-        {
-          "tmdb_id": 1314481,
-          "title": "The Devil Wears Prada 2",
-          "release_date": "2026-04-29",
-          "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-          "score": 865,
-          "character": "Andy Sachs"
-        }
-      ],
-      "popularity": 17.9584,
-      "sentiment_pct": 65,
-      "avg_film_score": 896,
-      "news_mentions": [
-        {
-          "source": "Hollywood Reporter",
-          "headline": "How Taylor Swift’s ‘Reputation’ Concert Film Inspired Anne Hathaway’s Performance in ‘Mother Mary’"
-        }
-      ],
-      "mentions": 11,
-      "score": 999,
-      "scores": {
-        "1d": 999,
-        "7d": 999,
-        "30d": 999
-      },
-      "rank": 1,
-      "move": 0,
-      "is_new": false
-    },
-    {
       "tmdb_id": 933238,
       "name": "Rebecca Ferguson",
       "profile_url": "https://image.tmdb.org/t/p/w300/lJloTOheuQSirSLXNA3JHsrMNfH.jpg",
@@ -8135,14 +8154,14 @@
       "avg_film_score": 848,
       "news_mentions": [],
       "mentions": 15,
-      "score": 955,
+      "score": 999,
       "scores": {
-        "1d": 955,
-        "7d": 955,
-        "30d": 955
+        "1d": 999,
+        "7d": 999,
+        "30d": 999
       },
-      "rank": 2,
-      "move": 0,
+      "rank": 1,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8165,14 +8184,14 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "mentions": 5,
-      "score": 950,
+      "score": 992,
       "scores": {
-        "1d": 950,
-        "7d": 950,
-        "30d": 950
+        "1d": 992,
+        "7d": 992,
+        "30d": 992
       },
-      "rank": 3,
-      "move": 0,
+      "rank": 2,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8195,14 +8214,14 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "mentions": 5,
-      "score": 950,
+      "score": 992,
       "scores": {
-        "1d": 950,
-        "7d": 950,
-        "30d": 950
+        "1d": 992,
+        "7d": 992,
+        "30d": 992
       },
-      "rank": 4,
-      "move": 0,
+      "rank": 3,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8225,14 +8244,14 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "mentions": 5,
-      "score": 950,
+      "score": 992,
       "scores": {
-        "1d": 950,
-        "7d": 950,
-        "30d": 950
+        "1d": 992,
+        "7d": 992,
+        "30d": 992
       },
-      "rank": 5,
-      "move": 0,
+      "rank": 4,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8255,14 +8274,14 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "mentions": 5,
-      "score": 950,
+      "score": 992,
       "scores": {
-        "1d": 950,
-        "7d": 950,
-        "30d": 950
+        "1d": 992,
+        "7d": 992,
+        "30d": 992
       },
-      "rank": 6,
-      "move": 0,
+      "rank": 5,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8285,14 +8304,14 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "mentions": 5,
-      "score": 950,
+      "score": 992,
       "scores": {
-        "1d": 950,
-        "7d": 950,
-        "30d": 950
+        "1d": 992,
+        "7d": 992,
+        "30d": 992
       },
-      "rank": 7,
-      "move": 0,
+      "rank": 6,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8315,14 +8334,14 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "mentions": 5,
-      "score": 950,
+      "score": 992,
       "scores": {
-        "1d": 950,
-        "7d": 950,
-        "30d": 950
+        "1d": 992,
+        "7d": 992,
+        "30d": 992
       },
-      "rank": 8,
-      "move": 0,
+      "rank": 7,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8336,13 +8355,13 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
-          "score": 894,
+          "score": 940,
           "character": "Emma"
         }
       ],
       "popularity": 71.5704,
-      "sentiment_pct": 58,
-      "avg_film_score": 894,
+      "sentiment_pct": 63,
+      "avg_film_score": 940,
       "news_mentions": [
         {
           "source": "IndieWire",
@@ -8350,14 +8369,14 @@
         }
       ],
       "mentions": 6,
-      "score": 937,
+      "score": 983,
       "scores": {
-        "1d": 937,
-        "7d": 937,
-        "30d": 937
+        "1d": 983,
+        "7d": 983,
+        "30d": 983
       },
-      "rank": 9,
-      "move": 0,
+      "rank": 8,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8371,7 +8390,7 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": "Mario (voice)"
         },
         {
@@ -8385,17 +8404,17 @@
       ],
       "popularity": 317.0939,
       "sentiment_pct": 56,
-      "avg_film_score": 896,
+      "avg_film_score": 894,
       "news_mentions": [],
       "mentions": 10,
-      "score": 918,
+      "score": 952,
       "scores": {
-        "1d": 918,
-        "7d": 918,
-        "30d": 918
+        "1d": 952,
+        "7d": 952,
+        "30d": 952
       },
-      "rank": 10,
-      "move": 0,
+      "rank": 9,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8426,14 +8445,14 @@
       "avg_film_score": 868,
       "news_mentions": [],
       "mentions": 10,
-      "score": 918,
+      "score": 951,
       "scores": {
-        "1d": 918,
-        "7d": 918,
-        "30d": 918
+        "1d": 951,
+        "7d": 951,
+        "30d": 951
       },
-      "rank": 11,
-      "move": 0,
+      "rank": 10,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8443,35 +8462,35 @@
       "film_count": 2,
       "films": [
         {
+          "tmdb_id": 1450527,
+          "title": "Forbidden Fruits",
+          "release_date": "2026-03-26",
+          "poster_url": "https://image.tmdb.org/t/p/w185/qK6yk1wJp6vAJRJOyIMcxoNw8pe.jpg",
+          "score": 910,
+          "character": "Sharon"
+        },
+        {
           "tmdb_id": 1297842,
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
           "score": 863,
           "character": "Jett Fillmore (voice)"
-        },
-        {
-          "tmdb_id": 1450527,
-          "title": "Forbidden Fruits",
-          "release_date": "2026-03-26",
-          "poster_url": "https://image.tmdb.org/t/p/w185/qK6yk1wJp6vAJRJOyIMcxoNw8pe.jpg",
-          "score": 847,
-          "character": "Sharon"
         }
       ],
       "popularity": 252.7493,
-      "sentiment_pct": 54,
-      "avg_film_score": 855,
+      "sentiment_pct": 55,
+      "avg_film_score": 886,
       "news_mentions": [],
       "mentions": 10,
-      "score": 906,
+      "score": 940,
       "scores": {
-        "1d": 906,
-        "7d": 906,
-        "30d": 906
+        "1d": 940,
+        "7d": 940,
+        "30d": 940
       },
-      "rank": 12,
-      "move": 0,
+      "rank": 11,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8502,14 +8521,14 @@
       "avg_film_score": 844,
       "news_mentions": [],
       "mentions": 10,
-      "score": 904,
+      "score": 934,
       "scores": {
-        "1d": 904,
-        "7d": 904,
-        "30d": 904
+        "1d": 934,
+        "7d": 934,
+        "30d": 934
       },
-      "rank": 13,
-      "move": 0,
+      "rank": 12,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8540,14 +8559,14 @@
       "avg_film_score": 826,
       "news_mentions": [],
       "mentions": 10,
-      "score": 900,
+      "score": 928,
       "scores": {
-        "1d": 900,
-        "7d": 900,
-        "30d": 900
+        "1d": 928,
+        "7d": 928,
+        "30d": 928
       },
-      "rank": 14,
-      "move": 0,
+      "rank": 13,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8574,18 +8593,18 @@
         }
       ],
       "popularity": 104.5944,
-      "sentiment_pct": 77,
+      "sentiment_pct": 78,
       "avg_film_score": 846,
       "news_mentions": [],
       "mentions": 10,
-      "score": 886,
+      "score": 911,
       "scores": {
-        "1d": 886,
-        "7d": 886,
-        "30d": 886
+        "1d": 911,
+        "7d": 911,
+        "30d": 911
       },
-      "rank": 15,
-      "move": 0,
+      "rank": 14,
+      "move": 1,
       "is_new": false
     },
     {
@@ -8599,7 +8618,7 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/3Qud19bBUrrJAzy0Ilm8gRJlJXP.jpg",
-          "score": 911,
+          "score": 994,
           "character": "Joe Jackson"
         },
         {
@@ -8612,18 +8631,56 @@
         }
       ],
       "popularity": 21.4723,
-      "sentiment_pct": 61,
+      "sentiment_pct": 64,
+      "avg_film_score": 908,
+      "news_mentions": [],
+      "mentions": 10,
+      "score": 907,
+      "scores": {
+        "1d": 907,
+        "7d": 907,
+        "30d": 907
+      },
+      "rank": 15,
+      "move": 1,
+      "is_new": false
+    },
+    {
+      "tmdb_id": 1813,
+      "name": "Anne Hathaway",
+      "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
+      "film_count": 2,
+      "films": [
+        {
+          "tmdb_id": 1314481,
+          "title": "The Devil Wears Prada 2",
+          "release_date": "2026-04-29",
+          "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+          "score": 869,
+          "character": "Andy Sachs"
+        },
+        {
+          "tmdb_id": 1102883,
+          "title": "Mother Mary",
+          "release_date": "2026-04-17",
+          "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
+          "score": 864,
+          "character": "Mother Mary"
+        }
+      ],
+      "popularity": 17.9584,
+      "sentiment_pct": 65,
       "avg_film_score": 866,
       "news_mentions": [],
       "mentions": 10,
-      "score": 878,
+      "score": 900,
       "scores": {
-        "1d": 878,
-        "7d": 878,
-        "30d": 878
+        "1d": 900,
+        "7d": 900,
+        "30d": 900
       },
       "rank": 16,
-      "move": 0,
+      "move": -15,
       "is_new": false
     },
     {
@@ -8654,11 +8711,11 @@
       "avg_film_score": 838,
       "news_mentions": [],
       "mentions": 10,
-      "score": 877,
+      "score": 899,
       "scores": {
-        "1d": 877,
-        "7d": 877,
-        "30d": 877
+        "1d": 899,
+        "7d": 899,
+        "30d": 899
       },
       "rank": 17,
       "move": 0,
@@ -8692,11 +8749,11 @@
       "avg_film_score": 835,
       "news_mentions": [],
       "mentions": 10,
-      "score": 877,
+      "score": 899,
       "scores": {
-        "1d": 877,
-        "7d": 877,
-        "30d": 877
+        "1d": 899,
+        "7d": 899,
+        "30d": 899
       },
       "rank": 18,
       "move": 0,
@@ -8730,11 +8787,11 @@
       "avg_film_score": 811,
       "news_mentions": [],
       "mentions": 10,
-      "score": 873,
+      "score": 894,
       "scores": {
-        "1d": 873,
-        "7d": 873,
-        "30d": 873
+        "1d": 894,
+        "7d": 894,
+        "30d": 894
       },
       "rank": 19,
       "move": 0,
@@ -8751,20 +8808,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": "Mabel (voice)"
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
-      "score": 857,
+      "score": 873,
       "scores": {
-        "1d": 857,
-        "7d": 857,
-        "30d": 857
+        "1d": 873,
+        "7d": 873,
+        "30d": 873
       },
       "rank": 20,
       "move": 0,
@@ -8781,20 +8838,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": "King George (voice)"
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
-      "score": 857,
+      "score": 873,
       "scores": {
-        "1d": 857,
-        "7d": 857,
-        "30d": 857
+        "1d": 873,
+        "7d": 873,
+        "30d": 873
       },
       "rank": 21,
       "move": 0,
@@ -8811,20 +8868,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": "Mayor Jerry Generazzo (voice)"
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
-      "score": 857,
+      "score": 873,
       "scores": {
-        "1d": 857,
-        "7d": 857,
-        "30d": 857
+        "1d": 873,
+        "7d": 873,
+        "30d": 873
       },
       "rank": 22,
       "move": 0,
@@ -8841,20 +8898,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": "Dr. Sam (voice)"
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
-      "score": 857,
+      "score": 873,
       "scores": {
-        "1d": 857,
-        "7d": 857,
-        "30d": 857
+        "1d": 873,
+        "7d": 873,
+        "30d": 873
       },
       "rank": 23,
       "move": 0,
@@ -8871,20 +8928,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": "Insect King (voice)"
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
-      "score": 857,
+      "score": 873,
       "scores": {
-        "1d": 857,
-        "7d": 857,
-        "30d": 857
+        "1d": 873,
+        "7d": 873,
+        "30d": 873
       },
       "rank": 24,
       "move": 0,
@@ -8901,20 +8958,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": "Loaf (voice)"
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
-      "score": 857,
+      "score": 873,
       "scores": {
-        "1d": 857,
-        "7d": 857,
-        "30d": 857
+        "1d": 873,
+        "7d": 873,
+        "30d": 873
       },
       "rank": 25,
       "move": 0,
@@ -8931,20 +8988,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": "Luigi (voice)"
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 854,
+      "score": 869,
       "scores": {
-        "1d": 854,
-        "7d": 854,
-        "30d": 854
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
       "rank": 26,
       "move": 0,
@@ -8961,20 +9018,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": "Princess Peach (voice)"
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 854,
+      "score": 869,
       "scores": {
-        "1d": 854,
-        "7d": 854,
-        "30d": 854
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
       "rank": 27,
       "move": 0,
@@ -8991,20 +9048,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": "Bowser (voice)"
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 854,
+      "score": 869,
       "scores": {
-        "1d": 854,
-        "7d": 854,
-        "30d": 854
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
       "rank": 28,
       "move": 0,
@@ -9021,20 +9078,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": "Toad (voice)"
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 854,
+      "score": 869,
       "scores": {
-        "1d": 854,
-        "7d": 854,
-        "30d": 854
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
       "rank": 29,
       "move": 0,
@@ -9051,20 +9108,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": "Bowser Jr. (voice)"
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 854,
+      "score": 869,
       "scores": {
-        "1d": 854,
-        "7d": 854,
-        "30d": 854
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
       "rank": 30,
       "move": 0,
@@ -9090,11 +9147,11 @@
       "avg_film_score": 872,
       "news_mentions": [],
       "mentions": 5,
-      "score": 850,
+      "score": 864,
       "scores": {
-        "1d": 850,
-        "7d": 850,
-        "30d": 850
+        "1d": 864,
+        "7d": 864,
+        "30d": 864
       },
       "rank": 31,
       "move": 0,
@@ -9120,11 +9177,11 @@
       "avg_film_score": 872,
       "news_mentions": [],
       "mentions": 5,
-      "score": 850,
+      "score": 864,
       "scores": {
-        "1d": 850,
-        "7d": 850,
-        "30d": 850
+        "1d": 864,
+        "7d": 864,
+        "30d": 864
       },
       "rank": 32,
       "move": 0,
@@ -9150,11 +9207,11 @@
       "avg_film_score": 872,
       "news_mentions": [],
       "mentions": 5,
-      "score": 850,
+      "score": 864,
       "scores": {
-        "1d": 850,
-        "7d": 850,
-        "30d": 850
+        "1d": 864,
+        "7d": 864,
+        "30d": 864
       },
       "rank": 33,
       "move": 0,
@@ -9180,11 +9237,11 @@
       "avg_film_score": 872,
       "news_mentions": [],
       "mentions": 5,
-      "score": 850,
+      "score": 864,
       "scores": {
-        "1d": 850,
-        "7d": 850,
-        "30d": 850
+        "1d": 864,
+        "7d": 864,
+        "30d": 864
       },
       "rank": 34,
       "move": 0,
@@ -9210,11 +9267,11 @@
       "avg_film_score": 872,
       "news_mentions": [],
       "mentions": 5,
-      "score": 850,
+      "score": 864,
       "scores": {
-        "1d": 850,
-        "7d": 850,
-        "30d": 850
+        "1d": 864,
+        "7d": 864,
+        "30d": 864
       },
       "rank": 35,
       "move": 0,
@@ -9240,11 +9297,11 @@
       "avg_film_score": 861,
       "news_mentions": [],
       "mentions": 5,
-      "score": 847,
+      "score": 860,
       "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
+        "1d": 860,
+        "7d": 860,
+        "30d": 860
       },
       "rank": 36,
       "move": 0,
@@ -9270,11 +9327,11 @@
       "avg_film_score": 861,
       "news_mentions": [],
       "mentions": 5,
-      "score": 847,
+      "score": 860,
       "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
+        "1d": 860,
+        "7d": 860,
+        "30d": 860
       },
       "rank": 37,
       "move": 0,
@@ -9300,11 +9357,11 @@
       "avg_film_score": 861,
       "news_mentions": [],
       "mentions": 5,
-      "score": 847,
+      "score": 860,
       "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
+        "1d": 860,
+        "7d": 860,
+        "30d": 860
       },
       "rank": 38,
       "move": 0,
@@ -9330,11 +9387,11 @@
       "avg_film_score": 861,
       "news_mentions": [],
       "mentions": 5,
-      "score": 847,
+      "score": 860,
       "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
+        "1d": 860,
+        "7d": 860,
+        "30d": 860
       },
       "rank": 39,
       "move": 0,
@@ -9360,11 +9417,11 @@
       "avg_film_score": 861,
       "news_mentions": [],
       "mentions": 5,
-      "score": 847,
+      "score": 860,
       "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
+        "1d": 860,
+        "7d": 860,
+        "30d": 860
       },
       "rank": 40,
       "move": 0,
@@ -9390,11 +9447,11 @@
       "avg_film_score": 861,
       "news_mentions": [],
       "mentions": 5,
-      "score": 847,
+      "score": 860,
       "scores": {
-        "1d": 847,
-        "7d": 847,
-        "30d": 847
+        "1d": 860,
+        "7d": 860,
+        "30d": 860
       },
       "rank": 41,
       "move": 0,
@@ -9420,11 +9477,11 @@
       "avg_film_score": 823,
       "news_mentions": [],
       "mentions": 5,
-      "score": 839,
+      "score": 850,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 850,
+        "7d": 850,
+        "30d": 850
       },
       "rank": 42,
       "move": 0,
@@ -9450,11 +9507,11 @@
       "avg_film_score": 823,
       "news_mentions": [],
       "mentions": 5,
-      "score": 839,
+      "score": 850,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 850,
+        "7d": 850,
+        "30d": 850
       },
       "rank": 43,
       "move": 0,
@@ -9480,11 +9537,11 @@
       "avg_film_score": 823,
       "news_mentions": [],
       "mentions": 5,
-      "score": 839,
+      "score": 850,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 850,
+        "7d": 850,
+        "30d": 850
       },
       "rank": 44,
       "move": 0,
@@ -9510,11 +9567,11 @@
       "avg_film_score": 823,
       "news_mentions": [],
       "mentions": 5,
-      "score": 839,
+      "score": 850,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 850,
+        "7d": 850,
+        "30d": 850
       },
       "rank": 45,
       "move": 0,
@@ -9540,11 +9597,11 @@
       "avg_film_score": 823,
       "news_mentions": [],
       "mentions": 5,
-      "score": 839,
+      "score": 850,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 850,
+        "7d": 850,
+        "30d": 850
       },
       "rank": 46,
       "move": 0,
@@ -9570,11 +9627,11 @@
       "avg_film_score": 823,
       "news_mentions": [],
       "mentions": 5,
-      "score": 839,
+      "score": 850,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 850,
+        "7d": 850,
+        "30d": 850
       },
       "rank": 47,
       "move": 0,
@@ -9600,11 +9657,11 @@
       "avg_film_score": 863,
       "news_mentions": [],
       "mentions": 5,
-      "score": 838,
+      "score": 849,
       "scores": {
-        "1d": 838,
-        "7d": 838,
-        "30d": 838
+        "1d": 849,
+        "7d": 849,
+        "30d": 849
       },
       "rank": 48,
       "move": 0,
@@ -9630,11 +9687,11 @@
       "avg_film_score": 863,
       "news_mentions": [],
       "mentions": 5,
-      "score": 838,
+      "score": 849,
       "scores": {
-        "1d": 838,
-        "7d": 838,
-        "30d": 838
+        "1d": 849,
+        "7d": 849,
+        "30d": 849
       },
       "rank": 49,
       "move": 0,
@@ -9660,11 +9717,11 @@
       "avg_film_score": 863,
       "news_mentions": [],
       "mentions": 5,
-      "score": 838,
+      "score": 849,
       "scores": {
-        "1d": 838,
-        "7d": 838,
-        "30d": 838
+        "1d": 849,
+        "7d": 849,
+        "30d": 849
       },
       "rank": 50,
       "move": 0,
@@ -9789,13 +9846,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 879,
+          "score": 878,
           "character": null
         }
       ],
       "popularity": 395.3623,
       "sentiment_pct": 64,
-      "avg_film_score": 879,
+      "avg_film_score": 878,
       "news_mentions": [],
       "mentions": 5,
       "score": 876,
@@ -9819,20 +9876,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": null
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 872,
+      "score": 871,
       "scores": {
-        "1d": 872,
-        "7d": 872,
-        "30d": 872
+        "1d": 871,
+        "7d": 871,
+        "30d": 871
       },
       "rank": 5,
       "move": 0,
@@ -9849,20 +9906,20 @@
           "title": "The Super Mario Galaxy Movie",
           "release_date": "2026-04-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
-          "score": 934,
+          "score": 930,
           "character": null
         }
       ],
       "popularity": 317.0939,
-      "sentiment_pct": 61,
-      "avg_film_score": 934,
+      "sentiment_pct": 62,
+      "avg_film_score": 930,
       "news_mentions": [],
       "mentions": 5,
-      "score": 872,
+      "score": 871,
       "scores": {
-        "1d": 872,
-        "7d": 872,
-        "30d": 872
+        "1d": 871,
+        "7d": 871,
+        "30d": 871
       },
       "rank": 6,
       "move": 0,
@@ -9969,13 +10026,13 @@
           "title": "Project Hail Mary",
           "release_date": "2026-03-15",
           "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-          "score": 883,
+          "score": 882,
           "character": null
         }
       ],
       "popularity": 216.2899,
       "sentiment_pct": 66,
-      "avg_film_score": 883,
+      "avg_film_score": 882,
       "news_mentions": [],
       "mentions": 5,
       "score": 847,
@@ -9999,13 +10056,13 @@
           "title": "Project Hail Mary",
           "release_date": "2026-03-15",
           "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-          "score": 883,
+          "score": 882,
           "character": null
         }
       ],
       "popularity": 216.2899,
       "sentiment_pct": 66,
-      "avg_film_score": 883,
+      "avg_film_score": 882,
       "news_mentions": [],
       "mentions": 5,
       "score": 847,
@@ -10089,13 +10146,13 @@
           "title": "Humint",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/82bX2GK4PhaJQtfkTnfmd2P7erG.jpg",
-          "score": 827,
+          "score": 826,
           "character": null
         }
       ],
       "popularity": 243.2588,
       "sentiment_pct": 66,
-      "avg_film_score": 827,
+      "avg_film_score": 826,
       "news_mentions": [],
       "mentions": 5,
       "score": 843,
@@ -10169,6 +10226,66 @@
       "is_new": false
     },
     {
+      "tmdb_id": 20907,
+      "name": "Antoine Fuqua",
+      "profile_url": "https://image.tmdb.org/t/p/w300/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg",
+      "film_count": 1,
+      "films": [
+        {
+          "tmdb_id": 936075,
+          "title": "Michael",
+          "release_date": "2026-04-22",
+          "poster_url": "https://image.tmdb.org/t/p/w185/3Qud19bBUrrJAzy0Ilm8gRJlJXP.jpg",
+          "score": 994,
+          "character": null
+        }
+      ],
+      "popularity": 21.4723,
+      "sentiment_pct": 72,
+      "avg_film_score": 994,
+      "news_mentions": [],
+      "mentions": 5,
+      "score": 833,
+      "scores": {
+        "1d": 833,
+        "7d": 833,
+        "30d": 833
+      },
+      "rank": 17,
+      "move": 0,
+      "is_new": true
+    },
+    {
+      "tmdb_id": 1280021,
+      "name": "Kristoffer Borgli",
+      "profile_url": "https://image.tmdb.org/t/p/w300/ftLljVAuKvECl8rAG7JbiGANy8P.jpg",
+      "film_count": 1,
+      "films": [
+        {
+          "tmdb_id": 1325734,
+          "title": "The Drama",
+          "release_date": "2026-03-26",
+          "poster_url": "https://image.tmdb.org/t/p/w185/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
+          "score": 940,
+          "character": null
+        }
+      ],
+      "popularity": 71.5704,
+      "sentiment_pct": 63,
+      "avg_film_score": 940,
+      "news_mentions": [],
+      "mentions": 5,
+      "score": 833,
+      "scores": {
+        "1d": 833,
+        "7d": 833,
+        "30d": 833
+      },
+      "rank": 18,
+      "move": 2,
+      "is_new": false
+    },
+    {
       "tmdb_id": 54638,
       "name": "Francesco Lucente",
       "profile_url": null,
@@ -10194,8 +10311,8 @@
         "7d": 833,
         "30d": 833
       },
-      "rank": 17,
-      "move": 0,
+      "rank": 19,
+      "move": -2,
       "is_new": false
     },
     {
@@ -10224,8 +10341,8 @@
         "7d": 832,
         "30d": 832
       },
-      "rank": 18,
-      "move": 0,
+      "rank": 20,
+      "move": -2,
       "is_new": false
     },
     {
@@ -10254,38 +10371,8 @@
         "7d": 831,
         "30d": 831
       },
-      "rank": 19,
-      "move": 0,
-      "is_new": false
-    },
-    {
-      "tmdb_id": 1280021,
-      "name": "Kristoffer Borgli",
-      "profile_url": "https://image.tmdb.org/t/p/w300/ftLljVAuKvECl8rAG7JbiGANy8P.jpg",
-      "film_count": 1,
-      "films": [
-        {
-          "tmdb_id": 1325734,
-          "title": "The Drama",
-          "release_date": "2026-03-26",
-          "poster_url": "https://image.tmdb.org/t/p/w185/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
-          "score": 894,
-          "character": null
-        }
-      ],
-      "popularity": 71.5704,
-      "sentiment_pct": 58,
-      "avg_film_score": 894,
-      "news_mentions": [],
-      "mentions": 5,
-      "score": 826,
-      "scores": {
-        "1d": 826,
-        "7d": 826,
-        "30d": 826
-      },
-      "rank": 20,
-      "move": 0,
+      "rank": 21,
+      "move": -2,
       "is_new": false
     },
     {
@@ -10314,8 +10401,8 @@
         "7d": 826,
         "30d": 826
       },
-      "rank": 21,
-      "move": 0,
+      "rank": 22,
+      "move": -1,
       "is_new": false
     },
     {
@@ -10344,8 +10431,8 @@
         "7d": 826,
         "30d": 826
       },
-      "rank": 22,
-      "move": 0,
+      "rank": 23,
+      "move": -1,
       "is_new": false
     },
     {
@@ -10374,8 +10461,8 @@
         "7d": 824,
         "30d": 824
       },
-      "rank": 23,
-      "move": 0,
+      "rank": 24,
+      "move": -1,
       "is_new": false
     },
     {
@@ -10404,38 +10491,8 @@
         "7d": 823,
         "30d": 823
       },
-      "rank": 24,
-      "move": 0,
-      "is_new": false
-    },
-    {
-      "tmdb_id": 1500758,
-      "name": "Ángel Manuel Soto",
-      "profile_url": "https://image.tmdb.org/t/p/w300/7lu6zFhXB1Na5ANy2pPTIERaAhi.jpg",
-      "film_count": 1,
-      "films": [
-        {
-          "tmdb_id": 1168190,
-          "title": "The Wrecking Crew",
-          "release_date": "2026-01-28",
-          "poster_url": "https://image.tmdb.org/t/p/w185/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
-          "score": 842,
-          "character": null
-        }
-      ],
-      "popularity": 97.718,
-      "sentiment_pct": 53,
-      "avg_film_score": 842,
-      "news_mentions": [],
-      "mentions": 5,
-      "score": 822,
-      "scores": {
-        "1d": 822,
-        "7d": 822,
-        "30d": 822
-      },
       "rank": 25,
-      "move": 0,
+      "move": -1,
       "is_new": false
     }
   ]
