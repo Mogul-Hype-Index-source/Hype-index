@@ -1,16 +1,28 @@
 {
-  "generated_at": "2026-04-07T22:25:24+00:00",
-  "next_update_at": "2026-04-07T23:25:24+00:00",
+  "generated_at": "2026-04-07T23:03:13+00:00",
+  "next_update_at": "2026-04-08T00:03:13+00:00",
   "snapshot_date": "2026-04-07",
   "summary": {
     "total": 85,
-    "rising": 45,
-    "falling": 38,
-    "flat": 2,
+    "rising": 1,
+    "falling": 1,
+    "flat": 83,
     "avg_score": 840,
-    "total_mentions_24h": 20209
+    "total_mentions_24h": 19789
   },
   "news": [
+    {
+      "headline": "The Actor Awards Set Dates for 2027 and 2028 Ceremonies on Netflix",
+      "source": "Variety",
+      "url": "https://variety.com/2026/film/awards/sag-actor-awards-2027-2028-dates-netflix-1236710962/",
+      "category": "production"
+    },
+    {
+      "headline": "Actor Awards Dates Set for 2027 and 2028",
+      "source": "Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/movies/movie-news/actor-awards-dates-set-for-2027-and-2028-1236558177/",
+      "category": "production"
+    },
     {
       "headline": "CAA Signs Filmmaker, Actress & Writer Greta Gerwig As She Follows ‘Barbie’ With ‘Narnia’",
       "source": "Deadline",
@@ -27,18 +39,6 @@
       "headline": "‘Sacred Heart’ Lands U.S. Theatrical Release Through Fathom Entertainment – Film News in Brief",
       "source": "Variety",
       "url": "https://variety.com/2026/film/news/film-news-in-brief-april-6-2025-1236709285/",
-      "category": "production"
-    },
-    {
-      "headline": "How Taylor Swift’s ‘Reputation’ Concert Film Inspired Anne Hathaway’s Performance in ‘Mother Mary’",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/taylor-swift-reputation-tour-film-anne-hathaway-mother-mary-1236557999/",
-      "category": "production"
-    },
-    {
-      "headline": "Netflix Argentina Opens New Office, Presents Titles From Ricardo Darín, Alex de la Iglesia, Pablo Larraín, Santiago Mitre and Pablo Trapero",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/global/netflix-argentina-darin-de-la-iglesia-larrain-campanella-1236710082/",
       "category": "production"
     },
     {
@@ -82,6 +82,12 @@
       "source": "IndieWire",
       "url": "https://www.indiewire.com/news/analysis/why-brands-will-not-finance-indie-films-1235187640/",
       "category": "creative"
+    },
+    {
+      "headline": "SAG-AFTRA Reveals Dates For The 2026-2027 Actor Awards",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/sag-actor-awards-2026-2027-1236784075/",
+      "category": "pr-marketing"
     },
     {
       "headline": "Rise and Shine and Grab the Breakfast Drugs: the ‘Rick and Morty’ Season 9 Trailer Is Here",
@@ -134,76 +140,20 @@
   ],
   "movers_up": [
     {
-      "tmdb_id": 1290417,
-      "title": "Thrash",
-      "poster_url": "https://image.tmdb.org/t/p/w185/adk8weka3O5648g3de4z3y4aE7G.jpg",
-      "move": 40,
-      "score": 850
-    },
-    {
-      "tmdb_id": 1306368,
-      "title": "The Rip",
-      "poster_url": "https://image.tmdb.org/t/p/w185/eZo31Dhl5BQ6GfbMNf3oU0tUvPZ.jpg",
-      "move": 37,
-      "score": 846
-    },
-    {
-      "tmdb_id": 696393,
-      "title": "Cold Storage",
-      "poster_url": "https://image.tmdb.org/t/p/w185/pfqkETJ2A3zXZJuNcufZbAJNnKA.jpg",
-      "move": 35,
-      "score": 889
-    },
-    {
-      "tmdb_id": 1209511,
-      "title": "Love Insurance Kompany",
-      "poster_url": "https://image.tmdb.org/t/p/w185/1IIUWMKzNVvI6YJX8BKE6EJ9bVd.jpg",
-      "move": 32,
-      "score": 852
-    },
-    {
-      "tmdb_id": 1455079,
-      "title": "You, Me & Tuscany",
-      "poster_url": "https://image.tmdb.org/t/p/w185/mJS0IF7Af3WpPRhSTDT6rGpiLzw.jpg",
-      "move": 32,
-      "score": 851
+      "tmdb_id": 1066313,
+      "title": "The Draft!",
+      "poster_url": "https://image.tmdb.org/t/p/w185/6WEqtp38s1iW5VrcH78rOIi8a2Z.jpg",
+      "move": 1,
+      "score": 869
     }
   ],
   "movers_down": [
     {
-      "tmdb_id": 1314786,
-      "title": "Agent Zeta",
-      "poster_url": "https://image.tmdb.org/t/p/w185/1cKLG9KMoCjsgFB8Nw1EuglteVi.jpg",
-      "move": -45,
-      "score": 805
-    },
-    {
-      "tmdb_id": 662707,
-      "title": "Starbright",
-      "poster_url": "https://image.tmdb.org/t/p/w185/m1Zl07DNYeSyNcz9hf8hDsS2oB5.jpg",
-      "move": -36,
-      "score": 801
-    },
-    {
-      "tmdb_id": 1119449,
-      "title": "Good Luck, Have Fun, Don't Die",
-      "poster_url": "https://image.tmdb.org/t/p/w185/rWcfOdY7TU6lTdazWj0ebDZnAfO.jpg",
-      "move": -34,
-      "score": 828
-    },
-    {
-      "tmdb_id": 1010755,
-      "title": "The Strangers: Chapter 3",
-      "poster_url": "https://image.tmdb.org/t/p/w185/yPHwX78mcwJw3I6YOJ9qh2wQBFr.jpg",
-      "move": -34,
-      "score": 812
-    },
-    {
-      "tmdb_id": 1272837,
-      "title": "28 Years Later: The Bone Temple",
-      "poster_url": "https://image.tmdb.org/t/p/w185/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg",
-      "move": -30,
-      "score": 823
+      "tmdb_id": 1314481,
+      "title": "The Devil Wears Prada 2",
+      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+      "move": -1,
+      "score": 865
     }
   ],
   "movies": [
@@ -314,8 +264,8 @@
       "youtube_comments": 0,
       "youtube_video_id": "En5QZmL5R1s",
       "reddit_posts": 55,
-      "reddit_comments": 8883,
-      "mentions": 8939,
+      "reddit_comments": 8905,
+      "mentions": 8961,
       "sentiment_pct": 61,
       "scores": {
         "1d": 934,
@@ -323,7 +273,7 @@
         "30d": 934
       },
       "score": 934,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -427,14 +377,14 @@
         "30d": 926
       },
       "score": 926,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0227,
         "youtube_engagement": 0.2431,
-        "reddit_volume": 0.0463,
+        "reddit_volume": 0.0462,
         "google_trends": 0.51,
         "news_impact": 1.0,
         "raw_amsi": 0.3045
@@ -526,7 +476,7 @@
         "30d": 911
       },
       "score": 911,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -620,7 +570,7 @@
         "30d": 894
       },
       "score": 894,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -719,7 +669,7 @@
         "30d": 892
       },
       "score": 892,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -813,7 +763,7 @@
         "30d": 889
       },
       "score": 889,
-      "move": 35,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -898,8 +848,8 @@
       "youtube_comments": 1021,
       "youtube_video_id": "5OndK0w1lYY",
       "reddit_posts": 17,
-      "reddit_comments": 1171,
-      "mentions": 1188,
+      "reddit_comments": 1174,
+      "mentions": 1191,
       "sentiment_pct": 56,
       "scores": {
         "1d": 888,
@@ -907,7 +857,7 @@
         "30d": 888
       },
       "score": 888,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -992,8 +942,8 @@
       "youtube_comments": 222,
       "youtube_video_id": "NKYea63tQmI",
       "reddit_posts": 87,
-      "reddit_comments": 2775,
-      "mentions": 2862,
+      "reddit_comments": 2779,
+      "mentions": 2866,
       "sentiment_pct": 66,
       "scores": {
         "1d": 883,
@@ -1001,17 +951,17 @@
         "30d": 883
       },
       "score": 883,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0063,
         "youtube_engagement": 0.1749,
-        "reddit_volume": 0.3202,
+        "reddit_volume": 0.3199,
         "google_trends": 0.54,
         "news_impact": 0.0,
-        "raw_amsi": 0.2002
+        "raw_amsi": 0.2001
       },
       "cast_full": [
         {
@@ -1100,7 +1050,7 @@
         "30d": 883
       },
       "score": 883,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1185,8 +1135,8 @@
       "youtube_comments": 5570,
       "youtube_video_id": "PypDSyIRRSs",
       "reddit_posts": 66,
-      "reddit_comments": 1823,
-      "mentions": 1889,
+      "reddit_comments": 1828,
+      "mentions": 1894,
       "sentiment_pct": 64,
       "scores": {
         "1d": 879,
@@ -1194,14 +1144,14 @@
         "30d": 879
       },
       "score": 879,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1905,
         "youtube_engagement": 0.1663,
-        "reddit_volume": 0.2113,
+        "reddit_volume": 0.2114,
         "google_trends": 0.33,
         "news_impact": 0.0,
         "raw_amsi": 0.1904
@@ -1288,7 +1238,7 @@
         "30d": 877
       },
       "score": 877,
-      "move": 20,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1382,7 +1332,7 @@
         "30d": 873
       },
       "score": 873,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1476,14 +1426,14 @@
         "30d": 872
       },
       "score": 872,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.2848,
         "youtube_engagement": 0.0357,
-        "reddit_volume": 0.0436,
+        "reddit_volume": 0.0435,
         "google_trends": 0.37,
         "news_impact": 0.0,
         "raw_amsi": 0.1735
@@ -1550,100 +1500,6 @@
     },
     {
       "rank": 15,
-      "tmdb_id": 1314481,
-      "title": "The Devil Wears Prada 2",
-      "director": "David Frankel",
-      "cast": "Meryl Streep, Anne Hathaway",
-      "release_date": "2026-04-29",
-      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-      "youtube_views": 14830520,
-      "youtube_likes": 179960,
-      "youtube_comments": 7125,
-      "youtube_video_id": "e9HXmMnUEdE",
-      "reddit_posts": 11,
-      "reddit_comments": 473,
-      "mentions": 484,
-      "sentiment_pct": 69,
-      "scores": {
-        "1d": 870,
-        "7d": 870,
-        "30d": 870
-      },
-      "score": 870,
-      "move": 3,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.1755,
-        "youtube_engagement": 0.4037,
-        "reddit_volume": 0.0542,
-        "google_trends": 0.22,
-        "news_impact": 0.0,
-        "raw_amsi": 0.168
-      },
-      "cast_full": [
-        {
-          "id": 5064,
-          "name": "Meryl Streep",
-          "character": "Miranda Priestly",
-          "profile_path": "/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg"
-        },
-        {
-          "id": 1813,
-          "name": "Anne Hathaway",
-          "character": "Andy Sachs",
-          "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
-        },
-        {
-          "id": 5081,
-          "name": "Emily Blunt",
-          "character": "Emily Charlton",
-          "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
-        },
-        {
-          "id": 2283,
-          "name": "Stanley Tucci",
-          "character": "Nigel Kipling",
-          "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
-        },
-        {
-          "id": 11181,
-          "name": "Kenneth Branagh",
-          "character": "Stuart",
-          "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
-        },
-        {
-          "id": 2223752,
-          "name": "Simone Ashley",
-          "character": "Amari",
-          "profile_path": "/NoWUSMGBrQrX23XK7eVjHlfaqY.jpg"
-        },
-        {
-          "id": 10580,
-          "name": "Tracie Thoms",
-          "character": "Lily",
-          "profile_path": "/9PKUJJtqFRbZDhme6uDzIu0mRIE.jpg"
-        },
-        {
-          "id": 1192389,
-          "name": "Tibor Feldman",
-          "character": "Irv Ravitz",
-          "profile_path": "/b6tVKhCkNWltObwyHpGfBLuaPt6.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 5065,
-          "name": "David Frankel",
-          "profile_path": "/ouq2ODK5MbbnCC72B8x29tJpKC7.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 22
-    },
-    {
-      "rank": 16,
       "tmdb_id": 1066313,
       "title": "The Draft!",
       "director": "Yusron Fuadi",
@@ -1664,7 +1520,7 @@
         "30d": 869
       },
       "score": 869,
-      "move": -2,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1737,6 +1593,100 @@
       "trends": 54
     },
     {
+      "rank": 16,
+      "tmdb_id": 1314481,
+      "title": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "cast": "Meryl Streep, Anne Hathaway",
+      "release_date": "2026-04-29",
+      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+      "youtube_views": 14830520,
+      "youtube_likes": 179960,
+      "youtube_comments": 7125,
+      "youtube_video_id": "e9HXmMnUEdE",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 68,
+      "scores": {
+        "1d": 865,
+        "7d": 865,
+        "30d": 865
+      },
+      "score": 865,
+      "move": -1,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.1755,
+        "youtube_engagement": 0.4037,
+        "reddit_volume": 0.0,
+        "google_trends": 0.22,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1572
+      },
+      "cast_full": [
+        {
+          "id": 5064,
+          "name": "Meryl Streep",
+          "character": "Miranda Priestly",
+          "profile_path": "/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg"
+        },
+        {
+          "id": 1813,
+          "name": "Anne Hathaway",
+          "character": "Andy Sachs",
+          "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+        },
+        {
+          "id": 5081,
+          "name": "Emily Blunt",
+          "character": "Emily Charlton",
+          "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+        },
+        {
+          "id": 2283,
+          "name": "Stanley Tucci",
+          "character": "Nigel Kipling",
+          "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
+        },
+        {
+          "id": 11181,
+          "name": "Kenneth Branagh",
+          "character": "Stuart",
+          "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+        },
+        {
+          "id": 2223752,
+          "name": "Simone Ashley",
+          "character": "Amari",
+          "profile_path": "/NoWUSMGBrQrX23XK7eVjHlfaqY.jpg"
+        },
+        {
+          "id": 10580,
+          "name": "Tracie Thoms",
+          "character": "Lily",
+          "profile_path": "/9PKUJJtqFRbZDhme6uDzIu0mRIE.jpg"
+        },
+        {
+          "id": 1192389,
+          "name": "Tibor Feldman",
+          "character": "Irv Ravitz",
+          "profile_path": "/b6tVKhCkNWltObwyHpGfBLuaPt6.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 5065,
+          "name": "David Frankel",
+          "profile_path": "/ouq2ODK5MbbnCC72B8x29tJpKC7.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 22
+    },
+    {
       "rank": 17,
       "tmdb_id": 1297842,
       "title": "GOAT",
@@ -1758,7 +1708,7 @@
         "30d": 863
       },
       "score": 863,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1852,14 +1802,14 @@
         "30d": 863
       },
       "score": 863,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0945,
         "youtube_engagement": 0.7801,
-        "reddit_volume": 0.0081,
+        "reddit_volume": 0.008,
         "google_trends": 0.02,
         "news_impact": 0.0,
         "raw_amsi": 0.151
@@ -1946,7 +1896,7 @@
         "30d": 862
       },
       "score": 862,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2004,7 +1954,7 @@
         "30d": 861
       },
       "score": 861,
-      "move": 10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2098,7 +2048,7 @@
         "30d": 859
       },
       "score": 859,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2192,7 +2142,7 @@
         "30d": 859
       },
       "score": 859,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2286,7 +2236,7 @@
         "30d": 857
       },
       "score": 857,
-      "move": -11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2380,7 +2330,7 @@
         "30d": 852
       },
       "score": 852,
-      "move": 32,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2474,7 +2424,7 @@
         "30d": 851
       },
       "score": 851,
-      "move": 32,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2573,7 +2523,7 @@
         "30d": 850
       },
       "score": 850,
-      "move": 40,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2667,7 +2617,7 @@
         "30d": 848
       },
       "score": 848,
-      "move": 22,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2755,14 +2705,14 @@
         "30d": 848
       },
       "score": 848,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1208,
         "youtube_engagement": 0.0105,
-        "reddit_volume": 0.0434,
+        "reddit_volume": 0.0433,
         "google_trends": 0.35,
         "news_impact": 0.0,
         "raw_amsi": 0.1165
@@ -2849,7 +2799,7 @@
         "30d": 847
       },
       "score": 847,
-      "move": -13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2943,14 +2893,14 @@
         "30d": 846
       },
       "score": 846,
-      "move": 37,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1811,
         "youtube_engagement": 0.1187,
-        "reddit_volume": 0.0111,
+        "reddit_volume": 0.011,
         "google_trends": 0.18,
         "news_impact": 0.0,
         "raw_amsi": 0.1103
@@ -3037,7 +2987,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3136,7 +3086,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": 27,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3230,7 +3180,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3329,7 +3279,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": 26,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3423,7 +3373,7 @@
         "30d": 842
       },
       "score": 842,
-      "move": -18,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3517,7 +3467,7 @@
         "30d": 840
       },
       "score": 840,
-      "move": -15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3611,17 +3561,17 @@
         "30d": 836
       },
       "score": 836,
-      "move": -11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.2911,
-        "reddit_volume": 0.0998,
+        "reddit_volume": 0.0996,
         "google_trends": 0.08,
         "news_impact": 0.0,
-        "raw_amsi": 0.0867
+        "raw_amsi": 0.0866
       },
       "cast_full": [
         {
@@ -3705,7 +3655,7 @@
         "30d": 836
       },
       "score": 836,
-      "move": -19,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3799,7 +3749,7 @@
         "30d": 834
       },
       "score": 834,
-      "move": 22,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3893,7 +3843,7 @@
         "30d": 834
       },
       "score": 834,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3987,7 +3937,7 @@
         "30d": 832
       },
       "score": 832,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4081,7 +4031,7 @@
         "30d": 831
       },
       "score": 831,
-      "move": 21,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4175,7 +4125,7 @@
         "30d": 831
       },
       "score": 831,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4269,7 +4219,7 @@
         "30d": 831
       },
       "score": 831,
-      "move": 20,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4363,7 +4313,7 @@
         "30d": 831
       },
       "score": 831,
-      "move": 20,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4457,7 +4407,7 @@
         "30d": 829
       },
       "score": 829,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4551,7 +4501,7 @@
         "30d": 828
       },
       "score": 828,
-      "move": -34,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4645,7 +4595,7 @@
         "30d": 828
       },
       "score": 828,
-      "move": -25,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4739,7 +4689,7 @@
         "30d": 828
       },
       "score": 828,
-      "move": 20,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4833,7 +4783,7 @@
         "30d": 827
       },
       "score": 827,
-      "move": -11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4927,7 +4877,7 @@
         "30d": 827
       },
       "score": 827,
-      "move": 21,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4997,7 +4947,7 @@
         "30d": 825
       },
       "score": 825,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5091,7 +5041,7 @@
         "30d": 825
       },
       "score": 825,
-      "move": 28,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5176,8 +5126,8 @@
       "youtube_comments": 216,
       "youtube_video_id": "pI-2t18TXqs",
       "reddit_posts": 4,
-      "reddit_comments": 175,
-      "mentions": 179,
+      "reddit_comments": 178,
+      "mentions": 182,
       "sentiment_pct": 65,
       "scores": {
         "1d": 823,
@@ -5185,14 +5135,14 @@
         "30d": 823
       },
       "score": 823,
-      "move": -10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0042,
         "youtube_engagement": 0.3281,
-        "reddit_volume": 0.02,
+        "reddit_volume": 0.0203,
         "google_trends": 0.01,
         "news_impact": 0.0,
         "raw_amsi": 0.0565
@@ -5279,7 +5229,7 @@
         "30d": 823
       },
       "score": 823,
-      "move": -30,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5364,8 +5314,8 @@
       "youtube_comments": 868,
       "youtube_video_id": "aHAwgnJL78Y",
       "reddit_posts": 3,
-      "reddit_comments": 749,
-      "mentions": 752,
+      "reddit_comments": 770,
+      "mentions": 773,
       "sentiment_pct": 55,
       "scores": {
         "1d": 822,
@@ -5373,17 +5323,17 @@
         "30d": 822
       },
       "score": 822,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0685,
         "youtube_engagement": 0.101,
-        "reddit_volume": 0.0841,
+        "reddit_volume": 0.0863,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.0525
+        "raw_amsi": 0.0529
       },
       "cast_full": [
         {
@@ -5467,7 +5417,7 @@
         "30d": 820
       },
       "score": 820,
-      "move": -19,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5561,7 +5511,7 @@
         "30d": 818
       },
       "score": 818,
-      "move": -25,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5655,7 +5605,7 @@
         "30d": 816
       },
       "score": 816,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5749,7 +5699,7 @@
         "30d": 814
       },
       "score": 814,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5843,7 +5793,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": -25,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5927,9 +5877,9 @@
       "youtube_likes": 689,
       "youtube_comments": 176,
       "youtube_video_id": "hIEdSvQ9_wA",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
+      "reddit_posts": 1,
+      "reddit_comments": 5,
+      "mentions": 6,
       "sentiment_pct": 53,
       "scores": {
         "1d": 812,
@@ -5937,17 +5887,17 @@
         "30d": 812
       },
       "score": 812,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0039,
         "youtube_engagement": 0.0829,
-        "reddit_volume": 0.0,
+        "reddit_volume": 0.0007,
         "google_trends": 0.08,
         "news_impact": 0.0,
-        "raw_amsi": 0.0296
+        "raw_amsi": 0.0298
       },
       "cast_full": [
         {
@@ -6031,7 +5981,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": -34,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6125,7 +6075,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": -19,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6219,7 +6169,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6313,7 +6263,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6412,7 +6362,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6506,7 +6456,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6600,7 +6550,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6694,7 +6644,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6788,7 +6738,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -30,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6864,7 +6814,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6958,7 +6908,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": -27,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7052,7 +7002,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7110,7 +7060,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7204,7 +7154,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7292,7 +7242,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": -27,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7386,7 +7336,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": -24,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7480,7 +7430,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": -45,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7574,7 +7524,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": -29,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7662,7 +7612,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -28,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7756,7 +7706,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": -30,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7850,7 +7800,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7944,7 +7894,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -36,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8125,13 +8075,13 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-          "score": 870,
+          "score": 865,
           "character": "Andy Sachs"
         }
       ],
       "popularity": 17.9584,
-      "sentiment_pct": 66,
-      "avg_film_score": 898,
+      "sentiment_pct": 65,
+      "avg_film_score": 896,
       "news_mentions": [
         {
           "source": "Hollywood Reporter",
@@ -8445,7 +8395,7 @@
         "30d": 918
       },
       "rank": 10,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8483,7 +8433,7 @@
         "30d": 918
       },
       "rank": 11,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8514,14 +8464,14 @@
       "avg_film_score": 855,
       "news_mentions": [],
       "mentions": 10,
-      "score": 905,
+      "score": 906,
       "scores": {
-        "1d": 905,
-        "7d": 905,
-        "30d": 905
+        "1d": 906,
+        "7d": 906,
+        "30d": 906
       },
       "rank": 12,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8559,7 +8509,7 @@
         "30d": 904
       },
       "rank": 13,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8597,7 +8547,7 @@
         "30d": 900
       },
       "rank": 14,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8635,7 +8585,7 @@
         "30d": 886
       },
       "rank": 15,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8673,7 +8623,7 @@
         "30d": 878
       },
       "rank": 16,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8749,7 +8699,7 @@
         "30d": 877
       },
       "rank": 18,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8787,7 +8737,7 @@
         "30d": 873
       },
       "rank": 19,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8817,7 +8767,7 @@
         "30d": 857
       },
       "rank": 20,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8847,7 +8797,7 @@
         "30d": 857
       },
       "rank": 21,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8877,7 +8827,7 @@
         "30d": 857
       },
       "rank": 22,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8907,7 +8857,7 @@
         "30d": 857
       },
       "rank": 23,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8937,7 +8887,7 @@
         "30d": 857
       },
       "rank": 24,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8967,7 +8917,7 @@
         "30d": 857
       },
       "rank": 25,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8997,7 +8947,7 @@
         "30d": 854
       },
       "rank": 26,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9027,7 +8977,7 @@
         "30d": 854
       },
       "rank": 27,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9057,7 +9007,7 @@
         "30d": 854
       },
       "rank": 28,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9087,7 +9037,7 @@
         "30d": 854
       },
       "rank": 29,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9117,7 +9067,7 @@
         "30d": 854
       },
       "rank": 30,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9147,7 +9097,7 @@
         "30d": 850
       },
       "rank": 31,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9177,7 +9127,7 @@
         "30d": 850
       },
       "rank": 32,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9207,7 +9157,7 @@
         "30d": 850
       },
       "rank": 33,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9237,7 +9187,7 @@
         "30d": 850
       },
       "rank": 34,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9267,7 +9217,7 @@
         "30d": 850
       },
       "rank": 35,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9297,7 +9247,7 @@
         "30d": 847
       },
       "rank": 36,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9327,7 +9277,7 @@
         "30d": 847
       },
       "rank": 37,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9357,7 +9307,7 @@
         "30d": 847
       },
       "rank": 38,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9387,7 +9337,7 @@
         "30d": 847
       },
       "rank": 39,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9417,7 +9367,7 @@
         "30d": 847
       },
       "rank": 40,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9447,7 +9397,7 @@
         "30d": 847
       },
       "rank": 41,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9477,7 +9427,7 @@
         "30d": 839
       },
       "rank": 42,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9507,7 +9457,7 @@
         "30d": 839
       },
       "rank": 43,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9537,7 +9487,7 @@
         "30d": 839
       },
       "rank": 44,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9567,7 +9517,7 @@
         "30d": 839
       },
       "rank": 45,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9598,7 +9548,7 @@
       },
       "rank": 46,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 17401,
@@ -9628,7 +9578,7 @@
       },
       "rank": 47,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 1474123,
@@ -9657,7 +9607,7 @@
         "30d": 838
       },
       "rank": 48,
-      "move": -5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9687,7 +9637,7 @@
         "30d": 838
       },
       "rank": 49,
-      "move": -5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9717,7 +9667,7 @@
         "30d": 838
       },
       "rank": 50,
-      "move": -5,
+      "move": 0,
       "is_new": false
     }
   ],
@@ -9975,7 +9925,7 @@
         "30d": 852
       },
       "rank": 8,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10005,7 +9955,7 @@
         "30d": 850
       },
       "rank": 9,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10095,7 +10045,7 @@
         "30d": 843
       },
       "rank": 12,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10155,7 +10105,7 @@
         "30d": 843
       },
       "rank": 14,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10185,7 +10135,7 @@
         "30d": 841
       },
       "rank": 15,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10215,7 +10165,7 @@
         "30d": 838
       },
       "rank": 16,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10275,7 +10225,7 @@
         "30d": 832
       },
       "rank": 18,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10335,7 +10285,7 @@
         "30d": 826
       },
       "rank": 20,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10365,7 +10315,7 @@
         "30d": 826
       },
       "rank": 21,
-      "move": 4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10396,7 +10346,7 @@
       },
       "rank": 22,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 7623,
@@ -10425,7 +10375,7 @@
         "30d": 824
       },
       "rank": 23,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10455,7 +10405,7 @@
         "30d": 823
       },
       "rank": 24,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10485,7 +10435,7 @@
         "30d": 822
       },
       "rank": 25,
-      "move": -2,
+      "move": 0,
       "is_new": false
     }
   ]
