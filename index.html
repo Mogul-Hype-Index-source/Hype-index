@@ -1,896 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>MoviePass Hype Index V2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script>
-  // Apply persisted theme BEFORE first paint to avoid flash-of-wrong-theme.
-  (function(){
-    try {
-      var t = localStorage.getItem('hypeindex-theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', t);
-    } catch(e) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mogul Hype Index V2</title>
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Bebas+Neue&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Fetch polyfill -->
+  <script src="https://unpkg.com/whatwg-fetch@3.6.20/dist/fetch.umd.js"></script>
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #0a0a0a;
+      --line: #1f1f1f;
+      --text: #ffffff;
+      --muted: #8a8a8a;
+      --gold: #F5A623;
+      --green: #00FF87;
+      --red: #FF3B5C;
     }
-  })();
-</script>
-<style>
-  :root,
-  [data-theme="dark"]{
-    --bg:#080808;
-    --bg-2:#0f0f0f;
-    --bg-3:#141414;
-    --bg-panel:#0a0a0a;          /* market / table head / footer / movers */
-    --bg-ticker:#060606;
-    --bg-row-hover:#0d0d0d;
-    --topbar-grad-1:#0b0b0b;
-    --topbar-grad-2:#070707;
-    --line:#1f1f1f;
-    --line-2:#2a2a2a;
-    --text:#ffffff;
-    --text-strong:#ffffff;
-    --text-secondary:#dddddd;
-    --text-soft:#c9c9c9;
-    --mute:#8a8a8a;
-    --gold:#F5A623;
-    --gold-dim:#c78615;
-    --gold-flash:#FFD700;
-    --gold-pill-bg:#1a1305;
-    --gold-pill-border:#3a2a09;
-    --gold-grad-1:#1a1305;
-    --gold-grad-2:#0c0903;
-    --green:#00FF87;
-    --red:#FF3B5C;
-    --red-mute:#ff5c74;
-    --amber:#F5A623;
-    --bar-bg:#1a1a1a;
-    --poster-bg:#222222;
-    --poster-fallback-1:#333333;
-    --poster-fallback-2:#0a0a0a;
-    --live-dot:#ff2240;
-    --live-glow:rgba(255,34,64,.7);
-    --live-glow-fade:rgba(255,34,64,0);
-    --sweep-line:rgba(245,166,35,.85);
-    --sweep-fill:rgba(245,166,35,.035);
-    --score-glow:rgba(255,215,0,.55);
-    --flat-arrow:#555555;
-    --on-gold:#111111;            /* text on gold buttons */
-    --on-poster:#ffffff;          /* initials on poster fallback */
-  }
-
-  [data-theme="light"]{
-    --bg:#ffffff;
-    --bg-2:#f5f5f5;
-    --bg-3:#fafafa;
-    --bg-panel:#f5f5f5;
-    --bg-ticker:#f5f5f5;
-    --bg-row-hover:#f9f9f9;
-    --topbar-grad-1:#ffffff;
-    --topbar-grad-2:#fafafa;
-    --line:#e0e0e0;
-    --line-2:#d4d4d4;
-    --text:#111111;
-    --text-strong:#111111;
-    --text-secondary:#333333;
-    --text-soft:#444444;
-    --mute:#666666;
-    --gold:#D4920A;
-    --gold-dim:#a87208;
-    --gold-flash:#B8800A;
-    --gold-pill-bg:#fff4dc;
-    --gold-pill-border:#e8c478;
-    --gold-grad-1:#fff4dc;
-    --gold-grad-2:#fce8b8;
-    --green:#00A859;
-    --red:#D93025;
-    --red-mute:#D93025;
-    --amber:#D4920A;
-    --bar-bg:#e8e8e8;
-    --poster-bg:#cccccc;
-    --poster-fallback-1:#cccccc;
-    --poster-fallback-2:#999999;
-    --live-dot:#D93025;
-    --live-glow:rgba(217,48,37,.5);
-    --live-glow-fade:rgba(217,48,37,0);
-    --sweep-line:rgba(212,146,10,.85);
-    --sweep-fill:rgba(212,146,10,.06);
-    --score-glow:rgba(184,128,10,.4);
-    --flat-arrow:#999999;
-    --on-gold:#ffffff;
-    --on-poster:#333333;
-  }
-  *{box-sizing:border-box}
-  html,body{
-    margin:0;padding:0;background:var(--bg);color:var(--text);
-    font-family:'Inter',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased;
-    transition:background-color .35s ease, color .35s ease;
-  }
-  a{color:inherit;text-decoration:none}
-  .mono,.num{font-family:'Rajdhani',sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.02em}
-  .head{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em}
-
-  /* Theme transitions on every element that swaps colors. Excluding the
-     live-dot pulse + score flash so those animations stay snappy. */
-  .topbar,.market,.ticker,.movers,.tabs,.toolbar,.footer,
-  .snapshot,.datenav button,.sort button,.toolbar .search,.mcard,.poster,
-  .rankings thead th,.rankings tbody td,.rankings tbody tr,
-  .market .sep,.bar,.ent .title .badge,.theme-toggle{
-    transition:background-color .35s ease, color .35s ease,
-               border-color .35s ease, box-shadow .35s ease;
-  }
-
-  /* ---------- Header ---------- */
-  .topbar{
-    display:flex;align-items:center;gap:24px;
-    padding:18px 28px;border-bottom:1px solid var(--line);
-    background:linear-gradient(180deg,var(--topbar-grad-1),var(--topbar-grad-2));
-    position:sticky;top:0;z-index:20;
-  }
-  .logo{display:flex;align-items:baseline;gap:10px}
-  .logo .mp{font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--text-strong)}
-  .logo .hi{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:22px;letter-spacing:.12em}
-  .logo .v2{color:var(--mute);font-size:11px;border:1px solid var(--line-2);padding:2px 6px;border-radius:3px;margin-left:4px;font-family:'Rajdhani',sans-serif}
-
-  .live{display:flex;align-items:center;gap:10px;margin-left:8px}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--live-dot);box-shadow:0 0 0 0 var(--live-glow);animation:pulse 1.6s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 var(--live-glow)}70%{box-shadow:0 0 0 10px var(--live-glow-fade)}100%{box-shadow:0 0 0 0 var(--live-glow-fade)}}
-  .live .lbl{font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.15em;color:var(--red-mute);font-size:12px}
-  .live .clk{font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--text-strong);font-size:13px}
-
-  .spacer{flex:1}
-
-  .snapshot{display:flex;background:var(--bg-3);border:1px solid var(--line-2);border-radius:999px;padding:3px}
-  .snapshot button{background:transparent;border:0;color:var(--mute);padding:6px 14px;border-radius:999px;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.1em;font-size:12px;cursor:pointer}
-  .snapshot button.active{background:var(--gold);color:var(--on-gold)}
-
-  .datenav{display:flex;align-items:center;gap:8px;margin-left:8px}
-  .datenav button{background:var(--bg-3);border:1px solid var(--line-2);color:var(--text-secondary);width:30px;height:30px;border-radius:6px;cursor:pointer;font-size:14px}
-  .datenav .date{font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--text-secondary);padding:0 6px}
-  .datenav .today{width:auto;padding:0 12px;color:var(--gold);border-color:var(--gold-pill-border);background:var(--gold-pill-bg)}
-
-  /* ---------- Theme toggle ---------- */
-  .theme-toggle{
-    width:34px;height:34px;border-radius:8px;
-    background:var(--bg-3);border:1px solid var(--line-2);
-    color:var(--gold);cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    margin-left:4px;padding:0;
-  }
-  .theme-toggle:hover{background:var(--gold-pill-bg);border-color:var(--gold-pill-border)}
-  .theme-toggle svg{width:16px;height:16px;display:block}
-  .theme-toggle .icon-sun{display:none}
-  .theme-toggle .icon-moon{display:block}
-  [data-theme="light"] .theme-toggle .icon-sun{display:block}
-  [data-theme="light"] .theme-toggle .icon-moon{display:none}
-
-  /* ---------- Market summary ---------- */
-  .market{
-    display:flex;align-items:center;gap:22px;
-    padding:12px 28px;border-bottom:1px solid var(--line);
-    background:var(--bg-panel);font-family:'Rajdhani',sans-serif;flex-wrap:wrap;
-  }
-  .market .pill{display:flex;align-items:center;gap:8px;font-weight:600;letter-spacing:.06em;font-size:13px}
-  .market .k{color:var(--mute);font-size:11px;letter-spacing:.18em}
-  .market .v{font-size:14px;color:var(--text-strong)}
-  .market .up{color:var(--green)}
-  .market .down{color:var(--red)}
-  .market .flat{color:var(--mute)}
-  .market .sep{width:1px;height:18px;background:var(--line-2)}
-  .market .cd{color:var(--gold);font-weight:700;letter-spacing:.08em}
-
-  /* ---------- Ticker ---------- */
-  .ticker{display:flex;align-items:stretch;height:38px;border-bottom:1px solid var(--line);background:var(--bg-ticker)}
-  .ticker .brk{
-    flex:0 0 auto;padding:0 16px;display:flex;align-items:center;
-    background:linear-gradient(90deg,var(--gold-grad-1),var(--gold-grad-2));
-    color:var(--gold);font-family:'Bebas Neue',sans-serif;letter-spacing:.18em;font-size:14px;
-    border-right:1px solid var(--line-2);
-    z-index:2;position:relative;
-  }
-  .ticker .viewport{flex:1 1 auto;min-width:0;overflow:hidden;position:relative;display:flex;align-items:center}
-  .ticker .track{display:flex;gap:46px;white-space:nowrap;padding-left:30px;animation:scroll 90s linear infinite;font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--text-secondary)}
-  .ticker .track a{display:inline-block;color:inherit}
-  .ticker .track a:hover b{color:var(--gold)}
-  .ticker .track b{color:var(--text-strong);font-weight:700;letter-spacing:.04em}
-  .ticker .track i{color:var(--mute);font-style:normal;font-weight:500}
-  .ticker .track .bullet{color:var(--gold);margin-right:10px}
-  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-  /* ---------- Movers strip ---------- */
-  .movers{
-    padding:16px 28px 18px;border-bottom:1px solid var(--line);
-    display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;
-    background:var(--bg-panel);
-  }
-  .movers .label{font-family:'Bebas Neue',sans-serif;color:var(--text-strong);font-size:16px;letter-spacing:.14em}
-  .movers .label small{display:block;color:var(--mute);font-family:'Rajdhani',sans-serif;letter-spacing:.12em;font-size:11px}
-  .movers .strip{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
-  .movers .strip::-webkit-scrollbar{display:none}
-  .mcard{
-    flex:0 0 auto;min-width:200px;
-    background:var(--bg-3);border:1px solid var(--line-2);border-radius:8px;
-    padding:10px 12px;display:flex;gap:10px;align-items:center;
-  }
-  .mcard .poster{width:36px;height:52px;border-radius:3px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--poster-bg)}
-  .mcard .ttl{font-weight:600;color:var(--text-strong);font-size:13px;line-height:1.2;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .mcard .row{display:flex;align-items:center;gap:10px;margin-top:4px}
-  .mcard .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px}
-  .mcard .sc{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:18px;line-height:1}
-  .up{color:var(--green)!important}
-  .down{color:var(--red)!important}
-
-  /* ---------- Tabs + sort ---------- */
-  .tabs{display:flex;align-items:center;gap:4px;padding:18px 28px 0}
-  .tab{padding:10px 18px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.14em;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent}
-  .tab.active{color:var(--text-strong);border-bottom-color:var(--gold)}
-  .tabs .count{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:12px;margin-left:6px;letter-spacing:.1em}
-
-  .toolbar{display:flex;align-items:center;gap:10px;padding:10px 28px 14px;border-bottom:1px solid var(--line)}
-  .toolbar .lbl{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.18em}
-  .sort{display:flex;gap:4px;flex:1;flex-wrap:wrap}
-  .sort button{background:transparent;border:1px solid var(--line-2);color:var(--text-soft);padding:6px 12px;border-radius:999px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;cursor:pointer}
-  .sort button.active{background:var(--gold-pill-bg);color:var(--gold);border-color:var(--gold-pill-border)}
-  .toolbar .search{display:flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 10px;border-radius:6px;color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:12px}
-  .toolbar .search input{background:transparent;border:0;outline:0;color:var(--text-strong);font-family:inherit;font-size:12px;width:200px}
-
-  /* ---------- Table ---------- */
-  table.rankings{width:100%;border-collapse:collapse;margin:0}
-  .rankings thead th{
-    text-align:left;font-family:'Rajdhani',sans-serif;font-weight:600;
-    color:var(--mute);font-size:11px;letter-spacing:.2em;
-    padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg-panel);
-    position:sticky;top:0;
-  }
-  .rankings tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
-  .rankings tbody tr:hover{background:var(--bg-row-hover)}
-  .rankings tr.hl{box-shadow:inset 3px 0 0 var(--gold)}
-  .rk{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:28px;line-height:1;min-width:42px}
-  .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;min-width:60px}
-  .mv.flat{color:var(--flat-arrow)}
-  .ent{display:flex;gap:12px;align-items:center;min-width:340px}
-  .poster{width:42px;height:60px;border-radius:3px;flex:0 0 auto;background:var(--poster-bg);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--on-poster);font-size:18px;letter-spacing:.05em;overflow:hidden;position:relative;border:1px solid var(--line-2)}
-  .ent .meta{display:flex;flex-direction:column;gap:3px;min-width:0}
-  .ent .title{color:var(--text-strong);font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
-  .ent .title .badge{font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:.14em;padding:2px 6px;border-radius:3px;background:var(--gold-pill-bg);color:var(--gold);border:1px solid var(--gold-pill-border)}
-  .ent .sub{color:var(--mute);font-size:12px}
-  .ent .sub .dot{display:inline-block;width:3px;height:3px;border-radius:50%;background:var(--mute);vertical-align:middle;margin:0 6px}
-  .fire{color:var(--gold);filter:saturate(1.2)}
-  .num-col{font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--text-secondary);font-size:15px;font-variant-numeric:tabular-nums;transition:color 1s ease-out}
-  .num-col.flash{color:var(--gold-flash);transition:color .08s ease-out}
-  .num-sub{color:var(--mute);font-size:11px;letter-spacing:.08em;font-family:'Rajdhani',sans-serif}
-  .sent{display:flex;align-items:center;gap:10px;min-width:150px}
-  .bar{flex:1;height:6px;background:var(--bar-bg);border-radius:3px;overflow:hidden}
-  .bar > i{display:block;height:100%;border-radius:3px}
-  .sent .pct{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;min-width:38px;text-align:right}
-  .score{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:30px;line-height:1;text-align:right;letter-spacing:.02em;transition:color 1.2s ease-out,text-shadow 1.2s ease-out}
-  .score.flash{color:var(--gold-flash);text-shadow:0 0 14px var(--score-glow);transition:color .08s ease-out,text-shadow .08s ease-out}
-  .rankings tbody tr{box-shadow:inset 0 0 0 0 transparent;transition:box-shadow 1s ease-out,background-color 1s ease-out}
-  .rankings tbody tr.sweep{box-shadow:inset 3px 0 0 0 var(--sweep-line);background-color:var(--sweep-fill);transition:box-shadow .12s ease-out,background-color .12s ease-out}
-  .trend{display:inline-block;margin-left:6px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);vertical-align:middle}
-  .trend.up{color:var(--green)}
-  .trend.down{color:var(--red)}
-
-  /* ---------- States ---------- */
-  .empty{padding:60px 28px;color:var(--mute);text-align:center;font-family:'Rajdhani',sans-serif;letter-spacing:.1em}
-  .err{color:var(--red)}
-
-  /* ---------- Footer ---------- */
-  .footer{
-    display:flex;align-items:center;gap:22px;padding:20px 28px;border-top:1px solid var(--line);
-    background:var(--bg-panel);margin-top:10px;flex-wrap:wrap;
-  }
-  .footer .cd{font-family:'Rajdhani',sans-serif;color:var(--text-secondary);letter-spacing:.08em}
-  .footer .cd b{color:var(--gold);font-weight:700}
-  .footer .ts{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:12px;letter-spacing:.1em}
-  .footer .spacer{flex:1}
-  .footer .play{
-    background:var(--gold);color:var(--on-gold);border:0;border-radius:999px;
-    padding:10px 22px;font-family:'Bebas Neue',sans-serif;font-size:14px;
-    letter-spacing:.16em;cursor:pointer;text-decoration:none;display:inline-block;
-  }
-
-  /* ============================================================
-     MOBILE LAYOUT  ≤ 430px (iPhone 15 = 390px, iPhone 15 Pro Max = 430px)
-     ============================================================ */
-  @media (max-width: 430px){
-
-    /* ----- Header ----- */
-    .topbar{
-      padding:12px 14px;gap:10px;flex-wrap:wrap;
-      row-gap:10px;
-    }
-    .logo{gap:6px;flex:0 0 auto;white-space:nowrap}
-    .logo .mp{font-size:15px}
-    .logo .hi{font-size:15px;letter-spacing:.08em}
-    .logo .v2{display:none}
-
-    .live{margin-left:0;gap:6px}
-    .live .lbl{font-size:10px;letter-spacing:.1em}
-    .live .clk{font-size:11px}
-
-    .spacer{display:none}
-
-    .snapshot{order:5;flex:0 0 auto;padding:2px}
-    .snapshot button{padding:5px 10px;font-size:11px;letter-spacing:.06em}
-
-    .datenav{order:6;margin-left:0;gap:5px;flex:1 1 auto;justify-content:flex-end}
-    .datenav button{width:26px;height:26px;font-size:12px}
-    .datenav .date{font-size:11px;padding:0 2px}
-    .datenav .today{padding:0 8px;font-size:10px}
-
-    .theme-toggle{width:30px;height:30px}
-    .theme-toggle svg{width:14px;height:14px}
-
-    /* ----- Market summary: keep ONLY rising / falling / next update ----- */
-    .market{padding:10px 14px;gap:14px;justify-content:space-between}
-    .market > *:not(.mobile-show){display:none}
-    .market .pill{font-size:12px}
-    .market .cd{font-size:13px}
-
-    /* ----- Ticker ----- */
-    .ticker{height:34px}
-    .ticker .brk{padding:0 12px;font-size:12px;letter-spacing:.12em}
-    .ticker .track{font-size:12px;gap:32px;padding-left:18px}
-
-    /* ----- Movers strip: 1.5 cards visible so swipe is obvious ----- */
-    .movers{
-      grid-template-columns:1fr;gap:10px;
-      padding:14px 14px 14px 14px;
-    }
-    .movers .label{font-size:14px;letter-spacing:.12em}
-    .movers .label small{font-size:10px}
-    .movers .strip{
-      margin:0 -14px;padding:0 14px;            /* edge-to-edge swipe */
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling:touch;
-    }
-    .mcard{
-      min-width:62vw;                            /* ~1.5 cards visible */
-      max-width:62vw;
-      scroll-snap-align:start;
-    }
-    .mcard .ttl{max-width:none}
-
-    /* ----- Tabs / sort: single horizontal scrolling row, never wrap ----- */
-    .tabs{padding:14px 14px 0;gap:2px}
-    .tab{padding:8px 10px;font-size:14px;letter-spacing:.1em}
-    .tabs .count{font-size:10px}
-
-    .toolbar{
-      padding:10px 14px 12px;gap:8px;
-      flex-wrap:wrap;
-    }
-    .toolbar .lbl{flex:0 0 auto}
-    .sort{
-      flex:1 1 100%;                             /* full row to itself */
-      flex-wrap:nowrap !important;               /* never stack */
-      overflow-x:auto;
-      scrollbar-width:none;
-      -webkit-overflow-scrolling:touch;
-      padding-bottom:2px;
-    }
-    .sort::-webkit-scrollbar{display:none}
-    .sort button{
-      flex:0 0 auto;
-      padding:6px 11px;font-size:11px;letter-spacing:.05em;
-    }
-    .toolbar .search{display:none}               /* search hidden on mobile, sort takes full row */
-
-    /* ----- Rankings table ----- */
-    /* Hide VIEWS (col 4) and MENTIONS (col 5) on mobile per spec.
-       Visible columns: # | MOVE | ENTITY | SENTIMENT | SCORE */
-    .rankings-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-    .rankings thead th:nth-child(4),
-    .rankings thead th:nth-child(5),
-    .rankings tbody td:nth-child(4),
-    .rankings tbody td:nth-child(5){display:none}
-
-    .rankings thead th{padding:10px 8px;font-size:9px;letter-spacing:.12em}
-    .rankings tbody td{padding:11px 8px}
-    .rankings thead th:first-child,
-    .rankings tbody td:first-child{padding-left:14px}
-    .rankings thead th:last-child,
-    .rankings tbody td:last-child{padding-right:14px}
-
-    .rk{font-size:22px;min-width:26px}
-    .mv{font-size:12px;min-width:34px}
-
-    .ent{min-width:0;gap:9px}
-    .ent .meta{min-width:0;flex:1 1 auto;overflow:hidden}
-    .ent .title{font-size:12px;line-height:1.2;gap:5px;flex-wrap:wrap}
-    .ent .title .badge{font-size:8px;padding:1px 4px}
-    .ent .sub{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .ent .sub .dot{margin:0 4px}
-    .poster{width:32px;height:46px;font-size:13px}
-
-    .sent{min-width:0;gap:6px}
-    .sent .pct{font-size:11px;min-width:26px}
-    .bar{height:5px}
-
-    /* SCORE column always visible on the right edge — sticky-pin in case
-       the table ever overflows horizontally on a narrower phone. The
-       sticky cell inherits the row's background so striped/hover states
-       look right; thead pins to the panel color it already uses. */
-    .rankings tbody td:last-child{
-      position:sticky;right:0;
-      background:var(--bg);
-      box-shadow:-6px 0 10px -8px rgba(0,0,0,.35);
-      z-index:1;
-    }
-    .rankings tbody tr:hover td:last-child{background:var(--bg-row-hover)}
-    .rankings tbody tr.hl td:last-child{box-shadow:inset 3px 0 0 var(--gold),-6px 0 10px -8px rgba(0,0,0,.35)}
-    .rankings thead th:last-child{
-      position:sticky;right:0;
-      background:var(--bg-panel);
-      box-shadow:-6px 0 10px -8px rgba(0,0,0,.35);
-      z-index:3;
-    }
-    .score{font-size:22px}
-    .trend{font-size:9px;margin-left:3px}
-
-    /* ----- Footer ----- */
-    .footer{padding:16px 14px;gap:14px}
-    .footer .cd{font-size:12px}
-    .footer .ts{font-size:10px}
-    .footer .play{padding:8px 16px;font-size:12px;letter-spacing:.12em}
-  }
-
-  /* Even narrower (small Android, iPhone SE) — keep everything readable */
-  @media (max-width: 360px){
-    .topbar{padding:10px 10px}
-    .logo .mp,.logo .hi{font-size:14px}
-    .snapshot button{padding:5px 8px;font-size:10px}
-    .datenav .today{padding:0 6px}
-    .mcard{min-width:70vw;max-width:70vw}
-  }
-</style>
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+    .header { padding: 18px 28px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--gold); }
+    .logo span { color: #fff; font-family: sans-serif; font-weight: bold; }
+    .market-bar { background: var(--panel); padding: 10px 28px; border-bottom: 1px solid var(--line); font-family: 'Rajdhani', sans-serif; font-size: 13px; display: flex; gap: 20px; }
+    .ticker { background: #060606; height: 38px; border-bottom: 1px solid var(--line); overflow: hidden; display: flex; align-items: center; white-space: nowrap; }
+    .ticker-label { background: var(--gold); color: #000; font-family: 'Bebas Neue', sans-serif; padding: 0 15px; height: 100%; display: flex; align-items: center; z-index: 2; }
+    .ticker-track { display: inline-flex; animation: scroll 60s linear infinite; padding-left: 20px; }
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .movers-strip { background: var(--panel); padding: 15px 28px; border-bottom: 1px solid var(--line); overflow-x: auto; display: flex; gap: 15px; }
+    .mover-card { background: #141414; border: 1px solid var(--line); padding: 10px; border-radius: 8px; min-width: 180px; display: flex; justify-content: space-between; align-items: center; }
+    .tabs { padding: 15px 28px; display: flex; gap: 20px; border-bottom: 1px solid var(--line); }
+    .tab { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
+    .tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .table-container { padding: 0 28px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { text-align: left; font-family: 'Rajdhani', sans-serif; font-size: 11px; color: var(--muted); padding: 12px 10px; border-bottom: 1px solid var(--line); text-transform: uppercase; }
+    td { padding: 15px 10px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .rank { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--gold); }
+    .score { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--gold); text-align: right; }
+    .up { color: var(--green); } .down { color: var(--red); }
+  </style>
 </head>
 <body>
-
-<!-- ================= HEADER ================= -->
-<div class="topbar">
-  <div class="logo">
-    <span class="mp">moviepass.</span>
-    <span class="hi">HYPE INDEX</span>
-    <span class="v2">V2</span>
+  <div class="header">
+    <div class="logo"><span>moviepass.</span> HYPE INDEX V2</div>
+    <div id="clock" style="font-family: 'Rajdhani'; font-weight: bold;">00:00:00 UTC</div>
   </div>
-  <div class="live">
-    <span class="dot"></span>
-    <span class="lbl">LIVE</span>
-    <span class="clk" id="clk">--:--:-- UTC</span>
+  <div class="market-bar" id="market-bar">
+    <span>100 TITLES</span> <span class="up">↑ 42 RISING</span> <span class="down">↓ 18 FALLING</span> <span>LAST UPDATED: 00:00 UTC</span>
   </div>
-  <div class="spacer"></div>
-  <div class="snapshot" role="tablist" aria-label="Snapshot window" id="snapshot">
-    <button data-window="1d">1D</button>
-    <button data-window="7d" class="active">7D</button>
-    <button data-window="30d">30D</button>
+  <div class="ticker">
+    <div class="ticker-label">BREAKING</div>
+    <div class="ticker-track" id="ticker-track"></div>
   </div>
-  <div class="datenav">
-    <button aria-label="Previous day" id="prevDay">‹</button>
-    <span class="date" id="navDate">—</span>
-    <button aria-label="Next day" id="nextDay">›</button>
-    <button class="today" id="todayBtn">TODAY</button>
+  <div class="movers-strip" id="movers-strip"></div>
+  <div class="tabs">
+    <div class="tab active" onclick="setTab('projects')">MOVIES</div>
+    <div class="tab" onclick="setTab('actors')">ACTORS</div>
+    <div class="tab" onclick="setTab('directors')">DIRECTORS</div>
   </div>
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle light / dark mode" title="Toggle light / dark mode">
-    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="4"/>
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-    </svg>
-  </button>
-</div>
-
-<!-- ================= MARKET SUMMARY ================= -->
-<div class="market" id="market">
-  <div class="pill"><span class="k">TITLES</span><span class="v" id="m_total">—</span></div>
-  <span class="sep"></span>
-  <div class="pill up mobile-show"><span>▲</span><span><span id="m_rising">—</span> RISING</span></div>
-  <div class="pill down mobile-show"><span>▼</span><span><span id="m_falling">—</span> FALLING</span></div>
-  <div class="pill flat"><span>—</span><span><span id="m_flat">—</span> FLAT</span></div>
-  <span class="sep"></span>
-  <div class="pill"><span class="k">AVG SCORE</span><span class="v" id="m_avg">—</span></div>
-  <div class="pill"><span class="k">TOTAL MENTIONS 24H</span><span class="v" id="m_mentions">—</span></div>
-  <span class="sep"></span>
-  <div class="pill"><span class="k">LAST UPDATED</span><span class="v" id="m_updated">—</span></div>
-  <div class="pill mobile-show"><span class="k">NEXT UPDATE</span><span class="cd" id="cd">--:--:--</span></div>
-</div>
-
-<!-- ================= NEWS TICKER ================= -->
-<div class="ticker">
-  <div class="brk">● BREAKING</div>
-  <div class="viewport">
-    <div class="track" id="track"></div>
+  <div class="table-container">
+    <table id="rankings-table">
+      <thead>
+        <tr>
+          <th>RANK</th>
+          <th>MOVE</th>
+          <th>ENTITY</th>
+          <th>MENTIONS</th>
+          <th>SENTIMENT</th>
+          <th style="text-align: right;">SCORE</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
   </div>
-</div>
 
-<!-- ================= MOVERS ================= -->
-<div class="movers">
-  <div class="label">TODAY'S MOVERS<small>LAST 24H</small></div>
-  <div class="strip" id="strip"></div>
-</div>
+  <script>
+    let currentData = null;
+    let activeTab = 'projects';
 
-<!-- ================= TABS ================= -->
-<div class="tabs">
-  <div class="tab active">MOVIES<span class="count" id="tabCount">—</span></div>
-  <div class="tab" style="opacity:.45;cursor:not-allowed" title="Coming soon">ACTORS<span class="count">—</span></div>
-  <div class="tab" style="opacity:.45;cursor:not-allowed" title="Coming soon">DIRECTORS<span class="count">—</span></div>
-</div>
-
-<div class="toolbar">
-  <span class="lbl">SORT BY</span>
-  <div class="sort" id="sort">
-    <button data-sort="rank">RANK</button>
-    <button data-sort="score" class="active">SCORE</button>
-    <button data-sort="views">VIEWS</button>
-    <button data-sort="mentions">MENTIONS</button>
-    <button data-sort="sentiment">SENTIMENT</button>
-    <button data-sort="move">BIGGEST MOVE</button>
-  </div>
-  <div class="search">⌕ <input id="searchBox" placeholder="Search titles, directors, cast…" /></div>
-</div>
-
-<!-- ================= RANKINGS TABLE ================= -->
-<div class="rankings-wrap">
-<table class="rankings">
-  <thead>
-    <tr>
-      <th style="width:56px">#</th>
-      <th style="width:72px">MOVE</th>
-      <th>ENTITY</th>
-      <th style="width:120px">VIEWS</th>
-      <th style="width:120px">MENTIONS</th>
-      <th style="width:180px">SENTIMENT</th>
-      <th style="width:120px;text-align:right">SCORE</th>
-    </tr>
-  </thead>
-  <tbody id="tbody">
-    <tr><td colspan="7" class="empty">Loading live Hype Index data…</td></tr>
-  </tbody>
-</table>
-</div>
-
-<!-- ================= FOOTER ================= -->
-<div class="footer">
-  <div class="cd">NEXT UPDATE IN <b id="cd2">--:--:--</b></div>
-  <div class="ts" id="footTs">—</div>
-  <div class="spacer"></div>
-  <a class="play" href="games.html">PLAY DFS →</a>
-</div>
-
-<script>
-/* =========================================================
-   MoviePass Hype Index V2 — live frontend
-   Reads data/index.json (refreshed hourly by scripts/update.py)
-   ========================================================= */
-
-const STATE = {
-  data: null,
-  window: '7d',
-  sort: 'score',
-  search: '',
-};
-
-/* ---------- Formatters ---------- */
-const fmtCount = n => {
-  if (n == null || isNaN(n)) return '—';
-  if (n >= 1e9) return (n/1e9).toFixed(2) + 'B';
-  if (n >= 1e6) return (n/1e6).toFixed(2) + 'M';
-  if (n >= 1e3) return (n/1e3).toFixed(1) + 'K';
-  return String(Math.round(n));
-};
-const fmtDate = iso => {
-  if (!iso) return '—';
-  const d = new Date(iso);
-  return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
-};
-const sentColor = p => p >= 60 ? 'var(--green)' : (p >= 40 ? 'var(--amber)' : 'var(--red)');
-const initials = t => t.split(/[:\s]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
-const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-
-/* ---------- Bootstrap ---------- */
-async function loadData(){
-  try {
-    const res = await fetch('data/v2.json?t=' + Date.now(), {cache:'no-store'});
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    STATE.data = await res.json();
-    render();
-  } catch (e) {
-    document.getElementById('tbody').innerHTML =
-      `<tr><td colspan="7" class="empty err">Could not load data/v2.json — ${escapeHtml(e.message)}</td></tr>`;
-    console.error(e);
-  }
-}
-
-/* ---------- Render: market summary ---------- */
-function renderMarket(){
-  const d = STATE.data; if (!d) return;
-  const s = d.summary || {};
-  document.getElementById('m_total').textContent = s.total ?? d.movies?.length ?? '—';
-  document.getElementById('m_rising').textContent = s.rising ?? '—';
-  document.getElementById('m_falling').textContent = s.falling ?? '—';
-  document.getElementById('m_flat').textContent = s.flat ?? '—';
-  document.getElementById('m_avg').textContent = s.avg_score ?? '—';
-  document.getElementById('m_mentions').textContent = fmtCount(s.total_mentions_24h);
-  if (d.generated_at) {
-    const dt = new Date(d.generated_at);
-    const hh = String(dt.getUTCHours()).padStart(2,'0');
-    const mm = String(dt.getUTCMinutes()).padStart(2,'0');
-    document.getElementById('m_updated').textContent = `${hh}:${mm} UTC`;
-    document.getElementById('footTs').textContent =
-      `LAST UPDATED ${fmtDate(d.generated_at)} · ${hh}:${mm} UTC`;
-  }
-  document.getElementById('navDate').textContent = fmtDate(d.snapshot_date || d.generated_at);
-  document.getElementById('tabCount').textContent = (d.movies || []).length;
-}
-
-/* ---------- Render: ticker ---------- */
-function renderTicker(){
-  const d = STATE.data; if (!d) return;
-  const news = (d.news && d.news.length) ? d.news : [];
-  const track = document.getElementById('track');
-  if (!news.length) {
-    track.innerHTML = '<span><i>Awaiting next news fetch…</i></span>';
-    return;
-  }
-  const build = () => news.map(n => {
-    const title = escapeHtml(n.headline || '');
-    const src = escapeHtml(n.source || '');
-    const href = n.url ? ` href="${escapeHtml(n.url)}" target="_blank" rel="noopener"` : '';
-    return `<a${href}><span class="bullet">●</span><b>${title}</b> <i>· ${src}</i></a>`;
-  }).join('');
-  track.innerHTML = build() + build(); // duplicate for seamless loop
-}
-
-/* ---------- Render: movers strip ---------- */
-function renderMovers(){
-  const d = STATE.data; if (!d) return;
-  const strip = document.getElementById('strip');
-  const mk = (m, dir) => {
-    const cls = dir > 0 ? 'up' : 'down';
-    const arr = dir > 0 ? '▲' : '▼';
-    const bg = m.poster_url
-      ? `background-image:url('${escapeHtml(m.poster_url)}')`
-      : 'background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))';
-    return `<div class="mcard">
-      <div class="poster" style="${bg}"></div>
-      <div>
-        <div class="ttl">${escapeHtml(m.title)}</div>
-        <div class="row">
-          <div class="mv ${cls}">${arr} ${Math.abs(m.move)}</div>
-          <div class="sc">${m.score}</div>
-        </div>
-      </div>
-    </div>`;
-  };
-  const ups = (d.movers_up || []).map(m => mk(m, +1)).join('');
-  const downs = (d.movers_down || []).map(m => mk(m, -1)).join('');
-  strip.innerHTML = ups + downs ||
-    '<div class="empty" style="padding:0">No movers data yet.</div>';
-}
-
-/* ---------- Render: rankings table ---------- */
-function renderTable(){
-  const d = STATE.data; if (!d) return;
-  const tbody = document.getElementById('tbody');
-  let movies = (d.movies || []).slice();
-
-  // Window selection — pick the right score per movie for sort/display
-  const w = STATE.window;
-  movies.forEach(m => {
-    m._score = (m.scores && m.scores[w] != null) ? m.scores[w] : m.score;
-  });
-
-  // Search filter
-  if (STATE.search) {
-    const q = STATE.search.toLowerCase();
-    movies = movies.filter(m =>
-      (m.title||'').toLowerCase().includes(q) ||
-      (m.director||'').toLowerCase().includes(q) ||
-      (m.cast||'').toLowerCase().includes(q)
-    );
-  }
-
-  // Sort
-  const cmp = {
-    rank: (a,b) => (a.rank||0) - (b.rank||0),
-    score: (a,b) => (b._score||0) - (a._score||0),
-    views: (a,b) => (b.youtube_views||0) - (a.youtube_views||0),
-    mentions: (a,b) => (b.mentions||0) - (a.mentions||0),
-    sentiment: (a,b) => (b.sentiment_pct||0) - (a.sentiment_pct||0),
-    move: (a,b) => Math.abs(b.move||0) - Math.abs(a.move||0),
-  }[STATE.sort];
-  movies.sort(cmp);
-
-  if (!movies.length) {
-    tbody.innerHTML = `<tr><td colspan="7" class="empty">No movies match.</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = movies.map((m, i) => {
-    const rank = (STATE.sort === 'rank') ? (m.rank || i+1) : (i+1);
-    const move = m.move || 0;
-    const mvCls = move > 0 ? 'up' : (move < 0 ? 'down' : 'flat');
-    const mvTxt = move > 0 ? `▲ ${move}` : (move < 0 ? `▼ ${Math.abs(move)}` : '—');
-    const badges = [];
-    if (m.is_new) badges.push(`<span class="badge">NEW</span>`);
-    if (m.hot) badges.push(`<span class="fire" title="3+ days rising">🔥</span>`);
-    const trend = move > 0 ? `<span class="trend up">▲</span>` : (move < 0 ? `<span class="trend down">▼</span>` : '');
-    const posterStyle = m.poster_url
-      ? `background-image:url('${escapeHtml(m.poster_url)}')`
-      : `background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))`;
-    const posterContent = m.poster_url ? '' : `<span style="position:relative;z-index:1">${initials(m.title||'')}</span>`;
-    const sub = [m.director, m.cast].filter(Boolean).join('<span class="dot"></span>');
-    return `
-      <tr class="${m.highlight ? 'hl' : ''}">
-        <td><div class="rk">${String(rank).padStart(2,'0')}</div></td>
-        <td><div class="mv ${mvCls}">${mvTxt}</div></td>
-        <td>
-          <div class="ent">
-            <div class="poster" style="${posterStyle}">${posterContent}</div>
-            <div class="meta">
-              <div class="title">${escapeHtml(m.title||'')} ${badges.join(' ')}</div>
-              <div class="sub">${sub || '<i style="color:var(--mute)">—</i>'}</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div class="num-col">${fmtCount(m.youtube_views)}</div>
-          <div class="num-sub">YOUTUBE</div>
-        </td>
-        <td>
-          <div class="num-col">${fmtCount(m.mentions)}</div>
-          <div class="num-sub">REDDIT · NEWS</div>
-        </td>
-        <td>
-          <div class="sent">
-            <div class="bar"><i style="width:${m.sentiment_pct||0}%;background:${sentColor(m.sentiment_pct||0)}"></i></div>
-            <div class="pct" style="color:${sentColor(m.sentiment_pct||0)}">${m.sentiment_pct||0}%</div>
-          </div>
-        </td>
-        <td style="text-align:right"><div class="score">${m._score||0}${trend}</div></td>
-      </tr>
-    `;
-  }).join('');
-}
-
-function render(){
-  renderMarket();
-  renderTicker();
-  renderMovers();
-  renderTable();
-}
-
-/* ---------- Controls ---------- */
-document.getElementById('snapshot').addEventListener('click', e => {
-  const b = e.target.closest('button[data-window]'); if (!b) return;
-  document.querySelectorAll('#snapshot button').forEach(x => x.classList.remove('active'));
-  b.classList.add('active');
-  STATE.window = b.dataset.window;
-  renderTable();
-});
-document.getElementById('sort').addEventListener('click', e => {
-  const b = e.target.closest('button[data-sort]'); if (!b) return;
-  document.querySelectorAll('#sort button').forEach(x => x.classList.remove('active'));
-  b.classList.add('active');
-  STATE.sort = b.dataset.sort;
-  renderTable();
-});
-document.getElementById('searchBox').addEventListener('input', e => {
-  STATE.search = e.target.value.trim();
-  renderTable();
-});
-
-/* ---------- Theme toggle ---------- */
-document.getElementById('themeToggle').addEventListener('click', () => {
-  const cur = document.documentElement.getAttribute('data-theme') || 'dark';
-  const next = cur === 'light' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', next);
-  try { localStorage.setItem('hypeindex-theme', next); } catch (_) {}
-});
-
-/* ---------- Clock + countdown ---------- */
-(function(){
-  const clk = document.getElementById('clk');
-  const cd = document.getElementById('cd');
-  const cd2 = document.getElementById('cd2');
-  const pad = n => String(n).padStart(2,'0');
-  const tick = () => {
-    const now = new Date();
-    clk.textContent = `${pad(now.getUTCHours())}:${pad(now.getUTCMinutes())}:${pad(now.getUTCSeconds())} UTC`;
-    let remaining = 0;
-    const next = STATE.data && STATE.data.next_update_at;
-    if (next) {
-      remaining = Math.max(0, Math.floor((new Date(next) - now)/1000));
-    } else {
-      remaining = 3600 - (now.getUTCMinutes()*60 + now.getUTCSeconds());
-    }
-    const h = Math.floor(remaining/3600);
-    const m = Math.floor((remaining%3600)/60);
-    const s = remaining%60;
-    const txt = `${pad(h)}:${pad(m)}:${pad(s)}`;
-    cd.textContent = txt; cd2.textContent = txt;
-    // Auto-refresh once countdown hits zero
-    if (remaining === 0 && next && !STATE._refreshing) {
-      STATE._refreshing = true;
-      setTimeout(() => { STATE._refreshing = false; loadData(); }, 5000);
-    }
-  };
-  tick(); setInterval(tick, 1000);
-})();
-
-/* ---------- Live "alive" animations ---------- */
-(function(){
-  const rand = (a,b) => a + Math.floor(Math.random()*(b-a+1));
-  const pick = arr => arr[Math.floor(Math.random()*arr.length)];
-
-  const parseCount = s => {
-    const m = s.trim().match(/^([\d.]+)\s*([KMB]?)$/);
-    if (!m) return null;
-    return { n: parseFloat(m[1]), u: m[2] };
-  };
-  const formatParsed = ({n,u}) => {
-    if (u === 'B') return n.toFixed(2) + 'B';
-    if (u === 'M') return n.toFixed(2) + 'M';
-    if (u === 'K') return (n < 100 ? n.toFixed(1) : Math.round(n).toString()) + 'K';
-    return Math.round(n).toString();
-  };
-  const bumpCell = (cell, delta) => {
-    const parsed = parseCount(cell.textContent);
-    if (!parsed) return;
-    let add = delta;
-    if (parsed.u === 'B') add = delta / 1e9;
-    else if (parsed.u === 'M') add = delta / 1e6;
-    else if (parsed.u === 'K') add = delta / 1e3;
-    parsed.n += add;
-    cell.textContent = formatParsed(parsed);
-    cell.classList.add('flash');
-    setTimeout(() => cell.classList.remove('flash'), 900);
-  };
-  const rows = () => Array.from(document.querySelectorAll('#tbody tr'));
-
-  const pulseScore = () => {
-    const rs = rows();
-    if (rs.length) {
-      const el = pick(rs).querySelector('.score');
-      if (el) { el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 120); }
-    }
-    setTimeout(pulseScore, rand(3000, 4000));
-  };
-  const tickMentions = () => {
-    const rs = rows();
-    if (rs.length) {
-      const count = rand(1, 2);
-      const used = new Set();
-      for (let i = 0; i < count; i++) {
-        let row; do { row = pick(rs); } while (used.has(row));
-        used.add(row);
-        const cell = row.querySelector('td:nth-child(5) .num-col');
-        if (cell) bumpCell(cell, rand(1, 50));
+    async function fetchData() {
+      try {
+        const response = await window.fetch('data/index.json?t=' + Date.now());
+        const data = await response.json();
+        currentData = data;
+        render();
+      } catch (e) {
+        console.error("Fetch failed", e);
+        document.getElementById('table-body').innerHTML = '<tr><td colspan="6" style="text-align:center; padding: 40px;">Error loading data feed.</td></tr>';
       }
     }
-    setTimeout(tickMentions, rand(4000, 6000));
-  };
-  const sweepRow = () => {
-    const rs = rows();
-    if (rs.length) {
-      const row = pick(rs);
-      row.classList.add('sweep');
-      setTimeout(() => row.classList.remove('sweep'), 1000);
-    }
-    setTimeout(sweepRow, rand(5000, 8000));
-  };
-  setTimeout(pulseScore, 2500);
-  setTimeout(tickMentions, 3200);
-  setTimeout(sweepRow, 2800);
-})();
 
-loadData();
-</script>
+    function render() {
+      if (!currentData) return;
+      const items = currentData[activeTab] || [];
+      const tbody = document.getElementById('table-body');
+      tbody.innerHTML = items.map(item => `
+        <tr>
+          <td class="rank">${item.rank}</td>
+          <td class="${item.move > 0 ? 'up' : (item.move < 0 ? 'down' : '')}">${item.move > 0 ? '↑'+item.move : (item.move < 0 ? '↓'+Math.abs(item.move) : '—')}</td>
+          <td>
+            <div style="font-weight: bold;">${item.title}</div>
+            <div style="font-size: 11px; color: #8a8a8a;">${item.metadata.studio || item.metadata.project || ''}</div>
+          </td>
+          <td style="font-family: 'Rajdhani';">${item.mentions_x.toLocaleString()}</td>
+          <td>
+            <div style="background: #1a1a1a; width: 100px; height: 6px; border-radius: 3px;">
+              <div style="background: ${item.amsi_score > 900 ? 'var(--green)' : 'var(--gold)'}; width: ${item.sentiment * 100}%; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </td>
+          <td class="score">${item.amsi_score.toFixed(1)}</td>
+        </tr>
+      `).join('');
+
+      // Ticker
+      const tickerTrack = document.getElementById('ticker-track');
+      const news = items.slice(0, 5).map(i => `<span>● <strong>${i.title.toUpperCase()}</strong> — ${i.notes}</span>`).join(' <span style="margin: 0 20px;">|</span> ');
+      tickerTrack.innerHTML = news + ' | ' + news;
+
+      // Movers
+      const moversStrip = document.getElementById('movers-strip');
+      moversStrip.innerHTML = items.filter(i => i.move !== 0).slice(0, 5).map(i => `
+        <div class="mover-card">
+          <div>
+            <div style="font-size: 12px; font-weight: bold;">${i.title}</div>
+            <div class="${i.move > 0 ? 'up' : 'down'}" style="font-size: 11px;">${i.move > 0 ? '↑' : '↓'}${Math.abs(i.move)}</div>
+          </div>
+          <div style="color: var(--gold); font-family: 'Bebas Neue'; font-size: 18px;">${i.amsi_score.toFixed(0)}</div>
+        </div>
+      `).join('');
+    }
+
+    function setTab(tab) {
+      activeTab = tab;
+      document.querySelectorAll('.tab').forEach(el => el.classList.toggle('active', el.textContent.toLowerCase().includes(tab.slice(0, -1))));
+      render();
+    }
+
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toISOString().split('T')[1].split('.')[0] + ' UTC';
+    }, 1000);
+
+    fetchData();
+  </script>
 </body>
 </html>
