@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MoviePass Hype Index V2 — Director</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  (function(){
+    try { document.documentElement.setAttribute('data-theme', localStorage.getItem('hypeindex-theme') || 'dark'); }
+    catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
+  })();
+</script>
+<style>
+  :root,[data-theme="dark"]{
+    --bg:#080808; --bg-2:#0f0f0f; --bg-3:#141414;
+    --bg-panel:#0a0a0a; --bg-ticker:#060606; --bg-row-hover:#0d0d0d;
+    --topbar-grad-1:#0b0b0b; --topbar-grad-2:#070707;
+    --line:#1f1f1f; --line-2:#2a2a2a;
+    --text:#ffffff; --text-strong:#ffffff; --text-secondary:#dddddd; --text-soft:#c9c9c9;
+    --mute:#8a8a8a;
+    --gold:#F5A623; --gold-pill-bg:#1a1305; --gold-pill-border:#3a2a09;
+    --green:#00FF87; --red:#FF3B5C; --amber:#F5A623;
+    --bar-bg:#1a1a1a;
+    --poster-bg:#222; --poster-fallback-1:#333; --poster-fallback-2:#0a0a0a;
+    --on-gold:#111; --on-poster:#fff;
+  }
+  [data-theme="light"]{
+    --bg:#ffffff; --bg-2:#f5f5f5; --bg-3:#fafafa;
+    --bg-panel:#f5f5f5; --bg-ticker:#f5f5f5; --bg-row-hover:#f9f9f9;
+    --topbar-grad-1:#ffffff; --topbar-grad-2:#fafafa;
+    --line:#e0e0e0; --line-2:#d4d4d4;
+    --text:#111; --text-strong:#111; --text-secondary:#333; --text-soft:#444;
+    --mute:#666;
+    --gold:#D4920A; --gold-pill-bg:#fff4dc; --gold-pill-border:#e8c478;
+    --green:#00A859; --red:#D93025; --amber:#D4920A;
+    --bar-bg:#e8e8e8;
+    --poster-bg:#ccc; --poster-fallback-1:#ccc; --poster-fallback-2:#999;
+    --on-gold:#fff; --on-poster:#333;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;font-size:14px;
+    transition:background-color .35s ease, color .35s ease, opacity .18s ease}
+  body.leaving{opacity:0}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{display:flex;align-items:center;gap:16px;padding:16px 28px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,var(--topbar-grad-1),var(--topbar-grad-2));position:sticky;top:0;z-index:20}
+  .back{display:flex;align-items:center;gap:6px;color:var(--mute);font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.12em;font-size:12px;cursor:pointer}
+  .back:hover{color:var(--gold)}
+  .logo{display:flex;align-items:baseline;gap:8px;margin-left:8px}
+  .logo .mp{font-weight:700;font-size:18px;color:var(--text-strong)}
+  .logo .hi{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:18px;letter-spacing:.12em}
+  .spacer{flex:1}
+  .theme-toggle{width:34px;height:34px;border-radius:8px;background:var(--bg-3);border:1px solid var(--line-2);color:var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+  .theme-toggle svg{width:16px;height:16px}
+  .theme-toggle .icon-sun{display:none}
+  [data-theme="light"] .theme-toggle .icon-sun{display:block}
+  [data-theme="light"] .theme-toggle .icon-moon{display:none}
+
+  .hero{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:40px 28px;
+    border-bottom:1px solid var(--line);background:var(--bg-panel)}
+  .headshot-large{
+    width:220px;height:220px;border-radius:50%;
+    background:var(--poster-bg);background-size:cover;background-position:center top;
+    border:2px solid var(--line-2);
+    box-shadow:0 12px 36px rgba(0,0,0,.4);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Bebas Neue',sans-serif;font-size:72px;color:var(--on-poster);
+  }
+  .hero-meta{display:flex;flex-direction:column;gap:14px}
+  .role{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+  h1{margin:0;font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1.02;letter-spacing:.02em;color:var(--text-strong)}
+  .known-for{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:13px;line-height:1.6;max-width:640px}
+  .score-badge{display:inline-flex;align-items:baseline;gap:10px;padding:14px 22px;border:1px solid var(--gold-pill-border);background:var(--gold-pill-bg);border-radius:10px;width:fit-content}
+  .score-badge .v{font-family:'Bebas Neue',sans-serif;font-size:54px;color:var(--gold);line-height:1}
+  .score-badge .l{font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--mute)}
+  .snap{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.16em}
+
+  .trade{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap}
+  .trade button{border:0;border-radius:8px;padding:14px 26px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.14em;cursor:pointer;transition:transform .12s ease, box-shadow .2s ease}
+  .trade .pick{background:var(--green);color:#0a0a0a}
+  .trade .drop{background:var(--red);color:#fff}
+  .trade button:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+  .trade button.active{outline:3px solid var(--gold);outline-offset:2px}
+
+  .grid{display:grid;grid-template-columns:2fr 1fr;gap:22px;padding:28px;max-width:1400px;margin:0 auto}
+  .panel{background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+  .panel h3{margin:0 0 14px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.16em;color:var(--mute);font-weight:400}
+  .panel h3 .count{color:var(--gold);font-family:'Rajdhani',sans-serif;font-size:13px;margin-left:6px}
+
+  .chart-wrap{position:relative;height:220px}
+  .chart-wrap svg{width:100%;height:100%;display:block}
+
+  /* Films grid */
+  .films{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px}
+  .film{cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:4px;border-radius:8px;transition:background-color .2s}
+  .film:hover{background:var(--bg-3)}
+  .film .poster{width:100%;aspect-ratio:2/3;border-radius:4px;background:var(--poster-bg);background-size:cover;background-position:center;border:1px solid var(--line-2)}
+  .film .title{font-size:12px;font-weight:600;color:var(--text-strong);line-height:1.3}
+  .film .meta{font-size:10px;color:var(--mute);font-family:'Rajdhani',sans-serif;display:flex;justify-content:space-between;letter-spacing:.08em}
+  .film .meta .s{color:var(--gold);font-weight:700}
+
+  /* Sentiment panel */
+  .sent-bar{height:10px;background:var(--bar-bg);border-radius:5px;overflow:hidden;margin-top:10px}
+  .sent-bar > i{display:block;height:100%;border-radius:5px}
+  .sent-label{display:flex;justify-content:space-between;margin-top:6px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);letter-spacing:.12em}
+
+  /* News list */
+  .news-list{list-style:none;margin:0;padding:0}
+  .news-list li{padding:12px 0;border-bottom:1px solid var(--line-2)}
+  .news-list li:last-child{border-bottom:0}
+  .news-list a{display:block;color:var(--text-strong);font-size:13px;line-height:1.4}
+  .news-list a:hover{color:var(--gold)}
+  .news-list .src{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:.14em;margin-top:3px;text-transform:uppercase}
+
+  .stat-row{display:flex;gap:28px;flex-wrap:wrap}
+  .stat{display:flex;flex-direction:column;gap:4px;min-width:100px}
+  .stat .v{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--text-strong)}
+  .stat .l{font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase}
+
+  .empty-pan{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:13px;letter-spacing:.08em;padding:16px 0}
+
+  @media (max-width: 430px){
+    .topbar{padding:12px 14px}
+    .logo .mp,.logo .hi{font-size:14px}
+    .hero{grid-template-columns:1fr;gap:16px;padding:24px 16px;text-align:center}
+    .headshot-large{margin:0 auto;width:150px;height:150px;font-size:50px}
+    h1{font-size:32px}
+    .known-for{font-size:12px}
+    .score-badge{margin:0 auto}
+    .score-badge .v{font-size:40px}
+    .trade{justify-content:center}
+    .trade button{padding:12px 20px;font-size:15px}
+    .grid{grid-template-columns:1fr;padding:16px;gap:16px}
+    .panel{padding:16px}
+    .films{grid-template-columns:repeat(3,1fr);gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back" href="index.html" id="backLink">‹ BACK TO RANKINGS</a>
+  <div class="logo"><span class="mp">moviepass.</span><span class="hi">HYPE INDEX</span></div>
+  <div class="spacer"></div>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  </button>
+</div>
+
+<div id="content">
+  <div class="empty-pan" style="text-align:center;padding:80px">Loading actor…</div>
+</div>
+
+<script>
+const PAGE_KEY = 'directors';
+const OTHER_KEY = null;
+const DETAIL_LABEL = 'DIRECTOR';
+const qs = new URLSearchParams(location.search);
+const PERSON_ID = parseInt(qs.get('id') || '0', 10);
+
+/* shared helpers */
+const fmtCount = n => { if (n==null||isNaN(n)) return '—'; if (n>=1e9) return (n/1e9).toFixed(2)+'B'; if (n>=1e6) return (n/1e6).toFixed(2)+'M'; if (n>=1e3) return (n/1e3).toFixed(1)+'K'; return String(Math.round(n)); };
+const fmtDate = iso => { if (!iso) return '—'; return new Date(iso).toLocaleDateString('en-US',{month:'short',year:'numeric'}); };
+const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const initials = t => (t||'').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const sentColor = p => p >= 60 ? 'var(--green)' : (p >= 40 ? 'var(--amber)' : 'var(--red)');
+
+function synth29dTrend(id, final){
+  const N = 29;
+  let seed = Math.abs(id) % 9973 || 1;
+  const rng = () => { seed = (seed*9301+49297)%233280; return seed/233280; };
+  const start = Math.max(800, final - 40 - Math.floor(rng()*80));
+  const pts = [];
+  for (let i = 0; i < N; i++){
+    const t = i / (N-1);
+    const drift = start + t * (final - start);
+    pts.push(Math.round(drift + (rng()-.5)*14));
+  }
+  pts[N-1] = final;
+  return pts;
+}
+function drawChart(container, points){
+  const W = 820, H = 220, PAD = 30;
+  const min = Math.min(...points) - 8, max = Math.max(...points) + 8;
+  const spanX = W - PAD*2, spanY = H - PAD*2;
+  const x = i => PAD + (i/(points.length-1))*spanX;
+  const y = v => PAD + spanY - ((v-min)/(max-min))*spanY;
+  let grid = '';
+  for (let g = 1; g <= 3; g++){
+    const gy = PAD + (spanY*g/4);
+    grid += `<line x1="${PAD}" y1="${gy}" x2="${W-PAD}" y2="${gy}" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"/>`;
+  }
+  const d = points.map((v,i) => `${i?'L':'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const area = `${d} L${x(points.length-1)},${H-PAD} L${x(0)},${H-PAD} Z`;
+  const grad = `<defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--gold)" stop-opacity=".25"/><stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/></linearGradient></defs>`;
+  const dots = points.map((v,i)=>`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i===points.length-1?5:2.4}" fill="var(--gold)"/>`).join('');
+  container.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${grad}${grid}<path d="${area}" fill="url(#lg)"/><path d="${d}" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>${dots}<text x="${W-8}" y="18" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${max}</text><text x="${W-8}" y="${H-6}" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${min}</text></svg>`;
+}
+
+function loadPicks(){ try { return JSON.parse(localStorage.getItem('hypeindex-picks')||'{}'); } catch(_){ return {}; } }
+function savePicks(p){ try { localStorage.setItem('hypeindex-picks', JSON.stringify(p)); } catch(_){} }
+function getPickState(id){ return (loadPicks()['p'+id] || null); }
+function setPickState(id, state){ const p = loadPicks(); if (state==null) delete p['p'+id]; else p['p'+id] = state; savePicks(p); }
+
+async function load(){
+  let data;
+  try {
+    const res = await fetch('data/v2.json?t=' + Date.now(), {cache:'no-store'});
+    data = await res.json();
+  } catch(e){
+    document.getElementById('content').innerHTML = `<div class="empty-pan" style="text-align:center;padding:80px">Could not load data/v2.json</div>`;
+    return;
+  }
+  const person = (data[PAGE_KEY] || []).find(p => p.tmdb_id === PERSON_ID);
+  if (!person){
+    document.getElementById('content').innerHTML = `<div class="empty-pan" style="text-align:center;padding:80px">${DETAIL_LABEL} not in current top ${PAGE_KEY === 'actors' ? 50 : 25}.</div>`;
+    return;
+  }
+  render(data, person);
+}
+
+function render(data, p){
+  const shot = p.profile_url
+    ? `background-image:url('${escapeHtml(p.profile_url)}')`
+    : '';
+  const myState = getPickState(p.tmdb_id);
+
+  // Known for line: top 3 films from the index
+  const known = (p.films || []).slice(0, 3).map(f => f.title).join(' · ');
+
+  // Split films by release date: upcoming vs already released.
+  // For "track record" we show the most recent 3 that already opened; for
+  // "upcoming projects" we show everything with a future release_date.
+  const todayISO = new Date().toISOString().slice(0, 10);
+  const allFilms = (p.films || []).slice();
+  const past = allFilms
+    .filter(f => f.release_date && f.release_date <= todayISO)
+    .sort((a,b) => b.release_date.localeCompare(a.release_date));
+  const upcoming = allFilms
+    .filter(f => !f.release_date || f.release_date > todayISO)
+    .sort((a,b) => (a.release_date || '').localeCompare(b.release_date || ''));
+
+  const filmCard = f => {
+    const bg = f.poster_url
+      ? `background-image:url('${escapeHtml(f.poster_url)}')`
+      : `background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))`;
+    return `<a class="film" href="movie.html?id=${f.tmdb_id}" data-nav>
+      <div class="poster" style="${bg}"></div>
+      <div class="title">${escapeHtml(f.title)}</div>
+      <div class="meta"><span>${fmtDate(f.release_date)}</span><span class="s">${f.score}</span></div>
+    </a>`;
+  };
+
+  const trackRecordHtml = past.length
+    ? past.slice(0, 3).map(filmCard).join('')
+    : `<div class="empty-pan">No released films in the tracked window.</div>`;
+
+  const upcomingHtml = upcoming.length
+    ? upcoming.map(filmCard).join('')
+    : `<div class="empty-pan">No upcoming projects in the tracked window.</div>`;
+
+  const filmsHtml = null;  // unused — replaced by trackRecordHtml + upcomingHtml below
+
+  // News
+  const newsArr = p.news_mentions || [];
+  const newsHtml = newsArr.length ? `<ul class="news-list">${
+    newsArr.slice(0, 5).map(n => `<li><a>${escapeHtml(n.headline)}<div class="src">${escapeHtml(n.source)}</div></a></li>`).join('')
+  }</ul>` : `<div class="empty-pan">No recent headlines mention ${escapeHtml(p.name)}.</div>`;
+
+  document.getElementById('content').innerHTML = `
+    <section class="hero">
+      <div class="headshot-large" style="${shot}">${p.profile_url ? '' : initials(p.name)}</div>
+      <div class="hero-meta">
+        <div class="role">${DETAIL_LABEL}</div>
+        <h1>${escapeHtml(p.name)}</h1>
+        <div class="known-for">Known for: <span style="color:var(--text-secondary)">${escapeHtml(known) || '—'}</span></div>
+        <div class="score-badge">
+          <div class="v">${p.score}</div>
+          <div>
+            <div class="l">HYPE SCORE</div>
+            <div class="snap">SNAPSHOT ${data.snapshot_date}</div>
+          </div>
+        </div>
+        <div class="trade">
+          <button class="pick ${myState==='pick'?'active':''}" id="pickBtn">▲ PICK</button>
+          <button class="drop ${myState==='drop'?'active':''}" id="dropBtn">▼ DROP</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h3>29-DAY HYPE SCORE TREND</h3>
+        <div class="chart-wrap" id="chart"></div>
+      </section>
+
+      <section class="panel">
+        <h3>OVERVIEW</h3>
+        <div class="stat-row">
+          <div class="stat"><div class="v">${p.film_count || 0}</div><div class="l">Films in index</div></div>
+          <div class="stat"><div class="v">${fmtCount(p.mentions)}</div><div class="l">Mentions</div></div>
+          <div class="stat"><div class="v">${p.avg_film_score || 0}</div><div class="l">Avg film AMSI</div></div>
+        </div>
+        <div style="margin-top:16px">
+          <div class="sent-bar"><i style="width:${p.sentiment_pct}%;background:${sentColor(p.sentiment_pct)}"></i></div>
+          <div class="sent-label">
+            <span>AUDIENCE SENTIMENT</span>
+            <span style="color:${sentColor(p.sentiment_pct)}">${p.sentiment_pct}%</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" style="grid-column:1 / -1">
+        <h3>RECENT THEATRICAL TRACK RECORD <span class="count">LAST ${Math.min(3, past.length)}</span></h3>
+        <div class="films">${trackRecordHtml}</div>
+        <div class="empty-pan" style="font-size:11px;padding-top:12px;border-top:1px solid var(--line-2);margin-top:14px">
+          Box office revenue integration pending — currently showing AMSI score per film.
+        </div>
+      </section>
+
+      <section class="panel" style="grid-column:1 / -1">
+        <h3>UPCOMING PROJECTS <span class="count">${upcoming.length}</span></h3>
+        <div class="films">${upcomingHtml}</div>
+      </section>
+
+      <section class="panel" style="grid-column:1 / -1">
+        <h3>NEWS MENTIONS <span class="count">${newsArr.length}</span></h3>
+        ${newsHtml}
+      </section>
+    </div>
+  `;
+
+  drawChart(document.getElementById('chart'), synth29dTrend(p.tmdb_id, p.score));
+
+  const update = st => {
+    document.getElementById('pickBtn').classList.toggle('active', st==='pick');
+    document.getElementById('dropBtn').classList.toggle('active', st==='drop');
+  };
+  document.getElementById('pickBtn').addEventListener('click', () => {
+    const cur = getPickState(p.tmdb_id);
+    const next = cur==='pick' ? null : 'pick';
+    setPickState(p.tmdb_id, next); update(next);
+  });
+  document.getElementById('dropBtn').addEventListener('click', () => {
+    const cur = getPickState(p.tmdb_id);
+    const next = cur==='drop' ? null : 'drop';
+    setPickState(p.tmdb_id, next); update(next);
+  });
+
+  document.querySelectorAll('[data-nav]').forEach(a => {
+    a.addEventListener('click', e => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault();
+      document.body.classList.add('leaving');
+      setTimeout(() => { location.href = a.getAttribute('href'); }, 180);
+    });
+  });
+}
+
+document.getElementById('backLink').addEventListener('click', e => {
+  e.preventDefault();
+  document.body.classList.add('leaving');
+  setTimeout(() => { history.length > 1 ? history.back() : (location.href = 'index.html'); }, 180);
+});
+
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+  const next = cur === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('hypeindex-theme', next); } catch(_){}
+});
+
+load();
+</script>
+</body>
+</html>

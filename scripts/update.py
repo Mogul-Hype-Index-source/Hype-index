@@ -172,13 +172,38 @@ def _enrich_with_history(movies: List[Dict[str, Any]],
     return {"rising": rising, "falling": falling, "flat": flat}
 
 
+def _enrich_people_with_history(people: List[Dict[str, Any]], key: str) -> None:
+    """
+    Compute rank movement (move) and is_new flags for actors / directors by
+    comparing against the previous v2.json. Mutates `people` in place.
+    `key` is "actors" or "directors".
+    """
+    prev = _load_previous_snapshot("")
+    prev_ranks: Dict[int, int] = {}
+    if prev:
+        for p in (prev.get(key) or []):
+            pid = p.get("tmdb_id")
+            if pid is not None and "rank" in p:
+                prev_ranks[pid] = p["rank"]
+    for p in people:
+        pid = p.get("tmdb_id")
+        prev_rank = prev_ranks.get(pid)
+        if prev_rank is None:
+            p["move"]   = 0
+            p["is_new"] = True
+        else:
+            p["move"]   = prev_rank - p["rank"]
+            p["is_new"] = False
+
+
 # ---------------------------------------------------------------------------
 # Assemble the public index.json the frontend reads
 # ---------------------------------------------------------------------------
 
 def build_index_payload(scored: List[Dict[str, Any]],
                         news_items: List[Dict[str, Any]],
-                        generated_at: datetime) -> Dict[str, Any]:
+                        generated_at: datetime,
+                        poster_base: str = "https://image.tmdb.org/t/p/w185") -> Dict[str, Any]:
     # Rank by AMSI score
     scored.sort(key=lambda m: m.get("score", 0), reverse=True)
     for i, m in enumerate(scored, 1):
@@ -190,6 +215,17 @@ def build_index_payload(scored: List[Dict[str, Any]],
     # Highlight #1 in the UI
     if scored:
         scored[0]["highlight"] = True
+
+    # Roll up cast + crew across all movies into the actors / directors tabs.
+    # This must run BEFORE we trim cast_full / directors_full off the public
+    # movie objects below.
+    people = fetch_data.derive_people(
+        scored, news_items, poster_base=poster_base,
+        top_actors=50, top_directors=25,
+    )
+    # Per-person rank movement against the previous v2.json
+    _enrich_people_with_history(people["actors"],    "actors")
+    _enrich_people_with_history(people["directors"], "directors")
 
     # Movers strip — top 5 up, top 5 down by absolute move
     movers_up = sorted(
@@ -228,29 +264,39 @@ def build_index_payload(scored: List[Dict[str, Any]],
         round(sum(m.get("score", 0) for m in scored) / len(scored)) if scored else 0
     )
 
-    # Trim each movie to the public payload (drop bulky raw fields)
+    # Trim each movie to the public payload. Detail page (movie.html) needs
+    # the cast/director full lists with headshots, so they stay.
     public_movies = []
     for m in scored:
         yt = m.get("youtube") or {}
         rd = m.get("reddit")  or {}
         public_movies.append({
-            "rank":          m["rank"],
-            "tmdb_id":       m["tmdb_id"],
-            "title":         m["title"],
-            "director":      m.get("director", ""),
-            "cast":          m.get("cast", ""),
-            "release_date":  m.get("release_date", ""),
-            "poster_url":    m.get("poster_url"),
-            "youtube_views": int(yt.get("views", 0)),
-            "mentions":      int(rd.get("posts", 0) + rd.get("comments", 0) + len(m.get("news_mentions") or [])),
-            "sentiment_pct": int(m.get("sentiment_pct", 50)),
-            "scores":        m.get("scores", {}),
-            "score":         m.get("score", 0),
-            "move":          m.get("move", 0),
-            "is_new":        bool(m.get("is_new", False)),
-            "hot":           bool(m.get("hot", False)),
-            "highlight":     bool(m.get("highlight", False)),
-            "sub_scores":    m.get("sub_scores", {}),
+            "rank":           m["rank"],
+            "tmdb_id":        m["tmdb_id"],
+            "title":          m["title"],
+            "director":       m.get("director", ""),
+            "cast":           m.get("cast", ""),
+            "release_date":   m.get("release_date", ""),
+            "poster_url":     m.get("poster_url"),
+            "youtube_views":  int(yt.get("views", 0)),
+            "youtube_likes":  int(yt.get("likes", 0)),
+            "youtube_comments": int(yt.get("comments", 0)),
+            "youtube_video_id": m.get("youtube_video_id"),
+            "reddit_posts":   int(rd.get("posts", 0)),
+            "reddit_comments": int(rd.get("comments", 0)),
+            "mentions":       int(rd.get("posts", 0) + rd.get("comments", 0) + len(m.get("news_mentions") or [])),
+            "sentiment_pct":  int(m.get("sentiment_pct", 50)),
+            "scores":         m.get("scores", {}),
+            "score":          m.get("score", 0),
+            "move":           m.get("move", 0),
+            "is_new":         bool(m.get("is_new", False)),
+            "hot":            bool(m.get("hot", False)),
+            "highlight":      bool(m.get("highlight", False)),
+            "sub_scores":     m.get("sub_scores", {}),
+            "cast_full":      m.get("cast_full") or [],
+            "directors_full": m.get("directors_full") or [],
+            "news_mentions":  m.get("news_mentions") or [],
+            "trends":         int(m.get("trends", 0)),
         })
 
     return {
@@ -269,6 +315,8 @@ def build_index_payload(scored: List[Dict[str, Any]],
         "movers_up":   [_trim_mover(m) for m in movers_up],
         "movers_down": [_trim_mover(m) for m in movers_down],
         "movies":      public_movies,
+        "actors":      people["actors"],
+        "directors":   people["directors"],
     }
 
 
@@ -341,7 +389,10 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
 
     # 3. Assemble
     generated_at = datetime.now(timezone.utc).replace(microsecond=0)
-    payload = build_index_payload(scored, raw["news"], generated_at)
+    payload = build_index_payload(
+        scored, raw["news"], generated_at,
+        poster_base=cfg.get("tmdb_image_base", "https://image.tmdb.org/t/p/w185"),
+    )
 
     # 3a. Circuit breaker — refuse to overwrite the live index.json with
     # obviously degraded data. Specifically, if the previous index had

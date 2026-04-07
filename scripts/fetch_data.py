@@ -205,21 +205,56 @@ def fetch_tmdb_movies(api_key: str, max_count: int = 100) -> List[Dict[str, Any]
     return movies[:max_count]
 
 
-def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, str]:
-    """Director (first one) + top 2 billed cast as comma strings."""
+def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, Any]:
+    """
+    Returns:
+      director:        comma-separated display string of director name(s)
+      cast:            comma-separated display string of top 2 billed cast
+      directors_full:  [{id, name, profile_path}, ...]
+      cast_full:       [{id, name, character, profile_path}, ...] (top 8 billed)
+
+    The full lists are used downstream to build the actors + directors
+    rollups (top 50 / top 25) without having to hit TMDb again.
+    """
     data = _http_get(
         f"{TMDB_BASE}/movie/{tmdb_id}/credits",
         params={"api_key": api_key},
     )
+    empty: Dict[str, Any] = {
+        "director": "", "cast": "",
+        "directors_full": [], "cast_full": [],
+    }
     if not data:
-        return {"director": "", "cast": ""}
+        return empty
+
     crew = data.get("crew") or []
     cast = data.get("cast") or []
-    directors = [c.get("name") for c in crew if c.get("job") == "Director"]
-    top_cast = [c.get("name") for c in cast[:2] if c.get("name")]
+
+    directors_full = [
+        {
+            "id":           c.get("id"),
+            "name":         c.get("name"),
+            "profile_path": c.get("profile_path"),
+        }
+        for c in crew
+        if c.get("job") == "Director" and c.get("name")
+    ]
+    cast_full = [
+        {
+            "id":           c.get("id"),
+            "name":         c.get("name"),
+            "character":    c.get("character"),
+            "profile_path": c.get("profile_path"),
+        }
+        for c in cast[:8]
+        if c.get("name")
+    ]
+
     return {
-        "director": ", ".join(d for d in directors[:2] if d),
-        "cast": ", ".join(top_cast),
+        "director":       ", ".join(d["name"] for d in directors_full[:2]),
+        "cast":           ", ".join(c["name"] for c in cast_full[:2]),
+        "directors_full": directors_full,
+        "cast_full":      cast_full,
     }
 
 
@@ -821,6 +856,129 @@ def _news_mentions_for(title: str, news_items: List[Dict[str, Any]]) -> List[Dic
             pass
         out.append({"source": item.get("source", ""), "headline": item.get("headline", "")})
     return out
+
+
+# ---------------------------------------------------------------------------
+# Actors + Directors rollup
+# ---------------------------------------------------------------------------
+
+def _name_news_mentions(name: str, news_items: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+    """News items whose headline contains the person's name (case-insensitive)."""
+    if not name:
+        return []
+    pattern = re.compile(rf"\b{re.escape(name)}\b", re.IGNORECASE)
+    out = []
+    for item in news_items:
+        if pattern.search(item.get("headline", "")):
+            out.append({"source": item.get("source", ""), "headline": item.get("headline", "")})
+    return out
+
+
+def derive_people(movies: List[Dict[str, Any]],
+                  news_items: List[Dict[str, Any]],
+                  poster_base: str,
+                  top_actors: int = 50,
+                  top_directors: int = 25) -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Roll the cast/crew across all enriched movies into per-person entries.
+    Each person gets a film_count, total popularity, news mentions, average
+    sentiment, and a list of films they appear in. The lists are sorted
+    by film count then aggregate popularity, then truncated.
+    """
+    actors:    Dict[int, Dict[str, Any]] = {}
+    directors: Dict[int, Dict[str, Any]] = {}
+    image_base = poster_base.replace("/w185", "/w300")  # higher res for headshots
+
+    def _bucket(target: Dict[int, Dict[str, Any]], person: Dict[str, Any],
+                movie: Dict[str, Any], role_kind: str) -> None:
+        pid = person.get("id")
+        name = person.get("name")
+        if not pid or not name:
+            return
+        slot = target.get(pid)
+        if slot is None:
+            slot = {
+                "tmdb_id":      pid,
+                "name":         name,
+                "profile_url":  f"{image_base}{person['profile_path']}" if person.get("profile_path") else None,
+                "film_count":   0,
+                "films":        [],
+                "popularity":   0.0,
+                "sentiment_acc": 0,
+                "sentiment_n":   0,
+                "score_acc":    0,
+            }
+            target[pid] = slot
+        slot["film_count"] += 1
+        slot["popularity"] = max(slot["popularity"], movie.get("popularity") or 0.0)
+        slot["sentiment_acc"] += int(movie.get("sentiment_pct", 50))
+        slot["sentiment_n"]   += 1
+        slot["score_acc"]    += int(movie.get("score", 0))
+        slot["films"].append({
+            "tmdb_id":      movie.get("tmdb_id"),
+            "title":        movie.get("title"),
+            "release_date": movie.get("release_date"),
+            "poster_url":   movie.get("poster_url"),
+            "score":        movie.get("score", 0),
+            "character":    person.get("character"),
+        })
+
+    for m in movies:
+        for c in (m.get("cast_full") or [])[:6]:    # top 6 billed per film
+            _bucket(actors, c, m, "actor")
+        for d in (m.get("directors_full") or []):
+            _bucket(directors, d, m, "director")
+
+    def _finalize(slot: Dict[str, Any]) -> Dict[str, Any]:
+        n = slot["sentiment_n"] or 1
+        slot["sentiment_pct"] = int(round(slot["sentiment_acc"] / n))
+        slot["avg_film_score"] = int(round(slot["score_acc"] / n))
+        slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
+        slot["mentions"] = len(slot["news_mentions"]) + slot["film_count"] * 5
+        del slot["sentiment_acc"]
+        del slot["sentiment_n"]
+        del slot["score_acc"]
+        return slot
+
+    actor_list    = [_finalize(s) for s in actors.values()]
+    director_list = [_finalize(s) for s in directors.values()]
+
+    # Score each person: weighted blend of film_count, popularity, news,
+    # avg film score. Then min-max rescale into V1's 800-999 band so the
+    # leaderboard reads like the movies tab.
+    def _score_people(people: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        if not people:
+            return people
+        # Raw score components, normalized to 0..1 against max in batch
+        max_films = max(p["film_count"] for p in people) or 1
+        max_pop   = max(p["popularity"] for p in people) or 1
+        max_news  = max(len(p["news_mentions"]) for p in people) or 1
+        max_avgf  = max(p["avg_film_score"] for p in people) or 1
+        for p in people:
+            raw = (
+                (p["film_count"]          / max_films) * 0.35 +
+                (p["popularity"]          / max_pop)   * 0.25 +
+                (len(p["news_mentions"])  / max_news)  * 0.20 +
+                (p["avg_film_score"]      / max_avgf)  * 0.20
+            )
+            p["_raw"] = raw
+        raws = [p["_raw"] for p in people]
+        lo, hi = min(raws), max(raws)
+        span = (hi - lo) or 1
+        for p in people:
+            p["score"]  = int(round(800 + ((p["_raw"] - lo) / span) * 199))
+            p["scores"] = {"1d": p["score"], "7d": p["score"], "30d": p["score"]}
+            del p["_raw"]
+        people.sort(key=lambda x: x["score"], reverse=True)
+        for i, p in enumerate(people, 1):
+            p["rank"] = i
+        return people
+
+    actor_list    = _score_people(actor_list)[:top_actors]
+    director_list = _score_people(director_list)[:top_directors]
+
+    LOG.info("People rollup: %d actors, %d directors", len(actor_list), len(director_list))
+    return {"actors": actor_list, "directors": director_list}
 
 
 # ---------------------------------------------------------------------------

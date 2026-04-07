@@ -247,7 +247,12 @@
   }
   .rankings tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
   .rankings tbody tr:hover{background:var(--bg-row-hover)}
+  .rankings tbody tr.clickable{cursor:pointer}
   .rankings tr.hl{box-shadow:inset 3px 0 0 var(--gold)}
+
+  /* Page transition — subtle fade when navigating between pages */
+  html,body{transition:background-color .35s ease, color .35s ease, opacity .18s ease}
+  body.leaving{opacity:0}
   .rk{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:28px;line-height:1;min-width:42px}
   .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;min-width:60px}
   .mv.flat{color:var(--flat-arrow)}
@@ -516,10 +521,10 @@
 </div>
 
 <!-- ================= TABS ================= -->
-<div class="tabs">
-  <div class="tab active">MOVIES<span class="count" id="tabCount">—</span></div>
-  <div class="tab" style="opacity:.45;cursor:not-allowed" title="Coming soon">ACTORS<span class="count">—</span></div>
-  <div class="tab" style="opacity:.45;cursor:not-allowed" title="Coming soon">DIRECTORS<span class="count">—</span></div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-tab="movies">MOVIES<span class="count" id="tabCount_movies">—</span></div>
+  <div class="tab" data-tab="actors">ACTORS<span class="count" id="tabCount_actors">—</span></div>
+  <div class="tab" data-tab="directors">DIRECTORS<span class="count" id="tabCount_directors">—</span></div>
 </div>
 
 <div class="toolbar">
@@ -538,12 +543,12 @@
 <!-- ================= RANKINGS TABLE ================= -->
 <div class="rankings-wrap">
 <table class="rankings">
-  <thead>
+  <thead id="thead">
     <tr>
       <th style="width:56px">#</th>
       <th style="width:72px">MOVE</th>
-      <th>ENTITY</th>
-      <th style="width:120px">VIEWS</th>
+      <th id="col_entity">ENTITY</th>
+      <th style="width:120px" id="col_views">VIEWS</th>
       <th style="width:120px">MENTIONS</th>
       <th style="width:180px">SENTIMENT</th>
       <th style="width:120px;text-align:right">SCORE</th>
@@ -574,6 +579,7 @@ const STATE = {
   window: '7d',
   sort: 'score',
   search: '',
+  tab: 'movies',   // movies | actors | directors
 };
 
 /* ---------- Formatters ---------- */
@@ -626,7 +632,9 @@ function renderMarket(){
       `LAST UPDATED ${fmtDate(d.generated_at)} · ${hh}:${mm} UTC`;
   }
   document.getElementById('navDate').textContent = fmtDate(d.snapshot_date || d.generated_at);
-  document.getElementById('tabCount').textContent = (d.movies || []).length;
+  document.getElementById('tabCount_movies').textContent    = (d.movies    || []).length;
+  document.getElementById('tabCount_actors').textContent    = (d.actors    || []).length;
+  document.getElementById('tabCount_directors').textContent = (d.directors || []).length;
 }
 
 /* ---------- Render: ticker ---------- */
@@ -674,19 +682,34 @@ function renderMovers(){
     '<div class="empty" style="padding:0">No movers data yet.</div>';
 }
 
-/* ---------- Render: rankings table ---------- */
+/* ---------- Render: rankings table (dispatches on active tab) ---------- */
 function renderTable(){
   const d = STATE.data; if (!d) return;
+  // Swap the VIEWS column header/visibility for people tabs — they show
+  // FILMS count instead. Entity label also shifts slightly.
+  const colViews  = document.getElementById('col_views');
+  const colEntity = document.getElementById('col_entity');
+  if (STATE.tab === 'movies') {
+    colViews.textContent = 'VIEWS';
+    colEntity.textContent = 'ENTITY';
+    renderMoviesTable();
+  } else {
+    colViews.textContent = 'FILMS';
+    colEntity.textContent = STATE.tab === 'actors' ? 'ACTOR' : 'DIRECTOR';
+    renderPeopleTable();
+  }
+}
+
+function renderMoviesTable(){
+  const d = STATE.data;
   const tbody = document.getElementById('tbody');
   let movies = (d.movies || []).slice();
 
-  // Window selection — pick the right score per movie for sort/display
   const w = STATE.window;
   movies.forEach(m => {
     m._score = (m.scores && m.scores[w] != null) ? m.scores[w] : m.score;
   });
 
-  // Search filter
   if (STATE.search) {
     const q = STATE.search.toLowerCase();
     movies = movies.filter(m =>
@@ -696,7 +719,6 @@ function renderTable(){
     );
   }
 
-  // Sort
   const cmp = {
     rank: (a,b) => (a.rank||0) - (b.rank||0),
     score: (a,b) => (b._score||0) - (a._score||0),
@@ -726,8 +748,9 @@ function renderTable(){
       : `background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))`;
     const posterContent = m.poster_url ? '' : `<span style="position:relative;z-index:1">${initials(m.title||'')}</span>`;
     const sub = [m.director, m.cast].filter(Boolean).join('<span class="dot"></span>');
+    const href = `movie.html?id=${encodeURIComponent(m.tmdb_id)}`;
     return `
-      <tr class="${m.highlight ? 'hl' : ''}">
+      <tr class="${m.highlight ? 'hl' : ''} clickable" data-href="${href}">
         <td><div class="rk">${String(rank).padStart(2,'0')}</div></td>
         <td><div class="mv ${mvCls}">${mvTxt}</div></td>
         <td>
@@ -759,6 +782,79 @@ function renderTable(){
   }).join('');
 }
 
+function renderPeopleTable(){
+  const d = STATE.data;
+  const tbody = document.getElementById('tbody');
+  const src = STATE.tab === 'actors' ? (d.actors || []) : (d.directors || []);
+  let people = src.slice();
+
+  if (STATE.search) {
+    const q = STATE.search.toLowerCase();
+    people = people.filter(p => (p.name||'').toLowerCase().includes(q));
+  }
+
+  const cmp = {
+    rank: (a,b) => (a.rank||0) - (b.rank||0),
+    score: (a,b) => (b.score||0) - (a.score||0),
+    views: (a,b) => (b.film_count||0) - (a.film_count||0),     // films for people
+    mentions: (a,b) => (b.mentions||0) - (a.mentions||0),
+    sentiment: (a,b) => (b.sentiment_pct||0) - (a.sentiment_pct||0),
+    move: (a,b) => Math.abs(b.move||0) - Math.abs(a.move||0),
+  }[STATE.sort];
+  people.sort(cmp);
+
+  if (!people.length) {
+    tbody.innerHTML = `<tr><td colspan="7" class="empty">No ${STATE.tab} data yet — first full pulse still building.</td></tr>`;
+    return;
+  }
+
+  const detail = STATE.tab === 'actors' ? 'actor.html' : 'director.html';
+
+  tbody.innerHTML = people.map((p, i) => {
+    const rank = (STATE.sort === 'rank') ? (p.rank || i+1) : (i+1);
+    const move = p.move || 0;
+    const mvCls = move > 0 ? 'up' : (move < 0 ? 'down' : 'flat');
+    const mvTxt = move > 0 ? `▲ ${move}` : (move < 0 ? `▼ ${Math.abs(move)}` : '—');
+    const badges = p.is_new ? `<span class="badge">NEW</span>` : '';
+    const posterStyle = p.profile_url
+      ? `background-image:url('${escapeHtml(p.profile_url)}')`
+      : `background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))`;
+    const posterContent = p.profile_url ? '' : `<span style="position:relative;z-index:1">${initials(p.name||'')}</span>`;
+    const filmsPreview = (p.films || []).slice(0, 2).map(f => f.title).join(' · ');
+    const href = `${detail}?id=${encodeURIComponent(p.tmdb_id)}`;
+    return `
+      <tr class="clickable" data-href="${href}">
+        <td><div class="rk">${String(rank).padStart(2,'0')}</div></td>
+        <td><div class="mv ${mvCls}">${mvTxt}</div></td>
+        <td>
+          <div class="ent">
+            <div class="poster" style="${posterStyle}">${posterContent}</div>
+            <div class="meta">
+              <div class="title">${escapeHtml(p.name||'')} ${badges}</div>
+              <div class="sub">${escapeHtml(filmsPreview) || '<i style="color:var(--mute)">—</i>'}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="num-col">${p.film_count || 0}</div>
+          <div class="num-sub">IN INDEX</div>
+        </td>
+        <td>
+          <div class="num-col">${fmtCount(p.mentions)}</div>
+          <div class="num-sub">NEWS · FILMS</div>
+        </td>
+        <td>
+          <div class="sent">
+            <div class="bar"><i style="width:${p.sentiment_pct||0}%;background:${sentColor(p.sentiment_pct||0)}"></i></div>
+            <div class="pct" style="color:${sentColor(p.sentiment_pct||0)}">${p.sentiment_pct||0}%</div>
+          </div>
+        </td>
+        <td style="text-align:right"><div class="score">${p.score||0}</div></td>
+      </tr>
+    `;
+  }).join('');
+}
+
 function render(){
   renderMarket();
   renderTicker();
@@ -784,6 +880,24 @@ document.getElementById('sort').addEventListener('click', e => {
 document.getElementById('searchBox').addEventListener('input', e => {
   STATE.search = e.target.value.trim();
   renderTable();
+});
+
+document.getElementById('tabs').addEventListener('click', e => {
+  const b = e.target.closest('.tab[data-tab]'); if (!b) return;
+  document.querySelectorAll('#tabs .tab').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  STATE.tab = b.dataset.tab;
+  STATE.search = '';
+  document.getElementById('searchBox').value = '';
+  renderTable();
+});
+
+document.getElementById('tbody').addEventListener('click', e => {
+  const row = e.target.closest('tr.clickable'); if (!row) return;
+  const href = row.dataset.href; if (!href) return;
+  // Smooth page transition
+  document.body.classList.add('leaving');
+  setTimeout(() => { window.location.href = href; }, 180);
 });
 
 /* ---------- Theme toggle ---------- */
