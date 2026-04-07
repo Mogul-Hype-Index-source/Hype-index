@@ -78,17 +78,17 @@
     --text-secondary:#333333;
     --text-soft:#444444;
     --mute:#666666;
-    --gold:#D4920A;
-    --gold-dim:#a87208;
-    --gold-flash:#B8800A;
+    --gold:#B8760A;            /* darker gold for legibility on white background */
+    --gold-dim:#8a5808;
+    --gold-flash:#E89B0A;       /* brighter for visible flash against the darker base */
     --gold-pill-bg:#fff4dc;
-    --gold-pill-border:#e8c478;
+    --gold-pill-border:#d4a443;
     --gold-grad-1:#fff4dc;
     --gold-grad-2:#fce8b8;
     --green:#00A859;
     --red:#D93025;
     --red-mute:#D93025;
-    --amber:#D4920A;
+    --amber:#B8760A;
     --bar-bg:#e8e8e8;
     --poster-bg:#cccccc;
     --poster-fallback-1:#cccccc;
@@ -301,8 +301,17 @@
   .bar{flex:1;height:6px;background:var(--bar-bg);border-radius:3px;overflow:hidden}
   .bar > i{display:block;height:100%;border-radius:3px}
   .sent .pct{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;min-width:38px;text-align:right}
-  .score{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:30px;line-height:1;text-align:right;letter-spacing:.02em;transition:color 1.2s ease-out,text-shadow 1.2s ease-out}
+  .score{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:30px;line-height:1;text-align:right;letter-spacing:.02em;transition:color 1.2s ease-out,text-shadow 1.2s ease-out;display:inline-block}
   .score.flash{color:var(--gold-flash);text-shadow:0 0 14px var(--score-glow);transition:color .08s ease-out,text-shadow .08s ease-out}
+  /* Score cell — lock the number's right edge in a fixed position so it
+     never shifts when an up/down trend arrow appears next to it. The arrow
+     is absolutely positioned in a 22px gutter to the right of the number. */
+  .rankings tbody td.score-cell{position:relative;text-align:right;padding-right:32px}
+  .rankings thead th.score-cell{padding-right:32px}
+  .rankings tbody td.score-cell .trend{
+    position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    margin-left:0;line-height:1;
+  }
   .rankings tbody tr{box-shadow:inset 0 0 0 0 transparent;transition:box-shadow 1s ease-out,background-color 1s ease-out}
   .rankings tbody tr.sweep{box-shadow:inset 3px 0 0 0 var(--sweep-line);background-color:var(--sweep-fill);transition:box-shadow .12s ease-out,background-color .12s ease-out}
   .trend{display:inline-block;margin-left:6px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);vertical-align:middle}
@@ -581,7 +590,7 @@
       <th style="width:120px" id="col_views">VIEWS</th>
       <th style="width:120px">MENTIONS</th>
       <th style="width:180px">SENTIMENT</th>
-      <th style="width:120px;text-align:right">SCORE</th>
+      <th class="score-cell" style="width:120px">SCORE</th>
     </tr>
   </thead>
   <tbody id="tbody">
@@ -985,7 +994,7 @@ function renderMoviesTable(){
             <div class="pct" style="color:${sentColor(m.sentiment_pct||0)}">${m.sentiment_pct||0}%</div>
           </div>
         </td>
-        <td style="text-align:right"><div class="score">${m._score||0}${trend}</div></td>
+        <td class="score-cell"><span class="score">${m._score||0}</span>${trend}</td>
       </tr>
     `;
   }).join('');
@@ -1058,7 +1067,7 @@ function renderPeopleTable(){
             <div class="pct" style="color:${sentColor(p.sentiment_pct||0)}">${p.sentiment_pct||0}%</div>
           </div>
         </td>
-        <td style="text-align:right"><div class="score">${p.score||0}</div></td>
+        <td class="score-cell"><span class="score">${p.score||0}</span></td>
       </tr>
     `;
   }).join('');
