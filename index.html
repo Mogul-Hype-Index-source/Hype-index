@@ -599,19 +599,128 @@ const sentColor = p => p >= 60 ? 'var(--green)' : (p >= 40 ? 'var(--amber)' : 'v
 const initials = t => t.split(/[:\s]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+/* =========================================================
+   Scroll + filter restoration across navigations
+   =========================================================
+   Saves the user's tab / sort / window / search / scrollY into
+   sessionStorage every time they navigate away. On return, the
+   state is replayed so they land back exactly where they were.
+
+   Two save triggers:
+     1. Click on a row (saved synchronously before the soft transition)
+     2. pagehide event (catches browser back/forward, tab close, etc.)
+
+   Restoration runs once per page load, after the first render() so
+   the document is tall enough to scroll into.
+
+   Browser back/forward via bfcache restores the page intact (DOM and
+   scroll position both preserved by the browser) — for those cases the
+   sessionStorage path simply does nothing extra. For non-bfcache
+   restores (e.g. fresh GET) the sessionStorage replay handles it. */
+
+const SCROLL_KEY = 'hypeindex-scroll-v1';
+const SCROLL_TTL_MS = 30 * 60 * 1000;       // 30 min — drop stale state
+
+function saveScrollState(){
+  try {
+    sessionStorage.setItem(SCROLL_KEY, JSON.stringify({
+      y:       window.scrollY || window.pageYOffset || 0,
+      tab:     STATE.tab,
+      sort:    STATE.sort,
+      window:  STATE.window,
+      search:  STATE.search,
+      ts:      Date.now(),
+    }));
+  } catch (_) {}
+}
+
+function readScrollState(){
+  try {
+    const raw = sessionStorage.getItem(SCROLL_KEY);
+    if (!raw) return null;
+    const s = JSON.parse(raw);
+    if (!s || (Date.now() - (s.ts || 0)) > SCROLL_TTL_MS) {
+      sessionStorage.removeItem(SCROLL_KEY);
+      return null;
+    }
+    return s;
+  } catch (_) { return null; }
+}
+
+function clearScrollState(){
+  try { sessionStorage.removeItem(SCROLL_KEY); } catch (_) {}
+}
+
+function applyRestoredState(s){
+  // Mutate STATE before render so the table is built once with the
+  // right tab/sort/filter, then we just scroll.
+  if (s.tab)     STATE.tab    = s.tab;
+  if (s.sort)    STATE.sort   = s.sort;
+  if (s.window)  STATE.window = s.window;
+  if (typeof s.search === 'string') STATE.search = s.search;
+
+  document.querySelectorAll('#tabs .tab').forEach(b =>
+    b.classList.toggle('active', b.dataset.tab === STATE.tab));
+  document.querySelectorAll('#sort button').forEach(b =>
+    b.classList.toggle('active', b.dataset.sort === STATE.sort));
+  document.querySelectorAll('#snapshot button').forEach(b =>
+    b.classList.toggle('active', b.dataset.window === STATE.window));
+  const sb = document.getElementById('searchBox');
+  if (sb) sb.value = STATE.search || '';
+}
+
+function restoreScrollPosition(y){
+  // Two attempts: immediately after render, and once more on the next
+  // animation frame (in case images / fonts shift layout slightly).
+  window.scrollTo(0, y);
+  requestAnimationFrame(() => window.scrollTo(0, y));
+  setTimeout(() => window.scrollTo(0, y), 60);
+}
+
+/* Save state on every navigation away — covers click nav, browser back,
+   tab close, gesture swipe, etc. */
+window.addEventListener('pagehide', saveScrollState);
+
+/* Take manual control of scroll restoration so the browser doesn't
+   re-scroll to (0,0) on initial load before our render runs. We still
+   let the bfcache do its thing (it ignores this flag on persisted=true
+   restores). */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 /* ---------- Bootstrap ---------- */
 async function loadData(){
   try {
     const res = await fetch('data/v2.json?t=' + Date.now(), {cache:'no-store'});
     if (!res.ok) throw new Error('HTTP ' + res.status);
     STATE.data = await res.json();
+    // Apply saved tab/sort/etc BEFORE first render so we don't double-build.
+    const saved = readScrollState();
+    if (saved) applyRestoredState(saved);
     render();
+    if (saved) {
+      restoreScrollPosition(saved.y);
+      clearScrollState();
+    }
   } catch (e) {
     document.getElementById('tbody').innerHTML =
       `<tr><td colspan="7" class="empty err">Could not load data/v2.json — ${escapeHtml(e.message)}</td></tr>`;
     console.error(e);
   }
 }
+
+/* If the browser served a bfcache copy of this page, the DOM is already
+   built and our render never re-runs. We still need to honour any saved
+   scroll state in case bfcache didn't preserve it (rare, but happens on
+   Safari with no-store fetches). */
+window.addEventListener('pageshow', e => {
+  if (!e.persisted) return;             // fresh load — loadData handles it
+  const saved = readScrollState();
+  if (saved) {
+    applyRestoredState(saved);
+    restoreScrollPosition(saved.y);
+    clearScrollState();
+  }
+});
 
 /* ---------- Render: market summary ---------- */
 function renderMarket(){
@@ -895,7 +1004,9 @@ document.getElementById('tabs').addEventListener('click', e => {
 document.getElementById('tbody').addEventListener('click', e => {
   const row = e.target.closest('tr.clickable'); if (!row) return;
   const href = row.dataset.href; if (!href) return;
-  // Smooth page transition
+  // Capture exactly where the user is before the fade animation reflows
+  // anything. pagehide will fire too but this is the authoritative save.
+  saveScrollState();
   document.body.classList.add('leaving');
   setTimeout(() => { window.location.href = href; }, 180);
 });

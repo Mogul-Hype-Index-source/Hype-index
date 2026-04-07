@@ -537,8 +537,12 @@ function render(data, m){
 
 document.getElementById('backLink').addEventListener('click', e => {
   e.preventDefault();
+  // Always navigate to index.html (not history.back) so the saved
+  // scroll position from sessionStorage gets restored. history.back
+  // can land on an intermediate page (e.g. another detail page the
+  // user clicked into) which would skip the rankings entirely.
   document.body.classList.add('leaving');
-  setTimeout(() => { history.length > 1 ? history.back() : (location.href = 'index.html'); }, 180);
+  setTimeout(() => { location.href = 'index.html'; }, 180);
 });
 
 document.getElementById('themeToggle').addEventListener('click', () => {
