@@ -283,9 +283,18 @@
     position:sticky;top:0;
   }
   .rankings tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
-  .rankings tbody tr:hover{background:var(--bg-row-hover)}
   .rankings tbody tr.clickable{cursor:pointer}
   .rankings tr.hl{box-shadow:inset 3px 0 0 var(--gold)}
+
+  /* ---------- Live-energy hover state ---------- */
+  /* Subtle gold left rail + slight bg lift + score-number brighten on
+     hover. Transition is intentionally fast (.15s) so the row feels
+     responsive to the cursor. */
+  .rankings tbody tr:hover{
+    background:var(--bg-2);
+    box-shadow:inset 3px 0 0 var(--gold);
+  }
+  .rankings tbody tr:hover .score{filter:brightness(1.18)}
 
   /* Page transition — subtle fade when navigating between pages */
   html,body{transition:background-color .35s ease, color .35s ease, opacity .18s ease}
@@ -308,7 +317,7 @@
   .bar{flex:1;height:6px;background:var(--bar-bg);border-radius:3px;overflow:hidden}
   .bar > i{display:block;height:100%;border-radius:3px}
   .sent .pct{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;min-width:38px;text-align:right}
-  .score{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:30px;line-height:1;text-align:right;letter-spacing:.02em;transition:color 1.2s ease-out,text-shadow 1.2s ease-out;display:inline-block}
+  .score{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:30px;line-height:1;text-align:right;letter-spacing:.02em;display:inline-block;transform-origin:right center;transition:color .3s ease-out,transform .3s ease-out,text-shadow .3s ease-out}
   .score.flash{color:var(--gold-flash);text-shadow:0 0 14px var(--score-glow);transition:color .08s ease-out,text-shadow .08s ease-out}
   /* Score cell — lock the number's right edge in a fixed position so it
      never shifts when an up/down trend arrow appears next to it. The arrow
@@ -319,8 +328,76 @@
     position:absolute;right:10px;top:50%;transform:translateY(-50%);
     margin-left:0;line-height:1;
   }
-  .rankings tbody tr{box-shadow:inset 0 0 0 0 transparent;transition:box-shadow 1s ease-out,background-color 1s ease-out}
-  .rankings tbody tr.sweep{box-shadow:inset 3px 0 0 0 var(--sweep-line);background-color:var(--sweep-fill);transition:box-shadow .12s ease-out,background-color .12s ease-out}
+
+  /* ============================================================
+     LIVE EXCHANGE ENERGY ANIMATIONS
+     - Background flashes (green/red/gold) per row
+     - Score number bump (scale + color)
+     - MOVE arrow gentle pulse
+     - Staggered row reveal on first paint / tab switch
+     - Smooth rank-swap transform
+     ============================================================ */
+  .rankings tbody tr{
+    /* Base transition for hover and bg flashes. The animation property
+       below overrides this when a flash class is added. */
+    transition:background-color .15s ease, box-shadow .15s ease;
+  }
+  .rankings tbody tr.flash-green{animation:row-flash-green 1.5s ease-out}
+  .rankings tbody tr.flash-red  {animation:row-flash-red   1.5s ease-out}
+  .rankings tbody tr.flash-gold {animation:row-flash-gold  1.5s ease-out}
+  @keyframes row-flash-green{
+    0%   { background-color: rgba(0,255,135,0); }
+    20%  { background-color: rgba(0,255,135,.08); }   /* fade in over 0.3s of 1.5s */
+    100% { background-color: rgba(0,255,135,0); }     /* fade out over 1.2s */
+  }
+  @keyframes row-flash-red{
+    0%   { background-color: rgba(255,59,92,0); }
+    20%  { background-color: rgba(255,59,92,.08); }
+    100% { background-color: rgba(255,59,92,0); }
+  }
+  @keyframes row-flash-gold{
+    0%   { background-color: rgba(245,166,35,0); }
+    20%  { background-color: rgba(245,166,35,.06); }
+    100% { background-color: rgba(245,166,35,0); }
+  }
+
+  /* Score number bump on simulated change — scale up to 110% over 0.2s,
+     return over 0.3s, with a brief green/red color tint */
+  .score.bump-up{animation:score-bump-up .5s ease-out}
+  .score.bump-down{animation:score-bump-down .5s ease-out}
+  @keyframes score-bump-up{
+    0%   { transform:scale(1);   color:var(--gold); }
+    40%  { transform:scale(1.1); color:var(--green); }
+    100% { transform:scale(1);   color:var(--gold); }
+  }
+  @keyframes score-bump-down{
+    0%   { transform:scale(1);   color:var(--gold); }
+    40%  { transform:scale(1.1); color:var(--red); }
+    100% { transform:scale(1);   color:var(--gold); }
+  }
+
+  /* MOVE arrows pulse continuously — green faster (urgency), red slower */
+  .rankings .mv.up  { animation: mv-pulse-fast 2s ease-in-out infinite; }
+  .rankings .mv.down{ animation: mv-pulse-slow 4s ease-in-out infinite; }
+  @keyframes mv-pulse-fast { 0%,100% { opacity:1 } 50% { opacity:.6 } }
+  @keyframes mv-pulse-slow { 0%,100% { opacity:1 } 50% { opacity:.6 } }
+
+  /* Staggered row reveal — delay set inline by JS */
+  .rankings tbody tr.row-revealing{
+    opacity:0;
+    animation:row-reveal .5s ease-out forwards;
+  }
+  @keyframes row-reveal{
+    from { opacity:0; transform:translateY(8px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* Rank swap animation — JS sets transition + transform inline so the
+     CSS only needs the will-change hint for compositing. */
+  .rankings tbody tr.swapping{
+    z-index:5;position:relative;
+    will-change:transform;
+  }
   .trend{display:inline-block;margin-left:6px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);vertical-align:middle}
   .trend.up{color:var(--green)}
   .trend.down{color:var(--red)}
@@ -626,6 +703,7 @@ const STATE = {
   sort: 'score',
   search: '',
   tab: 'movies',   // movies | actors | directors
+  staggerNext: true,   // cascade reveal on the very next render
 };
 
 /* ---------- Formatters ---------- */
@@ -704,6 +782,9 @@ function applyRestoredState(s){
   if (s.sort)    STATE.sort   = s.sort;
   if (s.window)  STATE.window = s.window;
   if (typeof s.search === 'string') STATE.search = s.search;
+  // Returning to a remembered position — skip the cascade reveal so the
+  // user lands instantly on their previous row.
+  STATE.staggerNext = false;
 
   document.querySelectorAll('#tabs .tab').forEach(b =>
     b.classList.toggle('active', b.dataset.tab === STATE.tab));
@@ -924,6 +1005,29 @@ function renderTable(){
     colEntity.textContent = STATE.tab === 'actors' ? 'ACTOR' : 'DIRECTOR';
     renderPeopleTable();
   }
+  // Apply the staggered cascade reveal exactly once per "context" —
+  // first paint and tab switches set STATE.staggerNext to true; sort,
+  // search, and idle re-renders leave it false so the screen doesn't
+  // flicker on every interaction.
+  if (STATE.staggerNext) {
+    STATE.staggerNext = false;
+    applyStaggerReveal();
+  }
+}
+
+function applyStaggerReveal(){
+  const tbody = document.getElementById('tbody');
+  if (!tbody) return;
+  const rs = tbody.querySelectorAll('tr');
+  rs.forEach((row, i) => {
+    row.classList.add('row-revealing');
+    row.style.animationDelay = (i * 50) + 'ms';
+    row.addEventListener('animationend', function handler(){
+      row.classList.remove('row-revealing');
+      row.style.animationDelay = '';
+      row.removeEventListener('animationend', handler);
+    });
+  });
 }
 
 function renderMoviesTable(){
@@ -1115,6 +1219,7 @@ document.getElementById('tabs').addEventListener('click', e => {
   STATE.tab = b.dataset.tab;
   STATE.search = '';
   document.getElementById('searchBox').value = '';
+  STATE.staggerNext = true;   // re-cascade on tab switch
   renderTable();
 });
 
@@ -1177,11 +1282,30 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   tick(); setInterval(tick, 1000);
 })();
 
-/* ---------- Live "alive" animations ---------- */
+/* ===========================================================
+   LIVE EXCHANGE ENERGY ANIMATIONS
+   ===========================================================
+   Six independent timers run on randomized intervals to give the
+   table a constant low-key trading-floor pulse:
+
+     • tickMentions   — every 3-6s, bump a random row's mention count
+                         by 1-25 + green row flash
+     • wiggleScore    — every 4-8s, bump a random row's score visually
+                         (scale 1.1x + green/red color flash)
+     • refreshPulse   — every 8-15s, gold flash on a random row
+     • rankSwap       — every 45-90s, smoothly swap two adjacent rows
+                         with similar scores
+
+   A shared `activeFlashes` counter caps simultaneous row flashes at 2
+   so the screen never feels chaotic. The same engine drives the
+   movies, actors, and directors tabs because all three render into
+   the same #tbody element. */
 (function(){
   const rand = (a,b) => a + Math.floor(Math.random()*(b-a+1));
   const pick = arr => arr[Math.floor(Math.random()*arr.length)];
+  const rows = () => Array.from(document.querySelectorAll('#tbody tr'));
 
+  /* ---------- Mention count parser ---------- */
   const parseCount = s => {
     const m = s.trim().match(/^([\d.]+)\s*([KMB]?)$/);
     if (!m) return null;
@@ -1205,42 +1329,137 @@ document.getElementById('themeToggle').addEventListener('click', () => {
     cell.classList.add('flash');
     setTimeout(() => cell.classList.remove('flash'), 900);
   };
-  const rows = () => Array.from(document.querySelectorAll('#tbody tr'));
 
-  const pulseScore = () => {
-    const rs = rows();
-    if (rs.length) {
-      const el = pick(rs).querySelector('.score');
-      if (el) { el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 120); }
-    }
-    setTimeout(pulseScore, rand(3000, 4000));
-  };
-  const tickMentions = () => {
-    const rs = rows();
-    if (rs.length) {
-      const count = rand(1, 2);
-      const used = new Set();
-      for (let i = 0; i < count; i++) {
-        let row; do { row = pick(rs); } while (used.has(row));
-        used.add(row);
-        const cell = row.querySelector('td:nth-child(5) .num-col');
-        if (cell) bumpCell(cell, rand(1, 50));
-      }
-    }
-    setTimeout(tickMentions, rand(4000, 6000));
-  };
-  const sweepRow = () => {
+  /* ---------- Concurrent flash limiter ---------- */
+  /* Tracks how many rows are currently in any kind of background flash
+     state. The four "background flash" producers (mention tick, score
+     wiggle, refresh pulse, rank swap) all check this before adding a
+     new flash class. Cap = 2 so the screen never feels chaotic. */
+  let activeFlashes = 0;
+  function flashRow(row, color, ms){
+    if (!row || activeFlashes >= 2) return false;
+    const cls = 'flash-' + color;
+    if (row.classList.contains(cls)) return false;
+    activeFlashes++;
+    row.classList.add(cls);
+    setTimeout(() => {
+      row.classList.remove(cls);
+      activeFlashes = Math.max(0, activeFlashes - 1);
+    }, ms);
+    return true;
+  }
+
+  /* ---------- Score number bump ---------- */
+  function bumpScore(row, direction){
+    const el = row.querySelector('.score');
+    if (!el) return;
+    const cls = direction === 'up' ? 'bump-up' : 'bump-down';
+    el.classList.remove('bump-up','bump-down'); // restart if mid-anim
+    void el.offsetWidth;                         // force reflow
+    el.classList.add(cls);
+    setTimeout(() => el.classList.remove(cls), 520);
+  }
+
+  /* ---------- 3. Mention counter tick (every 3-6s, +1..25) ---------- */
+  function tickMentions(){
     const rs = rows();
     if (rs.length) {
       const row = pick(rs);
-      row.classList.add('sweep');
-      setTimeout(() => row.classList.remove('sweep'), 1000);
+      const cell = row.querySelector('td:nth-child(5) .num-col');
+      if (cell) {
+        bumpCell(cell, rand(1, 25));
+        flashRow(row, 'green', 1500);
+      }
     }
-    setTimeout(sweepRow, rand(5000, 8000));
-  };
-  setTimeout(pulseScore, 2500);
-  setTimeout(tickMentions, 3200);
-  setTimeout(sweepRow, 2800);
+    setTimeout(tickMentions, rand(3000, 6000));
+  }
+
+  /* ---------- 2. Score wiggle (visual change simulation) ---------- */
+  /* Picks a random row, randomly chooses up/down direction, scales the
+     score number to 110% with a green/red color tint, then back to
+     gold. Also fires the matching row background flash. The actual
+     numeric score is NOT modified — this is pure visual ambient
+     energy. Real score updates land via the hourly data refresh. */
+  function wiggleScore(){
+    const rs = rows();
+    if (rs.length) {
+      const row = pick(rs);
+      const dir = Math.random() > 0.5 ? 'up' : 'down';
+      bumpScore(row, dir);
+      flashRow(row, dir === 'up' ? 'green' : 'red', 1500);
+    }
+    setTimeout(wiggleScore, rand(4000, 8000));
+  }
+
+  /* ---------- 1. Refresh pulse (gold, every 8-15s) ---------- */
+  function refreshPulse(){
+    const rs = rows();
+    if (rs.length) flashRow(pick(rs), 'gold', 1500);
+    setTimeout(refreshPulse, rand(8000, 15000));
+  }
+
+  /* ---------- 7. Periodic rank swap (every 45-90s) ---------- */
+  /* Picks an adjacent pair of rows whose scores are close, animates
+     them swapping vertical positions over 0.8s with a gold flash on
+     both, then physically swaps their DOM order so the new positions
+     persist until the next render. The internal STATE.data is NOT
+     modified — the next render (sort/tab/refresh) will return rows
+     to their canonical order. */
+  function rankSwap(){
+    const tbody = document.getElementById('tbody');
+    if (!tbody) return scheduleSwap();
+    const rs = Array.from(tbody.querySelectorAll('tr'));
+    if (rs.length >= 5) {
+      // Don't disturb the top 3 (no leader-board flicker)
+      const i = rand(3, rs.length - 2);
+      const r1 = rs[i], r2 = rs[i+1];
+      const s1 = parseInt((r1.querySelector('.score')||{}).textContent || '0', 10);
+      const s2 = parseInt((r2.querySelector('.score')||{}).textContent || '0', 10);
+      // Only swap if the scores are within 8 points (tight race)
+      if (Math.abs(s1 - s2) <= 8) doSwap(tbody, r1, r2);
+    }
+    scheduleSwap();
+  }
+  function scheduleSwap(){ setTimeout(rankSwap, rand(45000, 90000)); }
+
+  function doSwap(tbody, r1, r2){
+    const h1 = r1.getBoundingClientRect().height;
+    const h2 = r2.getBoundingClientRect().height;
+    r1.classList.add('swapping');
+    r2.classList.add('swapping');
+    r1.style.transition = 'transform 0.8s cubic-bezier(.4,0,.2,1)';
+    r2.style.transition = 'transform 0.8s cubic-bezier(.4,0,.2,1)';
+    r1.style.transform  = `translateY(${h2}px)`;
+    r2.style.transform  = `translateY(-${h1}px)`;
+    flashRow(r1, 'gold', 800);
+    flashRow(r2, 'gold', 800);
+
+    setTimeout(() => {
+      // Reset transforms BEFORE the DOM swap so there's no visible jump
+      r1.style.transition = '';
+      r2.style.transition = '';
+      r1.style.transform  = '';
+      r2.style.transform  = '';
+      r1.classList.remove('swapping');
+      r2.classList.remove('swapping');
+      // Physically swap DOM order
+      tbody.insertBefore(r2, r1);
+      // Swap the rendered rank-cell numbers so the column stays sane
+      const r1Rk = r1.querySelector('.rk');
+      const r2Rk = r2.querySelector('.rk');
+      if (r1Rk && r2Rk) {
+        const tmp = r1Rk.textContent;
+        r1Rk.textContent = r2Rk.textContent;
+        r2Rk.textContent = tmp;
+      }
+    }, 800);
+  }
+
+  /* ---------- Kick off all timers ---------- */
+  setTimeout(tickMentions, 2500);
+  setTimeout(wiggleScore,  3500);
+  setTimeout(refreshPulse, 4500);
+  setTimeout(rankSwap,    50000);   // first swap ~50s after load
 })();
 
 loadData();
