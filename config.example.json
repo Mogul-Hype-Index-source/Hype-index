@@ -6,10 +6,21 @@
   "tmdb_image_base": "https://image.tmdb.org/t/p/w185",
   "subreddits": ["movies", "boxoffice", "marvelstudios", "DC_Cinematic"],
   "rss_feeds": [
-    {"source": "Deadline",            "url": "https://deadline.com/feed/"},
-    {"source": "Variety",             "url": "https://variety.com/feed/"},
-    {"source": "Hollywood Reporter",  "url": "https://www.hollywoodreporter.com/feed/"},
-    {"source": "IndieWire",           "url": "https://www.indiewire.com/feed/"}
+    {"source": "Deadline",             "url": "https://deadline.com/feed/",                                                  "default_category": "production",   "filter_strict": false},
+    {"source": "Variety",              "url": "https://variety.com/feed/",                                                   "default_category": "production",   "filter_strict": false},
+    {"source": "Hollywood Reporter",   "url": "https://www.hollywoodreporter.com/feed/",                                     "default_category": "production",   "filter_strict": false},
+    {"source": "IndieWire",            "url": "https://www.indiewire.com/feed/",                                             "default_category": "creative",     "filter_strict": false},
+    {"source": "Screen Daily",         "url": "https://www.screendaily.com/XmlServers/navsectionRSS.aspx?navsectioncode=18", "default_category": "international","filter_strict": false},
+    {"source": "TechCrunch",           "url": "https://techcrunch.com/feed/",                                                "default_category": "ai-tech",      "filter_strict": true},
+    {"source": "Engadget",             "url": "https://www.engadget.com/rss.xml",                                            "default_category": "production",   "filter_strict": true},
+    {"source": "Gizmodo",              "url": "https://gizmodo.com/rss",                                                     "default_category": "production",   "filter_strict": true},
+    {"source": "a16z",                 "url": "https://a16z.com/feed/",                                                      "default_category": "finance",      "filter_strict": true},
+    {"source": "Yahoo Finance · DIS",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=DIS&region=US&lang=en-US", "default_category": "finance",      "filter_strict": false},
+    {"source": "Yahoo Finance · PARA", "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=PARA&region=US&lang=en-US","default_category": "finance",      "filter_strict": false},
+    {"source": "Yahoo Finance · WBD",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=WBD&region=US&lang=en-US", "default_category": "finance",      "filter_strict": false},
+    {"source": "Yahoo Finance · NFLX", "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=NFLX&region=US&lang=en-US","default_category": "finance",      "filter_strict": false},
+    {"source": "Yahoo Finance · CMCSA","url":"https://feeds.finance.yahoo.com/rss/2.0/headline?s=CMCSA&region=US&lang=en-US","default_category": "finance",      "filter_strict": false},
+    {"source": "Yahoo Finance · AMC",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AMC&region=US&lang=en-US", "default_category": "finance",      "filter_strict": false}
   ],
   "outlet_tier_weights": {
     "Deadline": 1.0,

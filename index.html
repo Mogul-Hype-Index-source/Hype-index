@@ -192,12 +192,25 @@
     z-index:2;position:relative;
   }
   .ticker .viewport{flex:1 1 auto;min-width:0;overflow:hidden;position:relative;display:flex;align-items:center}
-  .ticker .track{display:flex;gap:46px;white-space:nowrap;padding-left:30px;animation:scroll 90s linear infinite;font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--text-secondary)}
+  .ticker .track{display:flex;gap:0;white-space:nowrap;padding-left:30px;animation:scroll 220s linear infinite;font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--text-secondary);align-items:center}
   .ticker .track a{display:inline-block;color:inherit}
-  .ticker .track a:hover b{color:var(--gold)}
+  .ticker .track a.ti{margin-right:38px}
+  .ticker .track a:hover b{filter:brightness(1.3)}
   .ticker .track b{color:var(--text-strong);font-weight:700;letter-spacing:.04em}
-  .ticker .track i{color:var(--mute);font-style:normal;font-weight:500}
-  .ticker .track .bullet{color:var(--gold);margin-right:10px}
+  .ticker .track i{color:var(--mute);font-style:normal;font-weight:500;margin-left:6px}
+  .ticker .track .bullet{color:var(--gold);margin-right:8px;opacity:.8}
+  /* Category label — gold pill in front of each group */
+  .ticker .track .cat-label{
+    display:inline-block;
+    color:var(--gold);
+    font-family:'Bebas Neue',sans-serif;
+    font-size:13px;letter-spacing:.18em;
+    padding:2px 12px;margin:0 16px 0 8px;
+    border:1px solid var(--gold-pill-border);
+    background:var(--gold-pill-bg);
+    border-radius:999px;
+    line-height:1.5;
+  }
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- Movers strip ---------- */
@@ -746,7 +759,25 @@ function renderMarket(){
   document.getElementById('tabCount_directors').textContent = (d.directors || []).length;
 }
 
-/* ---------- Render: ticker ---------- */
+/* ---------- Render: news ticker (categorized + colored) ---------- */
+const TICKER_CATEGORIES = {
+  // emoji label, gold-on-dark category pill, headline color
+  'production':   { label: '🎬 PRODUCTION',     color: 'var(--text-strong)' },
+  'finance':      { label: '💰 FINANCE',        color: '#4FC3F7' },
+  'international':{ label: '🌍 INTERNATIONAL', color: '#FFB347' },
+  'creative':     { label: '🎭 CREATIVE',       color: 'var(--text-strong)' },
+  'pr-marketing': { label: '📣 PR & MARKETING', color: '#F48FB1' },
+  'ai-tech':      { label: '🤖 AI & TECH',      color: '#00BCD4' },
+  'festivals':    { label: '🎪 FESTIVALS',      color: '#CE93D8' },
+  'box-office':   { label: '📊 BOX OFFICE',     color: '#00FF87' },
+};
+// Display order — matches update.py CATEGORY_ORDER so the ticker cycles
+// through every category in the same sequence each time it loops.
+const TICKER_ORDER = [
+  'production', 'finance', 'international', 'creative',
+  'pr-marketing', 'ai-tech', 'festivals', 'box-office',
+];
+
 function renderTicker(){
   const d = STATE.data; if (!d) return;
   const news = (d.news && d.news.length) ? d.news : [];
@@ -755,13 +786,46 @@ function renderTicker(){
     track.innerHTML = '<span><i>Awaiting next news fetch…</i></span>';
     return;
   }
-  const build = () => news.map(n => {
-    const title = escapeHtml(n.headline || '');
-    const src = escapeHtml(n.source || '');
-    const href = n.url ? ` href="${escapeHtml(n.url)}" target="_blank" rel="noopener"` : '';
-    return `<a${href}><span class="bullet">●</span><b>${title}</b> <i>· ${src}</i></a>`;
-  }).join('');
-  track.innerHTML = build() + build(); // duplicate for seamless loop
+
+  // Group by category in our preferred display order. Backwards compat:
+  // if items don't have a `category` field (older v2.json), they all
+  // collapse into "production".
+  const grouped = {};
+  for (const n of news) {
+    const c = n.category || 'production';
+    if (!grouped[c]) grouped[c] = [];
+    grouped[c].push(n);
+  }
+
+  const build = () => {
+    const parts = [];
+    for (const cat of TICKER_ORDER) {
+      const items = grouped[cat];
+      if (!items || !items.length) continue;
+      const meta = TICKER_CATEGORIES[cat] || TICKER_CATEGORIES.production;
+      // Category label — gold pill in front of the group
+      parts.push(`<span class="cat-label">${meta.label}</span>`);
+      for (const n of items) {
+        const title = escapeHtml(n.headline || '');
+        const src   = escapeHtml(n.source || '');
+        const href  = n.url
+          ? ` href="${escapeHtml(n.url)}" target="_blank" rel="noopener"`
+          : '';
+        parts.push(
+          `<a${href} class="ti" style="color:${meta.color}">` +
+            `<span class="bullet">●</span>` +
+            `<b style="color:${meta.color}">${title}</b> ` +
+            `<i>· ${src}</i>` +
+          `</a>`
+        );
+      }
+    }
+    return parts.join('');
+  };
+
+  // Duplicate the entire built track once so the CSS @keyframes scroll
+  // (translateX 0 → -50%) loops seamlessly without a visible seam.
+  track.innerHTML = build() + build();
 }
 
 /* ---------- Render: movers strip ---------- */

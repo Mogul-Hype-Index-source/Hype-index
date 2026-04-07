@@ -59,6 +59,140 @@ NEWS_REJECT_KEYWORDS = [
     "tennis", "golf", "pga", "lpga", "super bowl", "playoffs",
 ]
 
+# Global keyword whitelist — applied to EVERY source. Headlines must
+# contain at least one of these tokens (case-insensitive substring match)
+# or they're dropped from the ticker. This is the user-specified filter.
+#
+# Note on AI: " ai " (with surrounding whitespace) catches the standalone
+# token without matching "rain", "main", "stadium" etc. "ai film" / "ai
+# movie" etc are caught explicitly so an unrelated AI story like "Uber's
+# new AI chips" is dropped.
+NEWS_GLOBAL_KEYWORDS = [
+    "film", "movie", "cinema", "box office", "theatrical", "director",
+    "actor", "actress", "studio", "screenplay", "hollywood",
+    "cannes", "sundance", "tiff", "venice", "berlin", "berlinale",
+    "tribeca", "sxsw",
+    "sequel", "franchise", "premiere", "trailer", "casting",
+    # Studios + theatre chains + streamers
+    "disney", "paramount", "universal pictures", "warner bros",
+    "warner discovery", "wbd", "comcast", "cmcsa", "sony pictures",
+    "nbcuniversal", "lionsgate", "a24", "neon", "mubi",
+    "netflix", "hbo max", "max ", "hulu", "apple tv", "amazon studios",
+    "amc theat", "cinemark", "imax",
+    # Distribution / business
+    "co-production", "film fund", "film financing", "acquisition rights",
+    "rights deal", "uae", "saudi film",
+    "box office tracking", "opening weekend", "weekend gross",
+    "domestic gross", "worldwide gross",
+    # AI-in-film specifically (NOT generic AI)
+    "ai film", "ai movie", "ai screenplay", "ai-generated film",
+    "deepfake", "virtual production", "led volume", "visual effects",
+    "vfx", "previs", "previz", "previsualization",
+    # Prediction markets
+    "polymarket", "kalshi",
+    # Festivals + awards
+    "film festival", "festival lineup", "festival premiere",
+    "academy award", "oscar nomination",
+]
+
+# Category classification — ordered list of (category, [keywords]).
+# First match wins. If nothing matches, the source's default_category
+# is used. Each category drives both grouping and color in the ticker.
+NEWS_CATEGORY_RULES = [
+    ("box-office", [
+        "box office", "opening weekend", "weekend gross", "domestic gross",
+        "worldwide gross", "per screen", "per-screen",
+        "second weekend", "tops the box", "box office tracking",
+        "box office debut", "opens to", "grossing", "ticket sales",
+    ]),
+    ("festivals", [
+        "cannes", "sundance", "tiff", "toronto international", "venice film",
+        "venezia", "berlin film", "berlinale", "tribeca", "sxsw", "afi fest",
+        "festival lineup", "film festival", "festival premiere",
+    ]),
+    ("ai-tech", [
+        "artificial intelligence", " ai ", "a.i.", "machine learning",
+        "deepfake", "virtual production", "led volume", "led wall",
+        "previs", "previz", "previsualization", "vfx", "visual effects",
+        "imax", "laser projection", "streaming tech", "post-production tech",
+        "render", "unreal engine", "generative",
+    ]),
+    ("finance", [
+        "disney", "paramount", "warner bros", "warner discovery", "wbd",
+        "comcast", "universal pictures", "sony pictures", "netflix earnings",
+        "amc theatres", "amc entertainment", "cinemark", "stock", "shares",
+        "earnings", "merger", "acquisition", "co-production", "film fund",
+        "venture", "polymarket", "kalshi", "investment", "raises", "ipo",
+        "valuation", "equity", "debt", "wall street", "analyst",
+    ]),
+    ("international", [
+        "bollywood", "k-drama", "korean cinema", "international box office",
+        "global release", "foreign language", "saudi arabia", "uae",
+        "international co-production", "european film", "japanese film",
+        "chinese film", "indian cinema", "latin america", "mena",
+    ]),
+    ("pr-marketing", [
+        "trailer drops", "trailer release", "trailer:", "trailer reveal",
+        "first trailer", "new trailer", "premiere", "press tour", "viral",
+        "tiktok", "social media campaign", "first look", "teaser",
+        "marketing campaign", "reveals", "unveiled", "red carpet",
+    ]),
+    ("creative", [
+        "screenplay", "cinematographer", "score", "soundtrack", "composer",
+        "director profile", "interview", "writer-director", "auteur",
+        "production design", "editor", "costume design",
+    ]),
+    ("production", [
+        "greenlight", "casting", "to direct", "attached to", "joins",
+        "lands lead", "in talks", "production starts", "wraps",
+        "screenplay deal", "starring", "to star", "boards",
+    ]),
+]
+
+
+def _normalize_for_match(s: str) -> str:
+    """
+    Lowercase, replace non-word characters with spaces, collapse runs of
+    whitespace, and pad with single spaces on each side. The result allows
+    space-bounded substring matching that approximates word boundaries
+    without dragging in regex compilation.
+
+    Critical: this avoids the "factor" → "actor" false positive that the
+    naive substring filter let through.
+    """
+    if not s:
+        return " "
+    cleaned = re.sub(r"[^\w]", " ", s.lower())
+    return " " + re.sub(r"\s+", " ", cleaned).strip() + " "
+
+
+def _kw_matches(needle: str, hay: str) -> bool:
+    """Space-bounded substring match — both needle and hay must be normalized."""
+    return needle in hay
+
+
+def _classify_headline(headline: str, default: str = "production") -> str:
+    """Pick the most specific category for a headline."""
+    if not headline:
+        return default
+    norm = _normalize_for_match(headline)
+    for cat, keywords in NEWS_CATEGORY_RULES:
+        for kw in keywords:
+            if _kw_matches(_normalize_for_match(kw), norm):
+                return cat
+    return default
+
+
+def _passes_global_filter(headline: str) -> bool:
+    """True if the headline contains at least one whitelist keyword."""
+    if not headline:
+        return False
+    norm = _normalize_for_match(headline)
+    for kw in NEWS_GLOBAL_KEYWORDS:
+        if _kw_matches(_normalize_for_match(kw), norm):
+            return True
+    return False
+
 
 # ---------------------------------------------------------------------------
 # Config + HTTP helpers
@@ -680,10 +814,14 @@ def fetch_news_feeds(feeds: List[Dict[str, str]],
         return cache.get("items") or []
 
     items: List[Dict[str, Any]] = []
-    rejected = 0
+    rejected_sports = 0
+    rejected_offtopic = 0
+    by_source: Dict[str, int] = {}
     for feed in feeds:
-        src = feed.get("source", "")
-        url = feed.get("url", "")
+        src              = feed.get("source", "")
+        url              = feed.get("url", "")
+        default_category = feed.get("default_category", "production")
+        filter_strict    = bool(feed.get("filter_strict", False))
         if not url:
             continue
         try:
@@ -691,15 +829,25 @@ def fetch_news_feeds(feeds: List[Dict[str, str]],
         except Exception as exc:  # noqa: BLE001
             LOG.warning("RSS parse failed for %s: %s", url, exc)
             continue
-        for entry in (parsed.entries or [])[:30]:
+        kept_for_source = 0
+        for entry in (parsed.entries or [])[:50]:
             headline = (entry.get("title") or "").strip()
             if not headline:
                 continue
-            # Reject sports / non-film content. The four trade pubs all
-            # cover sports business too, which polluted the ticker.
             lower = headline.lower()
+
+            # Always reject sports / non-film content first.
             if any(kw in lower for kw in NEWS_REJECT_KEYWORDS):
-                rejected += 1
+                rejected_sports += 1
+                continue
+
+            # Global keyword whitelist — applies to ALL sources per spec.
+            # Headlines must contain at least one tracked entertainment
+            # token, otherwise they're dropped. The `filter_strict` flag
+            # is now redundant (kept in config for documentation) since
+            # every source goes through the same filter.
+            if not _passes_global_filter(headline):
+                rejected_offtopic += 1
                 continue
 
             published_iso = ""
@@ -710,16 +858,32 @@ def fetch_news_feeds(feeds: List[Dict[str, str]],
                     ).isoformat()
                 except Exception:  # noqa: BLE001
                     pass
+
+            category = _classify_headline(headline, default=default_category)
+
             items.append({
                 "headline":  headline,
                 "source":    src,
                 "url":       entry.get("link") or "",
                 "published": published_iso,
                 "summary":   re.sub(r"<[^>]+>", "", entry.get("summary", ""))[:240],
+                "category":  category,
             })
+            kept_for_source += 1
+        if kept_for_source:
+            by_source[src] = kept_for_source
     items.sort(key=lambda x: x.get("published") or "", reverse=True)
-    LOG.info("RSS: pulled %d items across %d feeds (dropped %d sports/non-film)",
-             len(items), len(feeds), rejected)
+    LOG.info("RSS: %d items from %d feeds (dropped %d sports, %d off-topic)",
+             len(items), len(feeds), rejected_sports, rejected_offtopic)
+    if by_source:
+        LOG.info("RSS per-source: %s",
+                 ", ".join(f"{s}={n}" for s, n in by_source.items()))
+    # Category breakdown for sanity-checking the classifier
+    cat_counts: Dict[str, int] = {}
+    for it in items:
+        cat_counts[it["category"]] = cat_counts.get(it["category"], 0) + 1
+    LOG.info("RSS by category: %s",
+             ", ".join(f"{c}={n}" for c, n in sorted(cat_counts.items(), key=lambda x: -x[1])))
 
     # Persist for the next pulse so we don't re-hit RSS within the TTL.
     _save_json(_news_cache_path(), {

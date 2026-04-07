@@ -247,12 +247,37 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "score":      m.get("score", 0),
         }
 
-    # Top 12 most-recent news items for the ticker
-    ticker_news = [
-        {"headline": n["headline"], "source": n["source"], "url": n["url"]}
-        for n in news_items[:12]
-        if n.get("headline")
+    # Categorized news for the ticker. Build up to 5 items per category
+    # (the frontend cycles through them as labeled groups). We pull from a
+    # large pool — up to 60 items — so each of the 8 categories has a fair
+    # chance of being represented even when the most-recent slice is
+    # dominated by one outlet.
+    CATEGORY_ORDER = [
+        "production", "finance", "international", "creative",
+        "pr-marketing", "ai-tech", "festivals", "box-office",
     ]
+    PER_CAT = 5
+    bucket: Dict[str, List[Dict[str, Any]]] = {c: [] for c in CATEGORY_ORDER}
+    for n in news_items[:120]:
+        if not n.get("headline"):
+            continue
+        c = n.get("category") or "production"
+        if c not in bucket:
+            bucket[c] = []
+        if len(bucket[c]) < PER_CAT:
+            bucket[c].append({
+                "headline": n["headline"],
+                "source":   n["source"],
+                "url":      n["url"],
+                "category": c,
+            })
+
+    # Flatten in display order, dropping empty categories so the ticker
+    # never shows a label with zero headlines.
+    ticker_news: List[Dict[str, Any]] = []
+    for c in CATEGORY_ORDER:
+        if bucket.get(c):
+            ticker_news.extend(bucket[c])
 
     total_mentions_24h = sum(
         ((m.get("reddit") or {}).get("posts", 0) +
