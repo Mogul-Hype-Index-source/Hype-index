@@ -307,6 +307,7 @@
   .ent .meta{display:flex;flex-direction:column;gap:3px;min-width:0}
   .ent .title{color:var(--text-strong);font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
   .ent .title .badge{font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:.14em;padding:2px 6px;border-radius:3px;background:var(--gold-pill-bg);color:var(--gold);border:1px solid var(--gold-pill-border)}
+  .ent .release{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.04em;font-weight:500}
   .ent .sub{color:var(--mute);font-size:12px}
   .ent .sub .dot{display:inline-block;width:3px;height:3px;border-radius:50%;background:var(--mute);vertical-align:middle;margin:0 6px}
   .fire{color:var(--gold);filter:saturate(1.2)}
@@ -719,6 +720,20 @@ const fmtDate = iso => {
   const d = new Date(iso);
   return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 };
+// Mixed-case release date for the rankings row ("Mar 18, 2026"). Uses a
+// date-only format (no time-of-day / timezone shift) so YYYY-MM-DD
+// strings always render on the date the operator typed, never a day
+// earlier because of UTC→local conversion.
+const fmtReleaseDate = iso => {
+  if (!iso) return '';
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return '';
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const year  = parseInt(m[1], 10);
+  const month = MONTHS[parseInt(m[2], 10) - 1];
+  const day   = parseInt(m[3], 10);
+  return `${month} ${day}, ${year}`;
+};
 const sentColor = p => p >= 60 ? 'var(--green)' : (p >= 40 ? 'var(--amber)' : 'var(--red)');
 const initials = t => t.split(/[:\s]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1088,6 +1103,7 @@ function renderMoviesTable(){
             <div class="poster" style="${posterStyle}">${posterContent}</div>
             <div class="meta">
               <div class="title">${escapeHtml(m.title||'')} ${badges.join(' ')}</div>
+              ${m.release_date ? `<div class="release">Release: ${fmtReleaseDate(m.release_date)}</div>` : ''}
               <div class="sub">${sub || '<i style="color:var(--mute)">—</i>'}</div>
             </div>
           </div>
