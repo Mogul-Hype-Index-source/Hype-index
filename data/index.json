@@ -1,34 +1,33 @@
 {
   "meta": {
     "title": "Mogul Hype Index",
-    "asOf": "2026-04-07T15:00:00Z",
+    "asOf": "2026-04-07T22:00:00Z",
     "scoreLabel": "AMSI"
   },
   "ticker": [
-    { "source": "Variety", "headline": "Super Mario Galaxy Movie dominates global charts with sustained 999.0 AMSI." },
-    { "source": "Deadline", "headline": "Daniel Chong holds #1 Director spot as Mario momentum compounds." },
-    { "source": "Variety", "headline": "Michael (2026) velocity accelerating following viral Jaafar Jackson clips." },
-    { "source": "THR", "headline": "The Drama (A24) yield anchor solidified after strong opening performance." },
-    { "source": "Deadline", "headline": "Milly Alcock resonance peaks at 994.0 AMSI in Actor category." }
+    { "source": "Variety", "headline": "'Michael' rehearsal footage crosses 20M views; studio rushes out official featurette drop" },
+    { "source": "Deadline", "headline": "Marvel locks Super Bowl ad slot for 'Avengers: Doomsday' as speculation hits fever pitch" },
+    { "source": "The Hollywood Reporter", "headline": "'Super Mario Galaxy' composer teases orchestral deep cuts from classic game scores" },
+    { "source": "IGN", "headline": "Leaked cockpit photo from 'Project Hail Mary' set sends sci-fi Twitter into theory mode" },
+    { "source": "Collider", "headline": "Early test screening cards for A24's 'The Drama' call it 'uncomfortably relatable'" }
   ],
   "tabs": {
     "movies": [
-      { "rank": 1, "move": 1, "entity": "Super Mario Galaxy Movie", "metadata": "Nintendo/Illumination", "mentions": 301200, "sentiment": 96, "score": 999.0 },
-      { "rank": 2, "move": -1, "entity": "Project Hail Mary", "metadata": "Ryan Gosling / Amazon MGM", "mentions": 165200, "sentiment": 89, "score": 982.4 },
-      { "rank": 3, "move": 0, "entity": "Michael (2026)", "metadata": "Antoine Fuqua / Jaafar Jackson", "mentions": 194700, "sentiment": 95, "score": 991.6 },
-      { "rank": 4, "move": 0, "entity": "The Drama (A24)", "metadata": "Zendaya / Robert Pattinson", "mentions": 126900, "sentiment": 87, "score": 974.3 },
-      { "rank": 5, "move": 0, "entity": "Supergirl: Woman of Tomorrow", "metadata": "Milly Alcock / DCU", "mentions": 108100, "sentiment": 83, "score": 960.1 }
+      { "rank": 1, "move": 0, "entity": "Super Mario Galaxy Movie", "metadata": "Nintendo/Illumination", "mentions": 3400, "sentiment": 94, "score": 999.0 },
+      { "rank": 2, "move": 1, "entity": "Michael (2026)", "metadata": "Antoine Fuqua / Jaafar Jackson", "mentions": 8200, "sentiment": 97, "score": 998.6 },
+      { "rank": 3, "move": -1, "entity": "Project Hail Mary'", "metadata": "Ryan Gosling / Amazon MGM", "mentions": 1950, "sentiment": 89, "score": 985.9 },
+      { "rank": 4, "move": 0, "entity": "Tom Holland", "metadata": "Spider-Man", "mentions": 1510, "sentiment": 88, "score": 971.1 },
+      { "rank": 5, "move": 1, "entity": "Avengers: Doomsday", "metadata": "MCU / Russo Bros", "mentions": 1700, "sentiment": 85, "score": 959.8 }
     ],
     "actors": [
-      { "rank": 1, "move": 0, "entity": "Milly Alcock", "metadata": "Supergirl", "mentions": 145300, "sentiment": 94, "score": 994.0 },
-      { "rank": 2, "move": 0, "entity": "Jaafar Jackson", "metadata": "Michael", "mentions": 18400, "sentiment": 92, "score": 978.3 },
-      { "rank": 3, "move": 0, "entity": "Tom Holland", "metadata": "Spider-Man", "mentions": 15100, "sentiment": 88, "score": 971.1 },
-      { "rank": 4, "move": 0, "entity": "Zendaya", "metadata": "The Drama", "mentions": 14700, "sentiment": 89, "score": 969.6 }
+      { "rank": 1, "move": 0, "entity": "Milly Alcock", "metadata": "Supergirl", "mentions": 3000, "sentiment": 95, "score": 995.6 },
+      { "rank": 2, "move": 2, "entity": "Zendaya", "metadata": "The Drama", "mentions": 2100, "sentiment": 93, "score": 972.0 },
+      { "rank": 3, "move": -1, "entity": "Jaafar Jackson", "metadata": "Michael", "mentions": 18400, "sentiment": 92, "score": 978.3 }
     ],
     "directors": [
-      { "rank": 1, "move": 0, "entity": "Daniel Chong", "metadata": "Mario Galaxy", "mentions": 156800, "sentiment": 92, "score": 997.6 },
-      { "rank": 2, "move": 0, "entity": "Denis Villeneuve", "metadata": "Dune 3", "mentions": 12900, "sentiment": 86, "score": 965.2 },
-      { "rank": 3, "move": 0, "entity": "Christopher Nolan", "metadata": "The Odyssey", "mentions": 12300, "sentiment": 85, "score": 963.6 }
+      { "rank": 1, "move": 0, "entity": "Daniel Chong", "mentions": 720, "sentiment": 92, "score": 994.4 },
+      { "rank": 2, "move": 0, "Denis Villeneuve", "mentions": 12900, "sentiment": 86, "score": 965.2 },
+      { "rank": 3, "move": 0, "Conan O'Brien", "mentions": 12300, "sentiment": 85, "score": 963.6 }
     ]
   }
 }
