@@ -42,6 +42,23 @@ REDDIT_BASE = "https://www.reddit.com"
 
 REQUEST_TIMEOUT = 15  # seconds
 
+# Hard-coded title blacklist — re-releases / remakes of old films that TMDb
+# tags with a recent release_date but are not part of the live theatrical
+# slate. Anything matched here is dropped before scoring.
+TITLE_BLACKLIST = {
+    "faces of death",          # 1978 mondo film, periodic re-releases
+}
+
+# News headlines containing any of these tokens are dropped from the ticker.
+# Variety / THR / IndieWire publish a fair amount of sports business and TV
+# news; the Hype Index ticker should stay film-focused.
+NEWS_REJECT_KEYWORDS = [
+    "nfl", "espn", "nba", "mlb", "nhl", "college football", "ncaa",
+    "wnba", "ufc", "boxing", "wwe", "premier league", "world cup",
+    "fifa", "f1 ", "formula 1", "nascar", "olympics", "olympic",
+    "tennis", "golf", "pga", "lpga", "super bowl", "playoffs",
+]
+
 
 # ---------------------------------------------------------------------------
 # Config + HTTP helpers
@@ -111,6 +128,9 @@ def filter_by_release_window(movies: Dict[int, Dict[str, Any]] | List[Dict[str, 
     cutoff = today - timedelta(days=window_days)
 
     def _keep(m: Dict[str, Any]) -> bool:
+        # Title blacklist (re-releases of old films, etc.)
+        if (m.get("title") or "").strip().lower() in TITLE_BLACKLIST:
+            return False
         rd = m.get("release_date") or ""
         try:
             rd_date = datetime.strptime(rd, "%Y-%m-%d").date()
@@ -218,12 +238,25 @@ def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, str]:
 # Trailer IDs are also cached on disk (data/cache/youtube_trailers.json),
 # keyed by tmdb_id, so we only re-query TMDb when a movie is new to the slate.
 
+# Per-source cache TTLs. Each source's fetch function checks its own
+# timestamp and skips the network round-trip if cached data is still fresh.
+# This lets a single 15-minute pulse cycle keep the news ticker live while
+# spending YouTube quota only once per day.
+YOUTUBE_STATS_TTL_HOURS = 24       # daily — quota-conservative
+GOOGLE_TRENDS_TTL_HOURS = 2        # bi-hourly
+NEWS_TTL_MINUTES        = 15       # ticker freshness target
+TMDB_UNIVERSE_TTL_HOURS = 6        # the slate doesn't shift fast
+
+
 def _trailer_cache_path() -> Path:
     return REPO_ROOT / "data" / "cache" / "youtube_trailers.json"
 
 
-def _load_trailer_cache() -> Dict[str, str]:
-    p = _trailer_cache_path()
+def _stats_cache_path() -> Path:
+    return REPO_ROOT / "data" / "cache" / "youtube_stats.json"
+
+
+def _load_json(p: Path) -> Dict[str, Any]:
     if not p.exists():
         return {}
     try:
@@ -232,10 +265,54 @@ def _load_trailer_cache() -> Dict[str, str]:
         return {}
 
 
-def _save_trailer_cache(cache: Dict[str, str]) -> None:
-    p = _trailer_cache_path()
+def _save_json(p: Path, data: Dict[str, Any]) -> None:
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(cache, indent=2))
+    p.write_text(json.dumps(data, indent=2))
+
+
+def _load_trailer_cache() -> Dict[str, str]:
+    return _load_json(_trailer_cache_path())
+
+
+def _save_trailer_cache(cache: Dict[str, str]) -> None:
+    _save_json(_trailer_cache_path(), cache)
+
+
+def _load_stats_cache() -> Dict[str, Dict[str, Any]]:
+    return _load_json(_stats_cache_path())
+
+
+def _save_stats_cache(cache: Dict[str, Dict[str, Any]]) -> None:
+    _save_json(_stats_cache_path(), cache)
+
+
+def _stats_cache_fresh(entry: Dict[str, Any], ttl_hours: int = YOUTUBE_STATS_TTL_HOURS) -> bool:
+    """True if the cache entry is younger than ttl_hours."""
+    iso = entry.get("fetched_at")
+    if not iso:
+        return False
+    try:
+        ts = datetime.fromisoformat(iso)
+    except ValueError:
+        return False
+    age = datetime.now(timezone.utc) - ts
+    return age < timedelta(hours=ttl_hours)
+
+
+def _cache_age(blob: Dict[str, Any]) -> Optional[timedelta]:
+    """How old is a cache file's payload? Returns None if no fetched_at."""
+    iso = blob.get("fetched_at")
+    if not iso:
+        return None
+    try:
+        ts = datetime.fromisoformat(iso)
+    except ValueError:
+        return None
+    return datetime.now(timezone.utc) - ts
+
+
+def _news_cache_path()    -> Path: return REPO_ROOT / "data" / "cache" / "news.json"
+def _trends_cache_path()  -> Path: return REPO_ROOT / "data" / "cache" / "trends.json"
 
 
 def fetch_tmdb_trailer_video_id(api_key: str, tmdb_id: int) -> Optional[str]:
@@ -247,7 +324,7 @@ def fetch_tmdb_trailer_video_id(api_key: str, tmdb_id: int) -> Optional[str]:
     if not data:
         return None
     videos = data.get("results") or []
-    # Preference order: official Trailer → any Trailer → any YouTube clip
+    # Preference order: official Trailer → any Trailer → Teaser → any YouTube clip
     def _pick(predicate):
         for v in videos:
             if v.get("site") == "YouTube" and predicate(v):
@@ -257,12 +334,19 @@ def fetch_tmdb_trailer_video_id(api_key: str, tmdb_id: int) -> Optional[str]:
     return (
         _pick(lambda v: v.get("type") == "Trailer" and v.get("official"))
         or _pick(lambda v: v.get("type") == "Trailer")
+        or _pick(lambda v: v.get("type") == "Teaser")
         or _pick(lambda v: True)
     )
 
 
-def fetch_youtube_video_stats(api_key: str, video_id: str) -> Dict[str, int]:
-    """Fetch view/like/comment counts for a known YouTube video ID. Costs 1 quota unit."""
+def fetch_youtube_video_stats(api_key: str, video_id: str,
+                              diag: bool = False) -> Dict[str, int]:
+    """
+    Fetch view/like/comment counts for a known YouTube video ID.
+    Costs 1 YouTube Data API quota unit per call.
+    Returns {"views":0,"likes":0,"comments":0} on any failure (quota,
+    deleted video, network error, etc).
+    """
     empty = {"views": 0, "likes": 0, "comments": 0}
     if not video_id:
         return empty
@@ -270,6 +354,9 @@ def fetch_youtube_video_stats(api_key: str, video_id: str) -> Dict[str, int]:
         f"{YOUTUBE_BASE}/videos",
         params={"part": "statistics", "id": video_id, "key": api_key},
     )
+    if diag:
+        LOG.info("DIAG youtube /videos id=%s → %s",
+                 video_id, json.dumps(stats)[:300] if stats else "None")
     if not stats or not stats.get("items"):
         return empty
     s = stats["items"][0].get("statistics", {})
@@ -280,31 +367,141 @@ def fetch_youtube_video_stats(api_key: str, video_id: str) -> Dict[str, int]:
     }
 
 
-def fetch_youtube_trailer(api_key: str, title: str) -> Dict[str, int]:
+def fetch_youtube_search(api_key: str, query: str,
+                         diag: bool = False) -> Optional[str]:
     """
-    Legacy entry point — kept for ad-hoc use. Costs 100+1 quota units per call
-    because it does a full /search. Prefer fetch_tmdb_trailer_video_id +
-    fetch_youtube_video_stats inside fetch_all().
+    YouTube /search → top result video ID. Costs 100 quota units per call.
+    Used as the FALLBACK when TMDb has no trailer for a movie.
     """
-    empty = {"views": 0, "likes": 0, "comments": 0}
-    if not title:
-        return empty
+    if not query:
+        return None
     search = _http_get(
         f"{YOUTUBE_BASE}/search",
         params={
             "part": "snippet",
-            "q": f"{title} official trailer",
+            "q": query,
             "type": "video",
             "maxResults": 1,
             "key": api_key,
         },
     )
+    if diag:
+        LOG.info("DIAG youtube /search q=%r → %s",
+                 query, json.dumps(search)[:300] if search else "None")
     if not search:
-        return empty
+        return None
     items = search.get("items") or []
     if not items:
+        return None
+    return items[0].get("id", {}).get("videoId")
+
+
+def fetch_youtube_for_movie(yt_key: str, tmdb_key: str,
+                            tmdb_id: int, title: str, year: Optional[str],
+                            trailer_cache: Dict[str, str],
+                            stats_cache: Dict[str, Dict[str, Any]],
+                            diag: bool = False) -> Dict[str, int]:
+    """
+    Full chain for a single movie:
+
+      1. Stats cache hit (within 24h TTL)         → return cached stats
+      2. Trailer cache hit (tmdb_id → video_id)   → fetch fresh stats
+      3. Ask TMDb /movie/{id}/videos              → cache + fetch fresh
+      4. YouTube /search "{title} official trailer {year}"  → cache + fetch
+      5. YouTube /search "{title} trailer"        → cache + fetch
+      6. Stale stats cache (any age)              → return stale
+      7. Empty {0,0,0}
+
+    The cache + fallback chain means quota exhaustion does NOT zero the
+    leaderboard — we keep showing the most recent good values until quota
+    resets at midnight Pacific.
+    """
+    tmdb_id_str = str(tmdb_id)
+    cached = stats_cache.get(tmdb_id_str)
+
+    # 1. Fresh cache hit — zero API cost
+    if cached and _stats_cache_fresh(cached):
+        if diag:
+            LOG.info("DIAG cache HIT (fresh) tmdb=%d %s — views=%d",
+                     tmdb_id, title, cached.get("views", 0))
+        return {
+            "views":    int(cached.get("views", 0) or 0),
+            "likes":    int(cached.get("likes", 0) or 0),
+            "comments": int(cached.get("comments", 0) or 0),
+        }
+
+    # 2. We have a cached trailer ID for this movie
+    video_id = trailer_cache.get(tmdb_id_str)
+
+    # 3. Otherwise ask TMDb for the trailer (free)
+    if not video_id:
+        video_id = fetch_tmdb_trailer_video_id(tmdb_key, tmdb_id)
+        if video_id:
+            trailer_cache[tmdb_id_str] = video_id
+
+    # 4. Try YouTube /search with year qualifier
+    if not video_id and year:
+        video_id = fetch_youtube_search(yt_key, f"{title} official trailer {year}", diag=diag)
+        if video_id:
+            trailer_cache[tmdb_id_str] = video_id
+
+    # 5. Try YouTube /search without year
+    if not video_id:
+        video_id = fetch_youtube_search(yt_key, f"{title} trailer", diag=diag)
+        if video_id:
+            trailer_cache[tmdb_id_str] = video_id
+
+    # If we have a video_id, try to fetch fresh stats
+    if video_id:
+        fresh = fetch_youtube_video_stats(yt_key, video_id, diag=diag)
+        # Treat zero-view result as a soft failure — re-search without year
+        if fresh["views"] == 0 and year:
+            alt_video_id = fetch_youtube_search(yt_key, f"{title} trailer", diag=diag)
+            if alt_video_id and alt_video_id != video_id:
+                alt_fresh = fetch_youtube_video_stats(yt_key, alt_video_id, diag=diag)
+                if alt_fresh["views"] > 0:
+                    video_id = alt_video_id
+                    fresh = alt_fresh
+                    trailer_cache[tmdb_id_str] = video_id
+
+        if fresh["views"] > 0:
+            stats_cache[tmdb_id_str] = {
+                **fresh,
+                "video_id":    video_id,
+                "title":       title,
+                "fetched_at":  datetime.now(timezone.utc).isoformat(),
+            }
+            if diag:
+                LOG.info("DIAG cache MISS → fetched fresh tmdb=%d %s views=%d",
+                         tmdb_id, title, fresh["views"])
+            return fresh
+
+    # 6. Last-resort: stale cache (older than TTL but better than nothing)
+    if cached:
+        if diag:
+            LOG.info("DIAG cache STALE fallback tmdb=%d %s views=%d (age=%s)",
+                     tmdb_id, title, cached.get("views", 0), cached.get("fetched_at"))
+        return {
+            "views":    int(cached.get("views", 0) or 0),
+            "likes":    int(cached.get("likes", 0) or 0),
+            "comments": int(cached.get("comments", 0) or 0),
+        }
+
+    # 7. Nothing
+    if diag:
+        LOG.info("DIAG no data tmdb=%d %s", tmdb_id, title)
+    return {"views": 0, "likes": 0, "comments": 0}
+
+
+def fetch_youtube_trailer(api_key: str, title: str) -> Dict[str, int]:
+    """
+    Legacy entry point — kept for ad-hoc use. Costs 100+1 quota units per call.
+    Prefer fetch_youtube_for_movie() inside fetch_all().
+    """
+    empty = {"views": 0, "likes": 0, "comments": 0}
+    if not title:
         return empty
-    video_id = items[0].get("id", {}).get("videoId")
+    video_id = fetch_youtube_search(api_key, f"{title} official trailer")
     return fetch_youtube_video_stats(api_key, video_id) if video_id else empty
 
 
@@ -348,27 +545,45 @@ def fetch_reddit_mentions(title: str, subreddits: Iterable[str], user_agent: str
 # Google Trends — pytrends batches of 5
 # ---------------------------------------------------------------------------
 
-def fetch_google_trends(titles: List[str]) -> Dict[str, int]:
+def fetch_google_trends(titles: List[str], force: bool = False) -> Dict[str, int]:
     """
     Returns {title: 0..100 interest score over the last 7 days}.
     pytrends caps comparisons at 5 keywords per request, so we batch.
-    Falls back to {} on any error so the rest of the pipeline keeps running.
+
+    Cached for GOOGLE_TRENDS_TTL_HOURS (default 2h). pytrends rate-limits
+    aggressively, so this caching is essential — without it the launchd
+    pulse hammers Google every 15 minutes and gets 429s on every batch.
+
+    On any error we fall back to the previously cached scores so a single
+    batch failure doesn't zero out trends for everyone.
     """
     if not titles:
         return {}
+
+    cache = _load_json(_trends_cache_path())
+    age = _cache_age(cache)
+    cached_scores: Dict[str, int] = cache.get("scores") or {}
+
+    if not force and age is not None and age < timedelta(hours=GOOGLE_TRENDS_TTL_HOURS):
+        LOG.info("Trends cache HIT — %d titles, age %s", len(cached_scores), age)
+        # Return cached scores with 0 for any new titles. The next eligible
+        # refresh (after TTL) will fill them in.
+        return {t: int(cached_scores.get(t, 0)) for t in titles}
+
     try:
         from pytrends.request import TrendReq  # type: ignore
     except ImportError:
         LOG.warning("pytrends not installed — skipping Google Trends. `pip install pytrends`")
-        return {}
+        return cached_scores or {t: 0 for t in titles}
 
-    out: Dict[str, int] = {}
     try:
         py = TrendReq(hl="en-US", tz=0)
     except Exception as exc:  # noqa: BLE001
-        LOG.warning("pytrends init failed: %s", exc)
-        return {}
+        LOG.warning("pytrends init failed: %s — using stale cache", exc)
+        return cached_scores or {t: 0 for t in titles}
 
+    out: Dict[str, int] = {}
+    any_success = False
     batch_size = 5
     for i in range(0, len(titles), batch_size):
         batch = titles[i:i + batch_size]
@@ -377,18 +592,29 @@ def fetch_google_trends(titles: List[str]) -> Dict[str, int]:
             df = py.interest_over_time()
             if df is None or df.empty:
                 for t in batch:
-                    out[t] = 0
+                    out[t] = int(cached_scores.get(t, 0))
                 continue
             for t in batch:
                 if t in df.columns:
                     out[t] = int(df[t].mean() or 0)
+                    any_success = True
                 else:
-                    out[t] = 0
+                    out[t] = int(cached_scores.get(t, 0))
         except Exception as exc:  # noqa: BLE001
             LOG.warning("pytrends batch failed (%s): %s", batch, exc)
+            # Fall back to whatever was cached for these titles.
             for t in batch:
-                out.setdefault(t, 0)
+                out.setdefault(t, int(cached_scores.get(t, 0)))
         time.sleep(2.0)  # rate limit cushion
+
+    if any_success:
+        _save_json(_trends_cache_path(), {
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "scores": out,
+        })
+        LOG.info("Trends cache updated — %d titles", len(out))
+    else:
+        LOG.warning("Trends fetch produced no fresh data — keeping previous cache")
     return out
 
 
@@ -396,15 +622,30 @@ def fetch_google_trends(titles: List[str]) -> Dict[str, int]:
 # RSS news feeds
 # ---------------------------------------------------------------------------
 
-def fetch_news_feeds(feeds: List[Dict[str, str]]) -> List[Dict[str, Any]]:
-    """Returns a flat, time-sorted list of news items from all configured feeds."""
+def fetch_news_feeds(feeds: List[Dict[str, str]],
+                     force: bool = False) -> List[Dict[str, Any]]:
+    """
+    Returns a flat, time-sorted list of news items from all configured feeds.
+
+    Cached for NEWS_TTL_MINUTES. The 15-minute TTL means the ticker stays
+    fresh on every pulse cycle but we still avoid hammering RSS endpoints
+    if a pulse fires more often (e.g. operator manual run).
+    """
+    cache = _load_json(_news_cache_path())
+    age = _cache_age(cache)
+    if not force and age is not None and age < timedelta(minutes=NEWS_TTL_MINUTES):
+        items = cache.get("items") or []
+        LOG.info("News cache HIT — %d items, age %s", len(items), age)
+        return items
+
     try:
         import feedparser  # type: ignore
     except ImportError:
         LOG.warning("feedparser not installed — skipping news. `pip install feedparser`")
-        return []
+        return cache.get("items") or []
 
     items: List[Dict[str, Any]] = []
+    rejected = 0
     for feed in feeds:
         src = feed.get("source", "")
         url = feed.get("url", "")
@@ -416,6 +657,16 @@ def fetch_news_feeds(feeds: List[Dict[str, str]]) -> List[Dict[str, Any]]:
             LOG.warning("RSS parse failed for %s: %s", url, exc)
             continue
         for entry in (parsed.entries or [])[:30]:
+            headline = (entry.get("title") or "").strip()
+            if not headline:
+                continue
+            # Reject sports / non-film content. The four trade pubs all
+            # cover sports business too, which polluted the ticker.
+            lower = headline.lower()
+            if any(kw in lower for kw in NEWS_REJECT_KEYWORDS):
+                rejected += 1
+                continue
+
             published_iso = ""
             if getattr(entry, "published_parsed", None):
                 try:
@@ -425,14 +676,21 @@ def fetch_news_feeds(feeds: List[Dict[str, str]]) -> List[Dict[str, Any]]:
                 except Exception:  # noqa: BLE001
                     pass
             items.append({
-                "headline":  (entry.get("title") or "").strip(),
+                "headline":  headline,
                 "source":    src,
                 "url":       entry.get("link") or "",
                 "published": published_iso,
                 "summary":   re.sub(r"<[^>]+>", "", entry.get("summary", ""))[:240],
             })
     items.sort(key=lambda x: x.get("published") or "", reverse=True)
-    LOG.info("RSS: pulled %d items across %d feeds", len(items), len(feeds))
+    LOG.info("RSS: pulled %d items across %d feeds (dropped %d sports/non-film)",
+             len(items), len(feeds), rejected)
+
+    # Persist for the next pulse so we don't re-hit RSS within the TTL.
+    _save_json(_news_cache_path(), {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "items": items,
+    })
     return items
 
 
@@ -471,7 +729,9 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
 
     # Trailer-ID cache (tmdb_id → youtube video_id) so we never re-search
     trailer_cache: Dict[str, str] = _load_trailer_cache()
-    cache_dirty = False
+    stats_cache: Dict[str, Dict[str, Any]] = _load_stats_cache()
+    trailer_before = dict(trailer_cache)
+    stats_before   = dict(stats_cache)
 
     # 3. Per-movie enrichment
     for idx, m in enumerate(movies, 1):
@@ -484,19 +744,20 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
             f"{poster_base}{m['poster_path']}" if m.get("poster_path") else None
         )
 
-        # YouTube: TMDb supplies the trailer video ID (free), then YouTube
-        # /videos returns stats (1 quota unit). Cache the video ID per
-        # tmdb_id so we never spend a quota unit on /search again.
+        # YouTube — fully cached, with TMDb→search fallback chain.
+        # Diagnostic logging is enabled for the first 3 movies of every run
+        # so we can see exactly what the API is returning vs the cache.
+        diag = (idx <= 3)
         try:
-            cache_key = str(m["tmdb_id"])
-            video_id = trailer_cache.get(cache_key)
-            if not video_id:
-                video_id = fetch_tmdb_trailer_video_id(tmdb_key, m["tmdb_id"])
-                if video_id:
-                    trailer_cache[cache_key] = video_id
-                    cache_dirty = True
-            m["youtube_video_id"] = video_id
-            m["youtube"] = fetch_youtube_video_stats(yt_key, video_id)
+            year = (m.get("release_date") or "")[:4] or None
+            m["youtube"] = fetch_youtube_for_movie(
+                yt_key, tmdb_key,
+                tmdb_id=m["tmdb_id"], title=title, year=year,
+                trailer_cache=trailer_cache,
+                stats_cache=stats_cache,
+                diag=diag,
+            )
+            m["youtube_video_id"] = trailer_cache.get(str(m["tmdb_id"]))
         except Exception as exc:  # noqa: BLE001
             LOG.warning("YouTube failed for %s: %s", title, exc)
             m["youtube"] = {"views": 0, "likes": 0, "comments": 0}
@@ -513,10 +774,18 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
 
         time.sleep(0.2)  # gentle pacing
 
-    # Persist trailer cache for next run
-    if cache_dirty:
+    # Persist trailer + stats cache for next run
+    if trailer_cache != trailer_before:
         _save_trailer_cache(trailer_cache)
         LOG.info("Trailer cache: %d entries persisted", len(trailer_cache))
+    if stats_cache != stats_before:
+        _save_stats_cache(stats_cache)
+        LOG.info("Stats cache: %d entries persisted", len(stats_cache))
+
+    # Diagnostic summary: how many movies got real YouTube data this run?
+    yt_hits = sum(1 for m in movies if (m.get("youtube") or {}).get("views", 0) > 0)
+    LOG.info("YouTube coverage: %d/%d (%d%%)", yt_hits, len(movies),
+             (yt_hits * 100 // len(movies)) if movies else 0)
 
     # 4. Google Trends — batch all titles at once (cheap, single block)
     titles = [m["title"] for m in movies]

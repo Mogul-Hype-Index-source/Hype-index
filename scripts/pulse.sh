@@ -35,7 +35,19 @@ log() {
 log "==== pulse start ===="
 cd "$REPO" || { log "FATAL: cannot cd into $REPO"; exit 1; }
 
-# ---- 1. fetch + score + write data/index.json ----
+# ---- 0. SAFETY: never run if the operator has unstaged source edits ----
+# A pulse that touches index.html / scripts/* via rebase can clobber an
+# in-progress edit. If anything outside data/ is dirty, abort cleanly and
+# wait for the next interval. Data files (v2.json, historical/) are ours.
+DIRTY=$("$GIT" status --porcelain | awk '{print $2}' | grep -v -E '^(data/|$)' || true)
+if [[ -n "$DIRTY" ]]; then
+  log "ABORT: operator has unstaged changes outside data/ — skipping this pulse:"
+  echo "$DIRTY" | sed 's/^/  - /' >> "$LOG"
+  log "==== pulse end (safety abort) ===="
+  exit 0
+fi
+
+# ---- 1. fetch + score + write data/v2.json ----
 if ! "$PYTHON" scripts/update.py >> "$LOG" 2>&1; then
   log "FATAL: update.py failed"
   exit 1
