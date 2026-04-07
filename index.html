@@ -244,6 +244,13 @@
     flex:0 0 auto;min-width:200px;
     background:var(--bg-3);border:1px solid var(--line-2);border-radius:8px;
     padding:10px 12px;display:flex;gap:10px;align-items:center;
+    transition:border-color .2s ease, box-shadow .2s ease, transform .12s ease;
+  }
+  .mcard.clickable{cursor:pointer}
+  .mcard.clickable:hover{
+    border-color:var(--gold);
+    box-shadow:0 0 0 1px var(--gold), 0 6px 18px -8px rgba(245,166,35,.35);
+    transform:translateY(-1px);
   }
   .mcard .poster{width:36px;height:52px;border-radius:3px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--poster-bg)}
   .mcard .ttl{font-weight:600;color:var(--text-strong);font-size:13px;line-height:1.2;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -883,7 +890,8 @@ function renderMovers(){
     const bg = m.poster_url
       ? `background-image:url('${escapeHtml(m.poster_url)}')`
       : 'background:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2))';
-    return `<div class="mcard">
+    const href = `movie.html?id=${encodeURIComponent(m.tmdb_id)}`;
+    return `<div class="mcard clickable" data-href="${href}">
       <div class="poster" style="${bg}"></div>
       <div>
         <div class="ttl">${escapeHtml(m.title)}</div>
@@ -1115,6 +1123,17 @@ document.getElementById('tbody').addEventListener('click', e => {
   const href = row.dataset.href; if (!href) return;
   // Capture exactly where the user is before the fade animation reflows
   // anything. pagehide will fire too but this is the authoritative save.
+  saveScrollState();
+  document.body.classList.add('leaving');
+  setTimeout(() => { window.location.href = href; }, 180);
+});
+
+// Today's Movers cards — same click + soft transition pattern as the
+// rankings rows. Each .mcard.clickable carries a data-href attribute
+// pointing at movie.html?id={tmdb_id}.
+document.getElementById('strip').addEventListener('click', e => {
+  const card = e.target.closest('.mcard.clickable'); if (!card) return;
+  const href = card.dataset.href; if (!href) return;
   saveScrollState();
   document.body.classList.add('leaving');
   setTimeout(() => { window.location.href = href; }, 180);
