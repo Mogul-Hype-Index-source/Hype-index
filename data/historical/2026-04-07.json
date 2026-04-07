@@ -1,16 +1,26 @@
 {
-  "generated_at": "2026-04-07T12:11:42+00:00",
-  "next_update_at": "2026-04-07T13:11:42+00:00",
+  "generated_at": "2026-04-07T12:50:30+00:00",
+  "next_update_at": "2026-04-07T13:50:30+00:00",
   "snapshot_date": "2026-04-07",
   "summary": {
     "total": 84,
-    "rising": 25,
-    "falling": 25,
-    "flat": 34,
+    "rising": 0,
+    "falling": 0,
+    "flat": 84,
     "avg_score": 849,
-    "total_mentions_24h": 33112
+    "total_mentions_24h": 33153
   },
   "news": [
+    {
+      "headline": "Marcus Theatres Finds New President",
+      "source": "Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/business/business-news/marcus-theatres-president-1236557301/"
+    },
+    {
+      "headline": "‘Super Mario Galaxy Movie’ Powers to No. 1 at U.K., Ireland Box Office",
+      "source": "Variety",
+      "url": "https://variety.com/2026/film/box-office/super-mario-galaxy-movie-uk-ireland-box-office-1236710219/"
+    },
     {
       "headline": "Joe Eszterhas Says Negotiations Are Underway With Emerald Fennell For ‘Basic Instinct’ Reboot",
       "source": "Deadline",
@@ -60,92 +70,10 @@
       "headline": "Minnie Driver, Luca Pasqualino and Louisa Harland to Lead Heist Thriller Series ‘The Day’ for Paramount+ (EXCLUSIVE)",
       "source": "Variety",
       "url": "https://variety.com/2026/tv/global/minnie-driver-heist-thriller-series-the-day-paramount-1236709821/"
-    },
-    {
-      "headline": "Universal Music Group Gets $63.5 Billion Takeover Offer From Bill Ackman’s Pershing Square",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/business/business-news/universal-music-group-deal-offer-bill-ackman-pershing-1236557204/"
-    },
-    {
-      "headline": "Kanye West Pledges to Meet U.K. Jewish Leaders Amid Wireless Festival Controversy",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/music/music-news/kanye-west-jewish-leaders-wireless-festival-1236557200/"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1304313,
-      "title": "Lee Cronin's The Mummy",
-      "poster_url": "https://image.tmdb.org/t/p/w185/aENH9ETtWynb6T1XhRwIFlvkBzI.jpg",
-      "move": 14,
-      "score": 846
-    },
-    {
-      "tmdb_id": 1321179,
-      "title": "The King's Warden",
-      "poster_url": "https://image.tmdb.org/t/p/w185/3CnVA1jAA64Q3qNVAW8DekCu19b.jpg",
-      "move": 12,
-      "score": 845
-    },
-    {
-      "tmdb_id": 1493859,
-      "title": "Pizza Movie",
-      "poster_url": "https://image.tmdb.org/t/p/w185/2c2ib9pS3BTIoMnYHi4z6t9nxuA.jpg",
-      "move": 8,
-      "score": 849
-    },
-    {
-      "tmdb_id": 1325734,
-      "title": "The Drama",
-      "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-      "move": 5,
-      "score": 946
-    },
-    {
-      "tmdb_id": 1316092,
-      "title": "\"Wuthering Heights\"",
-      "poster_url": "https://image.tmdb.org/t/p/w185/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
-      "move": 2,
-      "score": 843
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1572073,
-      "title": "The Deadly Little Mermaid",
-      "poster_url": "https://image.tmdb.org/t/p/w185/uye25uG7k8r3NNPLyPiKOiRnFRF.jpg",
-      "move": -8,
-      "score": 843
-    },
-    {
-      "tmdb_id": 1066313,
-      "title": "The Draft!",
-      "poster_url": "https://image.tmdb.org/t/p/w185/6WEqtp38s1iW5VrcH78rOIi8a2Z.jpg",
-      "move": -7,
-      "score": 843
-    },
-    {
-      "tmdb_id": 687163,
-      "title": "Project Hail Mary",
-      "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-      "move": -2,
-      "score": 912
-    },
-    {
-      "tmdb_id": 1318447,
-      "title": "Apex",
-      "poster_url": "https://image.tmdb.org/t/p/w185/5TGSFX6dxYfM2balJrFoSVB42Nv.jpg",
-      "move": -2,
-      "score": 846
-    },
-    {
-      "tmdb_id": 1084187,
-      "title": "Pretty Lethal",
-      "poster_url": "https://image.tmdb.org/t/p/w185/znTPnXCK3lEQJgqXCvP7e5FUz6f.jpg",
-      "move": -2,
-      "score": 845
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -160,8 +88,8 @@
       "youtube_comments": 27710,
       "youtube_video_id": "mbtgEE6rkxw",
       "reddit_posts": 54,
-      "reddit_comments": 8315,
-      "mentions": 8369,
+      "reddit_comments": 8319,
+      "mentions": 8373,
       "sentiment_pct": 93,
       "scores": {
         "1d": 999,
@@ -176,10 +104,10 @@
       "sub_scores": {
         "youtube_views": 0.2192,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.9469,
+        "reddit_volume": 0.9473,
         "google_trends": 0.71,
         "news_impact": 0.0,
-        "raw_amsi": 0.5129
+        "raw_amsi": 0.513
       },
       "cast_full": [
         {
@@ -348,8 +276,8 @@
       "youtube_comments": 12225,
       "youtube_video_id": "En5QZmL5R1s",
       "reddit_posts": 52,
-      "reddit_comments": 8786,
-      "mentions": 8838,
+      "reddit_comments": 8787,
+      "mentions": 8839,
       "sentiment_pct": 93,
       "scores": {
         "1d": 946,
@@ -447,8 +375,8 @@
       "youtube_comments": 76,
       "youtube_video_id": "0ZDzsH3XGFA",
       "reddit_posts": 44,
-      "reddit_comments": 4888,
-      "mentions": 4934,
+      "reddit_comments": 4897,
+      "mentions": 4943,
       "sentiment_pct": 94,
       "scores": {
         "1d": 946,
@@ -456,17 +384,17 @@
         "30d": 946
       },
       "score": 946,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
         "youtube_engagement": 0.7711,
-        "reddit_volume": 0.558,
+        "reddit_volume": 0.559,
         "google_trends": 0.0,
         "news_impact": 1.0,
-        "raw_amsi": 0.3775
+        "raw_amsi": 0.3776
       },
       "cast_full": [
         {
@@ -550,8 +478,8 @@
       "youtube_comments": 69742,
       "youtube_video_id": "i36Zw32GfRQ",
       "reddit_posts": 23,
-      "reddit_comments": 301,
-      "mentions": 324,
+      "reddit_comments": 304,
+      "mentions": 327,
       "sentiment_pct": 90,
       "scores": {
         "1d": 913,
@@ -566,10 +494,10 @@
       "sub_scores": {
         "youtube_views": 0.5517,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0367,
+        "reddit_volume": 0.037,
         "google_trends": 0.02,
         "news_impact": 0.0,
-        "raw_amsi": 0.2926
+        "raw_amsi": 0.2927
       },
       "cast_full": [
         {
@@ -644,8 +572,8 @@
       "youtube_comments": 785,
       "youtube_video_id": "NKYea63tQmI",
       "reddit_posts": 83,
-      "reddit_comments": 2562,
-      "mentions": 2645,
+      "reddit_comments": 2563,
+      "mentions": 2646,
       "sentiment_pct": 95,
       "scores": {
         "1d": 912,
@@ -653,14 +581,14 @@
         "30d": 912
       },
       "score": 912,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0062,
         "youtube_engagement": 0.7716,
-        "reddit_volume": 0.2993,
+        "reddit_volume": 0.2994,
         "google_trends": 0.57,
         "news_impact": 0.0,
         "raw_amsi": 0.2915
@@ -743,8 +671,8 @@
       "youtube_comments": 36082,
       "youtube_video_id": "KeEHsuZ4Ja4",
       "reddit_posts": 7,
-      "reddit_comments": 341,
-      "mentions": 348,
+      "reddit_comments": 344,
+      "mentions": 351,
       "sentiment_pct": 88,
       "scores": {
         "1d": 909,
@@ -752,14 +680,14 @@
         "30d": 909
       },
       "score": 909,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.2854,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0394,
+        "reddit_volume": 0.0397,
         "google_trends": 0.37,
         "news_impact": 0.0,
         "raw_amsi": 0.2833
@@ -837,8 +765,8 @@
       "youtube_comments": 24011,
       "youtube_video_id": "PypDSyIRRSs",
       "reddit_posts": 63,
-      "reddit_comments": 1642,
-      "mentions": 1705,
+      "reddit_comments": 1643,
+      "mentions": 1706,
       "sentiment_pct": 94,
       "scores": {
         "1d": 908,
@@ -846,14 +774,14 @@
         "30d": 908
       },
       "score": 908,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1899,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.1929,
+        "reddit_volume": 0.193,
         "google_trends": 0.34,
         "news_impact": 0.0,
         "raw_amsi": 0.2793
@@ -931,8 +859,8 @@
       "youtube_comments": 64340,
       "youtube_video_id": "V4TJKSEftkU",
       "reddit_posts": 1,
-      "reddit_comments": 54,
-      "mentions": 55,
+      "reddit_comments": 55,
+      "mentions": 56,
       "sentiment_pct": 88,
       "scores": {
         "1d": 904,
@@ -940,14 +868,14 @@
         "30d": 904
       },
       "score": 904,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.509,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0062,
+        "reddit_volume": 0.0063,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.2697
@@ -1025,8 +953,8 @@
       "youtube_comments": 22182,
       "youtube_video_id": "e9HXmMnUEdE",
       "reddit_posts": 11,
-      "reddit_comments": 452,
-      "mentions": 463,
+      "reddit_comments": 456,
+      "mentions": 467,
       "sentiment_pct": 89,
       "scores": {
         "1d": 885,
@@ -1034,17 +962,17 @@
         "30d": 885
       },
       "score": 885,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1755,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0524,
+        "reddit_volume": 0.0528,
         "google_trends": 0.21,
         "news_impact": 0.0,
-        "raw_amsi": 0.2209
+        "raw_amsi": 0.221
       },
       "cast_full": [
         {
@@ -1128,7 +1056,7 @@
         "30d": 883
       },
       "score": 883,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1401,8 +1329,8 @@
       "youtube_comments": 23547,
       "youtube_video_id": "AFuE1LRxm80",
       "reddit_posts": 7,
-      "reddit_comments": 145,
-      "mentions": 152,
+      "reddit_comments": 146,
+      "mentions": 153,
       "sentiment_pct": 88,
       "scores": {
         "1d": 871,
@@ -1410,14 +1338,14 @@
         "30d": 871
       },
       "score": 871,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1863,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0172,
+        "reddit_volume": 0.0173,
         "google_trends": 0.05,
         "news_impact": 0.0,
         "raw_amsi": 0.1851
@@ -1504,7 +1432,7 @@
         "30d": 869
       },
       "score": 869,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1594,8 +1522,8 @@
       "youtube_comments": 176,
       "youtube_video_id": "hIEdSvQ9_wA",
       "reddit_posts": 3,
-      "reddit_comments": 30,
-      "mentions": 33,
+      "reddit_comments": 45,
+      "mentions": 48,
       "sentiment_pct": 53,
       "scores": {
         "1d": 867,
@@ -1603,17 +1531,17 @@
         "30d": 867
       },
       "score": 867,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.004,
         "youtube_engagement": 0.0755,
-        "reddit_volume": 0.0037,
+        "reddit_volume": 0.0054,
         "google_trends": 0.81,
         "news_impact": 0.0,
-        "raw_amsi": 0.1753
+        "raw_amsi": 0.1756
       },
       "cast_full": [
         {
@@ -1697,7 +1625,7 @@
         "30d": 865
       },
       "score": 865,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1782,8 +1710,8 @@
       "youtube_comments": 2971,
       "youtube_video_id": "4g8OciWNJn4",
       "reddit_posts": 17,
-      "reddit_comments": 858,
-      "mentions": 875,
+      "reddit_comments": 859,
+      "mentions": 876,
       "sentiment_pct": 89,
       "scores": {
         "1d": 861,
@@ -1798,7 +1726,7 @@
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.099,
+        "reddit_volume": 0.0991,
         "google_trends": 0.09,
         "news_impact": 0.0,
         "raw_amsi": 0.1606
@@ -1876,8 +1804,8 @@
       "youtube_comments": 15316,
       "youtube_video_id": "s0PGrtw0X1Q",
       "reddit_posts": 22,
-      "reddit_comments": 348,
-      "mentions": 370,
+      "reddit_comments": 350,
+      "mentions": 372,
       "sentiment_pct": 90,
       "scores": {
         "1d": 861,
@@ -1885,14 +1813,14 @@
         "30d": 861
       },
       "score": 861,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1212,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0419,
+        "reddit_volume": 0.0421,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.1605
@@ -1979,7 +1907,7 @@
         "30d": 860
       },
       "score": 860,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2346,8 +2274,8 @@
       "youtube_comments": 11953,
       "youtube_video_id": "lcvUGs3xaDM",
       "reddit_posts": 2,
-      "reddit_comments": 54,
-      "mentions": 56,
+      "reddit_comments": 55,
+      "mentions": 57,
       "sentiment_pct": 88,
       "scores": {
         "1d": 855,
@@ -2362,7 +2290,7 @@
       "sub_scores": {
         "youtube_views": 0.0946,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.0063,
+        "reddit_volume": 0.0064,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.1454
@@ -3062,8 +2990,8 @@
       "youtube_comments": 1118,
       "youtube_video_id": "fOzF87PFGnw",
       "reddit_posts": 5,
-      "reddit_comments": 446,
-      "mentions": 451,
+      "reddit_comments": 447,
+      "mentions": 452,
       "sentiment_pct": 88,
       "scores": {
         "1d": 849,
@@ -3071,14 +2999,14 @@
         "30d": 849
       },
       "score": 849,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0088,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.051,
+        "reddit_volume": 0.0511,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.1286
@@ -3160,9 +3088,9 @@
       "youtube_likes": 66170,
       "youtube_comments": 3970,
       "youtube_video_id": "JUADqWkJiiE",
-      "reddit_posts": 2,
-      "reddit_comments": 51,
-      "mentions": 53,
+      "reddit_posts": 1,
+      "reddit_comments": 36,
+      "mentions": 37,
       "sentiment_pct": 88,
       "scores": {
         "1d": 848,
@@ -3170,17 +3098,17 @@
         "30d": 848
       },
       "score": 848,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0314,
         "youtube_engagement": 0.7717,
-        "reddit_volume": 0.006,
+        "reddit_volume": 0.0042,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.1264
+        "raw_amsi": 0.126
       },
       "cast_full": [
         {
@@ -3264,7 +3192,7 @@
         "30d": 847
       },
       "score": 847,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3358,7 +3286,7 @@
         "30d": 847
       },
       "score": 847,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3452,7 +3380,7 @@
         "30d": 847
       },
       "score": 847,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3528,7 +3456,7 @@
         "30d": 846
       },
       "score": 846,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3622,7 +3550,7 @@
         "30d": 846
       },
       "score": 846,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3716,7 +3644,7 @@
         "30d": 846
       },
       "score": 846,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3810,7 +3738,7 @@
         "30d": 846
       },
       "score": 846,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3892,7 +3820,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3986,7 +3914,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4085,7 +4013,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4179,7 +4107,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4273,7 +4201,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4367,7 +4295,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4455,7 +4383,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4549,7 +4477,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4643,7 +4571,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4822,8 +4750,8 @@
       "youtube_comments": 359,
       "youtube_video_id": "XgUHnuNN2lA",
       "reddit_posts": 1,
-      "reddit_comments": 54,
-      "mentions": 55,
+      "reddit_comments": 56,
+      "mentions": 57,
       "sentiment_pct": 88,
       "scores": {
         "1d": 844,
@@ -4838,10 +4766,10 @@
       "sub_scores": {
         "youtube_views": 0.0028,
         "youtube_engagement": 0.7715,
-        "reddit_volume": 0.0062,
+        "reddit_volume": 0.0064,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.1178
+        "raw_amsi": 0.1179
       },
       "cast_full": [
         {
@@ -5019,7 +4947,7 @@
         "30d": 844
       },
       "score": 844,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5113,7 +5041,7 @@
         "30d": 843
       },
       "score": 843,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5207,7 +5135,7 @@
         "30d": 843
       },
       "score": 843,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5301,7 +5229,7 @@
         "30d": 843
       },
       "score": 843,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5662,8 +5590,8 @@
       "youtube_comments": 3268,
       "youtube_video_id": "yeR5bcbRPak",
       "reddit_posts": 2,
-      "reddit_comments": 81,
-      "mentions": 83,
+      "reddit_comments": 83,
+      "mentions": 85,
       "sentiment_pct": 55,
       "scores": {
         "1d": 827,
@@ -5678,7 +5606,7 @@
       "sub_scores": {
         "youtube_views": 0.1816,
         "youtube_engagement": 0.108,
-        "reddit_volume": 0.0094,
+        "reddit_volume": 0.0096,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.0726
@@ -6616,7 +6544,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6710,7 +6638,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6804,7 +6732,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6903,7 +6831,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6997,7 +6925,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7091,7 +7019,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7185,7 +7113,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7270,8 +7198,8 @@
       "youtube_comments": 18,
       "youtube_video_id": "uYTMroh8pjI",
       "reddit_posts": 3,
-      "reddit_comments": 140,
-      "mentions": 143,
+      "reddit_comments": 145,
+      "mentions": 148,
       "sentiment_pct": 50,
       "scores": {
         "1d": 805,
@@ -7279,17 +7207,17 @@
         "30d": 805
       },
       "score": 805,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0449,
         "youtube_engagement": 0.0018,
-        "reddit_volume": 0.0162,
+        "reddit_volume": 0.0167,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.017
+        "raw_amsi": 0.0171
       },
       "cast_full": [
         {
@@ -7373,7 +7301,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7431,7 +7359,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7519,7 +7447,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7613,7 +7541,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7707,7 +7635,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7801,7 +7729,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7895,7 +7823,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8563,7 +8491,7 @@
         "30d": 904
       },
       "rank": 17,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8601,7 +8529,7 @@
         "30d": 901
       },
       "rank": 18,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8639,7 +8567,7 @@
         "30d": 894
       },
       "rank": 19,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8669,7 +8597,7 @@
         "30d": 878
       },
       "rank": 20,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8699,7 +8627,7 @@
         "30d": 878
       },
       "rank": 21,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8729,7 +8657,7 @@
         "30d": 878
       },
       "rank": 22,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8759,7 +8687,7 @@
         "30d": 878
       },
       "rank": 23,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8789,7 +8717,7 @@
         "30d": 878
       },
       "rank": 24,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8819,7 +8747,7 @@
         "30d": 878
       },
       "rank": 25,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8849,7 +8777,7 @@
         "30d": 872
       },
       "rank": 26,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8879,7 +8807,7 @@
         "30d": 872
       },
       "rank": 27,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8909,7 +8837,7 @@
         "30d": 872
       },
       "rank": 28,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8939,7 +8867,7 @@
         "30d": 872
       },
       "rank": 29,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8969,7 +8897,7 @@
         "30d": 872
       },
       "rank": 30,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -8999,7 +8927,7 @@
         "30d": 870
       },
       "rank": 31,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9029,7 +8957,7 @@
         "30d": 870
       },
       "rank": 32,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9059,7 +8987,7 @@
         "30d": 870
       },
       "rank": 33,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9089,7 +9017,7 @@
         "30d": 870
       },
       "rank": 34,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9119,7 +9047,7 @@
         "30d": 870
       },
       "rank": 35,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9149,7 +9077,7 @@
         "30d": 860
       },
       "rank": 36,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9179,7 +9107,7 @@
         "30d": 860
       },
       "rank": 37,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9209,7 +9137,7 @@
         "30d": 860
       },
       "rank": 38,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9239,7 +9167,7 @@
         "30d": 860
       },
       "rank": 39,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9269,7 +9197,7 @@
         "30d": 860
       },
       "rank": 40,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9299,7 +9227,7 @@
         "30d": 860
       },
       "rank": 41,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9329,7 +9257,7 @@
         "30d": 854
       },
       "rank": 42,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9359,7 +9287,7 @@
         "30d": 854
       },
       "rank": 43,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9389,7 +9317,7 @@
         "30d": 854
       },
       "rank": 44,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9419,7 +9347,7 @@
         "30d": 854
       },
       "rank": 45,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9449,7 +9377,7 @@
         "30d": 854
       },
       "rank": 46,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9479,7 +9407,7 @@
         "30d": 854
       },
       "rank": 47,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9509,7 +9437,7 @@
         "30d": 850
       },
       "rank": 48,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9540,7 +9468,7 @@
       },
       "rank": 49,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 7152,
@@ -9570,7 +9498,7 @@
       },
       "rank": 50,
       "move": 0,
-      "is_new": true
+      "is_new": false
     }
   ],
   "directors": [
@@ -9675,7 +9603,7 @@
       },
       "rank": 3,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 21007,
@@ -9709,7 +9637,7 @@
         "30d": 967
       },
       "rank": 4,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9747,7 +9675,7 @@
         "30d": 949
       },
       "rank": 5,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9777,7 +9705,7 @@
         "30d": 881
       },
       "rank": 6,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9807,7 +9735,7 @@
         "30d": 874
       },
       "rank": 7,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9837,7 +9765,7 @@
         "30d": 874
       },
       "rank": 8,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9867,7 +9795,7 @@
         "30d": 872
       },
       "rank": 9,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9897,7 +9825,7 @@
         "30d": 856
       },
       "rank": 10,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9927,7 +9855,7 @@
         "30d": 852
       },
       "rank": 11,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9957,7 +9885,7 @@
         "30d": 852
       },
       "rank": 12,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9987,7 +9915,7 @@
         "30d": 849
       },
       "rank": 13,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10017,7 +9945,7 @@
         "30d": 846
       },
       "rank": 14,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10047,7 +9975,7 @@
         "30d": 846
       },
       "rank": 15,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10077,7 +10005,7 @@
         "30d": 845
       },
       "rank": 16,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10107,7 +10035,7 @@
         "30d": 842
       },
       "rank": 17,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10137,7 +10065,7 @@
         "30d": 840
       },
       "rank": 18,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10167,7 +10095,7 @@
         "30d": 835
       },
       "rank": 19,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10197,7 +10125,7 @@
         "30d": 834
       },
       "rank": 20,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10257,7 +10185,7 @@
         "30d": 834
       },
       "rank": 22,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10287,7 +10215,7 @@
         "30d": 827
       },
       "rank": 23,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10317,7 +10245,7 @@
         "30d": 827
       },
       "rank": 24,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10347,7 +10275,7 @@
         "30d": 825
       },
       "rank": 25,
-      "move": -1,
+      "move": 0,
       "is_new": false
     }
   ]
