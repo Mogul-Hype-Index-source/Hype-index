@@ -182,97 +182,70 @@
   .market .sep{width:1px;height:18px;background:var(--line-2)}
   .market .cd{color:var(--gold);font-weight:700;letter-spacing:.08em}
 
-  /* ---------- Ticker — terminal aesthetic ----------
-     Black background, red pulsing dot, green scrolling text, scanline
-     overlay, blinking cursor at the right edge. The category labels
-     stay (gold-on-dark pills) so the cycle structure is still visible
-     but the headlines themselves are uniform terminal-green. */
+  /* ---------- Ticker — V2 gold style (reverted from terminal) ----------
+     Dark background, gold/amber pulsing dot + BREAKING label, white
+     scrolling headlines. Category-label pills stay gold so the section
+     cycle is still visible. */
   .ticker{
     display:flex;align-items:stretch;height:42px;
-    border-top:1px solid #001a05;border-bottom:1px solid #001a05;
-    background:#000000;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--bg-ticker);
     position:relative;overflow:hidden;
   }
   .ticker .brk{
     flex:0 0 auto;padding:0 14px;display:flex;align-items:center;gap:8px;
-    background:#000000;
-    border-right:1px solid #001a05;
+    background:linear-gradient(90deg,var(--gold-grad-1),var(--gold-grad-2));
+    border-right:1px solid var(--line-2);
     z-index:3;position:relative;
   }
   .ticker .brk-dot{
-    width:9px;height:9px;border-radius:50%;background:#ff0033;
-    box-shadow:0 0 6px rgba(255,0,51,.85), 0 0 0 0 rgba(255,0,51,.7);
-    animation:brk-pulse 1.4s infinite ease-in-out;
+    width:9px;height:9px;border-radius:50%;background:var(--gold);
+    box-shadow:0 0 6px rgba(245,166,35,.85), 0 0 0 0 rgba(245,166,35,.7);
+    animation:brk-pulse 1.6s infinite ease-in-out;
   }
   @keyframes brk-pulse{
-    0%,100% { box-shadow:0 0 6px rgba(255,0,51,.85), 0 0 0 0 rgba(255,0,51,.7); opacity:1 }
-    50%     { box-shadow:0 0 14px rgba(255,0,51,.95), 0 0 0 8px rgba(255,0,51,0); opacity:.7 }
+    0%,100% { box-shadow:0 0 6px rgba(245,166,35,.85), 0 0 0 0 rgba(245,166,35,.7); opacity:1 }
+    50%     { box-shadow:0 0 14px rgba(245,166,35,.95), 0 0 0 8px rgba(245,166,35,0); opacity:.75 }
   }
   .ticker .brk-lbl{
-    color:#ff0033;font-family:'Rajdhani',sans-serif;font-weight:700;
-    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    text-shadow:0 0 6px rgba(255,0,51,.55);
+    color:var(--gold);font-family:'Bebas Neue',sans-serif;font-weight:400;
+    font-size:14px;letter-spacing:.18em;text-transform:uppercase;
   }
   .ticker .viewport{
     flex:1 1 auto;min-width:0;overflow:hidden;position:relative;display:flex;align-items:center;
-    background:#000000;
+    background:var(--bg-ticker);
   }
-  /* CRT scanline overlay — sits on top of the green text via z-index */
-  .ticker .scanlines{
-    position:absolute;inset:0;pointer-events:none;z-index:2;
-    background-image:repeating-linear-gradient(
-      to bottom,
-      rgba(0,255,75,.05) 0px,
-      rgba(0,255,75,.05) 1px,
-      transparent 1px,
-      transparent 3px
-    );
-    mix-blend-mode:screen;
-  }
-  /* Blinking cursor pinned to the right edge */
-  .ticker .cursor{
-    flex:0 0 auto;padding:0 14px;display:flex;align-items:center;
-    color:#00ff4b;font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;
-    text-shadow:0 0 8px rgba(0,255,75,.85);
-    animation:cursor-blink 1s steps(2) infinite;
-    z-index:3;background:#000000;border-left:1px solid #001a05;
-  }
-  @keyframes cursor-blink{ 50% { opacity:0 } }
-
   .ticker .track{
     display:flex;gap:0;white-space:nowrap;padding-left:24px;
     animation:scroll 196s linear infinite;
     will-change:transform;
     font-family:'Rajdhani',sans-serif;font-size:13px;
-    color:#00ff4b;
-    text-shadow:0 0 4px rgba(0,255,75,.55);
+    color:var(--text-secondary);
     align-items:center;
     z-index:1;position:relative;
   }
-  .ticker .track a{display:inline-block;color:#00ff4b}
+  .ticker .track a{display:inline-block;color:var(--text-strong)}
   .ticker .track a.ti{margin-right:38px}
-  .ticker .track a:hover{text-shadow:0 0 10px rgba(0,255,75,.95)}
-  .ticker .track b{color:#00ff4b;font-weight:700;letter-spacing:.04em}
-  .ticker .track i{color:rgba(0,255,75,.55);font-style:normal;font-weight:500;margin-left:6px}
-  .ticker .track .bullet{color:#00ff4b;margin-right:8px;opacity:.7}
-  /* Category label — soft green pill so it reads as a section divider
-     without breaking the overall green-on-black look. */
+  .ticker .track a:hover b{color:var(--gold)}
+  .ticker .track b{color:var(--text-strong);font-weight:700;letter-spacing:.04em}
+  .ticker .track i{color:var(--mute);font-style:normal;font-weight:500;margin-left:6px}
+  .ticker .track .bullet{color:var(--gold);margin-right:8px;opacity:.85}
+  /* Category label — gold pill in front of each section group. */
   .ticker .track .cat-label{
     display:inline-flex;align-items:center;
-    color:#00ff4b;
+    color:var(--gold);
     font-family:'Bebas Neue',sans-serif;
     font-size:13px;letter-spacing:.18em;
     padding:3px 12px;margin:0 22px 0 12px;
-    border:1px solid rgba(0,255,75,.45);
-    background:rgba(0,255,75,.06);
+    border:1px solid var(--gold-pill-border);
+    background:var(--gold-pill-bg);
     border-radius:999px;
     line-height:1;
     flex:0 0 auto;
-    text-shadow:0 0 6px rgba(0,255,75,.55);
   }
   .ticker .track .cat-empty{
     display:inline-flex;align-items:center;
-    color:rgba(0,255,75,.45);font-style:italic;
+    color:var(--mute);font-style:italic;
     margin-right:38px;font-size:12px;
   }
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -292,31 +265,33 @@
   }
   .movers .label{font-family:'Bebas Neue',sans-serif;color:var(--text-strong);font-size:16px;letter-spacing:.14em}
   .movers .label small{display:block;color:var(--mute);font-family:'Rajdhani',sans-serif;letter-spacing:.12em;font-size:11px}
-  .movers .strip{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+  .movers .strip{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
   .movers .strip::-webkit-scrollbar{display:none}
+  /* Mover cards reduced ~40% — 160px → 96px so 3-3.5 cards fit on a 390px
+     phone viewport without scrolling. Poster + title + delta scale together. */
   .mcard{
-    flex:0 0 auto;min-width:160px;max-width:160px;
-    background:var(--bg-3);border:1px solid var(--line-2);border-radius:8px;
-    padding:10px 12px;display:flex;gap:10px;align-items:center;
+    flex:0 0 auto;min-width:96px;max-width:96px;
+    background:var(--bg-3);border:1px solid var(--line-2);border-radius:6px;
+    padding:6px 7px;display:flex;gap:6px;align-items:center;
     transition:border-color .2s ease, box-shadow .2s ease, transform .12s ease;
   }
   .mcard.clickable{cursor:pointer}
-  .mcard.up{box-shadow:0 0 0 1px rgba(0,255,135,.22), 0 6px 20px -10px rgba(0,255,135,.35)}
+  .mcard.up{box-shadow:0 0 0 1px rgba(0,255,135,.22), 0 4px 14px -8px rgba(0,255,135,.35)}
   .mcard.clickable:hover{
     border-color:var(--gold);
-    box-shadow:0 0 0 1px var(--gold), 0 6px 18px -8px rgba(245,166,35,.35);
+    box-shadow:0 0 0 1px var(--gold), 0 4px 12px -6px rgba(245,166,35,.35);
     transform:translateY(-1px) scale(1.02);
   }
   .mcard .poster{
-    width:36px;height:54px;        /* 2:3 portrait */
-    border-radius:3px;flex:0 0 auto;
+    width:22px;height:33px;        /* 2:3 portrait, scaled ~40% smaller */
+    border-radius:2px;flex:0 0 auto;
     background-size:cover;background-position:center;background-color:var(--poster-bg);
     background-image:linear-gradient(160deg,var(--poster-fallback-1),var(--poster-fallback-2));
     border:1px solid var(--line-2);
   }
-  .mcard-meta{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 auto}
-  .mcard .ttl{font-weight:600;color:var(--text-strong);font-size:12px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .mcard .mv{font-family:'Bebas Neue',sans-serif;font-weight:700;font-size:18px;letter-spacing:.04em}
+  .mcard-meta{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1 1 auto}
+  .mcard .ttl{font-weight:600;color:var(--text-strong);font-size:10px;line-height:1.15;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mcard .mv{font-family:'Bebas Neue',sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;line-height:1}
   .up{color:var(--green)!important}
   .down{color:var(--red)!important}
 
@@ -623,21 +598,21 @@
     .ticker .brk{padding:0 12px;font-size:12px;letter-spacing:.12em}
     .ticker .track{font-size:12px;gap:32px;padding-left:18px}
 
-    /* ----- Movers strip: 1.5 cards visible so swipe is obvious ----- */
+    /* ----- Movers strip: 3 to 3.5 cards visible at iPhone width ----- */
     .movers{
-      grid-template-columns:1fr;gap:10px;
+      grid-template-columns:1fr;gap:8px;
       padding:14px 14px 14px 14px;
     }
     .movers .label{font-size:14px;letter-spacing:.12em}
     .movers .label small{font-size:10px}
     .movers .strip{
-      margin:0 -14px;padding:0 14px;            /* edge-to-edge swipe */
+      margin:0 -14px;padding:0 14px;gap:6px;     /* edge-to-edge swipe */
       scroll-snap-type:x mandatory;
       -webkit-overflow-scrolling:touch;
     }
     .mcard{
-      min-width:62vw;                            /* ~1.5 cards visible */
-      max-width:62vw;
+      min-width:28vw;                            /* ~3.3 cards visible at 390px */
+      max-width:28vw;
       scroll-snap-align:start;
     }
     .mcard .ttl{max-width:none}
@@ -711,7 +686,7 @@
     .topbar{padding:10px 10px}
     .logo .mp,.logo .hi{font-size:14px}
     .snapshot button{padding:5px 8px;font-size:10px}
-    .mcard{min-width:70vw;max-width:70vw}
+    .mcard{min-width:30vw;max-width:30vw}
   }
 </style>
 </head>
@@ -756,10 +731,9 @@
   <div class="pill mobile-show"><span class="k">NEXT UPDATE</span><span class="cd" id="cd">--:--:--</span></div>
 </div>
 
-<!-- ================= NEWS TICKER (terminal aesthetic) ================= -->
-<!-- Moved per redesign: between stats strip and 1D/7D/30D toggle.
-     Black background, red pulsing dot, green scrolling text, scanline
-     overlay, blinking cursor at the right edge. -->
+<!-- ================= NEWS TICKER (V2 gold style) ================= -->
+<!-- Sits between the stats strip and the tabs. Dark background with a
+     gold pulsing dot + BREAKING label and white scrolling headlines. -->
 <div class="ticker">
   <div class="brk">
     <span class="brk-dot"></span>
@@ -767,14 +741,20 @@
   </div>
   <div class="viewport">
     <div class="track" id="track"></div>
-    <div class="scanlines" aria-hidden="true"></div>
   </div>
-  <div class="cursor" aria-hidden="true">█</div>
 </div>
 
 <!-- ================= 1D / 7D / 30D TOGGLE ================= -->
 <!-- Moved out of the topbar so it sits directly below the ticker as a
      standalone snapshot row, per the redesign spec. -->
+<!-- ================= TABS ================= -->
+<div class="tabs" id="tabs">
+  <div class="tab active" data-tab="movies">MOVIES<span class="count" id="tabCount_movies">—</span></div>
+  <div class="tab" data-tab="actors">ACTORS<span class="count" id="tabCount_actors">—</span></div>
+  <div class="tab" data-tab="directors">DIRECTORS<span class="count" id="tabCount_directors">—</span></div>
+</div>
+
+<!-- ================= 1D / 7D / 30D TOGGLE (below tabs) ================= -->
 <div class="toggle-row">
   <div class="snapshot" role="tablist" aria-label="Snapshot window" id="snapshot">
     <button data-window="1d">1D</button>
@@ -783,14 +763,7 @@
   </div>
 </div>
 
-<!-- ================= TABS ================= -->
-<div class="tabs" id="tabs">
-  <div class="tab active" data-tab="movies">MOVIES<span class="count" id="tabCount_movies">—</span></div>
-  <div class="tab" data-tab="actors">ACTORS<span class="count" id="tabCount_actors">—</span></div>
-  <div class="tab" data-tab="directors">DIRECTORS<span class="count" id="tabCount_directors">—</span></div>
-</div>
-
-<!-- ================= MOVERS (top 8, between tabs and table) ================= -->
+<!-- ================= MOVERS (top 8, between toggle and table) ================= -->
 <div class="movers">
   <div class="label">TODAY'S MOVERS<small>· LAST 24H</small></div>
   <div class="strip" id="strip"></div>
@@ -1247,8 +1220,6 @@ function renderMovieRow(m, rank){
   const badges = [];
   if (m.is_new) badges.push(`<span class="badge">NEW</span>`);
   if (m.hot)    badges.push(`<span class="fire" title="3+ days rising">🔥</span>`);
-  const trend  = move > 0 ? `<span class="trend up">▲</span>`
-               : move < 0 ? `<span class="trend down">▼</span>` : '';
 
   // 2:3 portrait poster from TMDb @ w342 (gradient fallback baked into CSS)
   const posterUrl = tmdbW342(m.poster_url);
@@ -1262,7 +1233,7 @@ function renderMovieRow(m, rank){
     <tr class="${m.highlight ? 'hl' : ''} clickable" data-href="${href}">
       <td>
         <div class="rk-cell">
-          <span class="rk">${String(rank).padStart(2,'0')}</span>
+          <span class="rk">${rank}</span>
           <span class="mv ${mvCls}">${mvTxt}</span>
         </div>
       </td>
@@ -1283,7 +1254,7 @@ function renderMovieRow(m, rank){
           </div>
         </div>
       </td>
-      <td class="score-cell"><span class="score">${m._score||0}</span>${trend}</td>
+      <td class="score-cell"><span class="score">${m._score||0}</span></td>
     </tr>
   `;
 }
@@ -1334,7 +1305,7 @@ function renderPersonRow(p, rank, detail){
     <tr class="clickable" data-href="${href}">
       <td>
         <div class="rk-cell">
-          <span class="rk">${String(rank).padStart(2,'0')}</span>
+          <span class="rk">${rank}</span>
           <span class="mv ${mvCls}">${mvTxt}</span>
         </div>
       </td>
