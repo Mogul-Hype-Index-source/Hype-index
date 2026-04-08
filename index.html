@@ -384,6 +384,14 @@
     width:42px;height:4px;background:var(--bar-bg);border-radius:2px;overflow:hidden;
   }
   .ent .strip .sent-mini .bar-mini > i{display:block;height:100%;border-radius:2px}
+  /* Sentiment label is abbreviated "SENT" in portrait and "SENTIMENT"
+     in landscape. CSS-level toggle via the orientation media query so
+     the render functions stay device-agnostic. */
+  .sent-lbl-full{display:none}
+  @media (orientation: landscape){
+    .sent-lbl-short{display:none}
+    .sent-lbl-full{display:inline}
+  }
   .ent .release{display:none}
   .fire{color:var(--gold);filter:saturate(1.2);font-size:11px}
 
@@ -1245,7 +1253,8 @@ function renderMovieRow(m, rank){
             <span><span class="lbl">VIEWS</span><span class="num-col">${fmtCount(m.youtube_views)}</span></span>
             <span><span class="lbl">MENTIONS</span><span class="num-col">${fmtCount(m.mentions)}</span></span>
             <span class="sent-mini">
-              <span class="lbl">SENT</span>
+              <span class="lbl sent-lbl-short">SENT</span>
+              <span class="lbl sent-lbl-full">SENTIMENT</span>
               <span class="bar-mini"><i style="width:${sentP}%;background:${sentColor(sentP)}"></i></span>
               <span class="val" style="color:${sentColor(sentP)}">${sentP}%</span>
             </span>
@@ -1317,7 +1326,8 @@ function renderPersonRow(p, rank, detail){
             <span><span class="lbl">FILMS</span><span class="val">${p.film_count || 0}</span></span>
             <span><span class="lbl">MENTIONS</span><span class="num-col">${fmtCount(p.mentions)}</span></span>
             <span class="sent-mini">
-              <span class="lbl">SENT</span>
+              <span class="lbl sent-lbl-short">SENT</span>
+              <span class="lbl sent-lbl-full">SENTIMENT</span>
               <span class="bar-mini"><i style="width:${sentP}%;background:${sentColor(sentP)}"></i></span>
               <span class="val" style="color:${sentColor(sentP)}">${sentP}%</span>
             </span>
