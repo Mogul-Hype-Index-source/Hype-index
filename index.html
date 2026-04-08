@@ -182,24 +182,24 @@
   .market .sep{width:1px;height:18px;background:var(--line-2)}
   .market .cd{color:var(--gold);font-weight:700;letter-spacing:.08em}
 
-  /* ---------- Ticker — V2 gold style (reverted from terminal) ----------
-     Dark background, gold/amber pulsing dot + BREAKING label, white
-     scrolling headlines. Category-label pills stay gold so the section
-     cycle is still visible. */
+  /* ---------- Ticker — V2 gold style, hard-locked dark in BOTH themes ----
+     Every color in this block is hardcoded to its dark-mode value so
+     the ticker bar never inherits the page background. The day/night
+     toggle does not affect anything inside .ticker — by design. */
   .ticker{
     display:flex;align-items:stretch;height:42px;
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--bg-ticker);
+    border-top:1px solid #1f1f1f;border-bottom:1px solid #1f1f1f;
+    background:#060606;
     position:relative;overflow:hidden;
   }
   .ticker .brk{
     flex:0 0 auto;padding:0 14px;display:flex;align-items:center;gap:8px;
-    background:linear-gradient(90deg,var(--gold-grad-1),var(--gold-grad-2));
-    border-right:1px solid var(--line-2);
+    background:linear-gradient(90deg,#1a1305,#0c0903);
+    border-right:1px solid #2a2a2a;
     z-index:3;position:relative;
   }
   .ticker .brk-dot{
-    width:9px;height:9px;border-radius:50%;background:var(--gold);
+    width:9px;height:9px;border-radius:50%;background:#F5A623;
     box-shadow:0 0 6px rgba(245,166,35,.85), 0 0 0 0 rgba(245,166,35,.7);
     animation:brk-pulse 1.6s infinite ease-in-out;
   }
@@ -208,44 +208,44 @@
     50%     { box-shadow:0 0 14px rgba(245,166,35,.95), 0 0 0 8px rgba(245,166,35,0); opacity:.75 }
   }
   .ticker .brk-lbl{
-    color:var(--gold);font-family:'Bebas Neue',sans-serif;font-weight:400;
+    color:#F5A623;font-family:'Bebas Neue',sans-serif;font-weight:400;
     font-size:14px;letter-spacing:.18em;text-transform:uppercase;
   }
   .ticker .viewport{
     flex:1 1 auto;min-width:0;overflow:hidden;position:relative;display:flex;align-items:center;
-    background:var(--bg-ticker);
+    background:#060606;
   }
   .ticker .track{
     display:flex;gap:0;white-space:nowrap;padding-left:24px;
     animation:scroll 196s linear infinite;
     will-change:transform;
     font-family:'Rajdhani',sans-serif;font-size:13px;
-    color:var(--text-secondary);
+    color:#dddddd;
     align-items:center;
     z-index:1;position:relative;
   }
-  .ticker .track a{display:inline-block;color:var(--text-strong)}
+  .ticker .track a{display:inline-block;color:#ffffff}
   .ticker .track a.ti{margin-right:38px}
-  .ticker .track a:hover b{color:var(--gold)}
-  .ticker .track b{color:var(--text-strong);font-weight:700;letter-spacing:.04em}
-  .ticker .track i{color:var(--mute);font-style:normal;font-weight:500;margin-left:6px}
-  .ticker .track .bullet{color:var(--gold);margin-right:8px;opacity:.85}
+  .ticker .track a:hover b{color:#F5A623}
+  .ticker .track b{color:#ffffff;font-weight:700;letter-spacing:.04em}
+  .ticker .track i{color:#8a8a8a;font-style:normal;font-weight:500;margin-left:6px}
+  .ticker .track .bullet{color:#F5A623;margin-right:8px;opacity:.85}
   /* Category label — gold pill in front of each section group. */
   .ticker .track .cat-label{
     display:inline-flex;align-items:center;
-    color:var(--gold);
+    color:#F5A623;
     font-family:'Bebas Neue',sans-serif;
     font-size:13px;letter-spacing:.18em;
     padding:3px 12px;margin:0 22px 0 12px;
-    border:1px solid var(--gold-pill-border);
-    background:var(--gold-pill-bg);
+    border:1px solid #3a2a09;
+    background:#1a1305;
     border-radius:999px;
     line-height:1;
     flex:0 0 auto;
   }
   .ticker .track .cat-empty{
     display:inline-flex;align-items:center;
-    color:var(--mute);font-style:italic;
+    color:#8a8a8a;font-style:italic;
     margin-right:38px;font-size:12px;
   }
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -327,7 +327,6 @@
   }
   .rankings tbody td:nth-child(2){padding:8px 6px}
   .rankings tbody tr.clickable{cursor:pointer}
-  .rankings tr.hl{box-shadow:inset 3px 0 0 var(--gold)}
 
   /* Hover lifts background to var(--bg-2) (#0f0f0f in dark) + gold rail */
   .rankings tbody tr:hover{
@@ -658,7 +657,6 @@
       z-index:1;
     }
     .rankings tbody tr:hover td:last-child{background:var(--bg-row-hover)}
-    .rankings tbody tr.hl td:last-child{box-shadow:inset 3px 0 0 var(--gold),-6px 0 10px -8px rgba(0,0,0,.35)}
     .rankings thead th:last-child{
       position:sticky;right:0;
       background:var(--bg-panel);
@@ -1230,7 +1228,7 @@ function renderMovieRow(m, rank){
   const sentP = m.sentiment_pct || 0;
 
   return `
-    <tr class="${m.highlight ? 'hl' : ''} clickable" data-href="${href}">
+    <tr class="clickable" data-href="${href}">
       <td>
         <div class="rk-cell">
           <span class="rk">${rank}</span>
