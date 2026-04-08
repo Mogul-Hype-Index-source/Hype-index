@@ -1,1 +1,103 @@
-{"PulseUTC":"2026-04-08T03:00:00Z","Version":"v9.3","Schema":"homepage-mvp-v1-parity","Terminal":"Hype Index","ScaleDefinitions":{"Sentiment":"NIS 0.0-100.0","Score":"AMSI 800.0-999.0"},"Leaderboards":{"Movies":[{"Rank":1,"Move":1,"Entity":"Michael (2026)","Mentions":284120,"Sentiment":96.8,"Score":999.0},{"Rank":2,"Move":-1,"Entity":"Super Mario Galaxy Movie","Mentions":276445,"Sentiment":95.9,"Score":999.0},{"Rank":3,"Move":0,"Entity":"Project Hail Mary","Mentions":221903,"Sentiment":92.4,"Score":988.5},{"Rank":4,"Move":2,"Entity":"The Odyssey","Mentions":167884,"Sentiment":89.7,"Score":965.2},{"Rank":5,"Move":-1,"Entity":"Avengers: Doomsday","Mentions":158731,"Sentiment":86.5,"Score":959.4}],"Actors":[{"Rank":1,"Move":2,"Entity":"Milly Alcock","Mentions":198552,"Sentiment":94.6,"Score":997.8},{"Rank":2,"Move":1,"Entity":"Zendaya","Mentions":186907,"Sentiment":91.8,"Score":974.5},{"Rank":3,"Move":-1,"Entity":"Pedro Pascal","Mentions":171334,"Sentiment":88.9,"Score":969.1},{"Rank":4,"Move":0,"Entity":"Florence Pugh","Mentions":149280,"Sentiment":87.2,"Score":952.6},{"Rank":5,"Move":-2,"Entity":"Timothee Chalamet","Mentions":140915,"Sentiment":85.4,"Score":944.3}]},"NewsTicker":["Michael (2026) jumps to the top movie slot after a sharp overnight spike in social velocity.","Super Mario Galaxy Movie remains effectively tied on score as teaser chatter keeps mentions elevated.","Project Hail Mary holds at #3 with steady sci-fi conversation and strong positive sentiment.","Milly Alcock surges to #1 actor on breakout casting buzz and high engagement rates.","Zendaya climbs one position to #2 actor as awards-season and production chatter accelerates."]}
+{
+  "PulseUTC": "2026-04-08T06:00:00Z",
+  "Version": "v9.6",
+  "Schema": "homepage-mvp-v1-parity",
+  "Terminal": "Hype Index",
+  "ScaleDefinitions": {
+    "Sentiment": "NIS 0.0-100.0",
+    "Score": "AMSI 800.0-999.0"
+  },
+  "Leaderboards": {
+    "Movies": [
+      {
+        "Name": "Michael (2026)",
+        "Rank": 1,
+        "Move": 0,
+        "Mentions": 315400,
+        "Sentiment": 97.2,
+        "Score": 999.0
+      },
+      {
+        "Name": "Super Mario Galaxy Movie",
+        "Rank": 2,
+        "Move": 0,
+        "Mentions": 312000,
+        "Sentiment": 96.5,
+        "Score": 999.0
+      },
+      {
+        "Name": "Project Hail Mary",
+        "Rank": 3,
+        "Move": 0,
+        "Mentions": 245000,
+        "Sentiment": 94.8,
+        "Score": 990.5
+      },
+      {
+        "Name": "The Odyssey",
+        "Rank": 4,
+        "Move": 0,
+        "Mentions": 175000,
+        "Sentiment": 90.2,
+        "Score": 966.8
+      },
+      {
+        "Name": "Avengers: Doomsday",
+        "Rank": 5,
+        "Move": 0,
+        "Mentions": 162000,
+        "Sentiment": 87.1,
+        "Score": 960.5
+      }
+    ],
+    "Actors": [
+      {
+        "Name": "Milly Alcock",
+        "Rank": 1,
+        "Move": 0,
+        "Mentions": 225000,
+        "Sentiment": 95.5,
+        "Score": 998.2
+      },
+      {
+        "Name": "Zendaya",
+        "Rank": 2,
+        "Move": 0,
+        "Mentions": 198000,
+        "Sentiment": 92.5,
+        "Score": 975.5
+      },
+      {
+        "Name": "Pedro Pascal",
+        "Rank": 3,
+        "Move": 0,
+        "Mentions": 178000,
+        "Sentiment": 89.4,
+        "Score": 970.2
+      },
+      {
+        "Name": "Florence Pugh",
+        "Rank": 4,
+        "Move": 0,
+        "Mentions": 155000,
+        "Sentiment": 88.0,
+        "Score": 954.1
+      },
+      {
+        "Name": "Timothee Chalamet",
+        "Rank": 5,
+        "Move": 0,
+        "Mentions": 145000,
+        "Sentiment": 86.2,
+        "Score": 946.0
+      }
+    ]
+  },
+  "NewsTicker": [
+    "Michael (2026) holds uncontested #1; Jaafar Jackson rehearsal magic confirmed via fresh viral leaks.",
+    "Super Mario Galaxy Movie blockbuster dominance persists as global box office crosses $400M.",
+    "Project Hail Mary: NASA Artemis II mission name-drop fuels 'Rocky' obsession and science-forward sentiment.",
+    "Milly Alcock: Supergirl suit deep-dive photos solidify #1 Actor dominance following production reveal.",
+    "SWARM: Ecosystem liquidity expands to $145,858 as sentiment strengthens (+9.7% 24h)."
+  ]
+}
