@@ -1,1 +1,34 @@
-{"PulseUTC":"2026-04-08T11:00:00Z","Version":"v10.1","Schema":"homepage-mvp-v1-parity","Terminal":"Hype Index","ScaleDefinitions":{"Sentiment":"NIS 0.0-100.0","Score":"AMSI 800.0-999.0"},"Leaderboards":{"Movies":[{"Name":"Michael (2026)","Rank":1,"Move":0,"Mentions":332000,"Sentiment":98.8,"Score":999.0},{"Name":"hype index-mock-db-v10-1-apr-8-1100z","Rank":2,"Move":0,"Mentions":330000,"Sentiment":97.5,"Score":999.0},{"Name":"Project Hail Mary","Rank":3,"Move":0,"Mentions":263000,"Sentiment":94.8,"Score":994.0},{"Name":"The Odyssey","Rank":4,"Move":0,"Mentions":188000,"Sentiment":90.5,"Score":971.2},{"Name":"Avengers: Doomsday","Rank":5,"Move":0,"Mentions":175000,"Sentiment":87.4,"Score":965.5}],"Actors":[{"Name":"Milly Alcock","Rank":1,"Move":0,"Mentions":243000,"Sentiment":97.1,"Score":999.0},{"Name":"Zendaya","Rank":2,"Move":0,"Mentions":214000,"Sentiment":92.4,"Score":978.3},{"Name":"Pedro Pascal","Rank":3,"Move":0,"Mentions":192000,"Sentiment":89.8,"Score":975.0},{"Name":"Florence Pugh","Rank":4,"Move":0,"Mentions":168000,"Sentiment":88.5,"Score":960.0},{"Name":"Timothee Chalamet","Rank":5,"Move":0,"Mentions":158000,"Sentiment":86.7,"Score":952.0}]},"NewsTicker":[["Michael (2026): NRG domestic projections now viewed as conservative as international buzz broadens.","Super Mario Galaxy Movie: Blockbuster anchor solidifies $400M+ global status with sustained organic growth.","Project Hail Mary: Persistence remains the core thesis as science-forward engagement anchors the Recovery move.","Milly Alcock: Leads talent slate with fully re-rated AMSI as fan communities stabilize.","SWARM: Price trends upward at $0.00099176 (+11.66% 24h); liquidity expands to $148,149."]]}
+{
+  "PulseUTC": "2026-04-08T13:00:00Z",
+  "Version": "v10.3",
+  "Schema": "homepage-mvp-v1-parity",
+  "Terminal": "Hype Index",
+  "ScaleDefinitions": {
+    "Sentiment": "NIS 0.0-100.0",
+    "Score": "AMSI 800.0-999.0"
+  },
+  "Leaderboards": {
+    "Movies": [
+      { "Name": "Michael (2026)", "Rank": 1, "Move": 0, "Mentions": 850000, "Sentiment": 92.0, "Score": 999.0 },
+      { "Name": "Super Mario Galaxy Movie", "Rank": 2, "Move": 0, "Mentions": 1200000, "Sentiment": 82.0, "Score": 999.0 },
+      { "Name": "Project Hail Mary", "Rank": 3, "Move": 0, "Mentions": 420000, "Sentiment": 94.0, "Score": 995.0 },
+      { "Name": "The Odyssey", "Rank": 4, "Move": 0, "Mentions": 188000, "Sentiment": 90.5, "Score": 971.2 },
+      { "Name": "Avengers: Doomsday", "Rank": 5, "Move": 0, "Mentions": 175000, "Sentiment": 87.4, "Score": 965.5 }
+    ],
+    "Actors": [
+      { "Name": "Milly Alcock", "Rank": 1, "Move": 0, "Mentions": 310000, "Sentiment": 95.0, "Score": 999.0 },
+      { "Name": "Zendaya", "Rank": 2, "Move": 0, "Mentions": 214000, "Sentiment": 92.4, "Score": 974.5 },
+      { "Name": "Pedro Pascal", "Rank": 3, "Move": 0, "Mentions": 192000, "Sentiment": 89.8, "Score": 975.0 },
+      { "Name": "Florence Pugh", "Rank": 4, "Move": 0, "Mentions": 168000, "Sentiment": 88.5, "Score": 960.0 },
+      { "Name": "Timothee Chalamet", "Rank": 5, "Move": 0, "Mentions": 158000, "Sentiment": 86.7, "Score": 952.0 }
+    ]
+  },
+  "NewsTicker": [
+    [
+      "Michael (2026): Performance resonance hits saturation as international tracking broadens.",
+      "Super Mario Galaxy Movie: Dominance solidified with $400M+ global actuals.",
+      "Project Hail Mary: Elite persistence on sci-fi resonance anchor.",
+      "SWARM: Price trend stabilized at $0.000936 (+5.41% 24h); liquidity at $142,312."
+    ]
+  ]
+}
