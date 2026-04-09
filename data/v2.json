@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-09T09:42:57+00:00",
-  "next_update_at": "2026-04-09T10:42:57+00:00",
+  "generated_at": "2026-04-09T10:22:50+00:00",
+  "next_update_at": "2026-04-09T11:22:50+00:00",
   "snapshot_date": "2026-04-09",
   "summary": {
     "total": 93,
-    "rising": 9,
-    "falling": 6,
-    "flat": 78,
-    "avg_score": 824,
-    "total_mentions_24h": 25586
+    "rising": 2,
+    "falling": 4,
+    "flat": 87,
+    "avg_score": 825,
+    "total_mentions_24h": 26375
   },
   "news": [
     {
@@ -42,6 +42,12 @@
       "category": "production"
     },
     {
+      "headline": "Stocks to Watch: Disney, Constellation, Micron",
+      "source": "Yahoo Finance · DIS",
+      "url": "https://finance.yahoo.com/m/5a80ec76-2f24-3610-a05b-286ebbddecb7/stocks-to-watch%3A-disney%2C.html?.tsrc=rss",
+      "category": "finance"
+    },
+    {
       "headline": "Mediawan’s Ego Productions, Korea’s Flix Oven Sign Co-Production Understanding (EXCLUSIVE)",
       "source": "Variety",
       "url": "https://variety.com/2026/film/news/mediawan-ego-productions-flix-oven-coproduction-mou-1236712156/",
@@ -66,12 +72,6 @@
       "category": "finance"
     },
     {
-      "headline": "Disney To Lay Off Up To 1,000 Employees In First Cuts Under New CEO Josh D’Amaro",
-      "source": "Deadline",
-      "url": "https://deadline.com/2026/04/disney-layoffs-new-ceo-1236785214/",
-      "category": "finance"
-    },
-    {
       "headline": "Fatih Akin Made a Nazi-Era Coming-of-Age Film as a Favor — Then It Became an $8 Million Hit",
       "source": "IndieWire",
       "url": "https://www.indiewire.com/features/interviews/fatih-akin-amrum-germany-interview-1235186562/",
@@ -90,12 +90,6 @@
       "category": "creative"
     },
     {
-      "headline": "WGA Reveals Details Of Its Studio Deal: Health Plan Takes Precedence As Writers Hold The Line On Other Key Issues",
-      "source": "Deadline",
-      "url": "https://deadline.com/2026/04/wga-2026-contract-details-studios-1236784944/",
-      "category": "pr-marketing"
-    },
-    {
       "headline": "‘Remarkably Bright Creatures’ Trailer: Sally Field and Lewis Pullman Make Friends with a Giant Octopus",
       "source": "IndieWire",
       "url": "https://www.indiewire.com/news/trailers/remarkably-bright-creatures-movie-trailer-field-octopus-1235186905/",
@@ -112,6 +106,12 @@
       "source": "Yahoo Finance · CMCSA",
       "url": "https://finance.yahoo.com/markets/stocks/articles/look-comcast-cmcsa-valuation-ai-111026028.html?.tsrc=rss",
       "category": "ai-tech"
+    },
+    {
+      "headline": "Cannes: Studiocanal Boards Sales On Volker Schlöndorff’s ‘Visitation’ & Unveils First Image",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/cannes-volker-schlondorff-visitation-first-image-1236785426/",
+      "category": "festivals"
     },
     {
       "headline": "Sundance Grand Jury Prize Winner ‘Cactus Pears’ Sets U.K. and Ireland Theatrical Release (EXCLUSIVE)",
@@ -136,86 +136,52 @@
       "source": "Variety",
       "url": "https://variety.com/2026/film/festivals/cannes-film-festival-2026-lineup-1236711319/",
       "category": "festivals"
-    },
-    {
-      "headline": "Cannes Unveils Lineup for 79th Edition: Watch Live",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/cannes-2026-film-festival-selection-watch-live-stream-1236553681/",
-      "category": "festivals"
     }
   ],
   "movers_up": [
     {
-      "tmdb_id": 1292695,
-      "title": "They Will Kill You",
-      "poster_url": "https://image.tmdb.org/t/p/w185/6oI4oQKTWMVUlr8Ivqydp28Ruu6.jpg",
-      "move": 4,
-      "score": 825
-    },
-    {
-      "tmdb_id": 687163,
-      "title": "Project Hail Mary",
-      "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-      "move": 1,
-      "score": 865
-    },
-    {
-      "tmdb_id": 1327819,
-      "title": "Hoppers",
-      "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-      "move": 1,
-      "score": 860
-    },
-    {
-      "tmdb_id": 1339876,
-      "title": "Mardaani 3",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
-      "move": 1,
-      "score": 860
-    },
-    {
-      "tmdb_id": 1171145,
-      "title": "Crime 101",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
-      "move": 1,
-      "score": 859
-    }
-  ],
-  "movers_down": [
-    {
       "tmdb_id": 1242332,
       "title": "Normal",
       "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
-      "move": -4,
-      "score": 858
-    },
-    {
-      "tmdb_id": 931285,
-      "title": "Mortal Kombat II",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lIsMeDbwntNXSUVHmWMMRXEZOVc.jpg",
-      "move": -3,
-      "score": 834
+      "move": 4,
+      "score": 868
     },
     {
       "tmdb_id": 1066313,
       "title": "The Draft!",
       "poster_url": "https://image.tmdb.org/t/p/w185/6WEqtp38s1iW5VrcH78rOIi8a2Z.jpg",
-      "move": -2,
+      "move": 1,
       "score": 824
+    }
+  ],
+  "movers_down": [
+    {
+      "tmdb_id": 1327819,
+      "title": "Hoppers",
+      "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
+      "move": -2,
+      "score": 859
     },
     {
-      "tmdb_id": 1381027,
-      "title": "Good Boy",
-      "poster_url": "https://image.tmdb.org/t/p/w185/x0wD4Qxe0wulV0bxarsQ05PqDNF.jpg",
+      "tmdb_id": 687163,
+      "title": "Project Hail Mary",
+      "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
       "move": -1,
-      "score": 850
+      "score": 865
     },
     {
-      "tmdb_id": 1658216,
-      "title": "Stepdaddy",
-      "poster_url": "https://image.tmdb.org/t/p/w185/oZxNblisKuDzSUW5g18FERjyJs9.jpg",
+      "tmdb_id": 1171145,
+      "title": "Crime 101",
+      "poster_url": "https://image.tmdb.org/t/p/w185/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
       "move": -1,
-      "score": 825
+      "score": 859
+    },
+    {
+      "tmdb_id": 1140521,
+      "title": "The Magic Faraway Tree",
+      "poster_url": "https://image.tmdb.org/t/p/w185/mtS8mW6aLuartATut8TrD39zTIG.jpg",
+      "move": -1,
+      "score": 824
     }
   ],
   "movies": [
@@ -232,8 +198,8 @@
       "youtube_comments": 13902,
       "youtube_video_id": "mbtgEE6rkxw",
       "reddit_posts": 54,
-      "reddit_comments": 5387,
-      "mentions": 5442,
+      "reddit_comments": 5394,
+      "mentions": 5449,
       "sentiment_pct": 73,
       "scores": {
         "1d": 999,
@@ -441,10 +407,10 @@
       "sub_scores": {
         "youtube_views": 0.0007,
         "youtube_engagement": 0.0253,
-        "reddit_volume": 0.8726,
+        "reddit_volume": 0.8715,
         "google_trends": 0.53,
         "news_impact": 0.0,
-        "raw_amsi": 0.2845
+        "raw_amsi": 0.2843
       },
       "cast_full": [
         {
@@ -519,8 +485,8 @@
       "youtube_comments": 0,
       "youtube_video_id": "En5QZmL5R1s",
       "reddit_posts": 45,
-      "reddit_comments": 4855,
-      "mentions": 4900,
+      "reddit_comments": 4856,
+      "mentions": 4901,
       "sentiment_pct": 59,
       "scores": {
         "1d": 883,
@@ -535,10 +501,10 @@
       "sub_scores": {
         "youtube_views": 0.099,
         "youtube_engagement": 0.0163,
-        "reddit_volume": 0.9006,
+        "reddit_volume": 0.8996,
         "google_trends": 0.13,
         "news_impact": 0.0,
-        "raw_amsi": 0.2383
+        "raw_amsi": 0.2381
       },
       "cast_full": [
         {
@@ -701,6 +667,100 @@
     },
     {
       "rank": 6,
+      "tmdb_id": 1242332,
+      "title": "Normal",
+      "director": "Ben Wheatley",
+      "cast": "Bob Odenkirk, Henry Winkler",
+      "release_date": "2026-04-16",
+      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
+      "youtube_views": 5358059,
+      "youtube_likes": 16441,
+      "youtube_comments": 1027,
+      "youtube_video_id": "5OndK0w1lYY",
+      "reddit_posts": 13,
+      "reddit_comments": 718,
+      "mentions": 731,
+      "sentiment_pct": 56,
+      "scores": {
+        "1d": 868,
+        "7d": 868,
+        "30d": 868
+      },
+      "score": 868,
+      "move": 4,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0633,
+        "youtube_engagement": 0.016,
+        "reddit_volume": 0.1342,
+        "google_trends": 0.73,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1942
+      },
+      "cast_full": [
+        {
+          "id": 59410,
+          "name": "Bob Odenkirk",
+          "character": "Ulysses",
+          "profile_path": "/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg"
+        },
+        {
+          "id": 31903,
+          "name": "Henry Winkler",
+          "character": "Mayor Kibner",
+          "profile_path": "/mGlSRA5RDswEDmY8oWEizXliShp.jpg"
+        },
+        {
+          "id": 17286,
+          "name": "Lena Headey",
+          "character": "Moira",
+          "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
+        },
+        {
+          "id": 62651,
+          "name": "Ryan Allen",
+          "character": "Blaine Anderson",
+          "profile_path": "/99O5NjoOmO4uCmTYaQhipj1qMNx.jpg"
+        },
+        {
+          "id": 63814,
+          "name": "Billy MacLellan",
+          "character": "Deputy Mike Nelson",
+          "profile_path": "/9ObnhjbbeVEhk8g941FrLq4W0r7.jpg"
+        },
+        {
+          "id": 32205,
+          "name": "Brendan Fletcher",
+          "character": "Keith",
+          "profile_path": "/azeMOxQdCw18ABRwwOMIo3lV1If.jpg"
+        },
+        {
+          "id": 172994,
+          "name": "Peter Shinkoda",
+          "character": "Joe",
+          "profile_path": "/lCQl28poQr4bLwqZjhryGkV73jO.jpg"
+        },
+        {
+          "id": 84466,
+          "name": "Jess McLeod",
+          "character": "Alex",
+          "profile_path": "/nJXORUI8JJVkYTCO4Lpjxz6VgzF.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 137467,
+          "name": "Ben Wheatley",
+          "profile_path": "/r8veHr3ExfEfVYWVR93hIDf4RiP.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 73
+    },
+    {
+      "rank": 7,
       "tmdb_id": 687163,
       "title": "Project Hail Mary",
       "director": "Phil Lord, Christopher Miller",
@@ -712,8 +772,8 @@
       "youtube_comments": 222,
       "youtube_video_id": "NKYea63tQmI",
       "reddit_posts": 75,
-      "reddit_comments": 1957,
-      "mentions": 2032,
+      "reddit_comments": 1959,
+      "mentions": 2034,
       "sentiment_pct": 65,
       "scores": {
         "1d": 865,
@@ -721,14 +781,14 @@
         "30d": 865
       },
       "score": 865,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0063,
         "youtube_engagement": 0.0268,
-        "reddit_volume": 0.3735,
+        "reddit_volume": 0.3733,
         "google_trends": 0.53,
         "news_impact": 0.0,
         "raw_amsi": 0.1866
@@ -799,100 +859,6 @@
       "trends": 53
     },
     {
-      "rank": 7,
-      "tmdb_id": 1327819,
-      "title": "Hoppers",
-      "director": "Daniel Chong",
-      "cast": "Piper Curda, Bobby Moynihan",
-      "release_date": "2026-03-04",
-      "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-      "youtube_views": 16165889,
-      "youtube_likes": 78268,
-      "youtube_comments": 5572,
-      "youtube_video_id": "PypDSyIRRSs",
-      "reddit_posts": 59,
-      "reddit_comments": 1256,
-      "mentions": 1315,
-      "sentiment_pct": 63,
-      "scores": {
-        "1d": 860,
-        "7d": 860,
-        "30d": 860
-      },
-      "score": 860,
-      "move": 1,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.1909,
-        "youtube_engagement": 0.0254,
-        "reddit_volume": 0.2417,
-        "google_trends": 0.31,
-        "news_impact": 0.0,
-        "raw_amsi": 0.1714
-      },
-      "cast_full": [
-        {
-          "id": 1308818,
-          "name": "Piper Curda",
-          "character": "Mabel (voice)",
-          "profile_path": "/oyitEBcracNWMuF8Frhsqkjgzuc.jpg"
-        },
-        {
-          "id": 452205,
-          "name": "Bobby Moynihan",
-          "character": "King George (voice)",
-          "profile_path": "/gOvwNz5joi5yWJ7dAhuF8WA2aas.jpg"
-        },
-        {
-          "id": 65717,
-          "name": "Jon Hamm",
-          "character": "Mayor Jerry Generazzo (voice)",
-          "profile_path": "/mrXE5fZbEDPc7BEE5G21J6qrwzi.jpg"
-        },
-        {
-          "id": 11074,
-          "name": "Kathy Najimy",
-          "character": "Dr. Sam (voice)",
-          "profile_path": "/nqbZF7Igr0SC8Xq8y0jwmx0mLDN.jpg"
-        },
-        {
-          "id": 54697,
-          "name": "Dave Franco",
-          "character": "Insect King (voice)",
-          "profile_path": "/d0I1BgNBAVvLJEDSfmyNVjYWPZE.jpg"
-        },
-        {
-          "id": 1653235,
-          "name": "Eduardo Franco",
-          "character": "Loaf (voice)",
-          "profile_path": "/lt8T9FJsgye0pRjwY1Dnk0qi2OB.jpg"
-        },
-        {
-          "id": 1625231,
-          "name": "Aparna Nancherla",
-          "character": "Nisha (voice)",
-          "profile_path": "/vwpktqJnQCAGEfq2EKUjB8ZdnhI.jpg"
-        },
-        {
-          "id": 1798896,
-          "name": "Tom Law",
-          "character": "Tom Lizard (voice)",
-          "profile_path": null
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1491592,
-          "name": "Daniel Chong",
-          "profile_path": "/gMYqVwLdoaPhIFyWUAQrRlGGjkE.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 31
-    },
-    {
       "rank": 8,
       "tmdb_id": 1339876,
       "title": "Mardaani 3",
@@ -914,7 +880,7 @@
         "30d": 860
       },
       "score": 860,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -988,6 +954,100 @@
     },
     {
       "rank": 9,
+      "tmdb_id": 1327819,
+      "title": "Hoppers",
+      "director": "Daniel Chong",
+      "cast": "Piper Curda, Bobby Moynihan",
+      "release_date": "2026-03-04",
+      "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
+      "youtube_views": 16165889,
+      "youtube_likes": 78268,
+      "youtube_comments": 5572,
+      "youtube_video_id": "PypDSyIRRSs",
+      "reddit_posts": 59,
+      "reddit_comments": 1256,
+      "mentions": 1315,
+      "sentiment_pct": 63,
+      "scores": {
+        "1d": 859,
+        "7d": 859,
+        "30d": 859
+      },
+      "score": 859,
+      "move": -2,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.1909,
+        "youtube_engagement": 0.0254,
+        "reddit_volume": 0.2414,
+        "google_trends": 0.31,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1714
+      },
+      "cast_full": [
+        {
+          "id": 1308818,
+          "name": "Piper Curda",
+          "character": "Mabel (voice)",
+          "profile_path": "/oyitEBcracNWMuF8Frhsqkjgzuc.jpg"
+        },
+        {
+          "id": 452205,
+          "name": "Bobby Moynihan",
+          "character": "King George (voice)",
+          "profile_path": "/gOvwNz5joi5yWJ7dAhuF8WA2aas.jpg"
+        },
+        {
+          "id": 65717,
+          "name": "Jon Hamm",
+          "character": "Mayor Jerry Generazzo (voice)",
+          "profile_path": "/mrXE5fZbEDPc7BEE5G21J6qrwzi.jpg"
+        },
+        {
+          "id": 11074,
+          "name": "Kathy Najimy",
+          "character": "Dr. Sam (voice)",
+          "profile_path": "/nqbZF7Igr0SC8Xq8y0jwmx0mLDN.jpg"
+        },
+        {
+          "id": 54697,
+          "name": "Dave Franco",
+          "character": "Insect King (voice)",
+          "profile_path": "/d0I1BgNBAVvLJEDSfmyNVjYWPZE.jpg"
+        },
+        {
+          "id": 1653235,
+          "name": "Eduardo Franco",
+          "character": "Loaf (voice)",
+          "profile_path": "/lt8T9FJsgye0pRjwY1Dnk0qi2OB.jpg"
+        },
+        {
+          "id": 1625231,
+          "name": "Aparna Nancherla",
+          "character": "Nisha (voice)",
+          "profile_path": "/vwpktqJnQCAGEfq2EKUjB8ZdnhI.jpg"
+        },
+        {
+          "id": 1798896,
+          "name": "Tom Law",
+          "character": "Tom Lizard (voice)",
+          "profile_path": null
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1491592,
+          "name": "Daniel Chong",
+          "profile_path": "/gMYqVwLdoaPhIFyWUAQrRlGGjkE.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 31
+    },
+    {
+      "rank": 10,
       "tmdb_id": 1171145,
       "title": "Crime 101",
       "director": "Bart Layton",
@@ -1008,14 +1068,14 @@
         "30d": 859
       },
       "score": 859,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.2844,
         "youtube_engagement": 0.0055,
-        "reddit_volume": 0.0825,
+        "reddit_volume": 0.0824,
         "google_trends": 0.34,
         "news_impact": 0.0,
         "raw_amsi": 0.1706
@@ -1079,100 +1139,6 @@
       ],
       "news_mentions": [],
       "trends": 34
-    },
-    {
-      "rank": 10,
-      "tmdb_id": 1242332,
-      "title": "Normal",
-      "director": "Ben Wheatley",
-      "cast": "Bob Odenkirk, Henry Winkler",
-      "release_date": "2026-04-16",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
-      "youtube_views": 5358059,
-      "youtube_likes": 16441,
-      "youtube_comments": 1027,
-      "youtube_video_id": "5OndK0w1lYY",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 55,
-      "scores": {
-        "1d": 858,
-        "7d": 858,
-        "30d": 858
-      },
-      "score": 858,
-      "move": -4,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0633,
-        "youtube_engagement": 0.016,
-        "reddit_volume": 0.0,
-        "google_trends": 0.73,
-        "news_impact": 0.0,
-        "raw_amsi": 0.1674
-      },
-      "cast_full": [
-        {
-          "id": 59410,
-          "name": "Bob Odenkirk",
-          "character": "Ulysses",
-          "profile_path": "/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg"
-        },
-        {
-          "id": 31903,
-          "name": "Henry Winkler",
-          "character": "Mayor Kibner",
-          "profile_path": "/mGlSRA5RDswEDmY8oWEizXliShp.jpg"
-        },
-        {
-          "id": 17286,
-          "name": "Lena Headey",
-          "character": "Moira",
-          "profile_path": "/cDyZLf8ddz0EgoUjpv4jjzy7qxA.jpg"
-        },
-        {
-          "id": 62651,
-          "name": "Ryan Allen",
-          "character": "Blaine Anderson",
-          "profile_path": "/99O5NjoOmO4uCmTYaQhipj1qMNx.jpg"
-        },
-        {
-          "id": 63814,
-          "name": "Billy MacLellan",
-          "character": "Deputy Mike Nelson",
-          "profile_path": "/9ObnhjbbeVEhk8g941FrLq4W0r7.jpg"
-        },
-        {
-          "id": 32205,
-          "name": "Brendan Fletcher",
-          "character": "Keith",
-          "profile_path": "/azeMOxQdCw18ABRwwOMIo3lV1If.jpg"
-        },
-        {
-          "id": 172994,
-          "name": "Peter Shinkoda",
-          "character": "Joe",
-          "profile_path": "/lCQl28poQr4bLwqZjhryGkV73jO.jpg"
-        },
-        {
-          "id": 84466,
-          "name": "Jess McLeod",
-          "character": "Alex",
-          "profile_path": "/nJXORUI8JJVkYTCO4Lpjxz6VgzF.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 137467,
-          "name": "Ben Wheatley",
-          "profile_path": "/r8veHr3ExfEfVYWVR93hIDf4RiP.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 73
     },
     {
       "rank": 11,
@@ -1366,7 +1332,7 @@
         "30d": 850
       },
       "score": 850,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1460,7 +1426,7 @@
         "30d": 850
       },
       "score": 850,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1639,8 +1605,8 @@
       "youtube_comments": 50,
       "youtube_video_id": "QyLhkoGeSl4",
       "reddit_posts": 4,
-      "reddit_comments": 677,
-      "mentions": 681,
+      "reddit_comments": 678,
+      "mentions": 682,
       "sentiment_pct": 67,
       "scores": {
         "1d": 848,
@@ -1752,7 +1718,7 @@
         "reddit_volume": 0.0329,
         "google_trends": 0.27,
         "news_impact": 0.0,
-        "raw_amsi": 0.1273
+        "raw_amsi": 0.1272
       },
       "cast_full": [
         {
@@ -1843,7 +1809,7 @@
       "sub_scores": {
         "youtube_views": 0.0047,
         "youtube_engagement": 0.0343,
-        "reddit_volume": 0.0557,
+        "reddit_volume": 0.0556,
         "google_trends": 0.53,
         "news_impact": 0.0,
         "raw_amsi": 0.1237
@@ -1921,8 +1887,8 @@
       "youtube_comments": 7133,
       "youtube_video_id": "e9HXmMnUEdE",
       "reddit_posts": 17,
-      "reddit_comments": 734,
-      "mentions": 751,
+      "reddit_comments": 735,
+      "mentions": 752,
       "sentiment_pct": 70,
       "scores": {
         "1d": 841,
@@ -2212,7 +2178,7 @@
         "30d": 836
       },
       "score": 836,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2297,8 +2263,8 @@
       "youtube_comments": 1752,
       "youtube_video_id": "4g8OciWNJn4",
       "reddit_posts": 13,
-      "reddit_comments": 194,
-      "mentions": 207,
+      "reddit_comments": 196,
+      "mentions": 209,
       "sentiment_pct": 64,
       "scores": {
         "1d": 835,
@@ -2306,17 +2272,17 @@
         "30d": 835
       },
       "score": 835,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.0445,
-        "reddit_volume": 0.038,
+        "reddit_volume": 0.0384,
         "google_trends": 0.4,
         "news_impact": 0.0,
-        "raw_amsi": 0.1013
+        "raw_amsi": 0.1014
       },
       "cast_full": [
         {
@@ -2400,14 +2366,14 @@
         "30d": 835
       },
       "score": 835,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0035,
         "youtube_engagement": 0.0602,
-        "reddit_volume": 0.0254,
+        "reddit_volume": 0.0253,
         "google_trends": 0.43,
         "news_impact": 0.0,
         "raw_amsi": 0.1012
@@ -2494,7 +2460,7 @@
         "30d": 834
       },
       "score": 834,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3204,7 +3170,7 @@
         "30d": 825
       },
       "score": 825,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3298,7 +3264,7 @@
         "30d": 825
       },
       "score": 825,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3348,100 +3314,6 @@
     },
     {
       "rank": 35,
-      "tmdb_id": 1140521,
-      "title": "The Magic Faraway Tree",
-      "director": "Ben Gregor",
-      "cast": "Andrew Garfield, Claire Foy",
-      "release_date": "2026-03-26",
-      "poster_url": "https://image.tmdb.org/t/p/w185/mtS8mW6aLuartATut8TrD39zTIG.jpg",
-      "youtube_views": 3615307,
-      "youtube_likes": 1361,
-      "youtube_comments": 269,
-      "youtube_video_id": "PAUEwUhAjzg",
-      "reddit_posts": 7,
-      "reddit_comments": 20,
-      "mentions": 27,
-      "sentiment_pct": 51,
-      "scores": {
-        "1d": 825,
-        "7d": 825,
-        "30d": 825
-      },
-      "score": 825,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0427,
-        "youtube_engagement": 0.0022,
-        "reddit_volume": 0.005,
-        "google_trends": 0.29,
-        "news_impact": 0.0,
-        "raw_amsi": 0.0721
-      },
-      "cast_full": [
-        {
-          "id": 37625,
-          "name": "Andrew Garfield",
-          "character": "Tim Thompson",
-          "profile_path": "/amGkwrFGIuNsbbCE1O84MJJ2ZSa.jpg"
-        },
-        {
-          "id": 120932,
-          "name": "Claire Foy",
-          "character": "Polly Thompson",
-          "profile_path": "/ypQrZFp3UPS6VE4TwGibgG2VB0n.jpg"
-        },
-        {
-          "id": 1267240,
-          "name": "Nicola Coughlan",
-          "character": "Silky",
-          "profile_path": "/shSN86O3qckxcO7YXVtaNy9ksSU.jpg"
-        },
-        {
-          "id": 1196101,
-          "name": "Jessica Gunning",
-          "character": "Dame Washalot",
-          "profile_path": "/c4nC6usiZdRlw4VkOcHFLXtrPa0.jpg"
-        },
-        {
-          "id": 933238,
-          "name": "Rebecca Ferguson",
-          "character": "Dame Snap",
-          "profile_path": "/lJloTOheuQSirSLXNA3JHsrMNfH.jpg"
-        },
-        {
-          "id": 1624859,
-          "name": "Hiran Abeysekera",
-          "character": "Angry Pixie",
-          "profile_path": "/1AcEoZAsUYtRaZCMHE0p9u1xbIs.jpg"
-        },
-        {
-          "id": 3717950,
-          "name": "Phoenix Laroche",
-          "character": "Joe Thompson",
-          "profile_path": "/kXl2nB3tNF9XBPvvkUZgwO0AiY3.jpg"
-        },
-        {
-          "id": 5858357,
-          "name": "Delilah Bennett-Cardy",
-          "character": "Beth Thompson",
-          "profile_path": null
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1172495,
-          "name": "Ben Gregor",
-          "profile_path": "/v5VJP6pKwGSo5neW2cl8ZiWVL0v.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 29
-    },
-    {
-      "rank": 36,
       "tmdb_id": 1066313,
       "title": "The Draft!",
       "director": "Yusron Fuadi",
@@ -3462,7 +3334,7 @@
         "30d": 824
       },
       "score": 824,
-      "move": -2,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3535,6 +3407,100 @@
       "trends": 30
     },
     {
+      "rank": 36,
+      "tmdb_id": 1140521,
+      "title": "The Magic Faraway Tree",
+      "director": "Ben Gregor",
+      "cast": "Andrew Garfield, Claire Foy",
+      "release_date": "2026-03-26",
+      "poster_url": "https://image.tmdb.org/t/p/w185/mtS8mW6aLuartATut8TrD39zTIG.jpg",
+      "youtube_views": 3615307,
+      "youtube_likes": 1361,
+      "youtube_comments": 269,
+      "youtube_video_id": "PAUEwUhAjzg",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 51,
+      "scores": {
+        "1d": 824,
+        "7d": 824,
+        "30d": 824
+      },
+      "score": 824,
+      "move": -1,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0427,
+        "youtube_engagement": 0.0022,
+        "reddit_volume": 0.0,
+        "google_trends": 0.29,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0711
+      },
+      "cast_full": [
+        {
+          "id": 37625,
+          "name": "Andrew Garfield",
+          "character": "Tim Thompson",
+          "profile_path": "/amGkwrFGIuNsbbCE1O84MJJ2ZSa.jpg"
+        },
+        {
+          "id": 120932,
+          "name": "Claire Foy",
+          "character": "Polly Thompson",
+          "profile_path": "/ypQrZFp3UPS6VE4TwGibgG2VB0n.jpg"
+        },
+        {
+          "id": 1267240,
+          "name": "Nicola Coughlan",
+          "character": "Silky",
+          "profile_path": "/shSN86O3qckxcO7YXVtaNy9ksSU.jpg"
+        },
+        {
+          "id": 1196101,
+          "name": "Jessica Gunning",
+          "character": "Dame Washalot",
+          "profile_path": "/c4nC6usiZdRlw4VkOcHFLXtrPa0.jpg"
+        },
+        {
+          "id": 933238,
+          "name": "Rebecca Ferguson",
+          "character": "Dame Snap",
+          "profile_path": "/lJloTOheuQSirSLXNA3JHsrMNfH.jpg"
+        },
+        {
+          "id": 1624859,
+          "name": "Hiran Abeysekera",
+          "character": "Angry Pixie",
+          "profile_path": "/1AcEoZAsUYtRaZCMHE0p9u1xbIs.jpg"
+        },
+        {
+          "id": 3717950,
+          "name": "Phoenix Laroche",
+          "character": "Joe Thompson",
+          "profile_path": "/kXl2nB3tNF9XBPvvkUZgwO0AiY3.jpg"
+        },
+        {
+          "id": 5858357,
+          "name": "Delilah Bennett-Cardy",
+          "character": "Beth Thompson",
+          "profile_path": null
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1172495,
+          "name": "Ben Gregor",
+          "profile_path": "/v5VJP6pKwGSo5neW2cl8ZiWVL0v.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 29
+    },
+    {
       "rank": 37,
       "tmdb_id": 1119449,
       "title": "Good Luck, Have Fun, Don't Die",
@@ -3556,7 +3522,7 @@
         "30d": 823
       },
       "score": 823,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3734,16 +3700,16 @@
       "youtube_likes": 53500,
       "youtube_comments": 3268,
       "youtube_video_id": "yeR5bcbRPak",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
+      "reddit_posts": 1,
+      "reddit_comments": 70,
+      "mentions": 71,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 820,
-        "7d": 820,
-        "30d": 820
+        "1d": 821,
+        "7d": 821,
+        "30d": 821
       },
-      "score": 820,
+      "score": 821,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3751,10 +3717,10 @@
       "sub_scores": {
         "youtube_views": 0.1808,
         "youtube_engagement": 0.0182,
-        "reddit_volume": 0.0,
+        "reddit_volume": 0.013,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "raw_amsi": 0.059
+        "raw_amsi": 0.0616
       },
       "cast_full": [
         {
@@ -4033,7 +3999,7 @@
       "sub_scores": {
         "youtube_views": 0.0683,
         "youtube_engagement": 0.0155,
-        "reddit_volume": 0.159,
+        "reddit_volume": 0.1588,
         "google_trends": 0.01,
         "news_impact": 0.0,
         "raw_amsi": 0.0566
@@ -4221,7 +4187,7 @@
       "sub_scores": {
         "youtube_views": 0.0096,
         "youtube_engagement": 0.093,
-        "reddit_volume": 0.0888,
+        "reddit_volume": 0.0887,
         "google_trends": 0.07,
         "news_impact": 0.0,
         "raw_amsi": 0.0486
@@ -4414,7 +4380,7 @@
       "sub_scores": {
         "youtube_views": 0.107,
         "youtube_engagement": 0.0061,
-        "reddit_volume": 0.0085,
+        "reddit_volume": 0.0084,
         "google_trends": 0.03,
         "news_impact": 0.0,
         "raw_amsi": 0.0407
@@ -4602,7 +4568,7 @@
       "sub_scores": {
         "youtube_views": 0.008,
         "youtube_engagement": 0.0123,
-        "reddit_volume": 0.0901,
+        "reddit_volume": 0.0899,
         "google_trends": 0.09,
         "news_impact": 0.0,
         "raw_amsi": 0.0402
@@ -4696,10 +4662,10 @@
       "sub_scores": {
         "youtube_views": 0.0399,
         "youtube_engagement": 0.0082,
-        "reddit_volume": 0.1358,
+        "reddit_volume": 0.1356,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "raw_amsi": 0.0404
+        "raw_amsi": 0.0403
       },
       "cast_full": [
         {
@@ -6083,7 +6049,7 @@
       "director": "Lee Cronin",
       "cast": "Jack Reynor, Laia Costa",
       "release_date": "2026-04-15",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dkfsYX1Ylp4SJYsJwJszK0H1Wo0.jpg",
+      "poster_url": "https://image.tmdb.org/t/p/w185/8L8efNkz8rUmwR7sV0g3vnC9yjn.jpg",
       "youtube_views": 241666,
       "youtube_likes": 3044,
       "youtube_comments": 272,
@@ -8812,7 +8778,7 @@
           "title": "The Magic Faraway Tree",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/mtS8mW6aLuartATut8TrD39zTIG.jpg",
-          "score": 825,
+          "score": 824,
           "character": "Dame Snap"
         },
         {
@@ -9160,7 +9126,7 @@
           "title": "The Magic Faraway Tree",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/mtS8mW6aLuartATut8TrD39zTIG.jpg",
-          "score": 825,
+          "score": 824,
           "character": "Silky"
         }
       ],
@@ -9570,13 +9536,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": "Mabel (voice)"
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
       "score": 881,
@@ -9600,13 +9566,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": "King George (voice)"
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
       "score": 881,
@@ -9630,13 +9596,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": "Mayor Jerry Generazzo (voice)"
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
       "score": 881,
@@ -9660,13 +9626,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": "Dr. Sam (voice)"
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
       "score": 881,
@@ -9690,13 +9656,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": "Insect King (voice)"
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
       "score": 881,
@@ -9720,13 +9686,13 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": "Loaf (voice)"
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
       "score": 881,
@@ -10472,20 +10438,20 @@
           "title": "Hoppers",
           "release_date": "2026-03-04",
           "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-          "score": 860,
+          "score": 859,
           "character": null
         }
       ],
       "popularity": 378.3744,
       "sentiment_pct": 63,
-      "avg_film_score": 860,
+      "avg_film_score": 859,
       "news_mentions": [],
       "mentions": 5,
-      "score": 884,
+      "score": 883,
       "scores": {
-        "1d": 884,
-        "7d": 884,
-        "30d": 884
+        "1d": 883,
+        "7d": 883,
+        "30d": 883
       },
       "rank": 2,
       "move": 0,
