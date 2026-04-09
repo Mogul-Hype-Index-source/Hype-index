@@ -1,9 +1,9 @@
 {
   "meta": {
     "product": "Hype Index Mock DB",
-    "version": "v13.6",
-    "snapshot_utc": "2026-04-09T20:00:00Z",
-    "generated_utc": "2026-04-09T20:34:22Z",
+    "version": "v13.8",
+    "snapshot_utc": "2026-04-09T22:00:00Z",
+    "generated_utc": "2026-04-09T23:15:00Z",
     "amsi_scale": {
       "min": 800,
       "max": 999
@@ -60,7 +60,7 @@
         "entity_name": "Michael (2026)",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 14500
+        "mentions": 15200
       },
       {
         "rank": 2,
@@ -68,7 +68,7 @@
         "entity_name": "Super Mario Galaxy Movie",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 12800
+        "mentions": 13500
       },
       {
         "rank": 3,
@@ -76,7 +76,7 @@
         "entity_name": "Project Hail Mary",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 10500
+        "mentions": 11200
       }
     ],
     "Actors": [
@@ -86,7 +86,7 @@
         "entity_name": "Milly Alcock",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 10800
+        "mentions": 11400
       }
     ]
   }
