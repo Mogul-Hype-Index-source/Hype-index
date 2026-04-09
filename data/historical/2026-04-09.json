@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-09T10:22:50+00:00",
-  "next_update_at": "2026-04-09T11:22:50+00:00",
+  "generated_at": "2026-04-09T11:02:27+00:00",
+  "next_update_at": "2026-04-09T12:02:27+00:00",
   "snapshot_date": "2026-04-09",
   "summary": {
     "total": 93,
-    "rising": 2,
-    "falling": 4,
-    "flat": 87,
+    "rising": 1,
+    "falling": 1,
+    "flat": 91,
     "avg_score": 825,
-    "total_mentions_24h": 26375
+    "total_mentions_24h": 26362
   },
   "news": [
     {
@@ -108,6 +108,24 @@
       "category": "ai-tech"
     },
     {
+      "headline": "Cannes Film Festival 2026 Lineup Revealed",
+      "source": "IndieWire",
+      "url": "https://www.indiewire.com/news/festivals/cannes-film-festival-2026-lineup-1235188020/",
+      "category": "festivals"
+    },
+    {
+      "headline": "Cannes Film Festival: Asghar Farhadi, Pedro Almodóvar, Hirokazu Kore-eda & Ira Sachs Among Filmmakers Set For Competition Debuts — Full List",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/cannes-2026-movies-lineup-competition-1236785446/",
+      "category": "festivals"
+    },
+    {
+      "headline": "Cannes: Studiocanal Boards Jeanne Herry’s Palme D’Or Contender ‘Another Day’ & Unveils First Look",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/cannes-studiocanal-jeanne-herry-another-day-first-look-1236784796/",
+      "category": "festivals"
+    },
+    {
       "headline": "Cannes: Studiocanal Boards Sales On Volker Schlöndorff’s ‘Visitation’ & Unveils First Image",
       "source": "Deadline",
       "url": "https://deadline.com/2026/04/cannes-volker-schlondorff-visitation-first-image-1236785426/",
@@ -118,70 +136,24 @@
       "source": "Variety",
       "url": "https://variety.com/2026/film/news/sundance-winner-cactus-pears-uk-ireland-theatrical-release-1236712168/",
       "category": "festivals"
-    },
-    {
-      "headline": "Cannes Film Festival Unveils 2026 Lineup — Updating Live",
-      "source": "Deadline",
-      "url": "https://deadline.com/2026/04/cannes-2026-movies-lineup-competition-1236785446/",
-      "category": "festivals"
-    },
-    {
-      "headline": "Cannes Film Festival Unveils 2026 Selection (Updating Live)",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/cannes-2026-selection-full-list-film-festival-lineup-1236553671/",
-      "category": "festivals"
-    },
-    {
-      "headline": "Cannes Film Festival Unveils 2026 Lineup (Updating Live)",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/festivals/cannes-film-festival-2026-lineup-1236711319/",
-      "category": "festivals"
     }
   ],
   "movers_up": [
     {
-      "tmdb_id": 1242332,
-      "title": "Normal",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
-      "move": 4,
-      "score": 868
-    },
-    {
-      "tmdb_id": 1066313,
-      "title": "The Draft!",
-      "poster_url": "https://image.tmdb.org/t/p/w185/6WEqtp38s1iW5VrcH78rOIi8a2Z.jpg",
+      "tmdb_id": 1381027,
+      "title": "Good Boy",
+      "poster_url": "https://image.tmdb.org/t/p/w185/x0wD4Qxe0wulV0bxarsQ05PqDNF.jpg",
       "move": 1,
-      "score": 824
+      "score": 850
     }
   ],
   "movers_down": [
     {
-      "tmdb_id": 1327819,
-      "title": "Hoppers",
-      "poster_url": "https://image.tmdb.org/t/p/w185/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-      "move": -2,
-      "score": 859
-    },
-    {
-      "tmdb_id": 687163,
-      "title": "Project Hail Mary",
-      "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
+      "tmdb_id": 1630433,
+      "title": "The Red Line",
+      "poster_url": "https://image.tmdb.org/t/p/w185/q3ROA6OqVA9rWSsC2DzdkPQvxWW.jpg",
       "move": -1,
-      "score": 865
-    },
-    {
-      "tmdb_id": 1171145,
-      "title": "Crime 101",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
-      "move": -1,
-      "score": 859
-    },
-    {
-      "tmdb_id": 1140521,
-      "title": "The Magic Faraway Tree",
-      "poster_url": "https://image.tmdb.org/t/p/w185/mtS8mW6aLuartATut8TrD39zTIG.jpg",
-      "move": -1,
-      "score": 824
+      "score": 849
     }
   ],
   "movies": [
@@ -198,8 +170,8 @@
       "youtube_comments": 13902,
       "youtube_video_id": "mbtgEE6rkxw",
       "reddit_posts": 54,
-      "reddit_comments": 5394,
-      "mentions": 5449,
+      "reddit_comments": 5404,
+      "mentions": 5459,
       "sentiment_pct": 73,
       "scores": {
         "1d": 999,
@@ -391,8 +363,8 @@
       "youtube_comments": 7,
       "youtube_video_id": "0ZDzsH3XGFA",
       "reddit_posts": 48,
-      "reddit_comments": 4700,
-      "mentions": 4748,
+      "reddit_comments": 4702,
+      "mentions": 4750,
       "sentiment_pct": 62,
       "scores": {
         "1d": 899,
@@ -407,10 +379,10 @@
       "sub_scores": {
         "youtube_views": 0.0007,
         "youtube_engagement": 0.0253,
-        "reddit_volume": 0.8715,
+        "reddit_volume": 0.8703,
         "google_trends": 0.53,
         "news_impact": 0.0,
-        "raw_amsi": 0.2843
+        "raw_amsi": 0.2841
       },
       "cast_full": [
         {
@@ -501,10 +473,10 @@
       "sub_scores": {
         "youtube_views": 0.099,
         "youtube_engagement": 0.0163,
-        "reddit_volume": 0.8996,
+        "reddit_volume": 0.8979,
         "google_trends": 0.13,
         "news_impact": 0.0,
-        "raw_amsi": 0.2381
+        "raw_amsi": 0.2377
       },
       "cast_full": [
         {
@@ -677,27 +649,27 @@
       "youtube_likes": 16441,
       "youtube_comments": 1027,
       "youtube_video_id": "5OndK0w1lYY",
-      "reddit_posts": 13,
-      "reddit_comments": 718,
-      "mentions": 731,
+      "reddit_posts": 15,
+      "reddit_comments": 844,
+      "mentions": 859,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 868,
-        "7d": 868,
-        "30d": 868
+        "1d": 869,
+        "7d": 869,
+        "30d": 869
       },
-      "score": 868,
-      "move": 4,
+      "score": 869,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0633,
         "youtube_engagement": 0.016,
-        "reddit_volume": 0.1342,
+        "reddit_volume": 0.1574,
         "google_trends": 0.73,
         "news_impact": 0.0,
-        "raw_amsi": 0.1942
+        "raw_amsi": 0.1989
       },
       "cast_full": [
         {
@@ -772,8 +744,8 @@
       "youtube_comments": 222,
       "youtube_video_id": "NKYea63tQmI",
       "reddit_posts": 75,
-      "reddit_comments": 1959,
-      "mentions": 2034,
+      "reddit_comments": 1960,
+      "mentions": 2035,
       "sentiment_pct": 65,
       "scores": {
         "1d": 865,
@@ -781,17 +753,17 @@
         "30d": 865
       },
       "score": 865,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0063,
         "youtube_engagement": 0.0268,
-        "reddit_volume": 0.3733,
+        "reddit_volume": 0.3728,
         "google_trends": 0.53,
         "news_impact": 0.0,
-        "raw_amsi": 0.1866
+        "raw_amsi": 0.1865
       },
       "cast_full": [
         {
@@ -974,17 +946,17 @@
         "30d": 859
       },
       "score": 859,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1909,
         "youtube_engagement": 0.0254,
-        "reddit_volume": 0.2414,
+        "reddit_volume": 0.2409,
         "google_trends": 0.31,
         "news_impact": 0.0,
-        "raw_amsi": 0.1714
+        "raw_amsi": 0.1713
       },
       "cast_full": [
         {
@@ -1068,14 +1040,14 @@
         "30d": 859
       },
       "score": 859,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.2844,
         "youtube_engagement": 0.0055,
-        "reddit_volume": 0.0824,
+        "reddit_volume": 0.0823,
         "google_trends": 0.34,
         "news_impact": 0.0,
         "raw_amsi": 0.1706
@@ -1245,10 +1217,10 @@
       "sub_scores": {
         "youtube_views": 0.0138,
         "youtube_engagement": 0.0074,
-        "reddit_volume": 0.038,
+        "reddit_volume": 0.0379,
         "google_trends": 0.67,
         "news_impact": 0.0,
-        "raw_amsi": 0.1469
+        "raw_amsi": 0.1468
       },
       "cast_full": [
         {
@@ -1312,100 +1284,6 @@
     },
     {
       "rank": 13,
-      "tmdb_id": 1630433,
-      "title": "The Red Line",
-      "director": "Sitisiri Mongkolsiri",
-      "cast": "Nittha Jirayungyurn, Esther Supreeleela",
-      "release_date": "2026-03-22",
-      "poster_url": "https://image.tmdb.org/t/p/w185/q3ROA6OqVA9rWSsC2DzdkPQvxWW.jpg",
-      "youtube_views": 244399,
-      "youtube_likes": 2635,
-      "youtube_comments": 254,
-      "youtube_video_id": "XgUHnuNN2lA",
-      "reddit_posts": 1,
-      "reddit_comments": 70,
-      "mentions": 71,
-      "sentiment_pct": 66,
-      "scores": {
-        "1d": 850,
-        "7d": 850,
-        "30d": 850
-      },
-      "score": 850,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0029,
-        "youtube_engagement": 0.0579,
-        "reddit_volume": 0.013,
-        "google_trends": 0.66,
-        "news_impact": 0.0,
-        "raw_amsi": 0.1442
-      },
-      "cast_full": [
-        {
-          "id": 1259381,
-          "name": "Nittha Jirayungyurn",
-          "character": "Orn",
-          "profile_path": "/g6XQNY9f0xzWDGrXE4ynJ48edHE.jpg"
-        },
-        {
-          "id": 1259493,
-          "name": "Esther Supreeleela",
-          "character": "Fai",
-          "profile_path": "/qL1NLM4tPynGmvH1ARa3kKB4sQS.jpg"
-        },
-        {
-          "id": 3872689,
-          "name": "Chutima Maholakul",
-          "character": "Wawwow",
-          "profile_path": "/f2iLsf2PF0s2DdPrII68grJtaga.jpg"
-        },
-        {
-          "id": 3921277,
-          "name": "Todsapol Maisuk",
-          "character": "Aood",
-          "profile_path": "/pDJYWb8463cUNZ5AHtQRLmdheX3.jpg"
-        },
-        {
-          "id": 1664670,
-          "name": "Tonhon Tantivejakul",
-          "character": "OJ",
-          "profile_path": "/173qZXWXtS2vYcfz2VwUGuTIPbr.jpg"
-        },
-        {
-          "id": 565828,
-          "name": "Paowalee Pornpimol",
-          "character": "Yui",
-          "profile_path": "/4bdSY8QBb1gkX4tApW2vwdSai94.jpg"
-        },
-        {
-          "id": 3406040,
-          "name": "Akarat Nimitchai",
-          "character": "Mark",
-          "profile_path": "/jVAgnLdf4HHMbMEVmjUl7cYNoFT.jpg"
-        },
-        {
-          "id": 4845561,
-          "name": "Nuttanan Kunpat",
-          "character": "Amy",
-          "profile_path": "/xxb6fp3n5pWOmqhTIn0M8Vx8J55.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 2262811,
-          "name": "Sitisiri Mongkolsiri",
-          "profile_path": "/pgNcaA05UaXXOmDwUeB3n7XCqNy.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 66
-    },
-    {
-      "rank": 14,
       "tmdb_id": 1381027,
       "title": "Good Boy",
       "director": "Jan Komasa",
@@ -1426,7 +1304,7 @@
         "30d": 850
       },
       "score": 850,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1499,6 +1377,100 @@
       "trends": 67
     },
     {
+      "rank": 14,
+      "tmdb_id": 1630433,
+      "title": "The Red Line",
+      "director": "Sitisiri Mongkolsiri",
+      "cast": "Nittha Jirayungyurn, Esther Supreeleela",
+      "release_date": "2026-03-22",
+      "poster_url": "https://image.tmdb.org/t/p/w185/q3ROA6OqVA9rWSsC2DzdkPQvxWW.jpg",
+      "youtube_views": 244399,
+      "youtube_likes": 2635,
+      "youtube_comments": 254,
+      "youtube_video_id": "XgUHnuNN2lA",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 66,
+      "scores": {
+        "1d": 849,
+        "7d": 849,
+        "30d": 849
+      },
+      "score": 849,
+      "move": -1,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0029,
+        "youtube_engagement": 0.0579,
+        "reddit_volume": 0.0,
+        "google_trends": 0.66,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1416
+      },
+      "cast_full": [
+        {
+          "id": 1259381,
+          "name": "Nittha Jirayungyurn",
+          "character": "Orn",
+          "profile_path": "/g6XQNY9f0xzWDGrXE4ynJ48edHE.jpg"
+        },
+        {
+          "id": 1259493,
+          "name": "Esther Supreeleela",
+          "character": "Fai",
+          "profile_path": "/qL1NLM4tPynGmvH1ARa3kKB4sQS.jpg"
+        },
+        {
+          "id": 3872689,
+          "name": "Chutima Maholakul",
+          "character": "Wawwow",
+          "profile_path": "/f2iLsf2PF0s2DdPrII68grJtaga.jpg"
+        },
+        {
+          "id": 3921277,
+          "name": "Todsapol Maisuk",
+          "character": "Aood",
+          "profile_path": "/pDJYWb8463cUNZ5AHtQRLmdheX3.jpg"
+        },
+        {
+          "id": 1664670,
+          "name": "Tonhon Tantivejakul",
+          "character": "OJ",
+          "profile_path": "/173qZXWXtS2vYcfz2VwUGuTIPbr.jpg"
+        },
+        {
+          "id": 565828,
+          "name": "Paowalee Pornpimol",
+          "character": "Yui",
+          "profile_path": "/4bdSY8QBb1gkX4tApW2vwdSai94.jpg"
+        },
+        {
+          "id": 3406040,
+          "name": "Akarat Nimitchai",
+          "character": "Mark",
+          "profile_path": "/jVAgnLdf4HHMbMEVmjUl7cYNoFT.jpg"
+        },
+        {
+          "id": 4845561,
+          "name": "Nuttanan Kunpat",
+          "character": "Amy",
+          "profile_path": "/xxb6fp3n5pWOmqhTIn0M8Vx8J55.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 2262811,
+          "name": "Sitisiri Mongkolsiri",
+          "profile_path": "/pgNcaA05UaXXOmDwUeB3n7XCqNy.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 66
+    },
+    {
       "rank": 15,
       "tmdb_id": 1290821,
       "title": "Shelter",
@@ -1527,7 +1499,7 @@
       "sub_scores": {
         "youtube_views": 0.1345,
         "youtube_engagement": 0.0096,
-        "reddit_volume": 0.0195,
+        "reddit_volume": 0.0194,
         "google_trends": 0.47,
         "news_impact": 0.0,
         "raw_amsi": 0.1397
@@ -1621,7 +1593,7 @@
       "sub_scores": {
         "youtube_views": 0.0009,
         "youtube_engagement": 0.0574,
-        "reddit_volume": 0.1252,
+        "reddit_volume": 0.125,
         "google_trends": 0.52,
         "news_impact": 0.0,
         "raw_amsi": 0.1379
@@ -1715,7 +1687,7 @@
       "sub_scores": {
         "youtube_views": 0.1857,
         "youtube_engagement": 0.073,
-        "reddit_volume": 0.0329,
+        "reddit_volume": 0.0328,
         "google_trends": 0.27,
         "news_impact": 0.0,
         "raw_amsi": 0.1272
@@ -1809,7 +1781,7 @@
       "sub_scores": {
         "youtube_views": 0.0047,
         "youtube_engagement": 0.0343,
-        "reddit_volume": 0.0556,
+        "reddit_volume": 0.0555,
         "google_trends": 0.53,
         "news_impact": 0.0,
         "raw_amsi": 0.1237
@@ -1903,7 +1875,7 @@
       "sub_scores": {
         "youtube_views": 0.1755,
         "youtube_engagement": 0.0618,
-        "reddit_volume": 0.138,
+        "reddit_volume": 0.1378,
         "google_trends": 0.14,
         "news_impact": 0.0,
         "raw_amsi": 0.1175
@@ -1997,7 +1969,7 @@
       "sub_scores": {
         "youtube_views": 0.0583,
         "youtube_engagement": 0.0086,
-        "reddit_volume": 0.0371,
+        "reddit_volume": 0.037,
         "google_trends": 0.43,
         "news_impact": 0.0,
         "raw_amsi": 0.1122
@@ -2074,16 +2046,16 @@
       "youtube_likes": 2593,
       "youtube_comments": 162,
       "youtube_video_id": "vh9FR7R9QCo",
-      "reddit_posts": 2,
-      "reddit_comments": 82,
-      "mentions": 84,
-      "sentiment_pct": 52,
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 51,
       "scores": {
-        "1d": 839,
-        "7d": 839,
-        "30d": 839
+        "1d": 838,
+        "7d": 838,
+        "30d": 838
       },
-      "score": 839,
+      "score": 838,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -2091,10 +2063,10 @@
       "sub_scores": {
         "youtube_views": 0.0316,
         "youtube_engagement": 0.005,
-        "reddit_volume": 0.0154,
+        "reddit_volume": 0.0,
         "google_trends": 0.5,
         "news_impact": 0.0,
-        "raw_amsi": 0.1133
+        "raw_amsi": 0.1102
       },
       "cast_full": [
         {
@@ -2263,8 +2235,8 @@
       "youtube_comments": 1752,
       "youtube_video_id": "4g8OciWNJn4",
       "reddit_posts": 13,
-      "reddit_comments": 196,
-      "mentions": 209,
+      "reddit_comments": 197,
+      "mentions": 210,
       "sentiment_pct": 64,
       "scores": {
         "1d": 835,
@@ -2279,7 +2251,7 @@
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.0445,
-        "reddit_volume": 0.0384,
+        "reddit_volume": 0.0385,
         "google_trends": 0.4,
         "news_impact": 0.0,
         "raw_amsi": 0.1014
@@ -3177,7 +3149,7 @@
       "sub_scores": {
         "youtube_views": 0.1206,
         "youtube_engagement": 0.0016,
-        "reddit_volume": 0.0437,
+        "reddit_volume": 0.0436,
         "google_trends": 0.14,
         "news_impact": 0.0,
         "raw_amsi": 0.0732
@@ -3334,7 +3306,7 @@
         "30d": 824
       },
       "score": 824,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3428,7 +3400,7 @@
         "30d": 824
       },
       "score": 824,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3999,10 +3971,10 @@
       "sub_scores": {
         "youtube_views": 0.0683,
         "youtube_engagement": 0.0155,
-        "reddit_volume": 0.1588,
+        "reddit_volume": 0.1585,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "raw_amsi": 0.0566
+        "raw_amsi": 0.0565
       },
       "cast_full": [
         {
@@ -4187,10 +4159,10 @@
       "sub_scores": {
         "youtube_views": 0.0096,
         "youtube_engagement": 0.093,
-        "reddit_volume": 0.0887,
+        "reddit_volume": 0.0885,
         "google_trends": 0.07,
         "news_impact": 0.0,
-        "raw_amsi": 0.0486
+        "raw_amsi": 0.0485
       },
       "cast_full": [
         {
@@ -4552,8 +4524,8 @@
       "youtube_comments": 1686,
       "youtube_video_id": "gMC8kkwbIQQ",
       "reddit_posts": 9,
-      "reddit_comments": 481,
-      "mentions": 490,
+      "reddit_comments": 480,
+      "mentions": 489,
       "sentiment_pct": 51,
       "scores": {
         "1d": 813,
@@ -4568,10 +4540,10 @@
       "sub_scores": {
         "youtube_views": 0.008,
         "youtube_engagement": 0.0123,
-        "reddit_volume": 0.0899,
+        "reddit_volume": 0.0896,
         "google_trends": 0.09,
         "news_impact": 0.0,
-        "raw_amsi": 0.0402
+        "raw_amsi": 0.0401
       },
       "cast_full": [
         {
@@ -4662,7 +4634,7 @@
       "sub_scores": {
         "youtube_views": 0.0399,
         "youtube_engagement": 0.0082,
-        "reddit_volume": 0.1356,
+        "reddit_volume": 0.1354,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.0403
@@ -6723,7 +6695,7 @@
       "sub_scores": {
         "youtube_views": 0.0034,
         "youtube_engagement": 0.0529,
-        "reddit_volume": 0.0028,
+        "reddit_volume": 0.0027,
         "google_trends": 0.03,
         "news_impact": 0.0,
         "raw_amsi": 0.0155
@@ -7328,9 +7300,9 @@
       "youtube_likes": 419,
       "youtube_comments": 30,
       "youtube_video_id": "B7RslMKZ2Yc",
-      "reddit_posts": 0,
+      "reddit_posts": 1,
       "reddit_comments": 0,
-      "mentions": 0,
+      "mentions": 1,
       "sentiment_pct": 56,
       "scores": {
         "1d": 804,
@@ -7345,10 +7317,10 @@
       "sub_scores": {
         "youtube_views": 0.0012,
         "youtube_engagement": 0.0217,
-        "reddit_volume": 0.0,
+        "reddit_volume": 0.0002,
         "google_trends": 0.05,
         "news_impact": 0.0,
-        "raw_amsi": 0.0136
+        "raw_amsi": 0.0137
       },
       "cast_full": [
         {
