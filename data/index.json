@@ -1,1 +1,93 @@
-{"meta":{"product":"Hype Index Mock DB","version":"v13.1","snapshot_utc":"2026-04-09T15:00:00Z","generated_utc":"2026-04-09T15:35:00Z","amsi_scale":{"min":800,"max":999},"nis_scale":{"min":0,"max":100},"record_count":4},"ticker":[{"entity_id":"485c7cce-61a5-4d07-bfd1-8d9f88e4b3a1","entity_name":"Michael (2026)","category":"Movie","rank":1,"move":0,"amsi":999.0,"headline":"Michael (2026) maintains absolute saturation as sequel discussions emerge."},{"entity_id":"92e4b2db-9c4a-4f9b-8d2f-6b4f7d0c2a55","entity_name":"Super Mario Galaxy Movie","category":"Movie","rank":2,"move":0,"amsi":999.0,"headline":"Mario Galaxy global dominance verified; 89% RT audience score fuels retention."},{"entity_id":"738ab25c-61a5-4d07-bfd1-8d9f88e4b3a1","entity_name":"Milly Alcock","category":"Actor","rank":1,"move":0,"amsi":999.0,"headline":"Milly Alcock leads Actor segment as new Supergirl production photos go viral."},{"entity_id":"PHM-ID-Placeholder","entity_name":"Project Hail Mary","category":"Movie","rank":3,"move":0,"amsi":998.5,"headline":"Project Hail Mary resonance accelerates with high persistence in sci-fi circles."}],"tabs":{"Movies":[{"rank":1,"move":0,"entity_name":"Michael (2026)","score":999.0,"sentiment":"Very Positive","mentions":13500},{"rank":2,"move":0,"entity_name":"Super Mario Galaxy Movie","score":999.0,"sentiment":"Very Positive","mentions":12000},{"rank":3,"move":0,"entity_name":"Project Hail Mary","score":998.5,"sentiment":"Very Positive","mentions":9800}],"Actors":[{"rank":1,"move":0,"entity_name":"Milly Alcock","score":999.0,"sentiment":"Very Positive","mentions":9200}]}}
+{
+  "meta": {
+    "product": "Hype Index Mock DB",
+    "version": "v13.4",
+    "snapshot_utc": "2026-04-09T18:00:00Z",
+    "generated_utc": "2026-04-09T18:05:00Z",
+    "amsi_scale": {
+      "min": 800,
+      "max": 999
+    },
+    "nis_scale": {
+      "min": 0,
+      "max": 100
+    },
+    "record_count": 4
+  },
+  "ticker": [
+    {
+      "entity_id": "485c7cce-61a5-4d07-bfd1-8d9f88e4b3a1",
+      "entity_name": "Michael (2026)",
+      "category": "Movie",
+      "rank": 1,
+      "move": 0,
+      "amsi": 999.0,
+      "headline": "Michael (2026) jaafar jackson performance clips drive absolute resonance ahead of release."
+    },
+    {
+      "entity_id": "92e4b2db-9c4a-4f9b-8d2f-6b4f7d0c2a55",
+      "entity_name": "Super Mario Galaxy Movie",
+      "category": "Movie",
+      "rank": 2,
+      "move": 0,
+      "amsi": 999.0,
+      "headline": "Mario Galaxy global blockbuster status verified; global actuals surpass $400M."
+    },
+    {
+      "entity_id": "738ab25c-61a5-4d07-bfd1-8d9f88e4b3a1",
+      "entity_name": "Milly Alcock",
+      "category": "Actor",
+      "rank": 1,
+      "move": 0,
+      "amsi": 999.0,
+      "headline": "Milly Alcock solidifies #1 Actor status as viral Supergirl production reveal holds resonance."
+    },
+    {
+      "entity_id": "PHM-ID-Placeholder",
+      "entity_name": "Project Hail Mary",
+      "category": "Movie",
+      "rank": 3,
+      "move": 0,
+      "amsi": 998.7,
+      "headline": "Project Hail Mary surging on NASA Artemis II resonance and sci-fi persistence."
+    }
+  ],
+  "tabs": {
+    "Movies": [
+      {
+        "rank": 1,
+        "move": 0,
+        "entity_name": "Michael (2026)",
+        "score": 999.0,
+        "sentiment": "Very Positive",
+        "mentions": 14200
+      },
+      {
+        "rank": 2,
+        "move": 0,
+        "entity_name": "Super Mario Galaxy Movie",
+        "score": 999.0,
+        "sentiment": "Very Positive",
+        "mentions": 12500
+      },
+      {
+        "rank": 3,
+        "move": 0,
+        "entity_name": "Project Hail Mary",
+        "score": 998.7,
+        "sentiment": "Very Positive",
+        "mentions": 10200
+      }
+    ],
+    "Actors": [
+      {
+        "rank": 1,
+        "move": 0,
+        "entity_name": "Milly Alcock",
+        "score": 999.0,
+        "sentiment": "Very Positive",
+        "mentions": 10500
+      }
+    ]
+  }
+}
