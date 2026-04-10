@@ -25,6 +25,13 @@ PAT_FILE="$HOME/.config/moviepass-hypeindex/pat"
 LOG="$REPO/data/cache/pulse.log"
 REMOTE_URL_BASE="github.com/Mogul-Hype-Index-source/Hype-index.git"
 
+# ---- load .env so launchd gets the X API credentials ----
+if [[ -f "$REPO/.env" ]]; then
+  set -a
+  source "$REPO/.env"
+  set +a
+fi
+
 mkdir -p "$REPO/data/cache"
 
 # ---- logging helper ----
