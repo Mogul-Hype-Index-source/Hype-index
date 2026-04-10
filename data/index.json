@@ -1,1 +1,89 @@
-{"version":"qv15.4","snapshotUTC":"2026-04-10T14:00:00Z","generatedUTC":"2026-04-10T14:54:03Z","ticker":[{"tab":"Movies","rank":1,"name":"Super Mario Galaxy Movie","headline":"Easter weekend actuals ($372.5M) solidify blockbuster lead."},{"tab":"Movies","rank":2,"name":"Michael (2026)","headline":"Performance hype sustains near ceiling despite narrative drift."},{"tan":"Movies","rank":3,"name":"Project Hail Mary","headline":"Persistence remains elite as domestic opening projections hit $85M."},{"tab":"Actors","rank":1,"name":"Milly Alcock","headline":"Supergirl production reveal sustains peak resonance."}],"tabs":[{"id":"movies","label":"Movies","items":[{"rank":1,"move":1,"name":"Super Mario Galaxy Movie","amsi":999.0,"nis":95.2,"mentions":14500,"sentiment":"Very Positive","headline":"Easter weekend actuals ($372.5M) solidify blockbuster lead."},{"rank":2,"move":-1,"name":"Michael (2026")","amsi":998.5,"nis":92.8,"mentions":12800,"sentiment":"Positive","headline":"Performance hype sustains near ceiling despite narrative drift."},{"rank":3,"move":0,"name":"Project Hail Mary","amsi":995.0,"nis":90.5,"mentions":5200,"sentiment":"Very Positive","headline":"Persistence remains elite as domestic opening projections hit $85M."}]},{"id":"actors","label":"Actors","items":[{"id":"Milly Alcock","rank":1,"move":0,"amsi":998.0,"nis":88.5,"mentions":3800,"sentiment":"Very Positive","headline":"Supergirl production reveal sustains peak resonance."},{"id":"Zendaya","rank":2,"move":0,"amsi":975.0,"nis":84.2,"mentions":2900,"sentiment":"Positive","headline":"Avengers speculation drives sustained interest."}]}]}
+{
+  "version": "qv16.2",
+  "snapshotUTC": "2026-04-10T22:00:00Z",
+  "generatedUTC": "2026-04-10T22:37:27Z",
+  "ticker": [
+    {
+      "tab": "Movies",
+      "rank": 1,
+      "name": "Michael (2026)",
+      "headline": "Saturation ceiling maintained; performance resonance remains peak."
+    },
+    {
+      "tab": "Movies",
+      "rank": 2,
+      "name": "Super Mario Galaxy Movie",
+      "headline": "Global box office dominance continues into weekend."
+    },
+    {
+      "tab": "Actors",
+      "rank": 1,
+      "name": "Milly Alcock",
+      "headline": "Supergirl production buzz reaching new engagement highs."
+    }
+  ],
+  "tabs": [
+    {
+      "id": "movies",
+      "label": "Movies",
+      "items":[
+        {
+          "rank": 1,
+          "move": 0,
+          "name": "Michael (2026)",
+          "amsi": 999.0,
+          "nis": 98.2,
+          "mentions": 131000,
+          "sentiment": "Very Positive",
+          "headline": "Saturation ceiling maintained; performance resonance remains peak."
+        },
+        {
+          "rank": 2,
+          "move": 0,
+          "name": "Super Mario Galaxy Movie",
+          "amsi": 999.0,
+          "nis": 97.8,
+          "mentions": 98000,
+          "sentiment": "Very Positive",
+          "headline": "Global box office dominance continues into weekend."
+        },
+        {
+          "rank": 3,
+          "move": 0,
+          "name": "Project Hail Mary",
+          "amsi": 997.2,
+          "nis": 94.5,
+          "mentions": 41000,
+          "sentiment": "Very Positive",
+          "headline": "Science resonance compounding following NASA engagement."
+        }
+      ]
+    },
+    {
+      "id": "actors",
+      "label": "Actors",
+      "items":[
+        {
+          "id": "Milly Alcock",
+          "rank": 1,
+          "move": 0,
+          "amsi": 999.0,
+          "nis": 92.4,
+          "mentions": 44500,
+          "sentiment": "Very Positive",
+          "headline": "Supergirl production buzz reaching new engagement highs."
+        },
+        {
+          "id": "Zendaya",
+          "rank": 2,
+          "move": 0,
+          "amsi": 978.5,
+          "nis": 86.2,
+          "mentions": 12000,
+          "sentiment": "Positive",
+          "headline": "Sustained speculation regarding Avengers: Doomsday role."
+        }
+      ]
+    }
+  ]
+}
