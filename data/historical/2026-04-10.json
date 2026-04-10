@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-10T01:10:27+00:00",
-  "next_update_at": "2026-04-10T02:10:27+00:00",
+  "generated_at": "2026-04-10T01:50:25+00:00",
+  "next_update_at": "2026-04-10T02:50:25+00:00",
   "snapshot_date": "2026-04-10",
   "summary": {
     "total": 90,
-    "rising": 19,
-    "falling": 22,
-    "flat": 49,
-    "avg_score": 849,
-    "total_mentions_24h": 17959
+    "rising": 13,
+    "falling": 3,
+    "flat": 74,
+    "avg_score": 848,
+    "total_mentions_24h": 17941
   },
   "news": [
     {
@@ -42,6 +42,12 @@
       "category": "production"
     },
     {
+      "headline": "Disney Co. New Chief Communications Officer Paul Roeder Sets Team; April Carretta Upped, Adding Lead Comms Duties For President Dana Walden",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/disney-paul-roeder-april-carretta-communications-dana-walden-1236786241/",
+      "category": "finance"
+    },
+    {
       "headline": "Disney Promotes April Carretta to EVP of Communications, Exec to Lead PR for Dana Walden",
       "source": "Variety",
       "url": "https://variety.com/2026/tv/news/disney-april-carretta-evp-communications-dana-walden-1236712999/",
@@ -63,12 +69,6 @@
       "headline": "Netflix vs. Walt Disney: Consistency vs. Volatility in Revenue",
       "source": "Yahoo Finance · NFLX",
       "url": "https://www.fool.com/coverage/charts/2026/04/09/netflix-vs-walt-disney-consistency-vs-volatility-in-revenue/?.tsrc=rss",
-      "category": "finance"
-    },
-    {
-      "headline": "Stocks to Watch Recap: Disney, Constellation, Micron",
-      "source": "Yahoo Finance · DIS",
-      "url": "https://finance.yahoo.com/m/5a80ec76-2f24-3610-a05b-286ebbddecb7/stocks-to-watch-recap%3A.html?.tsrc=rss",
       "category": "finance"
     },
     {
@@ -144,12 +144,6 @@
       "category": "festivals"
     },
     {
-      "headline": "‘The Devil Wears Prada 2’ Hits Tracking With Runway To $66M U.S. Opening – Box Office Early Look",
-      "source": "Deadline",
-      "url": "https://deadline.com/2026/04/devil-wears-prada-2-box-office-projection-1236786100/",
-      "category": "box-office"
-    },
-    {
       "headline": "AMC Entertainment (AMC) Is Up 30.1% After Record Easter Box Office And New Refinancing Plan – Has The Bull Case Changed?",
       "source": "Yahoo Finance · AMC",
       "url": "https://finance.yahoo.com/markets/stocks/articles/amc-entertainment-amc-30-1-151431317.html?.tsrc=rss",
@@ -158,76 +152,62 @@
   ],
   "movers_up": [
     {
-      "tmdb_id": 1307373,
-      "title": "Wasteman",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lKK9ImwpoTCwDZKgYpjIIJCnlf0.jpg",
-      "move": 3,
-      "score": 847
+      "tmdb_id": 1316092,
+      "title": "\"Wuthering Heights\"",
+      "poster_url": "https://image.tmdb.org/t/p/w185/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
+      "move": 1,
+      "score": 914
     },
     {
-      "tmdb_id": 696393,
-      "title": "Cold Storage",
-      "poster_url": "https://image.tmdb.org/t/p/w185/pfqkETJ2A3zXZJuNcufZbAJNnKA.jpg",
-      "move": 2,
-      "score": 876
+      "tmdb_id": 1242332,
+      "title": "Normal",
+      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
+      "move": 1,
+      "score": 908
     },
     {
-      "tmdb_id": 1242937,
-      "title": "The Dreadful",
-      "poster_url": "https://image.tmdb.org/t/p/w185/nhhJkYau8nQMFgauvOudDjwj9vA.jpg",
-      "move": 2,
-      "score": 834
+      "tmdb_id": 687163,
+      "title": "Project Hail Mary",
+      "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
+      "move": 1,
+      "score": 907
+    },
+    {
+      "tmdb_id": 1339876,
+      "title": "Mardaani 3",
+      "poster_url": "https://image.tmdb.org/t/p/w185/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
+      "move": 1,
+      "score": 904
+    },
+    {
+      "tmdb_id": 1381027,
+      "title": "Good Boy",
+      "poster_url": "https://image.tmdb.org/t/p/w185/x0wD4Qxe0wulV0bxarsQ05PqDNF.jpg",
+      "move": 1,
+      "score": 902
+    }
+  ],
+  "movers_down": [
+    {
+      "tmdb_id": 1314481,
+      "title": "The Devil Wears Prada 2",
+      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+      "move": -10,
+      "score": 886
     },
     {
       "tmdb_id": 1236153,
       "title": "Mercy",
       "poster_url": "https://image.tmdb.org/t/p/w185/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
-      "move": 2,
-      "score": 829
+      "move": -2,
+      "score": 828
     },
     {
-      "tmdb_id": 1450527,
-      "title": "Forbidden Fruits",
-      "poster_url": "https://image.tmdb.org/t/p/w185/t3hvrrrqvRoURz4y1A1aCys6WD9.jpg",
-      "move": 2,
-      "score": 817
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1653994,
-      "title": "Shrounding the Heavens Movie：Fighting Against Wang Teng with Copper Coffin",
-      "poster_url": "https://image.tmdb.org/t/p/w185/298clyKoBbZPp4zgUiDSxhCO0wk.jpg",
-      "move": -2,
-      "score": 845
-    },
-    {
-      "tmdb_id": 1450257,
-      "title": "Clika",
-      "poster_url": "https://image.tmdb.org/t/p/w185/82Vh8PSzWtBi0CLWrnJdRhGYxEr.jpg",
-      "move": -2,
-      "score": 817
-    },
-    {
-      "tmdb_id": 1272837,
-      "title": "28 Years Later: The Bone Temple",
-      "poster_url": "https://image.tmdb.org/t/p/w185/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg",
-      "move": -2,
-      "score": 816
-    },
-    {
-      "tmdb_id": 680493,
-      "title": "Return to Silent Hill",
-      "poster_url": "https://image.tmdb.org/t/p/w185/fqAGFN2K2kDL0EHxvJaXzaMUkkt.jpg",
-      "move": -2,
-      "score": 806
-    },
-    {
-      "tmdb_id": 1572073,
-      "title": "The Deadly Little Mermaid",
-      "poster_url": "https://image.tmdb.org/t/p/w185/uye25uG7k8r3NNPLyPiKOiRnFRF.jpg",
-      "move": -2,
-      "score": 804
+      "tmdb_id": 1389881,
+      "title": "The Cure",
+      "poster_url": "https://image.tmdb.org/t/p/w185/enxF32km4P9gXYhAUXWgoVfQqg5.jpg",
+      "move": -1,
+      "score": 812
     }
   ],
   "movies": [
@@ -253,7 +233,7 @@
         "30d": 999
       },
       "score": 999,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": true,
@@ -338,8 +318,8 @@
       "youtube_comments": 13971,
       "youtube_video_id": "mbtgEE6rkxw",
       "reddit_posts": 56,
-      "reddit_comments": 3034,
-      "mentions": 3090,
+      "reddit_comments": 3041,
+      "mentions": 3097,
       "sentiment_pct": 72,
       "scores": {
         "1d": 996,
@@ -347,14 +327,14 @@
         "30d": 996
       },
       "score": 996,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.228,
         "youtube_engagement": 0.3233,
-        "reddit_volume": 0.6315,
+        "reddit_volume": 0.6317,
         "google_trends": 0.62,
         "news_impact": 0.0,
         "raw_amsi": 0.3672
@@ -432,8 +412,8 @@
       "youtube_comments": 9,
       "youtube_video_id": "0ZDzsH3XGFA",
       "reddit_posts": 46,
-      "reddit_comments": 4847,
-      "mentions": 4893,
+      "reddit_comments": 4857,
+      "mentions": 4903,
       "sentiment_pct": 62,
       "scores": {
         "1d": 974,
@@ -515,105 +495,6 @@
     },
     {
       "rank": 4,
-      "tmdb_id": 1314481,
-      "title": "The Devil Wears Prada 2",
-      "director": "David Frankel",
-      "cast": "Meryl Streep, Anne Hathaway",
-      "release_date": "2026-04-29",
-      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-      "youtube_views": 14887059,
-      "youtube_likes": 180458,
-      "youtube_comments": 7151,
-      "youtube_video_id": "e9HXmMnUEdE",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 1,
-      "sentiment_pct": 69,
-      "scores": {
-        "1d": 967,
-        "7d": 967,
-        "30d": 967
-      },
-      "score": 967,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.1755,
-        "youtube_engagement": 0.3515,
-        "reddit_volume": 0.0,
-        "google_trends": 0.29,
-        "news_impact": 1.0,
-        "raw_amsi": 0.3134
-      },
-      "cast_full": [
-        {
-          "id": 5064,
-          "name": "Meryl Streep",
-          "character": "Miranda Priestly",
-          "profile_path": "/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg"
-        },
-        {
-          "id": 1813,
-          "name": "Anne Hathaway",
-          "character": "Andy Sachs",
-          "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
-        },
-        {
-          "id": 5081,
-          "name": "Emily Blunt",
-          "character": "Emily Charlton",
-          "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
-        },
-        {
-          "id": 2283,
-          "name": "Stanley Tucci",
-          "character": "Nigel Kipling",
-          "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
-        },
-        {
-          "id": 11181,
-          "name": "Kenneth Branagh",
-          "character": "Stuart",
-          "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
-        },
-        {
-          "id": 2223752,
-          "name": "Simone Ashley",
-          "character": "Amari",
-          "profile_path": "/NoWUSMGBrQrX23XK7eVjHlfaqY.jpg"
-        },
-        {
-          "id": 10580,
-          "name": "Tracie Thoms",
-          "character": "Lily",
-          "profile_path": "/9PKUJJtqFRbZDhme6uDzIu0mRIE.jpg"
-        },
-        {
-          "id": 1192389,
-          "name": "Tibor Feldman",
-          "character": "Irv Ravitz",
-          "profile_path": "/b6tVKhCkNWltObwyHpGfBLuaPt6.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 5065,
-          "name": "David Frankel",
-          "profile_path": "/ouq2ODK5MbbnCC72B8x29tJpKC7.jpg"
-        }
-      ],
-      "news_mentions": [
-        {
-          "source": "Deadline",
-          "headline": "‘The Devil Wears Prada 2’ Hits Tracking With Runway To $66M U.S. Opening – Box Office Early Look"
-        }
-      ],
-      "trends": 29
-    },
-    {
-      "rank": 5,
       "tmdb_id": 1316092,
       "title": "\"Wuthering Heights\"",
       "director": "Emerald Fennell",
@@ -634,7 +515,7 @@
         "30d": 914
       },
       "score": 914,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -707,7 +588,7 @@
       "trends": 50
     },
     {
-      "rank": 6,
+      "rank": 5,
       "tmdb_id": 1242332,
       "title": "Normal",
       "director": "Ben Wheatley",
@@ -719,8 +600,8 @@
       "youtube_comments": 1032,
       "youtube_video_id": "5OndK0w1lYY",
       "reddit_posts": 17,
-      "reddit_comments": 549,
-      "mentions": 566,
+      "reddit_comments": 551,
+      "mentions": 568,
       "sentiment_pct": 56,
       "scores": {
         "1d": 908,
@@ -728,14 +609,14 @@
         "30d": 908
       },
       "score": 908,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0633,
         "youtube_engagement": 0.0911,
-        "reddit_volume": 0.1157,
+        "reddit_volume": 0.1158,
         "google_trends": 0.74,
         "news_impact": 0.0,
         "raw_amsi": 0.2038
@@ -801,7 +682,7 @@
       "trends": 74
     },
     {
-      "rank": 7,
+      "rank": 6,
       "tmdb_id": 687163,
       "title": "Project Hail Mary",
       "director": "Phil Lord, Christopher Miller",
@@ -813,8 +694,8 @@
       "youtube_comments": 223,
       "youtube_video_id": "NKYea63tQmI",
       "reddit_posts": 70,
-      "reddit_comments": 1863,
-      "mentions": 1933,
+      "reddit_comments": 1866,
+      "mentions": 1936,
       "sentiment_pct": 65,
       "scores": {
         "1d": 907,
@@ -822,14 +703,14 @@
         "30d": 907
       },
       "score": 907,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0064,
         "youtube_engagement": 0.1528,
-        "reddit_volume": 0.3951,
+        "reddit_volume": 0.3949,
         "google_trends": 0.49,
         "news_impact": 0.0,
         "raw_amsi": 0.2018
@@ -900,7 +781,7 @@
       "trends": 49
     },
     {
-      "rank": 8,
+      "rank": 7,
       "tmdb_id": 1339876,
       "title": "Mardaani 3",
       "director": "Abhiraj Minawala",
@@ -921,7 +802,7 @@
         "30d": 904
       },
       "score": 904,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -994,7 +875,7 @@
       "trends": 7
     },
     {
-      "rank": 9,
+      "rank": 8,
       "tmdb_id": 1381027,
       "title": "Good Boy",
       "director": "Jan Komasa",
@@ -1015,7 +896,7 @@
         "30d": 902
       },
       "score": 902,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1088,7 +969,7 @@
       "trends": 67
     },
     {
-      "rank": 10,
+      "rank": 9,
       "tmdb_id": 1327819,
       "title": "Hoppers",
       "director": "Daniel Chong",
@@ -1109,17 +990,17 @@
         "30d": 897
       },
       "score": 897,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1913,
         "youtube_engagement": 0.1444,
-        "reddit_volume": 0.2197,
+        "reddit_volume": 0.2193,
         "google_trends": 0.3,
         "news_impact": 0.0,
-        "raw_amsi": 0.183
+        "raw_amsi": 0.1829
       },
       "cast_full": [
         {
@@ -1182,7 +1063,7 @@
       "trends": 30
     },
     {
-      "rank": 11,
+      "rank": 10,
       "tmdb_id": 1265609,
       "title": "War Machine",
       "director": "Patrick Hughes",
@@ -1194,8 +1075,8 @@
       "youtube_comments": 18068,
       "youtube_video_id": "AFuE1LRxm80",
       "reddit_posts": 8,
-      "reddit_comments": 239,
-      "mentions": 247,
+      "reddit_comments": 244,
+      "mentions": 252,
       "sentiment_pct": 71,
       "scores": {
         "1d": 894,
@@ -1203,17 +1084,17 @@
         "30d": 894
       },
       "score": 894,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1855,
         "youtube_engagement": 0.4155,
-        "reddit_volume": 0.0505,
+        "reddit_volume": 0.0514,
         "google_trends": 0.25,
         "news_impact": 0.0,
-        "raw_amsi": 0.1781
+        "raw_amsi": 0.1783
       },
       "cast_full": [
         {
@@ -1276,7 +1157,7 @@
       "trends": 25
     },
     {
-      "rank": 12,
+      "rank": 11,
       "tmdb_id": 1159831,
       "title": "The Bride!",
       "director": "Maggie Gyllenhaal",
@@ -1297,17 +1178,17 @@
         "30d": 894
       },
       "score": 894,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": true,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
         "youtube_engagement": 0.3105,
-        "reddit_volume": 0.1416,
+        "reddit_volume": 0.1413,
         "google_trends": 0.51,
         "news_impact": 0.0,
-        "raw_amsi": 0.1772
+        "raw_amsi": 0.1771
       },
       "cast_full": [
         {
@@ -1370,7 +1251,7 @@
       "trends": 51
     },
     {
-      "rank": 13,
+      "rank": 12,
       "tmdb_id": 1171145,
       "title": "Crime 101",
       "director": "Bart Layton",
@@ -1391,14 +1272,14 @@
         "30d": 889
       },
       "score": 889,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.284,
         "youtube_engagement": 0.0311,
-        "reddit_volume": 0.0848,
+        "reddit_volume": 0.0846,
         "google_trends": 0.31,
         "news_impact": 0.0,
         "raw_amsi": 0.1688
@@ -1464,7 +1345,7 @@
       "trends": 31
     },
     {
-      "rank": 14,
+      "rank": 13,
       "tmdb_id": 1462146,
       "title": "S4: The Bob Lazar Story",
       "director": "Luigi Vendittelli",
@@ -1485,7 +1366,7 @@
         "30d": 886
       },
       "score": 886,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1528,6 +1409,100 @@
       "trends": 5
     },
     {
+      "rank": 14,
+      "tmdb_id": 1314481,
+      "title": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "cast": "Meryl Streep, Anne Hathaway",
+      "release_date": "2026-04-29",
+      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+      "youtube_views": 14887059,
+      "youtube_likes": 180458,
+      "youtube_comments": 7151,
+      "youtube_video_id": "e9HXmMnUEdE",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 68,
+      "scores": {
+        "1d": 886,
+        "7d": 886,
+        "30d": 886
+      },
+      "score": 886,
+      "move": -10,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.1755,
+        "youtube_engagement": 0.3515,
+        "reddit_volume": 0.0,
+        "google_trends": 0.29,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1634
+      },
+      "cast_full": [
+        {
+          "id": 5064,
+          "name": "Meryl Streep",
+          "character": "Miranda Priestly",
+          "profile_path": "/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg"
+        },
+        {
+          "id": 1813,
+          "name": "Anne Hathaway",
+          "character": "Andy Sachs",
+          "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+        },
+        {
+          "id": 5081,
+          "name": "Emily Blunt",
+          "character": "Emily Charlton",
+          "profile_path": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+        },
+        {
+          "id": 2283,
+          "name": "Stanley Tucci",
+          "character": "Nigel Kipling",
+          "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
+        },
+        {
+          "id": 11181,
+          "name": "Kenneth Branagh",
+          "character": "Stuart",
+          "profile_path": "/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg"
+        },
+        {
+          "id": 2223752,
+          "name": "Simone Ashley",
+          "character": "Amari",
+          "profile_path": "/NoWUSMGBrQrX23XK7eVjHlfaqY.jpg"
+        },
+        {
+          "id": 10580,
+          "name": "Tracie Thoms",
+          "character": "Lily",
+          "profile_path": "/9PKUJJtqFRbZDhme6uDzIu0mRIE.jpg"
+        },
+        {
+          "id": 1192389,
+          "name": "Tibor Feldman",
+          "character": "Irv Ravitz",
+          "profile_path": "/b6tVKhCkNWltObwyHpGfBLuaPt6.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 5065,
+          "name": "David Frankel",
+          "profile_path": "/ouq2ODK5MbbnCC72B8x29tJpKC7.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 29
+    },
+    {
       "rank": 15,
       "tmdb_id": 931285,
       "title": "Mortal Kombat II",
@@ -1540,8 +1515,8 @@
       "youtube_comments": 11944,
       "youtube_video_id": "b24oG7qCwp4",
       "reddit_posts": 11,
-      "reddit_comments": 439,
-      "mentions": 450,
+      "reddit_comments": 458,
+      "mentions": 469,
       "sentiment_pct": 64,
       "scores": {
         "1d": 883,
@@ -1556,10 +1531,10 @@
       "sub_scores": {
         "youtube_views": 0.2932,
         "youtube_engagement": 0.2577,
-        "reddit_volume": 0.092,
+        "reddit_volume": 0.0957,
         "google_trends": 0.06,
         "news_impact": 0.0,
-        "raw_amsi": 0.157
+        "raw_amsi": 0.1577
       },
       "cast_full": [
         {
@@ -1634,8 +1609,8 @@
       "youtube_comments": 0,
       "youtube_video_id": "En5QZmL5R1s",
       "reddit_posts": 39,
-      "reddit_comments": 2002,
-      "mentions": 2041,
+      "reddit_comments": 2008,
+      "mentions": 2047,
       "sentiment_pct": 59,
       "scores": {
         "1d": 880,
@@ -1643,14 +1618,14 @@
         "30d": 880
       },
       "score": 880,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0998,
         "youtube_engagement": 0.0925,
-        "reddit_volume": 0.4171,
+        "reddit_volume": 0.4175,
         "google_trends": 0.12,
         "news_impact": 0.0,
         "raw_amsi": 0.1513
@@ -1742,7 +1717,7 @@
         "30d": 880
       },
       "score": 880,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1930,7 +1905,7 @@
         "30d": 876
       },
       "score": 876,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2024,7 +1999,7 @@
         "30d": 875
       },
       "score": 875,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2118,7 +2093,7 @@
         "30d": 875
       },
       "score": 875,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2212,14 +2187,14 @@
         "30d": 874
       },
       "score": 874,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0035,
         "youtube_engagement": 0.3416,
-        "reddit_volume": 0.0262,
+        "reddit_volume": 0.0261,
         "google_trends": 0.41,
         "news_impact": 0.0,
         "raw_amsi": 0.1395
@@ -2306,7 +2281,7 @@
         "30d": 874
       },
       "score": 874,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -2689,7 +2664,7 @@
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.2533,
-        "reddit_volume": 0.0446,
+        "reddit_volume": 0.0445,
         "google_trends": 0.36,
         "news_impact": 0.0,
         "raw_amsi": 0.1259
@@ -2865,7 +2840,7 @@
       "sub_scores": {
         "youtube_views": 0.0583,
         "youtube_engagement": 0.0493,
-        "reddit_volume": 0.0407,
+        "reddit_volume": 0.0406,
         "google_trends": 0.41,
         "news_impact": 0.0,
         "raw_amsi": 0.115
@@ -2959,7 +2934,7 @@
       "sub_scores": {
         "youtube_views": 0.0098,
         "youtube_engagement": 0.5235,
-        "reddit_volume": 0.0973,
+        "reddit_volume": 0.0971,
         "google_trends": 0.07,
         "news_impact": 0.0,
         "raw_amsi": 0.1149
@@ -3246,7 +3221,7 @@
       "sub_scores": {
         "youtube_views": 0.1205,
         "youtube_engagement": 0.0092,
-        "reddit_volume": 0.0466,
+        "reddit_volume": 0.0465,
         "google_trends": 0.3,
         "news_impact": 0.0,
         "raw_amsi": 0.1068
@@ -3609,7 +3584,7 @@
         "30d": 847
       },
       "score": 847,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3797,7 +3772,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -3855,7 +3830,7 @@
         "30d": 845
       },
       "score": 845,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4518,7 +4493,7 @@
         "30d": 834
       },
       "score": 834,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4612,7 +4587,7 @@
         "30d": 833
       },
       "score": 833,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4706,7 +4681,7 @@
         "30d": 833
       },
       "score": 833,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4800,7 +4775,7 @@
         "30d": 833
       },
       "score": 833,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -4894,7 +4869,7 @@
         "30d": 832
       },
       "score": 832,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5132,100 +5107,6 @@
     },
     {
       "rank": 54,
-      "tmdb_id": 1236153,
-      "title": "Mercy",
-      "director": "Timur Bekmambetov",
-      "cast": "Chris Pratt, Rebecca Ferguson",
-      "release_date": "2026-01-20",
-      "poster_url": "https://image.tmdb.org/t/p/w185/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
-      "youtube_views": 2651112,
-      "youtube_likes": 311,
-      "youtube_comments": 34,
-      "youtube_video_id": "JUADqWkJiiE",
-      "reddit_posts": 1,
-      "reddit_comments": 36,
-      "mentions": 37,
-      "sentiment_pct": 50,
-      "scores": {
-        "1d": 829,
-        "7d": 829,
-        "30d": 829
-      },
-      "score": 829,
-      "move": 2,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0313,
-        "youtube_engagement": 0.0036,
-        "reddit_volume": 0.0076,
-        "google_trends": 0.23,
-        "news_impact": 0.0,
-        "raw_amsi": 0.0574
-      },
-      "cast_full": [
-        {
-          "id": 73457,
-          "name": "Chris Pratt",
-          "character": "Chris Raven",
-          "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
-        },
-        {
-          "id": 933238,
-          "name": "Rebecca Ferguson",
-          "character": "Judge Maddox",
-          "profile_path": "/lJloTOheuQSirSLXNA3JHsrMNfH.jpg"
-        },
-        {
-          "id": 3119545,
-          "name": "Kali Reis",
-          "character": "Jacqueline 'Jaq' Diallo",
-          "profile_path": "/qJcXQKgaq11aNNPPok0m4yfP2Og.jpg"
-        },
-        {
-          "id": 1164259,
-          "name": "Kylie Rogers",
-          "character": "Britt Raven",
-          "profile_path": "/9c9CPWTT8a2GXMab8vuSxCJ0CcW.jpg"
-        },
-        {
-          "id": 1293892,
-          "name": "Chris Sullivan",
-          "character": "Rob Nelson",
-          "profile_path": "/gKZ9xSFrDzUPv27iAkMpH6Qf0Sk.jpg"
-        },
-        {
-          "id": 1583044,
-          "name": "Jeff Pierre",
-          "character": "Patrick Burke",
-          "profile_path": "/mKaKc7dviX6q0d7EJpzyHgtdBC7.jpg"
-        },
-        {
-          "id": 82809,
-          "name": "Annabelle Wallis",
-          "character": "Nicole Raven",
-          "profile_path": "/b6PltW1e18BdmRz3nKZ7ID9uZ24.jpg"
-        },
-        {
-          "id": 21660,
-          "name": "Rafi Gavron",
-          "character": "Holt Charles",
-          "profile_path": "/avCWoO9fLwEhbT6cvu0TJcSj49g.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 23430,
-          "name": "Timur Bekmambetov",
-          "profile_path": "/w4C8qeeWRvD7rbIj3elTvhdxjT.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 23
-    },
-    {
-      "rank": 55,
       "tmdb_id": 1620551,
       "title": "Feel My Voice",
       "director": "Luca Ribuoli",
@@ -5246,7 +5127,7 @@
         "30d": 829
       },
       "score": 829,
-      "move": -1,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5319,7 +5200,7 @@
       "trends": 6
     },
     {
-      "rank": 56,
+      "rank": 55,
       "tmdb_id": 1641319,
       "title": "Sniper: No Nation",
       "director": "Trevor Calverley",
@@ -5340,7 +5221,7 @@
         "30d": 828
       },
       "score": 828,
-      "move": -1,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5413,6 +5294,100 @@
       "trends": 1
     },
     {
+      "rank": 56,
+      "tmdb_id": 1236153,
+      "title": "Mercy",
+      "director": "Timur Bekmambetov",
+      "cast": "Chris Pratt, Rebecca Ferguson",
+      "release_date": "2026-01-20",
+      "poster_url": "https://image.tmdb.org/t/p/w185/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
+      "youtube_views": 2651112,
+      "youtube_likes": 311,
+      "youtube_comments": 34,
+      "youtube_video_id": "JUADqWkJiiE",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 50,
+      "scores": {
+        "1d": 828,
+        "7d": 828,
+        "30d": 828
+      },
+      "score": 828,
+      "move": -2,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0313,
+        "youtube_engagement": 0.0036,
+        "reddit_volume": 0.0,
+        "google_trends": 0.23,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0559
+      },
+      "cast_full": [
+        {
+          "id": 73457,
+          "name": "Chris Pratt",
+          "character": "Chris Raven",
+          "profile_path": "/cRH6HPAQ98PlOwwEvhYO4CM9lwu.jpg"
+        },
+        {
+          "id": 933238,
+          "name": "Rebecca Ferguson",
+          "character": "Judge Maddox",
+          "profile_path": "/lJloTOheuQSirSLXNA3JHsrMNfH.jpg"
+        },
+        {
+          "id": 3119545,
+          "name": "Kali Reis",
+          "character": "Jacqueline 'Jaq' Diallo",
+          "profile_path": "/qJcXQKgaq11aNNPPok0m4yfP2Og.jpg"
+        },
+        {
+          "id": 1164259,
+          "name": "Kylie Rogers",
+          "character": "Britt Raven",
+          "profile_path": "/9c9CPWTT8a2GXMab8vuSxCJ0CcW.jpg"
+        },
+        {
+          "id": 1293892,
+          "name": "Chris Sullivan",
+          "character": "Rob Nelson",
+          "profile_path": "/gKZ9xSFrDzUPv27iAkMpH6Qf0Sk.jpg"
+        },
+        {
+          "id": 1583044,
+          "name": "Jeff Pierre",
+          "character": "Patrick Burke",
+          "profile_path": "/mKaKc7dviX6q0d7EJpzyHgtdBC7.jpg"
+        },
+        {
+          "id": 82809,
+          "name": "Annabelle Wallis",
+          "character": "Nicole Raven",
+          "profile_path": "/b6PltW1e18BdmRz3nKZ7ID9uZ24.jpg"
+        },
+        {
+          "id": 21660,
+          "name": "Rafi Gavron",
+          "character": "Holt Charles",
+          "profile_path": "/avCWoO9fLwEhbT6cvu0TJcSj49g.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 23430,
+          "name": "Timur Bekmambetov",
+          "profile_path": "/w4C8qeeWRvD7rbIj3elTvhdxjT.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 23
+    },
+    {
       "rank": 57,
       "tmdb_id": 1010755,
       "title": "The Strangers: Chapter 3",
@@ -5434,7 +5409,7 @@
         "30d": 827
       },
       "score": 827,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5528,7 +5503,7 @@
         "30d": 826
       },
       "score": 826,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5716,7 +5691,7 @@
         "30d": 824
       },
       "score": 824,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5810,7 +5785,7 @@
         "30d": 823
       },
       "score": 823,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5911,10 +5886,10 @@
       "sub_scores": {
         "youtube_views": 0.0065,
         "youtube_engagement": 0.1609,
-        "reddit_volume": 0.0634,
+        "reddit_volume": 0.0632,
         "google_trends": 0.03,
         "news_impact": 0.0,
-        "raw_amsi": 0.0448
+        "raw_amsi": 0.0447
       },
       "cast_full": [
         {
@@ -6186,7 +6161,7 @@
         "30d": 819
       },
       "score": 819,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6280,7 +6255,7 @@
         "30d": 819
       },
       "score": 819,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6468,7 +6443,7 @@
         "30d": 818
       },
       "score": 818,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6562,7 +6537,7 @@
         "30d": 817
       },
       "score": 817,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6656,7 +6631,7 @@
         "30d": 817
       },
       "score": 817,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6750,7 +6725,7 @@
         "30d": 817
       },
       "score": 817,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6844,7 +6819,7 @@
         "30d": 816
       },
       "score": 816,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -6945,7 +6920,7 @@
       "sub_scores": {
         "youtube_views": 0.0316,
         "youtube_engagement": 0.0289,
-        "reddit_volume": 0.0174,
+        "reddit_volume": 0.0173,
         "google_trends": 0.05,
         "news_impact": 0.0,
         "raw_amsi": 0.0273
@@ -7012,100 +6987,6 @@
     },
     {
       "rank": 74,
-      "tmdb_id": 1389881,
-      "title": "The Cure",
-      "director": "Nancy Leopardi",
-      "cast": "David Dastmalchian, Ashley Greene",
-      "release_date": "2026-03-20",
-      "poster_url": "https://image.tmdb.org/t/p/w185/enxF32km4P9gXYhAUXWgoVfQqg5.jpg",
-      "youtube_views": 58638,
-      "youtube_likes": 74,
-      "youtube_comments": 11,
-      "youtube_video_id": "icNFGk0enVU",
-      "reddit_posts": 1,
-      "reddit_comments": 31,
-      "mentions": 32,
-      "sentiment_pct": 52,
-      "scores": {
-        "1d": 813,
-        "7d": 813,
-        "30d": 813
-      },
-      "score": 813,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0007,
-        "youtube_engagement": 0.0404,
-        "reddit_volume": 0.0065,
-        "google_trends": 0.1,
-        "news_impact": 0.0,
-        "raw_amsi": 0.0276
-      },
-      "cast_full": [
-        {
-          "id": 83854,
-          "name": "David Dastmalchian",
-          "character": "Jeff Braun",
-          "profile_path": "/nER1Vzhk51pGHb60KBF1Ja5tEXA.jpg"
-        },
-        {
-          "id": 45827,
-          "name": "Ashley Greene",
-          "character": "Georgia Braun",
-          "profile_path": "/7crsfr0klw5iaYvZ3n9ps6RCIhp.jpg"
-        },
-        {
-          "id": 5067483,
-          "name": "Samantha Cochran",
-          "character": "Ally Braun",
-          "profile_path": "/xrdmIo9818mmYBwJds4Sq3L4fCM.jpg"
-        },
-        {
-          "id": 1955219,
-          "name": "Sydney Taylor",
-          "character": "Brooke Amandine",
-          "profile_path": "/eunr5RHWxBhOwp582NSOPnQwies.jpg"
-        },
-        {
-          "id": 3596074,
-          "name": "Tyler Lawrence Gray",
-          "character": "Robbie Amandine",
-          "profile_path": "/dAaVEe1WcBrxrIBQ8d9L5KsqZ3f.jpg"
-        },
-        {
-          "id": 20563,
-          "name": "Alex Veadov",
-          "character": "Dr. Volker",
-          "profile_path": "/bpJKpwpYSgnSkjAA5SX50Wwr0Qa.jpg"
-        },
-        {
-          "id": 1552359,
-          "name": "Marisa Echeverria",
-          "character": "Margita",
-          "profile_path": "/uAOF32dqPO9D07YYOKbJS4d9dzK.jpg"
-        },
-        {
-          "id": 98186,
-          "name": "Bunny Levine",
-          "character": "Mrs. Polanski",
-          "profile_path": "/biefLM3edLXSYssImB6BfZEmZF9.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1389040,
-          "name": "Nancy Leopardi",
-          "profile_path": "/sFFa44fS7gMzQFHtF6lpvb3ZPwU.jpg"
-        }
-      ],
-      "news_mentions": [],
-      "trends": 10
-    },
-    {
-      "rank": 75,
       "tmdb_id": 1443374,
       "title": "森中有林",
       "director": "Zhi Zheng",
@@ -7126,7 +7007,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 2,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7199,6 +7080,100 @@
       "trends": 0
     },
     {
+      "rank": 75,
+      "tmdb_id": 1389881,
+      "title": "The Cure",
+      "director": "Nancy Leopardi",
+      "cast": "David Dastmalchian, Ashley Greene",
+      "release_date": "2026-03-20",
+      "poster_url": "https://image.tmdb.org/t/p/w185/enxF32km4P9gXYhAUXWgoVfQqg5.jpg",
+      "youtube_views": 58638,
+      "youtube_likes": 74,
+      "youtube_comments": 11,
+      "youtube_video_id": "icNFGk0enVU",
+      "reddit_posts": 0,
+      "reddit_comments": 0,
+      "mentions": 0,
+      "sentiment_pct": 52,
+      "scores": {
+        "1d": 812,
+        "7d": 812,
+        "30d": 812
+      },
+      "score": 812,
+      "move": -1,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0007,
+        "youtube_engagement": 0.0404,
+        "reddit_volume": 0.0,
+        "google_trends": 0.1,
+        "news_impact": 0.0,
+        "raw_amsi": 0.0263
+      },
+      "cast_full": [
+        {
+          "id": 83854,
+          "name": "David Dastmalchian",
+          "character": "Jeff Braun",
+          "profile_path": "/nER1Vzhk51pGHb60KBF1Ja5tEXA.jpg"
+        },
+        {
+          "id": 45827,
+          "name": "Ashley Greene",
+          "character": "Georgia Braun",
+          "profile_path": "/7crsfr0klw5iaYvZ3n9ps6RCIhp.jpg"
+        },
+        {
+          "id": 5067483,
+          "name": "Samantha Cochran",
+          "character": "Ally Braun",
+          "profile_path": "/xrdmIo9818mmYBwJds4Sq3L4fCM.jpg"
+        },
+        {
+          "id": 1955219,
+          "name": "Sydney Taylor",
+          "character": "Brooke Amandine",
+          "profile_path": "/eunr5RHWxBhOwp582NSOPnQwies.jpg"
+        },
+        {
+          "id": 3596074,
+          "name": "Tyler Lawrence Gray",
+          "character": "Robbie Amandine",
+          "profile_path": "/dAaVEe1WcBrxrIBQ8d9L5KsqZ3f.jpg"
+        },
+        {
+          "id": 20563,
+          "name": "Alex Veadov",
+          "character": "Dr. Volker",
+          "profile_path": "/bpJKpwpYSgnSkjAA5SX50Wwr0Qa.jpg"
+        },
+        {
+          "id": 1552359,
+          "name": "Marisa Echeverria",
+          "character": "Margita",
+          "profile_path": "/uAOF32dqPO9D07YYOKbJS4d9dzK.jpg"
+        },
+        {
+          "id": 98186,
+          "name": "Bunny Levine",
+          "character": "Mrs. Polanski",
+          "profile_path": "/biefLM3edLXSYssImB6BfZEmZF9.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1389040,
+          "name": "Nancy Leopardi",
+          "profile_path": "/sFFa44fS7gMzQFHtF6lpvb3ZPwU.jpg"
+        }
+      ],
+      "news_mentions": [],
+      "trends": 10
+    },
+    {
       "rank": 76,
       "tmdb_id": 999136,
       "title": "Do Not Enter",
@@ -7220,7 +7195,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7314,7 +7289,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7578,7 +7553,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7672,7 +7647,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7682,7 +7657,7 @@
         "reddit_volume": 0.0102,
         "google_trends": 0.03,
         "news_impact": 0.0,
-        "raw_amsi": 0.0157
+        "raw_amsi": 0.0156
       },
       "cast_full": [
         {
@@ -7766,7 +7741,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8106,7 +8081,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8200,7 +8175,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8294,7 +8269,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8388,7 +8363,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8577,13 +8552,13 @@
           "title": "Mercy",
           "release_date": "2026-01-20",
           "poster_url": "https://image.tmdb.org/t/p/w185/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
-          "score": 829,
+          "score": 828,
           "character": "Judge Maddox"
         }
       ],
       "popularity": 88.303,
       "sentiment_pct": 62,
-      "avg_film_score": 858,
+      "avg_film_score": 857,
       "news_mentions": [],
       "mentions": 15,
       "score": 999,
@@ -8833,7 +8808,7 @@
           "title": "Mercy",
           "release_date": "2026-01-20",
           "poster_url": "https://image.tmdb.org/t/p/w185/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
-          "score": 829,
+          "score": 828,
           "character": "Chris Raven"
         }
       ],
@@ -9081,44 +9056,6 @@
       "is_new": false
     },
     {
-      "tmdb_id": 1813,
-      "name": "Anne Hathaway",
-      "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
-      "film_count": 2,
-      "films": [
-        {
-          "tmdb_id": 1314481,
-          "title": "The Devil Wears Prada 2",
-          "release_date": "2026-04-29",
-          "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-          "score": 967,
-          "character": "Andy Sachs"
-        },
-        {
-          "tmdb_id": 1102883,
-          "title": "Mother Mary",
-          "release_date": "2026-04-17",
-          "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-          "score": 824,
-          "character": "Mother Mary"
-        }
-      ],
-      "popularity": 21.4238,
-      "sentiment_pct": 66,
-      "avg_film_score": 896,
-      "news_mentions": [],
-      "mentions": 10,
-      "score": 904,
-      "scores": {
-        "1d": 904,
-        "7d": 904,
-        "30d": 904
-      },
-      "rank": 16,
-      "move": 0,
-      "is_new": false
-    },
-    {
       "tmdb_id": 1545693,
       "name": "Zazie Beetz",
       "profile_url": "https://image.tmdb.org/t/p/w300/sgxzT54GnvgeMnOZgpQQx9csAdd.jpg",
@@ -9152,8 +9089,46 @@
         "7d": 900,
         "30d": 900
       },
+      "rank": 16,
+      "move": 1,
+      "is_new": false
+    },
+    {
+      "tmdb_id": 1813,
+      "name": "Anne Hathaway",
+      "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
+      "film_count": 2,
+      "films": [
+        {
+          "tmdb_id": 1314481,
+          "title": "The Devil Wears Prada 2",
+          "release_date": "2026-04-29",
+          "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
+          "score": 886,
+          "character": "Andy Sachs"
+        },
+        {
+          "tmdb_id": 1102883,
+          "title": "Mother Mary",
+          "release_date": "2026-04-17",
+          "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
+          "score": 824,
+          "character": "Mother Mary"
+        }
+      ],
+      "popularity": 21.4238,
+      "sentiment_pct": 65,
+      "avg_film_score": 855,
+      "news_mentions": [],
+      "mentions": 10,
+      "score": 898,
+      "scores": {
+        "1d": 898,
+        "7d": 898,
+        "30d": 898
+      },
       "rank": 17,
-      "move": 0,
+      "move": -1,
       "is_new": false
     },
     {
@@ -10543,7 +10518,7 @@
         "30d": 843
       },
       "rank": 13,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10573,7 +10548,7 @@
         "30d": 843
       },
       "rank": 14,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10633,7 +10608,7 @@
         "30d": 841
       },
       "rank": 16,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10663,7 +10638,7 @@
         "30d": 840
       },
       "rank": 17,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10723,7 +10698,7 @@
         "30d": 835
       },
       "rank": 19,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10813,7 +10788,7 @@
         "30d": 832
       },
       "rank": 22,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10847,36 +10822,6 @@
       "is_new": false
     },
     {
-      "tmdb_id": 5065,
-      "name": "David Frankel",
-      "profile_url": "https://image.tmdb.org/t/p/w300/ouq2ODK5MbbnCC72B8x29tJpKC7.jpg",
-      "film_count": 1,
-      "films": [
-        {
-          "tmdb_id": 1314481,
-          "title": "The Devil Wears Prada 2",
-          "release_date": "2026-04-29",
-          "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-          "score": 967,
-          "character": null
-        }
-      ],
-      "popularity": 21.4238,
-      "sentiment_pct": 69,
-      "avg_film_score": 967,
-      "news_mentions": [],
-      "mentions": 5,
-      "score": 828,
-      "scores": {
-        "1d": 828,
-        "7d": 828,
-        "30d": 828
-      },
-      "rank": 24,
-      "move": 0,
-      "is_new": true
-    },
-    {
       "tmdb_id": 212240,
       "name": "Tom Harper",
       "profile_url": "https://image.tmdb.org/t/p/w300/bt5yUl0oEPjSVwt8ZlFuQrxhv0Y.jpg",
@@ -10902,9 +10847,39 @@
         "7d": 827,
         "30d": 827
       },
+      "rank": 24,
+      "move": 1,
+      "is_new": false
+    },
+    {
+      "tmdb_id": 1401474,
+      "name": "Corin Hardy",
+      "profile_url": "https://image.tmdb.org/t/p/w300/zFDndGEhMk0ah8daKr080gNqSZ.jpg",
+      "film_count": 1,
+      "films": [
+        {
+          "tmdb_id": 1193501,
+          "title": "Whistle",
+          "release_date": "2026-01-20",
+          "poster_url": "https://image.tmdb.org/t/p/w185/eGxPyseSnEZBMJaopGfRUO9HSYx.jpg",
+          "score": 849,
+          "character": null
+        }
+      ],
+      "popularity": 110.3656,
+      "sentiment_pct": 51,
+      "avg_film_score": 849,
+      "news_mentions": [],
+      "mentions": 5,
+      "score": 827,
+      "scores": {
+        "1d": 827,
+        "7d": 827,
+        "30d": 827
+      },
       "rank": 25,
       "move": 0,
-      "is_new": false
+      "is_new": true
     }
   ]
 }
