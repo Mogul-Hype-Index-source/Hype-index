@@ -1,9 +1,9 @@
 {
   "meta": {
     "product": "Hype Index Mock DB",
-    "version": "v14.4",
-    "snapshot_utc": "2026-04-10T04:00:00Z",
-    "generated_utc": "2026-04-10T04:17:52Z",
+    "version": "v14.7",
+    "snapshot_utc": "2026-04-10T07:00:00Z",
+    "generated_utc": "2026-04-10T07:05:47Z",
     "amsi_scale": {
       "min": 800,
       "max": 999
@@ -22,16 +22,16 @@
       "rank": 1,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Jaafar Jackson performance resonance nearing hard cap as Michael (2026)" hits pre-release saturation."
+      "headline": "Michael (2026): Jaafar Jackson performance resonance hits saturation."
     },
     {
       "entity_id": "2ea9c519-6db7-3d70-be25-4562534813db",
       "entity_name": "Super Mario Galaxy Movie",
-      "category": "Movie",
+      "category": "Movies",
       "rank": 2,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Mario Galaxy global actuals surpass $405M; sentiment absolute as blockbuster status holds."
+      "headline": "Mario: Global blockbuster dominance persists."
     },
     {
       "entity_id": "738ab25c-c026-309d-af7f-dfb5dcdac907",
@@ -40,7 +40,7 @@
       "rank": 1,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Milly Alcock solidified as #1 Actor following fresh Supergirl production reveal resonance."
+      "headline": "Remains #1 Actor following Supergirl production resonance."
     },
     {
       "entity_id": "167ba058-31e4-3e0a-8310-fec1c7b31433",
@@ -49,9 +49,9 @@
       "rank": 3,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Project Hail Mary sci-fi persistence maintains peak yield in Thursday morning pulse."
+      "headline": "Sci-fi persistence maintains peak yield."
     }
-  ],
+  Y,
   "tabs": {
     "Movies": [
       {
@@ -60,7 +60,7 @@
         "entity_name": "Michael (2026)",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 1350
+        "mentions": 1380
       },
       {
         "rank": 2,
@@ -68,7 +68,7 @@
         "entity_name": "Super Mario Galaxy Movie",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 1250
+        "mentions": 1280
       },
       {
         "rank": 3,
@@ -76,7 +76,7 @@
         "entity_name": "Project Hail Mary",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 1150
+        "mentions": 1180
       }
     ],
     "Actors": [
@@ -86,7 +86,7 @@
         "entity_name": "Milly Alcock",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 1380
+        "mentions": 1410
       }
     ]
   }
