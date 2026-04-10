@@ -10,7 +10,8 @@ HypeIndex_V2_Spec.md §3:
         YouTube Engagement     × 0.15 +
         Reddit Volume Score    × 0.20 +
         Google Trends Score    × 0.20 +
-        News Impact Score      × 0.15
+        News Impact Score      × 0.15 +
+        X Mentions Score       × 0.10   ← additive signal
     ) × 1000
 
 Sub-scores normalize against the top performer in the current batch
@@ -33,6 +34,7 @@ WEIGHTS = {
     "reddit_volume":      0.20,
     "google_trends":      0.20,
     "news_impact":        0.15,
+    "x_mentions":         0.10,
 }
 
 
@@ -81,6 +83,12 @@ def _reddit_volume(movies: List[Dict[str, Any]]) -> List[float]:
 def _google_trends(movies: List[Dict[str, Any]]) -> List[float]:
     """pytrends already returns 0-100 → divide by 100."""
     return [float(m.get("trends", 0)) / 100.0 for m in movies]
+
+
+def _x_mentions(movies: List[Dict[str, Any]]) -> List[float]:
+    """X (Twitter) mention count per movie, normalized."""
+    raw = [float(m.get("x_mentions", 0)) for m in movies]
+    return _normalize(raw)
 
 
 def _news_impact(movies: List[Dict[str, Any]],
@@ -166,6 +174,7 @@ def score_movies(movies: List[Dict[str, Any]],
     rd_vol   = _reddit_volume(movies)
     gt       = _google_trends(movies)
     nis      = _news_impact(movies, weights)
+    xm       = _x_mentions(movies)
 
     # Pass 1: compute raw weighted aggregates in [0..1]
     raw_aggregates: List[float] = []
@@ -175,7 +184,8 @@ def score_movies(movies: List[Dict[str, Any]],
             yt_eng[i]   * WEIGHTS["youtube_engagement"] +
             rd_vol[i]   * WEIGHTS["reddit_volume"]      +
             gt[i]       * WEIGHTS["google_trends"]      +
-            nis[i]      * WEIGHTS["news_impact"]
+            nis[i]      * WEIGHTS["news_impact"]        +
+            xm[i]       * WEIGHTS["x_mentions"]
         )
         raw_aggregates.append(raw)
 
@@ -199,6 +209,7 @@ def score_movies(movies: List[Dict[str, Any]],
             "reddit_volume":      round(rd_vol[i],   4),
             "google_trends":      round(gt[i],       4),
             "news_impact":        round(nis[i],      4),
+            "x_mentions":         round(xm[i],       4),
             "raw_amsi":           round(raw_aggregates[i], 4),
         }
         amsi_int = _rescale(raw_aggregates[i])

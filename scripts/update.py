@@ -203,7 +203,8 @@ def _enrich_people_with_history(people: List[Dict[str, Any]], key: str) -> None:
 def build_index_payload(scored: List[Dict[str, Any]],
                         news_items: List[Dict[str, Any]],
                         generated_at: datetime,
-                        poster_base: str = "https://image.tmdb.org/t/p/w185") -> Dict[str, Any]:
+                        poster_base: str = "https://image.tmdb.org/t/p/w185",
+                        x_counts: Optional[Dict[str, int]] = None) -> Dict[str, Any]:
     # Rank by AMSI score
     scored.sort(key=lambda m: m.get("score", 0), reverse=True)
     for i, m in enumerate(scored, 1):
@@ -222,6 +223,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
     people = fetch_data.derive_people(
         scored, news_items, poster_base=poster_base,
         top_actors=50, top_directors=25,
+        x_counts=x_counts,
     )
     # Per-person rank movement against the previous v2.json
     _enrich_people_with_history(people["actors"],    "actors")
@@ -282,7 +284,8 @@ def build_index_payload(scored: List[Dict[str, Any]],
     total_mentions_24h = sum(
         ((m.get("reddit") or {}).get("posts", 0) +
          (m.get("reddit") or {}).get("comments", 0) +
-         len(m.get("news_mentions") or []))
+         len(m.get("news_mentions") or []) +
+         int(m.get("x_mentions") or 0))
         for m in scored
     )
     avg_score = (
@@ -309,7 +312,8 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "youtube_video_id": m.get("youtube_video_id"),
             "reddit_posts":   int(rd.get("posts", 0)),
             "reddit_comments": int(rd.get("comments", 0)),
-            "mentions":       int(rd.get("posts", 0) + rd.get("comments", 0) + len(m.get("news_mentions") or [])),
+            "x_mentions":     int(m.get("x_mentions") or 0),
+            "mentions":       int(rd.get("posts", 0) + rd.get("comments", 0) + len(m.get("news_mentions") or []) + int(m.get("x_mentions") or 0)),
             "sentiment_pct":  int(m.get("sentiment_pct", 50)),
             "scores":         m.get("scores", {}),
             "score":          m.get("score", 0),
@@ -417,6 +421,7 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
     payload = build_index_payload(
         scored, raw["news"], generated_at,
         poster_base=cfg.get("tmdb_image_base", "https://image.tmdb.org/t/p/w185"),
+        x_counts=raw.get("x_counts"),
     )
 
     # 3a. Circuit breaker — refuse to overwrite the live index.json with

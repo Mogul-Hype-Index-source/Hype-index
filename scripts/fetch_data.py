@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import re
 import sys
 import time
@@ -39,6 +40,7 @@ CONFIG_PATH = REPO_ROOT / "config.json"
 TMDB_BASE = "https://api.themoviedb.org/3"
 YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3"
 REDDIT_BASE = "https://www.reddit.com"
+X_API_BASE = "https://api.twitter.com/2"
 
 REQUEST_TIMEOUT = 15  # seconds
 
@@ -415,6 +417,7 @@ YOUTUBE_STATS_TTL_HOURS = 24       # daily — quota-conservative
 GOOGLE_TRENDS_TTL_HOURS = 2        # bi-hourly
 NEWS_TTL_MINUTES        = 15       # ticker freshness target
 TMDB_UNIVERSE_TTL_HOURS = 6        # the slate doesn't shift fast
+X_MENTIONS_TTL_HOURS    = 1        # hourly — matches pulse cadence
 
 
 def _trailer_cache_path() -> Path:
@@ -711,6 +714,80 @@ def fetch_reddit_mentions(title: str, subreddits: Iterable[str], user_agent: str
 
 
 # ---------------------------------------------------------------------------
+# X (Twitter) — mention counts via /2/tweets/counts/recent
+# ---------------------------------------------------------------------------
+
+def _x_cache_path() -> Path:
+    return REPO_ROOT / "data" / "cache" / "x_mentions.json"
+
+
+def _get_x_bearer_token() -> Optional[str]:
+    return os.environ.get("X_BEARER_TOKEN") or None
+
+
+def fetch_x_mention_count(query: str, bearer_token: str) -> int:
+    """
+    GET /2/tweets/counts/recent for `query` over the last 7 days.
+    Returns the total tweet count. Returns 0 on any failure.
+    """
+    data = _http_get(
+        f"{X_API_BASE}/tweets/counts/recent",
+        params={"query": query, "granularity": "day"},
+        headers={"Authorization": f"Bearer {bearer_token}"},
+        retries=1,
+        backoff=3.0,
+    )
+    if not data:
+        return 0
+    return int(data.get("meta", {}).get("total_tweet_count", 0))
+
+
+def fetch_x_mentions_batch(queries: Dict[str, str],
+                           force: bool = False) -> Dict[str, int]:
+    """
+    Fetch X mention counts for a {key: search_query} dict.
+    Cached for X_MENTIONS_TTL_HOURS. Returns {key: count}.
+    """
+    bearer = _get_x_bearer_token()
+    if not bearer:
+        LOG.info("X_BEARER_TOKEN not set — skipping X mentions")
+        return {k: 0 for k in queries}
+
+    cache = _load_json(_x_cache_path())
+    age = _cache_age(cache)
+    cached_counts: Dict[str, int] = cache.get("counts") or {}
+
+    if not force and age is not None and age < timedelta(hours=X_MENTIONS_TTL_HOURS):
+        LOG.info("X mentions cache HIT — %d entries, age %s", len(cached_counts), age)
+        return {k: int(cached_counts.get(k, 0)) for k in queries}
+
+    out: Dict[str, int] = {}
+    any_success = False
+    for key, q in queries.items():
+        try:
+            count = fetch_x_mention_count(q, bearer)
+            out[key] = count
+            if count > 0:
+                any_success = True
+        except Exception as exc:  # noqa: BLE001
+            LOG.warning("X mentions failed for %s: %s", key, exc)
+            out[key] = int(cached_counts.get(key, 0))
+        time.sleep(1.0)  # respect rate limits (300 requests / 15 min)
+
+    if any_success:
+        _save_json(_x_cache_path(), {
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "counts": out,
+        })
+        LOG.info("X mentions cache updated — %d entries", len(out))
+    else:
+        LOG.warning("X mentions fetch produced no fresh data — keeping previous cache")
+        out = {k: int(cached_counts.get(k, 0)) for k in queries}
+
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Google Trends — pytrends batches of 5
 # ---------------------------------------------------------------------------
 
@@ -992,10 +1069,40 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     for m in movies:
         m["trends"] = int(trends.get(m["title"], 0))
 
+    # 5. X (Twitter) mention counts — one query per movie title
+    x_queries: Dict[str, str] = {}
+    for m in movies:
+        key = f"movie:{m['tmdb_id']}"
+        x_queries[key] = f'"{m["title"]}" movie'
+    # Also query actors and directors (by name) — these will be attached
+    # to person entries downstream in derive_people().
+    seen_people: set = set()
+    for m in movies:
+        for c in (m.get("cast_full") or [])[:6]:
+            pid = c.get("id")
+            name = c.get("name")
+            if pid and name and pid not in seen_people:
+                x_queries[f"actor:{pid}"] = f'"{name}"'
+                seen_people.add(pid)
+        for d in (m.get("directors_full") or []):
+            pid = d.get("id")
+            name = d.get("name")
+            if pid and name and pid not in seen_people:
+                x_queries[f"director:{pid}"] = f'"{name}"'
+                seen_people.add(pid)
+
+    x_counts = fetch_x_mentions_batch(x_queries)
+    for m in movies:
+        m["x_mentions"] = x_counts.get(f"movie:{m['tmdb_id']}", 0)
+    x_hits = sum(1 for m in movies if m.get("x_mentions", 0) > 0)
+    LOG.info("X mentions coverage: %d/%d (%d%%)", x_hits, len(movies),
+             (x_hits * 100 // len(movies)) if movies else 0)
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "movies": movies,
-        "news":   news_items,
+        "movies":   movies,
+        "news":     news_items,
+        "x_counts": x_counts,
     }
 
 
@@ -1042,7 +1149,8 @@ def derive_people(movies: List[Dict[str, Any]],
                   news_items: List[Dict[str, Any]],
                   poster_base: str,
                   top_actors: int = 50,
-                  top_directors: int = 25) -> Dict[str, List[Dict[str, Any]]]:
+                  top_directors: int = 25,
+                  x_counts: Optional[Dict[str, int]] = None) -> Dict[str, List[Dict[str, Any]]]:
     """
     Roll the cast/crew across all enriched movies into per-person entries.
     Each person gets a film_count, total popularity, news mentions, average
@@ -1093,19 +1201,22 @@ def derive_people(movies: List[Dict[str, Any]],
         for d in (m.get("directors_full") or []):
             _bucket(directors, d, m, "director")
 
-    def _finalize(slot: Dict[str, Any]) -> Dict[str, Any]:
+    xc = x_counts or {}
+
+    def _finalize(slot: Dict[str, Any], kind: str) -> Dict[str, Any]:
         n = slot["sentiment_n"] or 1
         slot["sentiment_pct"] = int(round(slot["sentiment_acc"] / n))
         slot["avg_film_score"] = int(round(slot["score_acc"] / n))
         slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
-        slot["mentions"] = len(slot["news_mentions"]) + slot["film_count"] * 5
+        slot["x_mentions"] = xc.get(f"{kind}:{slot['tmdb_id']}", 0)
+        slot["mentions"] = len(slot["news_mentions"]) + slot["film_count"] * 5 + slot["x_mentions"]
         del slot["sentiment_acc"]
         del slot["sentiment_n"]
         del slot["score_acc"]
         return slot
 
-    actor_list    = [_finalize(s) for s in actors.values()]
-    director_list = [_finalize(s) for s in directors.values()]
+    actor_list    = [_finalize(s, "actor") for s in actors.values()]
+    director_list = [_finalize(s, "director") for s in directors.values()]
 
     # Score each person: weighted blend of film_count, popularity, news,
     # avg film score. Then min-max rescale into V1's 800-999 band so the
