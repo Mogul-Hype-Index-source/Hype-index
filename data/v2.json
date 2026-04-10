@@ -1,16 +1,22 @@
 {
-  "generated_at": "2026-04-10T01:50:25+00:00",
-  "next_update_at": "2026-04-10T02:50:25+00:00",
+  "generated_at": "2026-04-10T02:30:21+00:00",
+  "next_update_at": "2026-04-10T03:30:21+00:00",
   "snapshot_date": "2026-04-10",
   "summary": {
     "total": 90,
-    "rising": 13,
-    "falling": 3,
-    "flat": 74,
+    "rising": 1,
+    "falling": 1,
+    "flat": 88,
     "avg_score": 848,
-    "total_mentions_24h": 17941
+    "total_mentions_24h": 17980
   },
   "news": [
+    {
+      "headline": "‘Death Of A Salesman’ Broadway Review: Nathan Lane And Laurie Metcalf Shine In Director Joe Mantello’s Stark, Blistering Revival",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/death-of-a-salesman-broadway-review-nathan-lane-1236784788/",
+      "category": "production"
+    },
     {
       "headline": "Tony Awards Eligibility: Ebon Moss-Bachrach Secures Featured Actor Placement for ‘Dog Day Afternoon’",
       "source": "Variety",
@@ -36,10 +42,10 @@
       "category": "production"
     },
     {
-      "headline": "Movie tracking app Binge uses Apple's Live Activities to warn about jump scares",
-      "source": "Engadget",
-      "url": "https://www.engadget.com/apps/movie-tracking-app-binge-uses-apples-live-activities-to-warn-about-jump-scares-184840127.html?src=rss",
-      "category": "production"
+      "headline": "Disney Job Cuts Test Josh D’Amaro’s Cost Focus And Growth Plans",
+      "source": "Yahoo Finance · DIS",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/disney-job-cuts-test-josh-012114912.html?.tsrc=rss",
+      "category": "finance"
     },
     {
       "headline": "Disney Co. New Chief Communications Officer Paul Roeder Sets Team; April Carretta Upped, Adding Lead Comms Duties For President Dana Walden",
@@ -62,12 +68,6 @@
     {
       "headline": "Netflix vs. Walt Disney: Consistency vs. Volatility in Revenue",
       "source": "Yahoo Finance · DIS",
-      "url": "https://www.fool.com/coverage/charts/2026/04/09/netflix-vs-walt-disney-consistency-vs-volatility-in-revenue/?.tsrc=rss",
-      "category": "finance"
-    },
-    {
-      "headline": "Netflix vs. Walt Disney: Consistency vs. Volatility in Revenue",
-      "source": "Yahoo Finance · NFLX",
       "url": "https://www.fool.com/coverage/charts/2026/04/09/netflix-vs-walt-disney-consistency-vs-volatility-in-revenue/?.tsrc=rss",
       "category": "finance"
     },
@@ -99,12 +99,6 @@
       "headline": "Natasha Lyonne Responds to Report She Was Escorted Off an Airplane After ‘Euphoria’ Premiere",
       "source": "Hollywood Reporter",
       "url": "https://www.hollywoodreporter.com/tv/tv-news/natasha-lyonne-responds-escorted-off-airplane-euphoria-1236560549/",
-      "category": "pr-marketing"
-    },
-    {
-      "headline": "Jenna Ortega Reveals the Role That Got Away: “Incredible Movie”",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-hereditary-ari-aster-audition-1236560272/",
       "category": "pr-marketing"
     },
     {
@@ -152,62 +146,20 @@
   ],
   "movers_up": [
     {
-      "tmdb_id": 1316092,
-      "title": "\"Wuthering Heights\"",
-      "poster_url": "https://image.tmdb.org/t/p/w185/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
+      "tmdb_id": 1363974,
+      "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
+      "poster_url": "https://image.tmdb.org/t/p/w185/oblkRIWuKTF46CsnLhBiE7Otn3z.jpg",
       "move": 1,
-      "score": 914
-    },
-    {
-      "tmdb_id": 1242332,
-      "title": "Normal",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHP7nurzOYGHNcNK1O4naVzsGCv.jpg",
-      "move": 1,
-      "score": 908
-    },
-    {
-      "tmdb_id": 687163,
-      "title": "Project Hail Mary",
-      "poster_url": "https://image.tmdb.org/t/p/w185/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-      "move": 1,
-      "score": 907
-    },
-    {
-      "tmdb_id": 1339876,
-      "title": "Mardaani 3",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
-      "move": 1,
-      "score": 904
-    },
-    {
-      "tmdb_id": 1381027,
-      "title": "Good Boy",
-      "poster_url": "https://image.tmdb.org/t/p/w185/x0wD4Qxe0wulV0bxarsQ05PqDNF.jpg",
-      "move": 1,
-      "score": 902
+      "score": 875
     }
   ],
   "movers_down": [
     {
-      "tmdb_id": 1314481,
-      "title": "The Devil Wears Prada 2",
-      "poster_url": "https://image.tmdb.org/t/p/w185/p35IoKfBtJDNiWJMO8ZEtIMZSfW.jpg",
-      "move": -10,
-      "score": 886
-    },
-    {
-      "tmdb_id": 1236153,
-      "title": "Mercy",
-      "poster_url": "https://image.tmdb.org/t/p/w185/pyok1kZJCfyuFapYXzHcy7BLlQa.jpg",
-      "move": -2,
-      "score": 828
-    },
-    {
-      "tmdb_id": 1389881,
-      "title": "The Cure",
-      "poster_url": "https://image.tmdb.org/t/p/w185/enxF32km4P9gXYhAUXWgoVfQqg5.jpg",
+      "tmdb_id": 1198994,
+      "title": "Send Help",
+      "poster_url": "https://image.tmdb.org/t/p/w185/mjkS2iAgWj3ik1DTjvI15nHZ7yl.jpg",
       "move": -1,
-      "score": 812
+      "score": 874
     }
   ],
   "movies": [
@@ -317,9 +269,9 @@
       "youtube_likes": 210203,
       "youtube_comments": 13971,
       "youtube_video_id": "mbtgEE6rkxw",
-      "reddit_posts": 56,
-      "reddit_comments": 3041,
-      "mentions": 3097,
+      "reddit_posts": 58,
+      "reddit_comments": 3045,
+      "mentions": 3103,
       "sentiment_pct": 72,
       "scores": {
         "1d": 996,
@@ -334,10 +286,10 @@
       "sub_scores": {
         "youtube_views": 0.228,
         "youtube_engagement": 0.3233,
-        "reddit_volume": 0.6317,
+        "reddit_volume": 0.6322,
         "google_trends": 0.62,
         "news_impact": 0.0,
-        "raw_amsi": 0.3672
+        "raw_amsi": 0.3673
       },
       "cast_full": [
         {
@@ -412,8 +364,8 @@
       "youtube_comments": 9,
       "youtube_video_id": "0ZDzsH3XGFA",
       "reddit_posts": 46,
-      "reddit_comments": 4857,
-      "mentions": 4903,
+      "reddit_comments": 4862,
+      "mentions": 4908,
       "sentiment_pct": 62,
       "scores": {
         "1d": 974,
@@ -515,7 +467,7 @@
         "30d": 914
       },
       "score": 914,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -600,8 +552,8 @@
       "youtube_comments": 1032,
       "youtube_video_id": "5OndK0w1lYY",
       "reddit_posts": 17,
-      "reddit_comments": 551,
-      "mentions": 568,
+      "reddit_comments": 555,
+      "mentions": 572,
       "sentiment_pct": 56,
       "scores": {
         "1d": 908,
@@ -609,17 +561,17 @@
         "30d": 908
       },
       "score": 908,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0633,
         "youtube_engagement": 0.0911,
-        "reddit_volume": 0.1158,
+        "reddit_volume": 0.1165,
         "google_trends": 0.74,
         "news_impact": 0.0,
-        "raw_amsi": 0.2038
+        "raw_amsi": 0.204
       },
       "cast_full": [
         {
@@ -694,8 +646,8 @@
       "youtube_comments": 223,
       "youtube_video_id": "NKYea63tQmI",
       "reddit_posts": 70,
-      "reddit_comments": 1866,
-      "mentions": 1936,
+      "reddit_comments": 1868,
+      "mentions": 1938,
       "sentiment_pct": 65,
       "scores": {
         "1d": 907,
@@ -703,7 +655,7 @@
         "30d": 907
       },
       "score": 907,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -802,7 +754,7 @@
         "30d": 904
       },
       "score": 904,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -896,7 +848,7 @@
         "30d": 902
       },
       "score": 902,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -990,14 +942,14 @@
         "30d": 897
       },
       "score": 897,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1913,
         "youtube_engagement": 0.1444,
-        "reddit_volume": 0.2193,
+        "reddit_volume": 0.219,
         "google_trends": 0.3,
         "news_impact": 0.0,
         "raw_amsi": 0.1829
@@ -1084,17 +1036,17 @@
         "30d": 894
       },
       "score": 894,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1855,
         "youtube_engagement": 0.4155,
-        "reddit_volume": 0.0514,
+        "reddit_volume": 0.0513,
         "google_trends": 0.25,
         "news_impact": 0.0,
-        "raw_amsi": 0.1783
+        "raw_amsi": 0.1782
       },
       "cast_full": [
         {
@@ -1178,14 +1130,14 @@
         "30d": 894
       },
       "score": 894,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
         "youtube_engagement": 0.3105,
-        "reddit_volume": 0.1413,
+        "reddit_volume": 0.1412,
         "google_trends": 0.51,
         "news_impact": 0.0,
         "raw_amsi": 0.1771
@@ -1272,7 +1224,7 @@
         "30d": 889
       },
       "score": 889,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1366,7 +1318,7 @@
         "30d": 886
       },
       "score": 886,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1430,7 +1382,7 @@
         "30d": 886
       },
       "score": 886,
-      "move": -10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -1515,15 +1467,15 @@
       "youtube_comments": 11944,
       "youtube_video_id": "b24oG7qCwp4",
       "reddit_posts": 11,
-      "reddit_comments": 458,
-      "mentions": 469,
+      "reddit_comments": 467,
+      "mentions": 478,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 883,
-        "7d": 883,
-        "30d": 883
+        "1d": 884,
+        "7d": 884,
+        "30d": 884
       },
-      "score": 883,
+      "score": 884,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1531,10 +1483,10 @@
       "sub_scores": {
         "youtube_views": 0.2932,
         "youtube_engagement": 0.2577,
-        "reddit_volume": 0.0957,
+        "reddit_volume": 0.0974,
         "google_trends": 0.06,
         "news_impact": 0.0,
-        "raw_amsi": 0.1577
+        "raw_amsi": 0.1581
       },
       "cast_full": [
         {
@@ -1609,8 +1561,8 @@
       "youtube_comments": 0,
       "youtube_video_id": "En5QZmL5R1s",
       "reddit_posts": 39,
-      "reddit_comments": 2008,
-      "mentions": 2047,
+      "reddit_comments": 2010,
+      "mentions": 2049,
       "sentiment_pct": 59,
       "scores": {
         "1d": 880,
@@ -2167,6 +2119,100 @@
     },
     {
       "rank": 22,
+      "tmdb_id": 1363974,
+      "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
+      "director": "Yasuhito Kikuchi",
+      "cast": "Miho Okasaki, Mao Ichimichi",
+      "release_date": "2026-02-27",
+      "poster_url": "https://image.tmdb.org/t/p/w185/oblkRIWuKTF46CsnLhBiE7Otn3z.jpg",
+      "youtube_views": 111818,
+      "youtube_likes": 3583,
+      "youtube_comments": 179,
+      "youtube_video_id": "qnFfPdaZJO4",
+      "reddit_posts": 1,
+      "reddit_comments": 7,
+      "mentions": 8,
+      "sentiment_pct": 95,
+      "scores": {
+        "1d": 875,
+        "7d": 875,
+        "30d": 875
+      },
+      "score": 875,
+      "move": 1,
+      "is_new": false,
+      "hot": false,
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0013,
+        "youtube_engagement": 0.9384,
+        "reddit_volume": 0.0016,
+        "google_trends": 0.0,
+        "news_impact": 0.0,
+        "raw_amsi": 0.1415
+      },
+      "cast_full": [
+        {
+          "id": 2138490,
+          "name": "Miho Okasaki",
+          "character": "Rimuru (voice)",
+          "profile_path": "/6vxRulNZRaW47UFvVEq9poRekUx.jpg"
+        },
+        {
+          "id": 1161472,
+          "name": "Mao Ichimichi",
+          "character": "Shion (voice)",
+          "profile_path": "/a3cflYtrlFK0LXfWODgLDO7E7CP.jpg"
+        },
+        {
+          "id": 1249235,
+          "name": "Tomoaki Maeno",
+          "character": "Veldora (voice)",
+          "profile_path": "/w3lEuXSbEyzzNyO3YnxsF6wm2N5.jpg"
+        },
+        {
+          "id": 1319218,
+          "name": "Makoto Furukawa",
+          "character": "Benimaru (voice)",
+          "profile_path": "/inLmBZhrqXeE9wlViyK28ocKJSw.jpg"
+        },
+        {
+          "id": 1407597,
+          "name": "Sayaka Senbongi",
+          "character": "Shuna (voice)",
+          "profile_path": "/yLRKX9DPDGgTRKBQRFTUh3pvbU0.jpg"
+        },
+        {
+          "id": 1116333,
+          "name": "Hisako Kanemoto",
+          "character": "Elmesia (voice)",
+          "profile_path": "/qyJPQaehMc4Sy5jaTfIJLdrll2v.jpg"
+        },
+        {
+          "id": 1250515,
+          "name": "Koichi Domoto",
+          "character": "Zodon (voice)",
+          "profile_path": "/h9cWAz0ZMdiJvZFcXdd0GQJHQO6.jpg"
+        },
+        {
+          "id": 1339189,
+          "name": "Saori Onishi",
+          "character": "Yura (voice)",
+          "profile_path": "/cziKB19QMFJ6DQDtxTn07uRY2hq.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1654352,
+          "name": "Yasuhito Kikuchi",
+          "profile_path": null
+        }
+      ],
+      "news_mentions": [],
+      "trends": 0
+    },
+    {
+      "rank": 23,
       "tmdb_id": 1198994,
       "title": "Send Help",
       "director": "Sam Raimi",
@@ -2187,7 +2233,7 @@
         "30d": 874
       },
       "score": 874,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": true,
       "highlight": false,
@@ -2258,100 +2304,6 @@
       ],
       "news_mentions": [],
       "trends": 41
-    },
-    {
-      "rank": 23,
-      "tmdb_id": 1363974,
-      "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
-      "director": "Yasuhito Kikuchi",
-      "cast": "Miho Okasaki, Mao Ichimichi",
-      "release_date": "2026-02-27",
-      "poster_url": "https://image.tmdb.org/t/p/w185/oblkRIWuKTF46CsnLhBiE7Otn3z.jpg",
-      "youtube_views": 111818,
-      "youtube_likes": 3583,
-      "youtube_comments": 179,
-      "youtube_video_id": "qnFfPdaZJO4",
-      "reddit_posts": 0,
-      "reddit_comments": 0,
-      "mentions": 0,
-      "sentiment_pct": 95,
-      "scores": {
-        "1d": 874,
-        "7d": 874,
-        "30d": 874
-      },
-      "score": 874,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0013,
-        "youtube_engagement": 0.9384,
-        "reddit_volume": 0.0,
-        "google_trends": 0.0,
-        "news_impact": 0.0,
-        "raw_amsi": 0.1412
-      },
-      "cast_full": [
-        {
-          "id": 2138490,
-          "name": "Miho Okasaki",
-          "character": "Rimuru (voice)",
-          "profile_path": "/6vxRulNZRaW47UFvVEq9poRekUx.jpg"
-        },
-        {
-          "id": 1161472,
-          "name": "Mao Ichimichi",
-          "character": "Shion (voice)",
-          "profile_path": "/a3cflYtrlFK0LXfWODgLDO7E7CP.jpg"
-        },
-        {
-          "id": 1249235,
-          "name": "Tomoaki Maeno",
-          "character": "Veldora (voice)",
-          "profile_path": "/w3lEuXSbEyzzNyO3YnxsF6wm2N5.jpg"
-        },
-        {
-          "id": 1319218,
-          "name": "Makoto Furukawa",
-          "character": "Benimaru (voice)",
-          "profile_path": "/inLmBZhrqXeE9wlViyK28ocKJSw.jpg"
-        },
-        {
-          "id": 1407597,
-          "name": "Sayaka Senbongi",
-          "character": "Shuna (voice)",
-          "profile_path": "/yLRKX9DPDGgTRKBQRFTUh3pvbU0.jpg"
-        },
-        {
-          "id": 1116333,
-          "name": "Hisako Kanemoto",
-          "character": "Elmesia (voice)",
-          "profile_path": "/qyJPQaehMc4Sy5jaTfIJLdrll2v.jpg"
-        },
-        {
-          "id": 1250515,
-          "name": "Koichi Domoto",
-          "character": "Zodon (voice)",
-          "profile_path": "/h9cWAz0ZMdiJvZFcXdd0GQJHQO6.jpg"
-        },
-        {
-          "id": 1339189,
-          "name": "Saori Onishi",
-          "character": "Yura (voice)",
-          "profile_path": "/cziKB19QMFJ6DQDtxTn07uRY2hq.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1654352,
-          "name": "Yasuhito Kikuchi",
-          "profile_path": null
-        }
-      ],
-      "news_mentions": [],
-      "trends": 0
     },
     {
       "rank": 24,
@@ -2664,7 +2616,7 @@
       "sub_scores": {
         "youtube_views": 0.0235,
         "youtube_engagement": 0.2533,
-        "reddit_volume": 0.0445,
+        "reddit_volume": 0.0444,
         "google_trends": 0.36,
         "news_impact": 0.0,
         "raw_amsi": 0.1259
@@ -2824,8 +2776,8 @@
       "youtube_comments": 620,
       "youtube_video_id": "kmY-rYS7yng",
       "reddit_posts": 13,
-      "reddit_comments": 186,
-      "mentions": 199,
+      "reddit_comments": 187,
+      "mentions": 200,
       "sentiment_pct": 54,
       "scores": {
         "1d": 860,
@@ -2840,7 +2792,7 @@
       "sub_scores": {
         "youtube_views": 0.0583,
         "youtube_engagement": 0.0493,
-        "reddit_volume": 0.0406,
+        "reddit_volume": 0.0407,
         "google_trends": 0.41,
         "news_impact": 0.0,
         "raw_amsi": 0.115
@@ -2918,8 +2870,8 @@
       "youtube_comments": 1787,
       "youtube_video_id": "fOzF87PFGnw",
       "reddit_posts": 5,
-      "reddit_comments": 471,
-      "mentions": 476,
+      "reddit_comments": 472,
+      "mentions": 477,
       "sentiment_pct": 75,
       "scores": {
         "1d": 860,
@@ -2934,7 +2886,7 @@
       "sub_scores": {
         "youtube_views": 0.0098,
         "youtube_engagement": 0.5235,
-        "reddit_volume": 0.0971,
+        "reddit_volume": 0.0972,
         "google_trends": 0.07,
         "news_impact": 0.0,
         "raw_amsi": 0.1149
@@ -4201,9 +4153,9 @@
       "youtube_likes": 3139,
       "youtube_comments": 280,
       "youtube_video_id": "6wbMsDmJLCs",
-      "reddit_posts": 4,
+      "reddit_posts": 5,
       "reddit_comments": 98,
-      "mentions": 102,
+      "mentions": 103,
       "sentiment_pct": 69,
       "scores": {
         "1d": 839,
@@ -4218,10 +4170,10 @@
       "sub_scores": {
         "youtube_views": 0.003,
         "youtube_engagement": 0.3737,
-        "reddit_volume": 0.0208,
+        "reddit_volume": 0.021,
         "google_trends": 0.07,
         "news_impact": 0.0,
-        "raw_amsi": 0.0751
+        "raw_amsi": 0.0752
       },
       "cast_full": [
         {
@@ -4704,7 +4656,7 @@
           "id": 36594,
           "name": "Juno Temple",
           "character": "Susan",
-          "profile_path": "/nvsPrM4OKHVCDivgMx4FF6PgE5f.jpg"
+          "profile_path": "/n20TNExAma6q9iVcWtPRxLl7pEc.jpg"
         },
         {
           "id": 1286328,
@@ -5127,7 +5079,7 @@
         "30d": 829
       },
       "score": 829,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5221,7 +5173,7 @@
         "30d": 828
       },
       "score": 828,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5315,7 +5267,7 @@
         "30d": 828
       },
       "score": 828,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -5604,7 +5556,7 @@
       "sub_scores": {
         "youtube_views": 0.0044,
         "youtube_engagement": 0.2843,
-        "reddit_volume": 0.0241,
+        "reddit_volume": 0.024,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "raw_amsi": 0.0488
@@ -7007,7 +6959,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -7101,7 +7053,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "highlight": false,
@@ -8990,7 +8942,7 @@
           "title": "Mortal Kombat II",
           "release_date": "2026-05-06",
           "poster_url": "https://image.tmdb.org/t/p/w185/lIsMeDbwntNXSUVHmWMMRXEZOVc.jpg",
-          "score": 883,
+          "score": 884,
           "character": "Kitana"
         },
         {
@@ -9004,7 +8956,7 @@
       ],
       "popularity": 77.921,
       "sentiment_pct": 59,
-      "avg_film_score": 847,
+      "avg_film_score": 848,
       "news_mentions": [],
       "mentions": 10,
       "score": 908,
@@ -9090,7 +9042,7 @@
         "30d": 900
       },
       "rank": 16,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -9128,7 +9080,7 @@
         "30d": 898
       },
       "rank": 17,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10848,7 +10800,7 @@
         "30d": 827
       },
       "rank": 24,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -10879,7 +10831,7 @@
       },
       "rank": 25,
       "move": 0,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
