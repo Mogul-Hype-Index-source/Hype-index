@@ -1,9 +1,9 @@
 {
   "meta": {
     "product": "Hype Index Mock DB",
-    "version": "v13.8",
-    "snapshot_utc": "2026-04-09T22:00:00Z",
-    "generated_utc": "2026-04-09T23:15:00Z",
+    "version": "v14.1",
+    "snapshot_utc": "2026-04-10T01:00:00Z",
+    "generated_utc": "2026-04-10T01:45:00Z",
     "amsi_scale": {
       "min": 800,
       "max": 999
@@ -16,40 +16,40 @@
   },
   "ticker": [
     {
-      "entity_id": "485c7cce-61a5-4d07-bfd1-8d9f88e4b3a1",
+      "entity_id": "519b251d-cbf2-36df-b82a-dadb272a841a",
       "entity_name": "Michael (2026)",
       "category": "Movie",
       "rank": 1,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Michael (2026) jaafar jackson performance clips drive absolute resonance ahead of release."
+      "headline": "Jaafar Jackson performance resonance continues to scale as Michael (2026) approaches pre-release saturation."
     },
     {
-      "entity_id": "92e4b2db-9c4a-4f9b-8d2f-6b4f7d0c2a55",
+      "entity_id": "2ea9c519-6db7-3d70-be25-4562534813db",
       "entity_name": "Super Mario Galaxy Movie",
       "category": "Movie",
       "rank": 2,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Mario Galaxy global blockbuster status verified; global actuals surpass $405M."
+      "headline": "Mario Galaxy global actuals confirmed at $405M-driven sentiment stabilizes at ceiling."
     },
     {
-      "entity_id": "738ab25c-61a5-4d07-bfd1-8d9f88e4b3a1",
+      "entity_id": "738ab25c-c026-309d-af7f-dfb5dcdac907",
       "entity_name": "Milly Alcock",
       "category": "Actor",
       "rank": 1,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Milly Alcock solidifies #1 Actor status as viral Supergirl production reveal holds resonance."
+      "headline": "Milly Alcock holds #1 Actor spot following Supergirl production premiere resonance."
     },
     {
-      "entity_id": "PHM-ID-Placeholder",
+      "entity_id": "167ba058-31e4-3e0a-8310-fec1c7b31433",
       "entity_name": "Project Hail Mary",
       "category": "Movie",
       "rank": 3,
       "move": 0,
       "amsi": 999.0,
-      "headline": "Project Hail Mary hitting sentiment ceiling following NASA Artemis II resonance surge."
+      "headline": "Project Hail Mary sci-fi persistence maintains peak resonance in Wednesday pulse."
     }
   ],
   "tabs": {
@@ -60,7 +60,7 @@
         "entity_name": "Michael (2026)",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 15200
+        "mentions": 18800
       },
       {
         "rank": 2,
@@ -68,7 +68,7 @@
         "entity_name": "Super Mario Galaxy Movie",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 13500
+        "mentions": 16800
       },
       {
         "rank": 3,
@@ -76,7 +76,7 @@
         "entity_name": "Project Hail Mary",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 11200
+        "mentions": 14200
       }
     ],
     "Actors": [
@@ -86,7 +86,7 @@
         "entity_name": "Milly Alcock",
         "score": 999.0,
         "sentiment": "Very Positive",
-        "mentions": 11400
+        "mentions": 15300
       }
     ]
   }
