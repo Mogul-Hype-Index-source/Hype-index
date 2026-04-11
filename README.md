@@ -2,7 +2,7 @@
 
 A real-time Hollywood sentiment dashboard — Bloomberg terminal meets Billboard
 Hot 100 meets Hyperliquid exchange. 100 movies ranked every hour by the
-**AMSI score** (Animoca Movie Sentiment Index, 0–1000) using free public APIs.
+**HypeScore** (proprietary momentum-based scoring, 0–1000) using free public APIs.
 
 Live: https://mogul-hype-index-source.github.io/Hype-index/
 
@@ -17,7 +17,7 @@ data/
   cache/                ← Raw fetch cache + last_run.json (gitignored)
 scripts/
   fetch_data.py         ← Pulls TMDb / YouTube / Reddit / Trends / RSS
-  score.py              ← AMSI scoring formula (see HypeIndex_V2_Spec.md §3)
+  score.py              ← HypeScore momentum formula
   update.py             ← Master orchestrator — run hourly
   requirements.txt
 ```
@@ -50,20 +50,31 @@ Or schedule via cron — every hour at :00:
 0 * * * * cd /path/to/Hype-index && .venv/bin/python scripts/update.py >> data/cache/cron.log 2>&1
 ```
 
-## How the AMSI score works
+## How the HypeScore works
 
 ```
-AMSI = (
-    youtube_views_score    × 0.30 +
-    youtube_engagement     × 0.15 +
-    reddit_volume_score    × 0.20 +
-    google_trends_score    × 0.20 +
-    news_impact_score      × 0.15
-) × 1000
+HYPE_SCORE = (
+    0.4 × normalize(short) +
+    0.2 × normalize(acceleration) +
+    0.4 × normalize(baseline)
+) × log(1 + baseline) × 1000
 ```
 
-Each sub-score is normalized against the top performer in the current batch
-(top = 1.0), so the leaderboard is always relative to today's slate.
+Where baseline is calculated from sources:
+```
+baseline = (
+    youtube_views  × 0.35 +
+    x_mentions     × 0.25 +
+    reddit_volume  × 0.20 +
+    google_trends  × 0.15 +
+    news_impact    × 0.05
+)
+```
+
+- **baseline**: weighted sum of all source scores normalized against top performer
+- **short**: average of last 3 data points
+- **acceleration**: rate of change between short and previous short window
+
 The 1D / 7D / 30D snapshot toggle in the UI is back-filled from
 `data/historical/` snapshots — once you've been running daily for a week,
 the time-window momentum becomes the killer feature vs V1.

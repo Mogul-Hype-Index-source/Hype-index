@@ -1,21 +1,30 @@
 """
-MoviePass Hype Index V2 — AMSI scoring
-======================================
+MoviePass Hype Index V2 — HypeScore scoring
+============================================
 
-Implements the Animoca Movie Sentiment Index from
-HypeIndex_V2_Spec.md §3:
+Proprietary momentum-based scoring formula:
 
-    AMSI Score = (
-        YouTube Views Score    × 0.30 +
-        YouTube Engagement     × 0.15 +
-        Reddit Volume Score    × 0.20 +
-        Google Trends Score    × 0.20 +
-        News Impact Score      × 0.15 +
-        X Mentions Score       × 0.10   ← additive signal
-    ) × 1000
+    HYPE_SCORE = (
+        0.4 × normalize(short) +
+        0.2 × normalize(acceleration) +
+        0.4 × normalize(baseline)
+    ) × log(1 + baseline) × 1000
 
-Sub-scores normalize against the top performer in the current batch
-(top = 1.0) so the leaderboard is always relative to today's slate.
+Where baseline is the weighted sum of source scores normalized
+against the top performer in the current batch:
+
+    baseline = (
+        youtube_views    × 0.35 +
+        x_mentions       × 0.25 +
+        reddit_volume    × 0.20 +
+        google_trends    × 0.15 +
+        news_impact      × 0.05
+    )
+
+Definitions:
+    baseline:      weighted sum of all source scores (0..1 each)
+    short:         average of last 3 data points (baseline values)
+    acceleration:  rate of change between short and previous short window
 
 Input  → list[dict] of raw movie data from scripts/fetch_data.py
 Output → same list with `scores`, `score`, `sentiment_pct` fields populated
@@ -24,17 +33,17 @@ Output → same list with `scores`, `score`, `sentiment_pct` fields populated
 from __future__ import annotations
 
 import logging
-from typing import Any, Dict, Iterable, List
+import math
+from typing import Any, Dict, List
 
 LOG = logging.getLogger("score")
 
 WEIGHTS = {
-    "youtube_views":      0.30,
-    "youtube_engagement": 0.15,
-    "reddit_volume":      0.20,
-    "google_trends":      0.20,
-    "news_impact":        0.15,
-    "x_mentions":         0.10,
+    "youtube_views":  0.35,
+    "x_mentions":     0.25,
+    "reddit_volume":  0.20,
+    "google_trends":  0.15,
+    "news_impact":    0.05,
 }
 
 
@@ -176,26 +185,66 @@ def score_movies(movies: List[Dict[str, Any]],
     nis      = _news_impact(movies, weights)
     xm       = _x_mentions(movies)
 
-    # Pass 1: compute raw weighted aggregates in [0..1]
-    raw_aggregates: List[float] = []
+    # Pass 1: compute baseline per movie (weighted sum of source scores)
+    baselines: List[float] = []
     for i in range(len(movies)):
-        raw = (
-            yt_views[i] * WEIGHTS["youtube_views"]      +
-            yt_eng[i]   * WEIGHTS["youtube_engagement"] +
-            rd_vol[i]   * WEIGHTS["reddit_volume"]      +
-            gt[i]       * WEIGHTS["google_trends"]      +
-            nis[i]      * WEIGHTS["news_impact"]        +
-            xm[i]       * WEIGHTS["x_mentions"]
+        bl = (
+            yt_views[i] * WEIGHTS["youtube_views"]  +
+            xm[i]       * WEIGHTS["x_mentions"]     +
+            rd_vol[i]   * WEIGHTS["reddit_volume"]  +
+            gt[i]       * WEIGHTS["google_trends"]  +
+            nis[i]      * WEIGHTS["news_impact"]
         )
-        raw_aggregates.append(raw)
+        baselines.append(bl)
 
-    # Pass 2: rescale into V1's familiar 800-999 range. Top performer = 999,
-    # bottom = 800. Floor of 800 gives the dashboard the "live exchange" feel
-    # of an active leaderboard rather than a sparse 0-1000 scale where most
-    # rows clump near zero.
+    # Pass 2: compute short (avg of last 3 data points) and acceleration.
+    # _momentum_history holds the last 3 baseline values per movie.
+    # On first run there's no history, so short = baseline and accel = 0.
+    for i, m in enumerate(movies):
+        history = list(m.get("_momentum_history") or [])
+        history.append(baselines[i])
+        # Keep only last 3
+        history = history[-3:]
+        m["_momentum_history"] = history
+
+    shorts: List[float] = []
+    accels: List[float] = []
+    for i, m in enumerate(movies):
+        history = m["_momentum_history"]
+        short = sum(history) / len(history)
+        shorts.append(short)
+
+        # Acceleration: difference between current short and previous short window
+        if len(history) >= 2:
+            prev_short = sum(history[:-1]) / len(history[:-1])
+            accel = short - prev_short
+        else:
+            accel = 0.0
+        accels.append(accel)
+
+    # Normalize short and acceleration across the batch
+    norm_short = _normalize(shorts)
+    # Acceleration can be negative — shift to 0-based before normalizing
+    accel_min = min(accels) if accels else 0.0
+    shifted_accels = [a - accel_min for a in accels]
+    norm_accel = _normalize(shifted_accels)
+    norm_baseline = _normalize(baselines)
+
+    # Pass 3: HypeScore formula
+    raw_scores: List[float] = []
+    for i in range(len(movies)):
+        momentum = (
+            0.4 * norm_short[i] +
+            0.2 * norm_accel[i] +
+            0.4 * norm_baseline[i]
+        )
+        hype = momentum * math.log(1 + baselines[i]) * 1000
+        raw_scores.append(hype)
+
+    # Pass 4: rescale into 800-999 range
     LO, HI = 800, 999
-    raw_min = min(raw_aggregates)
-    raw_max = max(raw_aggregates)
+    raw_min = min(raw_scores)
+    raw_max = max(raw_scores)
     raw_span = raw_max - raw_min
     def _rescale(raw: float) -> int:
         if raw_span <= 0:
@@ -210,14 +259,19 @@ def score_movies(movies: List[Dict[str, Any]],
             "google_trends":      round(gt[i],       4),
             "news_impact":        round(nis[i],      4),
             "x_mentions":         round(xm[i],       4),
-            "raw_amsi":           round(raw_aggregates[i], 4),
+            "baseline":           round(baselines[i], 4),
+            "short":              round(shorts[i],    4),
+            "acceleration":       round(accels[i],    4),
+            "raw_hype":           round(raw_scores[i], 4),
         }
-        amsi_int = _rescale(raw_aggregates[i])
+        hype_int = _rescale(raw_scores[i])
 
         m["sub_scores"]    = sub
-        m["score"]         = amsi_int
-        m["scores"]        = {"1d": amsi_int, "7d": amsi_int, "30d": amsi_int}
+        m["score"]         = hype_int
+        m["scores"]        = {"1d": hype_int, "7d": hype_int, "30d": hype_int}
         m["sentiment_pct"] = _sentiment_pct(m)
+        # Clean up internal field
+        del m["_momentum_history"]
 
     return movies
 
@@ -243,7 +297,7 @@ def main() -> int:
     cfg = json.loads(args.config.read_text())
     scored = score_movies(raw["movies"], cfg.get("outlet_tier_weights", {}))
 
-    LOG.info("Top 10 by AMSI:")
+    LOG.info("Top 10 by HypeScore:")
     for m in sorted(scored, key=lambda x: x["score"], reverse=True)[:10]:
         LOG.info("  %4d  %s", m["score"], m.get("title"))
     return 0

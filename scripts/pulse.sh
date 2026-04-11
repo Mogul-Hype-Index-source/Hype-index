@@ -2,7 +2,7 @@
 #
 # MoviePass Hype Index V2 — hourly pulse
 # =======================================
-# 1. Run scripts/update.py (TMDb / YouTube / Reddit / Trends / RSS → AMSI)
+# 1. Run scripts/update.py (TMDb / YouTube / Reddit / Trends / X / RSS → HypeScore)
 # 2. Commit any changes under data/
 # 3. Push to GitHub so Pages picks up the new pulse
 #

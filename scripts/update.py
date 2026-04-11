@@ -6,7 +6,7 @@ Run this every hour. It does the following:
 
   1. Loads config.json
   2. Calls fetch_data.fetch_all()  → raw signal from all 5 sources
-  3. Calls score.score_movies()    → AMSI 0-1000 per movie
+  3. Calls score.score_movies()    → HypeScore 0-1000 per movie
   4. Loads yesterday's snapshot from data/historical/ to compute:
         • rank movement   (current rank vs 24h ago)
         • is_new flag     (not present in yesterday's index)
@@ -205,7 +205,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
                         generated_at: datetime,
                         poster_base: str = "https://image.tmdb.org/t/p/w185",
                         x_counts: Optional[Dict[str, int]] = None) -> Dict[str, Any]:
-    # Rank by AMSI score
+    # Rank by HypeScore
     scored.sort(key=lambda m: m.get("score", 0), reverse=True)
     for i, m in enumerate(scored, 1):
         m["rank"] = i
