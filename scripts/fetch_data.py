@@ -341,6 +341,96 @@ def fetch_tmdb_movies(api_key: str, max_count: int = 100) -> List[Dict[str, Any]
     return movies[:max_count]
 
 
+MANUAL_MOVIES_PATH = REPO_ROOT / "data" / "manual_movies.json"
+MANUAL_TMDB_CACHE_PATH = REPO_ROOT / "data" / "cache" / "manual_tmdb_ids.json"
+
+
+def fetch_tmdb_search(api_key: str, title: str, year: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    """
+    Search TMDb by title (and optional year) to find a movie's ID and metadata.
+    Returns the top result as a movie dict, or None.
+    """
+    params: Dict[str, Any] = {"api_key": api_key, "query": title, "language": "en-US"}
+    if year:
+        params["year"] = year
+    data = _http_get(f"{TMDB_BASE}/search/movie", params=params)
+    if not data:
+        return None
+    results = data.get("results") or []
+    if not results:
+        # Retry without year if no results
+        if year:
+            params.pop("year")
+            data = _http_get(f"{TMDB_BASE}/search/movie", params=params)
+            results = (data or {}).get("results") or []
+        if not results:
+            return None
+    r = results[0]
+    tid = r.get("id")
+    if tid is None:
+        return None
+    return {
+        "tmdb_id": tid,
+        "title": r.get("title") or r.get("original_title") or title,
+        "release_date": r.get("release_date") or "",
+        "popularity": r.get("popularity") or 0.0,
+        "poster_path": r.get("poster_path"),
+        "overview": r.get("overview") or "",
+        "vote_average": r.get("vote_average") or 0.0,
+        "vote_count": r.get("vote_count") or 0,
+    }
+
+
+def _load_manual_movies(api_key: str) -> List[Dict[str, Any]]:
+    """
+    Load data/manual_movies.json and resolve each title to TMDb metadata.
+    Caches TMDb IDs in data/cache/manual_tmdb_ids.json so we only search
+    once per title across runs.
+    """
+    if not MANUAL_MOVIES_PATH.exists():
+        return []
+    try:
+        entries = json.loads(MANUAL_MOVIES_PATH.read_text())
+    except Exception:  # noqa: BLE001
+        return []
+    if not entries:
+        return []
+
+    # Load cached title→tmdb_id mappings
+    id_cache = _load_json(MANUAL_TMDB_CACHE_PATH)
+    id_cache_before = dict(id_cache)
+    movies: List[Dict[str, Any]] = []
+
+    for entry in entries:
+        title = entry.get("title", "").strip()
+        if not title:
+            continue
+        rd = entry.get("release_date") or ""
+        year = rd[:4] if rd and len(rd) >= 4 else None
+
+        # Check cache first
+        cached = id_cache.get(title)
+        if cached and isinstance(cached, dict) and cached.get("tmdb_id"):
+            movies.append(cached)
+            continue
+
+        # Search TMDb
+        result = fetch_tmdb_search(api_key, title, year=year)
+        if result:
+            id_cache[title] = result
+            movies.append(result)
+            LOG.info("Manual movie resolved: %s → tmdb_id=%d", title, result["tmdb_id"])
+        else:
+            LOG.warning("Manual movie not found on TMDb: %s", title)
+        time.sleep(0.15)
+
+    if id_cache != id_cache_before:
+        _save_json(MANUAL_TMDB_CACHE_PATH, id_cache)
+        LOG.info("Manual TMDb ID cache: %d entries persisted", len(id_cache))
+
+    return movies
+
+
 def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, Any]:
     """
     Returns:
@@ -998,8 +1088,19 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
 
     LOG.info("=== Fetch start (limit=%d) ===", max_count)
 
-    # 1. Movie universe
+    # 1. Movie universe — TMDb discovery + V1 manual list merge
     movies = fetch_tmdb_movies(tmdb_key, max_count=max_count)
+    tmdb_ids = {m["tmdb_id"] for m in movies}
+
+    manual = _load_manual_movies(tmdb_key)
+    added = 0
+    for mm in manual:
+        if mm["tmdb_id"] not in tmdb_ids:
+            movies.append(mm)
+            tmdb_ids.add(mm["tmdb_id"])
+            added += 1
+    LOG.info("Manual movie merge: %d V1 titles, %d new (total %d)",
+             len(manual), added, len(movies))
 
     # 2. News feeds (single shot, used for both ticker + per-movie NIS)
     news_items = fetch_news_feeds(feeds)
