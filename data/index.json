@@ -1,99 +1,83 @@
 {
-  "version": "v18.1",
-  "snapshotUTC": "2026-04-11T06:00:00Z",
-  "generatedUTC": "2026-04-11T06:25:00Z",
-  "ticker": [
+  "version": "v19.1",
+  "snapshotUTC": "2026-04-11T09:00:00Z",
+  "generatedUTC": "2026-04-11T09:00:57Z",
+  "movies": [
     {
-      "tab": "Movies",
-      "rank": 1,
       "name": "Michael (2026)",
-      "headline": "Performance resonance hits saturation ceiling following fresh domestic projections ($55M opening)."
-    },
-    {
-      "tab": "Movies",
-      "rank": 2,
-      "name": "Super Mario Galaxy Movie",
-      "headline": "Global blockbuster dominance persists at the sentiment hard cap."
-    },
-    {
-      "tab": "Actors",
       "rank": 1,
-      "name": "Milly Alcock",
-      "headline": "Solidified as #1 Actor behind surging Supergirl production chatter."
+      "move": 0,
+      "amsi": 999.0,
+      "nis": 93.8,
+      "mentions": 295000,
+      "sentiment": "Very Positive",
+      "headline": "Performance resonance reaching peak saturation ceiling."
+    },
+    {
+      "name": "Super Mario Galaxy Movie",
+      "rank": 2,
+      "move": 0,
+      "amsi": 999.0,
+      "nis": 93.0,
+      "mentions": 288000,
+      "sentiment": "Very Positive",
+      "headline": "Global actuals driving sustained retention at hard cap."
+    },
+    {
+      "name": "Project Hail Mary",
+      "rank": 3,
+      "move": 0,
+      "amsi": 994.0,
+      "nis": 93.5,
+      "mentions": 145000,
+      "sentiment": "Positive",
+      "headline": "Artemis II resonance driving elite sci-fi persistence."
+    },
+    {
+      "name": "The Drama (A24)",
+      "rank": 4,
+      "move": 0,
+      "amsi": 984.0,
+      "nis": 84.6,
+      "mentions": 112000,
+      "sentiment": "Positive",
+      "headline": "Opening weekend momentum outperforming benchmarks."
     }
   ],
-  "tabs": [
+  "actors": [
     {
-      "id": "movies",
-      "label": "Movies",
-      "items": [
-        {
-          "rank": 1,
-          "move": 0,
-          "name": "Michael (2026)",
-          "amsi": 999.0,
-          "nis": 98.8,
-          "mentions": 285000,
-          "sentiment": "Very Positive",
-          "headline": "Jaafar Jackson performance resonance is hitting saturation levels."
-        },
-        {
-          "rank": 2,
-          "move": 0,
-          "name": "Super Mario Galaxy Movie",
-          "amsi": 999.0,
-          "nis": 98.5,
-          "mentions": 278000,
-          "sentiment": "Very Positive",
-          "headline": "Global box office passes $445.6M; blockbuster dominance continues."
-        },
-        {
-          "rank": 3,
-          "move": 0,
-          "name": "Project Hail Mary",
-          "amsi": 994.0,
-          "nis": 93.5,
-          "mentions": 138000,
-          "sentiment": "Positive",
-          "headline": "Artemis II resonance driving sustained elite sci-fi persistence."
-        },
-        {
-          "rank": 4,
-          "move": 1,
-          "name": "The Drama (A24)",
-          "amsi": 980.0,
-          "nis": 88.2,
-          "mentions": 105000,
-          "sentiment": "Positive",
-          "headline": "Opening surge continues; outperforming previous Q2 benchmarks."
-        }
-      ]
+      "name": "Milly Alcock",
+      "rank": 1,
+      "move": 0,
+      "amsi": 999.0,
+      "nis": 89.7,
+      "mentions": 245000,
+      "sentiment": "Very Positive",
+      "headline": "Supergirl production chatter reaches record engagement."
     },
     {
-      "id": "actors",
-      "label": "Actors",
-      "items": [
-        {
-          "rank": 1,
-          "move": 0,
-          "name": "Milly Alcock",
-          "amsi": 999.0,
-          "nis": 94.8,
-          "mentions": 235000,
-          "sentiment": "Very Positive",
-          "headline": "Supergirl production chatter reaches new record engagement levels."
-        },
-        {
-          "rank": 2,
-          "move": 0,
-          "name": "Zendaya",
-          "amsi": 992.0,
-          "nis": 90.2,
-          "mentions": 135000,
-          "sentiment": "Positive",
-          "headline": "Surging at #2 Actor driven by press-tour resonance and Tom Holland support."
-        }
-      ]
+      "name": "Zendaya",
+      "rank": 2,
+      "move": 0,
+      "amsi": 994.0,
+      "nis": 87.8,
+      "mentions": 142000,
+      "sentiment": "Positive",
+      "headline": "Surging at #2 Actor driven by immersive press-tour resonance."
+    }
+  ],
+  "ticker": [
+    {
+      "name": "Michael (2026)",
+      "headline": "Performance resonance reaching peak saturation ceiling."
+    },
+    {
+      "name": "Super Mario Galaxy Movie",
+      "headline": "Global box office dominance continues at sentiment hard cap."
+    },
+    {
+      "name": "Milly Alcock",
+      "headline": "Solidified as #1 Actor behind surging Supergirl production resonance."
     }
   ]
 }
