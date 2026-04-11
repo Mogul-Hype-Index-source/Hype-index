@@ -727,19 +727,20 @@ def _get_x_bearer_token() -> Optional[str]:
 
 def fetch_x_mention_count(query: str, bearer_token: str) -> int:
     """
-    GET /2/tweets/counts/recent for `query` over the last 7 days.
-    Returns the total tweet count. Returns 0 on any failure.
+    GET /2/tweets/search/recent for `query` (free tier).
+    Uses max_results=10 and reads result_count from the meta field.
+    Returns 0 on any failure.
     """
     data = _http_get(
-        f"{X_API_BASE}/tweets/counts/recent",
-        params={"query": query, "granularity": "day"},
+        f"{X_API_BASE}/tweets/search/recent",
+        params={"query": query, "max_results": 10},
         headers={"Authorization": f"Bearer {bearer_token}"},
         retries=1,
         backoff=3.0,
     )
     if not data:
         return 0
-    return int(data.get("meta", {}).get("total_tweet_count", 0))
+    return int(data.get("meta", {}).get("result_count", 0))
 
 
 def fetch_x_mentions_batch(queries: Dict[str, str],
