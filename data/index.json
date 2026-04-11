@@ -1,1 +1,89 @@
-{"version":"v17.1","snapshotUTC":"2026-04-11T01:00:00Z","generatedUTC":"2026-04-11T01:09:55Z","ticker":[{"tab":"Movies","rank":1,"name":"Michael(2026)","headline":"Saturationceilingmaintained;JaafarJacksonperformanceresonanceremainspeak."},{"tab":"Movies","rank":2,"name":"SuperMarioGalaxyMovie","headline":"Globalboxofficedominancecontinuesatsentimentceiling."},{"tab":"Actors","rank":1,"name":"MillyAlcock","headline":"Supergirlproductionbuzzhitsnewrecordhighs."}],"tabs":[{"id":"movies","label":"Movies","items":[{"rank":1,"move":0,"name":"Michael(2026)","amsi":999.0,"nis":98.5,"mentions":268770,"sentiment":"VeryPositive","headline":"Saturationceilingmaintained;performanceresonanceremainspeak."},{"rank":2,"move":0,"name":"SuperMarioGalaxyMovie","amsi":999.0,"nis":98.1,"mentions":245900,"sentiment":"VeryPositive","headline":"Globalboxofficedominancecontinuesintoweekend."},{"rank":3,"move":1,"name":"EchoesofTomorrow","amsi":988.1,"nis":92.4,"mentions":115000,"sentiment":"Positive","headline":"Sci-firesonancesurgingontrailerrelease."}]},{"id":"actors","label":"Actors","items":[{"rank":1,"move"":0,"name":"MillyAlcock","amsi":999.0,"nis":93.8,"mentions":217890,"sentiment":"VeryPositive","headline":"Supergirlproductionbuzzreachingnewengagementhighs."},{"rank":2,"move":1,"name":"Zendaya","amsi":987.0,"nis":88.5,"mentions":118700,"sentiment":"Positive","headline":"SustainedspeculationregardingAvengers:Doomsdayrole."}]}]}]}
+{
+  "version": "v17.3",
+  "snapshotUTC": "2026-04-11T03:00:00Z",
+  "generatedUTC": "2026-04-11T03:55:00Z",
+  "ticker": [
+    {
+      "tab": "Movies",
+      "rank": 1,
+      "name": "Michael (2026)",
+      "headline": "Performance resonance hits saturation ceiling following international tracking updates."
+    },
+    {
+      "tab": "Movies",
+      "rank": 2,
+      "name": "Super Mario Galaxy Movie",
+      "headline": "Global box office passes $445.6M; blockbuster dominance continues at sentiment hard cap."
+    },
+    {
+      "tab": "Actors",
+      "rank": 1,
+      "name": "Milly Alcock",
+      "headline": "Supergirl production chatter reaches new record engagement levels."
+    }
+  ],
+  "tabs": [
+    {
+      "id": "movies",
+      "label": "Movies",
+      "items": [
+        {
+          "rank": 1,
+          "move": 0,
+          "name": "Michael (2026)",
+          "amsi": 999.0,
+          "nis": 98.8,
+          "mentions": 282000,
+          "sentiment": "Very Positive",
+          "headline": "Performance resonance hits saturation ceiling following international tracking updates."
+        },
+        {
+          "rank": 2,
+          "move": 0,
+          "name": "Super Mario Galaxy Movie",
+          "amsi": 999.0,
+          "nis": 98.5,
+          "mentions": 275000,
+          "sentiment": "Very Positive",
+          "headline": "Global box office passes $445.6M; blockbuster dominance continues at sentiment hard cap."
+        },
+        {
+          "rank": 3,
+          "move": 0,
+          "name": "Project Hail Mary",
+          "amsi": 994.0,
+          "nis": 93.2,
+          "mentions": 135000,
+          "sentiment": "Positive",
+          "headline": "TheaterEars Directors’ Experience commentary driving sustained domestic strength."
+        }
+      ]
+    },
+    {
+      "id": "actors",
+      "label": "Actors",
+      "items": [
+        {
+          "rank": 1,
+          "move": 0,
+          "name": "Milly Alcock",
+          "amsi": 999.0,
+          "nis": 94.5,
+          "mentions": 232000,
+          "sentiment": "Very Positive",
+          "headline": "Supergirl production chatter reaches new record engagement levels."
+        },
+        {
+          "rank": 2,
+          "move": 0,
+          "name": "Zendaya",
+          "amsi": 992.0,
+          "nis": 89.8,
+          "mentions": 132000,
+          "sentiment": "Positive",
+          "headline": "Surging at #2 driven by Tom Holland 'The Drama' premiere support."
+        }
+      ]
+    }
+  ]
+}
