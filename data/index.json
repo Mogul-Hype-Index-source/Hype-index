@@ -1,1 +1,81 @@
-{"meta":{"title":"Mogul Hype Index","asOf":"2026-04-12T18:00:00Z","scoreLabel":"AMSI"},"ticker":[{"source":"Variety","headline":"Jaafar Jackson's 'Billie Jean' split-screen rehearsal footage goes viral; 'Michael' anticipation hits hard cap."},{"source":"Deadline","headline":"Super Mario Galaxy Movie global total reaches $629M; 2nd weekend hold (-48%) sets 2026 domestic record."},{"source":"Hollywood Reporter","headline":"Project Hail Mary trailer soundtrack featuring Harry Styles drives emotional surge; Milly Alcock Supergirl suit praised for 'clean' design."}],"movies":[{"rank":1,"move":0,"entity":"Super Mario Galaxy Movie","metadata":"Release: Apr 2026","mentions":142000,"sentiment":99,"score":999.0},{"rank":2,"move":0,"entity":"Michael (2026)","metadata":"Release: Apr 2026","mentions":135000,"sentiment":99,"score":999.0},{"rank":3,"move":0,"entity":"Project Hail Mary","metadata":"Release: 2026","mentions":51000,"sentiment":98,"score":996.5}],"actors":[{"rank":1,"move":0,"entity":"Milly Alcock","metadata":"Supergirl / DCU Momentum","mentions":112000,"sentiment":99,"score":999.0},{"rank":2,"move":0,"entity":"Zendaya","metadata":"Doomsday / Spider-Man Spec","mentions":108000,"sentiment":99,"score":999.0}],"directors":[{"rank":1,"move":0,"entity":"Antoine Fuqua","metadata":"Michael (2026)","mentions":18500,"sentiment":98,"score":975.0}]}
+{
+  "meta": {
+    "title": "Mogul Hype Index",
+    "asOf": "2026-04-12T21:00:00Z",
+    "scoreLabel": "AMSI"
+  },
+  "ticker": [
+    {
+      "source": "Variety",
+      "headline": "Project Hail Mary hits sentiment ceiling (999.0 AMSI) as trailer soundtrack featuring Harry Styles goes triple-platinum in social engagement."
+    },
+    {
+      "source": "Deadline",
+      "headline": "Super Mario Galaxy Movie weekend actuals revised to $635M; sets all-time record for April theatrical retention."
+    },
+    {
+      "source": "Hollywood Reporter",
+      "headline": "Michael (2026) Jaafar Jackson rehearsal leak reaches 500M views; sentiment remains hard-capped at 999.0 AMSI."
+    }
+  ],
+  "movies": [
+    {
+      "rank": 1,
+      "move": 0,
+      "entity": "Michael (2026)",
+      "metadata": "Release: Apr 2026",
+      "mentions": 148000,
+      "sentiment": 99,
+      "score": 999.0
+    },
+    {
+      "rank": 2,
+      "move": 0,
+      "entity": "Super Mario Galaxy Movie",
+      "metadata": "Release: Apr 2026",
+      "mentions": 142000,
+      "sentiment": 99,
+      "score": 999.0
+    },
+    {
+      "rank": 3,
+      "move": 0,
+      "entity": "Project Hail Mary",
+      "metadata": "Release: 2026",
+      "mentions": 68000,
+      "sentiment": 99,
+      "score": 999.0
+    }
+  ],
+  "actors": [
+    {
+      "rank": 1,
+      "move": 0,
+      "entity": "Milly Alcock",
+      "metadata": "Supergirl / DCU Momentum",
+      "mentions": 124000,
+      "sentiment": 99,
+      "score": 999.0
+    },
+    {
+      "rank": 2,
+      "move": 0,
+      "entity": "Zendaya",
+      "metadata": "Doomsday / Spider-Man Spec",
+      "mentions": 115000,
+      "sentiment": 99,
+      "score": 999.0
+    }
+  ],
+  "directors": [
+    {
+      "rank": 1,
+      "move": 0,
+      "entity": "Antoine Fuqua",
+      "metadata": "Michael (2026)",
+      "mentions": 21000,
+      "sentiment": 98,
+      "score": 982.5
+    }
+  ]
+}
