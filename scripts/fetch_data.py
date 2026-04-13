@@ -196,6 +196,41 @@ def _passes_global_filter(headline: str) -> bool:
     return False
 
 
+def _load_entity_tags() -> List[str]:
+    """
+    Load all tags from data/manual_movies.json entries.
+    Returns a flat list of unique lowercase tag strings.
+    """
+    p = REPO_ROOT / "data" / "manual_movies.json"
+    if not p.exists():
+        return []
+    try:
+        entries = json.loads(p.read_text())
+    except Exception:  # noqa: BLE001
+        return []
+    tags: set = set()
+    for entry in entries:
+        for tag in (entry.get("tags") or []):
+            tags.add(tag.lower())
+        # Also add movie titles as keywords so headlines mentioning
+        # tracked films pass through
+        title = (entry.get("title") or "").strip()
+        if title:
+            tags.add(title.lower())
+    return list(tags)
+
+
+def _passes_tag_filter(headline: str, entity_tags: List[str]) -> bool:
+    """True if the headline contains at least one entity tag."""
+    if not headline or not entity_tags:
+        return False
+    norm = _normalize_for_match(headline)
+    for tag in entity_tags:
+        if _kw_matches(_normalize_for_match(tag), norm):
+            return True
+    return False
+
+
 # ---------------------------------------------------------------------------
 # Config + HTTP helpers
 # ---------------------------------------------------------------------------
@@ -414,8 +449,9 @@ def _load_manual_movies(api_key: str) -> List[Dict[str, Any]]:
             movies.append(cached)
             continue
 
-        # Search TMDb
-        result = fetch_tmdb_search(api_key, title, year=year)
+        # Search TMDb — use search_query override if provided
+        search_title = entry.get("search_query") or title
+        result = fetch_tmdb_search(api_key, search_title, year=year)
         if result:
             id_cache[title] = result
             movies.append(result)
@@ -960,7 +996,8 @@ def fetch_google_trends(titles: List[str], force: bool = False) -> Dict[str, int
 # ---------------------------------------------------------------------------
 
 def fetch_news_feeds(feeds: List[Dict[str, str]],
-                     force: bool = False) -> List[Dict[str, Any]]:
+                     force: bool = False,
+                     entity_tags: Optional[List[str]] = None) -> List[Dict[str, Any]]:
     """
     Returns a flat, time-sorted list of news items from all configured feeds.
 
@@ -990,6 +1027,7 @@ def fetch_news_feeds(feeds: List[Dict[str, str]],
         url              = feed.get("url", "")
         default_category = feed.get("default_category", "production")
         filter_strict    = bool(feed.get("filter_strict", False))
+        use_tag_filter   = bool(feed.get("filter_by_tags", False))
         if not url:
             continue
         try:
@@ -1009,12 +1047,13 @@ def fetch_news_feeds(feeds: List[Dict[str, str]],
                 rejected_sports += 1
                 continue
 
-            # Global keyword whitelist — applies to ALL sources per spec.
-            # Headlines must contain at least one tracked entertainment
-            # token, otherwise they're dropped. The `filter_strict` flag
-            # is now redundant (kept in config for documentation) since
-            # every source goes through the same filter.
-            if not _passes_global_filter(headline):
+            # Geopolitical feeds use entity-tag filter instead of
+            # the entertainment keyword whitelist.
+            if use_tag_filter:
+                if not (entity_tags and _passes_tag_filter(headline, entity_tags)):
+                    rejected_offtopic += 1
+                    continue
+            elif not _passes_global_filter(headline):
                 rejected_offtopic += 1
                 continue
 
@@ -1103,7 +1142,8 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
              len(manual), added, len(movies))
 
     # 2. News feeds (single shot, used for both ticker + per-movie NIS)
-    news_items = fetch_news_feeds(feeds)
+    entity_tags = _load_entity_tags()
+    news_items = fetch_news_feeds(feeds, entity_tags=entity_tags)
 
     # Trailer-ID cache (tmdb_id → youtube video_id) so we never re-search
     trailer_cache: Dict[str, str] = _load_trailer_cache()

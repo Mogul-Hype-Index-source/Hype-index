@@ -20,7 +20,10 @@
     {"source": "Yahoo Finance · WBD",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=WBD&region=US&lang=en-US", "default_category": "finance",      "filter_strict": false},
     {"source": "Yahoo Finance · NFLX", "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=NFLX&region=US&lang=en-US","default_category": "finance",      "filter_strict": false},
     {"source": "Yahoo Finance · CMCSA","url":"https://feeds.finance.yahoo.com/rss/2.0/headline?s=CMCSA&region=US&lang=en-US","default_category": "finance",      "filter_strict": false},
-    {"source": "Yahoo Finance · AMC",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AMC&region=US&lang=en-US", "default_category": "finance",      "filter_strict": false}
+    {"source": "Yahoo Finance · AMC",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AMC&region=US&lang=en-US", "default_category": "finance",      "filter_strict": false},
+    {"source": "Al Jazeera",           "url": "https://www.aljazeera.com/xml/rss/all.xml",                                    "default_category": "international","filter_by_tags": true},
+    {"source": "Reuters",              "url": "https://feeds.reuters.com/reuters/topNews",                                     "default_category": "international","filter_by_tags": true},
+    {"source": "BBC World",            "url": "https://feeds.bbci.co.uk/news/world/rss.xml",                                  "default_category": "international","filter_by_tags": true}
   ],
   "outlet_tier_weights": {
     "Deadline": 1.0,
