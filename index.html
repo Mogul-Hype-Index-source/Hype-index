@@ -1221,8 +1221,9 @@ function renderMoviesTable(){
 
 function renderMovieRow(m, rank){
   const move   = m.move || 0;
-  const mvCls  = move > 0 ? 'up' : (move < 0 ? 'down' : 'flat');
-  const mvTxt  = move > 0 ? `▲${move}` : (move < 0 ? `▼${Math.abs(move)}` : '—');
+  const isNew  = m.is_new || (move === 0 && m.move == null);
+  const mvCls  = isNew ? 'up' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
+  const mvTxt  = isNew ? '▲' : (move > 0 ? `▲${move}` : (move < 0 ? `▼${Math.abs(move)}` : '—'));
   const badges = [];
   if (m.is_new) badges.push(`<span class="badge">NEW</span>`);
   if (m.hot)    badges.push(`<span class="fire" title="3+ days rising">🔥</span>`);
@@ -1296,8 +1297,9 @@ function renderPeopleTable(){
 
 function renderPersonRow(p, rank, detail){
   const move  = p.move || 0;
-  const mvCls = move > 0 ? 'up' : (move < 0 ? 'down' : 'flat');
-  const mvTxt = move > 0 ? `▲${move}` : (move < 0 ? `▼${Math.abs(move)}` : '—');
+  const isNew = p.is_new || (move === 0 && p.move == null);
+  const mvCls = isNew ? 'up' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
+  const mvTxt = isNew ? '▲' : (move > 0 ? `▲${move}` : (move < 0 ? `▼${Math.abs(move)}` : '—'));
   const badges = p.is_new ? `<span class="badge">NEW</span>` : '';
 
   const posterUrl = tmdbW342(p.profile_url);
