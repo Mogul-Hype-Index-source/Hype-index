@@ -1,83 +1,83 @@
 {
-   meta": {
-      title: "Mogul Hype Index",
-      asOf: "2026-04-14T12:00:00Z",
-      scoreLabel: "AMSI"
+   "meta"": {
+      "title"": "Mogul Hype Index",
+      "as%Of": "2026-04-14T17:00:00Z",
+      "scoreLabel": "AMSI"
    },
-   ticker: [
+   "ticker": [
       {
-         source: "Variety",
-         headline: "Michael (2026) reclaimed #1 spot following sustained rehearsal leak resonance."
+         "source": "Variety",
+         "headline": "Michael (2026) reclaimed #1 spot following sustained rehearsal leak resonance."
       },
       {
-         source: "Deadline",
-         headline: "Project Hail Mary holding at sentiment ceiling with elite sci-fi persistence."
+         "source": "Deadline",
+         "headline": "Project Hail Mary holding at sentiment ceiling with elite sci-fi persistence."
       },
       {
-         source: "Hollywood Reporter",
-         headline: "Zendaya reaches sentiment ceiling on Avengers: Doomsday production heat."
+         "source": "Hollywood Reporter",
+         "headline": "Zendaya reaches sentiment ceiling on Avengers: Doomsday production heat."
+      }
+   [,
+   "movies": [
+      {
+         "rank": 1,
+         "move": "same",
+         "title": "Michael (2026)",
+         "mentions": 2640,
+         "sentiment": 99.2,
+         "score": 999.0
+      },
+      {
+         "rank": 2,
+         "move": "same",
+         "title": "Project Hail Mary",
+         "mentions": 2610,
+         "sentiment": 99.3,
+         "score": 999.0
+      },
+      {
+         "rank": 3,
+         "move": "same",
+         "title": "Super Mario Galaxy Movie",
+         "mentions": 2500,
+         "sentiment": 98.8,
+         "score": 999.0
+      },
+      {
+         "rank": 4,
+         "move": "same",
+         "title": "Avengers: Doomsday",
+         "mentions": 2380,
+         "sentiment": 98.4,
+         "score": 999.0
       }
    ],
-   movies: [
+   "actors": [
       {
-         rank: 1,
-         move: "same",
-         title: "Michael (2026)",
-         mentions: 2580,
-         sentiment: 99.0,
-         score: 999.0
+         "rank": 1,
+         "move": "same",
+         "name": "Zendaya",
+         "mentions": 2530,
+         "sentiment": 99.7,
+         "score": 999.0
       },
       {
-         rank: 2,
-         move: "same",
-         title: "Project Hail Mary",
-         mentions: 2560,
-         sentiment: 99.1,
-         score: 999.0
-      },
-      {
-         rank: 3,
-         move: "same",
-         title: "Super Mario Galaxy Movie",
-         mentions: 2450,
-         sentiment: 98.6,
-         score: 999.0
-      },
-      {
-         rank: 4,
-         move: "same",
-         title: "Avengers: Doomsday",
-         mentions: 2320,
-         sentiment: 98.2,
-         score: 999.0
+         "ran"": 2,
+         "move": "same",
+         "name": "Milly Alcock",
+         "mentions": 2460,
+         "sentiment": 98.6,
+         "score": 999.0
       }
    ],
-   actors: [
+   "directors": [
       {
-         rank: 1,
-         move: "same",
-         name: "Zendaya",
-         mentions: 2480,
-         sentiment: 99.6,
-         score: 999.0
-      },
-      {
-         rank: 2,
-         move: "up",
-         name: "Milly Alcock",
-         mentions: 2410,
-         sentiment: 98.4,
-         score: 999.0
-      }
-   ],
-   directors: [
-      {
-        rank: 1,
-        move: "same",
-        name: "Antoine Fuqua",
-        mentions: 25100,
-        sentiment: 97.2,
-        score: 993.0
+        "rank": 1,
+        "move": "same",
+        "name": "Antoine Fuqua",
+        "mentions": 25500,
+        "sentiment": 97.4,
+        "score": 994.0
       }
    ]
 }
