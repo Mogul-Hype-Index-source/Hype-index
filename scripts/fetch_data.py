@@ -855,16 +855,28 @@ def fetch_x_mention_count(query: str, bearer_token: str) -> int:
     """
     GET /2/tweets/search/recent for `query` (free tier).
     Uses max_results=10 and reads result_count from the meta field.
-    Returns 0 on any failure.
+    Returns 0 on any failure. Raises RuntimeError on 402/403 so the
+    batch caller can short-circuit instead of retrying every query.
     """
-    data = _http_get(
-        f"{X_API_BASE}/tweets/search/recent",
-        params={"query": query, "max_results": 10},
-        headers={"Authorization": f"Bearer {bearer_token}"},
-        retries=1,
-        backoff=3.0,
-    )
-    if not data:
+    try:
+        r = requests.get(
+            f"{X_API_BASE}/tweets/search/recent",
+            params={"query": query, "max_results": 10},
+            headers={"Authorization": f"Bearer {bearer_token}"},
+            timeout=REQUEST_TIMEOUT,
+        )
+        if r.status_code in (402, 403):
+            raise RuntimeError(f"X API rejected with {r.status_code} — tier limit")
+        if r.status_code == 429:
+            raise RuntimeError("X API rate limited (429)")
+        if r.status_code != 200:
+            LOG.warning("X API HTTP %s for query: %s", r.status_code, query[:60])
+            return 0
+        data = r.json()
+    except RuntimeError:
+        raise
+    except Exception as exc:  # noqa: BLE001
+        LOG.warning("X API request failed: %s", exc)
         return 0
     return int(data.get("meta", {}).get("result_count", 0))
 
@@ -896,6 +908,14 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
             out[key] = count
             if count > 0:
                 any_success = True
+        except RuntimeError as exc:
+            # 402/403/429 — API tier or rate limit; stop hammering
+            LOG.warning("X API unavailable (%s) — skipping remaining %d queries",
+                        exc, len(queries) - len(out))
+            for remaining_key in queries:
+                if remaining_key not in out:
+                    out[remaining_key] = int(cached_counts.get(remaining_key, 0))
+            break
         except Exception as exc:  # noqa: BLE001
             LOG.warning("X mentions failed for %s: %s", key, exc)
             out[key] = int(cached_counts.get(key, 0))
