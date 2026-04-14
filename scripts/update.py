@@ -52,6 +52,113 @@ CACHE_DIR  = DATA_DIR / "cache"
 # its own schema. data/v2.json is exclusively V2 territory.
 INDEX_PATH = DATA_DIR / "v2.json"
 RAW_CACHE  = CACHE_DIR / "raw.json"
+VIEWS_HIST = HIST_DIR / "views"
+
+
+# ---------------------------------------------------------------------------
+# YouTube velocity helpers
+# ---------------------------------------------------------------------------
+
+def _save_view_snapshot(movies: List[Dict[str, Any]], today_iso: str) -> None:
+    """Persist current YouTube stats keyed by tmdb_id for velocity calculation."""
+    VIEWS_HIST.mkdir(parents=True, exist_ok=True)
+    snap: Dict[str, Dict[str, int]] = {}
+    for m in movies:
+        tid = str(m.get("tmdb_id", ""))
+        yt = m.get("youtube") or {}
+        snap[tid] = {
+            "views": int(yt.get("views", 0)),
+            "likes": int(yt.get("likes", 0)),
+            "comments": int(yt.get("comments", 0)),
+        }
+    path = VIEWS_HIST / f"{today_iso}.json"
+    path.write_text(json.dumps(snap, indent=2))
+    LOG.info("View snapshot → %s (%d entries)", path, len(snap))
+
+
+def _load_view_snapshot(date_iso: str) -> Dict[str, Dict[str, int]]:
+    """Load a historical views snapshot. Returns {} if not found."""
+    p = VIEWS_HIST / f"{date_iso}.json"
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text())
+    except Exception:
+        return {}
+
+
+def _enrich_youtube_velocity(movies: List[Dict[str, Any]], today: datetime) -> None:
+    """
+    Compute YouTube velocity (daily delta) for each movie.
+    Mutates movies in place, adding:
+        youtube_velocity: {views_24h, likes_24h, comments_24h}
+        views_today: int (alias for views_24h)
+        views_trend: "accelerating" | "decelerating" | "flat"
+    Falls back to 7d average, then discounted total views.
+    """
+    yesterday = (today - timedelta(days=1)).date().isoformat()
+    week_ago  = (today - timedelta(days=7)).date().isoformat()
+    two_days  = (today - timedelta(days=2)).date().isoformat()
+
+    snap_1d = _load_view_snapshot(yesterday)
+    snap_7d = _load_view_snapshot(week_ago)
+    snap_2d = _load_view_snapshot(two_days)
+
+    for m in movies:
+        tid = str(m.get("tmdb_id", ""))
+        yt = m.get("youtube") or {}
+        curr_views = int(yt.get("views", 0))
+        curr_likes = int(yt.get("likes", 0))
+        curr_comments = int(yt.get("comments", 0))
+
+        prev_1d = snap_1d.get(tid)
+        prev_7d = snap_7d.get(tid)
+        prev_2d = snap_2d.get(tid)
+
+        if prev_1d:
+            # 24h delta
+            views_24h = max(0, curr_views - prev_1d.get("views", 0))
+            likes_24h = max(0, curr_likes - prev_1d.get("likes", 0))
+            comments_24h = max(0, curr_comments - prev_1d.get("comments", 0))
+        elif prev_7d:
+            # 7d average as fallback
+            views_24h = max(0, (curr_views - prev_7d.get("views", 0)) // 7)
+            likes_24h = max(0, (curr_likes - prev_7d.get("likes", 0)) // 7)
+            comments_24h = max(0, (curr_comments - prev_7d.get("comments", 0)) // 7)
+        else:
+            # No history: estimate daily velocity from total views and release date
+            rd = m.get("release_date") or ""
+            try:
+                release = datetime.strptime(rd, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                days_out = max(1, (today - release).days)
+            except (ValueError, TypeError):
+                days_out = 30  # unknown release → assume ~1 month
+            # Heavy discount: divide by days since release, cap at 90 days
+            days_out = min(days_out, 90)
+            views_24h = curr_views // days_out
+            likes_24h = curr_likes // days_out
+            comments_24h = curr_comments // days_out
+
+        m["youtube_velocity"] = {
+            "views_24h": views_24h,
+            "likes_24h": likes_24h,
+            "comments_24h": comments_24h,
+        }
+        m["views_today"] = views_24h
+
+        # Trend: compare today's delta to yesterday's delta
+        if prev_1d and prev_2d:
+            yesterday_delta = max(0, prev_1d.get("views", 0) - prev_2d.get("views", 0))
+            if views_24h > yesterday_delta + 1000:
+                m["views_trend"] = "accelerating"
+            elif views_24h < yesterday_delta - 1000:
+                m["views_trend"] = "decelerating"
+            else:
+                m["views_trend"] = "flat"
+        elif views_24h < 1000:
+            m["views_trend"] = "flat"
+        else:
+            m["views_trend"] = "accelerating"  # new entry with signal
 
 
 # ---------------------------------------------------------------------------
@@ -310,6 +417,8 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "youtube_likes":  int(yt.get("likes", 0)),
             "youtube_comments": int(yt.get("comments", 0)),
             "youtube_video_id": m.get("youtube_video_id"),
+            "views_today":    int(m.get("views_today") or 0),
+            "views_trend":    m.get("views_trend", "flat"),
             "reddit_posts":   int(rd.get("posts", 0)),
             "reddit_comments": int(rd.get("comments", 0)),
             "x_mentions":     int(m.get("x_mentions") or 0),
@@ -410,14 +519,18 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
         RAW_CACHE.write_text(json.dumps(raw, indent=2))
         LOG.info("Cached raw fetch → %s", RAW_CACHE)
 
+    # 1a. YouTube velocity — compute daily deltas before scoring
+    generated_at = datetime.now(timezone.utc).replace(microsecond=0)
+    _enrich_youtube_velocity(raw["movies"], generated_at)
+
     # 2. Score
     scored = score.score_movies(
         raw["movies"],
         outlet_weights=cfg.get("outlet_tier_weights", {}),
     )
 
-    # 3. Assemble
-    generated_at = datetime.now(timezone.utc).replace(microsecond=0)
+    # 2a. Save view snapshot for tomorrow's velocity calculation
+    _save_view_snapshot(raw["movies"], generated_at.date().isoformat())
     payload = build_index_payload(
         scored, raw["news"], generated_at,
         poster_base=cfg.get("tmdb_image_base", "https://image.tmdb.org/t/p/w185"),

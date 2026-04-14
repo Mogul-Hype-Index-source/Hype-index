@@ -14,7 +14,7 @@ Where baseline is the weighted sum of source scores normalized
 against the top performer in the current batch:
 
     baseline = (
-        youtube_views    × 0.35 +
+        youtube_velocity × 0.35 +
         x_mentions       × 0.25 +
         reddit_volume    × 0.20 +
         google_trends    × 0.15 +
@@ -62,20 +62,31 @@ def _normalize(values: List[float]) -> List[float]:
 
 
 def _youtube_views(movies: List[Dict[str, Any]]) -> List[float]:
-    raw = [float((m.get("youtube") or {}).get("views", 0)) for m in movies]
+    """YouTube velocity (views_24h delta) instead of cumulative views."""
+    raw = [float((m.get("youtube_velocity") or {}).get("views_24h", 0)
+                 or (m.get("youtube") or {}).get("views", 0))
+           for m in movies]
     return _normalize(raw)
 
 
 def _youtube_engagement(movies: List[Dict[str, Any]]) -> List[float]:
-    """(likes + comments) / views, then normalized."""
+    """Engagement velocity: (likes_24h + comments_24h) / views_24h, normalized."""
     raw: List[float] = []
     for m in movies:
-        yt = m.get("youtube") or {}
-        views = float(yt.get("views", 0))
+        vel = m.get("youtube_velocity") or {}
+        views = float(vel.get("views_24h", 0))
         if views <= 0:
-            raw.append(0.0)
+            # Fall back to cumulative ratio if no velocity data
+            yt = m.get("youtube") or {}
+            cum_views = float(yt.get("views", 0))
+            if cum_views <= 0:
+                raw.append(0.0)
+            else:
+                raw.append((float(yt.get("likes", 0)) + float(yt.get("comments", 0))) / cum_views)
         else:
-            raw.append((float(yt.get("likes", 0)) + float(yt.get("comments", 0))) / views)
+            likes = float(vel.get("likes_24h", 0))
+            comments = float(vel.get("comments_24h", 0))
+            raw.append((likes + comments) / views)
     return _normalize(raw)
 
 
