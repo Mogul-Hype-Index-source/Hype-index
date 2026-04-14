@@ -89,76 +89,145 @@ def _load_view_snapshot(date_iso: str) -> Dict[str, Dict[str, int]]:
 
 def _enrich_youtube_velocity(movies: List[Dict[str, Any]], today: datetime) -> None:
     """
-    Compute YouTube velocity (daily delta) for each movie.
+    Compute YouTube rolling 7-day average velocity + spike detection.
     Mutates movies in place, adding:
-        youtube_velocity: {views_24h, likes_24h, comments_24h}
-        views_today: int (alias for views_24h)
-        views_trend: "accelerating" | "decelerating" | "flat"
-    Falls back to 7d average, then discounted total views.
+        youtube_velocity: {views_24h, views_7d_avg, likes_24h, likes_7d_avg,
+                           comments_24h, comments_7d_avg, spike_multiplier}
+        views_today:   int (24h delta)
+        views_7d_avg:  int (rolling 7d average daily delta)
+        views_trend:   "accelerating" | "decelerating" | "flat"
+        youtube_state: "breakout" | "elevated" | "normal" | "decaying" | "new"
     """
-    yesterday = (today - timedelta(days=1)).date().isoformat()
-    week_ago  = (today - timedelta(days=7)).date().isoformat()
-    two_days  = (today - timedelta(days=2)).date().isoformat()
-
-    snap_1d = _load_view_snapshot(yesterday)
-    snap_7d = _load_view_snapshot(week_ago)
-    snap_2d = _load_view_snapshot(two_days)
+    # Load all available daily snapshots for the last 8 days (need 8 to compute 7 deltas)
+    snaps: List[Dict[str, Dict[str, int]]] = []
+    snap_dates: List[str] = []
+    for i in range(8):
+        d = (today - timedelta(days=i)).date().isoformat()
+        s = _load_view_snapshot(d)
+        snaps.append(s)
+        snap_dates.append(d)
+    # snaps[0] = today (empty until we save later), snaps[1] = yesterday, etc.
 
     for m in movies:
         tid = str(m.get("tmdb_id", ""))
         yt = m.get("youtube") or {}
-        curr_views = int(yt.get("views", 0))
-        curr_likes = int(yt.get("likes", 0))
-        curr_comments = int(yt.get("comments", 0))
+        curr = {
+            "views": int(yt.get("views", 0)),
+            "likes": int(yt.get("likes", 0)),
+            "comments": int(yt.get("comments", 0)),
+        }
 
-        prev_1d = snap_1d.get(tid)
-        prev_7d = snap_7d.get(tid)
-        prev_2d = snap_2d.get(tid)
+        # Collect daily deltas for each metric from available snapshots
+        # delta[i] = snap[i] - snap[i+1] (most recent first)
+        daily_views: List[int] = []
+        daily_likes: List[int] = []
+        daily_comments: List[int] = []
 
-        if prev_1d:
-            # 24h delta
-            views_24h = max(0, curr_views - prev_1d.get("views", 0))
-            likes_24h = max(0, curr_likes - prev_1d.get("likes", 0))
-            comments_24h = max(0, curr_comments - prev_1d.get("comments", 0))
-        elif prev_7d:
-            # 7d average as fallback
-            views_24h = max(0, (curr_views - prev_7d.get("views", 0)) // 7)
-            likes_24h = max(0, (curr_likes - prev_7d.get("likes", 0)) // 7)
-            comments_24h = max(0, (curr_comments - prev_7d.get("comments", 0)) // 7)
+        # First delta: current - yesterday
+        prev_vals = [curr]  # prepend current as "today"
+        for s in snaps[1:]:  # snaps[1] = yesterday, snaps[2] = 2d ago, etc.
+            entry = s.get(tid)
+            if entry:
+                prev_vals.append(entry)
+            else:
+                break
+
+        for j in range(len(prev_vals) - 1):
+            dv = max(0, prev_vals[j]["views"] - prev_vals[j + 1]["views"])
+            dl = max(0, prev_vals[j]["likes"] - prev_vals[j + 1]["likes"])
+            dc = max(0, prev_vals[j]["comments"] - prev_vals[j + 1]["comments"])
+            daily_views.append(dv)
+            daily_likes.append(dl)
+            daily_comments.append(dc)
+
+        history_days = len(daily_views)
+
+        if history_days >= 2:
+            # We have real delta data
+            views_24h = daily_views[0]
+            likes_24h = daily_likes[0]
+            comments_24h = daily_comments[0]
+
+            # Rolling 7d average (use available days, up to 7)
+            avg_window = daily_views[:7]
+            views_7d_avg = sum(avg_window) // len(avg_window)
+            likes_7d_avg = sum(daily_likes[:7]) // max(1, len(daily_likes[:7]))
+            comments_7d_avg = sum(daily_comments[:7]) // max(1, len(daily_comments[:7]))
+
+            # Spike detection
+            if views_7d_avg > 0:
+                ratio = views_24h / views_7d_avg
+            else:
+                ratio = 1.0 if views_24h == 0 else 3.0
+
+            if ratio > 3.0:
+                spike_mult = 2.0
+                state = "breakout"
+            elif ratio > 1.5:
+                spike_mult = 1.4
+                state = "elevated"
+            elif ratio < 0.3 and views_7d_avg > 1000:
+                spike_mult = 1.0
+                state = "decaying"
+            else:
+                spike_mult = 1.0
+                state = "normal"
+
+        elif history_days == 1:
+            # Only 1 delta available
+            views_24h = daily_views[0]
+            likes_24h = daily_likes[0]
+            comments_24h = daily_comments[0]
+            views_7d_avg = views_24h
+            likes_7d_avg = likes_24h
+            comments_7d_avg = comments_24h
+            spike_mult = 1.0
+            state = "new"
+
         else:
-            # No history: estimate daily velocity from total views and release date
+            # No history: estimate from total views / days since release
             rd = m.get("release_date") or ""
             try:
                 release = datetime.strptime(rd, "%Y-%m-%d").replace(tzinfo=timezone.utc)
                 days_out = max(1, (today - release).days)
             except (ValueError, TypeError):
-                days_out = 30  # unknown release → assume ~1 month
-            # Heavy discount: divide by days since release, cap at 90 days
+                days_out = 30
             days_out = min(days_out, 90)
-            views_24h = curr_views // days_out
-            likes_24h = curr_likes // days_out
-            comments_24h = curr_comments // days_out
+            views_24h = curr["views"] // days_out
+            likes_24h = curr["likes"] // days_out
+            comments_24h = curr["comments"] // days_out
+            views_7d_avg = views_24h
+            likes_7d_avg = likes_24h
+            comments_7d_avg = comments_24h
+            spike_mult = 1.0
+            state = "new"
 
         m["youtube_velocity"] = {
             "views_24h": views_24h,
+            "views_7d_avg": views_7d_avg,
             "likes_24h": likes_24h,
+            "likes_7d_avg": likes_7d_avg,
             "comments_24h": comments_24h,
+            "comments_7d_avg": comments_7d_avg,
+            "spike_multiplier": spike_mult,
         }
         m["views_today"] = views_24h
+        m["views_7d_avg"] = views_7d_avg
+        m["youtube_state"] = state
 
-        # Trend: compare today's delta to yesterday's delta
-        if prev_1d and prev_2d:
-            yesterday_delta = max(0, prev_1d.get("views", 0) - prev_2d.get("views", 0))
-            if views_24h > yesterday_delta + 1000:
+        # Trend based on 24h vs prior 24h
+        if history_days >= 2 and len(daily_views) >= 2:
+            prev_24h = daily_views[1]
+            if views_24h > prev_24h + 1000:
                 m["views_trend"] = "accelerating"
-            elif views_24h < yesterday_delta - 1000:
+            elif views_24h < prev_24h - 1000:
                 m["views_trend"] = "decelerating"
             else:
                 m["views_trend"] = "flat"
         elif views_24h < 1000:
             m["views_trend"] = "flat"
         else:
-            m["views_trend"] = "accelerating"  # new entry with signal
+            m["views_trend"] = "accelerating"
 
 
 # ---------------------------------------------------------------------------
@@ -418,7 +487,9 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "youtube_comments": int(yt.get("comments", 0)),
             "youtube_video_id": m.get("youtube_video_id"),
             "views_today":    int(m.get("views_today") or 0),
+            "views_7d_avg":   int(m.get("views_7d_avg") or 0),
             "views_trend":    m.get("views_trend", "flat"),
+            "youtube_state":  m.get("youtube_state", "new"),
             "reddit_posts":   int(rd.get("posts", 0)),
             "reddit_comments": int(rd.get("comments", 0)),
             "x_mentions":     int(m.get("x_mentions") or 0),

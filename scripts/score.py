@@ -62,32 +62,58 @@ def _normalize(values: List[float]) -> List[float]:
 
 
 def _youtube_views(movies: List[Dict[str, Any]]) -> List[float]:
-    """YouTube velocity (views_24h delta) instead of cumulative views."""
-    raw = [float((m.get("youtube_velocity") or {}).get("views_24h", 0)
-                 or (m.get("youtube") or {}).get("views", 0))
-           for m in movies]
-    return _normalize(raw)
+    """
+    Two-component YouTube view scoring:
+      60% rolling 7d average velocity
+      40% 24h delta × spike multiplier
+    """
+    raw_7d: List[float] = []
+    raw_24h: List[float] = []
+    multipliers: List[float] = []
+    for m in movies:
+        vel = m.get("youtube_velocity") or {}
+        raw_7d.append(float(vel.get("views_7d_avg", 0)))
+        raw_24h.append(float(vel.get("views_24h", 0)))
+        multipliers.append(float(vel.get("spike_multiplier", 1.0)))
+
+    norm_7d = _normalize(raw_7d)
+    norm_24h = _normalize(raw_24h)
+
+    return [
+        0.6 * norm_7d[i] + 0.4 * norm_24h[i] * multipliers[i]
+        for i in range(len(movies))
+    ]
 
 
 def _youtube_engagement(movies: List[Dict[str, Any]]) -> List[float]:
-    """Engagement velocity: (likes_24h + comments_24h) / views_24h, normalized."""
-    raw: List[float] = []
+    """
+    Engagement velocity: two-component model matching views.
+      60% rolling 7d avg engagement rate
+      40% 24h engagement rate × spike multiplier
+    """
+    raw_7d: List[float] = []
+    raw_24h: List[float] = []
+    multipliers: List[float] = []
     for m in movies:
         vel = m.get("youtube_velocity") or {}
-        views = float(vel.get("views_24h", 0))
-        if views <= 0:
-            # Fall back to cumulative ratio if no velocity data
-            yt = m.get("youtube") or {}
-            cum_views = float(yt.get("views", 0))
-            if cum_views <= 0:
-                raw.append(0.0)
-            else:
-                raw.append((float(yt.get("likes", 0)) + float(yt.get("comments", 0))) / cum_views)
-        else:
-            likes = float(vel.get("likes_24h", 0))
-            comments = float(vel.get("comments_24h", 0))
-            raw.append((likes + comments) / views)
-    return _normalize(raw)
+        avg_v = float(vel.get("views_7d_avg", 0))
+        avg_l = float(vel.get("likes_7d_avg", 0))
+        avg_c = float(vel.get("comments_7d_avg", 0))
+        d_v = float(vel.get("views_24h", 0))
+        d_l = float(vel.get("likes_24h", 0))
+        d_c = float(vel.get("comments_24h", 0))
+
+        raw_7d.append((avg_l + avg_c) / avg_v if avg_v > 0 else 0.0)
+        raw_24h.append((d_l + d_c) / d_v if d_v > 0 else 0.0)
+        multipliers.append(float(vel.get("spike_multiplier", 1.0)))
+
+    norm_7d = _normalize(raw_7d)
+    norm_24h = _normalize(raw_24h)
+
+    return [
+        0.6 * norm_7d[i] + 0.4 * norm_24h[i] * multipliers[i]
+        for i in range(len(movies))
+    ]
 
 
 def _reddit_volume(movies: List[Dict[str, Any]]) -> List[float]:
