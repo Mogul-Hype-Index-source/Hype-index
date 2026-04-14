@@ -1,7 +1,7 @@
 {
    meta": {
       title: "Mogul Hype Index",
-      asOf: "2026-04-14T07:00:00Z",
+      asOf: "2026-04-14T12:00:00Z",
       scoreLabel: "AMSI"
    },
    ticker: [
@@ -23,7 +23,7 @@
          rank: 1,
          move: "same",
          title: "Michael (2026)",
-         mentions: 2520,
+         mentions: 2580,
          sentiment: 99.0,
          score: 999.0
       },
@@ -31,7 +31,7 @@
          rank: 2,
          move: "same",
          title: "Project Hail Mary",
-         mentions: 2500,
+         mentions: 2560,
          sentiment: 99.1,
          score: 999.0
       },
@@ -39,9 +39,17 @@
          rank: 3,
          move: "same",
          title: "Super Mario Galaxy Movie",
-         mentions: 2380,
+         mentions: 2450,
          sentiment: 98.6,
-         score: 998.7
+         score: 999.0
+      },
+      {
+         rank: 4,
+         move: "same",
+         title: "Avengers: Doomsday",
+         mentions: 2320,
+         sentiment: 98.2,
+         score: 999.0
       }
    ],
    actors: [
@@ -49,27 +57,27 @@
          rank: 1,
          move: "same",
          name: "Zendaya",
-         mentions: 2420,
+         mentions: 2480,
          sentiment: 99.6,
          score: 999.0
       },
       {
          rank: 2,
-         move: "down",
+         move: "up",
          name: "Milly Alcock",
-         mentions: 2340,
+         mentions: 2410,
          sentiment: 98.4,
-         score: 998.3
+         score: 999.0
       }
    ],
    directors: [
       {
-         rank: 1,
-         move: "same",
-         name: "Antoine Fuqua",
-         mentions: 24500,
-         sentiment: 97.2,
-         score: 993.0
+        rank: 1,
+        move: "same",
+        name: "Antoine Fuqua",
+        mentions: 25100,
+        sentiment: 97.2,
+        score: 993.0
       }
    ]
 }
