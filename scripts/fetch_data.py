@@ -617,6 +617,7 @@ def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, Any]:
 # This lets a single 15-minute pulse cycle keep the news ticker live while
 # spending YouTube quota only once per day.
 YOUTUBE_STATS_TTL_HOURS = 24       # daily — quota-conservative
+EVENT_SEARCH_TTL_HOURS  = 48       # event YouTube search cache — CinemaCon etc.
 GOOGLE_TRENDS_TTL_HOURS = 2        # bi-hourly
 NEWS_TTL_MINUTES        = 15       # ticker freshness target
 TMDB_UNIVERSE_TTL_HOURS = 6        # the slate doesn't shift fast
@@ -878,6 +879,129 @@ def fetch_youtube_trailer(api_key: str, title: str) -> Dict[str, int]:
         return empty
     video_id = fetch_youtube_search(api_key, f"{title} official trailer")
     return fetch_youtube_video_stats(api_key, video_id) if video_id else empty
+
+
+# ---------------------------------------------------------------------------
+# Event-targeted YouTube search (quota-safe: max ~20 entities)
+# ---------------------------------------------------------------------------
+
+EVENT_ENTITIES_PATH = REPO_ROOT / "data" / "event_entities.json"
+EVENTS_PATH = REPO_ROOT / "data" / "events.json"
+EVENT_SEARCH_CACHE_PATH = REPO_ROOT / "data" / "cache" / "event_youtube.json"
+
+
+def _load_event_entities() -> Dict[str, Any]:
+    if not EVENT_ENTITIES_PATH.exists():
+        return {}
+    try:
+        return json.loads(EVENT_ENTITIES_PATH.read_text())
+    except Exception:
+        return {}
+
+
+def _load_events() -> List[Dict[str, Any]]:
+    if not EVENTS_PATH.exists():
+        return []
+    try:
+        return json.loads(EVENTS_PATH.read_text())
+    except Exception:
+        return []
+
+
+def _active_event_keywords() -> List[str]:
+    """Return keywords for any currently active event."""
+    today = datetime.now(timezone.utc).date().isoformat()
+    keywords: List[str] = []
+    for ev in _load_events():
+        start = ev.get("start_date", "")
+        end = ev.get("end_date", "")
+        if start <= today <= end:
+            keywords.extend(ev.get("keywords", []))
+    return keywords
+
+
+def fetch_event_youtube_search(api_key: str, entity: str,
+                               suffix: str) -> int:
+    """
+    Search YouTube for "{entity} {suffix}" and sum view counts
+    of the top 5 results. Costs 100 + 5 = 105 quota units.
+    """
+    query = f"{entity} {suffix}"
+    search = _http_get(
+        f"{YOUTUBE_BASE}/search",
+        params={
+            "part": "snippet",
+            "q": query,
+            "type": "video",
+            "maxResults": 5,
+            "key": api_key,
+        },
+    )
+    if not search:
+        return 0
+    items = search.get("items") or []
+    if not items:
+        return 0
+
+    # Collect video IDs and batch-fetch stats (1 unit per call)
+    video_ids = [it.get("id", {}).get("videoId") for it in items]
+    video_ids = [v for v in video_ids if v]
+    if not video_ids:
+        return 0
+
+    total_views = 0
+    for vid in video_ids:
+        stats = fetch_youtube_video_stats(api_key, vid)
+        total_views += stats.get("views", 0)
+    return total_views
+
+
+def fetch_event_youtube_all(api_key: str) -> Dict[str, int]:
+    """
+    Run YouTube search for all entities in event_entities.json.
+    Cached for EVENT_SEARCH_TTL_HOURS (48h).
+    Returns {entity_name: total_search_views}.
+    """
+    event = _load_event_entities()
+    if not event or not event.get("active"):
+        return {}
+
+    suffix = event.get("search_suffix", "")
+    entities = list(event.get("movies", [])) + list(event.get("people", []))
+    if not entities or not suffix:
+        return {}
+
+    # Check cache
+    cache = _load_json(EVENT_SEARCH_CACHE_PATH)
+    age = _cache_age(cache)
+    ttl = event.get("cache_ttl_hours", EVENT_SEARCH_TTL_HOURS)
+    cached_counts: Dict[str, int] = cache.get("counts") or {}
+
+    if age is not None and age < timedelta(hours=ttl):
+        LOG.info("Event YouTube cache HIT — %d entries, age %s", len(cached_counts), age)
+        return cached_counts
+
+    LOG.info("Event YouTube search: %d entities × '%s' (budget: %d quota units)",
+             len(entities), suffix, len(entities) * 105)
+
+    out: Dict[str, int] = {}
+    for entity in entities:
+        try:
+            views = fetch_event_youtube_search(api_key, entity, suffix)
+            out[entity] = views
+            LOG.info("Event YT: %s → %d views", entity, views)
+        except Exception as exc:
+            LOG.warning("Event YT search failed for %s: %s", entity, exc)
+            out[entity] = cached_counts.get(entity, 0)
+        time.sleep(0.5)
+
+    _save_json(EVENT_SEARCH_CACHE_PATH, {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "event": event.get("event", ""),
+        "counts": out,
+    })
+    LOG.info("Event YouTube cache updated — %d entries", len(out))
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -1352,11 +1476,29 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     LOG.info("X mentions coverage: %d/%d (%d%%)", x_hits, len(movies),
              (x_hits * 100 // len(movies)) if movies else 0)
 
+    # 6. Event-targeted YouTube search (quota-safe: max ~20 entities)
+    event_yt = fetch_event_youtube_all(yt_key)
+    for m in movies:
+        ev_views = event_yt.get(m["title"], 0)
+        m["event_youtube_views"] = ev_views
+
+    # 7. Event detection — tag news items from active events
+    event_kws = _active_event_keywords()
+    if event_kws:
+        event_news_count = 0
+        for item in news_items:
+            headline_lower = (item.get("headline") or "").lower()
+            if any(kw in headline_lower for kw in event_kws):
+                item["is_event"] = True
+                event_news_count += 1
+        LOG.info("Event news tagged: %d/%d items", event_news_count, len(news_items))
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "movies":   movies,
         "news":     news_items,
         "x_counts": x_counts,
+        "event_youtube": event_yt,
     }
 
 
@@ -1404,7 +1546,8 @@ def derive_people(movies: List[Dict[str, Any]],
                   poster_base: str,
                   top_actors: int = 50,
                   top_directors: int = 25,
-                  x_counts: Optional[Dict[str, int]] = None) -> Dict[str, List[Dict[str, Any]]]:
+                  x_counts: Optional[Dict[str, int]] = None,
+                  event_youtube: Optional[Dict[str, int]] = None) -> Dict[str, List[Dict[str, Any]]]:
     """
     Roll the cast/crew across all enriched movies into per-person entries.
     Each person gets a film_count, total popularity, news mentions, average
@@ -1456,6 +1599,7 @@ def derive_people(movies: List[Dict[str, Any]],
             _bucket(directors, d, m, "director")
 
     xc = x_counts or {}
+    eyt = event_youtube or {}
 
     def _finalize(slot: Dict[str, Any], kind: str) -> Dict[str, Any]:
         n = slot["sentiment_n"] or 1
@@ -1463,6 +1607,7 @@ def derive_people(movies: List[Dict[str, Any]],
         slot["avg_film_score"] = int(round(slot["score_acc"] / n))
         slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
         slot["x_mentions"] = xc.get(f"{kind}:{slot['tmdb_id']}", 0)
+        slot["event_youtube_views"] = eyt.get(slot["name"], 0)
         slot["mentions"] = len(slot["news_mentions"]) + slot["film_count"] * 5 + slot["x_mentions"]
         del slot["sentiment_acc"]
         del slot["sentiment_n"]

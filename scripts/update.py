@@ -380,7 +380,8 @@ def build_index_payload(scored: List[Dict[str, Any]],
                         news_items: List[Dict[str, Any]],
                         generated_at: datetime,
                         poster_base: str = "https://image.tmdb.org/t/p/w185",
-                        x_counts: Optional[Dict[str, int]] = None) -> Dict[str, Any]:
+                        x_counts: Optional[Dict[str, int]] = None,
+                        event_youtube: Optional[Dict[str, int]] = None) -> Dict[str, Any]:
     # Rank by HypeScore
     scored.sort(key=lambda m: m.get("score", 0), reverse=True)
     for i, m in enumerate(scored, 1):
@@ -396,10 +397,12 @@ def build_index_payload(scored: List[Dict[str, Any]],
     # Roll up cast + crew across all movies into the actors / directors tabs.
     # This must run BEFORE we trim cast_full / directors_full off the public
     # movie objects below.
+    event_yt = event_youtube or {}
     people = fetch_data.derive_people(
         scored, news_items, poster_base=poster_base,
         top_actors=50, top_directors=25,
         x_counts=x_counts,
+        event_youtube=event_yt,
     )
     # Per-person rank movement against the previous v2.json
     _enrich_people_with_history(people["actors"],    "actors")
@@ -490,6 +493,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "views_7d_avg":   int(m.get("views_7d_avg") or 0),
             "views_trend":    m.get("views_trend", "flat"),
             "youtube_state":  m.get("youtube_state", "new"),
+            "event_youtube_views": int(m.get("event_youtube_views") or 0),
             "reddit_posts":   int(rd.get("posts", 0)),
             "reddit_comments": int(rd.get("comments", 0)),
             "x_mentions":     int(m.get("x_mentions") or 0),
@@ -609,6 +613,7 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
         scored, raw["news"], generated_at,
         poster_base=cfg.get("tmdb_image_base", "https://image.tmdb.org/t/p/w185"),
         x_counts=raw.get("x_counts"),
+        event_youtube=raw.get("event_youtube"),
     )
 
     # 3a. Circuit breaker — refuse to overwrite the live index.json with

@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-04-16T13:49:29+00:00",
-  "next_update_at": "2026-04-16T14:49:29+00:00",
+  "generated_at": "2026-04-16T13:50:48+00:00",
+  "next_update_at": "2026-04-16T14:50:48+00:00",
   "snapshot_date": "2026-04-16",
   "summary": {
     "total": 192,
-    "rising": 43,
-    "falling": 86,
-    "flat": 63,
+    "total_streaming": 0,
+    "rising": 0,
+    "falling": 0,
+    "flat": 192,
     "avg_score": 809,
     "total_mentions_24h": 312675
   },
@@ -198,80 +199,8 @@
       "category": "box-office"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1084244,
-      "title": "Toy Story 5",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dWIAOC9EKFehGs3CYvDQih3hxaG.jpg",
-      "move": 144,
-      "score": 806
-    },
-    {
-      "tmdb_id": 1283515,
-      "title": "Verity",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tHI69tGRRvtOnomig59xwMO1YQI.jpg",
-      "move": 24,
-      "score": 806
-    },
-    {
-      "tmdb_id": 1421903,
-      "title": "Werwulf",
-      "poster_url": "https://image.tmdb.org/t/p/w185/6hFPW8XfkirlocgGr0n7BorAoOW.jpg",
-      "move": 24,
-      "score": 803
-    },
-    {
-      "tmdb_id": 1213243,
-      "title": "Toxic",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tZ8eSBXbza96vzCYeVTG9RBJ78E.jpg",
-      "move": 13,
-      "score": 802
-    },
-    {
-      "tmdb_id": 1368337,
-      "title": "The Odyssey",
-      "poster_url": "https://image.tmdb.org/t/p/w185/pe5cCoX5iIb5IWKPsbPkCwjLFHt.jpg",
-      "move": 12,
-      "score": 817
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1455079,
-      "title": "You, Me & Tuscany",
-      "poster_url": "https://image.tmdb.org/t/p/w185/mJS0IF7Af3WpPRhSTDT6rGpiLzw.jpg",
-      "move": -81,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1316092,
-      "title": "\"Wuthering Heights\"",
-      "poster_url": "https://image.tmdb.org/t/p/w185/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
-      "move": -60,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1339713,
-      "title": "Obsession",
-      "poster_url": "https://image.tmdb.org/t/p/w185/sfgUrQgmgHUPZzpviuP2zILQep1.jpg",
-      "move": -56,
-      "score": 801
-    },
-    {
-      "tmdb_id": 1306322,
-      "title": "Spaceballs 2",
-      "poster_url": "https://image.tmdb.org/t/p/w185/vFtJ1rlBwdIwdzvURN1LDqnpHbT.jpg",
-      "move": -17,
-      "score": 803
-    },
-    {
-      "tmdb_id": 1493859,
-      "title": "Pizza Movie",
-      "poster_url": "https://image.tmdb.org/t/p/w185/v2qH9CiGWup1Ddzai76ofgtSTAh.jpg",
-      "move": -1,
-      "score": 923
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -289,6 +218,7 @@
       "views_7d_avg": 13506874,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -303,6 +233,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": true,
       "sub_scores": {
         "youtube_views": 1.0,
@@ -392,6 +323,7 @@
       "views_7d_avg": 15055,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 16,
       "reddit_comments": 3349,
       "x_mentions": 9177,
@@ -406,6 +338,7 @@
       "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0011,
@@ -495,6 +428,7 @@
       "views_7d_avg": 3790,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 67,
       "reddit_comments": 3269,
       "x_mentions": 24888,
@@ -509,6 +443,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -603,6 +538,7 @@
       "views_7d_avg": 1867,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 45,
       "reddit_comments": 2224,
       "x_mentions": 0,
@@ -614,9 +550,10 @@
         "30d": 951
       },
       "score": 951,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -711,6 +648,7 @@
       "views_7d_avg": 7702,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 17,
       "x_mentions": 112441,
@@ -722,9 +660,10 @@
         "30d": 923
       },
       "score": 923,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -819,6 +758,7 @@
       "views_7d_avg": 440254,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 43,
       "reddit_comments": 1432,
       "x_mentions": 21146,
@@ -833,6 +773,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0364,
@@ -922,6 +863,7 @@
       "views_7d_avg": 38854,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 29,
       "reddit_comments": 1192,
       "x_mentions": 59795,
@@ -936,6 +878,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0028,
@@ -1030,6 +973,7 @@
       "views_7d_avg": 13418,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 7,
       "reddit_comments": 2513,
       "x_mentions": 0,
@@ -1044,6 +988,7 @@
       "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -1133,6 +1078,7 @@
       "views_7d_avg": 2952,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 28,
       "reddit_comments": 994,
       "x_mentions": 11224,
@@ -1147,6 +1093,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -1236,6 +1183,7 @@
       "views_7d_avg": 198,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 5,
       "reddit_comments": 490,
       "x_mentions": 0,
@@ -1250,6 +1198,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -1344,6 +1293,7 @@
       "views_7d_avg": 112571,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 20,
       "reddit_comments": 2039,
       "x_mentions": 0,
@@ -1358,6 +1308,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0081,
@@ -1447,6 +1398,7 @@
       "views_7d_avg": 37829,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 8,
       "reddit_comments": 219,
       "x_mentions": 2536,
@@ -1461,6 +1413,7 @@
       "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0029,
@@ -1550,6 +1503,7 @@
       "views_7d_avg": 120,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 193,
       "x_mentions": 0,
@@ -1564,6 +1518,7 @@
       "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -1653,6 +1608,7 @@
       "views_7d_avg": 15138,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 8,
       "reddit_comments": 364,
       "x_mentions": 6791,
@@ -1667,6 +1623,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0011,
@@ -1756,6 +1713,7 @@
       "views_7d_avg": 44,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 12,
       "reddit_comments": 1188,
       "x_mentions": 0,
@@ -1770,6 +1728,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -1859,6 +1818,7 @@
       "views_7d_avg": 5733,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 14,
       "reddit_comments": 157,
       "x_mentions": 9579,
@@ -1873,6 +1833,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -1962,6 +1923,7 @@
       "views_7d_avg": 27305,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 941,
@@ -1976,6 +1938,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.002,
@@ -2053,6 +2016,7 @@
       "views_7d_avg": 1104249,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 312,
       "x_mentions": 0,
@@ -2067,6 +2031,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0571,
@@ -2156,6 +2121,7 @@
       "views_7d_avg": 1898,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -2170,6 +2136,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2259,6 +2226,7 @@
       "views_7d_avg": 1719,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 301,
@@ -2273,6 +2241,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2362,6 +2331,7 @@
       "views_7d_avg": 3004,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 178,
       "x_mentions": 0,
@@ -2376,6 +2346,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -2447,6 +2418,7 @@
       "views_7d_avg": 80392,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 11,
       "reddit_comments": 699,
       "x_mentions": 0,
@@ -2458,9 +2430,10 @@
         "30d": 817
       },
       "score": 817,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0057,
@@ -2555,6 +2528,7 @@
       "views_7d_avg": 1260,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 10,
       "x_mentions": 271,
@@ -2566,9 +2540,10 @@
         "30d": 815
       },
       "score": 815,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2658,6 +2633,7 @@
       "views_7d_avg": 723,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 188,
       "x_mentions": 259,
@@ -2669,9 +2645,10 @@
         "30d": 815
       },
       "score": 815,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2761,6 +2738,7 @@
       "views_7d_avg": 604,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 57,
       "x_mentions": 0,
@@ -2772,9 +2750,10 @@
         "30d": 815
       },
       "score": 815,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -2864,6 +2843,7 @@
       "views_7d_avg": 153319,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 6,
       "reddit_comments": 88,
       "x_mentions": 0,
@@ -2878,6 +2858,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0111,
@@ -2955,6 +2936,7 @@
       "views_7d_avg": 240,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 4,
       "reddit_comments": 82,
       "x_mentions": 0,
@@ -2969,6 +2951,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -3058,6 +3041,7 @@
       "views_7d_avg": 81,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 10,
       "reddit_comments": 989,
       "x_mentions": 0,
@@ -3072,6 +3056,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -3161,6 +3146,7 @@
       "views_7d_avg": 896,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -3175,6 +3161,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -3258,6 +3245,7 @@
       "views_7d_avg": 281,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 667,
       "x_mentions": 0,
@@ -3272,6 +3260,7 @@
       "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -3349,6 +3338,7 @@
       "views_7d_avg": 3786,
       "views_trend": "accelerating",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 62,
       "x_mentions": 159,
@@ -3363,6 +3353,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -3452,6 +3443,7 @@
       "views_7d_avg": 131937,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 5,
       "reddit_comments": 785,
       "x_mentions": 0,
@@ -3463,9 +3455,10 @@
         "30d": 811
       },
       "score": 811,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0098,
@@ -3537,6 +3530,7 @@
       "views_7d_avg": 39471,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 13,
       "reddit_comments": 910,
       "x_mentions": 0,
@@ -3548,9 +3542,10 @@
         "30d": 810
       },
       "score": 810,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0029,
@@ -3645,6 +3640,7 @@
       "views_7d_avg": 4967,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 5,
       "reddit_comments": 1035,
       "x_mentions": 0,
@@ -3656,9 +3652,10 @@
         "30d": 810
       },
       "score": 810,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -3712,6 +3709,7 @@
       "views_7d_avg": 39056,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 47,
       "x_mentions": 0,
@@ -3723,9 +3721,10 @@
         "30d": 809
       },
       "score": 809,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0026,
@@ -3796,6 +3795,7 @@
       "views_7d_avg": 54805,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 22,
       "reddit_comments": 880,
       "x_mentions": 0,
@@ -3807,9 +3807,10 @@
         "30d": 809
       },
       "score": 809,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0041,
@@ -3899,6 +3900,7 @@
       "views_7d_avg": 30567,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 6,
       "reddit_comments": 133,
       "x_mentions": 523,
@@ -3910,9 +3912,10 @@
         "30d": 808
       },
       "score": 808,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0022,
@@ -4002,6 +4005,7 @@
       "views_7d_avg": 642,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 4,
       "reddit_comments": 87,
       "x_mentions": 854,
@@ -4013,9 +4017,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -4105,6 +4110,7 @@
       "views_7d_avg": 1256,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 25,
@@ -4116,9 +4122,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -4208,6 +4215,7 @@
       "views_7d_avg": 2124,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 1054,
       "x_mentions": 20,
@@ -4219,9 +4227,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -4311,6 +4320,7 @@
       "views_7d_avg": 994,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -4322,9 +4332,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -4414,6 +4425,7 @@
       "views_7d_avg": 40573,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 39,
       "reddit_comments": 567,
       "x_mentions": 2569,
@@ -4425,9 +4437,10 @@
         "30d": 806
       },
       "score": 806,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0029,
@@ -4517,6 +4530,7 @@
       "views_7d_avg": 107,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 82,
       "x_mentions": 0,
@@ -4528,9 +4542,10 @@
         "30d": 806
       },
       "score": 806,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -4625,6 +4640,7 @@
       "views_7d_avg": 65388,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 9,
       "reddit_comments": 886,
       "x_mentions": 0,
@@ -4636,9 +4652,10 @@
         "30d": 806
       },
       "score": 806,
-      "move": 144,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0048,
@@ -4728,6 +4745,7 @@
       "views_7d_avg": 2181,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -4739,9 +4757,10 @@
         "30d": 806
       },
       "score": 806,
-      "move": 24,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -4836,6 +4855,7 @@
       "views_7d_avg": 1168,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 60,
       "x_mentions": 843,
@@ -4847,9 +4867,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -4939,6 +4960,7 @@
       "views_7d_avg": 769,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 7,
       "reddit_comments": 36,
       "x_mentions": 243,
@@ -4950,9 +4972,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -5042,6 +5065,7 @@
       "views_7d_avg": 44890,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 8,
       "reddit_comments": 472,
       "x_mentions": 2160,
@@ -5053,9 +5077,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0034,
@@ -5145,6 +5170,7 @@
       "views_7d_avg": 16680,
       "views_trend": "accelerating",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 4,
       "reddit_comments": 221,
       "x_mentions": 0,
@@ -5156,9 +5182,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.002,
@@ -5248,6 +5275,7 @@
       "views_7d_avg": 37841,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 8,
       "reddit_comments": 722,
       "x_mentions": 0,
@@ -5259,9 +5287,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0027,
@@ -5351,6 +5380,7 @@
       "views_7d_avg": 68,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 17,
       "x_mentions": 0,
@@ -5362,9 +5392,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -5448,6 +5479,7 @@
       "views_7d_avg": 28523,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 365,
       "x_mentions": 0,
@@ -5459,9 +5491,10 @@
         "30d": 804
       },
       "score": 804,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0013,
@@ -5551,6 +5584,7 @@
       "views_7d_avg": 2022,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 317,
@@ -5562,9 +5596,10 @@
         "30d": 804
       },
       "score": 804,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -5654,6 +5689,7 @@
       "views_7d_avg": 2674,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 25,
@@ -5665,9 +5701,10 @@
         "30d": 804
       },
       "score": 804,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -5757,6 +5794,7 @@
       "views_7d_avg": 10775,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 6,
       "reddit_comments": 183,
       "x_mentions": 0,
@@ -5768,9 +5806,10 @@
         "30d": 804
       },
       "score": 804,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
@@ -5860,6 +5899,7 @@
       "views_7d_avg": 2235,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 58,
@@ -5871,9 +5911,10 @@
         "30d": 803
       },
       "score": 803,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -5963,6 +6004,7 @@
       "views_7d_avg": 46402,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 7,
       "reddit_comments": 616,
       "x_mentions": 0,
@@ -5974,9 +6016,10 @@
         "30d": 803
       },
       "score": 803,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0034,
@@ -6048,6 +6091,7 @@
       "views_7d_avg": 1614418,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -6059,9 +6103,10 @@
         "30d": 803
       },
       "score": 803,
-      "move": -17,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1195,
@@ -6151,6 +6196,7 @@
       "views_7d_avg": 327,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 122,
       "x_mentions": 0,
@@ -6162,9 +6208,10 @@
         "30d": 803
       },
       "score": 803,
-      "move": 24,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -6259,6 +6306,7 @@
       "views_7d_avg": 2739,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 5,
       "reddit_comments": 72,
       "x_mentions": 390,
@@ -6273,6 +6321,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -6362,6 +6411,7 @@
       "views_7d_avg": 60237,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 9,
       "x_mentions": 1297,
@@ -6376,6 +6426,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0027,
@@ -6465,6 +6516,7 @@
       "views_7d_avg": 276,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 46,
       "x_mentions": 31,
@@ -6479,6 +6531,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -6568,6 +6621,7 @@
       "views_7d_avg": 8472,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 6,
       "reddit_comments": 185,
       "x_mentions": 18,
@@ -6582,6 +6636,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -6671,6 +6726,7 @@
       "views_7d_avg": 7952,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -6685,6 +6741,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -6774,6 +6831,7 @@
       "views_7d_avg": 78165,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -6788,6 +6846,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0056,
@@ -6877,6 +6936,7 @@
       "views_7d_avg": 2288,
       "views_trend": "accelerating",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 4,
       "reddit_comments": 539,
       "x_mentions": 0,
@@ -6891,6 +6951,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -6980,6 +7041,7 @@
       "views_7d_avg": 798,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -6994,6 +7056,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -7083,6 +7146,7 @@
       "views_7d_avg": 5,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -7097,6 +7161,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -7186,6 +7251,7 @@
       "views_7d_avg": 65646,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 131,
       "x_mentions": 0,
@@ -7197,9 +7263,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0049,
@@ -7289,6 +7356,7 @@
       "views_7d_avg": 4045,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 6,
       "reddit_comments": 96,
       "x_mentions": 489,
@@ -7303,6 +7371,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -7392,6 +7461,7 @@
       "views_7d_avg": 10586,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 124,
       "x_mentions": 988,
@@ -7406,6 +7476,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0008,
@@ -7495,6 +7566,7 @@
       "views_7d_avg": 4266,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 55,
       "x_mentions": 223,
@@ -7509,6 +7581,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -7598,6 +7671,7 @@
       "views_7d_avg": 3417,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 513,
@@ -7612,6 +7686,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -7701,6 +7776,7 @@
       "views_7d_avg": 35556,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 9,
       "reddit_comments": 93,
       "x_mentions": 0,
@@ -7715,6 +7791,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0025,
@@ -7804,6 +7881,7 @@
       "views_7d_avg": 9110,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -7818,6 +7896,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -7889,6 +7968,7 @@
       "views_7d_avg": 132394,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -7903,6 +7983,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0098,
@@ -7992,6 +8073,7 @@
       "views_7d_avg": 242784,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 592,
@@ -8006,6 +8088,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.02,
@@ -8095,6 +8178,7 @@
       "views_7d_avg": 4976,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 974,
@@ -8106,9 +8190,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -56,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -8198,6 +8283,7 @@
       "views_7d_avg": 382,
       "views_trend": "flat",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 6,
       "reddit_comments": 345,
       "x_mentions": 0,
@@ -8209,9 +8295,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -8289,6 +8376,7 @@
       "views_7d_avg": 663231,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 110,
       "x_mentions": 0,
@@ -8300,9 +8388,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0491,
@@ -8392,6 +8481,7 @@
       "views_7d_avg": 819,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -8403,9 +8493,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -8495,6 +8586,7 @@
       "views_7d_avg": 22463,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -8506,9 +8598,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0019,
@@ -8598,6 +8691,7 @@
       "views_7d_avg": 6772,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 38,
       "x_mentions": 48,
@@ -8609,9 +8703,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -8701,6 +8796,7 @@
       "views_7d_avg": 7288,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 93,
@@ -8712,9 +8808,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -8804,6 +8901,7 @@
       "views_7d_avg": 4231,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -8815,9 +8913,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -8907,6 +9006,7 @@
       "views_7d_avg": 3326,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 38,
@@ -8918,9 +9018,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -9004,6 +9105,7 @@
       "views_7d_avg": 75170,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -9015,9 +9117,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0056,
@@ -9107,6 +9210,7 @@
       "views_7d_avg": 6759,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 147,
@@ -9118,9 +9222,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -9210,6 +9315,7 @@
       "views_7d_avg": 1237,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 58,
       "x_mentions": 0,
@@ -9221,9 +9327,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -9318,6 +9425,7 @@
       "views_7d_avg": 4184,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 0,
       "x_mentions": 79,
@@ -9329,9 +9437,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -9421,6 +9530,7 @@
       "views_7d_avg": 342,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 40,
@@ -9432,9 +9542,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -9524,6 +9635,7 @@
       "views_7d_avg": 26811,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -9535,9 +9647,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0019,
@@ -9627,6 +9740,7 @@
       "views_7d_avg": 16641,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 7,
       "x_mentions": 12,
@@ -9638,9 +9752,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0011,
@@ -9735,6 +9850,7 @@
       "views_7d_avg": 3586,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 2,
       "x_mentions": 42,
@@ -9746,9 +9862,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -9838,6 +9955,7 @@
       "views_7d_avg": 9690,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -9849,9 +9967,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -60,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0007,
@@ -9941,6 +10060,7 @@
       "views_7d_avg": 1698,
       "views_trend": "accelerating",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -9955,6 +10075,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -10044,6 +10165,7 @@
       "views_7d_avg": 36825,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 4,
@@ -10058,6 +10180,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0026,
@@ -10129,6 +10252,7 @@
       "views_7d_avg": 8182,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 23,
       "x_mentions": 99,
@@ -10143,6 +10267,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -10232,6 +10357,7 @@
       "views_7d_avg": 612,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 102,
@@ -10246,6 +10372,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -10335,6 +10462,7 @@
       "views_7d_avg": 6872,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 23,
       "x_mentions": 12,
@@ -10349,6 +10477,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -10438,6 +10567,7 @@
       "views_7d_avg": 3310,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 77,
@@ -10452,6 +10582,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -10541,6 +10672,7 @@
       "views_7d_avg": 412,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -10555,6 +10687,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -10644,6 +10777,7 @@
       "views_7d_avg": 5260,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 5,
@@ -10658,6 +10792,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -10747,6 +10882,7 @@
       "views_7d_avg": 569406,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 137,
@@ -10761,6 +10897,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0411,
@@ -10826,6 +10963,7 @@
       "views_7d_avg": 5301,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 49,
@@ -10840,6 +10978,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -10929,6 +11068,7 @@
       "views_7d_avg": 181979,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 121,
@@ -10943,6 +11083,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0136,
@@ -11032,6 +11173,7 @@
       "views_7d_avg": 24665,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -11046,6 +11188,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0019,
@@ -11135,6 +11278,7 @@
       "views_7d_avg": 978,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 4,
@@ -11149,6 +11293,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -11238,6 +11383,7 @@
       "views_7d_avg": 624,
       "views_trend": "flat",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -11252,6 +11398,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -11341,6 +11488,7 @@
       "views_7d_avg": 153,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -11355,6 +11503,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -11444,6 +11593,7 @@
       "views_7d_avg": 4925,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 6,
@@ -11458,6 +11608,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -11547,6 +11698,7 @@
       "views_7d_avg": 2506,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 5,
@@ -11561,6 +11713,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -11650,6 +11803,7 @@
       "views_7d_avg": 1745,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -11661,9 +11815,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -81,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -11753,6 +11908,7 @@
       "views_7d_avg": 90134,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 18,
@@ -11764,9 +11920,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0067,
@@ -11856,6 +12013,7 @@
       "views_7d_avg": 144,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 10,
       "x_mentions": 0,
@@ -11867,9 +12025,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -11964,6 +12123,7 @@
       "views_7d_avg": 5184,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 1,
       "x_mentions": 0,
@@ -11975,9 +12135,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -12061,6 +12222,7 @@
       "views_7d_avg": 1785,
       "views_trend": "decelerating",
       "youtube_state": "decaying",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 0,
       "x_mentions": 134,
@@ -12072,9 +12234,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12164,6 +12327,7 @@
       "views_7d_avg": 580,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -12175,9 +12339,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -12267,6 +12432,7 @@
       "views_7d_avg": 1790,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -12278,9 +12444,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12370,6 +12537,7 @@
       "views_7d_avg": 328,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -12381,9 +12549,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -12473,6 +12642,7 @@
       "views_7d_avg": 1104,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 13,
@@ -12484,9 +12654,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12576,6 +12747,7 @@
       "views_7d_avg": 8906,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 20,
       "x_mentions": 0,
@@ -12587,9 +12759,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -12679,6 +12852,7 @@
       "views_7d_avg": 13016,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -12690,9 +12864,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.001,
@@ -12782,6 +12957,7 @@
       "views_7d_avg": 7051,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 4,
       "reddit_comments": 6,
       "x_mentions": 141,
@@ -12793,9 +12969,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -12885,6 +13062,7 @@
       "views_7d_avg": 3364,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 217,
@@ -12896,9 +13074,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -12988,6 +13167,7 @@
       "views_7d_avg": 103,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 7,
       "reddit_comments": 39,
       "x_mentions": 0,
@@ -12999,9 +13179,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13091,6 +13272,7 @@
       "views_7d_avg": 3156,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 1,
@@ -13102,9 +13284,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -13194,6 +13377,7 @@
       "views_7d_avg": 6725,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 36,
@@ -13205,9 +13389,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -13297,6 +13482,7 @@
       "views_7d_avg": 1041,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 1090,
@@ -13308,9 +13494,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -13400,6 +13587,7 @@
       "views_7d_avg": 0,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 17,
       "x_mentions": 0,
@@ -13411,9 +13599,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13484,6 +13673,7 @@
       "views_7d_avg": 23140,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -13495,9 +13685,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0017,
@@ -13587,6 +13778,7 @@
       "views_7d_avg": 208,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 4,
       "x_mentions": 519,
@@ -13598,9 +13790,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13690,6 +13883,7 @@
       "views_7d_avg": 0,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -13701,9 +13895,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13793,6 +13988,7 @@
       "views_7d_avg": 1058,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 31,
       "x_mentions": 0,
@@ -13804,9 +14000,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -13896,6 +14093,7 @@
       "views_7d_avg": 12,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -13907,9 +14105,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13981,6 +14180,7 @@
       "views_7d_avg": 111,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -13992,9 +14192,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14084,6 +14285,7 @@
       "views_7d_avg": 10805,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 4,
       "reddit_comments": 36,
       "x_mentions": 525,
@@ -14095,9 +14297,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0008,
@@ -14187,6 +14390,7 @@
       "views_7d_avg": 165,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14198,9 +14402,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14290,6 +14495,7 @@
       "views_7d_avg": 3982,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14301,9 +14507,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -14387,6 +14594,7 @@
       "views_7d_avg": 51,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14398,9 +14606,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14495,6 +14704,7 @@
       "views_7d_avg": 91,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 66,
       "x_mentions": 0,
@@ -14506,9 +14716,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14598,6 +14809,7 @@
       "views_7d_avg": 2289,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14609,9 +14821,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -14701,6 +14914,7 @@
       "views_7d_avg": 35,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14712,9 +14926,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14786,6 +15001,7 @@
       "views_7d_avg": 85926,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14797,9 +15013,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0063,
@@ -14889,6 +15106,7 @@
       "views_7d_avg": 250,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -14900,9 +15118,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14992,6 +15211,7 @@
       "views_7d_avg": 7463,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15003,9 +15223,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -15095,6 +15316,7 @@
       "views_7d_avg": 1350,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15106,9 +15328,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -15203,6 +15426,7 @@
       "views_7d_avg": 316,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15214,9 +15438,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15306,6 +15531,7 @@
       "views_7d_avg": 8295,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 137,
       "x_mentions": 0,
@@ -15317,9 +15543,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -15409,6 +15636,7 @@
       "views_7d_avg": 16,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15420,9 +15648,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15494,6 +15723,7 @@
       "views_7d_avg": 593,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15505,9 +15735,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15553,6 +15784,7 @@
       "views_7d_avg": 228,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15564,9 +15796,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15638,6 +15871,7 @@
       "views_7d_avg": 21,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15649,9 +15883,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15723,6 +15958,7 @@
       "views_7d_avg": 496,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15734,9 +15970,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15831,6 +16068,7 @@
       "views_7d_avg": 3486,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 28,
       "x_mentions": 0,
@@ -15842,9 +16080,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -15934,6 +16173,7 @@
       "views_7d_avg": 30,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -15945,9 +16185,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -16036,6 +16277,7 @@
       "views_7d_avg": 1255,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16047,9 +16289,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16139,6 +16382,7 @@
       "views_7d_avg": 7937,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16150,9 +16394,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -16236,6 +16481,7 @@
       "views_7d_avg": 4122,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16247,9 +16493,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -16339,6 +16586,7 @@
       "views_7d_avg": 875,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16350,9 +16598,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16436,6 +16685,7 @@
       "views_7d_avg": 723,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16447,9 +16697,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16539,6 +16790,7 @@
       "views_7d_avg": 12474,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 158,
       "x_mentions": 0,
@@ -16550,9 +16802,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
@@ -16642,6 +16895,7 @@
       "views_7d_avg": 1183,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16653,9 +16907,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16745,6 +17000,7 @@
       "views_7d_avg": 502,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16756,9 +17012,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -16848,6 +17105,7 @@
       "views_7d_avg": 717,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -16859,9 +17117,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16951,6 +17210,7 @@
       "views_7d_avg": 6264,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 48,
       "x_mentions": 0,
@@ -16962,9 +17222,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -17054,6 +17315,7 @@
       "views_7d_avg": 1818,
       "views_trend": "accelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17065,9 +17327,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -17157,6 +17420,7 @@
       "views_7d_avg": 1115,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17168,9 +17432,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -17260,6 +17525,7 @@
       "views_7d_avg": 1762,
       "views_trend": "accelerating",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17271,9 +17537,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -17363,6 +17630,7 @@
       "views_7d_avg": 8988,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17374,9 +17642,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -17466,6 +17735,7 @@
       "views_7d_avg": 1449,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17477,9 +17747,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -17574,6 +17845,7 @@
       "views_7d_avg": 537,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 11,
       "x_mentions": 0,
@@ -17585,9 +17857,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -17677,6 +17950,7 @@
       "views_7d_avg": 48,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17688,9 +17962,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -17756,6 +18031,7 @@
       "views_7d_avg": 7587,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17767,9 +18043,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -17859,6 +18136,7 @@
       "views_7d_avg": 3984,
       "views_trend": "accelerating",
       "youtube_state": "elevated",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -17870,9 +18148,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -17962,6 +18241,7 @@
       "views_7d_avg": 10453,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 3,
       "reddit_comments": 191,
       "x_mentions": 0,
@@ -17973,9 +18253,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0008,
@@ -18065,6 +18346,7 @@
       "views_7d_avg": 576,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -18076,9 +18358,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18168,6 +18451,7 @@
       "views_7d_avg": 425,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 1,
       "x_mentions": 0,
@@ -18179,9 +18463,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18276,6 +18561,7 @@
       "views_7d_avg": 5,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 17,
       "x_mentions": 0,
@@ -18287,9 +18573,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18379,6 +18666,7 @@
       "views_7d_avg": 100593,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 92,
       "x_mentions": 0,
@@ -18390,9 +18678,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0074,
@@ -18482,6 +18771,7 @@
       "views_7d_avg": 1716,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -18493,9 +18783,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -18585,6 +18876,7 @@
       "views_7d_avg": 15516,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 4,
       "x_mentions": 0,
@@ -18596,9 +18888,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0011,
@@ -18688,6 +18981,7 @@
       "views_7d_avg": 2005,
       "views_trend": "accelerating",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -18699,9 +18993,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -18779,6 +19074,7 @@
       "views_7d_avg": 22210,
       "views_trend": "decelerating",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -18790,9 +19086,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0015,
@@ -18882,6 +19179,7 @@
       "views_7d_avg": 0,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 17,
       "x_mentions": 0,
@@ -18893,9 +19191,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18961,6 +19260,7 @@
       "views_7d_avg": 632,
       "views_trend": "flat",
       "youtube_state": "new",
+      "event_youtube_views": 0,
       "reddit_posts": 2,
       "reddit_comments": 270,
       "x_mentions": 0,
@@ -18972,9 +19272,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19058,6 +19359,7 @@
       "views_7d_avg": 28,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 1,
       "reddit_comments": 22,
       "x_mentions": 0,
@@ -19069,9 +19371,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19161,6 +19464,7 @@
       "views_7d_avg": 37,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -19172,9 +19476,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19264,6 +19569,7 @@
       "views_7d_avg": 28,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -19278,6 +19584,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19367,6 +19674,7 @@
       "views_7d_avg": 19,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -19381,6 +19689,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19470,6 +19779,7 @@
       "views_7d_avg": 519,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 5,
       "reddit_comments": 140,
       "x_mentions": 0,
@@ -19484,6 +19794,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19573,6 +19884,7 @@
       "views_7d_avg": 62,
       "views_trend": "flat",
       "youtube_state": "normal",
+      "event_youtube_views": 0,
       "reddit_posts": 0,
       "reddit_comments": 0,
       "x_mentions": 0,
@@ -19587,6 +19899,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19661,6 +19974,7 @@
       "trends": 1
     }
   ],
+  "streaming_movies": [],
   "actors": [
     {
       "tmdb_id": 1813,
@@ -19719,6 +20033,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 26,
       "score": 999,
       "scores": {
@@ -19758,6 +20073,7 @@
       "avg_film_score": 842,
       "news_mentions": [],
       "x_mentions": 21647,
+      "event_youtube_views": 0,
       "mentions": 21657,
       "score": 933,
       "scores": {
@@ -19797,6 +20113,7 @@
       "avg_film_score": 838,
       "news_mentions": [],
       "x_mentions": 7674,
+      "event_youtube_views": 0,
       "mentions": 7684,
       "score": 933,
       "scores": {
@@ -19836,6 +20153,7 @@
       "avg_film_score": 838,
       "news_mentions": [],
       "x_mentions": 9913,
+      "event_youtube_views": 0,
       "mentions": 9923,
       "score": 933,
       "scores": {
@@ -19867,6 +20185,7 @@
       "avg_film_score": 877,
       "news_mentions": [],
       "x_mentions": 8725,
+      "event_youtube_views": 0,
       "mentions": 8730,
       "score": 907,
       "scores": {
@@ -19898,6 +20217,7 @@
       "avg_film_score": 877,
       "news_mentions": [],
       "x_mentions": 1877,
+      "event_youtube_views": 0,
       "mentions": 1882,
       "score": 907,
       "scores": {
@@ -19929,6 +20249,7 @@
       "avg_film_score": 877,
       "news_mentions": [],
       "x_mentions": 306,
+      "event_youtube_views": 0,
       "mentions": 311,
       "score": 907,
       "scores": {
@@ -19984,6 +20305,7 @@
       "avg_film_score": 824,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 20,
       "score": 895,
       "scores": {
@@ -20039,6 +20361,7 @@
       "avg_film_score": 802,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 20,
       "score": 894,
       "scores": {
@@ -20086,6 +20409,7 @@
       "avg_film_score": 813,
       "news_mentions": [],
       "x_mentions": 24269,
+      "event_youtube_views": 0,
       "mentions": 24284,
       "score": 890,
       "scores": {
@@ -20122,6 +20446,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 883,
       "scores": {
@@ -20130,7 +20455,7 @@
         "30d": 883
       },
       "rank": 11,
-      "move": 28,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20158,6 +20483,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 882,
       "scores": {
@@ -20166,7 +20492,7 @@
         "30d": 882
       },
       "rank": 12,
-      "move": 29,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20194,6 +20520,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 881,
       "scores": {
@@ -20202,7 +20529,7 @@
         "30d": 881
       },
       "rank": 13,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20230,6 +20557,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 881,
       "scores": {
@@ -20238,7 +20566,7 @@
         "30d": 881
       },
       "rank": 14,
-      "move": 29,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20266,6 +20594,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 881,
       "scores": {
@@ -20274,7 +20603,7 @@
         "30d": 881
       },
       "rank": 15,
-      "move": 30,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20305,6 +20634,7 @@
       "avg_film_score": 886,
       "news_mentions": [],
       "x_mentions": 5423,
+      "event_youtube_views": 0,
       "mentions": 5433,
       "score": 879,
       "scores": {
@@ -20313,7 +20643,7 @@
         "30d": 879
       },
       "rank": 16,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20352,6 +20682,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 1827,
+      "event_youtube_views": 0,
       "mentions": 1842,
       "score": 871,
       "scores": {
@@ -20360,7 +20691,7 @@
         "30d": 871
       },
       "rank": 17,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20391,6 +20722,7 @@
       "avg_film_score": 802,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 867,
       "scores": {
@@ -20399,7 +20731,7 @@
         "30d": 867
       },
       "rank": 18,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20422,6 +20754,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 5,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 866,
       "scores": {
@@ -20430,7 +20763,7 @@
         "30d": 866
       },
       "rank": 19,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20453,6 +20786,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 866,
       "scores": {
@@ -20461,7 +20795,7 @@
         "30d": 866
       },
       "rank": 20,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20484,6 +20818,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 866,
       "scores": {
@@ -20492,7 +20827,7 @@
         "30d": 866
       },
       "rank": 21,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20515,6 +20850,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 866,
       "scores": {
@@ -20523,7 +20859,7 @@
         "30d": 866
       },
       "rank": 22,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20546,6 +20882,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 866,
       "scores": {
@@ -20554,7 +20891,7 @@
         "30d": 866
       },
       "rank": 23,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20577,6 +20914,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 866,
       "scores": {
@@ -20585,7 +20923,7 @@
         "30d": 866
       },
       "rank": 24,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20624,6 +20962,7 @@
       "avg_film_score": 803,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 15,
       "score": 865,
       "scores": {
@@ -20632,7 +20971,7 @@
         "30d": 865
       },
       "rank": 25,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20663,6 +21002,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 862,
       "scores": {
@@ -20671,7 +21011,7 @@
         "30d": 862
       },
       "rank": 26,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20702,6 +21042,7 @@
       "avg_film_score": 809,
       "news_mentions": [],
       "x_mentions": 52,
+      "event_youtube_views": 0,
       "mentions": 62,
       "score": 861,
       "scores": {
@@ -20710,7 +21051,7 @@
         "30d": 861
       },
       "rank": 27,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20741,6 +21082,7 @@
       "avg_film_score": 806,
       "news_mentions": [],
       "x_mentions": 7773,
+      "event_youtube_views": 0,
       "mentions": 7783,
       "score": 859,
       "scores": {
@@ -20749,7 +21091,7 @@
         "30d": 859
       },
       "rank": 28,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20780,6 +21122,7 @@
       "avg_film_score": 801,
       "news_mentions": [],
       "x_mentions": 4811,
+      "event_youtube_views": 0,
       "mentions": 4821,
       "score": 858,
       "scores": {
@@ -20788,7 +21131,7 @@
         "30d": 858
       },
       "rank": 29,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20819,6 +21162,7 @@
       "avg_film_score": 801,
       "news_mentions": [],
       "x_mentions": 216,
+      "event_youtube_views": 0,
       "mentions": 226,
       "score": 858,
       "scores": {
@@ -20827,7 +21171,7 @@
         "30d": 858
       },
       "rank": 30,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20850,6 +21194,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 44622,
+      "event_youtube_views": 0,
       "mentions": 44627,
       "score": 857,
       "scores": {
@@ -20858,7 +21203,7 @@
         "30d": 857
       },
       "rank": 31,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20881,6 +21226,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 644,
+      "event_youtube_views": 0,
       "mentions": 649,
       "score": 857,
       "scores": {
@@ -20889,7 +21235,7 @@
         "30d": 857
       },
       "rank": 32,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20912,6 +21258,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 249,
+      "event_youtube_views": 0,
       "mentions": 254,
       "score": 857,
       "scores": {
@@ -20920,7 +21267,7 @@
         "30d": 857
       },
       "rank": 33,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20943,6 +21290,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 210,
+      "event_youtube_views": 0,
       "mentions": 215,
       "score": 857,
       "scores": {
@@ -20951,7 +21299,7 @@
         "30d": 857
       },
       "rank": 34,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20974,6 +21322,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 68,
+      "event_youtube_views": 0,
       "mentions": 73,
       "score": 857,
       "scores": {
@@ -20982,7 +21331,7 @@
         "30d": 857
       },
       "rank": 35,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21021,6 +21370,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 15,
       "score": 857,
       "scores": {
@@ -21029,7 +21379,7 @@
         "30d": 857
       },
       "rank": 36,
-      "move": -9,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21060,6 +21410,7 @@
       "avg_film_score": 812,
       "news_mentions": [],
       "x_mentions": 820,
+      "event_youtube_views": 0,
       "mentions": 830,
       "score": 854,
       "scores": {
@@ -21068,7 +21419,7 @@
         "30d": 854
       },
       "rank": 37,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21099,6 +21450,7 @@
       "avg_film_score": 812,
       "news_mentions": [],
       "x_mentions": 4986,
+      "event_youtube_views": 0,
       "mentions": 4996,
       "score": 854,
       "scores": {
@@ -21107,7 +21459,7 @@
         "30d": 854
       },
       "rank": 38,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21138,6 +21490,7 @@
       "avg_film_score": 801,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 849,
       "scores": {
@@ -21146,7 +21499,7 @@
         "30d": 849
       },
       "rank": 39,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21177,6 +21530,7 @@
       "avg_film_score": 808,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 847,
       "scores": {
@@ -21185,7 +21539,7 @@
         "30d": 847
       },
       "rank": 40,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21216,6 +21570,7 @@
       "avg_film_score": 804,
       "news_mentions": [],
       "x_mentions": 5,
+      "event_youtube_views": 0,
       "mentions": 15,
       "score": 847,
       "scores": {
@@ -21224,7 +21579,7 @@
         "30d": 847
       },
       "rank": 41,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21255,6 +21610,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 843,
       "scores": {
@@ -21263,7 +21619,7 @@
         "30d": 843
       },
       "rank": 42,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21294,6 +21650,7 @@
       "avg_film_score": 855,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 840,
       "scores": {
@@ -21302,7 +21659,7 @@
         "30d": 840
       },
       "rank": 43,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21333,6 +21690,7 @@
       "avg_film_score": 838,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 840,
       "scores": {
@@ -21341,7 +21699,7 @@
         "30d": 840
       },
       "rank": 44,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21372,6 +21730,7 @@
       "avg_film_score": 806,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 840,
       "scores": {
@@ -21380,7 +21739,7 @@
         "30d": 840
       },
       "rank": 45,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21411,6 +21770,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 840,
       "scores": {
@@ -21419,7 +21779,7 @@
         "30d": 840
       },
       "rank": 46,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21450,6 +21810,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 840,
       "scores": {
@@ -21458,7 +21819,7 @@
         "30d": 840
       },
       "rank": 47,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21489,6 +21850,7 @@
       "avg_film_score": 862,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 839,
       "scores": {
@@ -21498,7 +21860,7 @@
       },
       "rank": 48,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 11288,
@@ -21528,6 +21890,7 @@
       "avg_film_score": 833,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 839,
       "scores": {
@@ -21537,7 +21900,7 @@
       },
       "rank": 49,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 1599899,
@@ -21567,6 +21930,7 @@
       "avg_film_score": 831,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 839,
       "scores": {
@@ -21576,7 +21940,7 @@
       },
       "rank": 50,
       "move": 0,
-      "is_new": true
+      "is_new": false
     }
   ],
   "directors": [
@@ -21600,6 +21964,7 @@
       "avg_film_score": 877,
       "news_mentions": [],
       "x_mentions": 155,
+      "event_youtube_views": 0,
       "mentions": 160,
       "score": 999,
       "scores": {
@@ -21608,7 +21973,7 @@
         "30d": 999
       },
       "rank": 1,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21631,6 +21996,7 @@
       "avg_film_score": 877,
       "news_mentions": [],
       "x_mentions": 144,
+      "event_youtube_views": 0,
       "mentions": 149,
       "score": 999,
       "scores": {
@@ -21639,7 +22005,7 @@
         "30d": 999
       },
       "rank": 2,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21670,6 +22036,7 @@
       "avg_film_score": 803,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 965,
       "scores": {
@@ -21706,6 +22073,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 956,
       "scores": {
@@ -21745,6 +22113,7 @@
       "avg_film_score": 801,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 953,
       "scores": {
@@ -21781,6 +22150,7 @@
         }
       ],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 6,
       "score": 951,
       "scores": {
@@ -21820,6 +22190,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 10,
       "score": 933,
       "scores": {
@@ -21851,6 +22222,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 922,
       "scores": {
@@ -21882,6 +22254,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 2652,
+      "event_youtube_views": 0,
       "mentions": 2657,
       "score": 905,
       "scores": {
@@ -21913,6 +22286,7 @@
       "avg_film_score": 968,
       "news_mentions": [],
       "x_mentions": 3271,
+      "event_youtube_views": 0,
       "mentions": 3276,
       "score": 905,
       "scores": {
@@ -21944,6 +22318,7 @@
       "avg_film_score": 806,
       "news_mentions": [],
       "x_mentions": 114,
+      "event_youtube_views": 0,
       "mentions": 119,
       "score": 872,
       "scores": {
@@ -21975,6 +22350,7 @@
       "avg_film_score": 804,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 872,
       "scores": {
@@ -22006,6 +22382,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 864,
       "scores": {
@@ -22037,6 +22414,7 @@
       "avg_film_score": 815,
       "news_mentions": [],
       "x_mentions": 12,
+      "event_youtube_views": 0,
       "mentions": 17,
       "score": 862,
       "scores": {
@@ -22068,6 +22446,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 862,
       "scores": {
@@ -22099,6 +22478,7 @@
       "avg_film_score": 802,
       "news_mentions": [],
       "x_mentions": 92,
+      "event_youtube_views": 0,
       "mentions": 97,
       "score": 856,
       "scores": {
@@ -22130,6 +22510,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 855,
       "scores": {
@@ -22161,6 +22542,7 @@
       "avg_film_score": 874,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 852,
       "scores": {
@@ -22192,6 +22574,7 @@
       "avg_film_score": 825,
       "news_mentions": [],
       "x_mentions": 13,
+      "event_youtube_views": 0,
       "mentions": 18,
       "score": 849,
       "scores": {
@@ -22223,6 +22606,7 @@
       "avg_film_score": 801,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 838,
       "scores": {
@@ -22254,6 +22638,7 @@
       "avg_film_score": 999,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 837,
       "scores": {
@@ -22285,6 +22670,7 @@
       "avg_film_score": 801,
       "news_mentions": [],
       "x_mentions": 33,
+      "event_youtube_views": 0,
       "mentions": 38,
       "score": 834,
       "scores": {
@@ -22316,6 +22702,7 @@
       "avg_film_score": 815,
       "news_mentions": [],
       "x_mentions": 399,
+      "event_youtube_views": 0,
       "mentions": 404,
       "score": 833,
       "scores": {
@@ -22347,6 +22734,7 @@
       "avg_film_score": 979,
       "news_mentions": [],
       "x_mentions": 0,
+      "event_youtube_views": 0,
       "mentions": 5,
       "score": 832,
       "scores": {
@@ -22378,6 +22766,7 @@
       "avg_film_score": 800,
       "news_mentions": [],
       "x_mentions": 41,
+      "event_youtube_views": 0,
       "mentions": 46,
       "score": 830,
       "scores": {
