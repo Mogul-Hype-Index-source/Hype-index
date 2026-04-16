@@ -235,6 +235,14 @@ def _passes_tag_filter(headline: str, entity_tags: List[str]) -> bool:
 # Config + HTTP helpers
 # ---------------------------------------------------------------------------
 
+def _sanitize_title(title: str, year: Optional[str] = None) -> str:
+    """Strip embedded quote characters from TMDb titles and optionally append year."""
+    cleaned = re.sub(r'["\u201c\u201d\u2018\u2019\u0027]', '', title).strip()
+    if year and len(year) == 4:
+        cleaned = f"{cleaned} {year}"
+    return cleaned
+
+
 def load_config(path: Path = CONFIG_PATH) -> Dict[str, Any]:
     if not path.exists():
         raise FileNotFoundError(
@@ -1273,7 +1281,9 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
             m["youtube"] = {"views": 0, "likes": 0, "comments": 0}
 
         try:
-            m["reddit"] = fetch_reddit_mentions(title, subs, ua)
+            reddit_year = (m.get("release_date") or "")[:4] or None
+            reddit_query = _sanitize_title(title, year=reddit_year) + " movie"
+            m["reddit"] = fetch_reddit_mentions(reddit_query, subs, ua)
         except Exception as exc:  # noqa: BLE001
             LOG.warning("Reddit failed for %s: %s", title, exc)
             m["reddit"] = {"posts": 0, "comments": 0}
@@ -1300,11 +1310,18 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     LOG.info("YouTube coverage: %d/%d (%d%%)", yt_hits, len(movies),
              (yt_hits * 100 // len(movies)) if movies else 0)
 
-    # 4. Google Trends — batch all titles at once (cheap, single block)
-    titles = [m["title"] for m in movies]
-    trends = fetch_google_trends(titles)
+    # 4. Google Trends — sanitized queries with year for disambiguation
+    trends_queries: Dict[str, str] = {}  # sanitized_query → raw_title
     for m in movies:
-        m["trends"] = int(trends.get(m["title"], 0))
+        year = (m.get("release_date") or "")[:4] or None
+        sanitized = _sanitize_title(m["title"], year=year)
+        trends_queries[sanitized] = m["title"]
+    trends = fetch_google_trends(list(trends_queries.keys()))
+    # Map results back to movies by raw title
+    reverse_map = {v: k for k, v in trends_queries.items()}
+    for m in movies:
+        q = reverse_map.get(m["title"], m["title"])
+        m["trends"] = int(trends.get(q, 0))
 
     # 5. X (Twitter) mention counts — one query per movie title
     x_queries: Dict[str, str] = {}
