@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-04-16T11:36:05+00:00",
-  "next_update_at": "2026-04-16T12:36:05+00:00",
+  "generated_at": "2026-04-16T13:34:45+00:00",
+  "next_update_at": "2026-04-16T14:34:45+00:00",
   "snapshot_date": "2026-04-16",
   "summary": {
     "total": 192,
-    "rising": 134,
-    "falling": 41,
-    "flat": 17,
+    "total_streaming": 0,
+    "rising": 0,
+    "falling": 0,
+    "flat": 192,
     "avg_score": 809,
     "total_mentions_24h": 313630
   },
@@ -186,80 +187,8 @@
       "category": "box-office"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1455079,
-      "title": "You, Me & Tuscany",
-      "poster_url": "https://image.tmdb.org/t/p/w185/mJS0IF7Af3WpPRhSTDT6rGpiLzw.jpg",
-      "move": 83,
-      "score": 811
-    },
-    {
-      "tmdb_id": 1339713,
-      "title": "Obsession",
-      "poster_url": "https://image.tmdb.org/t/p/w185/sfgUrQgmgHUPZzpviuP2zILQep1.jpg",
-      "move": 58,
-      "score": 816
-    },
-    {
-      "tmdb_id": 1301421,
-      "title": "The Sheep Detectives",
-      "poster_url": "https://image.tmdb.org/t/p/w185/hTirV44jiLh6NqdiB6jtxPsDIoG.jpg",
-      "move": 16,
-      "score": 802
-    },
-    {
-      "tmdb_id": 1400336,
-      "title": "Focker-In-Law",
-      "poster_url": "https://image.tmdb.org/t/p/w185/bc7sakoBZcUrrkr1yg9MSxCuGie.jpg",
-      "move": 16,
-      "score": 802
-    },
-    {
-      "tmdb_id": 1602727,
-      "title": "Night King",
-      "poster_url": "https://image.tmdb.org/t/p/w185/eNeXDdsY02ZODAEUZayNZU7bPRd.jpg",
-      "move": 16,
-      "score": 802
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1440769,
-      "title": "The Beekeeper 2",
-      "poster_url": null,
-      "move": -93,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1511057,
-      "title": "Roommates",
-      "poster_url": "https://image.tmdb.org/t/p/w185/eW1s6omXIfVkTlmKVe9y9Dwwt4u.jpg",
-      "move": -88,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1170608,
-      "title": "Dune: Part Three",
-      "poster_url": "https://image.tmdb.org/t/p/w185/b4wekkUaxExzOeGe7hKXzhnyXHt.jpg",
-      "move": -78,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1437511,
-      "title": "How to Rob a Bank",
-      "poster_url": null,
-      "move": -69,
-      "score": 801
-    },
-    {
-      "tmdb_id": 1366906,
-      "title": "The Gates",
-      "poster_url": "https://image.tmdb.org/t/p/w185/le5eG0G4GgFUs55WAZ1aGKCq8PU.jpg",
-      "move": -44,
-      "score": 801
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -289,8 +218,9 @@
       },
       "score": 999,
       "move": 0,
-      "is_new": true,
+      "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": true,
       "sub_scores": {
         "youtube_views": 1.0,
@@ -391,9 +321,10 @@
         "30d": 979
       },
       "score": 979,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0011,
@@ -494,9 +425,10 @@
         "30d": 967
       },
       "score": 967,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -605,6 +537,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -710,9 +643,10 @@
         "30d": 919
       },
       "score": 919,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -818,9 +752,10 @@
         "30d": 897
       },
       "score": 897,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0069,
@@ -924,6 +859,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
@@ -1032,6 +968,7 @@
       "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -1135,6 +1072,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -1235,9 +1173,10 @@
         "30d": 835
       },
       "score": 835,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -1338,9 +1277,10 @@
         "30d": 828
       },
       "score": 828,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0081,
@@ -1441,9 +1381,10 @@
         "30d": 827
       },
       "score": 827,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0029,
@@ -1544,9 +1485,10 @@
         "30d": 827
       },
       "score": 827,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -1650,6 +1592,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -1750,9 +1693,10 @@
         "30d": 826
       },
       "score": 826,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -1853,9 +1797,10 @@
         "30d": 825
       },
       "score": 825,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -1956,9 +1901,10 @@
         "30d": 825
       },
       "score": 825,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.002,
@@ -2047,9 +1993,10 @@
         "30d": 823
       },
       "score": 823,
-      "move": -13,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0571,
@@ -2150,9 +2097,10 @@
         "30d": 822
       },
       "score": 822,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2253,9 +2201,10 @@
         "30d": 821
       },
       "score": 821,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2356,9 +2305,10 @@
         "30d": 817
       },
       "score": 817,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -2441,9 +2391,10 @@
         "30d": 816
       },
       "score": 816,
-      "move": 58,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -2544,9 +2495,10 @@
         "30d": 815
       },
       "score": 815,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2647,9 +2599,10 @@
         "30d": 815
       },
       "score": 815,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -2750,9 +2703,10 @@
         "30d": 814
       },
       "score": 814,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -2853,9 +2807,10 @@
         "30d": 814
       },
       "score": 814,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0111,
@@ -2944,9 +2899,10 @@
         "30d": 814
       },
       "score": 814,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -3050,6 +3006,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -3150,9 +3107,10 @@
         "30d": 812
       },
       "score": 812,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -3247,9 +3205,10 @@
         "30d": 812
       },
       "score": 812,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -3338,9 +3297,10 @@
         "30d": 811
       },
       "score": 811,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -3441,9 +3401,10 @@
         "30d": 811
       },
       "score": 811,
-      "move": 83,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -3544,9 +3505,10 @@
         "30d": 811
       },
       "score": 811,
-      "move": -10,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0098,
@@ -3629,9 +3591,10 @@
         "30d": 811
       },
       "score": 811,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0057,
@@ -3737,9 +3700,10 @@
         "30d": 810
       },
       "score": 810,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0007,
@@ -3840,9 +3804,10 @@
         "30d": 810
       },
       "score": 810,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0029,
@@ -3948,9 +3913,10 @@
         "30d": 810
       },
       "score": 810,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -4015,9 +3981,10 @@
         "30d": 809
       },
       "score": 809,
-      "move": -14,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0026,
@@ -4099,9 +4066,10 @@
         "30d": 809
       },
       "score": 809,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0041,
@@ -4202,9 +4170,10 @@
         "30d": 808
       },
       "score": 808,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": true,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0022,
@@ -4305,9 +4274,10 @@
         "30d": 808
       },
       "score": 808,
-      "move": -40,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.1195,
@@ -4413,9 +4383,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -4516,9 +4487,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -4622,6 +4594,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -4722,9 +4695,10 @@
         "30d": 807
       },
       "score": 807,
-      "move": -20,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -4825,9 +4799,10 @@
         "30d": 806
       },
       "score": 806,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.001,
@@ -4928,9 +4903,10 @@
         "30d": 806
       },
       "score": 806,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -5040,9 +5016,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -5143,9 +5120,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -5246,9 +5224,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0034,
@@ -5349,9 +5328,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.002,
@@ -5452,9 +5432,10 @@
         "30d": 805
       },
       "score": 805,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -5549,9 +5530,10 @@
         "30d": 804
       },
       "score": 804,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0013,
@@ -5655,6 +5637,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -5755,9 +5738,10 @@
         "30d": 804
       },
       "score": 804,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -5861,6 +5845,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0027,
@@ -5961,9 +5946,10 @@
         "30d": 803
       },
       "score": 803,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -6067,6 +6053,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0034,
@@ -6149,9 +6136,10 @@
         "30d": 803
       },
       "score": 803,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
@@ -6252,9 +6240,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -6355,9 +6344,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0027,
@@ -6458,9 +6448,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -6561,9 +6552,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -6664,9 +6656,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -6767,9 +6760,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0056,
@@ -6870,9 +6864,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -6973,9 +6968,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -7076,9 +7072,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -7179,9 +7176,10 @@
         "30d": 802
       },
       "score": 802,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -7287,9 +7285,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -7390,9 +7389,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -7493,9 +7493,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -7596,9 +7597,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -7699,9 +7701,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0025,
@@ -7802,9 +7805,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -7887,9 +7891,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -21,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0098,
@@ -7990,9 +7995,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -37,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.02,
@@ -8093,9 +8099,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -8184,9 +8191,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -69,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0491,
@@ -8287,9 +8295,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -8390,9 +8399,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -44,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0019,
@@ -8493,9 +8503,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": -11,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0049,
@@ -8596,9 +8607,10 @@
         "30d": 801
       },
       "score": 801,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -8704,9 +8716,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -8807,9 +8820,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -8910,9 +8924,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -9013,9 +9028,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -9110,9 +9126,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0056,
@@ -9213,9 +9230,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -9316,9 +9334,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -9424,9 +9443,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -9527,9 +9547,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -9630,9 +9651,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -9733,9 +9755,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -9841,9 +9864,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -9944,9 +9968,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -10047,9 +10072,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
@@ -10132,9 +10158,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -10235,9 +10262,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -10338,9 +10366,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -10441,9 +10470,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -10544,9 +10574,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -10647,9 +10678,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -10750,9 +10782,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -43,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0135,
@@ -10829,9 +10862,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -10932,9 +10966,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -44,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0136,
@@ -11035,9 +11070,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0019,
@@ -11138,9 +11174,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -11241,9 +11278,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -11344,9 +11382,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -11447,9 +11486,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -11550,9 +11590,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -11654,8 +11695,9 @@
       },
       "score": 800,
       "move": 0,
-      "is_new": true,
+      "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0067,
@@ -11756,9 +11798,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -11864,9 +11907,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0004,
@@ -11961,9 +12005,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12064,9 +12109,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -12167,9 +12213,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12270,9 +12317,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -12373,9 +12421,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12476,9 +12525,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -12579,9 +12629,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.001,
@@ -12682,9 +12733,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -12785,9 +12837,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -12888,9 +12941,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -12991,9 +13045,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -13094,9 +13149,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -13197,9 +13253,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -13300,9 +13357,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13384,9 +13442,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0017,
@@ -13487,9 +13546,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13590,9 +13650,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13693,9 +13754,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -13796,9 +13858,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13881,9 +13944,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -13984,9 +14048,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0008,
@@ -14087,9 +14152,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14190,9 +14256,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -14287,9 +14354,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14395,9 +14463,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14498,9 +14567,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -14601,9 +14671,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14686,9 +14757,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -78,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0063,
@@ -14789,9 +14861,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -14892,9 +14965,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -14995,9 +15069,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -15103,9 +15178,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15206,9 +15282,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -15309,9 +15386,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15394,9 +15472,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15453,9 +15532,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15538,9 +15618,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15623,9 +15704,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15731,9 +15813,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -15834,9 +15917,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -15936,9 +16020,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16039,9 +16124,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -16136,9 +16222,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0003,
@@ -16239,9 +16326,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16336,9 +16424,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16439,9 +16528,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0009,
@@ -16542,9 +16632,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16645,9 +16736,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -16748,9 +16840,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -16851,9 +16944,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -16954,9 +17048,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -17057,9 +17152,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -17160,9 +17256,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
@@ -17263,9 +17360,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -17366,9 +17464,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -17474,9 +17573,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -17577,9 +17677,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -17656,9 +17757,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -88,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0006,
@@ -17762,6 +17864,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0005,
@@ -17865,6 +17968,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0008,
@@ -17968,6 +18072,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18071,6 +18176,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18179,6 +18285,7 @@
       "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18279,9 +18386,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -93,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0074,
@@ -18382,9 +18490,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -18485,9 +18594,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0011,
@@ -18588,9 +18698,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0001,
@@ -18679,9 +18790,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0015,
@@ -18782,9 +18894,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18861,9 +18974,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -18958,9 +19072,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19061,9 +19176,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19164,9 +19280,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0048,
@@ -19267,9 +19384,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19370,9 +19488,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19473,9 +19592,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19576,9 +19696,10 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
+      "release_type": "unknown",
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0,
@@ -19653,6 +19774,7 @@
       "trends": 1
     }
   ],
+  "streaming_movies": [],
   "actors": [
     {
       "tmdb_id": 1813,
@@ -19984,7 +20106,7 @@
         "30d": 919
       },
       "rank": 8,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20039,7 +20161,7 @@
         "30d": 918
       },
       "rank": 9,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20086,7 +20208,7 @@
         "30d": 913
       },
       "rank": 10,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20126,7 +20248,7 @@
         "30d": 903
       },
       "rank": 11,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20165,7 +20287,7 @@
         "30d": 899
       },
       "rank": 12,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20212,7 +20334,7 @@
         "30d": 889
       },
       "rank": 13,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20251,7 +20373,7 @@
         "30d": 884
       },
       "rank": 14,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20282,7 +20404,7 @@
         "30d": 882
       },
       "rank": 15,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20313,7 +20435,7 @@
         "30d": 882
       },
       "rank": 16,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20344,7 +20466,7 @@
         "30d": 882
       },
       "rank": 17,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20375,7 +20497,7 @@
         "30d": 882
       },
       "rank": 18,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20406,7 +20528,7 @@
         "30d": 882
       },
       "rank": 19,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20437,7 +20559,7 @@
         "30d": 882
       },
       "rank": 20,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20484,7 +20606,7 @@
         "30d": 881
       },
       "rank": 21,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20523,7 +20645,7 @@
         "30d": 878
       },
       "rank": 22,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20562,7 +20684,7 @@
         "30d": 877
       },
       "rank": 23,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20601,7 +20723,7 @@
         "30d": 874
       },
       "rank": 24,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20640,7 +20762,7 @@
         "30d": 873
       },
       "rank": 25,
-      "move": 6,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20679,7 +20801,7 @@
         "30d": 873
       },
       "rank": 26,
-      "move": 6,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20726,7 +20848,7 @@
         "30d": 872
       },
       "rank": 27,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20757,7 +20879,7 @@
         "30d": 871
       },
       "rank": 28,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20788,7 +20910,7 @@
         "30d": 871
       },
       "rank": 29,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20819,7 +20941,7 @@
         "30d": 871
       },
       "rank": 30,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20850,7 +20972,7 @@
         "30d": 871
       },
       "rank": 31,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20881,7 +21003,7 @@
         "30d": 871
       },
       "rank": 32,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20920,7 +21042,7 @@
         "30d": 868
       },
       "rank": 33,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20959,7 +21081,7 @@
         "30d": 868
       },
       "rank": 34,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20998,7 +21120,7 @@
         "30d": 861
       },
       "rank": 35,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21037,7 +21159,7 @@
         "30d": 859
       },
       "rank": 36,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21076,7 +21198,7 @@
         "30d": 859
       },
       "rank": 37,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21115,7 +21237,7 @@
         "30d": 855
       },
       "rank": 38,
-      "move": 5,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21151,7 +21273,7 @@
         "30d": 853
       },
       "rank": 39,
-      "move": -27,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21187,7 +21309,7 @@
         "30d": 852
       },
       "rank": 40,
-      "move": -27,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21223,7 +21345,7 @@
         "30d": 852
       },
       "rank": 41,
-      "move": -27,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21262,7 +21384,7 @@
         "30d": 851
       },
       "rank": 42,
-      "move": 4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21298,7 +21420,7 @@
         "30d": 851
       },
       "rank": 43,
-      "move": -28,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21373,7 +21495,7 @@
         "30d": 851
       },
       "rank": 45,
-      "move": -29,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21412,7 +21534,7 @@
         "30d": 850
       },
       "rank": 46,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21452,7 +21574,7 @@
       },
       "rank": 47,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 1360317,
@@ -21490,7 +21612,7 @@
         "30d": 850
       },
       "rank": 48,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21529,7 +21651,7 @@
         "30d": 850
       },
       "rank": 49,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21568,7 +21690,7 @@
         "30d": 850
       },
       "rank": 50,
-      "move": -1,
+      "move": 0,
       "is_new": false
     }
   ],
@@ -22256,7 +22378,7 @@
       },
       "rank": 21,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 143059,
@@ -22286,7 +22408,7 @@
         "30d": 834
       },
       "rank": 22,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22317,7 +22439,7 @@
         "30d": 833
       },
       "rank": 23,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22349,7 +22471,7 @@
       },
       "rank": 24,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 1404799,

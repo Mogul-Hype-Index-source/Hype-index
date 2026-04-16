@@ -467,6 +467,75 @@ def _load_manual_movies(api_key: str) -> List[Dict[str, Any]]:
     return movies
 
 
+RELEASE_TYPE_CACHE_PATH = REPO_ROOT / "data" / "cache" / "release_types.json"
+
+# TMDb release_dates type codes
+# 1=Premiere, 2=Theatrical (limited), 3=Theatrical, 4=Digital, 5=Physical, 6=TV
+THEATRICAL_TYPES = {1, 2, 3}
+STREAMING_TYPES = {4, 6}
+
+
+def fetch_tmdb_release_type(api_key: str, tmdb_id: int) -> str:
+    """
+    Classify a film as "theatrical", "streaming", "both", or "unknown"
+    by checking TMDb /movie/{id}/release_dates for US releases.
+    Falls back to all countries if no US data.
+    """
+    data = _http_get(
+        f"{TMDB_BASE}/movie/{tmdb_id}/release_dates",
+        params={"api_key": api_key},
+    )
+    if not data:
+        return "unknown"
+
+    results = data.get("results") or []
+
+    # Prefer US release info, fall back to all countries
+    us_types: set = set()
+    all_types: set = set()
+    for country in results:
+        for rd in (country.get("release_dates") or []):
+            rtype = rd.get("type")
+            if rtype:
+                all_types.add(rtype)
+                if country.get("iso_3166_1") == "US":
+                    us_types.add(rtype)
+
+    types = us_types or all_types
+    if not types:
+        return "unknown"
+
+    has_theatrical = bool(types & THEATRICAL_TYPES)
+    has_streaming = bool(types & STREAMING_TYPES)
+
+    if has_theatrical and has_streaming:
+        return "both"
+    elif has_theatrical:
+        return "theatrical"
+    elif has_streaming:
+        return "streaming"
+    return "unknown"
+
+
+def _load_release_type_cache() -> Dict[str, str]:
+    return _load_json(RELEASE_TYPE_CACHE_PATH) or {}
+
+
+def _save_release_type_cache(cache: Dict[str, str]) -> None:
+    _save_json(RELEASE_TYPE_CACHE_PATH, cache)
+
+
+def fetch_release_type_cached(api_key: str, tmdb_id: int,
+                              cache: Dict[str, str]) -> str:
+    """Fetch release type with persistent cache (never re-queries known films)."""
+    tid_str = str(tmdb_id)
+    if tid_str in cache:
+        return cache[tid_str]
+    result = fetch_tmdb_release_type(api_key, tmdb_id)
+    cache[tid_str] = result
+    return result
+
+
 def fetch_tmdb_credits(api_key: str, tmdb_id: int) -> Dict[str, Any]:
     """
     Returns:
@@ -1170,6 +1239,8 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     stats_cache: Dict[str, Dict[str, Any]] = _load_stats_cache()
     trailer_before = dict(trailer_cache)
     stats_before   = dict(stats_cache)
+    release_cache: Dict[str, str] = _load_release_type_cache()
+    release_before = dict(release_cache)
 
     # 3. Per-movie enrichment
     for idx, m in enumerate(movies, 1):
@@ -1181,6 +1252,7 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         m["poster_url"] = (
             f"{poster_base}{m['poster_path']}" if m.get("poster_path") else None
         )
+        m["release_type"] = fetch_release_type_cached(tmdb_key, m["tmdb_id"], release_cache)
 
         # YouTube — fully cached, with TMDb→search fallback chain.
         # Diagnostic logging is enabled for the first 3 movies of every run
@@ -1219,6 +1291,9 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     if stats_cache != stats_before:
         _save_stats_cache(stats_cache)
         LOG.info("Stats cache: %d entries persisted", len(stats_cache))
+    if release_cache != release_before:
+        _save_release_type_cache(release_cache)
+        LOG.info("Release type cache: %d entries persisted", len(release_cache))
 
     # Diagnostic summary: how many movies got real YouTube data this run?
     yt_hits = sum(1 for m in movies if (m.get("youtube") or {}).get("views", 0) > 0)
