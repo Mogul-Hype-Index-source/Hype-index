@@ -1502,7 +1502,7 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     }
 
 
-def _news_mentions_for(title: str, news_items: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+def _news_mentions_for(title: str, news_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Return news items whose headline mentions the movie title (case-insensitive)."""
     if not title:
         return []
@@ -1521,7 +1521,10 @@ def _news_mentions_for(title: str, news_items: List[Dict[str, Any]]) -> List[Dic
                     continue
         except Exception:  # noqa: BLE001
             pass
-        out.append({"source": item.get("source", ""), "headline": item.get("headline", "")})
+        mention: Dict[str, Any] = {"source": item.get("source", ""), "headline": item.get("headline", "")}
+        if item.get("is_event"):
+            mention["is_event"] = True
+        out.append(mention)
     return out
 
 

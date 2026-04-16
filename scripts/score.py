@@ -63,22 +63,39 @@ def _normalize(values: List[float]) -> List[float]:
 
 def _youtube_views(movies: List[Dict[str, Any]]) -> List[float]:
     """
-    Two-component YouTube view scoring:
-      60% rolling 7d average velocity
-      40% 24h delta × spike multiplier
+    Three-component YouTube view scoring:
+      40% rolling 7d average velocity (trailer)
+      20% 24h delta × spike multiplier (trailer)
+      40% event YouTube search views (CinemaCon etc.)
+    Event component is zero when no event data exists.
     """
     raw_7d: List[float] = []
     raw_24h: List[float] = []
+    raw_event: List[float] = []
     multipliers: List[float] = []
     for m in movies:
         vel = m.get("youtube_velocity") or {}
         raw_7d.append(float(vel.get("views_7d_avg", 0)))
         raw_24h.append(float(vel.get("views_24h", 0)))
-        multipliers.append(float(vel.get("spike_multiplier", 1.0)))
+        ev = float(m.get("event_youtube_views", 0))
+        raw_event.append(ev)
+        # Spike multiplier: use velocity spike, or event spike if >50K
+        spike = float(vel.get("spike_multiplier", 1.0))
+        if ev > 50000:
+            spike = max(spike, 2.0)
+        multipliers.append(spike)
 
     norm_7d = _normalize(raw_7d)
     norm_24h = _normalize(raw_24h)
+    norm_event = _normalize(raw_event)
 
+    has_event = any(v > 0 for v in raw_event)
+
+    if has_event:
+        return [
+            0.4 * norm_7d[i] + 0.2 * norm_24h[i] * multipliers[i] + 0.4 * norm_event[i]
+            for i in range(len(movies))
+        ]
     return [
         0.6 * norm_7d[i] + 0.4 * norm_24h[i] * multipliers[i]
         for i in range(len(movies))
@@ -141,14 +158,18 @@ def _news_impact(movies: List[Dict[str, Any]],
                  outlet_weights: Dict[str, float]) -> List[float]:
     """
     Sum of (count × tier weight) per outlet for headlines mentioning the title
-    in the last ~48h. Normalized against the top performer.
+    in the last ~48h. Event news (is_event=True) gets a 1.5x multiplier.
+    Normalized against the top performer.
     """
     raw: List[float] = []
     for m in movies:
         score = 0.0
         for mention in m.get("news_mentions", []) or []:
             outlet = mention.get("source", "")
-            score += outlet_weights.get(outlet, 0.3)  # blogs default 0.3
+            base = outlet_weights.get(outlet, 0.3)
+            if mention.get("is_event"):
+                base *= 1.5
+            score += base
         raw.append(score)
     return _normalize(raw)
 
