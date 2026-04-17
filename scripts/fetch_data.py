@@ -1451,7 +1451,12 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     x_queries: Dict[str, str] = {}
     for m in movies:
         key = f"movie:{m['tmdb_id']}"
-        x_queries[key] = f'"{m["title"]}" movie'
+        clean_title = _sanitize_title(m["title"])
+        # Don't append "movie" if the title already contains it
+        if "movie" in clean_title.lower():
+            x_queries[key] = f'"{clean_title}"'
+        else:
+            x_queries[key] = f'"{clean_title}" movie'
     # Also query actors and directors (by name) — these will be attached
     # to person entries downstream in derive_people().
     seen_people: set = set()

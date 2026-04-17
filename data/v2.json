@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-17T19:37:14+00:00",
-  "next_update_at": "2026-04-17T20:37:14+00:00",
+  "generated_at": "2026-04-17T21:52:06+00:00",
+  "next_update_at": "2026-04-17T22:52:06+00:00",
   "snapshot_date": "2026-04-17",
   "summary": {
     "total": 167,
     "total_streaming": 23,
-    "rising": 134,
-    "falling": 21,
-    "flat": 35,
+    "rising": 0,
+    "falling": 0,
+    "flat": 190,
     "avg_score": 807,
     "total_mentions_24h": 275023
   },
@@ -223,80 +223,8 @@
       "category": "box-office"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1081003,
-      "title": "Supergirl",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lV8Yuhz36hds5dvEIwB7DThixH.jpg",
-      "move": 132,
-      "score": 805
-    },
-    {
-      "tmdb_id": 1340110,
-      "title": "Redux Redux",
-      "poster_url": "https://image.tmdb.org/t/p/w185/9u7sUTYPPTxGCXbkcw8FTq50PnO.jpg",
-      "move": 126,
-      "score": 805
-    },
-    {
-      "tmdb_id": 1382802,
-      "title": "Family Movie",
-      "poster_url": "https://image.tmdb.org/t/p/w185/iKGb52exgPMsoy9v3wR51SjQcdY.jpg",
-      "move": 118,
-      "score": 812
-    },
-    {
-      "tmdb_id": 1084244,
-      "title": "Toy Story 5",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dWIAOC9EKFehGs3CYvDQih3hxaG.jpg",
-      "move": 112,
-      "score": 801
-    },
-    {
-      "tmdb_id": 539745,
-      "title": "Animal Farm",
-      "poster_url": "https://image.tmdb.org/t/p/w185/6pzI1DIlxwAFffw9OZcG6cr031U.jpg",
-      "move": 44,
-      "score": 809
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1308767,
-      "title": "Young Washington",
-      "poster_url": "https://image.tmdb.org/t/p/w185/ntW9zzhDmbt3sXDyPXb7SHVuDdB.jpg",
-      "move": -120,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1297446,
-      "title": "Slanted",
-      "poster_url": "https://image.tmdb.org/t/p/w185/cr2SfN854IlEoZQBtIfpyC0zXR5.jpg",
-      "move": -102,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1300968,
-      "title": "The Hunger Games: Sunrise on the Reaping",
-      "poster_url": "https://image.tmdb.org/t/p/w185/kONfwpf0AZzvL1zqjZV9C89g1PY.jpg",
-      "move": -97,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1440050,
-      "title": "The Breadwinner",
-      "poster_url": "https://image.tmdb.org/t/p/w185/4apG9Xk6HQvV48JKEjSUeiebju7.jpg",
-      "move": -94,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1511057,
-      "title": "Roommates",
-      "poster_url": "https://image.tmdb.org/t/p/w185/eW1s6omXIfVkTlmKVe9y9Dwwt4u.jpg",
-      "move": -87,
-      "score": 800
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -1084,7 +1012,7 @@
         "30d": 827
       },
       "score": 827,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1190,7 +1118,7 @@
         "30d": 824
       },
       "score": 824,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1296,7 +1224,7 @@
         "30d": 821
       },
       "score": 821,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1402,7 +1330,7 @@
         "30d": 821
       },
       "score": 821,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1508,7 +1436,7 @@
         "30d": 819
       },
       "score": 819,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1614,7 +1542,7 @@
         "30d": 819
       },
       "score": 819,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1714,7 +1642,7 @@
         "30d": 819
       },
       "score": 819,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1802,7 +1730,7 @@
         "30d": 818
       },
       "score": 818,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1890,7 +1818,7 @@
         "30d": 818
       },
       "score": 818,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1996,7 +1924,7 @@
         "30d": 817
       },
       "score": 817,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2102,7 +2030,7 @@
         "30d": 816
       },
       "score": 816,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2208,7 +2136,7 @@
         "30d": 815
       },
       "score": 815,
-      "move": 24,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2328,7 +2256,7 @@
         "30d": 815
       },
       "score": 815,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2434,7 +2362,7 @@
         "30d": 815
       },
       "score": 815,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2540,7 +2468,7 @@
         "30d": 814
       },
       "score": 814,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2646,7 +2574,7 @@
         "30d": 814
       },
       "score": 814,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2733,7 +2661,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": -16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2844,7 +2772,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2924,7 +2852,7 @@
     {
       "rank": 26,
       "tmdb_id": 1316092,
-      "title": "\"Wuthering Heights\"",
+      "title": "Wuthering Heights",
       "director": "Emerald Fennell",
       "cast": "Margot Robbie, Jacob Elordi",
       "release_date": "2026-02-11",
@@ -2950,7 +2878,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 31,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3056,7 +2984,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 118,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3167,7 +3095,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3273,7 +3201,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3379,7 +3307,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "both",
@@ -3490,7 +3418,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": 44,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3596,7 +3524,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3702,7 +3630,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3808,7 +3736,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -22,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4008,7 +3936,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4114,7 +4042,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4223,7 +4151,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4329,7 +4257,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -4435,7 +4363,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 126,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4546,7 +4474,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 132,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4864,7 +4792,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4952,7 +4880,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5058,7 +4986,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5164,7 +5092,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -30,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5246,7 +5174,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5352,7 +5280,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5458,7 +5386,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5569,7 +5497,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5675,7 +5603,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5781,7 +5709,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -34,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5887,7 +5815,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5993,7 +5921,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6087,7 +6015,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -39,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6187,7 +6115,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6293,7 +6221,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6404,7 +6332,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6510,7 +6438,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6616,7 +6544,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6722,7 +6650,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -28,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6828,7 +6756,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -18,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6928,7 +6856,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7034,7 +6962,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 112,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7140,7 +7068,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7246,7 +7174,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7352,7 +7280,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7452,7 +7380,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7558,7 +7486,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7638,7 +7566,7 @@
     {
       "rank": 83,
       "tmdb_id": 1304313,
-      "title": "Lee Cronin's The Mummy",
+      "title": "Lee Cronins The Mummy",
       "director": "Lee Cronin",
       "cast": "Jack Reynor, Laia Costa",
       "release_date": "2026-04-07",
@@ -7664,7 +7592,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7770,7 +7698,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7876,7 +7804,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7982,7 +7910,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8088,7 +8016,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8194,7 +8122,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8300,7 +8228,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8406,7 +8334,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8512,7 +8440,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8618,7 +8546,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8724,7 +8652,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8804,7 +8732,7 @@
     {
       "rank": 99,
       "tmdb_id": 1119449,
-      "title": "Good Luck, Have Fun, Don't Die",
+      "title": "Good Luck, Have Fun, Dont Die",
       "director": "Gore Verbinski",
       "cast": "Sam Rockwell, Juno Temple",
       "release_date": "2026-02-13",
@@ -8830,7 +8758,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8936,7 +8864,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9016,7 +8944,7 @@
     {
       "rank": 105,
       "tmdb_id": 1321179,
-      "title": "The King's Warden",
+      "title": "The Kings Warden",
       "director": "Chang Hang-jun",
       "cast": "Yoo Hai-jin, Park Ji-hoon",
       "release_date": "2026-02-04",
@@ -9042,7 +8970,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9148,7 +9076,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9254,7 +9182,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9360,7 +9288,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9466,7 +9394,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9572,7 +9500,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9683,7 +9611,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9783,7 +9711,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9889,7 +9817,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9995,7 +9923,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10101,7 +10029,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10207,7 +10135,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10313,7 +10241,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10419,7 +10347,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10525,7 +10453,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10612,7 +10540,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -46,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10718,7 +10646,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10824,7 +10752,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10930,7 +10858,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11036,7 +10964,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -47,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11143,7 +11071,7 @@
       },
       "score": 800,
       "move": 0,
-      "is_new": true,
+      "is_new": false,
       "hot": false,
       "release_type": "theatrical",
       "highlight": false,
@@ -11249,7 +11177,7 @@
       },
       "score": 800,
       "move": 0,
-      "is_new": true,
+      "is_new": false,
       "hot": false,
       "release_type": "theatrical",
       "highlight": false,
@@ -11354,7 +11282,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11460,7 +11388,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -65,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11566,7 +11494,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11646,7 +11574,7 @@
     {
       "rank": 131,
       "tmdb_id": 1640663,
-      "title": "BTS World Tour ‘Arirang’ in Goyang: Live Viewing",
+      "title": "BTS World Tour Arirang in Goyang: Live Viewing",
       "director": "Ha Jung-jae",
       "cast": "RM, Jin",
       "release_date": "2026-04-11",
@@ -11672,7 +11600,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11772,7 +11700,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11878,7 +11806,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11989,7 +11917,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12083,7 +12011,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12189,7 +12117,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12295,7 +12223,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -85,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12401,7 +12329,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12507,7 +12435,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12613,7 +12541,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12719,7 +12647,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12825,7 +12753,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12931,7 +12859,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13037,7 +12965,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13125,7 +13053,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13231,7 +13159,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13319,7 +13247,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13394,7 +13322,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13482,7 +13410,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13570,7 +13498,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13676,7 +13604,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13787,7 +13715,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13893,7 +13821,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13999,7 +13927,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14104,7 +14032,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14210,7 +14138,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14316,7 +14244,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14422,7 +14350,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14528,7 +14456,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -14608,7 +14536,7 @@
     {
       "rank": 160,
       "tmdb_id": 1418901,
-      "title": "Mother's Pride",
+      "title": "Mothers Pride",
       "director": "Nick Moorcroft",
       "cast": "Jonno Davies, James Buckley",
       "release_date": "2026-03-06",
@@ -14634,7 +14562,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14740,7 +14668,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14846,7 +14774,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14952,7 +14880,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15058,7 +14986,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15164,7 +15092,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -15270,7 +15198,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15352,7 +15280,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -87,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -15458,7 +15386,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -102,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15564,7 +15492,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15670,7 +15598,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15776,7 +15704,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15882,7 +15810,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15993,7 +15921,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16099,7 +16027,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16205,7 +16133,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -94,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16311,7 +16239,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16417,7 +16345,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16517,7 +16445,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16611,7 +16539,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -97,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16717,7 +16645,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16817,7 +16745,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16923,7 +16851,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17029,7 +16957,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17135,7 +17063,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17241,7 +17169,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17347,7 +17275,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17453,7 +17381,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17559,7 +17487,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -120,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -17665,7 +17593,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -20325,7 +20253,7 @@
         "30d": 982
       },
       "rank": 5,
-      "move": 8,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20357,7 +20285,7 @@
         "30d": 959
       },
       "rank": 6,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20389,7 +20317,7 @@
         "30d": 959
       },
       "rank": 7,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20421,7 +20349,7 @@
         "30d": 959
       },
       "rank": 8,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20477,7 +20405,7 @@
         "30d": 945
       },
       "rank": 9,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20515,7 +20443,7 @@
       },
       "rank": 10,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 933238,
@@ -20570,7 +20498,7 @@
         "30d": 940
       },
       "rank": 11,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20618,7 +20546,7 @@
         "30d": 933
       },
       "rank": 12,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20666,7 +20594,7 @@
         "30d": 932
       },
       "rank": 13,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20703,7 +20631,7 @@
         "30d": 924
       },
       "rank": 14,
-      "move": 31,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20740,7 +20668,7 @@
         "30d": 923
       },
       "rank": 15,
-      "move": 31,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20788,7 +20716,7 @@
         "30d": 905
       },
       "rank": 16,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20828,7 +20756,7 @@
         "30d": 904
       },
       "rank": 17,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20868,7 +20796,7 @@
         "30d": 898
       },
       "rank": 18,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20916,7 +20844,7 @@
         "30d": 897
       },
       "rank": 19,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20956,7 +20884,7 @@
         "30d": 892
       },
       "rank": 20,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20996,7 +20924,7 @@
         "30d": 891
       },
       "rank": 21,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21036,7 +20964,7 @@
         "30d": 890
       },
       "rank": 22,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21068,7 +20996,7 @@
         "30d": 889
       },
       "rank": 23,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21100,7 +21028,7 @@
         "30d": 889
       },
       "rank": 24,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21132,7 +21060,7 @@
         "30d": 889
       },
       "rank": 25,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21164,7 +21092,7 @@
         "30d": 889
       },
       "rank": 26,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21196,7 +21124,7 @@
         "30d": 889
       },
       "rank": 27,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21228,7 +21156,7 @@
         "30d": 889
       },
       "rank": 28,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21276,7 +21204,7 @@
         "30d": 887
       },
       "rank": 29,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21324,7 +21252,7 @@
         "30d": 887
       },
       "rank": 30,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21364,7 +21292,7 @@
         "30d": 884
       },
       "rank": 31,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21404,7 +21332,7 @@
         "30d": 883
       },
       "rank": 32,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21444,7 +21372,7 @@
         "30d": 883
       },
       "rank": 33,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21484,7 +21412,7 @@
         "30d": 878
       },
       "rank": 34,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21524,7 +21452,7 @@
         "30d": 878
       },
       "rank": 35,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21564,7 +21492,7 @@
         "30d": 872
       },
       "rank": 36,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21604,7 +21532,7 @@
         "30d": 868
       },
       "rank": 37,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21644,7 +21572,7 @@
         "30d": 867
       },
       "rank": 38,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21684,7 +21612,7 @@
         "30d": 866
       },
       "rank": 39,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21724,7 +21652,7 @@
         "30d": 863
       },
       "rank": 40,
-      "move": 4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21764,7 +21692,7 @@
         "30d": 862
       },
       "rank": 41,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21796,7 +21724,7 @@
         "30d": 862
       },
       "rank": 42,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21828,7 +21756,7 @@
         "30d": 862
       },
       "rank": 43,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21860,7 +21788,7 @@
         "30d": 862
       },
       "rank": 44,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21892,7 +21820,7 @@
         "30d": 862
       },
       "rank": 45,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21924,7 +21852,7 @@
         "30d": 862
       },
       "rank": 46,
-      "move": -4,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22613,7 +22541,7 @@
         "30d": 861
       },
       "rank": 15,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22645,7 +22573,7 @@
         "30d": 860
       },
       "rank": 16,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {

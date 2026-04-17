@@ -29,6 +29,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -147,6 +148,15 @@ def _enrich_youtube_velocity(movies: List[Dict[str, Any]], today: datetime) -> N
             views_24h = daily_views[0]
             likes_24h = daily_likes[0]
             comments_24h = daily_comments[0]
+
+            # Sanity check: delta can never exceed total views
+            # (indicates corrupted/missing snapshot data)
+            if views_24h >= curr["views"] and curr["views"] > 0:
+                LOG.warning("YouTube delta sanity fail: %s views_24h=%d >= total=%d — zeroing",
+                            m.get("title", tid), views_24h, curr["views"])
+                views_24h = 0
+                likes_24h = 0
+                comments_24h = 0
 
             # Rolling 7d average (use available days, up to 7)
             avg_window = daily_views[:7]
@@ -477,10 +487,12 @@ def build_index_payload(scored: List[Dict[str, Any]],
     for m in scored:
         yt = m.get("youtube") or {}
         rd = m.get("reddit")  or {}
+        # Sanitize title: strip embedded quote characters from TMDb titles
+        clean_title = re.sub(r'["\u201c\u201d\u2018\u2019\u0027]', '', m["title"]).strip()
         public_movies.append({
             "rank":           m["rank"],
             "tmdb_id":        m["tmdb_id"],
-            "title":          m["title"],
+            "title":          clean_title,
             "director":       m.get("director", ""),
             "cast":           m.get("cast", ""),
             "release_date":   m.get("release_date", ""),
