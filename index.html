@@ -339,10 +339,12 @@
   html,body{transition:background-color .35s ease, color .35s ease, opacity .18s ease}
   body.leaving{opacity:0}
 
-  /* Cell 1 — combined rank + arrow */
-  .rk-cell{display:flex;align-items:baseline;gap:6px;line-height:1}
+  /* Cell 1 — rank number */
   .rk{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:26px;line-height:1}
-  .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:11px;line-height:1}
+  /* Cell 2 — previous rank */
+  .prev-rk{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--mute);font-weight:600}
+  /* Cell 3 — direction arrow */
+  .mv{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;line-height:1}
   .mv.flat{color:var(--flat-arrow)}
 
   /* Cell 2 — 2:3 portrait poster (w342 source). Gradient fallback while
@@ -784,14 +786,16 @@
 <table class="rankings">
   <thead id="thead">
     <tr>
-      <th style="width:60px">#</th>
+      <th style="width:44px">#</th>
+      <th style="width:44px">PREV</th>
+      <th style="width:24px"></th>
       <th style="width:60px">POSTER</th>
       <th id="col_entity">ENTITY</th>
       <th class="score-cell" style="width:64px">SCORE</th>
     </tr>
   </thead>
   <tbody id="tbody">
-    <tr><td colspan="4" class="empty">Loading live Hype Index data…</td></tr>
+    <tr><td colspan="6" class="empty">Loading live Hype Index data…</td></tr>
   </tbody>
 </table>
 </div>
@@ -1104,7 +1108,8 @@ function renderMovers(){
 
   const mk = m => {
     const cls = m.dir > 0 ? 'up' : 'down';
-    const sign = m.dir > 0 ? '+' : '−';
+    const arrow = m.dir > 0 ? '↑' : '↓';
+    const absMv = Math.abs(m.move || 0);
     const posterUrl = tmdbW342(m.poster_url);
     const bg = posterUrl
       ? `background-image:url('${escapeHtml(posterUrl)}')`
@@ -1114,7 +1119,7 @@ function renderMovers(){
       <div class="poster" style="${bg}"></div>
       <div class="mcard-meta">
         <div class="ttl">${escapeHtml(m.title)}</div>
-        <div class="mv ${cls}">${sign}${Math.abs(m.move)}</div>
+        <div class="mv ${cls}">${arrow}${absMv}</div>
       </div>
     </div>`;
   };
@@ -1175,7 +1180,7 @@ function decileBreakRow(decileIndex, decileItems, scoreKey){
   const spread = top - bottom;
   const label  = `Decile ${decileIndex} · ranks ${(decileIndex-1)*10 + 1}-${(decileIndex-1)*10 + n}`;
   return `
-    <tr class="break"><td colspan="4">
+    <tr class="break"><td colspan="6">
       <div class="break-card">
         <div class="signal">
           <div class="lbl">⚡ Hype Signal</div>
@@ -1206,7 +1211,7 @@ function renderMoviesTable(){
   movies.sort((a,b) => (b._score || 0) - (a._score || 0));
 
   if (!movies.length) {
-    tbody.innerHTML = `<tr><td colspan="4" class="empty">No movies match.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6" class="empty">No movies match.</td></tr>`;
     return;
   }
 
@@ -1226,10 +1231,14 @@ function renderMoviesTable(){
 function renderMovieRow(m, rank){
   const move   = m.move || 0;
   const isNew  = m.is_new || (move === 0 && m.move == null);
-  const mvCls  = isNew ? 'up' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
-  const mvTxt  = isNew ? '▲' : (move > 0 ? `▲${move}` : (move < 0 ? `▼${Math.abs(move)}` : '—'));
+
+  // Billboard-style: prev rank, direction arrow
+  const prevRank = isNew ? null : (rank - move);
+  const prevTxt  = isNew ? '<span class="badge">NEW</span>' : (move === 0 ? '—' : `${prevRank}`);
+  const arrowCls = isNew ? '' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
+  const arrowTxt = isNew ? '' : (move > 0 ? '↑' : (move < 0 ? '↓' : '—'));
+
   const badges = [];
-  if (m.is_new) badges.push(`<span class="badge">NEW</span>`);
   if (m.hot)    badges.push(`<span class="fire" title="3+ days rising">🔥</span>`);
   const ys = m.youtube_state || '';
   if (ys === 'breakout')  badges.push(`<span class="badge breakout" title="Views surging >3x average">🚀 BREAKOUT</span>`);
@@ -1246,12 +1255,9 @@ function renderMovieRow(m, rank){
 
   return `
     <tr class="clickable" data-href="${href}">
-      <td>
-        <div class="rk-cell">
-          <span class="rk">${rank}</span>
-          <span class="mv ${mvCls}">${mvTxt}</span>
-        </div>
-      </td>
+      <td><span class="rk">${rank}</span></td>
+      <td><span class="prev-rk">${prevTxt}</span></td>
+      <td><span class="mv ${arrowCls}">${arrowTxt}</span></td>
       <td>
         <div class="poster" style="${posterStyle}">${posterContent}</div>
       </td>
@@ -1284,7 +1290,7 @@ function renderPeopleTable(){
   people.sort((a,b) => (b.score || 0) - (a.score || 0));
 
   if (!people.length) {
-    tbody.innerHTML = `<tr><td colspan="4" class="empty">No ${STATE.tab} data yet — first full pulse still building.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6" class="empty">No ${STATE.tab} data yet — first full pulse still building.</td></tr>`;
     return;
   }
 
@@ -1306,9 +1312,11 @@ function renderPeopleTable(){
 function renderPersonRow(p, rank, detail){
   const move  = p.move || 0;
   const isNew = p.is_new || (move === 0 && p.move == null);
-  const mvCls = isNew ? 'up' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
-  const mvTxt = isNew ? '▲' : (move > 0 ? `▲${move}` : (move < 0 ? `▼${Math.abs(move)}` : '—'));
-  const badges = p.is_new ? `<span class="badge">NEW</span>` : '';
+
+  const prevRank = isNew ? null : (rank - move);
+  const prevTxt  = isNew ? '<span class="badge">NEW</span>' : (move === 0 ? '—' : `${prevRank}`);
+  const arrowCls = isNew ? '' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
+  const arrowTxt = isNew ? '' : (move > 0 ? '↑' : (move < 0 ? '↓' : '—'));
 
   const posterUrl = tmdbW342(p.profile_url);
   const posterStyle = posterUrl ? `background-image:url('${escapeHtml(posterUrl)}')` : '';
@@ -1320,12 +1328,9 @@ function renderPersonRow(p, rank, detail){
 
   return `
     <tr class="clickable" data-href="${href}">
-      <td>
-        <div class="rk-cell">
-          <span class="rk">${rank}</span>
-          <span class="mv ${mvCls}">${mvTxt}</span>
-        </div>
-      </td>
+      <td><span class="rk">${rank}</span></td>
+      <td><span class="prev-rk">${prevTxt}</span></td>
+      <td><span class="mv ${arrowCls}">${arrowTxt}</span></td>
       <td>
         <div class="poster" style="${posterStyle}">${posterContent}</div>
       </td>
