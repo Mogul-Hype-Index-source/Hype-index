@@ -1318,6 +1318,9 @@ function renderPersonRow(p, rank, detail){
   const arrowCls = isNew ? '' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
   const arrowTxt = isNew ? '' : (move > 0 ? '↑' : (move < 0 ? '↓' : '—'));
 
+  const badges = [];
+  if (p.is_new) badges.push(`<span class="badge">NEW</span>`);
+
   const posterUrl = tmdbW342(p.profile_url);
   const posterStyle = posterUrl ? `background-image:url('${escapeHtml(posterUrl)}')` : '';
   const posterContent = posterUrl ? '' : initials(p.name||'');
@@ -1336,7 +1339,7 @@ function renderPersonRow(p, rank, detail){
       </td>
       <td>
         <div class="ent">
-          <div class="title">${escapeHtml(p.name||'')} ${badges}</div>
+          <div class="title">${escapeHtml(p.name||'')} ${badges.join(' ')}</div>
           <div class="strip">
             <span><span class="lbl">FILMS</span><span class="val">${p.film_count || 0}</span></span>
             <span><span class="lbl">MENTIONS</span><span class="num-col">${fmtCount(p.mentions)}</span></span>
