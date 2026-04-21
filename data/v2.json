@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-21T19:39:26+00:00",
-  "next_update_at": "2026-04-21T20:39:26+00:00",
+  "generated_at": "2026-04-21T20:26:21+00:00",
+  "next_update_at": "2026-04-21T21:26:21+00:00",
   "snapshot_date": "2026-04-21",
   "summary": {
     "total": 167,
     "total_streaming": 22,
-    "rising": 116,
-    "falling": 32,
-    "flat": 41,
+    "rising": 0,
+    "falling": 0,
+    "flat": 189,
     "avg_score": 805,
     "total_mentions_24h": 274318
   },
@@ -199,80 +199,8 @@
       "category": "box-office"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1383731,
-      "title": "Protector",
-      "poster_url": "https://image.tmdb.org/t/p/w185/hUv1DarjEMmQM38i9DvW9pHYPZ4.jpg",
-      "move": 143,
-      "score": 809
-    },
-    {
-      "tmdb_id": 1382802,
-      "title": "Family Movie",
-      "poster_url": "https://image.tmdb.org/t/p/w185/iKGb52exgPMsoy9v3wR51SjQcdY.jpg",
-      "move": 103,
-      "score": 803
-    },
-    {
-      "tmdb_id": 999136,
-      "title": "Do Not Enter",
-      "poster_url": "https://image.tmdb.org/t/p/w185/stM9N7eJmHKLmFR59JG4tLdN7Wk.jpg",
-      "move": 52,
-      "score": 801
-    },
-    {
-      "tmdb_id": 1384216,
-      "title": "The Dog Stars",
-      "poster_url": null,
-      "move": 16,
-      "score": 801
-    },
-    {
-      "tmdb_id": 1301421,
-      "title": "The Sheep Detectives",
-      "poster_url": "https://image.tmdb.org/t/p/w185/hTirV44jiLh6NqdiB6jtxPsDIoG.jpg",
-      "move": 16,
-      "score": 800
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1340110,
-      "title": "Redux Redux",
-      "poster_url": "https://image.tmdb.org/t/p/w185/9u7sUTYPPTxGCXbkcw8FTq50PnO.jpg",
-      "move": -121,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1297446,
-      "title": "Slanted",
-      "poster_url": "https://image.tmdb.org/t/p/w185/cr2SfN854IlEoZQBtIfpyC0zXR5.jpg",
-      "move": -116,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1081003,
-      "title": "Supergirl",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lV8Yuhz36hds5dvEIwB7DThixH.jpg",
-      "move": -115,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1107166,
-      "title": "Psycho Killer",
-      "poster_url": "https://image.tmdb.org/t/p/w185/5xgxxmLivJXL8aF0HdZfpx8aAIo.jpg",
-      "move": -113,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1309083,
-      "title": "Dolly",
-      "poster_url": "https://image.tmdb.org/t/p/w185/sTPUg3XtdcKRAS5Vwsi1GYPFhNZ.jpg",
-      "move": -104,
-      "score": 800
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -405,7 +333,7 @@
       "event_boost": false,
       "reddit_posts": 0,
       "reddit_comments": 0,
-      "x_mentions": 112441,
+      "x_mentions": 50000,
       "mentions": 112441,
       "sentiment_pct": 73,
       "scores": {
@@ -728,7 +656,7 @@
       "event_boost": false,
       "reddit_posts": 0,
       "reddit_comments": 0,
-      "x_mentions": 59795,
+      "x_mentions": 50000,
       "mentions": 59795,
       "sentiment_pct": 55,
       "scores": {
@@ -848,7 +776,7 @@
         "30d": 822
       },
       "score": 822,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -959,7 +887,7 @@
         "30d": 822
       },
       "score": 822,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1277,7 +1205,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1383,7 +1311,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1494,7 +1422,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1600,7 +1528,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1688,7 +1616,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1794,7 +1722,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1900,7 +1828,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1982,7 +1910,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2088,7 +2016,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2182,7 +2110,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": 143,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2394,7 +2322,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2500,7 +2428,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2611,7 +2539,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2705,7 +2633,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2811,7 +2739,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2917,7 +2845,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3023,7 +2951,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3286,7 +3214,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3392,7 +3320,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3498,7 +3426,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3604,7 +3532,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3710,7 +3638,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 103,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3821,7 +3749,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3927,7 +3855,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": -12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4038,7 +3966,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4144,7 +4072,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4250,7 +4178,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4356,7 +4284,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4462,7 +4390,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4568,7 +4496,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4674,7 +4602,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4780,7 +4708,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4886,7 +4814,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4992,7 +4920,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5098,7 +5026,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5204,7 +5132,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5310,7 +5238,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 52,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5416,7 +5344,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5522,7 +5450,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5628,7 +5556,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5734,7 +5662,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5840,7 +5768,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5946,7 +5874,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -54,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6052,7 +5980,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6152,7 +6080,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6258,7 +6186,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6364,7 +6292,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6470,7 +6398,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6576,7 +6504,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6682,7 +6610,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6782,7 +6710,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6888,7 +6816,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6994,7 +6922,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7100,7 +7028,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7206,7 +7134,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7312,7 +7240,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7423,7 +7351,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7529,7 +7457,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7635,7 +7563,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7741,7 +7669,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -17,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7847,7 +7775,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7953,7 +7881,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8047,7 +7975,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8158,7 +8086,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8264,7 +8192,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8370,7 +8298,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8476,7 +8404,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8583,7 +8511,7 @@
       },
       "score": 800,
       "move": 0,
-      "is_new": true,
+      "is_new": false,
       "hot": false,
       "release_type": "theatrical",
       "highlight": false,
@@ -8682,7 +8610,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8788,7 +8716,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8894,7 +8822,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9000,7 +8928,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9111,7 +9039,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9217,7 +9145,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9317,7 +9245,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9423,7 +9351,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9529,7 +9457,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9635,7 +9563,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 16,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9741,7 +9669,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9828,7 +9756,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9934,7 +9862,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10040,7 +9968,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 15,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10146,7 +10074,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -40,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10252,7 +10180,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -87,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10358,7 +10286,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -41,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10464,7 +10392,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10570,7 +10498,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 14,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10676,7 +10604,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -43,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10782,7 +10710,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10888,7 +10816,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10988,7 +10916,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11094,7 +11022,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 13,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11205,7 +11133,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -65,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11299,7 +11227,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11405,7 +11333,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11511,7 +11439,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 12,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -11617,7 +11545,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -91,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11723,7 +11651,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -91,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11829,7 +11757,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -104,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11929,7 +11857,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12035,7 +11963,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12141,7 +12069,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12247,7 +12175,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12353,7 +12281,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -57,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12459,7 +12387,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12565,7 +12493,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12653,7 +12581,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12759,7 +12687,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12847,7 +12775,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12940,7 +12868,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13028,7 +12956,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13116,7 +13044,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13222,7 +13150,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13333,7 +13261,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13439,7 +13367,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13545,7 +13473,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13639,7 +13567,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13744,7 +13672,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13850,7 +13778,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -71,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13956,7 +13884,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -71,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14056,7 +13984,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14162,7 +14090,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14268,7 +14196,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -14374,7 +14302,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14480,7 +14408,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14586,7 +14514,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -75,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14692,7 +14620,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14798,7 +14726,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -113,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -14904,7 +14832,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -121,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -15015,7 +14943,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15097,7 +15025,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -116,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15203,7 +15131,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15309,7 +15237,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15415,7 +15343,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15521,7 +15449,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15632,7 +15560,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -115,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15738,7 +15666,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15844,7 +15772,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15950,7 +15878,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16056,7 +15984,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16162,7 +16090,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16262,7 +16190,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16356,7 +16284,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16462,7 +16390,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16562,7 +16490,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -48,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16668,7 +16596,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16774,7 +16702,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -65,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -20408,7 +20336,7 @@
       },
       "rank": 11,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 543530,
@@ -20447,7 +20375,7 @@
         "30d": 909
       },
       "rank": 12,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20495,7 +20423,7 @@
         "30d": 900
       },
       "rank": 13,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20543,7 +20471,7 @@
         "30d": 897
       },
       "rank": 14,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20591,7 +20519,7 @@
         "30d": 896
       },
       "rank": 15,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20631,7 +20559,7 @@
         "30d": 895
       },
       "rank": 16,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20679,7 +20607,7 @@
         "30d": 887
       },
       "rank": 17,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20719,7 +20647,7 @@
         "30d": 885
       },
       "rank": 18,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20759,7 +20687,7 @@
         "30d": 885
       },
       "rank": 19,
-      "move": 8,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20791,7 +20719,7 @@
         "30d": 885
       },
       "rank": 20,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20823,7 +20751,7 @@
         "30d": 885
       },
       "rank": 21,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20855,7 +20783,7 @@
         "30d": 885
       },
       "rank": 22,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20887,7 +20815,7 @@
         "30d": 885
       },
       "rank": 23,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20919,7 +20847,7 @@
         "30d": 885
       },
       "rank": 24,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20951,7 +20879,7 @@
         "30d": 885
       },
       "rank": 25,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20991,7 +20919,7 @@
         "30d": 881
       },
       "rank": 26,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21031,7 +20959,7 @@
         "30d": 879
       },
       "rank": 27,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21071,7 +20999,7 @@
         "30d": 874
       },
       "rank": 28,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21111,7 +21039,7 @@
         "30d": 873
       },
       "rank": 29,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21151,7 +21079,7 @@
         "30d": 873
       },
       "rank": 30,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21191,7 +21119,7 @@
         "30d": 872
       },
       "rank": 31,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21231,7 +21159,7 @@
         "30d": 872
       },
       "rank": 32,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21271,7 +21199,7 @@
         "30d": 868
       },
       "rank": 33,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21311,7 +21239,7 @@
         "30d": 868
       },
       "rank": 34,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21343,7 +21271,7 @@
         "30d": 866
       },
       "rank": 35,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21375,7 +21303,7 @@
         "30d": 866
       },
       "rank": 36,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21407,7 +21335,7 @@
         "30d": 866
       },
       "rank": 37,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21439,7 +21367,7 @@
         "30d": 866
       },
       "rank": 38,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21471,7 +21399,7 @@
         "30d": 866
       },
       "rank": 39,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21511,7 +21439,7 @@
         "30d": 863
       },
       "rank": 40,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21548,7 +21476,7 @@
         "30d": 862
       },
       "rank": 41,
-      "move": -29,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21585,7 +21513,7 @@
         "30d": 862
       },
       "rank": 42,
-      "move": -29,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21665,7 +21593,7 @@
         "30d": 859
       },
       "rank": 44,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21705,7 +21633,7 @@
         "30d": 857
       },
       "rank": 45,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21866,7 +21794,7 @@
       },
       "rank": 49,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 1136406,
@@ -21906,7 +21834,7 @@
       },
       "rank": 50,
       "move": 0,
-      "is_new": true
+      "is_new": false
     }
   ],
   "directors": [
@@ -22091,7 +22019,7 @@
         "30d": 937
       },
       "rank": 5,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22123,7 +22051,7 @@
         "30d": 907
       },
       "rank": 6,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22155,7 +22083,7 @@
         "30d": 883
       },
       "rank": 7,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22187,7 +22115,7 @@
         "30d": 869
       },
       "rank": 8,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22219,7 +22147,7 @@
         "30d": 867
       },
       "rank": 9,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22251,7 +22179,7 @@
         "30d": 867
       },
       "rank": 10,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22283,7 +22211,7 @@
         "30d": 862
       },
       "rank": 11,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22315,7 +22243,7 @@
         "30d": 859
       },
       "rank": 12,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22347,7 +22275,7 @@
         "30d": 853
       },
       "rank": 13,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22379,7 +22307,7 @@
         "30d": 853
       },
       "rank": 14,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22411,7 +22339,7 @@
         "30d": 849
       },
       "rank": 15,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22443,7 +22371,7 @@
         "30d": 847
       },
       "rank": 16,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22475,7 +22403,7 @@
         "30d": 845
       },
       "rank": 17,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22507,7 +22435,7 @@
         "30d": 840
       },
       "rank": 18,
-      "move": 1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22539,7 +22467,7 @@
         "30d": 838
       },
       "rank": 19,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22603,7 +22531,7 @@
         "30d": 833
       },
       "rank": 21,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22635,7 +22563,7 @@
         "30d": 831
       },
       "rank": 22,
-      "move": 3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22667,7 +22595,7 @@
         "30d": 827
       },
       "rank": 23,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22699,7 +22627,7 @@
         "30d": 827
       },
       "rank": 24,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22732,7 +22660,7 @@
       },
       "rank": 25,
       "move": 0,
-      "is_new": true
+      "is_new": false
     }
   ]
 }

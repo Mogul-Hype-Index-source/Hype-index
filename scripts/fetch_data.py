@@ -1476,7 +1476,13 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
 
     x_counts = fetch_x_mentions_batch(x_queries)
     for m in movies:
-        m["x_mentions"] = x_counts.get(f"movie:{m['tmdb_id']}", 0)
+        raw_x = x_counts.get(f"movie:{m['tmdb_id']}", 0)
+        # Sanity cap: >50K mentions is suspicious — discount by 50%
+        if raw_x > 50000:
+            LOG.warning("X mentions sanity cap: %s has %d mentions — discounting 50%%",
+                        m.get("title", "?"), raw_x)
+            raw_x = raw_x // 2
+        m["x_mentions"] = raw_x
     x_hits = sum(1 for m in movies if m.get("x_mentions", 0) > 0)
     LOG.info("X mentions coverage: %d/%d (%d%%)", x_hits, len(movies),
              (x_hits * 100 // len(movies)) if movies else 0)
