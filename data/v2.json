@@ -1,17 +1,29 @@
 {
-  "generated_at": "2026-04-22T03:17:47+00:00",
-  "next_update_at": "2026-04-22T04:17:47+00:00",
+  "generated_at": "2026-04-22T05:43:55+00:00",
+  "next_update_at": "2026-04-22T06:43:55+00:00",
   "snapshot_date": "2026-04-22",
   "summary": {
     "total": 165,
     "total_streaming": 24,
-    "rising": 28,
-    "falling": 128,
-    "flat": 33,
+    "rising": 0,
+    "falling": 0,
+    "flat": 189,
     "avg_score": 805,
     "total_mentions_24h": 159992
   },
   "news": [
+    {
+      "headline": "Netflix In Negotiations To Buy Radford Studios",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/netflix-radford-studios-1236867662/",
+      "category": "production"
+    },
+    {
+      "headline": "Curry Barker Directing & Writing ‘Texas Chainsaw Massacre’ Reboot At A24",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/texas-chainsaw-massacre-curry-barker-1236867615/",
+      "category": "production"
+    },
     {
       "headline": "Netflix Among Suitors Interested in Buying Radford Lot",
       "source": "Variety",
@@ -28,18 +40,6 @@
       "headline": "‘Fighting With My Family’ Stage Musical Set; 2019’s Film’s Stephen Merchant & Dwayne Johnson Among Producers",
       "source": "Deadline",
       "url": "https://deadline.com/2026/04/fighting-with-my-family-stage-musical-dwayne-johnson-stephen-merchant-1236867565/",
-      "category": "production"
-    },
-    {
-      "headline": "Stephen Merchant’s Wrestling Movie ‘Fighting With My Family’ To Be Adapted Into Stage Musical",
-      "source": "Deadline",
-      "url": "https://deadline.com/2026/04/stephen-merchant-fighting-with-my-family-stage-musical-1236867063/",
-      "category": "production"
-    },
-    {
-      "headline": "‘Obsession’ Filmmaker Curry Barker to Direct ‘The Texas Chainsaw Massacre’ Reimagining at A24 (EXCLUSIVE)",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/news/texas-chainsaw-massacre-curry-barker-director-obsession-1236727385/",
       "category": "production"
     },
     {
@@ -97,9 +97,9 @@
       "category": "international"
     },
     {
-      "headline": "What’s the bill to rebuild Gaza, and who will pay?",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/video/inside-story/2026/4/21/whats-the-bill-to-rebuild-gaza-and-who-will-pay?traffic_source=rss",
+      "headline": "Iran sees mass redundancies from war with US and Israel",
+      "source": "BBC World",
+      "url": "https://www.bbc.com/news/articles/ce84e31376zo?at_medium=RSS&at_campaign=rss",
       "category": "international"
     },
     {
@@ -145,24 +145,6 @@
       "category": "ai-tech"
     },
     {
-      "headline": "‘On the Road (En El Camino)’ Tops Winners at 43rd Miami Film Festival – Film News in Brief",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/news/film-news-in-brief-april-20-2026-1236726080/",
-      "category": "festivals"
-    },
-    {
-      "headline": "’90s Slasher ‘213 Bones’ Sells U.S. Rights to The Horror Collective; Studio Dome to Launch Global Sales at Cannes (EXCLUSIVE)",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/news/90s-slasher-213-bones-sells-horror-collective-cannes-1236727297/",
-      "category": "festivals"
-    },
-    {
-      "headline": "Heading to Cannes? A Top Stylist Shares Her Packing Playbook for the Croisette",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/lifestyle/style/cannes-film-festival-packing-advice-hollywood-stylist-1236567994/",
-      "category": "festivals"
-    },
-    {
       "headline": "Tribeca TV and Podcast Lineups: ‘Survivor 50’ Showcase, ‘Adults’ Season 2, Ronan Farrow, and More",
       "source": "IndieWire",
       "url": "https://www.indiewire.com/news/festivals/tribeca-festival-reveals-2026-tv-podcast-lineups-1235190033/",
@@ -205,80 +187,8 @@
       "category": "box-office"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1438392,
-      "title": "Euphoria",
-      "poster_url": "https://image.tmdb.org/t/p/w185/9fpTl3fNYmBcMOGocrx59XKDdgO.jpg",
-      "move": 116,
-      "score": 810
-    },
-    {
-      "tmdb_id": 1081003,
-      "title": "Supergirl",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lV8Yuhz36hds5dvEIwB7DThixH.jpg",
-      "move": 110,
-      "score": 802
-    },
-    {
-      "tmdb_id": 1283515,
-      "title": "Verity",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tHI69tGRRvtOnomig59xwMO1YQI.jpg",
-      "move": 107,
-      "score": 801
-    },
-    {
-      "tmdb_id": 1309083,
-      "title": "Dolly",
-      "poster_url": "https://image.tmdb.org/t/p/w185/sTPUg3XtdcKRAS5Vwsi1GYPFhNZ.jpg",
-      "move": 97,
-      "score": 806
-    },
-    {
-      "tmdb_id": 1390300,
-      "title": "Over Your Dead Body",
-      "poster_url": "https://image.tmdb.org/t/p/w185/l5iroeWTrP9tspGYQonagH7Tcds.jpg",
-      "move": 88,
-      "score": 801
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1382802,
-      "title": "Family Movie",
-      "poster_url": "https://image.tmdb.org/t/p/w185/iKGb52exgPMsoy9v3wR51SjQcdY.jpg",
-      "move": -91,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1341137,
-      "title": "A Great Awakening",
-      "poster_url": "https://image.tmdb.org/t/p/w185/rd7BsFaHO7JaYlz3WHUvqHjgm60.jpg",
-      "move": -67,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1242265,
-      "title": "Fuze",
-      "poster_url": "https://image.tmdb.org/t/p/w185/oWehDe6fFR4eUdUMDy4jz6XiinO.jpg",
-      "move": -57,
-      "score": 800
-    },
-    {
-      "tmdb_id": 1102883,
-      "title": "Mother Mary",
-      "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-      "move": -31,
-      "score": 806
-    },
-    {
-      "tmdb_id": 1297446,
-      "title": "Slanted",
-      "poster_url": "https://image.tmdb.org/t/p/w185/cr2SfN854IlEoZQBtIfpyC0zXR5.jpg",
-      "move": -18,
-      "score": 802
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -526,7 +436,7 @@
         "30d": 898
       },
       "score": 898,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -637,7 +547,7 @@
         "30d": 897
       },
       "score": 897,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -748,7 +658,7 @@
         "30d": 846
       },
       "score": 846,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -854,7 +764,7 @@
         "30d": 838
       },
       "score": 838,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -960,7 +870,7 @@
         "30d": 830
       },
       "score": 830,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "both",
@@ -1066,7 +976,7 @@
         "30d": 829
       },
       "score": 829,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -1172,7 +1082,7 @@
         "30d": 818
       },
       "score": 818,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1278,7 +1188,7 @@
         "30d": 812
       },
       "score": 812,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1389,7 +1299,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 20,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1495,7 +1405,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1589,7 +1499,7 @@
         "30d": 811
       },
       "score": 811,
-      "move": 11,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1695,7 +1605,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1801,7 +1711,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": 29,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1912,7 +1822,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": 116,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2018,7 +1928,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2124,7 +2034,7 @@
         "30d": 810
       },
       "score": 810,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2206,7 +2116,7 @@
         "30d": 809
       },
       "score": 809,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2312,7 +2222,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2418,7 +2328,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2524,7 +2434,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2630,7 +2540,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2736,7 +2646,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2842,7 +2752,7 @@
         "30d": 808
       },
       "score": 808,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2948,7 +2858,7 @@
         "30d": 807
       },
       "score": 807,
-      "move": 30,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3059,7 +2969,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": -31,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3165,7 +3075,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": 97,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3265,7 +3175,7 @@
         "30d": 806
       },
       "score": 806,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3371,7 +3281,7 @@
         "30d": 805
       },
       "score": 805,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "both",
@@ -3477,7 +3387,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3588,7 +3498,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3675,7 +3585,7 @@
         "30d": 804
       },
       "score": 804,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3887,7 +3797,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3981,7 +3891,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4069,7 +3979,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4157,7 +4067,7 @@
         "30d": 803
       },
       "score": 803,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4263,7 +4173,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -6,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4369,7 +4279,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4475,7 +4385,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -5,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4581,7 +4491,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 61,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4687,7 +4597,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 73,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4781,7 +4691,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 76,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4887,7 +4797,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 76,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4993,7 +4903,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5099,7 +5009,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5205,7 +5115,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5311,7 +5221,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -18,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5417,7 +5327,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5523,7 +5433,7 @@
         "30d": 802
       },
       "score": 802,
-      "move": 110,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5629,7 +5539,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5735,7 +5645,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -10,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5841,7 +5751,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5947,7 +5857,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6053,7 +5963,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6141,7 +6051,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -9,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6247,7 +6157,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 37,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6353,7 +6263,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 68,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6459,7 +6369,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 88,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6565,7 +6475,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6665,7 +6575,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -6705,7 +6615,7 @@
           "id": 1599899,
           "name": "Hailey Gates",
           "character": "Celeste",
-          "profile_path": "/q3GFo0wx7e0iz7P22dd9sSXZSwn.jpg"
+          "profile_path": "/jSex8BKWzNmRhHVO7JjjDGwoyZL.jpg"
         },
         {
           "id": 1470911,
@@ -6771,7 +6681,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6877,7 +6787,7 @@
         "30d": 801
       },
       "score": 801,
-      "move": 107,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6983,7 +6893,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7089,7 +6999,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7189,7 +7099,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7295,7 +7205,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7401,7 +7311,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7507,7 +7417,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7613,7 +7523,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7724,7 +7634,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7830,7 +7740,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7936,7 +7846,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8042,7 +7952,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8148,7 +8058,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8242,7 +8152,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8348,7 +8258,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8459,7 +8369,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8565,7 +8475,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8646,8 +8556,8 @@
       "rank": 100,
       "tmdb_id": 1339876,
       "title": "Mardaani 3",
-      "director": "Abhiraj Minawala",
-      "cast": "Rani Mukerji, Mallika Prasad",
+      "director": "",
+      "cast": "",
       "release_date": "2026-01-30",
       "poster_url": "https://image.tmdb.org/t/p/w185/dHxLBtHw4InwsVumnthupZYz6NM.jpg",
       "youtube_views": 43016589,
@@ -8671,7 +8581,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8688,63 +8598,8 @@
         "acceleration": 0.0,
         "raw_hype": 0.0026
       },
-      "cast_full": [
-        {
-          "id": 35776,
-          "name": "Rani Mukerji",
-          "character": "Shivani Shivaji Roy",
-          "profile_path": "/6bm1lhrEgGFpOLBjvcOi3aoQmtg.jpg"
-        },
-        {
-          "id": 1611825,
-          "name": "Mallika Prasad",
-          "character": "Amma",
-          "profile_path": "/iQW2LoY0AHhXlm46RFxYjcu6GAt.jpg"
-        },
-        {
-          "id": 2106881,
-          "name": "Janki Bodiwala",
-          "character": "Fatima",
-          "profile_path": "/zpOyHZgW79IiYuUu7QSDBznzdqL.jpg"
-        },
-        {
-          "id": 545144,
-          "name": "Jisshu Sengupta",
-          "character": "Dr. Bikram Roy",
-          "profile_path": "/6Ha4p2iQOHpnKC1uB4NKJ53kHRi.jpg"
-        },
-        {
-          "id": 1956481,
-          "name": "Mikhail Yawalkar",
-          "character": "Inspector Balwinder Sodhi",
-          "profile_path": "/jVa1lxdc8fLEJrWRGmgbU8ME8Ma.jpg"
-        },
-        {
-          "id": 4487443,
-          "name": "Jaipreet Singh",
-          "character": "DGP",
-          "profile_path": null
-        },
-        {
-          "id": 2408240,
-          "name": "Sachin Negi",
-          "character": "",
-          "profile_path": null
-        },
-        {
-          "id": 2445578,
-          "name": "Jimpa Sangpo Bhutia",
-          "character": "Gunner Jimpa",
-          "profile_path": "/hxYWPiQ4vi9L64ouosjQVtflNnW.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 2143441,
-          "name": "Abhiraj Minawala",
-          "profile_path": null
-        }
-      ],
+      "cast_full": [],
+      "directors_full": [],
       "news_mentions": [],
       "trends": 0
     },
@@ -8777,7 +8632,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8877,7 +8732,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8983,7 +8838,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9089,7 +8944,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9195,7 +9050,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9301,7 +9156,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9407,7 +9262,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9518,7 +9373,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9624,7 +9479,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9724,7 +9579,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9830,7 +9685,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9936,7 +9791,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10042,7 +9897,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10129,7 +9984,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -57,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10235,7 +10090,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10341,7 +10196,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10447,7 +10302,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10553,7 +10408,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10659,7 +10514,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10765,7 +10620,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10871,7 +10726,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10977,7 +10832,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11083,7 +10938,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -11189,7 +11044,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11295,7 +11150,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -67,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11401,7 +11256,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11507,7 +11362,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11607,7 +11462,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11713,7 +11568,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -8,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11824,7 +11679,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11930,7 +11785,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12036,7 +11891,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -7,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12142,7 +11997,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12248,7 +12103,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12330,7 +12185,7 @@
       "tmdb_id": 1212763,
       "title": "Evil Dead Burn",
       "director": "Sébastien Vaniček",
-      "cast": "Souheila Yacoub, Hunter Doohan",
+      "cast": "Souheila Yacoub, Tandi Wright",
       "release_date": "2026-07-09",
       "poster_url": "https://image.tmdb.org/t/p/w185/8QWIeb7UZyNZFyLFjVAn9QpnWl2.jpg",
       "youtube_views": 210276,
@@ -12354,7 +12209,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12379,6 +12234,12 @@
           "profile_path": "/zG087seFtSO2duW0ldsfbhFydce.jpg"
         },
         {
+          "id": 33310,
+          "name": "Tandi Wright",
+          "character": "Susan",
+          "profile_path": "/xLQ9j4pJ46HZhs5jMJ87w9zjv82.jpg"
+        },
+        {
           "id": 1911865,
           "name": "Hunter Doohan",
           "character": "Joseph",
@@ -12391,28 +12252,22 @@
           "profile_path": "/4BVfv9HE6ZipHqZO8xDlkDFBWlN.jpg"
         },
         {
-          "id": 3047382,
-          "name": "Victory Ndukwe",
-          "character": "",
-          "profile_path": "/fAIXv88uXtJp1dH5qoMpsZxn8w1.jpg"
-        },
-        {
-          "id": 33310,
-          "name": "Tandi Wright",
-          "character": "Susan",
-          "profile_path": "/xLQ9j4pJ46HZhs5jMJ87w9zjv82.jpg"
-        },
-        {
           "id": 150396,
           "name": "Erroll Shand",
           "character": "Edgar Price",
           "profile_path": "/75nc5lUcp1So9RTNNr08NZ0oQDG.jpg"
         },
         {
-          "id": 5662484,
-          "name": "Keanu Karim",
-          "character": "Jared",
-          "profile_path": null
+          "id": 1695501,
+          "name": "Maude Davey",
+          "character": "Polly",
+          "profile_path": "/gJsnWVfgcyFrTYPVvcJrvIjIH1k.jpg"
+        },
+        {
+          "id": 3047382,
+          "name": "Victory Ndukwe",
+          "character": "",
+          "profile_path": "/fAIXv88uXtJp1dH5qoMpsZxn8w1.jpg"
         },
         {
           "id": 2242834,
@@ -12460,7 +12315,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -91,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12571,7 +12426,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -4,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12677,7 +12532,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12783,7 +12638,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12871,7 +12726,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12977,7 +12832,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13065,7 +12920,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13158,7 +13013,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13246,7 +13101,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13334,7 +13189,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13440,7 +13295,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13551,7 +13406,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13657,7 +13512,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13763,7 +13618,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13857,7 +13712,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13962,7 +13817,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14068,7 +13923,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14174,7 +14029,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14274,7 +14129,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14380,7 +14235,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14486,7 +14341,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -14592,7 +14447,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14698,7 +14553,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14804,7 +14659,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -14910,7 +14765,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15016,7 +14871,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -15122,7 +14977,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -15233,7 +15088,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15315,7 +15170,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15421,7 +15276,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15527,7 +15382,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15633,7 +15488,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15744,7 +15599,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15850,7 +15705,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -15956,7 +15811,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16062,7 +15917,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16168,7 +16023,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16268,7 +16123,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16362,7 +16217,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16468,7 +16323,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16568,7 +16423,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16674,7 +16529,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -16780,7 +16635,7 @@
         "30d": 800
       },
       "score": 800,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -20102,7 +19957,7 @@
       },
       "rank": 4,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 73457,
@@ -20133,7 +19988,7 @@
         "30d": 963
       },
       "rank": 5,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20165,7 +20020,7 @@
         "30d": 963
       },
       "rank": 6,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20197,7 +20052,7 @@
         "30d": 963
       },
       "rank": 7,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20229,7 +20084,7 @@
         "30d": 963
       },
       "rank": 8,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20285,7 +20140,7 @@
         "30d": 938
       },
       "rank": 9,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20333,7 +20188,7 @@
         "30d": 926
       },
       "rank": 10,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20381,7 +20236,7 @@
         "30d": 926
       },
       "rank": 11,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20421,7 +20276,7 @@
         "30d": 907
       },
       "rank": 12,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20509,7 +20364,7 @@
         "30d": 898
       },
       "rank": 14,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20557,7 +20412,7 @@
         "30d": 895
       },
       "rank": 15,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20605,7 +20460,7 @@
         "30d": 895
       },
       "rank": 16,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20653,7 +20508,7 @@
         "30d": 886
       },
       "rank": 17,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20693,7 +20548,7 @@
         "30d": 884
       },
       "rank": 18,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20733,7 +20588,7 @@
         "30d": 884
       },
       "rank": 19,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20765,7 +20620,7 @@
         "30d": 884
       },
       "rank": 20,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20797,7 +20652,7 @@
         "30d": 884
       },
       "rank": 21,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20829,7 +20684,7 @@
         "30d": 884
       },
       "rank": 22,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20861,7 +20716,7 @@
         "30d": 884
       },
       "rank": 23,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20893,7 +20748,7 @@
         "30d": 884
       },
       "rank": 24,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20925,7 +20780,7 @@
         "30d": 884
       },
       "rank": 25,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -20965,7 +20820,7 @@
         "30d": 880
       },
       "rank": 26,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21005,7 +20860,7 @@
         "30d": 877
       },
       "rank": 27,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21045,7 +20900,7 @@
         "30d": 872
       },
       "rank": 28,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21085,7 +20940,7 @@
         "30d": 872
       },
       "rank": 29,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21125,7 +20980,7 @@
         "30d": 872
       },
       "rank": 30,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21165,7 +21020,7 @@
         "30d": 872
       },
       "rank": 31,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21205,7 +21060,7 @@
         "30d": 872
       },
       "rank": 32,
-      "move": -3,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21245,7 +21100,7 @@
         "30d": 867
       },
       "rank": 33,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21285,7 +21140,7 @@
         "30d": 867
       },
       "rank": 34,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21317,7 +21172,7 @@
         "30d": 865
       },
       "rank": 35,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21349,7 +21204,7 @@
         "30d": 865
       },
       "rank": 36,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21381,7 +21236,7 @@
         "30d": 865
       },
       "rank": 37,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21413,7 +21268,7 @@
         "30d": 865
       },
       "rank": 38,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21445,7 +21300,7 @@
         "30d": 865
       },
       "rank": 39,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21485,7 +21340,7 @@
         "30d": 862
       },
       "rank": 40,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21685,7 +21540,7 @@
         "30d": 861
       },
       "rank": 46,
-      "move": -6,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21725,7 +21580,7 @@
         "30d": 857
       },
       "rank": 47,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21765,7 +21620,7 @@
         "30d": 855
       },
       "rank": 48,
-      "move": 2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21805,7 +21660,7 @@
         "30d": 855
       },
       "rank": 49,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -21845,7 +21700,7 @@
         "30d": 855
       },
       "rank": 50,
-      "move": -2,
+      "move": 0,
       "is_new": false
     }
   ],
@@ -22014,13 +21869,17 @@
       "avg_film_score": 807,
       "news_mentions": [
         {
+          "source": "Deadline",
+          "headline": "Curry Barker Directing & Writing ‘Texas Chainsaw Massacre’ Reboot At A24"
+        },
+        {
           "source": "Variety",
           "headline": "‘Obsession’ Filmmaker Curry Barker to Direct ‘The Texas Chainsaw Massacre’ Reimagining at A24 (EXCLUSIVE)"
         }
       ],
       "x_mentions": 0,
       "event_youtube_views": 0,
-      "mentions": 6,
+      "mentions": 7,
       "score": 950,
       "scores": {
         "1d": 950,
@@ -22029,7 +21888,7 @@
       },
       "rank": 5,
       "move": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "tmdb_id": 3896943,
@@ -22068,7 +21927,7 @@
         "30d": 944
       },
       "rank": 6,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22108,7 +21967,7 @@
         "30d": 941
       },
       "rank": 7,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22148,7 +22007,7 @@
         "30d": 931
       },
       "rank": 8,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22180,7 +22039,7 @@
         "30d": 902
       },
       "rank": 9,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22212,7 +22071,7 @@
         "30d": 880
       },
       "rank": 10,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22244,7 +22103,7 @@
         "30d": 875
       },
       "rank": 11,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22276,7 +22135,7 @@
         "30d": 875
       },
       "rank": 12,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22308,7 +22167,7 @@
         "30d": 866
       },
       "rank": 13,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22340,7 +22199,7 @@
         "30d": 860
       },
       "rank": 14,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22372,7 +22231,7 @@
         "30d": 857
       },
       "rank": 15,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22436,7 +22295,7 @@
         "30d": 851
       },
       "rank": 17,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22468,7 +22327,7 @@
         "30d": 846
       },
       "rank": 18,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22500,7 +22359,7 @@
         "30d": 845
       },
       "rank": 19,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22532,7 +22391,7 @@
         "30d": 843
       },
       "rank": 20,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22596,7 +22455,7 @@
         "30d": 838
       },
       "rank": 22,
-      "move": -2,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22628,7 +22487,7 @@
         "30d": 837
       },
       "rank": 23,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22660,7 +22519,7 @@
         "30d": 832
       },
       "rank": 24,
-      "move": -1,
+      "move": 0,
       "is_new": false
     },
     {
@@ -22692,7 +22551,7 @@
         "30d": 829
       },
       "rank": 25,
-      "move": -1,
+      "move": 0,
       "is_new": false
     }
   ]
