@@ -42,7 +42,7 @@ YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3"
 REDDIT_BASE = "https://www.reddit.com"
 X_API_BASE = "https://api.twitter.com/2"
 
-REQUEST_TIMEOUT = 15  # seconds
+REQUEST_TIMEOUT = 30  # seconds
 
 # Hard-coded title blacklist — re-releases / remakes of old films that TMDb
 # tags with a recent release_date but are not part of the live theatrical
@@ -1171,7 +1171,7 @@ def fetch_google_trends(titles: List[str], force: bool = False) -> Dict[str, int
         return cached_scores or {t: 0 for t in titles}
 
     try:
-        py = TrendReq(hl="en-US", tz=0)
+        py = TrendReq(hl="en-US", tz=0, timeout=(10, REQUEST_TIMEOUT))
     except Exception as exc:  # noqa: BLE001
         LOG.warning("pytrends init failed: %s — using stale cache", exc)
         return cached_scores or {t: 0 for t in titles}
@@ -1252,7 +1252,9 @@ def fetch_news_feeds(feeds: List[Dict[str, str]],
         if not url:
             continue
         try:
-            parsed = feedparser.parse(url)
+            # feedparser.parse() has no timeout — fetch manually with timeout first
+            resp = requests.get(url, timeout=REQUEST_TIMEOUT)
+            parsed = feedparser.parse(resp.content)
         except Exception as exc:  # noqa: BLE001
             LOG.warning("RSS parse failed for %s: %s", url, exc)
             continue
