@@ -1388,12 +1388,24 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         )
         m["release_type"] = fetch_release_type_cached(tmdb_key, m["tmdb_id"], release_cache)
 
+        # Build disambiguated search_query: "Title Year DirectorLast LeadActorLast"
+        year = (m.get("release_date") or "")[:4] or None
+        sq_parts = [_sanitize_title(title)]
+        if year:
+            sq_parts.append(year)
+        dir_name = (m.get("director") or "").split(",")[0].strip()
+        if dir_name:
+            sq_parts.append(dir_name.split()[-1])
+        cast_str = (m.get("cast") or "").split(",")[0].strip()
+        if cast_str:
+            sq_parts.append(cast_str.split()[-1])
+        m["search_query"] = " ".join(sq_parts)
+
         # YouTube — fully cached, with TMDb→search fallback chain.
         # Diagnostic logging is enabled for the first 3 movies of every run
         # so we can see exactly what the API is returning vs the cache.
         diag = (idx <= 3)
         try:
-            year = (m.get("release_date") or "")[:4] or None
             m["youtube"] = fetch_youtube_for_movie(
                 yt_key, tmdb_key,
                 tmdb_id=m["tmdb_id"], title=title, year=year,
@@ -1407,15 +1419,12 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
             m["youtube"] = {"views": 0, "likes": 0, "comments": 0}
 
         try:
-            reddit_year = (m.get("release_date") or "")[:4] or None
-            reddit_query = _sanitize_title(title, year=reddit_year) + " movie"
-            m["reddit"] = fetch_reddit_mentions(reddit_query, subs, ua)
+            m["reddit"] = fetch_reddit_mentions(m["search_query"], subs, ua)
         except Exception as exc:  # noqa: BLE001
             LOG.warning("Reddit failed for %s: %s", title, exc)
             m["reddit"] = {"posts": 0, "comments": 0}
 
-        # Per-movie news mentions = items whose headline contains the title
-        # (case-insensitive, whole-word). We'll keep the matched outlets for NIS scoring.
+        # Per-movie news mentions — match on both raw title and search_query
         m["news_mentions"] = _news_mentions_for(title, news_items)
 
         time.sleep(0.2)  # gentle pacing
