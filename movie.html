@@ -282,6 +282,13 @@ function drawChart(container, points){
   const x = i => PAD + (i / (points.length - 1)) * spanX;
   const y = v => PAD + spanY - ((v - min) / (max - min)) * spanY;
 
+  // Date labels for tooltip (last 29 days)
+  const dates = [];
+  for (let i = 28; i >= 0; i--){
+    const d = new Date(); d.setDate(d.getDate() - i);
+    dates.push(d.toLocaleDateString('en-US', {month:'short', day:'numeric'}));
+  }
+
   // Axis labels
   const maxLabel = `<text x="${W - 8}" y="18" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${max}</text>`;
   const minLabel = `<text x="${W - 8}" y="${H - 6}" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${min}</text>`;
@@ -306,20 +313,80 @@ function drawChart(container, points){
       </linearGradient>
     </defs>`;
 
-  // Gold dots
-  const dots = points.map((v, i) =>
-    `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i === points.length - 1 ? 5 : 2.4}" fill="var(--gold)"/>`
-  ).join('');
+  // Gold dots — last point gets sonar pulse
+  const lastI = points.length - 1;
+  const dots = points.map((v, i) => {
+    if (i === lastI) {
+      const cx = x(i).toFixed(1), cy = y(v).toFixed(1);
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>
+        <circle cx="${cx}" cy="${cy}" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0">
+          <animate attributeName="r" from="5" to="18" dur="1.9s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" from="0.7" to="0" dur="1.9s" repeatCount="indefinite"/>
+        </circle>`;
+    }
+    return `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.4" fill="var(--gold)"/>`;
+  }).join('');
+
+  // Scrub elements (hidden until interaction)
+  const scrub = `
+    <line id="scrubLine" x1="0" y1="${PAD}" x2="0" y2="${H - PAD}" stroke="var(--gold)" stroke-width="1" stroke-dasharray="3,3" opacity="0"/>
+    <circle id="scrubDot" cx="0" cy="0" r="4" fill="var(--gold)" opacity="0"/>`;
 
   container.innerHTML = `
-    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" id="chartSvg" style="touch-action:none">
       ${grad}
       ${grid}
       <path d="${area}" fill="url(#lg)"/>
       <path d="${d}" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
       ${dots}
+      ${scrub}
       ${maxLabel}${minLabel}
-    </svg>`;
+    </svg>
+    <div id="chartTooltip" style="position:absolute;pointer-events:none;opacity:0;transition:opacity .2s;
+      background:rgba(0,0,0,.85);border:1px solid var(--gold);border-radius:4px;padding:4px 8px;
+      font-family:Rajdhani;font-size:12px;color:var(--gold);letter-spacing:.08em;white-space:nowrap;z-index:10">
+    </div>`;
+
+  // Make container relative for tooltip positioning
+  container.style.position = 'relative';
+
+  // Interactive scrubbing
+  const svg = document.getElementById('chartSvg');
+  const tip = document.getElementById('chartTooltip');
+  const scrubLine = document.getElementById('scrubLine');
+  const scrubDot = document.getElementById('scrubDot');
+
+  function handleScrub(clientX){
+    const rect = svg.getBoundingClientRect();
+    const pctX = (clientX - rect.left) / rect.width;
+    const svgX = pctX * W;
+    // Find nearest data point index
+    const idx = Math.max(0, Math.min(lastI, Math.round((svgX - PAD) / spanX * lastI)));
+    const px = x(idx), py = y(points[idx]);
+
+    scrubLine.setAttribute('x1', px); scrubLine.setAttribute('x2', px);
+    scrubLine.setAttribute('opacity', '0.6');
+    scrubDot.setAttribute('cx', px); scrubDot.setAttribute('cy', py);
+    scrubDot.setAttribute('opacity', '1');
+
+    tip.textContent = `${dates[idx]} — ${points[idx]}`;
+    tip.style.opacity = '1';
+    const tipX = (pctX * rect.width) - tip.offsetWidth / 2;
+    const tipY = (py / H * rect.height) - 28;
+    tip.style.left = Math.max(0, Math.min(rect.width - tip.offsetWidth, tipX)) + 'px';
+    tip.style.top = Math.max(0, tipY) + 'px';
+  }
+
+  function hideScrub(){
+    scrubLine.setAttribute('opacity', '0');
+    scrubDot.setAttribute('opacity', '0');
+    tip.style.opacity = '0';
+  }
+
+  svg.addEventListener('mousemove', e => handleScrub(e.clientX));
+  svg.addEventListener('mouseleave', hideScrub);
+  svg.addEventListener('touchmove', e => { e.preventDefault(); handleScrub(e.touches[0].clientX); }, {passive:false});
+  svg.addEventListener('touchend', hideScrub);
 }
 
 /* ---------- Pick / Drop local storage ---------- */
@@ -369,11 +436,11 @@ function render(data, m){
   // multiply by the rough weight to show breakdown totals per V1.
   const sub = m.sub_scores || {};
   const brkItems = [
-    { l:'YOUTUBE VIEWS',  k:'youtube_views',      w:0.30, max:300 },
-    { l:'YT ENGAGEMENT',  k:'youtube_engagement', w:0.15, max:150 },
-    { l:'REDDIT VOLUME',  k:'reddit_volume',      w:0.20, max:200 },
-    { l:'GOOGLE TRENDS',  k:'google_trends',      w:0.20, max:200 },
-    { l:'NEWS IMPACT',    k:'news_impact',        w:0.15, max:150 },
+    { l:'YOUTUBE VELOCITY', k:'youtube_views',      w:0.35, max:350 },
+    { l:'X MENTIONS',       k:'x_mentions',         w:0.25, max:250 },
+    { l:'REDDIT VOLUME',    k:'reddit_volume',      w:0.20, max:200 },
+    { l:'GOOGLE TRENDS',    k:'google_trends',      w:0.15, max:150 },
+    { l:'NEWS IMPACT',      k:'news_impact',        w:0.05, max:50  },
   ];
   let brkTotal = 0;
   const brkRows = brkItems.map(item => {
@@ -461,7 +528,7 @@ function render(data, m){
         <h3>SCORE BREAKDOWN</h3>
         ${brkRows}
         <div class="brk-total">
-          <span class="l">TOTAL AMSI</span>
+          <span class="l">TOTAL HYPE</span>
           <span class="v">${Math.round(brkTotal)}<span style="font-size:16px;color:var(--mute)">/1000</span></span>
         </div>
       </section>
