@@ -569,14 +569,24 @@ async def run(limit: Optional[int] = None, once: bool = False):
         LOG.info("Once-cycle complete. Output → %s", OUTPUT_PATH)
         return
 
-    # Start all workers
+    # Wrap each worker so a crash in one doesn't kill the others
+    async def resilient(name, coro):
+        while True:
+            try:
+                await coro
+            except asyncio.CancelledError:
+                raise
+            except Exception as exc:
+                LOG.error("Worker %s crashed: %s — restarting in 30s", name, exc)
+                await asyncio.sleep(30)
+
     tasks = [
-        asyncio.create_task(worker_reddit(store, reddit_sem)),
-        asyncio.create_task(worker_x(store, x_sem)),
-        asyncio.create_task(worker_youtube(store, yt_sem)),
-        asyncio.create_task(worker_news_batch(store)),
-        asyncio.create_task(worker_trends_batch(store)),
-        asyncio.create_task(worker_heartbeat()),
+        asyncio.create_task(resilient("reddit", worker_reddit(store, reddit_sem))),
+        asyncio.create_task(resilient("x", worker_x(store, x_sem))),
+        asyncio.create_task(resilient("youtube", worker_youtube(store, yt_sem))),
+        asyncio.create_task(resilient("news", worker_news_batch(store))),
+        asyncio.create_task(resilient("trends", worker_trends_batch(store))),
+        asyncio.create_task(resilient("heartbeat", worker_heartbeat())),
     ]
 
     LOG.info("Scheduler running with %d workers", len(tasks))
