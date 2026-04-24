@@ -12,6 +12,8 @@ venv/
 # Caches
 data/cache/
 data/logs/
+data/audit/
+data/backups/
 *.log
 
 # OS
