@@ -390,57 +390,107 @@ async def worker_heartbeat():
 # ---------------------------------------------------------------------------
 
 async def initialize_store(store: MovieStore, limit: Optional[int] = None):
-    """Load initial movie universe and seed all signals from cache/raw.json."""
+    """
+    Initialize from production data — inherits the exact movie universe
+    from data/v2.json (what the live site serves) and seeds signal values
+    from data/cache/raw.json (the last full fetch). This guarantees zero
+    universe drift at cutover.
+
+    Falls back to TMDb discovery only if v2.json doesn't exist (fresh install).
+    """
     LOG.info("Initializing movie store...")
     cfg = load_config()
     store.config = cfg
 
-    tmdb_key = cfg["tmdb_api_key"]
-    max_count = limit or int(cfg.get("max_movies", 100))
-
-    # Load movie universe (same as fetch_all step 1)
-    movies = await asyncio.get_event_loop().run_in_executor(
-        None, fetch_tmdb_movies, tmdb_key, max_count
-    )
-    tmdb_ids = {m["tmdb_id"] for m in movies}
-
-    manual = await asyncio.get_event_loop().run_in_executor(
-        None, _load_manual_movies, tmdb_key
-    )
-    for mm in manual:
-        if mm["tmdb_id"] not in tmdb_ids:
-            movies.append(mm)
-            tmdb_ids.add(mm["tmdb_id"])
-
-    LOG.info("Universe: %d movies", len(movies))
-
-    # Seed from cached raw.json if available
+    # Primary: inherit universe from production v2.json
+    v2_path = REPO_ROOT / "data" / "v2.json"
     raw_path = REPO_ROOT / "data" / "cache" / "raw.json"
-    cached_movies = {}
+
+    # Build lookup of full signal data from raw.json (richer than v2.json)
+    raw_by_id: Dict[int, Dict[str, Any]] = {}
     if raw_path.exists():
         try:
             raw = json.loads(raw_path.read_text())
             for m in raw.get("movies", []):
-                cached_movies[m.get("tmdb_id")] = m
+                raw_by_id[m.get("tmdb_id")] = m
         except Exception:
             pass
+
+    movies: List[Dict[str, Any]] = []
+
+    if v2_path.exists():
+        try:
+            v2 = json.loads(v2_path.read_text())
+            v2_movies = v2.get("movies") or []
+            LOG.info("Inheriting universe from v2.json: %d movies", len(v2_movies))
+
+            for vm in v2_movies:
+                tid = vm.get("tmdb_id")
+                if not tid:
+                    continue
+                # Prefer raw.json data (has full signal dicts); fall back to v2 fields
+                base = raw_by_id.get(tid, {})
+                m = {
+                    "tmdb_id":    tid,
+                    "title":      vm.get("title") or base.get("title", ""),
+                    "release_date": vm.get("release_date") or base.get("release_date", ""),
+                    "popularity": base.get("popularity", 0.0),
+                    "poster_path": base.get("poster_path"),
+                    "poster_url":  vm.get("poster_url"),
+                    "overview":    base.get("overview", ""),
+                    "director":    vm.get("director") or base.get("director", ""),
+                    "cast":        vm.get("cast") or base.get("cast", ""),
+                    "cast_full":   vm.get("cast_full") or base.get("cast_full", []),
+                    "directors_full": vm.get("directors_full") or base.get("directors_full", []),
+                    "youtube":     base.get("youtube", {"views": 0, "likes": 0, "comments": 0}),
+                    "reddit":      base.get("reddit", {"posts": 0, "comments": 0}),
+                    "x_mentions":  vm.get("x_mentions") or base.get("x_mentions", 0),
+                    "trends":      vm.get("trends") or base.get("trends", 0),
+                    "news_mentions": base.get("news_mentions", []),
+                    "youtube_velocity": base.get("youtube_velocity", {}),
+                    "event_youtube_views": vm.get("event_youtube_views") or base.get("event_youtube_views", 0),
+                    "search_query": base.get("search_query", ""),
+                }
+                movies.append(m)
+        except Exception as exc:
+            LOG.warning("Failed to load v2.json: %s — falling back to TMDb discovery", exc)
+
+    # Fallback: TMDb discovery (only if v2.json failed or is empty)
+    if not movies:
+        LOG.info("No v2.json — falling back to TMDb universe discovery")
+        tmdb_key = cfg["tmdb_api_key"]
+        max_count = limit or int(cfg.get("max_movies", 100))
+        movies = await asyncio.get_event_loop().run_in_executor(
+            None, fetch_tmdb_movies, tmdb_key, max_count
+        )
+        manual = await asyncio.get_event_loop().run_in_executor(
+            None, _load_manual_movies, cfg["tmdb_api_key"]
+        )
+        tmdb_ids = {m["tmdb_id"] for m in movies}
+        for mm in manual:
+            if mm["tmdb_id"] not in tmdb_ids:
+                movies.append(mm)
+                tmdb_ids.add(mm["tmdb_id"])
+        # Seed from raw.json
+        for m in movies:
+            cached = raw_by_id.get(m["tmdb_id"], {})
+            m.setdefault("youtube", cached.get("youtube", {"views": 0, "likes": 0, "comments": 0}))
+            m.setdefault("reddit", cached.get("reddit", {"posts": 0, "comments": 0}))
+            m.setdefault("x_mentions", cached.get("x_mentions", 0))
+            m.setdefault("trends", cached.get("trends", 0))
+            m.setdefault("news_mentions", cached.get("news_mentions", []))
+            m.setdefault("youtube_velocity", cached.get("youtube_velocity", {}))
+            m.setdefault("event_youtube_views", cached.get("event_youtube_views", 0))
+
+    LOG.info("Universe: %d movies", len(movies))
 
     # Load caches
     store.trailer_cache = _load_trailer_cache()
     store.stats_cache = _load_stats_cache()
 
-    # Initialize each movie with cached data or defaults
+    # Register all movies in the store
     for m in movies:
-        tid = m["tmdb_id"]
-        cached = cached_movies.get(tid, {})
-        m.setdefault("youtube", cached.get("youtube", {"views": 0, "likes": 0, "comments": 0}))
-        m.setdefault("reddit", cached.get("reddit", {"posts": 0, "comments": 0}))
-        m.setdefault("x_mentions", cached.get("x_mentions", 0))
-        m.setdefault("trends", cached.get("trends", 0))
-        m.setdefault("news_mentions", cached.get("news_mentions", []))
-        m.setdefault("youtube_velocity", cached.get("youtube_velocity", {}))
-        m.setdefault("event_youtube_views", cached.get("event_youtube_views", 0))
-        store.movies[tid] = m
+        store.movies[m["tmdb_id"]] = m
 
     # Initial scoring
     all_movies = list(store.movies.values())
