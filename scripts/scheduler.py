@@ -202,6 +202,9 @@ class MovieStore:
 # Audit log
 # ---------------------------------------------------------------------------
 
+BACKUP_DIR = REPO_ROOT / "data" / "backups" / "audit"
+
+
 def _write_audit(change: Dict[str, Any]) -> None:
     """Append a rating change entry to the audit log."""
     AUDIT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -211,6 +214,27 @@ def _write_audit(change: Dict[str, Any]) -> None:
     }
     with AUDIT_PATH.open("a") as f:
         f.write(json.dumps(entry) + "\n")
+
+
+def _rotate_audit_if_needed() -> None:
+    """
+    Compress yesterday's audit entries into data/backups/audit/YYYY-MM-DD.jsonl.gz.
+    Called once at startup. Only rotates if the file is >1MB.
+    """
+    import gzip
+    if not AUDIT_PATH.exists():
+        return
+    size = AUDIT_PATH.stat().st_size
+    if size < 1_000_000:  # <1MB, no rotation needed
+        return
+    BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.now(timezone.utc).date().isoformat()
+    backup = BACKUP_DIR / f"{today}.jsonl.gz"
+    with AUDIT_PATH.open("rb") as src, gzip.open(backup, "wb") as dst:
+        dst.writelines(src)
+    # Truncate the live file
+    AUDIT_PATH.write_text("")
+    LOG.info("Audit log rotated: %d bytes → %s", size, backup)
 
 
 def _write_heartbeat() -> None:
@@ -399,6 +423,7 @@ async def initialize_store(store: MovieStore, limit: Optional[int] = None):
     Falls back to TMDb discovery only if v2.json doesn't exist (fresh install).
     """
     LOG.info("Initializing movie store...")
+    _rotate_audit_if_needed()
     cfg = load_config()
     store.config = cfg
 
