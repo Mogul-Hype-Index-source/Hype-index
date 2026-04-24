@@ -103,7 +103,11 @@
     padding:14px 22px;border:1px solid var(--gold-pill-border);background:var(--gold-pill-bg);
     border-radius:10px;width:fit-content;
   }
-  .score-badge .v{font-family:'Bebas Neue',sans-serif;font-size:54px;color:var(--gold);line-height:1}
+  .score-badge .v{font-family:'Bebas Neue',sans-serif;font-size:54px;color:var(--gold);line-height:1;padding:2px 8px;border-radius:4px}
+  .score-badge .v.tick-up{animation:detail-tick-up .6s ease-out}
+  .score-badge .v.tick-down{animation:detail-tick-down .6s ease-out}
+  @keyframes detail-tick-up{0%{background:rgba(0,200,83,.35)}100%{background:transparent}}
+  @keyframes detail-tick-down{0%{background:rgba(255,60,60,.35)}100%{background:transparent}}
   .score-badge .l{font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--mute)}
   .snap{color:var(--mute);font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:.16em}
 
@@ -318,11 +322,7 @@ function drawChart(container, points){
   const dots = points.map((v, i) => {
     if (i === lastI) {
       const cx = x(i).toFixed(1), cy = y(v).toFixed(1);
-      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>
-        <circle cx="${cx}" cy="${cy}" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0">
-          <animate attributeName="r" values="5;16;5;14;5;5" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.7;0;0.6;0;0;0" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
-        </circle>`;
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>`;
     }
     return `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.4" fill="var(--gold)"/>`;
   }).join('');
@@ -502,7 +502,7 @@ function render(data, m){
         <div class="sub">${escapeHtml(rel)}${m.release_date ? '<span class="dot"></span>' : ''}Directed by ${dirHtml}</div>
         <h1>${escapeHtml(m.title || '')}</h1>
         <div class="score-badge">
-          <div class="v">${m.score}</div>
+          <div class="v" id="ratingVal">${m.score}</div>
           <div>
             <div class="l">HYPE SCORE</div>
             <div class="snap">SNAPSHOT ${data.snapshot_date}</div>
@@ -572,6 +572,16 @@ function render(data, m){
   // Render trend chart
   const trend = synth29dTrend(m.tmdb_id, m.score);
   drawChart(document.getElementById('chart'), trend);
+
+  // Tick-flash: compare to previous score stored in sessionStorage
+  const prevKey = 'hype_prev_' + m.tmdb_id;
+  const prev = parseInt(sessionStorage.getItem(prevKey));
+  if (!isNaN(prev) && prev !== m.score) {
+    const el = document.getElementById('ratingVal');
+    el.classList.add(m.score > prev ? 'tick-up' : 'tick-down');
+    setTimeout(() => el.classList.remove('tick-up', 'tick-down'), 650);
+  }
+  sessionStorage.setItem(prevKey, m.score);
 
   // Wire pick/drop
   const updateButtons = (state) => {

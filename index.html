@@ -520,6 +520,21 @@
     transition:color .1s ease-in, text-shadow .1s ease-in;
   }
 
+  /* Data-driven tick flash on score change */
+  .score.tick-up{ animation: tick-flash-up .6s ease-out; }
+  .score.tick-down{ animation: tick-flash-down .6s ease-out; }
+  @keyframes tick-flash-up{
+    0%   { background:rgba(0,200,83,.35); }
+    100% { background:transparent; }
+  }
+  @keyframes tick-flash-down{
+    0%   { background:rgba(255,60,60,.35); }
+    100% { background:transparent; }
+  }
+
+  /* Row reorder — smooth slide via transform */
+  .rankings tbody tr{ transition: transform .3s ease-out; }
+
   /* Staggered row reveal — delay set inline by JS (40ms × index) */
   .rankings tbody tr.row-revealing{
     opacity:0;
@@ -961,6 +976,87 @@ async function loadData(){
     console.error(e);
   }
 }
+
+/* ---------- Auto-refresh: poll v2.json every 30s for data-driven motion ---------- */
+let _prevScores = {};  // tmdb_id → previous score for tick-flash comparison
+
+function _captureScores(){
+  const d = STATE.data;
+  if (!d) return;
+  const all = [...(d.movies||[]), ...(d.actors||[]), ...(d.directors||[])];
+  _prevScores = {};
+  all.forEach(e => { if (e.tmdb_id != null) _prevScores[e.tmdb_id] = e.score || 0; });
+}
+
+function _applyTickFlash(){
+  // Compare current rendered scores to previous snapshot
+  document.querySelectorAll('.rankings tbody tr[data-href]').forEach(row => {
+    const scoreEl = row.querySelector('.score');
+    if (!scoreEl) return;
+    const href = row.getAttribute('data-href') || '';
+    const idMatch = href.match(/id=(\d+)/);
+    if (!idMatch) return;
+    const tid = parseInt(idMatch[1]);
+    const prev = _prevScores[tid];
+    const curr = parseInt(scoreEl.textContent) || 0;
+    if (prev == null) return;  // first load — no flash
+    if (curr > prev) { scoreEl.classList.add('tick-up'); setTimeout(() => scoreEl.classList.remove('tick-up'), 650); }
+    else if (curr < prev) { scoreEl.classList.add('tick-down'); setTimeout(() => scoreEl.classList.remove('tick-down'), 650); }
+  });
+}
+
+function _applyRowReorder(){
+  const tbody = document.getElementById('tbody');
+  if (!tbody) return;
+  const rows = Array.from(tbody.querySelectorAll('tr[data-href]'));
+  if (!rows.length) return;
+
+  // Capture current positions (FLIP: First)
+  const firstRects = new Map();
+  rows.forEach(r => firstRects.set(r, r.getBoundingClientRect()));
+
+  // Re-render the table (this reorders DOM)
+  renderTable();
+
+  // Capture new positions (FLIP: Last)
+  const newRows = Array.from(tbody.querySelectorAll('tr[data-href]'));
+  newRows.forEach(row => {
+    const lastRect = row.getBoundingClientRect();
+    // Find matching old row by data-href
+    const oldRow = rows.find(r => r.getAttribute('data-href') === row.getAttribute('data-href'));
+    if (!oldRow) return;
+    const firstRect = firstRects.get(oldRow);
+    if (!firstRect) return;
+    const dy = firstRect.top - lastRect.top;
+    if (Math.abs(dy) < 2) return;  // didn't move
+    // FLIP: Invert + Play
+    row.style.transition = 'none';
+    row.style.transform = `translateY(${dy}px)`;
+    row.offsetHeight;  // force reflow
+    row.style.transition = 'transform .3s ease-out';
+    row.style.transform = '';
+  });
+}
+
+async function autoRefresh(){
+  try {
+    const res = await fetch('data/v2.json?t=' + Date.now(), {cache:'no-store'});
+    if (!res.ok) return;
+    const newData = await res.json();
+    // Only update if generation timestamp changed
+    if (newData.generated_at === (STATE.data || {}).generated_at) return;
+    _captureScores();
+    STATE.data = newData;
+    _applyRowReorder();
+    _applyTickFlash();
+    console.info('[refresh] data updated', newData.generated_at);
+  } catch(e) {
+    console.warn('[refresh] failed', e.message);
+  }
+}
+
+// Start auto-refresh loop after initial load
+setTimeout(() => setInterval(autoRefresh, 30000), 5000);
 
 /* If the browser served a bfcache copy of this page, the DOM is already
    built and our render never re-runs. We still need to honour any saved

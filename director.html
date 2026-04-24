@@ -208,11 +208,7 @@ function drawChart(container, points){
   const dots = points.map((v,i) => {
     if (i === lastI) {
       const cx = x(i).toFixed(1), cy = y(v).toFixed(1);
-      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>
-        <circle cx="${cx}" cy="${cy}" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0">
-          <animate attributeName="r" values="5;16;5;14;5;5" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.7;0;0.6;0;0;0" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
-        </circle>`;
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>`;
     }
     return `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.4" fill="var(--gold)"/>`;
   }).join('');
