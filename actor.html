@@ -191,16 +191,69 @@ function drawChart(container, points){
   const spanX = W - PAD*2, spanY = H - PAD*2;
   const x = i => PAD + (i/(points.length-1))*spanX;
   const y = v => PAD + spanY - ((v-min)/(max-min))*spanY;
+
+  const dates = [];
+  for (let i = 28; i >= 0; i--){ const dt = new Date(); dt.setDate(dt.getDate()-i); dates.push(dt.toLocaleDateString('en-US',{month:'short',day:'numeric'})); }
+
+  const maxLabel = `<text x="${W-8}" y="18" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${max}</text>`;
+  const minLabel = `<text x="${W-8}" y="${H-6}" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${min}</text>`;
   let grid = '';
-  for (let g = 1; g <= 3; g++){
-    const gy = PAD + (spanY*g/4);
-    grid += `<line x1="${PAD}" y1="${gy}" x2="${W-PAD}" y2="${gy}" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"/>`;
-  }
+  for (let g = 1; g <= 3; g++){ const gy = PAD+(spanY*g/4); grid += `<line x1="${PAD}" y1="${gy}" x2="${W-PAD}" y2="${gy}" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"/>`; }
+
   const d = points.map((v,i) => `${i?'L':'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
   const area = `${d} L${x(points.length-1)},${H-PAD} L${x(0)},${H-PAD} Z`;
   const grad = `<defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--gold)" stop-opacity=".25"/><stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/></linearGradient></defs>`;
-  const dots = points.map((v,i)=>`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${i===points.length-1?5:2.4}" fill="var(--gold)"/>`).join('');
-  container.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${grad}${grid}<path d="${area}" fill="url(#lg)"/><path d="${d}" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>${dots}<text x="${W-8}" y="18" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${max}</text><text x="${W-8}" y="${H-6}" text-anchor="end" font-family="Rajdhani" font-size="10" fill="var(--mute)">${min}</text></svg>`;
+
+  const lastI = points.length - 1;
+  const dots = points.map((v,i) => {
+    if (i === lastI) {
+      const cx = x(i).toFixed(1), cy = y(v).toFixed(1);
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>
+        <circle cx="${cx}" cy="${cy}" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0">
+          <animate attributeName="r" values="5;16;5;14;5;5" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0;0.6;0;0;0" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
+        </circle>`;
+    }
+    return `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.4" fill="var(--gold)"/>`;
+  }).join('');
+
+  const scrub = `<line id="scrubLine" x1="0" y1="${PAD}" x2="0" y2="${H-PAD}" stroke="var(--gold)" stroke-width="1" stroke-dasharray="3,3" opacity="0"/>
+    <circle id="scrubDot" cx="0" cy="0" r="4" fill="var(--gold)" opacity="0"/>`;
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" id="chartSvg" style="touch-action:none">
+      ${grad}${grid}
+      <path d="${area}" fill="url(#lg)"/>
+      <path d="${d}" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      ${dots}${scrub}${maxLabel}${minLabel}
+    </svg>
+    <div id="chartTooltip" style="position:absolute;pointer-events:none;opacity:0;transition:opacity .2s;background:rgba(0,0,0,.85);border:1px solid var(--gold);border-radius:4px;padding:4px 8px;font-family:Rajdhani;font-size:12px;color:var(--gold);letter-spacing:.08em;white-space:nowrap;z-index:10"></div>`;
+  container.style.position = 'relative';
+
+  const svg = document.getElementById('chartSvg');
+  const tip = document.getElementById('chartTooltip');
+  const scrubLine = document.getElementById('scrubLine');
+  const scrubDot = document.getElementById('scrubDot');
+  function handleScrub(clientX){
+    const rect = svg.getBoundingClientRect();
+    const pctX = (clientX-rect.left)/rect.width;
+    const svgX = pctX*W;
+    const idx = Math.max(0,Math.min(lastI,Math.round((svgX-PAD)/spanX*lastI)));
+    const px = x(idx), py = y(points[idx]);
+    scrubLine.setAttribute('x1',px); scrubLine.setAttribute('x2',px); scrubLine.setAttribute('opacity','0.6');
+    scrubDot.setAttribute('cx',px); scrubDot.setAttribute('cy',py); scrubDot.setAttribute('opacity','1');
+    tip.textContent = `${dates[idx]} · Hype Score ${points[idx]}`;
+    tip.style.opacity = '1';
+    const tipX = (pctX*rect.width)-tip.offsetWidth/2;
+    const tipY = (py/H*rect.height)-28;
+    tip.style.left = Math.max(0,Math.min(rect.width-tip.offsetWidth,tipX))+'px';
+    tip.style.top = Math.max(0,tipY)+'px';
+  }
+  function hideScrub(){ scrubLine.setAttribute('opacity','0'); scrubDot.setAttribute('opacity','0'); tip.style.opacity='0'; }
+  svg.addEventListener('mousemove', e => handleScrub(e.clientX));
+  svg.addEventListener('mouseleave', hideScrub);
+  svg.addEventListener('touchmove', e => { e.preventDefault(); handleScrub(e.touches[0].clientX); }, {passive:false});
+  svg.addEventListener('touchend', hideScrub);
 }
 
 function loadPicks(){ try { return JSON.parse(localStorage.getItem('hypeindex-picks')||'{}'); } catch(_){ return {}; } }

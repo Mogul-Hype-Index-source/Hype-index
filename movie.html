@@ -320,8 +320,8 @@ function drawChart(container, points){
       const cx = x(i).toFixed(1), cy = y(v).toFixed(1);
       return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--gold)"/>
         <circle cx="${cx}" cy="${cy}" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0">
-          <animate attributeName="r" from="5" to="18" dur="1.9s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" from="0.7" to="0" dur="1.9s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="5;16;5;14;5;5" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0;0.6;0;0;0" keyTimes="0;0.12;0.2;0.3;0.38;1" dur="1.3s" repeatCount="indefinite"/>
         </circle>`;
     }
     return `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.4" fill="var(--gold)"/>`;
@@ -369,7 +369,7 @@ function drawChart(container, points){
     scrubDot.setAttribute('cx', px); scrubDot.setAttribute('cy', py);
     scrubDot.setAttribute('opacity', '1');
 
-    tip.textContent = `${dates[idx]} — ${points[idx]}`;
+    tip.textContent = `${dates[idx]} · Hype Score ${points[idx]}`;
     tip.style.opacity = '1';
     const tipX = (pctX * rect.width) - tip.offsetWidth / 2;
     const tipY = (py / H * rect.height) - 28;
