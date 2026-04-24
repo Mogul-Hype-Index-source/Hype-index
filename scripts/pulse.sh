@@ -59,6 +59,11 @@ fi
   log "WARN: discover_entities.py failed (non-fatal, continuing)"
 }
 
+# ---- 0.6. scheduler parallel run (writes to v2_scheduler.json, not v2.json) ----
+"$PYTHON" scripts/scheduler.py --once >> "$LOG" 2>&1 || {
+  log "WARN: scheduler.py --once failed (non-fatal, continuing)"
+}
+
 # ---- 1. fetch + score + write data/v2.json ----
 if ! "$PYTHON" scripts/update.py >> "$LOG" 2>&1; then
   log "FATAL: update.py failed"
