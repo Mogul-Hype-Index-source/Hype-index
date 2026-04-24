@@ -50,18 +50,25 @@ Batch signals (RSS, Trends) refresh all titles at once. Per-title signals (X, Re
 
 #### 4. When to Ship the Rating Migration
 
-**After the scheduler is stable (3-5 days of parallel running).** The Rating migration (replacing min-max 800-999 with calibrated 100-1500) is a display-layer change that doesn't depend on the scheduler. However, shipping them together gives us:
-- A clean switchover moment (old system → new system)
-- The audit log captures the Rating migration as a visible step change
-- Users see both improvements at once
+**Ship Rating migration AFTER performance tracking, not before.**
+
+The Rating calibration curve (e.g., `raw^0.50 × 74`) must be fit against the
+final entity model. If we calibrate against person-level `raw_hype` values
+first, then switch to performance-level signals, the raw score distribution
+will shift — some performances will score much higher than their person-level
+averages, others much lower. The curve's anchor points would break, and every
+number on the site would visibly shift during the performance migration.
+
+Calibrating once against the correct final entity shape avoids this.
 
 **Recommended sequence:**
 1. Merge scheduler to main, run in production for 3 days
-2. Verify audit log shows stable, non-jittery Ratings
-3. Apply Rating calibration curve (raw^0.50 × 74)
-4. Migrate historical data
-5. Update frontend labels
-6. Push to production
+2. Verify audit log shows stable, non-jittery scores
+3. Ship performance tracking (performance-tracking branch)
+4. Stabilize for 3 days — verify performance-scoped signals are correct
+5. Fit Rating calibration curve against performance-level `raw_hype` values
+6. Apply calibration, migrate historical data, update frontend labels
+7. Push Rating migration to production
 
 ### Implementation Files
 
