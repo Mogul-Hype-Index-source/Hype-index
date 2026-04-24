@@ -46,6 +46,7 @@ from fetch_data import (
     REPO_ROOT,
 )
 import score as score_module
+from update import _enrich_youtube_velocity
 
 LOG = logging.getLogger("scheduler")
 
@@ -517,8 +518,14 @@ async def initialize_store(store: MovieStore, limit: Optional[int] = None):
     for m in movies:
         store.movies[m["tmdb_id"]] = m
 
-    # Initial scoring
+    # YouTube velocity enrichment — computes views_24h, views_7d_avg,
+    # spike_multiplier from historical view snapshots. Without this,
+    # youtube_views sub-score is 0 for all movies (raw.json doesn't
+    # store velocity data — it's computed at scoring time).
     all_movies = list(store.movies.values())
+    _enrich_youtube_velocity(all_movies, datetime.now(timezone.utc))
+
+    # Initial scoring
     score_module.score_movies(all_movies, outlet_weights=cfg.get("outlet_tier_weights", {}))
     all_movies.sort(key=lambda x: x.get("score", 0), reverse=True)
     for i, m in enumerate(all_movies, 1):
