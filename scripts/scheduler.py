@@ -569,11 +569,12 @@ async def run(limit: Optional[int] = None, once: bool = False):
         LOG.info("Once-cycle complete. Output → %s", OUTPUT_PATH)
         return
 
-    # Wrap each worker so a crash in one doesn't kill the others
-    async def resilient(name, coro):
+    # Wrap each worker so a crash in one doesn't kill the others.
+    # Worker factories (not coroutines) so we can recreate on restart.
+    async def resilient(name, factory):
         while True:
             try:
-                await coro
+                await factory()
             except asyncio.CancelledError:
                 raise
             except Exception as exc:
@@ -581,12 +582,12 @@ async def run(limit: Optional[int] = None, once: bool = False):
                 await asyncio.sleep(30)
 
     tasks = [
-        asyncio.create_task(resilient("reddit", worker_reddit(store, reddit_sem))),
-        asyncio.create_task(resilient("x", worker_x(store, x_sem))),
-        asyncio.create_task(resilient("youtube", worker_youtube(store, yt_sem))),
-        asyncio.create_task(resilient("news", worker_news_batch(store))),
-        asyncio.create_task(resilient("trends", worker_trends_batch(store))),
-        asyncio.create_task(resilient("heartbeat", worker_heartbeat())),
+        asyncio.create_task(resilient("reddit", lambda: worker_reddit(store, reddit_sem))),
+        asyncio.create_task(resilient("x", lambda: worker_x(store, x_sem))),
+        asyncio.create_task(resilient("youtube", lambda: worker_youtube(store, yt_sem))),
+        asyncio.create_task(resilient("news", lambda: worker_news_batch(store))),
+        asyncio.create_task(resilient("trends", lambda: worker_trends_batch(store))),
+        asyncio.create_task(resilient("heartbeat", lambda: worker_heartbeat())),
     ]
 
     LOG.info("Scheduler running with %d workers", len(tasks))
