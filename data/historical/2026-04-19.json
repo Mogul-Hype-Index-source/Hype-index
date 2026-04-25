@@ -280,11 +280,11 @@
       "mentions": 854,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 999,
-        "7d": 805,
-        "30d": 999
+        "1d": 1330,
+        "7d": 1330,
+        "30d": 1330
       },
-      "score": 999,
+      "score": 1330,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -360,7 +360,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 1330,
+      "rating_band": "ELITE"
     },
     {
       "rank": 2,
@@ -386,11 +388,11 @@
       "mentions": 575,
       "sentiment_pct": 63,
       "scores": {
-        "1d": 886,
-        "7d": 807,
-        "30d": 886
+        "1d": 875,
+        "7d": 875,
+        "30d": 875
       },
-      "score": 886,
+      "score": 875,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -471,7 +473,9 @@
           "headline": "David Lowery Turned a Creative Crisis and Late-Night Doubt Into ‘Mother Mary,’ His Most Complex Movie Yet"
         }
       ],
-      "trends": 42
+      "trends": 42,
+      "rating": 875,
+      "rating_band": "DECENT"
     },
     {
       "rank": 3,
@@ -497,11 +501,11 @@
       "mentions": 112441,
       "sentiment_pct": 74,
       "scores": {
-        "1d": 879,
-        "7d": 909,
-        "30d": 879
+        "1d": 836,
+        "7d": 836,
+        "30d": 836
       },
-      "score": 879,
+      "score": 836,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -582,7 +586,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 34
+      "trends": 34,
+      "rating": 836,
+      "rating_band": "DECENT"
     },
     {
       "rank": 4,
@@ -608,11 +614,11 @@
       "mentions": 21146,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 829,
-        "7d": 999,
-        "30d": 829
+        "1d": 511,
+        "7d": 511,
+        "30d": 511
       },
-      "score": 829,
+      "score": 511,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -688,7 +694,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 51
+      "trends": 51,
+      "rating": 511,
+      "rating_band": "MODEST"
     },
     {
       "rank": 5,
@@ -714,11 +722,11 @@
       "mentions": 59795,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 820,
-        "7d": 901,
-        "30d": 820
+        "1d": 426,
+        "7d": 426,
+        "30d": 426
       },
-      "score": 820,
+      "score": 426,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -799,7 +807,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 8
+      "trends": 8,
+      "rating": 426,
+      "rating_band": "MODEST"
     },
     {
       "rank": 6,
@@ -825,11 +835,11 @@
       "mentions": 24888,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 814,
-        "7d": 932,
-        "30d": 814
+        "1d": 355,
+        "7d": 355,
+        "30d": 355
       },
-      "score": 814,
+      "score": 355,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -910,7 +920,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 45
+      "trends": 45,
+      "rating": 355,
+      "rating_band": "LOW"
     },
     {
       "rank": 9,
@@ -936,11 +948,11 @@
       "mentions": 11224,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 809,
-        "7d": 858,
-        "30d": 809
+        "1d": 282,
+        "7d": 282,
+        "30d": 282
       },
-      "score": 809,
+      "score": 282,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1016,7 +1028,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 48
+      "trends": 48,
+      "rating": 282,
+      "rating_band": "LOW"
     },
     {
       "rank": 11,
@@ -1042,11 +1056,11 @@
       "mentions": 9177,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 808,
-        "7d": 875,
-        "30d": 808
+        "1d": 261,
+        "7d": 261,
+        "30d": 261
       },
-      "score": 808,
+      "score": 261,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1122,7 +1136,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 45
+      "trends": 45,
+      "rating": 261,
+      "rating_band": "LOW"
     },
     {
       "rank": 12,
@@ -1148,11 +1164,11 @@
       "mentions": 9579,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 807,
-        "7d": 817,
-        "30d": 807
+        "1d": 255,
+        "7d": 255,
+        "30d": 255
       },
-      "score": 807,
+      "score": 255,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1228,7 +1244,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 44
+      "trends": 44,
+      "rating": 255,
+      "rating_band": "LOW"
     },
     {
       "rank": 13,
@@ -1254,11 +1272,11 @@
       "mentions": 1,
       "sentiment_pct": 80,
       "scores": {
-        "1d": 807,
-        "7d": 811,
-        "30d": 807
+        "1d": 252,
+        "7d": 252,
+        "30d": 252
       },
-      "score": 807,
+      "score": 252,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1339,7 +1357,9 @@
           "headline": "‘Euphoria’: Sam Levinson on Season 3’s Western Connection and Why They Shot on 65mm Film Stock"
         }
       ],
-      "trends": 22
+      "trends": 22,
+      "rating": 252,
+      "rating_band": "LOW"
     },
     {
       "rank": 14,
@@ -1365,11 +1385,11 @@
       "mentions": 0,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 807,
-        "7d": 827,
-        "30d": 807
+        "1d": 252,
+        "7d": 252,
+        "30d": 252
       },
-      "score": 807,
+      "score": 252,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1445,7 +1465,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 34
+      "trends": 34,
+      "rating": 252,
+      "rating_band": "LOW"
     },
     {
       "rank": 15,
@@ -1471,11 +1493,11 @@
       "mentions": 0,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 806,
-        "7d": 825,
-        "30d": 806
+        "1d": 223,
+        "7d": 223,
+        "30d": 223
       },
-      "score": 806,
+      "score": 223,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1551,7 +1573,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 50
+      "trends": 50,
+      "rating": 223,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 16,
@@ -1577,11 +1601,11 @@
       "mentions": 1,
       "sentiment_pct": 79,
       "scores": {
-        "1d": 806,
-        "7d": 800,
-        "30d": 806
+        "1d": 229,
+        "7d": 229,
+        "30d": 229
       },
-      "score": 806,
+      "score": 229,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1662,7 +1686,9 @@
           "headline": "‘Roommates’ Review: Sadie Sandler Navigates the Highs and Lows of Freshman Year in Chandler Levack’s Formulaic Netflix Comedy"
         }
       ],
-      "trends": 18
+      "trends": 18,
+      "rating": 229,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 17,
@@ -1688,11 +1714,11 @@
       "mentions": 2,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 806,
-        "7d": 817,
-        "30d": 806
+        "1d": 233,
+        "7d": 233,
+        "30d": 233
       },
-      "score": 806,
+      "score": 233,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1782,7 +1808,9 @@
           "headline": "Disney Is Trying to Make Up for Its ‘Avengers: Doomsday’ IMAX FOMO"
         }
       ],
-      "trends": 19
+      "trends": 19,
+      "rating": 233,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 18,
@@ -1808,11 +1836,11 @@
       "mentions": 0,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 806,
-        "7d": 815,
-        "30d": 806
+        "1d": 231,
+        "7d": 231,
+        "30d": 231
       },
-      "score": 806,
+      "score": 231,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1888,7 +1916,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 53
+      "trends": 53,
+      "rating": 231,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 19,
@@ -1914,11 +1944,11 @@
       "mentions": 0,
       "sentiment_pct": 69,
       "scores": {
-        "1d": 806,
-        "7d": 817,
-        "30d": 806
+        "1d": 227,
+        "7d": 227,
+        "30d": 227
       },
-      "score": 806,
+      "score": 227,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -1994,7 +2024,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 52
+      "trends": 52,
+      "rating": 227,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 20,
@@ -2020,11 +2052,11 @@
       "mentions": 941,
       "sentiment_pct": 59,
       "scores": {
-        "1d": 805,
-        "7d": 827,
-        "30d": 805
+        "1d": 213,
+        "7d": 213,
+        "30d": 213
       },
-      "score": 805,
+      "score": 213,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2088,7 +2120,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 46
+      "trends": 46,
+      "rating": 213,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 22,
@@ -2114,11 +2148,11 @@
       "mentions": 2536,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 805,
-        "7d": 820,
-        "30d": 805
+        "1d": 207,
+        "7d": 207,
+        "30d": 207
       },
-      "score": 805,
+      "score": 207,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2194,7 +2228,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 42
+      "trends": 42,
+      "rating": 207,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 23,
@@ -2220,11 +2256,11 @@
       "mentions": 0,
       "sentiment_pct": 63,
       "scores": {
-        "1d": 805,
-        "7d": 825,
-        "30d": 805
+        "1d": 207,
+        "7d": 207,
+        "30d": 207
       },
-      "score": 805,
+      "score": 207,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2282,7 +2318,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 45
+      "trends": 45,
+      "rating": 207,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 24,
@@ -2308,11 +2346,11 @@
       "mentions": 0,
       "sentiment_pct": 60,
       "scores": {
-        "1d": 805,
-        "7d": 808,
-        "30d": 805
+        "1d": 206,
+        "7d": 206,
+        "30d": 206
       },
-      "score": 805,
+      "score": 206,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2388,7 +2426,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 23
+      "trends": 23,
+      "rating": 206,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 25,
@@ -2414,11 +2454,11 @@
       "mentions": 0,
       "sentiment_pct": 62,
       "scores": {
-        "1d": 805,
-        "7d": 808,
-        "30d": 805
+        "1d": 206,
+        "7d": 206,
+        "30d": 206
       },
-      "score": 805,
+      "score": 206,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2494,7 +2534,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 47
+      "trends": 47,
+      "rating": 206,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 26,
@@ -2520,11 +2562,11 @@
       "mentions": 0,
       "sentiment_pct": 71,
       "scores": {
-        "1d": 805,
-        "7d": 801,
-        "30d": 805
+        "1d": 214,
+        "7d": 214,
+        "30d": 214
       },
-      "score": 805,
+      "score": 214,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2600,7 +2642,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 48
+      "trends": 48,
+      "rating": 214,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 27,
@@ -2626,11 +2670,11 @@
       "mentions": 0,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 805,
-        "7d": 805,
-        "30d": 805
+        "1d": 213,
+        "7d": 213,
+        "30d": 213
       },
-      "score": 805,
+      "score": 213,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2682,7 +2726,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 34
+      "trends": 34,
+      "rating": 213,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 28,
@@ -2708,11 +2754,11 @@
       "mentions": 0,
       "sentiment_pct": 70,
       "scores": {
-        "1d": 805,
-        "7d": 889,
-        "30d": 805
+        "1d": 206,
+        "7d": 206,
+        "30d": 206
       },
-      "score": 805,
+      "score": 206,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -2788,7 +2834,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 42
+      "trends": 42,
+      "rating": 206,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 29,
@@ -2814,11 +2862,11 @@
       "mentions": 301,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 804,
-        "7d": 814,
-        "30d": 804
+        "1d": 178,
+        "7d": 178,
+        "30d": 178
       },
-      "score": 804,
+      "score": 178,
       "move": -9,
       "is_new": false,
       "hot": false,
@@ -2894,7 +2942,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 40
+      "trends": 40,
+      "rating": 178,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 31,
@@ -2920,11 +2970,11 @@
       "mentions": 0,
       "sentiment_pct": 76,
       "scores": {
-        "1d": 804,
-        "7d": 979,
-        "30d": 804
+        "1d": 199,
+        "7d": 199,
+        "30d": 199
       },
-      "score": 804,
+      "score": 199,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -3000,7 +3050,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 42
+      "trends": 42,
+      "rating": 199,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 33,
@@ -3026,11 +3078,11 @@
       "mentions": 259,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 803,
-        "7d": 823,
-        "30d": 803
+        "1d": 160,
+        "7d": 160,
+        "30d": 160
       },
-      "score": 803,
+      "score": 160,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -3106,7 +3158,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 36
+      "trends": 36,
+      "rating": 160,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 34,
@@ -3132,11 +3186,11 @@
       "mentions": 0,
       "sentiment_pct": 70,
       "scores": {
-        "1d": 803,
-        "7d": 803,
-        "30d": 803
+        "1d": 151,
+        "7d": 151,
+        "30d": 151
       },
-      "score": 803,
+      "score": 151,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -3212,7 +3266,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 33
+      "trends": 33,
+      "rating": 151,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 35,
@@ -3238,11 +3294,11 @@
       "mentions": 0,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 803,
-        "7d": 807,
-        "30d": 803
+        "1d": 161,
+        "7d": 161,
+        "30d": 161
       },
-      "score": 803,
+      "score": 161,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3318,7 +3374,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 36
+      "trends": 36,
+      "rating": 161,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 36,
@@ -3344,11 +3402,11 @@
       "mentions": 0,
       "sentiment_pct": 77,
       "scores": {
-        "1d": 803,
-        "7d": 810,
-        "30d": 803
+        "1d": 167,
+        "7d": 167,
+        "30d": 167
       },
-      "score": 803,
+      "score": 167,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3424,7 +3482,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 38
+      "trends": 38,
+      "rating": 167,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 37,
@@ -3450,11 +3510,11 @@
       "mentions": 1,
       "sentiment_pct": 84,
       "scores": {
-        "1d": 803,
-        "7d": 801,
-        "30d": 803
+        "1d": 159,
+        "7d": 159,
+        "30d": 159
       },
-      "score": 803,
+      "score": 159,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3535,7 +3595,9 @@
           "headline": "The ‘Street Fighter’ Movie Knows What It Is"
         }
       ],
-      "trends": 21
+      "trends": 21,
+      "rating": 159,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 39,
@@ -3561,11 +3623,11 @@
       "mentions": 0,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 802,
-        "7d": 832,
-        "30d": 802
+        "1d": 117,
+        "7d": 117,
+        "30d": 117
       },
-      "score": 802,
+      "score": 117,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3641,7 +3703,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 26
+      "trends": 26,
+      "rating": 117,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 41,
@@ -3667,11 +3731,11 @@
       "mentions": 25,
       "sentiment_pct": 60,
       "scores": {
-        "1d": 802,
-        "7d": 804,
-        "30d": 802
+        "1d": 119,
+        "7d": 119,
+        "30d": 119
       },
-      "score": 802,
+      "score": 119,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3747,7 +3811,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 27
+      "trends": 27,
+      "rating": 119,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 42,
@@ -3773,11 +3839,11 @@
       "mentions": 25,
       "sentiment_pct": 83,
       "scores": {
-        "1d": 802,
-        "7d": 802,
-        "30d": 802
+        "1d": 137,
+        "7d": 137,
+        "30d": 137
       },
-      "score": 802,
+      "score": 137,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3853,7 +3919,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 31
+      "trends": 31,
+      "rating": 137,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 43,
@@ -3879,11 +3947,11 @@
       "mentions": 592,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 802,
-        "7d": 819,
-        "30d": 802
+        "1d": 140,
+        "7d": 140,
+        "30d": 140
       },
-      "score": 802,
+      "score": 140,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3959,7 +4027,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 13
+      "trends": 13,
+      "rating": 140,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 44,
@@ -3985,11 +4055,11 @@
       "mentions": 0,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 802,
-        "7d": 816,
-        "30d": 802
+        "1d": 138,
+        "7d": 138,
+        "30d": 138
       },
-      "score": 802,
+      "score": 138,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -4065,7 +4135,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 29
+      "trends": 29,
+      "rating": 138,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 45,
@@ -4091,11 +4163,11 @@
       "mentions": 0,
       "sentiment_pct": 92,
       "scores": {
-        "1d": 802,
-        "7d": 816,
-        "30d": 802
+        "1d": 138,
+        "7d": 138,
+        "30d": 138
       },
-      "score": 802,
+      "score": 138,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -4152,7 +4224,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 30
+      "trends": 30,
+      "rating": 138,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 46,
@@ -4178,11 +4252,11 @@
       "mentions": 0,
       "sentiment_pct": 69,
       "scores": {
-        "1d": 802,
-        "7d": 800,
-        "30d": 802
+        "1d": 124,
+        "7d": 124,
+        "30d": 124
       },
-      "score": 802,
+      "score": 124,
       "move": 13,
       "is_new": false,
       "hot": false,
@@ -4263,7 +4337,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 28
+      "trends": 28,
+      "rating": 124,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 47,
@@ -4289,11 +4365,11 @@
       "mentions": 0,
       "sentiment_pct": 51,
       "scores": {
-        "1d": 802,
-        "7d": 807,
-        "30d": 802
+        "1d": 141,
+        "7d": 141,
+        "30d": 141
       },
-      "score": 802,
+      "score": 141,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4369,7 +4445,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 32
+      "trends": 32,
+      "rating": 141,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 48,
@@ -4395,11 +4473,11 @@
       "mentions": 0,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 802,
-        "7d": 801,
-        "30d": 802
+        "1d": 132,
+        "7d": 132,
+        "30d": 132
       },
-      "score": 802,
+      "score": 132,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4475,7 +4553,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 30
+      "trends": 30,
+      "rating": 132,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 49,
@@ -4501,11 +4581,11 @@
       "mentions": 0,
       "sentiment_pct": 82,
       "scores": {
-        "1d": 802,
-        "7d": 812,
-        "30d": 802
+        "1d": 146,
+        "7d": 146,
+        "30d": 146
       },
-      "score": 802,
+      "score": 146,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4563,7 +4643,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 33
+      "trends": 33,
+      "rating": 146,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 50,
@@ -4589,11 +4671,11 @@
       "mentions": 0,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 802,
-        "7d": 803,
-        "30d": 802
+        "1d": 124,
+        "7d": 124,
+        "30d": 124
       },
-      "score": 802,
+      "score": 124,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4669,7 +4751,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 28
+      "trends": 28,
+      "rating": 124,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 51,
@@ -4695,11 +4779,11 @@
       "mentions": 0,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 802,
-        "7d": 821,
-        "30d": 802
+        "1d": 145,
+        "7d": 145,
+        "30d": 145
       },
-      "score": 802,
+      "score": 145,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4775,7 +4859,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 33
+      "trends": 33,
+      "rating": 145,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 52,
@@ -4801,11 +4887,11 @@
       "mentions": 0,
       "sentiment_pct": 89,
       "scores": {
-        "1d": 802,
-        "7d": 817,
-        "30d": 802
+        "1d": 137,
+        "7d": 137,
+        "30d": 137
       },
-      "score": 802,
+      "score": 137,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4881,7 +4967,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 31
+      "trends": 31,
+      "rating": 137,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 53,
@@ -4907,11 +4995,11 @@
       "mentions": 843,
       "sentiment_pct": 51,
       "scores": {
-        "1d": 801,
-        "7d": 802,
-        "30d": 801
+        "1d": 98,
+        "7d": 98,
+        "30d": 98
       },
-      "score": 801,
+      "score": 98,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -4987,7 +5075,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 21
+      "trends": 21,
+      "rating": 98,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 54,
@@ -5013,11 +5103,11 @@
       "mentions": 0,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 801,
-        "7d": 812,
-        "30d": 801
+        "1d": 115,
+        "7d": 115,
+        "30d": 115
       },
-      "score": 801,
+      "score": 115,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -5087,7 +5177,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 26
+      "trends": 26,
+      "rating": 115,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 55,
@@ -5113,11 +5205,11 @@
       "mentions": 974,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 801,
-        "7d": 801,
-        "30d": 801
+        "1d": 92,
+        "7d": 92,
+        "30d": 92
       },
-      "score": 801,
+      "score": 92,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -5193,7 +5285,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 19
+      "trends": 19,
+      "rating": 92,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 56,
@@ -5219,11 +5313,11 @@
       "mentions": 0,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 801,
-        "7d": 826,
-        "30d": 801
+        "1d": 73,
+        "7d": 73,
+        "30d": 73
       },
-      "score": 801,
+      "score": 73,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -5299,7 +5393,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 16
+      "trends": 16,
+      "rating": 73,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 57,
@@ -5325,11 +5421,11 @@
       "mentions": 0,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 801,
-        "7d": 801,
-        "30d": 801
+        "1d": 73,
+        "7d": 73,
+        "30d": 73
       },
-      "score": 801,
+      "score": 73,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -5405,7 +5501,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 16
+      "trends": 16,
+      "rating": 73,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 58,
@@ -5431,11 +5529,11 @@
       "mentions": 525,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 801,
-        "7d": 806,
-        "30d": 801
+        "1d": 77,
+        "7d": 77,
+        "30d": 77
       },
-      "score": 801,
+      "score": 77,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -5511,7 +5609,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 16
+      "trends": 16,
+      "rating": 77,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 59,
@@ -5537,11 +5637,11 @@
       "mentions": 0,
       "sentiment_pct": 84,
       "scores": {
-        "1d": 801,
-        "7d": 833,
-        "30d": 801
+        "1d": 101,
+        "7d": 101,
+        "30d": 101
       },
-      "score": 801,
+      "score": 101,
       "move": -1,
       "is_new": false,
       "hot": false,
@@ -5605,7 +5705,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 15
+      "trends": 15,
+      "rating": 101,
+      "rating_band": "MINIMAL"
     },
     {
       "rank": 60,
@@ -5631,11 +5733,11 @@
       "mentions": 0,
       "sentiment_pct": 51,
       "scores": {
-        "1d": 801,
-        "7d": 801,
-        "30d": 801
+        "1d": 94,
+        "7d": 94,
+        "30d": 94
       },
-      "score": 801,
+      "score": 94,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -5711,7 +5813,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 21
+      "trends": 21,
+      "rating": 94,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 62,
@@ -5737,11 +5841,11 @@
       "mentions": 48,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 6,
+        "7d": 6,
+        "30d": 6
       },
-      "score": 800,
+      "score": 6,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -5817,7 +5921,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 6,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 64,
@@ -5843,11 +5949,11 @@
       "mentions": 38,
       "sentiment_pct": 79,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -5917,7 +6023,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 65,
@@ -5943,11 +6051,11 @@
       "mentions": 2569,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 800,
-        "7d": 830,
-        "30d": 800
+        "1d": 47,
+        "7d": 47,
+        "30d": 47
       },
-      "score": 800,
+      "score": 47,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6023,7 +6131,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 47,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 67,
@@ -6049,11 +6159,11 @@
       "mentions": 271,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 800,
-        "7d": 817,
-        "30d": 800
+        "1d": 46,
+        "7d": 46,
+        "30d": 46
       },
-      "score": 800,
+      "score": 46,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6129,7 +6239,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 10
+      "trends": 10,
+      "rating": 46,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 68,
@@ -6155,11 +6267,11 @@
       "mentions": 317,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 800,
-        "7d": 804,
-        "30d": 800
+        "1d": 20,
+        "7d": 20,
+        "30d": 20
       },
-      "score": 800,
+      "score": 20,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6235,7 +6347,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 20,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 70,
@@ -6261,11 +6375,11 @@
       "mentions": 390,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 823,
-        "30d": 800
+        "1d": 30,
+        "7d": 30,
+        "30d": 30
       },
-      "score": 800,
+      "score": 30,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6341,7 +6455,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 6
+      "trends": 6,
+      "rating": 30,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 71,
@@ -6367,11 +6483,11 @@
       "mentions": 513,
       "sentiment_pct": 65,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 4,
+        "7d": 4,
+        "30d": 4
       },
-      "score": 800,
+      "score": 4,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6447,7 +6563,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 4,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 72,
@@ -6473,11 +6591,11 @@
       "mentions": 489,
       "sentiment_pct": 62,
       "scores": {
-        "1d": 800,
-        "7d": 805,
-        "30d": 800
+        "1d": 26,
+        "7d": 26,
+        "30d": 26
       },
-      "score": 800,
+      "score": 26,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6553,7 +6671,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 5
+      "trends": 5,
+      "rating": 26,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 73,
@@ -6579,11 +6699,11 @@
       "mentions": 42,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6659,7 +6779,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 74,
@@ -6685,11 +6807,11 @@
       "mentions": 159,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 63,
+        "7d": 63,
+        "30d": 63
       },
-      "score": 800,
+      "score": 63,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6765,7 +6887,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 14
+      "trends": 14,
+      "rating": 63,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 75,
@@ -6791,11 +6915,11 @@
       "mentions": 0,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 37,
+        "7d": 37,
+        "30d": 37
       },
-      "score": 800,
+      "score": 37,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6876,7 +7000,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 8
+      "trends": 8,
+      "rating": 37,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 76,
@@ -6902,11 +7028,11 @@
       "mentions": 40,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 14,
+        "7d": 14,
+        "30d": 14
       },
-      "score": 800,
+      "score": 14,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -6982,7 +7108,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 3
+      "trends": 3,
+      "rating": 14,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 77,
@@ -7008,11 +7136,11 @@
       "mentions": 12,
       "sentiment_pct": 76,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 34,
+        "7d": 34,
+        "30d": 34
       },
-      "score": 800,
+      "score": 34,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -7093,7 +7221,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 7
+      "trends": 7,
+      "rating": 34,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 79,
@@ -7119,11 +7249,11 @@
       "mentions": 147,
       "sentiment_pct": 68,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 3,
+        "7d": 3,
+        "30d": 3
       },
-      "score": 800,
+      "score": 3,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -7199,7 +7329,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 3,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 80,
@@ -7225,11 +7357,11 @@
       "mentions": 79,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 2,
+        "7d": 2,
+        "30d": 2
       },
-      "score": 800,
+      "score": 2,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -7305,7 +7437,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 2,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 81,
@@ -7331,11 +7465,11 @@
       "mentions": 0,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 6,
+        "7d": 6,
+        "30d": 6
       },
-      "score": 800,
+      "score": 6,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -7411,7 +7545,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 6,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 82,
@@ -7437,11 +7573,11 @@
       "mentions": 0,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 837,
-        "30d": 800
+        "1d": 29,
+        "7d": 29,
+        "30d": 29
       },
-      "score": 800,
+      "score": 29,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -7517,7 +7653,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 5
+      "trends": 5,
+      "rating": 29,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 86,
@@ -7543,11 +7681,11 @@
       "mentions": 99,
       "sentiment_pct": 85,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 3,
+        "7d": 3,
+        "30d": 3
       },
-      "score": 800,
+      "score": 3,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -7623,7 +7761,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 3,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 88,
@@ -7649,11 +7789,11 @@
       "mentions": 12,
       "sentiment_pct": 59,
       "scores": {
-        "1d": 800,
-        "7d": 828,
-        "30d": 800
+        "1d": 2,
+        "7d": 2,
+        "30d": 2
       },
-      "score": 800,
+      "score": 2,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -7729,7 +7869,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 2,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 89,
@@ -7755,11 +7897,11 @@
       "mentions": 49,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 800,
-        "7d": 803,
-        "30d": 800
+        "1d": 2,
+        "7d": 2,
+        "30d": 2
       },
-      "score": 800,
+      "score": 2,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -7835,7 +7977,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 2,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 90,
@@ -7861,11 +8005,11 @@
       "mentions": 5,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 23,
+        "7d": 23,
+        "30d": 23
       },
-      "score": 800,
+      "score": 23,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -7941,7 +8085,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 5
+      "trends": 5,
+      "rating": 23,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 91,
@@ -7967,11 +8113,11 @@
       "mentions": 31,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 18,
+        "7d": 18,
+        "30d": 18
       },
-      "score": 800,
+      "score": 18,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8047,7 +8193,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 18,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 92,
@@ -8073,11 +8221,11 @@
       "mentions": 1297,
       "sentiment_pct": 73,
       "scores": {
-        "1d": 800,
-        "7d": 933,
-        "30d": 800
+        "1d": 61,
+        "7d": 61,
+        "30d": 61
       },
-      "score": 800,
+      "score": 61,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8153,7 +8301,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 6
+      "trends": 6,
+      "rating": 61,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 93,
@@ -8179,11 +8329,11 @@
       "mentions": 0,
       "sentiment_pct": 93,
       "scores": {
-        "1d": 800,
-        "7d": 853,
-        "30d": 800
+        "1d": 61,
+        "7d": 61,
+        "30d": 61
       },
-      "score": 800,
+      "score": 61,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8259,7 +8409,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 8
+      "trends": 8,
+      "rating": 61,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 94,
@@ -8285,11 +8437,11 @@
       "mentions": 243,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 800,
-        "7d": 812,
-        "30d": 800
+        "1d": 37,
+        "7d": 37,
+        "30d": 37
       },
-      "score": 800,
+      "score": 37,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8365,7 +8517,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 8
+      "trends": 8,
+      "rating": 37,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 97,
@@ -8391,11 +8545,11 @@
       "mentions": 2160,
       "sentiment_pct": 63,
       "scores": {
-        "1d": 800,
-        "7d": 819,
-        "30d": 800
+        "1d": 37,
+        "7d": 37,
+        "30d": 37
       },
-      "score": 800,
+      "score": 37,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8471,7 +8625,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 37,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 98,
@@ -8497,11 +8653,11 @@
       "mentions": 6791,
       "sentiment_pct": 68,
       "scores": {
-        "1d": 800,
-        "7d": 824,
-        "30d": 800
+        "1d": 49,
+        "7d": 49,
+        "30d": 49
       },
-      "score": 800,
+      "score": 49,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8577,7 +8733,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 49,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 99,
@@ -8683,7 +8841,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 101,
@@ -8709,11 +8869,11 @@
       "mentions": 18,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 802,
-        "30d": 800
+        "1d": 11,
+        "7d": 11,
+        "30d": 11
       },
-      "score": 800,
+      "score": 11,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8789,7 +8949,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 2
+      "trends": 2,
+      "rating": 11,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 102,
@@ -8815,11 +8977,11 @@
       "mentions": 0,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 5,
+        "7d": 5,
+        "30d": 5
       },
-      "score": 800,
+      "score": 5,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -8895,7 +9057,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 5,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 104,
@@ -8921,11 +9085,11 @@
       "mentions": 18,
       "sentiment_pct": 65,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 16,
+        "7d": 16,
+        "30d": 16
       },
-      "score": 800,
+      "score": 16,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9001,7 +9165,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 16,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 105,
@@ -9027,11 +9193,11 @@
       "mentions": 0,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 800,
-        "7d": 807,
-        "30d": 800
+        "1d": 9,
+        "7d": 9,
+        "30d": 9
       },
-      "score": 800,
+      "score": 9,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9112,7 +9278,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 2
+      "trends": 2,
+      "rating": 9,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 106,
@@ -9138,11 +9306,11 @@
       "mentions": 58,
       "sentiment_pct": 78,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 28,
+        "7d": 28,
+        "30d": 28
       },
-      "score": 800,
+      "score": 28,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9218,7 +9386,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 6
+      "trends": 6,
+      "rating": 28,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 107,
@@ -9244,11 +9414,11 @@
       "mentions": 0,
       "sentiment_pct": 72,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9318,7 +9488,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 109,
@@ -9344,11 +9516,11 @@
       "mentions": 0,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9405,7 +9577,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 110,
@@ -9431,11 +9605,11 @@
       "mentions": 0,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 44,
+        "7d": 44,
+        "30d": 44
       },
-      "score": 800,
+      "score": 44,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9511,7 +9685,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 9
+      "trends": 9,
+      "rating": 44,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 111,
@@ -9537,11 +9713,11 @@
       "mentions": 36,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 64,
+        "7d": 64,
+        "30d": 64
       },
-      "score": 800,
+      "score": 64,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9617,7 +9793,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 14
+      "trends": 14,
+      "rating": 64,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 112,
@@ -9643,11 +9821,11 @@
       "mentions": 141,
       "sentiment_pct": 51,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 7,
+        "7d": 7,
+        "30d": 7
       },
-      "score": 800,
+      "score": 7,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9723,7 +9901,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 7,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 113,
@@ -9749,11 +9929,11 @@
       "mentions": 134,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 15,
+        "7d": 15,
+        "30d": 15
       },
-      "score": 800,
+      "score": 15,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9829,7 +10009,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 3
+      "trends": 3,
+      "rating": 15,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 114,
@@ -9855,11 +10037,11 @@
       "mentions": 0,
       "sentiment_pct": 89,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -9935,7 +10117,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 115,
@@ -10041,7 +10225,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 116,
@@ -10067,11 +10253,11 @@
       "mentions": 1090,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 7,
+        "7d": 7,
+        "30d": 7
       },
-      "score": 800,
+      "score": 7,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -10147,7 +10333,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 7,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 117,
@@ -10253,7 +10441,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 118,
@@ -10359,7 +10549,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 119,
@@ -10385,11 +10577,11 @@
       "mentions": 217,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 29,
+        "7d": 29,
+        "30d": 29
       },
-      "score": 800,
+      "score": 29,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -10465,7 +10657,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 6
+      "trends": 6,
+      "rating": 29,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 120,
@@ -10491,11 +10685,11 @@
       "mentions": 20,
       "sentiment_pct": 70,
       "scores": {
-        "1d": 800,
-        "7d": 806,
-        "30d": 800
+        "1d": 8,
+        "7d": 8,
+        "30d": 8
       },
-      "score": 800,
+      "score": 8,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -10571,7 +10765,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 8,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 121,
@@ -10597,11 +10793,11 @@
       "mentions": 0,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 18,
+        "7d": 18,
+        "30d": 18
       },
-      "score": 800,
+      "score": 18,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -10677,7 +10873,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 18,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 122,
@@ -10703,11 +10901,11 @@
       "mentions": 0,
       "sentiment_pct": 69,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 10,
+        "7d": 10,
+        "30d": 10
       },
-      "score": 800,
+      "score": 10,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -10783,7 +10981,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 10,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 123,
@@ -10889,7 +11089,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 124,
@@ -10915,11 +11117,11 @@
       "mentions": 0,
       "sentiment_pct": 80,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 9,
+        "7d": 9,
+        "30d": 9
       },
-      "score": 800,
+      "score": 9,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -10995,7 +11197,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 2
+      "trends": 2,
+      "rating": 9,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 125,
@@ -11101,7 +11305,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 126,
@@ -11207,7 +11413,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 127,
@@ -11313,7 +11521,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 128,
@@ -11339,11 +11549,11 @@
       "mentions": 0,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -11413,7 +11623,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 129,
@@ -11519,7 +11731,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 130,
@@ -11630,7 +11844,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 131,
@@ -11656,11 +11872,11 @@
       "mentions": 0,
       "sentiment_pct": 59,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 13,
+        "7d": 13,
+        "30d": 13
       },
-      "score": 800,
+      "score": 13,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -11724,7 +11940,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 3
+      "trends": 3,
+      "rating": 13,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 132,
@@ -11830,7 +12048,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 133,
@@ -11856,11 +12076,11 @@
       "mentions": 0,
       "sentiment_pct": 69,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -11936,7 +12156,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 134,
@@ -11962,11 +12184,11 @@
       "mentions": 0,
       "sentiment_pct": 60,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 62,
+        "7d": 62,
+        "30d": 62
       },
-      "score": 800,
+      "score": 62,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -12024,7 +12246,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 62,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 135,
@@ -12050,11 +12274,11 @@
       "mentions": 0,
       "sentiment_pct": 75,
       "scores": {
-        "1d": 800,
-        "7d": 841,
-        "30d": 800
+        "1d": 21,
+        "7d": 21,
+        "30d": 21
       },
-      "score": 800,
+      "score": 21,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -12130,7 +12354,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 21,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 136,
@@ -12236,7 +12462,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 137,
@@ -12262,11 +12490,11 @@
       "mentions": 0,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 2,
+        "7d": 2,
+        "30d": 2
       },
-      "score": 800,
+      "score": 2,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -12342,7 +12570,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 2,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 138,
@@ -12448,7 +12678,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 139,
@@ -12474,11 +12706,11 @@
       "mentions": 0,
       "sentiment_pct": 83,
       "scores": {
-        "1d": 800,
-        "7d": 820,
-        "30d": 800
+        "1d": 18,
+        "7d": 18,
+        "30d": 18
       },
-      "score": 800,
+      "score": 18,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -12554,7 +12786,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 18,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 140,
@@ -12660,7 +12894,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 141,
@@ -12686,11 +12922,11 @@
       "mentions": 0,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 45,
+        "7d": 45,
+        "30d": 45
       },
-      "score": 800,
+      "score": 45,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -12748,7 +12984,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 10
+      "trends": 10,
+      "rating": 45,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 142,
@@ -12774,11 +13012,11 @@
       "mentions": 0,
       "sentiment_pct": 90,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 2,
+        "7d": 2,
+        "30d": 2
       },
-      "score": 800,
+      "score": 2,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -12854,7 +13092,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 2,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 143,
@@ -12942,7 +13182,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 144,
@@ -12968,11 +13210,11 @@
       "mentions": 0,
       "sentiment_pct": 62,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 31,
+        "7d": 31,
+        "30d": 31
       },
-      "score": 800,
+      "score": 31,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -13035,7 +13277,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 7
+      "trends": 7,
+      "rating": 31,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 145,
@@ -13123,7 +13367,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 146,
@@ -13211,7 +13457,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 147,
@@ -13317,7 +13565,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 148,
@@ -13343,11 +13593,11 @@
       "mentions": 0,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 5,
+        "7d": 5,
+        "30d": 5
       },
-      "score": 800,
+      "score": 5,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -13428,7 +13678,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 5,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 149,
@@ -13454,11 +13706,11 @@
       "mentions": 0,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -13534,7 +13786,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 150,
@@ -13640,7 +13894,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 151,
@@ -13666,11 +13922,11 @@
       "mentions": 0,
       "sentiment_pct": 83,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -13734,7 +13990,9 @@
       ],
       "directors_full": [],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 152,
@@ -13839,7 +14097,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 153,
@@ -13865,11 +14125,11 @@
       "mentions": 0,
       "sentiment_pct": 60,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 13,
+        "7d": 13,
+        "30d": 13
       },
-      "score": 800,
+      "score": 13,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -13945,7 +14205,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 3
+      "trends": 3,
+      "rating": 13,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 154,
@@ -14051,7 +14313,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 155,
@@ -14077,11 +14341,11 @@
       "mentions": 0,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 40,
+        "7d": 40,
+        "30d": 40
       },
-      "score": 800,
+      "score": 40,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -14157,7 +14421,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 9
+      "trends": 9,
+      "rating": 40,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 156,
@@ -14183,11 +14449,11 @@
       "mentions": 0,
       "sentiment_pct": 83,
       "scores": {
-        "1d": 800,
-        "7d": 801,
-        "30d": 800
+        "1d": 50,
+        "7d": 50,
+        "30d": 50
       },
-      "score": 800,
+      "score": 50,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -14257,7 +14523,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 11
+      "trends": 11,
+      "rating": 50,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 157,
@@ -14363,7 +14631,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 158,
@@ -14389,11 +14659,11 @@
       "mentions": 0,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 800,
-        "7d": 809,
-        "30d": 800
+        "1d": 3,
+        "7d": 3,
+        "30d": 3
       },
-      "score": 800,
+      "score": 3,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -14469,7 +14739,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 3,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 159,
@@ -14575,7 +14847,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 160,
@@ -14681,7 +14955,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 161,
@@ -14787,7 +15063,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 162,
@@ -14893,7 +15171,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 163,
@@ -14999,7 +15279,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 164,
@@ -15025,11 +15307,11 @@
       "mentions": 0,
       "sentiment_pct": 64,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 19,
+        "7d": 19,
+        "30d": 19
       },
-      "score": 800,
+      "score": 19,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -15105,7 +15387,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 19,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 165,
@@ -15131,11 +15415,11 @@
       "mentions": 0,
       "sentiment_pct": 74,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 2,
+        "7d": 2,
+        "30d": 2
       },
-      "score": 800,
+      "score": 2,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -15211,7 +15495,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 2,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 166,
@@ -15322,7 +15608,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 168,
@@ -15404,7 +15692,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 169,
@@ -15430,11 +15720,11 @@
       "mentions": 0,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -15510,7 +15800,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 170,
@@ -15536,11 +15828,11 @@
       "mentions": 0,
       "sentiment_pct": 68,
       "scores": {
-        "1d": 800,
-        "7d": 802,
-        "30d": 800
+        "1d": 3,
+        "7d": 3,
+        "30d": 3
       },
-      "score": 800,
+      "score": 3,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -15616,7 +15908,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 3,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 171,
@@ -15722,7 +16016,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 172,
@@ -15833,7 +16129,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 173,
@@ -15859,11 +16157,11 @@
       "mentions": 0,
       "sentiment_pct": 66,
       "scores": {
-        "1d": 800,
-        "7d": 811,
-        "30d": 800
+        "1d": 19,
+        "7d": 19,
+        "30d": 19
       },
-      "score": 800,
+      "score": 19,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -15939,7 +16237,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 19,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 174,
@@ -16045,7 +16345,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 175,
@@ -16071,11 +16373,11 @@
       "mentions": 0,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -16151,7 +16453,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 176,
@@ -16177,11 +16481,11 @@
       "mentions": 0,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 800,
-        "7d": 803,
-        "30d": 800
+        "1d": 18,
+        "7d": 18,
+        "30d": 18
       },
-      "score": 800,
+      "score": 18,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -16257,7 +16561,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 18,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 177,
@@ -16283,11 +16589,11 @@
       "mentions": 0,
       "sentiment_pct": 62,
       "scores": {
-        "1d": 800,
-        "7d": 802,
-        "30d": 800
+        "1d": 3,
+        "7d": 3,
+        "30d": 3
       },
-      "score": 800,
+      "score": 3,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -16363,7 +16669,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 3,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 178,
@@ -16389,11 +16697,11 @@
       "mentions": 0,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 800,
-        "7d": 802,
-        "30d": 800
+        "1d": 49,
+        "7d": 49,
+        "30d": 49
       },
-      "score": 800,
+      "score": 49,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -16463,7 +16771,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 11
+      "trends": 11,
+      "rating": 49,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 179,
@@ -16563,7 +16873,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 180,
@@ -16657,7 +16969,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 181,
@@ -16683,11 +16997,11 @@
       "mentions": 0,
       "sentiment_pct": 85,
       "scores": {
-        "1d": 800,
-        "7d": 803,
-        "30d": 800
+        "1d": 43,
+        "7d": 43,
+        "30d": 43
       },
-      "score": 800,
+      "score": 43,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -16763,7 +17077,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 9
+      "trends": 9,
+      "rating": 43,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 182,
@@ -16863,7 +17179,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 183,
@@ -16969,7 +17287,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 184,
@@ -17075,7 +17395,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 185,
@@ -17101,11 +17423,11 @@
       "mentions": 0,
       "sentiment_pct": 73,
       "scores": {
-        "1d": 800,
-        "7d": 813,
-        "30d": 800
+        "1d": 43,
+        "7d": 43,
+        "30d": 43
       },
-      "score": 800,
+      "score": 43,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -17181,7 +17503,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 6
+      "trends": 6,
+      "rating": 43,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 186,
@@ -17287,7 +17611,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 187,
@@ -17313,11 +17639,11 @@
       "mentions": 0,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 800,
-        "7d": 811,
-        "30d": 800
+        "1d": 19,
+        "7d": 19,
+        "30d": 19
       },
-      "score": 800,
+      "score": 19,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -17393,7 +17719,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 4
+      "trends": 4,
+      "rating": 19,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 188,
@@ -17419,11 +17747,11 @@
       "mentions": 0,
       "sentiment_pct": 83,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 23,
+        "7d": 23,
+        "30d": 23
       },
-      "score": 800,
+      "score": 23,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -17499,7 +17827,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 5
+      "trends": 5,
+      "rating": 23,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 189,
@@ -17525,11 +17855,11 @@
       "mentions": 0,
       "sentiment_pct": 54,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
       },
-      "score": 800,
+      "score": 1,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -17605,7 +17935,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 1,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 190,
@@ -17711,7 +18043,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 191,
@@ -17817,7 +18151,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     },
     {
       "rank": 192,
@@ -17843,11 +18179,11 @@
       "mentions": 0,
       "sentiment_pct": 95,
       "scores": {
-        "1d": 800,
-        "7d": 800,
-        "30d": 800
+        "1d": 5,
+        "7d": 5,
+        "30d": 5
       },
-      "score": 800,
+      "score": 5,
       "move": 1,
       "is_new": false,
       "hot": false,
@@ -17923,7 +18259,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 1
+      "trends": 1,
+      "rating": 5,
+      "rating_band": "UNRATED"
     },
     {
       "rank": 193,
@@ -18029,7 +18367,9 @@
         }
       ],
       "news_mentions": [],
-      "trends": 0
+      "trends": 0,
+      "rating": 800,
+      "rating_band": "DECENT"
     }
   ],
   "streaming_movies": [

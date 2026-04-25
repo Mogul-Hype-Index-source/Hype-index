@@ -175,7 +175,7 @@ function synth29dTrend(id, final){
   const N = 29;
   let seed = Math.abs(id) % 9973 || 1;
   const rng = () => { seed = (seed*9301+49297)%233280; return seed/233280; };
-  const start = Math.max(800, final - 40 - Math.floor(rng()*80));
+  const start = Math.max(100, final - 60 - Math.floor(rng()*120));
   const pts = [];
   for (let i = 0; i < N; i++){
     const t = i / (N-1);
@@ -238,7 +238,7 @@ function drawChart(container, points){
     const px = x(idx), py = y(points[idx]);
     scrubLine.setAttribute('x1',px); scrubLine.setAttribute('x2',px); scrubLine.setAttribute('opacity','0.6');
     scrubDot.setAttribute('cx',px); scrubDot.setAttribute('cy',py); scrubDot.setAttribute('opacity','1');
-    tip.textContent = `${dates[idx]} · Hype Score ${points[idx]}`;
+    tip.textContent = `${dates[idx]} · Rating ${points[idx]}`;
     tip.style.opacity = '1';
     const tipX = (pctX*rect.width)-tip.offsetWidth/2;
     const tipY = (py/H*rect.height)-28;
@@ -332,7 +332,7 @@ function render(data, p){
         <div class="score-badge">
           <div class="v">${p.score}</div>
           <div>
-            <div class="l">HYPE SCORE</div>
+            <div class="l">HYPE RATING</div>
             <div class="snap">SNAPSHOT ${data.snapshot_date}</div>
           </div>
         </div>
@@ -345,7 +345,7 @@ function render(data, p){
 
     <div class="grid">
       <section class="panel">
-        <h3>29-DAY HYPE SCORE TREND</h3>
+        <h3>29-DAY HYPE RATING TREND</h3>
         <div class="chart-wrap" id="chart"></div>
       </section>
 

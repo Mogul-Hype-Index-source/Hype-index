@@ -1,6 +1,6 @@
 """
-MoviePass Hype Index V2 — HypeScore scoring
-============================================
+MoviePass Hype Index V2 — Rating (100-1500 calibrated scale)
+=============================================================
 
 Proprietary momentum-based scoring formula:
 
@@ -32,8 +32,10 @@ Output → same list with `scores`, `score`, `sentiment_pct` fields populated
 
 from __future__ import annotations
 
+import json
 import logging
 import math
+from pathlib import Path
 from typing import Any, Dict, List
 
 LOG = logging.getLogger("score")
@@ -299,15 +301,40 @@ def score_movies(movies: List[Dict[str, Any]],
         hype = momentum * math.log(1 + baselines[i]) * 1000
         raw_scores.append(hype)
 
-    # Pass 4: rescale into 800-999 range
-    LO, HI = 800, 999
-    raw_min = min(raw_scores)
-    raw_max = max(raw_scores)
-    raw_span = raw_max - raw_min
-    def _rescale(raw: float) -> int:
-        if raw_span <= 0:
-            return HI  # all tied → everyone gets the top
-        return int(round(LO + ((raw - raw_min) / raw_span) * (HI - LO)))
+    # Pass 4: calibrated Rating (100-1500 absolute scale)
+    # Curve: raw^0.50 × 74, capped at 1500. Anchored so:
+    #   raw ~295 → ~1270 (today's top), raw ~150 → ~900, raw ~100 → ~740
+    def _calibrate(raw: float) -> int:
+        if raw <= 0:
+            return 0
+        return min(1500, int(round(raw ** 0.50 * 74)))
+
+    RATING_BANDS = [
+        (1350, "GENERATIONAL"),
+        (1150, "ELITE"),
+        (900,  "STRONG"),
+        (650,  "DECENT"),
+        (400,  "MODEST"),
+        (250,  "LOW"),
+        (100,  "MINIMAL"),
+    ]
+
+    def _band(rating: int) -> str:
+        for threshold, name in RATING_BANDS:
+            if rating >= threshold:
+                return name
+        return "UNRATED"
+
+    # Load previous smoothed ratings for exponential smoothing
+    _smooth_path = Path(__file__).resolve().parent.parent / "data" / "cache" / "rating_smoothed.json"
+    prev_smooth: Dict[str, int] = {}
+    if _smooth_path.exists():
+        try:
+            prev_smooth = json.loads(_smooth_path.read_text())
+        except Exception:
+            pass
+
+    new_smooth: Dict[str, int] = {}
 
     for i, m in enumerate(movies):
         sub = {
@@ -322,14 +349,34 @@ def score_movies(movies: List[Dict[str, Any]],
             "acceleration":       round(accels[i],    4),
             "raw_hype":           round(raw_scores[i], 4),
         }
-        hype_int = _rescale(raw_scores[i])
+        raw_rating = _calibrate(raw_scores[i])
+
+        # Exponential smoothing: displayed = 0.7 × new + 0.3 × previous
+        tid_str = str(m.get("tmdb_id", ""))
+        prev = prev_smooth.get(tid_str)
+        if prev is not None and prev > 0:
+            smoothed = int(round(0.7 * raw_rating + 0.3 * prev))
+        else:
+            smoothed = raw_rating
+
+        new_smooth[tid_str] = smoothed
 
         m["sub_scores"]    = sub
-        m["score"]         = hype_int
-        m["scores"]        = {"1d": hype_int, "7d": hype_int, "30d": hype_int}
+        m["rating"]        = smoothed
+        m["rating_raw"]    = raw_rating
+        m["rating_band"]   = _band(smoothed)
+        m["score"]         = smoothed  # backward compat
+        m["scores"]        = {"1d": smoothed, "7d": smoothed, "30d": smoothed}
         m["sentiment_pct"] = _sentiment_pct(m)
         # Clean up internal field
         del m["_momentum_history"]
+
+    # Persist smoothed ratings for next pulse
+    try:
+        _smooth_path.parent.mkdir(parents=True, exist_ok=True)
+        _smooth_path.write_text(json.dumps(new_smooth))
+    except Exception:
+        pass
 
     return movies
 
