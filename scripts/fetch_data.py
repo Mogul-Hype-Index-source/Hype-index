@@ -1019,7 +1019,15 @@ def fetch_reddit_mentions(title: str, subreddits: Iterable[str], user_agent: str
         return {"posts": 0, "comments": 0}
 
     headers = {"User-Agent": user_agent}
-    q = f'"{title}"'
+    # Disambiguated queries (e.g. "Michael 2026 Fuqua Jackson") must NOT be
+    # wrapped in exact-match quotes — Reddit won't find the literal phrase.
+    # Only wrap short, single-word titles in quotes to avoid noise.
+    if " " in title and any(c.isdigit() for c in title):
+        # Disambiguated query with year — send as plain keywords
+        q = title
+    else:
+        # Simple title — use quotes for precision
+        q = f'"{title}"'
     for sub in subreddits:
         url = f"{REDDIT_BASE}/r/{sub}/search.json"
         data = _http_get(
