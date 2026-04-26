@@ -333,6 +333,10 @@ async def worker_youtube(store: MovieStore, sem: asyncio.Semaphore):
                 )
                 change = await store.update_signal(tid, "youtube", result)
                 if change:
+                    # Re-enrich velocity after YouTube data changes so the
+                    # youtube_velocity field reflects the latest deltas.
+                    all_movies = list(store.movies.values())
+                    _enrich_youtube_velocity(all_movies, datetime.now(timezone.utc))
                     _write_audit(change)
                     store.write_output()
                     LOG.info("Rating change (youtube): %s %d → %d",
