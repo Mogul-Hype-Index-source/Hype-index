@@ -81,21 +81,12 @@ def fetch_youtube_for_title(movie: Dict[str, Any],
         return {"views": 0, "likes": 0, "comments": 0}
 
 
-def fetch_x_for_title(movie: Dict[str, Any]) -> int:
-    """Fetch X mention count for a single movie. Returns count."""
-    bearer = os.environ.get("X_BEARER_TOKEN")
-    if not bearer:
-        return 0
-    title = movie.get("title", "")
-    clean = _sanitize_title(title)
-    if "movie" in clean.lower():
-        query = f'"{clean}"'
-    else:
-        query = f'"{clean}" movie'
+def _x_count_single(query: str, bearer: str) -> int:
+    """Single X API call. Returns count or 0."""
     try:
         r = requests.get(
-            f"{X_API_BASE}/tweets/search/recent",
-            params={"query": query, "max_results": 10},
+            f"{X_API_BASE}/tweets/counts/recent",
+            params={"query": query},
             headers={"Authorization": f"Bearer {bearer}"},
             timeout=REQUEST_TIMEOUT,
         )
@@ -103,12 +94,22 @@ def fetch_x_for_title(movie: Dict[str, Any]) -> int:
             return 0
         if r.status_code != 200:
             return 0
-        data = r.json()
-        count = int(data.get("meta", {}).get("result_count", 0))
-        return min(count, 50000)  # sanity cap
-    except Exception as exc:
-        LOG.warning("X failed for %s: %s", title, exc)
+        return int(r.json().get("meta", {}).get("total_tweet_count", 0))
+    except Exception:
         return 0
+
+
+def fetch_x_for_title(movie: Dict[str, Any]) -> int:
+    """Fetch X mention count. Uses bare title — X volume is high enough
+    that 'title + movie' over-filters (52x reduction for Spider-Man).
+    Sanity cap at 50K handles common-word noise."""
+    bearer = os.environ.get("X_BEARER_TOKEN")
+    if not bearer:
+        return 0
+    title = movie.get("title", "")
+    clean = _sanitize_title(title)
+    count = _x_count_single(f'"{clean}"', bearer)
+    return min(count, 50000)
 
 
 def fetch_news_for_title(movie: Dict[str, Any],

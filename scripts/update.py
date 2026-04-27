@@ -60,6 +60,30 @@ VIEWS_HIST = HIST_DIR / "views"
 # YouTube velocity helpers
 # ---------------------------------------------------------------------------
 
+def _expire_youtube_stats_cache() -> None:
+    """
+    Clear fetched_at timestamps in the YouTube stats cache so the next
+    fetch_all() cycle makes real API calls instead of returning cached values.
+    This ensures daily view snapshots capture actual YouTube data changes,
+    which is critical for velocity calculation (delta between consecutive days).
+    The video IDs and last-known stats are preserved as fallbacks.
+    """
+    cache_path = CACHE_DIR / "youtube_stats.json"
+    if not cache_path.exists():
+        return
+    try:
+        cache = json.loads(cache_path.read_text())
+        expired = 0
+        for tid, entry in cache.items():
+            if isinstance(entry, dict) and "fetched_at" in entry:
+                del entry["fetched_at"]
+                expired += 1
+        cache_path.write_text(json.dumps(cache, indent=2))
+        LOG.info("Expired %d YouTube stats cache entries for fresh snapshot", expired)
+    except Exception as exc:
+        LOG.warning("Could not expire YouTube stats cache: %s", exc)
+
+
 def _save_view_snapshot(movies: List[Dict[str, Any]], today_iso: str) -> None:
     """Persist current YouTube stats keyed by tmdb_id for velocity calculation."""
     VIEWS_HIST.mkdir(parents=True, exist_ok=True)
@@ -608,6 +632,11 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
         LOG.info("--skip-fetch: reusing %s", RAW_CACHE)
         raw = json.loads(RAW_CACHE.read_text())
     else:
+        # Expire YouTube stats cache before fetch so view snapshots get
+        # truly fresh data — critical for velocity delta calculation.
+        # Without this, the 24h cache TTL causes consecutive daily
+        # snapshots to have identical view counts, making velocity = 0.
+        _expire_youtube_stats_cache()
         raw = fetch_data.fetch_all(cfg, limit=limit)
         RAW_CACHE.write_text(json.dumps(raw, indent=2))
         LOG.info("Cached raw fetch → %s", RAW_CACHE)
