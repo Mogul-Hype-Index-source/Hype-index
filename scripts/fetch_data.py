@@ -1062,15 +1062,15 @@ def _get_x_bearer_token() -> Optional[str]:
 
 def fetch_x_mention_count(query: str, bearer_token: str) -> int:
     """
-    GET /2/tweets/search/recent for `query` (free tier).
-    Uses max_results=10 and reads result_count from the meta field.
+    GET /2/tweets/counts/recent for `query`.
+    Returns total tweet count over the last 7 days (summed from hourly buckets).
     Returns 0 on any failure. Raises RuntimeError on 402/403 so the
     batch caller can short-circuit instead of retrying every query.
     """
     try:
         r = requests.get(
-            f"{X_API_BASE}/tweets/search/recent",
-            params={"query": query, "max_results": 10},
+            f"{X_API_BASE}/tweets/counts/recent",
+            params={"query": query},
             headers={"Authorization": f"Bearer {bearer_token}"},
             timeout=REQUEST_TIMEOUT,
         )
@@ -1087,7 +1087,7 @@ def fetch_x_mention_count(query: str, bearer_token: str) -> int:
     except Exception as exc:  # noqa: BLE001
         LOG.warning("X API request failed: %s", exc)
         return 0
-    return int(data.get("meta", {}).get("result_count", 0))
+    return min(int(data.get("meta", {}).get("total_tweet_count", 0)), 50000)
 
 
 def fetch_x_mentions_batch(queries: Dict[str, str],

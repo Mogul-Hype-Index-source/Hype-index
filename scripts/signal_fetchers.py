@@ -94,8 +94,8 @@ def fetch_x_for_title(movie: Dict[str, Any]) -> int:
         query = f'"{clean}" movie'
     try:
         r = requests.get(
-            f"{X_API_BASE}/tweets/search/recent",
-            params={"query": query, "max_results": 10},
+            f"{X_API_BASE}/tweets/counts/recent",
+            params={"query": query},
             headers={"Authorization": f"Bearer {bearer}"},
             timeout=REQUEST_TIMEOUT,
         )
@@ -104,7 +104,7 @@ def fetch_x_for_title(movie: Dict[str, Any]) -> int:
         if r.status_code != 200:
             return 0
         data = r.json()
-        count = int(data.get("meta", {}).get("result_count", 0))
+        count = int(data.get("meta", {}).get("total_tweet_count", 0))
         return min(count, 50000)  # sanity cap
     except Exception as exc:
         LOG.warning("X failed for %s: %s", title, exc)
