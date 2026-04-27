@@ -1427,7 +1427,17 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
             m["youtube"] = {"views": 0, "likes": 0, "comments": 0}
 
         try:
-            m["reddit"] = fetch_reddit_mentions(m["search_query"], subs, ua)
+            rd = fetch_reddit_mentions(m["search_query"], subs, ua)
+            # Fallback: if disambiguated query returns ≤5 results, retry bare title
+            if (rd.get("posts", 0) + rd.get("comments", 0)) <= 5:
+                bare_title = _sanitize_title(title)
+                rd_fallback = fetch_reddit_mentions(f'"{bare_title}"', subs, ua)
+                if (rd_fallback.get("posts", 0) + rd_fallback.get("comments", 0)) > (rd.get("posts", 0) + rd.get("comments", 0)):
+                    LOG.info("Reddit fallback: %s disambig=%d bare=%d — using bare",
+                             title, rd.get("posts", 0) + rd.get("comments", 0),
+                             rd_fallback.get("posts", 0) + rd_fallback.get("comments", 0))
+                    rd = rd_fallback
+            m["reddit"] = rd
         except Exception as exc:  # noqa: BLE001
             LOG.warning("Reddit failed for %s: %s", title, exc)
             m["reddit"] = {"posts": 0, "comments": 0}
@@ -1466,16 +1476,14 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         q = reverse_map.get(m["title"], m["title"])
         m["trends"] = int(trends.get(q, 0))
 
-    # 5. X (Twitter) mention counts — one query per movie title
+    # 5. X (Twitter) mention counts — bare title query
+    # X volume is high enough that "title + movie" over-filters (52x loss for
+    # Spider-Man). Bare title with 50K sanity cap is the right approach.
     x_queries: Dict[str, str] = {}
     for m in movies:
         key = f"movie:{m['tmdb_id']}"
         clean_title = _sanitize_title(m["title"])
-        # Don't append "movie" if the title already contains it
-        if "movie" in clean_title.lower():
-            x_queries[key] = f'"{clean_title}"'
-        else:
-            x_queries[key] = f'"{clean_title}" movie'
+        x_queries[key] = f'"{clean_title}"'
     # Also query actors and directors (by name) — these will be attached
     # to person entries downstream in derive_people().
     seen_people: set = set()
