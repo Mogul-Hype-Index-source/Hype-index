@@ -350,11 +350,13 @@ def _enrich_with_history(movies: List[Dict[str, Any]],
         prev   = yrank.get(tid)
 
         if prev is None:
-            m["move"]   = 0
-            m["is_new"] = True
+            m["move"]      = 0
+            m["is_new"]    = True
+            m["prev_rank"] = None
         else:
-            m["move"]   = prev - rank   # positive = climbed
-            m["is_new"] = False
+            m["move"]      = prev - rank   # positive = climbed
+            m["is_new"]    = False
+            m["prev_rank"] = prev
 
         if m["move"] > 0:   rising  += 1
         elif m["move"] < 0: falling += 1
@@ -399,11 +401,13 @@ def _enrich_people_with_history(people: List[Dict[str, Any]], key: str) -> None:
         pid = p.get("tmdb_id")
         prev_rank = prev_ranks.get(pid)
         if prev_rank is None:
-            p["move"]   = 0
-            p["is_new"] = True
+            p["move"]      = 0
+            p["is_new"]    = True
+            p["prev_rank"] = None
         else:
-            p["move"]   = prev_rank - p["rank"]
-            p["is_new"] = False
+            p["move"]      = prev_rank - p["rank"]
+            p["is_new"]    = False
+            p["prev_rank"] = prev_rank
 
 
 # ---------------------------------------------------------------------------
@@ -515,6 +519,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
         clean_title = re.sub(r'["\u201c\u201d\u2018\u2019\u0027]', '', m["title"]).strip()
         public_movies.append({
             "rank":           m["rank"],
+            "prev_rank":      m.get("prev_rank"),
             "tmdb_id":        m["tmdb_id"],
             "title":          clean_title,
             "director":       m.get("director", ""),

@@ -1325,14 +1325,15 @@ function renderMoviesTable(){
 }
 
 function renderMovieRow(m, rank){
-  const move   = m.move || 0;
-  const isNew  = m.is_new || (move === 0 && m.move == null);
+  const isNew  = m.is_new || m.prev_rank == null;
+  const prevRank = m.prev_rank;
 
   // Billboard-style: prev rank, direction arrow
-  const prevRank = isNew ? null : (rank - move);
-  const prevTxt  = isNew ? '<span class="badge">NEW</span>' : (move === 0 ? '—' : `${prevRank}`);
-  const arrowCls = isNew ? '' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
-  const arrowTxt = isNew ? '' : (move > 0 ? '↑' : (move < 0 ? '↓' : '—'));
+  const prevTxt  = isNew ? '<span class="badge">NEW</span>'
+    : (prevRank === rank) ? '—'
+    : `${prevRank}`;
+  const arrowCls = isNew ? '' : (rank < prevRank ? 'up' : (rank > prevRank ? 'down' : 'flat'));
+  const arrowTxt = isNew ? '' : (rank < prevRank ? '↑' : (rank > prevRank ? '↓' : '—'));
 
   const badges = [];
   if (m.hot)    badges.push(`<span class="fire" title="3+ days rising">🔥</span>`);
@@ -1406,14 +1407,16 @@ function renderPeopleTable(){
 }
 
 function renderPersonRow(p, rank, detail){
-  const move  = p.move || 0;
-  const isNew = p.is_new || (move === 0 && p.move == null);
+  const isNew = p.is_new || p.prev_rank == null;
+  const prevRank = p.prev_rank;
 
-  const prevRank = isNew ? null : (rank - move);
-  const prevTxt  = isNew ? '<span class="badge">NEW</span>' : (move === 0 ? '—' : `${prevRank}`);
-  const arrowCls = isNew ? '' : (move > 0 ? 'up' : (move < 0 ? 'down' : 'flat'));
-  const arrowTxt = isNew ? '' : (move > 0 ? '↑' : (move < 0 ? '↓' : '—'));
+  const prevTxt  = isNew ? '<span class="badge">NEW</span>'
+    : (prevRank === rank) ? '—'
+    : `${prevRank}`;
+  const arrowCls = isNew ? '' : (rank < prevRank ? 'up' : (rank > prevRank ? 'down' : 'flat'));
+  const arrowTxt = isNew ? '' : (rank < prevRank ? '↑' : (rank > prevRank ? '↓' : '—'));
 
+  // DO NOT REMOVE — fixes actor/director tab render. See commit 49c9bab.
   const badges = [];
   if (p.is_new) badges.push(`<span class="badge">NEW</span>`);
 
