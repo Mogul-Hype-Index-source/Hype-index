@@ -1329,9 +1329,9 @@ function renderMovieRow(m, rank){
   const currentRank = m.rank;   // server-side current rank
   const prevRank = m.prev_rank; // server-side previous rank
 
-  // Billboard-style: prev rank, direction arrow (both server-side values)
+  // Billboard-style: PREV always shows the number, arrow is separate
   const prevTxt  = isNew ? '<span class="badge">NEW</span>'
-    : (prevRank === currentRank) ? '—'
+    : (prevRank == null || prevRank === 0) ? '<span class="badge">NEW</span>'
     : `${prevRank}`;
   const arrowCls = isNew ? '' : (currentRank < prevRank ? 'up' : (currentRank > prevRank ? 'down' : 'flat'));
   const arrowTxt = isNew ? '' : (currentRank < prevRank ? '↑' : (currentRank > prevRank ? '↓' : '—'));
@@ -1413,7 +1413,7 @@ function renderPersonRow(p, rank, detail){
   const prevRank = p.prev_rank; // server-side previous rank
 
   const prevTxt  = isNew ? '<span class="badge">NEW</span>'
-    : (prevRank === currentRank) ? '—'
+    : (prevRank == null || prevRank === 0) ? '<span class="badge">NEW</span>'
     : `${prevRank}`;
   const arrowCls = isNew ? '' : (currentRank < prevRank ? 'up' : (currentRank > prevRank ? 'down' : 'flat'));
   const arrowTxt = isNew ? '' : (currentRank < prevRank ? '↑' : (currentRank > prevRank ? '↓' : '—'));
