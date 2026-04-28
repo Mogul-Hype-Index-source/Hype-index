@@ -784,8 +784,8 @@
 <!-- ================= 1D / 7D / 30D TOGGLE (below tabs) ================= -->
 <div class="toggle-row">
   <div class="snapshot" role="tablist" aria-label="Snapshot window" id="snapshot">
-    <button data-window="1d">1D</button>
-    <button data-window="7d" class="active">7D</button>
+    <button data-window="1d" class="active">1D</button>
+    <button data-window="7d">7D</button>
     <button data-window="30d">30D</button>
   </div>
 </div>
@@ -831,7 +831,7 @@
 
 const STATE = {
   data: null,
-  window: '7d',
+  window: '1d',
   sort: 'score',
   search: '',
   tab: 'movies',   // movies | actors | directors
