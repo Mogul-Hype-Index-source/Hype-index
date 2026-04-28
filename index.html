@@ -1326,14 +1326,15 @@ function renderMoviesTable(){
 
 function renderMovieRow(m, rank){
   const isNew  = m.is_new || m.prev_rank == null;
-  const prevRank = m.prev_rank;
+  const currentRank = m.rank;   // server-side current rank
+  const prevRank = m.prev_rank; // server-side previous rank
 
-  // Billboard-style: prev rank, direction arrow
+  // Billboard-style: prev rank, direction arrow (both server-side values)
   const prevTxt  = isNew ? '<span class="badge">NEW</span>'
-    : (prevRank === rank) ? '—'
+    : (prevRank === currentRank) ? '—'
     : `${prevRank}`;
-  const arrowCls = isNew ? '' : (rank < prevRank ? 'up' : (rank > prevRank ? 'down' : 'flat'));
-  const arrowTxt = isNew ? '' : (rank < prevRank ? '↑' : (rank > prevRank ? '↓' : '—'));
+  const arrowCls = isNew ? '' : (currentRank < prevRank ? 'up' : (currentRank > prevRank ? 'down' : 'flat'));
+  const arrowTxt = isNew ? '' : (currentRank < prevRank ? '↑' : (currentRank > prevRank ? '↓' : '—'));
 
   const badges = [];
   if (m.hot)    badges.push(`<span class="fire" title="3+ days rising">🔥</span>`);
@@ -1408,13 +1409,14 @@ function renderPeopleTable(){
 
 function renderPersonRow(p, rank, detail){
   const isNew = p.is_new || p.prev_rank == null;
-  const prevRank = p.prev_rank;
+  const currentRank = p.rank;   // server-side current rank
+  const prevRank = p.prev_rank; // server-side previous rank
 
   const prevTxt  = isNew ? '<span class="badge">NEW</span>'
-    : (prevRank === rank) ? '—'
+    : (prevRank === currentRank) ? '—'
     : `${prevRank}`;
-  const arrowCls = isNew ? '' : (rank < prevRank ? 'up' : (rank > prevRank ? 'down' : 'flat'));
-  const arrowTxt = isNew ? '' : (rank < prevRank ? '↑' : (rank > prevRank ? '↓' : '—'));
+  const arrowCls = isNew ? '' : (currentRank < prevRank ? 'up' : (currentRank > prevRank ? 'down' : 'flat'));
+  const arrowTxt = isNew ? '' : (currentRank < prevRank ? '↑' : (currentRank > prevRank ? '↓' : '—'));
 
   // DO NOT REMOVE — fixes actor/director tab render. See commit 49c9bab.
   const badges = [];
