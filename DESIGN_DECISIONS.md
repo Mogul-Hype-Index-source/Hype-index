@@ -56,3 +56,22 @@ Hype Index → Mogul DFS one-way passthrough only at Memorial Day launch. "Draft
 ## Performance Tracking Refactor — Critical Path
 
 Originally framed as polish/refinement. Now critical path because actor view is producing visibly wrong rankings that anyone in entertainment will notice. Estimated 3-4 days at revised scope (person stays as navigation entity, performance becomes signal-attribution layer within person pages).
+
+---
+
+## Attention Attribution Principle
+
+The Hype Index measures where cultural attention lands, not where it originates. A person — actor, director, public figure — becomes a vessel for attention regardless of whether that attention is specifically about their current work.
+
+Examples:
+- A film called Melania during a politically active moment for Melania Trump will absorb attention from the broader political conversation. The film inherits the cultural weight of its subject's news cycles.
+- A Michael Jackson biopic during a moment of renewed Michael Jackson cultural conversation will absorb attention from that broader context.
+- A Zendaya film during a year when Zendaya is culturally dominant will absorb attention from her celebrity heat, including her TV work and public appearances.
+
+The pari passu redistribution model captures this. Per-performance queries measure film-specific attention. A person-level query captures total cultural attention. The unattributed remainder (total minus film-specific sum) is redistributed proportionally across the person's current performances — films with stronger measured signal absorb more of the celebrity halo.
+
+This is intentional. The Hype Index does not try to algorithmically purify "movie-specific" attention from "celebrity halo" attention. Cultural attention doesn't disambiguate cleanly in real life, and the system doesn't pretend it does. Films live in their attention environments, and the index reports those environments honestly.
+
+Editorial implication: When a film like Melania ranks higher than its quality alone would suggest, that's a feature, not a bug. The system is correctly identifying where attention is flowing. Industry observers and players will understand this.
+
+Architectural implication: Future engineering decisions should preserve this principle. Algorithmic filters that try to remove "non-film mentions" from a film's signal would violate this design intent. The index is an attention measurement system, not an attention purification system.
