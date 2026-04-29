@@ -1313,7 +1313,7 @@ function renderMoviesTable(){
   // Build row groups of 10, inserting a decile break after each
   const out = [];
   movies.forEach((m, i) => {
-    out.push(renderMovieRow(m, i + 1));
+    out.push(renderMovieRow(m, m.rank || (i + 1)));
     if ((i + 1) % 10 === 0 && (i + 1) < movies.length) {
       const decile = Math.floor((i + 1) / 10);
       const decileItems = movies.slice((decile - 1) * 10, decile * 10);
@@ -1395,7 +1395,7 @@ function renderPeopleTable(){
   // Same decile-break rendering as movies
   const out = [];
   people.forEach((p, i) => {
-    out.push(renderPersonRow(p, i + 1, detail));
+    out.push(renderPersonRow(p, p.rank || (i + 1), detail));
     if ((i + 1) % 10 === 0 && (i + 1) < people.length) {
       const decile = Math.floor((i + 1) / 10);
       const decileItems = people.slice((decile - 1) * 10, decile * 10);
