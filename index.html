@@ -373,7 +373,6 @@
   .ent .title .badge{font-family:'Rajdhani',sans-serif;font-size:9px;letter-spacing:.14em;padding:2px 6px;border-radius:3px;background:var(--gold-pill-bg);color:var(--gold);border:1px solid var(--gold-pill-border)}
   .ent .title .badge.breakout{background:rgba(0,200,83,.15);color:#00c853;border-color:rgba(0,200,83,.4);font-weight:700}
   .ent .title .badge.rising{background:rgba(0,200,83,.1);color:#00c853;border-color:rgba(0,200,83,.3)}
-  .ent .title .badge.fading{background:rgba(255,60,60,.1);color:#ff3c3c;border-color:rgba(255,60,60,.3)}
   .ent .views-delta{font-family:'Rajdhani',sans-serif;font-size:10px;color:#00c853;letter-spacing:.05em}
   .ent .strip{
     display:flex;align-items:center;gap:14px;
@@ -1341,7 +1340,6 @@ function renderMovieRow(m, rank){
   const ys = m.youtube_state || '';
   if (ys === 'breakout')  badges.push(`<span class="badge breakout" title="Views surging >3x average">🚀 BREAKOUT</span>`);
   else if (ys === 'elevated') badges.push(`<span class="badge rising" title="Views rising >1.5x average">📈 RISING</span>`);
-  else if (ys === 'decaying') badges.push(`<span class="badge fading" title="Views declining">📉 FADING</span>`);
 
   // 2:3 portrait poster from TMDb @ w342 (gradient fallback baked into CSS)
   const posterUrl = tmdbW342(m.poster_url);
