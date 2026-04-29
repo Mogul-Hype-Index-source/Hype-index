@@ -1613,12 +1613,15 @@ def derive_people(movies: List[Dict[str, Any]],
             "poster_url":   movie.get("poster_url"),
             "score":        movie.get("score", 0),
             "character":    person.get("character"),
+            "billing":      person.get("_billing", 0),
         })
 
     for m in movies:
-        for c in (m.get("cast_full") or [])[:6]:    # top 6 billed per film
+        for idx, c in enumerate((m.get("cast_full") or [])[:6]):
+            c["_billing"] = idx  # 0 = lead, 1 = second, etc.
             _bucket(actors, c, m, "actor")
         for d in (m.get("directors_full") or []):
+            d["_billing"] = 0
             _bucket(directors, d, m, "director")
 
     xc = x_counts or {}
@@ -1631,7 +1634,7 @@ def derive_people(movies: List[Dict[str, Any]],
         slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
         slot["x_mentions"] = xc.get(f"{kind}:{slot['tmdb_id']}", 0)
         slot["event_youtube_views"] = eyt.get(slot["name"], 0)
-        slot["mentions"] = len(slot["news_mentions"]) + slot["film_count"] * 5 + slot["x_mentions"]
+        slot["mentions"] = len(slot["news_mentions"]) + slot["x_mentions"]
         del slot["sentiment_acc"]
         del slot["sentiment_n"]
         del slot["score_acc"]
@@ -1640,32 +1643,60 @@ def derive_people(movies: List[Dict[str, Any]],
     actor_list    = [_finalize(s, "actor") for s in actors.values()]
     director_list = [_finalize(s, "director") for s in directors.values()]
 
-    # Score each person: weighted blend of film_count, popularity, news,
-    # avg film score. Then min-max rescale into V1's 800-999 band so the
-    # leaderboard reads like the movies tab.
+    # Score each person per-performance: best film rating is the anchor,
+    # with X mentions and news as differentiators. Uses the same calibrated
+    # 100-1500 scale as movies via the career view formula.
     def _score_people(people: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if not people:
             return people
-        # Raw score components, normalized to 0..1 against max in batch
-        max_films = max(p["film_count"] for p in people) or 1
-        max_pop   = max(p["popularity"] for p in people) or 1
-        max_news  = max(len(p["news_mentions"]) for p in people) or 1
-        max_avgf  = max(p["avg_film_score"] for p in people) or 1
+
+        import math
+
+        def _calibrate(raw: float) -> int:
+            if raw <= 0:
+                return 0
+            return min(1500, int(round(raw ** 0.50 * 74)))
+
         for p in people:
-            raw = (
-                (p["film_count"]          / max_films) * 0.35 +
-                (p["popularity"]          / max_pop)   * 0.25 +
-                (len(p["news_mentions"])  / max_news)  * 0.20 +
-                (p["avg_film_score"]      / max_avgf)  * 0.20
-            )
-            p["_raw"] = raw
-        raws = [p["_raw"] for p in people]
-        lo, hi = min(raws), max(raws)
-        span = (hi - lo) or 1
-        for p in people:
-            p["score"]  = int(round(800 + ((p["_raw"] - lo) / span) * 199))
+            # Per-performance: each film contributes its rating weighted by billing
+            # Billing 0 (lead) gets full credit, billing 5 gets ~50%
+            films_with_billing = []
+            for f in p.get("films", []):
+                billing = f.get("billing", 3)
+                # Billing multiplier: 0→1.0, 1→0.90, 2→0.80, 3→0.70, 4→0.60, 5→0.50
+                billing_mult = max(0.50, 1.0 - billing * 0.10)
+                films_with_billing.append((f.get("score", 0) * billing_mult, f))
+            films_with_billing.sort(key=lambda x: -x[0])
+            film_ratings = [r for r, _ in films_with_billing]
+
+            # Career view: top performance dominates
+            if len(film_ratings) == 0:
+                career_base = 0
+            elif len(film_ratings) == 1:
+                career_base = film_ratings[0]
+            elif len(film_ratings) == 2:
+                career_base = 0.60 * film_ratings[0] + 0.40 * film_ratings[1]
+            else:
+                rest_w = 0.15 / (len(film_ratings) - 2)
+                career_base = (
+                    0.60 * film_ratings[0] +
+                    0.25 * film_ratings[1] +
+                    sum(rest_w * r for r in film_ratings[2:])
+                )
+
+            # Differentiators: X mentions and news lift above the film base
+            x = p.get("x_mentions", 0)
+            news = len(p.get("news_mentions", []))
+
+            # X and news contribute a bonus scaled to signal strength
+            x_bonus = min(x / 50000, 1.0) * 100 if x > 0 else 0
+            news_bonus = min(news / 5, 1.0) * 100 if news > 0 else 0
+
+            raw_rating = career_base + x_bonus + news_bonus
+            p["score"] = min(1500, int(round(raw_rating)))
+            p["rating"] = p["score"]
             p["scores"] = {"1d": p["score"], "7d": p["score"], "30d": p["score"]}
-            del p["_raw"]
+
         people.sort(key=lambda x: x["score"], reverse=True)
         for i, p in enumerate(people, 1):
             p["rank"] = i
