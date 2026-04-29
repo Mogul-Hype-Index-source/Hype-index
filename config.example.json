@@ -1,10 +1,8 @@
 {
   "youtube_api_key": "YOUR_YOUTUBE_API_KEY",
   "tmdb_api_key": "YOUR_TMDB_API_KEY",
-  "reddit_user_agent": "MoviePassHypeIndexV2/1.0 (by Chairman Stacy)",
   "max_movies": 100,
   "tmdb_image_base": "https://image.tmdb.org/t/p/w185",
-  "subreddits": ["movies", "boxoffice", "marvelstudios", "DC_Cinematic"],
   "rss_feeds": [
     {"source": "Deadline",             "url": "https://deadline.com/feed/",                                                  "default_category": "production",   "filter_strict": false},
     {"source": "Variety",              "url": "https://variety.com/feed/",                                                   "default_category": "production",   "filter_strict": false},

@@ -63,21 +63,18 @@ SCHEDULER_LOG = REPO_ROOT / "data" / "logs" / "scheduler.log"
 TIERS = {
     "top": {        # Rank 1-20
         "x":       2 * 60,
-        "reddit":  3 * 60,
         "youtube": 10 * 60,
         "news":    15 * 60,    # batch
         "trends":  4 * 3600,   # batch
     },
     "mid": {        # Rank 21-100
         "x":       10 * 60,
-        "reddit":  15 * 60,
         "youtube": 30 * 60,
         "news":    30 * 60,
         "trends":  4 * 3600,
     },
     "tail": {       # Rank 100+
         "x":       60 * 60,
-        "reddit":  60 * 60,
         "youtube": 60 * 60,
         "news":    60 * 60,
         "trends":  8 * 3600,
@@ -85,7 +82,6 @@ TIERS = {
 }
 
 # Concurrency limits to respect API rate limits
-REDDIT_SEMAPHORE_LIMIT = 6      # max concurrent Reddit requests
 X_SEMAPHORE_LIMIT = 10          # max concurrent X requests
 YOUTUBE_SEMAPHORE_LIMIT = 8     # max concurrent YouTube requests
 
@@ -129,9 +125,7 @@ class MovieStore:
             old_score = m.get("score", 0)
 
             # Apply signal-specific data
-            if signal == "reddit":
-                m["reddit"] = data
-            elif signal == "x":
+            if signal == "x":
                 m["x_mentions"] = data.get("count", 0)
             elif signal == "youtube":
                 m["youtube"] = data
@@ -251,36 +245,7 @@ def _write_heartbeat() -> None:
 # Async signal workers
 # ---------------------------------------------------------------------------
 
-async def worker_reddit(store: MovieStore, sem: asyncio.Semaphore):
-    """Continuously refresh Reddit signals for due titles."""
-    cfg = store.config
-    subs = cfg.get("subreddits", ["movies"])
-    ua = cfg.get("reddit_user_agent", "HypeIndexV2/1.0")
-
-    while True:
-        due = store.get_due_tasks("reddit")
-        if not due:
-            await asyncio.sleep(10)
-            continue
-
-        for tid in due:
-            async with sem:
-                m = store.movies.get(tid)
-                if not m:
-                    continue
-                # Run blocking I/O in thread pool
-                result = await asyncio.get_event_loop().run_in_executor(
-                    None, signal_fetchers.fetch_reddit_for_title, m, subs, ua
-                )
-                change = await store.update_signal(tid, "reddit", result)
-                if change:
-                    _write_audit(change)
-                    store.write_output()
-                    LOG.info("Rating change (reddit): %s %d → %d",
-                             change["title"], change["old_rating"], change["new_rating"])
-                await asyncio.sleep(1.5)  # rate limit spacing
-
-        await asyncio.sleep(5)
+# worker_reddit removed — Reddit signal discontinued per commercial ToS
 
 
 async def worker_x(store: MovieStore, sem: asyncio.Semaphore):
@@ -551,7 +516,6 @@ async def run(limit: Optional[int] = None, once: bool = False):
     store = MovieStore()
     await initialize_store(store, limit=limit)
 
-    reddit_sem = asyncio.Semaphore(REDDIT_SEMAPHORE_LIMIT)
     x_sem = asyncio.Semaphore(X_SEMAPHORE_LIMIT)
     yt_sem = asyncio.Semaphore(YOUTUBE_SEMAPHORE_LIMIT)
 
@@ -560,7 +524,7 @@ async def run(limit: Optional[int] = None, once: bool = False):
         # Force all signals due
         now = time.time()
         for tid in store.movies:
-            for sig in ["reddit", "x", "youtube", "news", "trends"]:
+            for sig in ["x", "youtube", "news", "trends"]:
                 store.last_refresh[(tid, sig)] = 0
         # Run each worker once
         # (simplified: just refresh top 10 for testing)
@@ -586,7 +550,6 @@ async def run(limit: Optional[int] = None, once: bool = False):
                 await asyncio.sleep(30)
 
     tasks = [
-        asyncio.create_task(resilient("reddit", lambda: worker_reddit(store, reddit_sem))),
         asyncio.create_task(resilient("x", lambda: worker_x(store, x_sem))),
         asyncio.create_task(resilient("youtube", lambda: worker_youtube(store, yt_sem))),
         asyncio.create_task(resilient("news", lambda: worker_news_batch(store))),

@@ -499,9 +499,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
             ticker_news.extend(bucket[c])
 
     total_mentions_24h = sum(
-        ((m.get("reddit") or {}).get("posts", 0) +
-         (m.get("reddit") or {}).get("comments", 0) +
-         len(m.get("news_mentions") or []) +
+        (len(m.get("news_mentions") or []) +
          int(m.get("x_mentions") or 0))
         for m in scored
     )
@@ -514,7 +512,6 @@ def build_index_payload(scored: List[Dict[str, Any]],
     public_movies = []
     for m in scored:
         yt = m.get("youtube") or {}
-        rd = m.get("reddit")  or {}
         # Sanitize title: strip embedded quote characters from TMDb titles
         clean_title = re.sub(r'["\u201c\u201d\u2018\u2019\u0027]', '', m["title"]).strip()
         public_movies.append({
@@ -536,10 +533,8 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "youtube_state":  m.get("youtube_state", "new"),
             "event_youtube_views": int(m.get("event_youtube_views") or 0),
             "event_boost":    bool(int(m.get("event_youtube_views") or 0) > 0 or any(n.get("is_event") for n in (m.get("news_mentions") or []))),
-            "reddit_posts":   int(rd.get("posts", 0)),
-            "reddit_comments": int(rd.get("comments", 0)),
             "x_mentions":     min(int(m.get("x_mentions") or 0), 50000),
-            "mentions":       int(rd.get("posts", 0) + rd.get("comments", 0) + len(m.get("news_mentions") or []) + int(m.get("x_mentions") or 0)),
+            "mentions":       int(len(m.get("news_mentions") or []) + int(m.get("x_mentions") or 0)),
             "sentiment_pct":  int(m.get("sentiment_pct", 50)),
             "scores":         m.get("scores", {}),
             "rating":         m.get("rating", 0),

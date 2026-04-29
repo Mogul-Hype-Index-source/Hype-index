@@ -41,11 +41,10 @@ from typing import Any, Dict, List
 LOG = logging.getLogger("score")
 
 WEIGHTS = {
-    "youtube_views":  0.35,
-    "x_mentions":     0.25,
-    "reddit_volume":  0.20,
+    "youtube_views":  0.45,
+    "x_mentions":     0.30,
     "google_trends":  0.15,
-    "news_impact":    0.05,
+    "news_impact":    0.10,
 }
 
 
@@ -133,16 +132,6 @@ def _youtube_engagement(movies: List[Dict[str, Any]]) -> List[float]:
         0.6 * norm_7d[i] + 0.4 * norm_24h[i] * multipliers[i]
         for i in range(len(movies))
     ]
-
-
-def _reddit_volume(movies: List[Dict[str, Any]]) -> List[float]:
-    """posts + comments, normalized."""
-    raw = [
-        float((m.get("reddit") or {}).get("posts", 0)) +
-        float((m.get("reddit") or {}).get("comments", 0))
-        for m in movies
-    ]
-    return _normalize(raw)
 
 
 def _google_trends(movies: List[Dict[str, Any]]) -> List[float]:
@@ -240,7 +229,6 @@ def score_movies(movies: List[Dict[str, Any]],
 
     yt_views = _youtube_views(movies)
     yt_eng   = _youtube_engagement(movies)
-    rd_vol   = _reddit_volume(movies)
     gt       = _google_trends(movies)
     nis      = _news_impact(movies, weights)
     xm       = _x_mentions(movies)
@@ -251,7 +239,6 @@ def score_movies(movies: List[Dict[str, Any]],
         bl = (
             yt_views[i] * WEIGHTS["youtube_views"]  +
             xm[i]       * WEIGHTS["x_mentions"]     +
-            rd_vol[i]   * WEIGHTS["reddit_volume"]  +
             gt[i]       * WEIGHTS["google_trends"]  +
             nis[i]      * WEIGHTS["news_impact"]
         )
@@ -340,7 +327,6 @@ def score_movies(movies: List[Dict[str, Any]],
         sub = {
             "youtube_views":      round(yt_views[i], 4),
             "youtube_engagement": round(yt_eng[i],   4),
-            "reddit_volume":      round(rd_vol[i],   4),
             "google_trends":      round(gt[i],       4),
             "news_impact":        round(nis[i],      4),
             "x_mentions":         round(xm[i],       4),

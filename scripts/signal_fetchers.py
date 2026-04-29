@@ -32,7 +32,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_data import (
     _http_get, _sanitize_title, load_config,
     fetch_youtube_video_stats, fetch_youtube_for_movie,
-    fetch_reddit_mentions, fetch_google_trends,
+    fetch_google_trends,
     fetch_news_feeds, _load_entity_tags,
     _load_trailer_cache, _save_trailer_cache,
     _load_stats_cache, _save_stats_cache,
@@ -45,18 +45,7 @@ from fetch_data import (
 # Per-title signal fetchers
 # ---------------------------------------------------------------------------
 
-def fetch_reddit_for_title(movie: Dict[str, Any],
-                           subreddits: List[str],
-                           user_agent: str) -> Dict[str, int]:
-    """Fetch Reddit mentions for a single movie. Returns {posts, comments}."""
-    query = movie.get("search_query") or movie.get("title", "")
-    if not query:
-        return {"posts": 0, "comments": 0}
-    try:
-        return fetch_reddit_mentions(query, subreddits, user_agent)
-    except Exception as exc:
-        LOG.warning("Reddit failed for %s: %s", movie.get("title"), exc)
-        return {"posts": 0, "comments": 0}
+# fetch_reddit_for_title removed — Reddit signal discontinued per commercial ToS
 
 
 def fetch_youtube_for_title(movie: Dict[str, Any],

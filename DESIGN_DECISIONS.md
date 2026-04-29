@@ -112,4 +112,8 @@ YouTube note: YouTube Data API v3 commercial-acceptable terms. No issue.
 
 News (RSS): public feeds, no commercial restriction. No issue.
 
-Status: pending Segev confirmation, then implementation. Estimated half-day of focused work.
+Status: **Executed 2026-04-29.** Decision made by Stacy as a copyright/IP exposure call — does not require Segev sign-off (not a DFS regulatory matter).
+
+Secondary benefit: pulse cycle expected to drop significantly from 3.5 hours, as Reddit was the rate-limit bottleneck across 430 movies (4 subreddits × 430 titles × 2s spacing with 429 backoffs).
+
+Expected impact: top 20 stable, 31 lower-ranked titles drop 10+ positions (Reddit-heavy: Marvel TV, horror sequels, comedy IP). Archived Reddit data from past pulses preserved on disk for backtesting.

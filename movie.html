@@ -438,7 +438,6 @@ function render(data, m){
   const brkItems = [
     { l:'YOUTUBE VELOCITY', k:'youtube_views',      w:0.35, max:350 },
     { l:'X MENTIONS',       k:'x_mentions',         w:0.25, max:250 },
-    { l:'REDDIT VOLUME',    k:'reddit_volume',      w:0.20, max:200 },
     { l:'GOOGLE TRENDS',    k:'google_trends',      w:0.15, max:150 },
     { l:'NEWS IMPACT',      k:'news_impact',        w:0.05, max:50  },
   ];
@@ -487,10 +486,6 @@ function render(data, m){
   const ytLink = m.youtube_video_id
     ? `<a href="https://www.youtube.com/watch?v=${encodeURIComponent(m.youtube_video_id)}" target="_blank" rel="noopener" style="color:var(--gold);font-size:11px;letter-spacing:.1em;font-family:Rajdhani">WATCH TRAILER →</a>`
     : '';
-
-  // Reddit panel
-  const rp = m.reddit_posts || 0;
-  const rc = m.reddit_comments || 0;
 
   // Pick/drop current state
   const myState = getPickState(m.tmdb_id);
@@ -543,17 +538,6 @@ function render(data, m){
         <div class="sent-bar"><i style="width:${m.sentiment_pct}%;background:${sentColor(m.sentiment_pct)}"></i></div>
         <div style="display:flex;justify-content:space-between;margin-top:8px;font-family:Rajdhani;font-size:11px;color:var(--mute);letter-spacing:.12em">
           <span>SENTIMENT ${m.sentiment_pct}%</span>${ytLink}
-        </div>
-      </section>
-
-      <section class="panel">
-        <h3>REDDIT</h3>
-        <div class="src-row">
-          <div class="src-stat"><div class="v">${rp}</div><div class="l">Posts · 7d</div></div>
-          <div class="src-stat"><div class="v">${rc}</div><div class="l">Comments · 7d</div></div>
-        </div>
-        <div class="empty-pan" style="font-size:11px;padding:6px 0">
-          Sourced from r/movies, r/boxoffice, r/marvelstudios, r/DC_Cinematic
         </div>
       </section>
 

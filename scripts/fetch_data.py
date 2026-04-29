@@ -39,7 +39,7 @@ CONFIG_PATH = REPO_ROOT / "config.json"
 
 TMDB_BASE = "https://api.themoviedb.org/3"
 YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3"
-REDDIT_BASE = "https://www.reddit.com"
+# REDDIT_BASE removed — Reddit signal collection discontinued per commercial ToS
 X_API_BASE = "https://api.twitter.com/2"
 
 REQUEST_TIMEOUT = 30  # seconds
@@ -1350,8 +1350,6 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     """
     yt_key   = config["youtube_api_key"]
     tmdb_key = config["tmdb_api_key"]
-    ua       = config.get("reddit_user_agent", "HypeIndexV2/1.0")
-    subs     = config.get("subreddits", ["movies"])
     feeds    = config.get("rss_feeds", [])
     poster_base = config.get("tmdb_image_base", "https://image.tmdb.org/t/p/w185")
     max_count   = limit or int(config.get("max_movies", 100))
@@ -1425,22 +1423,6 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         except Exception as exc:  # noqa: BLE001
             LOG.warning("YouTube failed for %s: %s", title, exc)
             m["youtube"] = {"views": 0, "likes": 0, "comments": 0}
-
-        try:
-            rd = fetch_reddit_mentions(m["search_query"], subs, ua)
-            # Fallback: if disambiguated query returns ≤5 results, retry bare title
-            if (rd.get("posts", 0) + rd.get("comments", 0)) <= 5:
-                bare_title = _sanitize_title(title)
-                rd_fallback = fetch_reddit_mentions(f'"{bare_title}"', subs, ua)
-                if (rd_fallback.get("posts", 0) + rd_fallback.get("comments", 0)) > (rd.get("posts", 0) + rd.get("comments", 0)):
-                    LOG.info("Reddit fallback: %s disambig=%d bare=%d — using bare",
-                             title, rd.get("posts", 0) + rd.get("comments", 0),
-                             rd_fallback.get("posts", 0) + rd_fallback.get("comments", 0))
-                    rd = rd_fallback
-            m["reddit"] = rd
-        except Exception as exc:  # noqa: BLE001
-            LOG.warning("Reddit failed for %s: %s", title, exc)
-            m["reddit"] = {"posts": 0, "comments": 0}
 
         # Per-movie news mentions — match on both raw title and search_query
         m["news_mentions"] = _news_mentions_for(title, news_items)
