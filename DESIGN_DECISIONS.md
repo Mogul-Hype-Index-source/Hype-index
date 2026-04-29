@@ -75,3 +75,41 @@ This is intentional. The Hype Index does not try to algorithmically purify "movi
 Editorial implication: When a film like Melania ranks higher than its quality alone would suggest, that's a feature, not a bug. The system is correctly identifying where attention is flowing. Industry observers and players will understand this.
 
 Architectural implication: Future engineering decisions should preserve this principle. Algorithmic filters that try to remove "non-film mentions" from a film's signal would violate this design intent. The index is an attention measurement system, not an attention purification system.
+
+---
+
+## Reddit Signal Removal — Commercial ToS Compliance
+
+Reddit's free API tier explicitly prohibits commercial use. The Hype Index feeds Mogul DFS, a real-money commercial DFS product. Continued use of free-tier Reddit access for signal collection represents a ToS violation that could result in cease-and-desist, IP banning, or legal action — particularly risky during or after public launch.
+
+DECISION: Remove Reddit from all signal collection. Pending confirmation from Segev (Ron) on legal read.
+
+Implementation scope:
+- Remove fetch_reddit_mentions() and related code from fetch_data.py
+- Remove fetch_reddit_for_title() from signal_fetchers.py
+- Remove _reddit_volume() from score.py
+- Remove "reddit_volume": 0.20 from WEIGHTS dict
+- Remove reddit_posts/reddit_comments from public payload in update.py
+- Remove subreddits and reddit_user_agent from config.json
+
+Rebalanced weights after Reddit removal:
+- YouTube velocity: 0.45 (up from 0.35)
+- X mentions: 0.30 (up from 0.25)
+- Google Trends: 0.15 (unchanged)
+- News impact: 0.10 (up from 0.05)
+
+Impact analysis (run 2026-04-28):
+- Top 2 (Michael, Backrooms) hold position
+- Middle of top 10 reshuffles within same band
+- Spider-Man drops from #15 to #31 (5th highest Reddit signal removed)
+- No catastrophic reordering — index remains functional and culturally accurate
+
+Google Trends note: pytrends is unofficial scraper of Google Trends — no API key, no commercial license, gray-area. Keep for now, revisit if Google blocks more aggressively or Segev flags.
+
+X note: paid commercial access via credits is explicitly licensed for commercial use. No issue.
+
+YouTube note: YouTube Data API v3 commercial-acceptable terms. No issue.
+
+News (RSS): public feeds, no commercial restriction. No issue.
+
+Status: pending Segev confirmation, then implementation. Estimated half-day of focused work.
