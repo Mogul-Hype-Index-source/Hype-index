@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import math
 import os
 import re
 import sys
@@ -1688,107 +1689,186 @@ def derive_people(movies: List[Dict[str, Any]],
     actor_list    = [_finalize(s, "actor") for s in actors.values()]
     director_list = [_finalize(s, "director") for s in directors.values()]
 
-    # Score each person: film halo provides a base (15% of top film rating),
-    # but actor-specific signals (X mentions, news, source diversity) are
-    # the primary scoring drivers. Low-signal actors are capped.
-    #
-    # Formula:
-    #   actor_score = (
-    #       film_halo          ← 15% of best film rating × billing multiplier
-    #     + attention_score    ← X mentions + news, scaled
-    #     + source_diversity   ← bonus for signal from multiple sources
-    #   ) × confidence_multiplier
-    #
-    # Confidence based on total mentions:
-    #   0 mentions     → cap at 700, confidence 0.50
-    #   1-10 mentions  → cap at 850, confidence 0.65
-    #   11-25 mentions → cap at 950, confidence 0.80
-    #   25+ mentions   → uncapped,   confidence 1.00
-    #
-    # New entries without prior pulse data get an additional 0.7× dampener.
+    # -----------------------------------------------------------------------
+    # Billboard-style entity–title pairings
+    # -----------------------------------------------------------------------
+    # Each person × film = one pairing that charts independently.
+    # Entity-general X mentions are distributed via pari passu allocation.
 
-    def _score_people(people: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        if not people:
-            return people
+    # Read actor X from cache (since alternating pulses may not have
+    # fetched actors this cycle)
+    x_cache_path = REPO_ROOT / "data" / "cache" / "x_mentions.json"
+    x_cache_data = _load_json(x_cache_path)
+    x_cached_counts = x_cache_data.get("counts") or {}
 
-        for p in people:
-            # Film halo: 15% of best film rating, weighted by billing
-            best_film_contribution = 0
-            for f in p.get("films", []):
+    pairings: List[Dict[str, Any]] = []
+
+    for person_list, role, role_mult in [
+        (actor_list, "actor", 1.0),
+        (director_list, "director", 0.8),
+    ]:
+        for p in person_list:
+            pid = p["tmdb_id"]
+            name = p["name"]
+            films = p.get("films", [])
+            if not films:
+                continue
+
+            # Entity-general X mentions (from cache, bare name query)
+            entity_x = x_cached_counts.get(f"{role}:{pid}", 0)
+            x_stale = (entity_x == 0 and x_cache_data.get("x_stale", False))
+
+            # News mentions for this person
+            person_news = p.get("news_mentions", [])
+
+            # Calculate title weights for pari passu allocation
+            active_films = [f for f in films if f.get("score", 0) > 0]
+            if not active_films:
+                active_films = films  # fallback: use all
+
+            total_weight = sum(f.get("score", 0) for f in active_films) or 1
+
+            for f in active_films:
+                film_id = f.get("tmdb_id")
+                film_title = f.get("title", "")
+                film_score = f.get("score", 0)
                 billing = f.get("billing", 3)
                 billing_mult = max(0.50, 1.0 - billing * 0.10)
-                contribution = f.get("score", 0) * billing_mult * 0.15
-                best_film_contribution = max(best_film_contribution, contribution)
 
-            # Attention score: X mentions and news are the primary drivers
-            x = p.get("x_mentions", 0)
-            news_count = len(p.get("news_mentions", []))
-            total_mentions = x + news_count
+                # Title weight for pari passu
+                title_weight = film_score / total_weight
 
-            # X scaled: 50K = max contribution of 800 points
-            # Log scale for X: 1K→267, 10K→533, 100K→667, 1M→800
-            x_score = min(math.log10(max(x, 1)) / math.log10(1000000), 1.0) * 800 if x > 0 else 0
-            # News scaled: 5 mentions = max contribution of 400 points
-            news_score = min(news_count / 5, 1.0) * 400 if news_count > 0 else 0
+                # Allocation cap: no single title gets >50% of general signal
+                # unless it has dominant title-specific signal
+                capped_weight = min(title_weight, 0.50) if len(active_films) > 1 else 1.0
 
-            attention_score = x_score + news_score
+                # Single-title rule: 100% allocation
+                if len(active_films) == 1:
+                    capped_weight = 1.0
 
-            # Source diversity bonus: having signal from multiple sources
-            sources_active = sum([
-                1 if x > 0 else 0,
-                1 if news_count > 0 else 0,
-                1 if p.get("event_youtube_views", 0) > 0 else 0,
-            ])
-            diversity_bonus = sources_active * 30  # up to 90 points
+                # Pari passu allocation of entity-general X
+                allocated_general = int(entity_x * capped_weight)
 
-            raw_rating = best_film_contribution + attention_score + diversity_bonus
+                # Title-specific signal: news mentioning BOTH person and film
+                title_news = [n for n in person_news
+                              if film_title.lower() in (n.get("headline", "").lower())]
+                entity_general_news = len(person_news) - len(title_news)
 
-            # Confidence multiplier based on total mentions
-            if total_mentions == 0:
-                confidence = 0.50
-                cap = 700
-            elif total_mentions <= 10:
-                confidence = 0.65
-                cap = 850
-            elif total_mentions <= 25:
-                confidence = 0.80
-                cap = 950
-            else:
-                confidence = 1.00
-                cap = 1500
+                # Allocated general news
+                allocated_news = int(entity_general_news * capped_weight)
+                title_specific_news = len(title_news)
 
-            final = min(cap, int(round(raw_rating * confidence)))
+                # Total signal for this pairing
+                total_x = allocated_general
+                total_news = title_specific_news + allocated_news
+                total_mentions = total_x + total_news
 
-            # New entry dampener
-            if p.get("is_new", False):
-                final = int(final * 0.70)
+                # Scoring
+                # Title halo: 15% of film score × billing
+                title_halo = film_score * billing_mult * 0.15 * role_mult
 
-            # Store scoring breakdown for debugging
-            p["score_breakdown"] = {
-                "film_halo": int(round(best_film_contribution)),
-                "x_score": int(round(x_score)),
-                "news_score": int(round(news_score)),
-                "diversity_bonus": diversity_bonus,
-                "raw_rating": int(round(raw_rating)),
-                "confidence": confidence,
-                "cap": cap,
-                "total_mentions": total_mentions,
-            }
+                # X score: log scale
+                x_score = min(math.log10(max(total_x, 1)) / math.log10(1000000), 1.0) * 800 if total_x > 0 else 0
 
-            p["score"] = max(0, final)
-            p["rating"] = p["score"]
-            p["scores"] = {"1d": p["score"], "7d": p["score"], "30d": p["score"]}
+                # News score
+                news_score = min(total_news / 5, 1.0) * 400 if total_news > 0 else 0
 
-        people.sort(key=lambda x: x["score"], reverse=True)
-        for i, p in enumerate(people, 1):
-            p["rank"] = i
-        return people
+                # Velocity: use film's YouTube velocity as proxy
+                velocity_bonus = 0
 
-    actor_list    = _score_people(actor_list)[:top_actors]
-    director_list = _score_people(director_list)[:top_directors]
+                raw = (title_halo + x_score + news_score + velocity_bonus) * role_mult
 
-    LOG.info("People rollup: %d actors, %d directors", len(actor_list), len(director_list))
-    return {"actors": actor_list, "directors": director_list}
+                # Confidence
+                if total_mentions == 0:
+                    confidence = 0.50
+                    cap = 700
+                elif total_mentions <= 10:
+                    confidence = 0.65
+                    cap = 850
+                elif total_mentions <= 25:
+                    confidence = 0.80
+                    cap = 950
+                else:
+                    confidence = 1.00
+                    cap = 1500
+
+                final = min(cap, int(round(raw * confidence)))
+
+                pairing = {
+                    "pairing_id":   f"{role}:{pid}:film:{film_id}",
+                    "entity_name":  name,
+                    "entity_id":    pid,
+                    "title":        film_title,
+                    "film_id":      film_id,
+                    "role":         role,
+                    "character":    f.get("character"),
+                    "billing":      billing,
+                    "profile_url":  p.get("profile_url"),
+                    "poster_url":   f.get("poster_url"),
+                    "score":        max(0, final),
+                    "rating":       max(0, final),
+                    "debug": {
+                        "entity_general_mentions": entity_x,
+                        "title_specific_mentions": len(title_news),
+                        "allocated_general_mentions": allocated_general,
+                        "allocated_general_news": allocated_news,
+                        "title_weight": round(title_weight, 3),
+                        "capped_weight": round(capped_weight, 3),
+                        "role_multiplier": role_mult,
+                        "title_halo": int(round(title_halo)),
+                        "x_score": int(round(x_score)),
+                        "news_score": int(round(news_score)),
+                        "raw_rating": int(round(raw)),
+                        "confidence": confidence,
+                        "cap": cap,
+                        "total_mentions": total_mentions,
+                        "excluded_mentions": 0,
+                        "x_stale": x_stale,
+                    },
+                }
+                pairings.append(pairing)
+
+    # Rank pairings
+    pairings.sort(key=lambda p: p["score"], reverse=True)
+    for i, p in enumerate(pairings, 1):
+        p["rank"] = i
+
+    # Legacy actors/directors arrays — computed from pairings for backward compat
+    # Group by person, take their best pairing score
+    legacy_actors: Dict[int, Dict[str, Any]] = {}
+    legacy_directors: Dict[int, Dict[str, Any]] = {}
+    for pr in pairings:
+        pid = pr["entity_id"]
+        target = legacy_actors if pr["role"] == "actor" else legacy_directors
+        if pid not in target or pr["score"] > target[pid].get("score", 0):
+            # Find the original person data
+            orig = None
+            for a in (actor_list if pr["role"] == "actor" else director_list):
+                if a["tmdb_id"] == pid:
+                    orig = a
+                    break
+            if orig:
+                entry = dict(orig)
+                entry["score"] = pr["score"]
+                entry["rating"] = pr["score"]
+                entry["scores"] = {"1d": pr["score"], "7d": pr["score"], "30d": pr["score"]}
+                target[pid] = entry
+
+    final_actors = sorted(legacy_actors.values(), key=lambda x: x["score"], reverse=True)[:top_actors]
+    for i, a in enumerate(final_actors, 1):
+        a["rank"] = i
+    final_directors = sorted(legacy_directors.values(), key=lambda x: x["score"], reverse=True)[:top_directors]
+    for i, d in enumerate(final_directors, 1):
+        d["rank"] = i
+
+    LOG.info("Pairings: %d total, Actors: %d, Directors: %d",
+             len(pairings), len(final_actors), len(final_directors))
+
+    return {
+        "actors": final_actors,
+        "directors": final_directors,
+        "pairings": pairings[:100],  # top 100 pairings
+    }
 
 
 # ---------------------------------------------------------------------------

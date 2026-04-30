@@ -572,6 +572,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
         "streaming_movies": [m for m in public_movies if m.get("release_type") == "streaming"],
         "actors":      people["actors"],
         "directors":   people["directors"],
+        "pairings":    people.get("pairings", []),
     }
 
 
