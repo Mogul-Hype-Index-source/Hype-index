@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-30T21:17:27+00:00",
-  "next_update_at": "2026-04-30T22:17:27+00:00",
+  "generated_at": "2026-04-30T21:31:41+00:00",
+  "next_update_at": "2026-04-30T22:31:41+00:00",
   "snapshot_date": "2026-04-30",
   "summary": {
     "total": 175,
     "total_streaming": 21,
-    "rising": 12,
-    "falling": 16,
-    "flat": 168,
+    "rising": 0,
+    "falling": 0,
+    "flat": 196,
     "avg_score": 102,
     "total_mentions_24h": 10875235
   },
@@ -139,80 +139,8 @@
       "category": "festivals"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 1318447,
-      "title": "Apex",
-      "poster_url": "https://image.tmdb.org/t/p/w185/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg",
-      "move": 3,
-      "score": 226
-    },
-    {
-      "tmdb_id": 1211598,
-      "title": "Kill Me",
-      "poster_url": "https://image.tmdb.org/t/p/w185/2bBpsG1tT5A1puAre5PHMl30oVv.jpg",
-      "move": 2,
-      "score": 175
-    },
-    {
-      "tmdb_id": 1510745,
-      "title": "Bodycam",
-      "poster_url": "https://image.tmdb.org/t/p/w185/xFpBNcG3Dlr8mYF5Kz9Tizs3Pxn.jpg",
-      "move": 2,
-      "score": 15
-    },
-    {
-      "tmdb_id": 1242332,
-      "title": "Normal",
-      "poster_url": "https://image.tmdb.org/t/p/w185/nVIOGKbUdRxud0EXYJDMGCGcYbo.jpg",
-      "move": 1,
-      "score": 1030
-    },
-    {
-      "tmdb_id": 1438392,
-      "title": "Euphoria",
-      "poster_url": "https://image.tmdb.org/t/p/w185/9fpTl3fNYmBcMOGocrx59XKDdgO.jpg",
-      "move": 1,
-      "score": 352
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1171145,
-      "title": "Crime 101",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
-      "move": -2,
-      "score": 172
-    },
-    {
-      "tmdb_id": 1480387,
-      "title": "undertone",
-      "poster_url": "https://image.tmdb.org/t/p/w185/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
-      "move": -1,
-      "score": 976
-    },
-    {
-      "tmdb_id": 1049471,
-      "title": "Outcome",
-      "poster_url": "https://image.tmdb.org/t/p/w185/kSzcpfbTy2pXHGvrVU2WhQTo6oU.jpg",
-      "move": -1,
-      "score": 349
-    },
-    {
-      "tmdb_id": 1582770,
-      "title": "Dhurandhar: The Revenge",
-      "poster_url": "https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg",
-      "move": -1,
-      "score": 240
-    },
-    {
-      "tmdb_id": 1153576,
-      "title": "Street Fighter",
-      "poster_url": "https://image.tmdb.org/t/p/w185/wOnoOeDcsLSo72ON1UC6c1VHKk1.jpg",
-      "move": -1,
-      "score": 240
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -237,13 +165,13 @@
       "mentions": 2918823,
       "sentiment_pct": 76,
       "scores": {
-        "1d": 1209,
-        "7d": 1209,
-        "30d": 1209
+        "1d": 1215,
+        "7d": 1215,
+        "30d": 1215
       },
-      "rating": 1209,
+      "rating": 1215,
       "rating_band": "ELITE",
-      "score": 1209,
+      "score": 1215,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -329,7 +257,7 @@
     },
     {
       "rank": 2,
-      "prev_rank": 3,
+      "prev_rank": 2,
       "tmdb_id": 1242332,
       "title": "Normal",
       "director": "Ben Wheatley",
@@ -350,14 +278,14 @@
       "mentions": 2371376,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 1030,
-        "7d": 1030,
-        "30d": 1030
+        "1d": 1035,
+        "7d": 1035,
+        "30d": 1035
       },
-      "rating": 1030,
+      "rating": 1035,
       "rating_band": "STRONG",
-      "score": 1030,
-      "move": 1,
+      "score": 1035,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -442,7 +370,7 @@
     },
     {
       "rank": 3,
-      "prev_rank": 2,
+      "prev_rank": 3,
       "tmdb_id": 1480387,
       "title": "undertone",
       "director": "Ian Tuason",
@@ -463,14 +391,14 @@
       "mentions": 4225,
       "sentiment_pct": 60,
       "scores": {
-        "1d": 976,
-        "7d": 976,
-        "30d": 976
+        "1d": 975,
+        "7d": 975,
+        "30d": 975
       },
-      "rating": 976,
+      "rating": 975,
       "rating_band": "STRONG",
-      "score": 976,
-      "move": -1,
+      "score": 975,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -576,13 +504,13 @@
       "mentions": 0,
       "sentiment_pct": 92,
       "scores": {
-        "1d": 739,
-        "7d": 739,
-        "30d": 739
+        "1d": 738,
+        "7d": 738,
+        "30d": 738
       },
-      "rating": 739,
+      "rating": 738,
       "rating_band": "DECENT",
-      "score": 739,
+      "score": 738,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -813,13 +741,13 @@
       "mentions": 792616,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 526,
-        "7d": 526,
-        "30d": 526
+        "1d": 528,
+        "7d": 528,
+        "30d": 528
       },
-      "rating": 526,
+      "rating": 528,
       "rating_band": "MODEST",
-      "score": 526,
+      "score": 528,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -926,13 +854,13 @@
       "mentions": 1028382,
       "sentiment_pct": 51,
       "scores": {
-        "1d": 469,
-        "7d": 469,
-        "30d": 469
+        "1d": 471,
+        "7d": 471,
+        "30d": 471
       },
-      "rating": 469,
+      "rating": 471,
       "rating_band": "MODEST",
-      "score": 469,
+      "score": 471,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1253,13 +1181,13 @@
       "mentions": 351328,
       "sentiment_pct": 52,
       "scores": {
-        "1d": 372,
-        "7d": 372,
-        "30d": 372
+        "1d": 373,
+        "7d": 373,
+        "30d": 373
       },
-      "rating": 372,
+      "rating": 373,
       "rating_band": "LOW",
-      "score": 372,
+      "score": 373,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1345,7 +1273,7 @@
     },
     {
       "rank": 12,
-      "prev_rank": 13,
+      "prev_rank": 12,
       "tmdb_id": 1438392,
       "title": "Euphoria",
       "director": "Gunasekhar",
@@ -1366,14 +1294,14 @@
       "mentions": 551085,
       "sentiment_pct": 70,
       "scores": {
-        "1d": 352,
-        "7d": 352,
-        "30d": 352
+        "1d": 353,
+        "7d": 353,
+        "30d": 353
       },
-      "rating": 352,
+      "rating": 353,
       "rating_band": "LOW",
-      "score": 352,
-      "move": 1,
+      "score": 353,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1458,7 +1386,7 @@
     },
     {
       "rank": 13,
-      "prev_rank": 12,
+      "prev_rank": 13,
       "tmdb_id": 1049471,
       "title": "Outcome",
       "director": "Jonah Hill",
@@ -1486,7 +1414,7 @@
       "rating": 349,
       "rating_band": "LOW",
       "score": 349,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2228,7 +2156,7 @@
     },
     {
       "rank": 20,
-      "prev_rank": 21,
+      "prev_rank": 20,
       "tmdb_id": 1314481,
       "title": "The Devil Wears Prada 2",
       "director": "David Frankel",
@@ -2256,7 +2184,7 @@
       "rating": 251,
       "rating_band": "LOW",
       "score": 251,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2661,7 +2589,7 @@
     },
     {
       "rank": 26,
-      "prev_rank": 25,
+      "prev_rank": 26,
       "tmdb_id": 1582770,
       "title": "Dhurandhar: The Revenge",
       "director": "Aditya Dhar",
@@ -2689,7 +2617,7 @@
       "rating": 240,
       "rating_band": "MINIMAL",
       "score": 240,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2774,7 +2702,7 @@
     },
     {
       "rank": 27,
-      "prev_rank": 26,
+      "prev_rank": 27,
       "tmdb_id": 1153576,
       "title": "Street Fighter",
       "director": "Kitao Sakurai",
@@ -2802,7 +2730,7 @@
       "rating": 240,
       "rating_band": "MINIMAL",
       "score": 240,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3186,7 +3114,7 @@
     },
     {
       "rank": 32,
-      "prev_rank": 31,
+      "prev_rank": 32,
       "tmdb_id": 1003596,
       "title": "Avengers: Doomsday",
       "director": "Joe Russo, Anthony Russo",
@@ -3214,7 +3142,7 @@
       "rating": 228,
       "rating_band": "MINIMAL",
       "score": 228,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3305,7 +3233,7 @@
     },
     {
       "rank": 33,
-      "prev_rank": 36,
+      "prev_rank": 33,
       "tmdb_id": 1318447,
       "title": "Apex",
       "director": "Baltasar Kormákur",
@@ -3333,7 +3261,7 @@
       "rating": 226,
       "rating_band": "MINIMAL",
       "score": 226,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3418,7 +3346,7 @@
     },
     {
       "rank": 34,
-      "prev_rank": 33,
+      "prev_rank": 34,
       "tmdb_id": 1288445,
       "title": "Mutiny",
       "director": "Jean-François Richet",
@@ -3446,7 +3374,7 @@
       "rating": 226,
       "rating_band": "MINIMAL",
       "score": 226,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3531,7 +3459,7 @@
     },
     {
       "rank": 35,
-      "prev_rank": 34,
+      "prev_rank": 35,
       "tmdb_id": 1213243,
       "title": "Toxic",
       "director": "Geethu Mohandas",
@@ -3559,7 +3487,7 @@
       "rating": 224,
       "rating_band": "MINIMAL",
       "score": 224,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3644,7 +3572,7 @@
     },
     {
       "rank": 36,
-      "prev_rank": 35,
+      "prev_rank": 36,
       "tmdb_id": 1382802,
       "title": "Family Movie",
       "director": "Kyra Sedgwick, Kevin Bacon",
@@ -3672,7 +3600,7 @@
       "rating": 221,
       "rating_band": "MINIMAL",
       "score": 221,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3763,7 +3691,7 @@
     },
     {
       "rank": 37,
-      "prev_rank": 38,
+      "prev_rank": 37,
       "tmdb_id": 1355496,
       "title": "By Design",
       "director": "Amanda Kramer",
@@ -3791,7 +3719,7 @@
       "rating": 215,
       "rating_band": "MINIMAL",
       "score": 215,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3876,7 +3804,7 @@
     },
     {
       "rank": 38,
-      "prev_rank": 37,
+      "prev_rank": 38,
       "tmdb_id": 539745,
       "title": "Animal Farm",
       "director": "Andy Serkis",
@@ -3904,7 +3832,7 @@
       "rating": 214,
       "rating_band": "MINIMAL",
       "score": 214,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4447,7 +4375,7 @@
     },
     {
       "rank": 46,
-      "prev_rank": 47,
+      "prev_rank": 46,
       "tmdb_id": 1383731,
       "title": "Protector",
       "director": "Adrian Grünberg",
@@ -4475,7 +4403,7 @@
       "rating": 190,
       "rating_band": "MINIMAL",
       "score": 190,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4560,7 +4488,7 @@
     },
     {
       "rank": 47,
-      "prev_rank": 46,
+      "prev_rank": 47,
       "tmdb_id": 1511057,
       "title": "Roommates",
       "director": "Chandler Levack",
@@ -4588,7 +4516,7 @@
       "rating": 190,
       "rating_band": "MINIMAL",
       "score": 190,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4899,7 +4827,7 @@
     },
     {
       "rank": 50,
-      "prev_rank": 52,
+      "prev_rank": 50,
       "tmdb_id": 1211598,
       "title": "Kill Me",
       "director": "Peter Warren",
@@ -4927,7 +4855,7 @@
       "rating": 175,
       "rating_band": "MINIMAL",
       "score": 175,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5006,7 +4934,7 @@
     },
     {
       "rank": 52,
-      "prev_rank": 50,
+      "prev_rank": 52,
       "tmdb_id": 1171145,
       "title": "Crime 101",
       "director": "Bart Layton",
@@ -5034,7 +4962,7 @@
       "rating": 172,
       "rating_band": "MINIMAL",
       "score": 172,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5565,7 +5493,7 @@
     },
     {
       "rank": 57,
-      "prev_rank": 58,
+      "prev_rank": 57,
       "tmdb_id": 1613798,
       "title": "Vengeance",
       "director": "Rodrigo Valdes",
@@ -5593,7 +5521,7 @@
       "rating": 127,
       "rating_band": "MINIMAL",
       "score": 127,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5678,7 +5606,7 @@
     },
     {
       "rank": 58,
-      "prev_rank": 57,
+      "prev_rank": 58,
       "tmdb_id": 1302904,
       "title": "Practical Magic 2",
       "director": "Susanne Bier",
@@ -5706,7 +5634,7 @@
       "rating": 127,
       "rating_band": "MINIMAL",
       "score": 127,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7706,7 +7634,7 @@
     },
     {
       "rank": 78,
-      "prev_rank": 79,
+      "prev_rank": 78,
       "tmdb_id": 1403737,
       "title": "Funky",
       "director": "Anudeep",
@@ -7734,7 +7662,7 @@
       "rating": 52,
       "rating_band": "UNRATED",
       "score": 52,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7819,7 +7747,7 @@
     },
     {
       "rank": 79,
-      "prev_rank": 78,
+      "prev_rank": 79,
       "tmdb_id": 1283515,
       "title": "Verity",
       "director": "Michael Showalter",
@@ -7847,7 +7775,7 @@
       "rating": 51,
       "rating_band": "UNRATED",
       "score": 51,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8039,7 +7967,7 @@
     },
     {
       "rank": 81,
-      "prev_rank": 82,
+      "prev_rank": 81,
       "tmdb_id": 1248832,
       "title": "Digger",
       "director": "Alejandro G. Iñárritu",
@@ -8067,7 +7995,7 @@
       "rating": 46,
       "rating_band": "UNRATED",
       "score": 46,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8265,7 +8193,7 @@
     },
     {
       "rank": 85,
-      "prev_rank": 86,
+      "prev_rank": 85,
       "tmdb_id": 1390382,
       "title": "Couture",
       "director": "Alice Winocour",
@@ -8293,7 +8221,7 @@
       "rating": 41,
       "rating_band": "UNRATED",
       "score": 41,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8378,7 +8306,7 @@
     },
     {
       "rank": 86,
-      "prev_rank": 85,
+      "prev_rank": 86,
       "tmdb_id": 1634949,
       "title": "Lorne",
       "director": "Morgan Neville",
@@ -8406,7 +8334,7 @@
       "rating": 41,
       "rating_band": "UNRATED",
       "score": 41,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10085,7 +10013,7 @@
     },
     {
       "rank": 102,
-      "prev_rank": 104,
+      "prev_rank": 102,
       "tmdb_id": 1510745,
       "title": "Bodycam",
       "director": "Brandon Christensen",
@@ -10113,7 +10041,7 @@
       "rating": 15,
       "rating_band": "UNRATED",
       "score": 15,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10198,7 +10126,7 @@
     },
     {
       "rank": 103,
-      "prev_rank": 102,
+      "prev_rank": 103,
       "tmdb_id": 1363974,
       "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
       "director": "Yasuhito Kikuchi",
@@ -10226,7 +10154,7 @@
       "rating": 15,
       "rating_band": "UNRATED",
       "score": 15,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10311,7 +10239,7 @@
     },
     {
       "rank": 104,
-      "prev_rank": 103,
+      "prev_rank": 104,
       "tmdb_id": 1022046,
       "title": "Youngblood",
       "director": "Hubert Davis",
@@ -10339,7 +10267,7 @@
       "rating": 15,
       "rating_band": "UNRATED",
       "score": 15,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -21684,24 +21612,24 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": "Michael Jackson",
           "billing": 0
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 1209,
+      "avg_film_score": 1215,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 1428,
-      "rating": 1428,
+      "score": 1429,
+      "rating": 1429,
       "scores": {
-        "1d": 1428,
-        "7d": 1428,
-        "30d": 1428
+        "1d": 1429,
+        "7d": 1429,
+        "30d": 1429
       },
       "rank": 1,
       "move": 0,
@@ -21839,7 +21767,7 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": "Joseph Jackson",
           "billing": 1
         },
@@ -21855,17 +21783,17 @@
       ],
       "popularity": 258.2666,
       "sentiment_pct": 65,
-      "avg_film_score": 644,
+      "avg_film_score": 646,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 1118,
-      "rating": 1118,
+      "score": 1119,
+      "rating": 1119,
       "scores": {
-        "1d": 1118,
-        "7d": 1118,
-        "30d": 1118
+        "1d": 1119,
+        "7d": 1119,
+        "30d": 1119
       },
       "rank": 4,
       "move": 0,
@@ -21953,24 +21881,24 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": "Katherine Jackson",
           "billing": 2
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 1209,
+      "avg_film_score": 1215,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 1044,
-      "rating": 1044,
+      "score": 1045,
+      "rating": 1045,
       "scores": {
-        "1d": 1044,
-        "7d": 1044,
-        "30d": 1044
+        "1d": 1045,
+        "7d": 1045,
+        "30d": 1045
       },
       "rank": 7,
       "move": 0,
@@ -22102,7 +22030,7 @@
           "title": "Spider-Man: Brand New Day",
           "release_date": "2026-07-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/pspkSVP39NGa6G2rvK5KlMjvYUe.jpg",
-          "score": 739,
+          "score": 738,
           "character": "MJ",
           "billing": 1
         },
@@ -22208,24 +22136,24 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": "John Branca",
           "billing": 5
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 1209,
+      "avg_film_score": 1215,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 904,
-      "rating": 904,
+      "score": 905,
+      "rating": 905,
       "scores": {
-        "1d": 904,
-        "7d": 904,
-        "30d": 904
+        "1d": 905,
+        "7d": 905,
+        "30d": 905
       },
       "rank": 13,
       "move": 0,
@@ -22357,14 +22285,14 @@
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-          "score": 526,
+          "score": 528,
           "character": "Lenny Williamson (voice)",
           "billing": 2
         }
       ],
       "popularity": 130.5233,
       "sentiment_pct": 53,
-      "avg_film_score": 526,
+      "avg_film_score": 528,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22620,7 +22548,7 @@
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-          "score": 526,
+          "score": 528,
           "character": "Olivia Burke (voice)",
           "billing": 4
         },
@@ -22636,7 +22564,7 @@
       ],
       "popularity": 130.5233,
       "sentiment_pct": 52,
-      "avg_film_score": 264,
+      "avg_film_score": 265,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22769,14 +22697,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": "Bill Bray",
           "billing": 4
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 1209,
+      "avg_film_score": 1215,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22918,24 +22846,24 @@
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-          "score": 526,
+          "score": 528,
           "character": "Will Harris (voice)",
           "billing": 0
         }
       ],
       "popularity": 130.5233,
       "sentiment_pct": 53,
-      "avg_film_score": 526,
+      "avg_film_score": 528,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 487,
-      "rating": 487,
+      "score": 488,
+      "rating": 488,
       "scores": {
-        "1d": 487,
-        "7d": 487,
-        "30d": 487
+        "1d": 488,
+        "7d": 488,
+        "30d": 488
       },
       "rank": 32,
       "move": 0,
@@ -23093,7 +23021,7 @@
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-          "score": 526,
+          "score": 528,
           "character": "Jett Fillmore (voice)",
           "billing": 1
         },
@@ -23109,7 +23037,7 @@
       ],
       "popularity": 130.5233,
       "sentiment_pct": 54,
-      "avg_film_score": 279,
+      "avg_film_score": 280,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -23137,24 +23065,24 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": "Young Michael Jackson",
           "billing": 3
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 1209,
+      "avg_film_score": 1215,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 442,
-      "rating": 442,
+      "score": 443,
+      "rating": 443,
       "scores": {
-        "1d": 442,
-        "7d": 442,
-        "30d": 442
+        "1d": 443,
+        "7d": 443,
+        "30d": 443
       },
       "rank": 38,
       "move": 0,
@@ -23207,14 +23135,14 @@
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-          "score": 526,
+          "score": 528,
           "character": "Archie Everhardt (voice)",
           "billing": 5
         }
       ],
       "popularity": 130.5233,
       "sentiment_pct": 53,
-      "avg_film_score": 526,
+      "avg_film_score": 528,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -23242,14 +23170,14 @@
           "title": "GOAT",
           "release_date": "2026-02-11",
           "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-          "score": 526,
+          "score": 528,
           "character": "Mane Attraction (voice)",
           "billing": 3
         }
       ],
       "popularity": 130.5233,
       "sentiment_pct": 53,
-      "avg_film_score": 526,
+      "avg_film_score": 528,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -23594,14 +23522,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1209,
+          "score": 1215,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 1209,
+      "avg_film_score": 1215,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -24014,14 +23942,14 @@
           "title": "undertone",
           "release_date": "2026-03-12",
           "poster_url": "https://image.tmdb.org/t/p/w185/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
-          "score": 976,
+          "score": 975,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 51.9697,
       "sentiment_pct": 60,
-      "avg_film_score": 976,
+      "avg_film_score": 975,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -24480,8 +24408,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/tVSzFjQxOrLOcvnzFto0772Q9Bw.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1428,
-      "rating": 1428,
+      "score": 1429,
+      "rating": 1429,
       "attention_type": "mixed",
       "shock_score": 7.94,
       "debug": {
@@ -24499,20 +24427,25 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 181,
+        "title_halo": 182,
         "x_score": 1246,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1428,
+        "raw_rating": 1429,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 120904,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 1
+      "rank": 1,
+      "prev_rank": 1,
+      "prev_score": 1428,
+      "rank_delta": 0,
+      "score_delta": 1,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1813:film:1314481",
@@ -24557,7 +24490,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 2
+      "rank": 2,
+      "prev_rank": 2,
+      "prev_score": 1154,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1525043:film:1433367",
@@ -24602,7 +24540,62 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 3
+      "rank": 3,
+      "prev_rank": 3,
+      "prev_score": 1140,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
+    },
+    {
+      "pairing_id": "actor:91671:film:936075",
+      "entity_name": "Colman Domingo",
+      "entity_id": 91671,
+      "title": "Michael",
+      "film_id": 936075,
+      "role": "actor",
+      "character": "Joseph Jackson",
+      "billing": 1,
+      "profile_url": "https://image.tmdb.org/t/p/w300/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
+      "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
+      "score": 1119,
+      "rating": 1119,
+      "attention_type": "mixed",
+      "shock_score": 5.39,
+      "debug": {
+        "entity_general_mentions": 10401,
+        "title_specific_x": 3814,
+        "ts_x_score": 955,
+        "gen_x_score": 0,
+        "title_specific_mentions": 0,
+        "allocated_general_mentions": 5200,
+        "allocated_general_news": 0,
+        "title_weight": 0.95,
+        "title_momentum_weight": 0.94,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
+        "capped_weight": 0.5,
+        "role_multiplier": 1.0,
+        "title_halo": 164,
+        "x_score": 955,
+        "title_news_score": 0,
+        "general_news_score": 0,
+        "news_score": 0,
+        "title_specific_multiplier": 2.0,
+        "raw_rating": 1119,
+        "confidence": 1.0,
+        "cap": 1500,
+        "total_mentions": 9014,
+        "excluded_mentions": 0,
+        "x_stale": false
+      },
+      "rank": 4,
+      "prev_rank": 4,
+      "prev_score": 1119,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1813:film:1283515",
@@ -24647,52 +24640,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 4
-    },
-    {
-      "pairing_id": "actor:91671:film:936075",
-      "entity_name": "Colman Domingo",
-      "entity_id": 91671,
-      "title": "Michael",
-      "film_id": 936075,
-      "role": "actor",
-      "character": "Joseph Jackson",
-      "billing": 1,
-      "profile_url": "https://image.tmdb.org/t/p/w300/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
-      "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1118,
-      "rating": 1118,
-      "attention_type": "mixed",
-      "shock_score": 5.39,
-      "debug": {
-        "entity_general_mentions": 10401,
-        "title_specific_x": 3814,
-        "ts_x_score": 955,
-        "gen_x_score": 0,
-        "title_specific_mentions": 0,
-        "allocated_general_mentions": 5200,
-        "allocated_general_news": 0,
-        "title_weight": 0.95,
-        "title_momentum_weight": 0.939,
-        "days_to_release": -9,
-        "release_proximity_weight": 1.6,
-        "lifecycle_phase": "opening-window",
-        "capped_weight": 0.5,
-        "role_multiplier": 1.0,
-        "title_halo": 163,
-        "x_score": 955,
-        "title_news_score": 0,
-        "general_news_score": 0,
-        "news_score": 0,
-        "title_specific_multiplier": 2.0,
-        "raw_rating": 1118,
-        "confidence": 1.0,
-        "cap": 1500,
-        "total_mentions": 9014,
-        "excluded_mentions": 0,
-        "x_stale": false
-      },
-      "rank": 5
+      "rank": 5,
+      "prev_rank": 5,
+      "prev_score": 1119,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:5064:film:1314481",
@@ -24737,7 +24690,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 6
+      "rank": 6,
+      "prev_rank": 6,
+      "prev_score": 1101,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:30614:film:687163",
@@ -24782,7 +24740,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 7
+      "rank": 7,
+      "prev_rank": 7,
+      "prev_score": 1073,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:9781:film:936075",
@@ -24795,8 +24758,8 @@
       "billing": 2,
       "profile_url": "https://image.tmdb.org/t/p/w300/heVQkCGKUuKKRjRJaZIBrEKGhYA.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1044,
-      "rating": 1044,
+      "score": 1045,
+      "rating": 1045,
       "attention_type": "mixed",
       "shock_score": 26.86,
       "debug": {
@@ -24814,20 +24777,25 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 145,
+        "title_halo": 146,
         "x_score": 899,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1044,
+        "raw_rating": 1045,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 17233,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 8
+      "rank": 8,
+      "prev_rank": 8,
+      "prev_score": 1045,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1813:film:1102883",
@@ -24872,7 +24840,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 9
+      "rank": 9,
+      "prev_rank": 9,
+      "prev_score": 1024,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:6885:film:1318447",
@@ -24917,7 +24890,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 10
+      "rank": 10,
+      "prev_rank": 10,
+      "prev_score": 1016,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:5081:film:1314481",
@@ -24962,7 +24940,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 11
+      "rank": 11,
+      "prev_rank": 11,
+      "prev_score": 997,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1303037:film:1318447",
@@ -25007,7 +24990,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 12
+      "rank": 12,
+      "prev_rank": 12,
+      "prev_score": 956,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:20907:film:936075",
@@ -25039,7 +25027,7 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
-        "title_halo": 145,
+        "title_halo": 146,
         "x_score": 1047,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -25052,7 +25040,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 13
+      "rank": 13,
+      "prev_rank": 13,
+      "prev_score": 954,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:505710:film:1325734",
@@ -25097,7 +25090,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 14
+      "rank": 14,
+      "prev_rank": 14,
+      "prev_score": 946,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:11288:film:1325734",
@@ -25142,7 +25140,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 15
+      "rank": 15,
+      "prev_rank": 15,
+      "prev_score": 913,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:996701:film:936075",
@@ -25155,8 +25158,8 @@
       "billing": 5,
       "profile_url": "https://image.tmdb.org/t/p/w300/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 904,
-      "rating": 904,
+      "score": 905,
+      "rating": 905,
       "attention_type": "mixed",
       "shock_score": 6.91,
       "debug": {
@@ -25180,14 +25183,19 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 904,
+        "raw_rating": 905,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 3332,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 16
+      "rank": 16,
+      "prev_rank": 16,
+      "prev_score": 905,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2283:film:1314481",
@@ -25232,7 +25240,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 17
+      "rank": 17,
+      "prev_rank": 17,
+      "prev_score": 895,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1136940:film:1450527",
@@ -25277,7 +25290,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 18
+      "rank": 18,
+      "prev_rank": 18,
+      "prev_score": 860,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:7152:film:687163",
@@ -25322,7 +25340,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 19
+      "rank": 19,
+      "prev_rank": 19,
+      "prev_score": 828,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1718307:film:1297842",
@@ -25367,7 +25390,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 20
+      "rank": 20,
+      "prev_rank": 20,
+      "prev_score": 809,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2117434:film:1450527",
@@ -25412,7 +25440,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 21
+      "rank": 21,
+      "prev_rank": 21,
+      "prev_score": 804,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2096164:film:687163",
@@ -25457,7 +25490,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 22
+      "rank": 22,
+      "prev_rank": 22,
+      "prev_score": 752,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:234352:film:1316092",
@@ -25502,7 +25540,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 23
+      "rank": 23,
+      "prev_rank": 23,
+      "prev_score": 702,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1372:film:931285",
@@ -25547,7 +25590,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 24
+      "rank": 24,
+      "prev_rank": 24,
+      "prev_score": 693,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:505710:film:1368337",
@@ -25592,7 +25640,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 25
+      "rank": 25,
+      "prev_rank": 25,
+      "prev_score": 687,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1372369:film:1390300",
@@ -25637,7 +25690,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 26
+      "rank": 26,
+      "prev_rank": 26,
+      "prev_score": 682,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:107446:film:687163",
@@ -25682,7 +25740,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 27
+      "rank": 27,
+      "prev_rank": 27,
+      "prev_score": 673,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2034418:film:1316092",
@@ -25727,7 +25790,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 28
+      "rank": 28,
+      "prev_rank": 28,
+      "prev_score": 671,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1267240:film:1140521",
@@ -25743,14 +25811,14 @@
       "score": 658,
       "rating": 658,
       "attention_type": "mixed",
-      "shock_score": 92.4,
+      "shock_score": 92.39,
       "debug": {
         "entity_general_mentions": 14016,
         "title_specific_x": 293,
         "ts_x_score": 658,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 7008,
+        "allocated_general_mentions": 7007,
         "allocated_general_news": 0,
         "title_weight": 0.006,
         "title_momentum_weight": 0.004,
@@ -25768,11 +25836,16 @@
         "raw_rating": 658,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 7301,
+        "total_mentions": 7300,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 29
+      "rank": 29,
+      "prev_rank": 29,
+      "prev_score": 658,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:505710:film:1170608",
@@ -25817,7 +25890,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 30
+      "rank": 30,
+      "prev_rank": 30,
+      "prev_score": 651,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:11288:film:1368337",
@@ -25862,7 +25940,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 31
+      "rank": 31,
+      "prev_rank": 31,
+      "prev_score": 646,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:13240:film:1084577",
@@ -25907,7 +25990,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 32
+      "rank": 32,
+      "prev_rank": 32,
+      "prev_score": 638,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:505710:film:969681",
@@ -25932,8 +26020,8 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 46116,
         "allocated_general_news": 0,
-        "title_weight": 0.573,
-        "title_momentum_weight": 0.558,
+        "title_weight": 0.572,
+        "title_momentum_weight": 0.557,
         "days_to_release": 89,
         "release_proximity_weight": 1.3,
         "lifecycle_phase": "active-campaign",
@@ -25952,7 +26040,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 33
+      "rank": 33,
+      "prev_rank": 33,
+      "prev_score": 617,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:6730:film:1084577",
@@ -25997,7 +26090,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 34
+      "rank": 34,
+      "prev_rank": 34,
+      "prev_score": 610,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:3499255:film:1450527",
@@ -26042,7 +26140,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 35
+      "rank": 35,
+      "prev_rank": 35,
+      "prev_score": 600,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1813:film:1368337",
@@ -26087,7 +26190,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 36
+      "rank": 36,
+      "prev_rank": 36,
+      "prev_score": 573,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:5081:film:1275779",
@@ -26132,7 +26240,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 37
+      "rank": 37,
+      "prev_rank": 37,
+      "prev_score": 550,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1990676:film:936075",
@@ -26177,7 +26290,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 38
+      "rank": 38,
+      "prev_rank": 38,
+      "prev_score": 525,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1372369:film:1266127",
@@ -26222,7 +26340,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 39
+      "rank": 39,
+      "prev_rank": 39,
+      "prev_score": 524,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:215055:film:980431",
@@ -26267,7 +26390,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 40
+      "rank": 40,
+      "prev_rank": 40,
+      "prev_score": 515,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1391986:film:1470130",
@@ -26312,7 +26440,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 41
+      "rank": 41,
+      "prev_rank": 41,
+      "prev_score": 497,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:74568:film:1171145",
@@ -26357,7 +26490,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 42
+      "rank": 42,
+      "prev_rank": 42,
+      "prev_score": 490,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1474123:film:1297842",
@@ -26370,8 +26508,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/4jVS3EziBn7bf97ErxkW7jsdiLM.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-      "score": 487,
-      "rating": 487,
+      "score": 488,
+      "rating": 488,
       "attention_type": "attention-driven",
       "shock_score": 6.13,
       "debug": {
@@ -26395,14 +26533,19 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 487,
+        "raw_rating": 488,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 1156,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 43
+      "rank": 43,
+      "prev_rank": 43,
+      "prev_score": 487,
+      "rank_delta": 0,
+      "score_delta": 1,
+      "is_new": false
     },
     {
       "pairing_id": "actor:11181:film:1314481",
@@ -26447,7 +26590,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 44
+      "rank": 44,
+      "prev_rank": 44,
+      "prev_score": 478,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1267240:film:1297842",
@@ -26479,7 +26627,7 @@
         "lifecycle_phase": "post-theatrical",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 47,
+        "title_halo": 48,
         "x_score": 427,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -26492,7 +26640,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 45
+      "rank": 45,
+      "prev_rank": 45,
+      "prev_score": 475,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2034418:film:1384216",
@@ -26537,7 +26690,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 46
+      "rank": 46,
+      "prev_rank": 46,
+      "prev_score": 465,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:14405:film:1159559",
@@ -26582,7 +26740,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 47
+      "rank": 47,
+      "prev_rank": 47,
+      "prev_score": 452,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:1398631:film:1304313",
@@ -26627,7 +26790,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 48
+      "rank": 48,
+      "prev_rank": 48,
+      "prev_score": 452,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:938:film:1290417",
@@ -26672,7 +26840,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 49
+      "rank": 49,
+      "prev_rank": 49,
+      "prev_score": 448,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:64295:film:1265609",
@@ -26717,7 +26890,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 50
+      "rank": 50,
+      "prev_rank": 50,
+      "prev_score": 448,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:17773:film:1297842",
@@ -26742,7 +26920,7 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1892,
         "allocated_general_news": 0,
-        "title_weight": 0.911,
+        "title_weight": 0.912,
         "title_momentum_weight": 0.943,
         "days_to_release": -79,
         "release_proximity_weight": 0.5,
@@ -26762,7 +26940,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 51
+      "rank": 51,
+      "prev_rank": 51,
+      "prev_score": 444,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:74863:film:980431",
@@ -26807,7 +26990,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 52
+      "rank": 52,
+      "prev_rank": 52,
+      "prev_score": 444,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:4487890:film:936075",
@@ -26820,8 +27008,8 @@
       "billing": 3,
       "profile_url": "https://image.tmdb.org/t/p/w300/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 442,
-      "rating": 442,
+      "score": 443,
+      "rating": 443,
       "attention_type": "attention-driven",
       "shock_score": 4.73,
       "debug": {
@@ -26839,20 +27027,25 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 127,
+        "title_halo": 128,
         "x_score": 315,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 442,
+        "raw_rating": 443,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 231,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 53
+      "rank": 53,
+      "prev_rank": 53,
+      "prev_score": 443,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:74568:film:1003596",
@@ -26897,7 +27090,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 54
+      "rank": 54,
+      "prev_rank": 54,
+      "prev_score": 436,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1202534:film:1511057",
@@ -26942,7 +27140,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 55
+      "rank": 55,
+      "prev_rank": 55,
+      "prev_score": 432,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:35029:film:1297842",
@@ -26974,7 +27177,7 @@
         "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 39,
+        "title_halo": 40,
         "x_score": 385,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -26987,7 +27190,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 56
+      "rank": 56,
+      "prev_rank": 56,
+      "prev_score": 425,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1763709:film:1297842",
@@ -27032,7 +27240,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 57
+      "rank": 57,
+      "prev_rank": 57,
+      "prev_score": 421,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:63:film:1383731",
@@ -27077,7 +27290,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 58
+      "rank": 58,
+      "prev_rank": 58,
+      "prev_score": 419,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1498158:film:1159831",
@@ -27122,7 +27340,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 59
+      "rank": 59,
+      "prev_rank": 59,
+      "prev_score": 413,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:65827:film:1115544",
@@ -27167,7 +27390,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 60
+      "rank": 60,
+      "prev_rank": 60,
+      "prev_score": 412,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1610783:film:980431",
@@ -27212,7 +27440,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 61
+      "rank": 61,
+      "prev_rank": 61,
+      "prev_score": 410,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:4587:film:1171145",
@@ -27257,7 +27490,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 62
+      "rank": 62,
+      "prev_rank": 62,
+      "prev_score": 407,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:221192:film:1266127",
@@ -27302,7 +27540,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 63
+      "rank": 63,
+      "prev_rank": 63,
+      "prev_score": 405,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:36594:film:1119449",
@@ -27347,7 +27590,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 64
+      "rank": 64,
+      "prev_rank": 64,
+      "prev_score": 396,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2673750:film:1292695",
@@ -27392,7 +27640,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 65
+      "rank": 65,
+      "prev_rank": 65,
+      "prev_score": 391,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:3052321:film:1367642",
@@ -27437,7 +27690,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 66
+      "rank": 66,
+      "prev_rank": 66,
+      "prev_score": 391,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:6065:film:1265609",
@@ -27482,7 +27740,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 67
+      "rank": 67,
+      "prev_rank": 67,
+      "prev_score": 389,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:936932:film:1480387",
@@ -27527,7 +27790,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 68
+      "rank": 68,
+      "prev_rank": 68,
+      "prev_score": 382,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1294982:film:1084577",
@@ -27572,7 +27840,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 69
+      "rank": 69,
+      "prev_rank": 69,
+      "prev_score": 382,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:543530:film:980431",
@@ -27617,7 +27890,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 70
+      "rank": 70,
+      "prev_rank": 70,
+      "prev_score": 380,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2628:film:1414413",
@@ -27662,7 +27940,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 71
+      "rank": 71,
+      "prev_rank": 71,
+      "prev_score": 380,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:155267:film:687163",
@@ -27707,7 +27990,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 72
+      "rank": 72,
+      "prev_rank": 72,
+      "prev_score": 380,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:298410:film:1226863",
@@ -27752,7 +28040,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 73
+      "rank": 73,
+      "prev_rank": 73,
+      "prev_score": 379,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:3450541:film:1446616",
@@ -27797,7 +28090,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 74
+      "rank": 74,
+      "prev_rank": 74,
+      "prev_score": 379,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1232756:film:1290417",
@@ -27842,7 +28140,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 75
+      "rank": 75,
+      "prev_rank": 75,
+      "prev_score": 373,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:3894:film:1159831",
@@ -27887,7 +28190,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 76
+      "rank": 76,
+      "prev_rank": 76,
+      "prev_score": 373,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1483976:film:1084187",
@@ -27932,7 +28240,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 77
+      "rank": 77,
+      "prev_rank": 77,
+      "prev_score": 372,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:103:film:1171145",
@@ -27977,7 +28290,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 78
+      "rank": 78,
+      "prev_rank": 78,
+      "prev_score": 370,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:10993:film:1292695",
@@ -28022,7 +28340,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 79
+      "rank": 79,
+      "prev_rank": 79,
+      "prev_score": 369,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:8783:film:1318447",
@@ -28067,7 +28390,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 80
+      "rank": 80,
+      "prev_rank": 80,
+      "prev_score": 367,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:3291945:film:1290417",
@@ -28112,7 +28440,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 81
+      "rank": 81,
+      "prev_rank": 81,
+      "prev_score": 366,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:1280021:film:1325734",
@@ -28157,7 +28490,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 82
+      "rank": 82,
+      "prev_rank": 82,
+      "prev_score": 366,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1813:film:1101383",
@@ -28202,7 +28540,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 83
+      "rank": 83,
+      "prev_rank": 83,
+      "prev_score": 364,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:109:film:1266127",
@@ -28247,7 +28590,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 84
+      "rank": 84,
+      "prev_rank": 84,
+      "prev_score": 361,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:7152:film:1248832",
@@ -28292,7 +28640,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 85
+      "rank": 85,
+      "prev_rank": 85,
+      "prev_score": 359,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1134885:film:1613798",
@@ -28337,7 +28690,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 86
+      "rank": 86,
+      "prev_rank": 86,
+      "prev_score": 358,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:9206:film:1159559",
@@ -28382,7 +28740,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 87
+      "rank": 87,
+      "prev_rank": 87,
+      "prev_score": 356,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "director:5065:film:1314481",
@@ -28427,7 +28790,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 88
+      "rank": 88,
+      "prev_rank": 88,
+      "prev_score": 356,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1454946:film:687163",
@@ -28472,7 +28840,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 89
+      "rank": 89,
+      "prev_rank": 89,
+      "prev_score": 352,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:15009:film:1314481",
@@ -28517,7 +28890,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 90
+      "rank": 90,
+      "prev_rank": 90,
+      "prev_score": 352,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1452046:film:1084187",
@@ -28562,7 +28940,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 91
+      "rank": 91,
+      "prev_rank": 91,
+      "prev_score": 349,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1222992:film:1122573",
@@ -28607,7 +28990,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 92
+      "rank": 92,
+      "prev_rank": 92,
+      "prev_score": 348,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:189230:film:931285",
@@ -28652,7 +29040,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 93
+      "rank": 93,
+      "prev_rank": 93,
+      "prev_score": 347,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:51957:film:1159559",
@@ -28697,7 +29090,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 94
+      "rank": 94,
+      "prev_rank": 94,
+      "prev_score": 346,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:136347:film:931285",
@@ -28742,7 +29140,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 95
+      "rank": 95,
+      "prev_rank": 95,
+      "prev_score": 346,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1286328:film:1119449",
@@ -28787,7 +29190,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 96
+      "rank": 96,
+      "prev_rank": 96,
+      "prev_score": 344,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1416383:film:1418657",
@@ -28832,7 +29240,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 97
+      "rank": 97,
+      "prev_rank": 97,
+      "prev_score": 343,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1134885:film:1414413",
@@ -28877,7 +29290,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 98
+      "rank": 98,
+      "prev_rank": 98,
+      "prev_score": 341,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:2168270:film:931285",
@@ -28922,7 +29340,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 99
+      "rank": 99,
+      "prev_rank": 99,
+      "prev_score": 341,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     },
     {
       "pairing_id": "actor:1240538:film:1084577",
@@ -28967,7 +29390,12 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 100
+      "rank": 100,
+      "prev_rank": 100,
+      "prev_score": 340,
+      "rank_delta": 0,
+      "score_delta": 0,
+      "is_new": false
     }
   ]
 }

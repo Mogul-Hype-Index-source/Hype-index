@@ -411,6 +411,87 @@ def _enrich_people_with_history(people: List[Dict[str, Any]], key: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Pairing history — last 5 pulses for rank/score tracking
+# ---------------------------------------------------------------------------
+
+PAIRING_HISTORY_PATH = CACHE_DIR / "pairing_history.json"
+MAX_PAIRING_HISTORY = 5
+
+
+def _load_pairing_history() -> List[Dict[str, Any]]:
+    if not PAIRING_HISTORY_PATH.exists():
+        return []
+    try:
+        return json.loads(PAIRING_HISTORY_PATH.read_text())
+    except Exception:
+        return []
+
+
+def _save_pairing_history(history: List[Dict[str, Any]]) -> None:
+    PAIRING_HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PAIRING_HISTORY_PATH.write_text(json.dumps(history, indent=2))
+
+
+def _enrich_pairings_with_history(pairings: List[Dict[str, Any]],
+                                   generated_at: str) -> None:
+    """
+    Add prev_rank, prev_score, rank_delta, score_delta to each pairing
+    by comparing against the most recent pulse in pairing history.
+    Then save the current pulse to history (rolling window of 5).
+    """
+    history = _load_pairing_history()
+
+    # Previous pulse = most recent entry in history
+    prev_snapshot: Dict[str, Dict[str, Any]] = {}
+    if history:
+        for entry in history[-1].get("pairings", []):
+            pid = entry.get("pairing_id")
+            if pid:
+                prev_snapshot[pid] = entry
+
+    # Enrich each pairing
+    for p in pairings:
+        pid = p.get("pairing_id")
+        prev = prev_snapshot.get(pid)
+
+        if prev:
+            p["prev_rank"] = prev.get("rank")
+            p["prev_score"] = prev.get("score")
+            p["rank_delta"] = (prev.get("rank", 0) - p["rank"])  # positive = climbed
+            p["score_delta"] = p["score"] - prev.get("score", 0)
+            p["is_new"] = False
+        else:
+            p["prev_rank"] = None
+            p["prev_score"] = None
+            p["rank_delta"] = 0
+            p["score_delta"] = 0
+            p["is_new"] = True
+
+    # Save current pulse to history (keep last 5)
+    current_snapshot = {
+        "timestamp": generated_at,
+        "pairings": [
+            {"pairing_id": p["pairing_id"], "rank": p["rank"], "score": p["score"]}
+            for p in pairings
+        ],
+    }
+    history.append(current_snapshot)
+    if len(history) > MAX_PAIRING_HISTORY:
+        history = history[-MAX_PAIRING_HISTORY:]
+    _save_pairing_history(history)
+
+    LOG.info("Pairing history: %d pulses stored, %d pairings with prev_rank",
+             len(history), sum(1 for p in pairings if p.get("prev_rank") is not None))
+
+
+def _enrich_and_return_pairings(pairings: List[Dict[str, Any]],
+                                 generated_at: datetime) -> List[Dict[str, Any]]:
+    """Enrich pairings with history, return them."""
+    _enrich_pairings_with_history(pairings, generated_at.isoformat())
+    return pairings
+
+
+# ---------------------------------------------------------------------------
 # Assemble the public index.json the frontend reads
 # ---------------------------------------------------------------------------
 
@@ -572,7 +653,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
         "streaming_movies": [m for m in public_movies if m.get("release_type") == "streaming"],
         "actors":      people["actors"],
         "directors":   people["directors"],
-        "pairings":    people.get("pairings", []),
+        "pairings":    _enrich_and_return_pairings(people.get("pairings", []), generated_at),
     }
 
 
