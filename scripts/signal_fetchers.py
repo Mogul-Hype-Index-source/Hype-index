@@ -98,7 +98,7 @@ def fetch_x_for_title(movie: Dict[str, Any]) -> int:
     title = movie.get("title", "")
     clean = _sanitize_title(title)
     count = _x_count_single(f'"{clean}"', bearer)
-    return min(count, 50000)
+    return count
 
 
 def fetch_news_for_title(movie: Dict[str, Any],

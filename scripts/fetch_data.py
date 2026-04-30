@@ -1087,7 +1087,7 @@ def fetch_x_mention_count(query: str, bearer_token: str) -> int:
     except Exception as exc:  # noqa: BLE001
         LOG.warning("X API request failed: %s", exc)
         return 0
-    return min(int(data.get("meta", {}).get("total_tweet_count", 0)), 50000)
+    return int(data.get("meta", {}).get("total_tweet_count", 0))
 
 
 def fetch_x_mentions_batch(queries: Dict[str, str],
@@ -1472,9 +1472,12 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
 
     x_counts = fetch_x_mentions_batch(x_movie_queries)
 
-    # 5b. People queries — separate batch with cooldown
+    # 5b. People queries — separate batch with rate limit recovery
+    # X API allows 300 req/15min. Movie batch used ~170-300 of those.
+    # Need to wait for the 15-minute window to partially reset.
+    # 60s gives enough recovery for ~60-80 queries (top actors).
     LOG.info("X people batch: cooling down before actor/director queries...")
-    time.sleep(15)  # 15s cooldown to let rate limit window recover
+    time.sleep(60)
 
     x_people_queries: Dict[str, str] = {}
     seen_people: set = set()
@@ -1692,7 +1695,8 @@ def derive_people(movies: List[Dict[str, Any]],
             total_mentions = x + news_count
 
             # X scaled: 50K = max contribution of 800 points
-            x_score = min(x / 50000, 1.0) * 800 if x > 0 else 0
+            # Log scale for X: 1K→267, 10K→533, 100K→667, 1M→800
+            x_score = min(math.log10(max(x, 1)) / math.log10(1000000), 1.0) * 800 if x > 0 else 0
             # News scaled: 5 mentions = max contribution of 400 points
             news_score = min(news_count / 5, 1.0) * 400 if news_count > 0 else 0
 
