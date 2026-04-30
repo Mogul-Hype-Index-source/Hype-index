@@ -1780,50 +1780,42 @@ def derive_people(movies: List[Dict[str, Any]],
             if not active_films:
                 active_films = films  # fallback: use all
 
-            total_weight = sum(f.get("score", 0) for f in active_films) or 1
+            total_momentum = sum(f.get("score", 0) for f in active_films) or 1
+            now_utc = datetime.now(timezone.utc)
 
+            # --- Pass 1: compute raw weights for all films ---
+            film_metadata: List[Dict[str, Any]] = []
             for f in active_films:
                 film_id = f.get("tmdb_id")
                 film_title = f.get("title", "")
                 film_score = f.get("score", 0)
-                billing = f.get("billing", 3)
-                billing_mult = max(0.50, 1.0 - billing * 0.10)
 
-                # Release proximity lifecycle weighting
+                # Release proximity lifecycle
                 rd = f.get("release_date") or ""
                 try:
-                    release_date = datetime.strptime(rd, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-                    days_to_release = (release_date - datetime.now(timezone.utc)).days
+                    release_dt = datetime.strptime(rd, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                    days_to_release = (release_dt - now_utc).days
                 except (ValueError, TypeError):
-                    days_to_release = 180  # unknown → mid-range default
+                    days_to_release = 180
 
                 if days_to_release > 365:
-                    proximity_weight = 0.5
-                    lifecycle_phase = "early-announcement"
+                    proximity_weight = 0.5; lifecycle_phase = "early-announcement"
                 elif days_to_release > 180:
-                    proximity_weight = 0.8
-                    lifecycle_phase = "pre-production"
+                    proximity_weight = 0.8; lifecycle_phase = "pre-production"
                 elif days_to_release > 90:
-                    proximity_weight = 1.0
-                    lifecycle_phase = "marketing-ramp"
+                    proximity_weight = 1.0; lifecycle_phase = "marketing-ramp"
                 elif days_to_release > 30:
-                    proximity_weight = 1.3
-                    lifecycle_phase = "active-campaign"
+                    proximity_weight = 1.3; lifecycle_phase = "active-campaign"
                 elif days_to_release > 0:
-                    proximity_weight = 1.6
-                    lifecycle_phase = "pre-release-peak"
+                    proximity_weight = 1.6; lifecycle_phase = "pre-release-peak"
                 elif days_to_release > -14:
-                    proximity_weight = 1.2
-                    lifecycle_phase = "opening-window"
+                    proximity_weight = 1.2; lifecycle_phase = "opening-window"
                 elif days_to_release > -60:
-                    proximity_weight = 0.8
-                    lifecycle_phase = "theatrical-run"
+                    proximity_weight = 0.8; lifecycle_phase = "theatrical-run"
                 else:
-                    proximity_weight = 0.5
-                    lifecycle_phase = "post-theatrical"
+                    proximity_weight = 0.5; lifecycle_phase = "post-theatrical"
 
-                # Trailer/casting exception: title-specific news or X spike
-                # temporarily boosts proximity weight
+                # Trailer/casting exception
                 ts_x_key_check = f"ts:{role}:{pid}:film:{film_id}"
                 has_title_spike = (x_cached_counts.get(ts_x_key_check, 0) > 1000)
                 has_title_news_check = any(
@@ -1833,29 +1825,67 @@ def derive_people(movies: List[Dict[str, Any]],
                 if has_title_spike or has_title_news_check:
                     proximity_weight += 0.4
 
-                # Title weight: momentum × lifecycle
-                title_momentum_weight = film_score / total_weight
-                title_weight = title_momentum_weight * proximity_weight
+                title_momentum_weight = film_score / total_momentum
+                raw_weight = title_momentum_weight * proximity_weight
 
-                # Re-normalize weights across this entity's films
-                # (done after the loop via proportional allocation)
+                film_metadata.append({
+                    "f": f, "film_id": film_id, "film_title": film_title,
+                    "film_score": film_score,
+                    "days_to_release": days_to_release,
+                    "proximity_weight": proximity_weight,
+                    "lifecycle_phase": lifecycle_phase,
+                    "title_momentum_weight": title_momentum_weight,
+                    "raw_weight": raw_weight,
+                })
 
-                # Allocation cap: no single title gets >50% of general signal
-                capped_weight = min(title_weight, 0.50) if len(active_films) > 1 else 1.0
+            # --- Pass 2: normalize weights to sum to 1.0 ---
+            total_raw = sum(fm["raw_weight"] for fm in film_metadata) or 1.0
+            for fm in film_metadata:
+                fm["normalized_weight"] = fm["raw_weight"] / total_raw
 
-                # Single-title rule: 100% allocation
-                if len(active_films) == 1:
-                    capped_weight = 1.0
+            # --- Pass 3: apply 50% cap and redistribute excess ---
+            if len(film_metadata) > 1:
+                excess = 0.0
+                uncapped_count = 0
+                for fm in film_metadata:
+                    if fm["normalized_weight"] > 0.50:
+                        excess += fm["normalized_weight"] - 0.50
+                        fm["capped_weight"] = 0.50
+                    else:
+                        fm["capped_weight"] = fm["normalized_weight"]
+                        uncapped_count += 1
+                # Redistribute excess proportionally to uncapped titles
+                if excess > 0 and uncapped_count > 0:
+                    uncapped_total = sum(fm["capped_weight"] for fm in film_metadata if fm["capped_weight"] < 0.50)
+                    for fm in film_metadata:
+                        if fm["capped_weight"] < 0.50 and uncapped_total > 0:
+                            fm["capped_weight"] += excess * (fm["capped_weight"] / uncapped_total)
+            else:
+                for fm in film_metadata:
+                    fm["capped_weight"] = 1.0
 
-                # Pari passu allocation of entity-general X
+            # --- Pass 4: allocate and score each pairing ---
+            for fm in film_metadata:
+                f = fm["f"]
+                film_id = fm["film_id"]
+                film_title = fm["film_title"]
+                film_score = fm["film_score"]
+                billing = f.get("billing", 3)
+                billing_mult = max(0.50, 1.0 - billing * 0.10)
+                days_to_release = fm["days_to_release"]
+                proximity_weight = fm["proximity_weight"]
+                lifecycle_phase = fm["lifecycle_phase"]
+                title_momentum_weight = fm["title_momentum_weight"]
+                title_weight = fm["normalized_weight"]
+                capped_weight = fm["capped_weight"]
+
+                # Allocate general signal
                 allocated_general = int(entity_x * capped_weight)
 
-                # Title-specific signal: news mentioning BOTH person and film
+                # Title-specific news
                 title_news = [n for n in person_news
                               if film_title.lower() in (n.get("headline", "").lower())]
                 entity_general_news = len(person_news) - len(title_news)
-
-                # Allocated general news
                 allocated_news = int(entity_general_news * capped_weight)
                 title_specific_news = len(title_news)
 
