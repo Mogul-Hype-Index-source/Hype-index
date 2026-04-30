@@ -1758,20 +1758,26 @@ def derive_people(movies: List[Dict[str, Any]],
                 allocated_news = int(entity_general_news * capped_weight)
                 title_specific_news = len(title_news)
 
-                # Total signal for this pairing
-                total_x = allocated_general
-                total_news = title_specific_news + allocated_news
-                total_mentions = total_x + total_news
+                # Scoring — title-specific signal weighted 2x vs allocated general
+                TITLE_SPECIFIC_MULT = 2.0
 
-                # Scoring
                 # Title halo: 15% of film score × billing
                 title_halo = film_score * billing_mult * 0.15 * role_mult
 
-                # X score: log scale
+                # X score: title-specific (if we had it) gets 2x, general gets 1x
+                # Currently all X is entity-general (bare name query), so
+                # allocated_general IS the X signal. Title-specific X would come
+                # from queries like "Zendaya Spider-Man" which we don't run yet.
+                # For now, title-specific news is the differentiator.
+                total_x = allocated_general
                 x_score = min(math.log10(max(total_x, 1)) / math.log10(1000000), 1.0) * 800 if total_x > 0 else 0
 
-                # News score
-                news_score = min(total_news / 5, 1.0) * 400 if total_news > 0 else 0
+                # News: title-specific news gets 2x weight, allocated general gets 1x
+                title_news_score = min(title_specific_news * TITLE_SPECIFIC_MULT / 5, 1.0) * 400 if title_specific_news > 0 else 0
+                general_news_score = min(allocated_news / 5, 1.0) * 200 if allocated_news > 0 else 0
+                news_score = title_news_score + general_news_score
+
+                total_mentions = total_x + title_specific_news + allocated_news
 
                 # Velocity: use film's YouTube velocity as proxy
                 velocity_bonus = 0
@@ -1817,7 +1823,10 @@ def derive_people(movies: List[Dict[str, Any]],
                         "role_multiplier": role_mult,
                         "title_halo": int(round(title_halo)),
                         "x_score": int(round(x_score)),
+                        "title_news_score": int(round(title_news_score)),
+                        "general_news_score": int(round(general_news_score)),
                         "news_score": int(round(news_score)),
+                        "title_specific_multiplier": TITLE_SPECIFIC_MULT,
                         "raw_rating": int(round(raw)),
                         "confidence": confidence,
                         "cap": cap,
