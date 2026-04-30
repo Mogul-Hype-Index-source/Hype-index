@@ -1486,7 +1486,7 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     # X API rate limit: 300 req/15min. Can't fit ~170 movie + ~300 people
     # queries in one pulse window. Alternate: odd pulses = movies, even = people.
     # Determine mode from pulse counter file.
-    _pulse_counter_path = CACHE_DIR / "x_pulse_counter.json"
+    _pulse_counter_path = REPO_ROOT / "data" / "cache" / "x_pulse_counter.json"
     _pc = _load_json(_pulse_counter_path)
     pulse_number = int(_pc.get("n", 0)) + 1
     x_mode = "movies" if (pulse_number % 2 == 1) else "people"
