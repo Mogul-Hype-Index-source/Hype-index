@@ -1094,7 +1094,8 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
                            force: bool = False) -> Dict[str, int]:
     """
     Fetch X mention counts for a {key: search_query} dict.
-    Cached for X_MENTIONS_TTL_HOURS. Returns {key: count}.
+    Never overwrites fresh data with zero on 429. Preserves last successful
+    cached values when rate limited. Returns {key: count}.
     """
     bearer = _get_x_bearer_token()
     if not bearer:
@@ -1110,35 +1111,58 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
         return {k: int(cached_counts.get(k, 0)) for k in queries}
 
     out: Dict[str, int] = {}
-    any_success = False
+    fresh_fetched = 0
+    stale_used = 0
+    rate_limited = False
+
     for key, q in queries.items():
         try:
             count = fetch_x_mention_count(q, bearer)
-            out[key] = count
             if count > 0:
-                any_success = True
+                out[key] = count
+                fresh_fetched += 1
+            else:
+                # API returned 0 — could be real zero or soft failure
+                # Keep cached value if it was non-zero (don't overwrite real data with 0)
+                prev = cached_counts.get(key, 0)
+                if prev > 0:
+                    out[key] = prev
+                    stale_used += 1
+                else:
+                    out[key] = 0
         except RuntimeError as exc:
-            # 402/403/429 — API tier or rate limit; stop hammering
-            LOG.warning("X API unavailable (%s) — skipping remaining %d queries",
-                        exc, len(queries) - len(out))
+            # 402/403/429 — stop hammering, preserve all remaining cached values
+            rate_limited = True
+            LOG.warning("X API rate limited — preserving cache for remaining %d queries",
+                        len(queries) - len(out))
             for remaining_key in queries:
                 if remaining_key not in out:
-                    out[remaining_key] = int(cached_counts.get(remaining_key, 0))
+                    prev = cached_counts.get(remaining_key, 0)
+                    out[remaining_key] = prev
+                    if prev > 0:
+                        stale_used += 1
             break
         except Exception as exc:  # noqa: BLE001
             LOG.warning("X mentions failed for %s: %s", key, exc)
             out[key] = int(cached_counts.get(key, 0))
-        time.sleep(1.0)  # respect rate limits (300 requests / 15 min)
+            if out[key] > 0:
+                stale_used += 1
+        time.sleep(1.0)
 
-    if any_success:
-        _save_json(_x_cache_path(), {
-            "fetched_at": datetime.now(timezone.utc).isoformat(),
-            "counts": out,
-        })
-        LOG.info("X mentions cache updated — %d entries", len(out))
-    else:
-        LOG.warning("X mentions fetch produced no fresh data — keeping previous cache")
-        out = {k: int(cached_counts.get(k, 0)) for k in queries}
+    # Always save — merge fresh data into existing cache, never lose old values
+    merged = dict(cached_counts)
+    for k, v in out.items():
+        if v > 0 or k not in merged:
+            merged[k] = v
+    _save_json(_x_cache_path(), {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "x_last_success_at": datetime.now(timezone.utc).isoformat() if fresh_fetched > 0 else cache.get("x_last_success_at", ""),
+        "x_stale": rate_limited or fresh_fetched == 0,
+        "counts": merged,
+    })
+
+    LOG.info("X batch: fetched=%d, stale_used=%d, rate_limited=%s",
+             fresh_fetched, stale_used, rate_limited)
 
     return out
 
@@ -1458,56 +1482,63 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         q = reverse_map.get(m["title"], m["title"])
         m["trends"] = int(trends.get(q, 0))
 
-    # 5. X (Twitter) mention counts — split into movie batch + people batch
-    # to avoid rate limit short-circuit killing actor queries.
-    # Movie queries run first, then a separate batch for actors/directors
-    # after a cooldown period.
+    # 5. X (Twitter) mention counts — alternating mode
+    # X API rate limit: 300 req/15min. Can't fit ~170 movie + ~300 people
+    # queries in one pulse window. Alternate: odd pulses = movies, even = people.
+    # Determine mode from pulse counter file.
+    _pulse_counter_path = CACHE_DIR / "x_pulse_counter.json"
+    _pc = _load_json(_pulse_counter_path)
+    pulse_number = int(_pc.get("n", 0)) + 1
+    x_mode = "movies" if (pulse_number % 2 == 1) else "people"
+    _save_json(_pulse_counter_path, {"n": pulse_number})
+    LOG.info("X mode: %s (pulse #%d)", x_mode, pulse_number)
 
-    # 5a. Movie queries — bare title
-    x_movie_queries: Dict[str, str] = {}
+    # Build queries for this pulse's mode
+    x_queries: Dict[str, str] = {}
+    if x_mode == "movies":
+        for m in movies:
+            key = f"movie:{m['tmdb_id']}"
+            clean_title = _sanitize_title(m["title"])
+            x_queries[key] = f'"{clean_title}"'
+    else:
+        seen_people: set = set()
+        for m in movies:
+            for c in (m.get("cast_full") or [])[:6]:
+                pid = c.get("id")
+                name = c.get("name")
+                if pid and name and pid not in seen_people:
+                    x_queries[f"actor:{pid}"] = f'"{name}"'
+                    seen_people.add(pid)
+            for d in (m.get("directors_full") or []):
+                pid = d.get("id")
+                name = d.get("name")
+                if pid and name and pid not in seen_people:
+                    x_queries[f"director:{pid}"] = f'"{name}"'
+                    seen_people.add(pid)
+
+    x_counts = fetch_x_mentions_batch(x_queries, force=True)
+
+    # Log results
+    x_fetched = sum(1 for v in x_counts.values() if v > 0)
+    x_stale = sum(1 for k in x_queries if x_counts.get(k, 0) == 0)
+    LOG.info("X fetched: %d, X stale values used: %d, X rate limited: %s",
+             x_fetched, x_stale,
+             "true" if x_fetched < len(x_queries) * 0.5 else "false")
+
+    # Apply to movies — use fresh data or preserve existing from cache
     for m in movies:
         key = f"movie:{m['tmdb_id']}"
-        clean_title = _sanitize_title(m["title"])
-        x_movie_queries[key] = f'"{clean_title}"'
+        if key in x_counts and x_counts[key] > 0:
+            m["x_mentions"] = x_counts[key]
+        elif key in x_counts:
+            # 429 fallback returned 0 — don't overwrite with zero if we have prior data
+            m["x_mentions"] = m.get("x_mentions") or x_counts[key]
+        else:
+            # Not queried this pulse (alternate mode) — keep existing
+            pass
 
-    x_counts = fetch_x_mentions_batch(x_movie_queries)
-
-    # 5b. People queries — separate batch with rate limit recovery
-    # X API allows 300 req/15min. Movie batch used ~170-300 of those.
-    # Need to wait for the 15-minute window to partially reset.
-    # 60s gives enough recovery for ~60-80 queries (top actors).
-    LOG.info("X people batch: cooling down before actor/director queries...")
-    time.sleep(60)
-
-    x_people_queries: Dict[str, str] = {}
-    seen_people: set = set()
-    for m in movies:
-        for c in (m.get("cast_full") or [])[:6]:
-            pid = c.get("id")
-            name = c.get("name")
-            if pid and name and pid not in seen_people:
-                x_people_queries[f"actor:{pid}"] = f'"{name}"'
-                seen_people.add(pid)
-        for d in (m.get("directors_full") or []):
-            pid = d.get("id")
-            name = d.get("name")
-            if pid and name and pid not in seen_people:
-                x_people_queries[f"director:{pid}"] = f'"{name}"'
-                seen_people.add(pid)
-
-    LOG.info("X people batch: %d actor/director queries", len(x_people_queries))
-    x_people_counts = fetch_x_mentions_batch(x_people_queries, force=True)
-    x_counts.update(x_people_counts)
-    for m in movies:
-        raw_x = x_counts.get(f"movie:{m['tmdb_id']}", 0)
-        # Sanity cap: >50K mentions is suspicious — discount by 50%
-        if raw_x > 50000:
-            LOG.warning("X mentions sanity cap: %s has %d mentions — discounting 50%%",
-                        m.get("title", "?"), raw_x)
-            raw_x = raw_x // 2
-        m["x_mentions"] = raw_x
     x_hits = sum(1 for m in movies if m.get("x_mentions", 0) > 0)
-    LOG.info("X mentions coverage: %d/%d (%d%%)", x_hits, len(movies),
+    LOG.info("X mentions coverage (%s): %d/%d (%d%%)", x_mode, x_hits, len(movies),
              (x_hits * 100 // len(movies)) if movies else 0)
 
     # 6. Event-targeted YouTube search (quota-safe: max ~20 entities)
