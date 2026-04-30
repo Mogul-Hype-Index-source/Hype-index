@@ -1643,57 +1643,93 @@ def derive_people(movies: List[Dict[str, Any]],
     actor_list    = [_finalize(s, "actor") for s in actors.values()]
     director_list = [_finalize(s, "director") for s in directors.values()]
 
-    # Score each person per-performance: best film rating is the anchor,
-    # with X mentions and news as differentiators. Uses the same calibrated
-    # 100-1500 scale as movies via the career view formula.
+    # Score each person: film halo provides a base (15% of top film rating),
+    # but actor-specific signals (X mentions, news, source diversity) are
+    # the primary scoring drivers. Low-signal actors are capped.
+    #
+    # Formula:
+    #   actor_score = (
+    #       film_halo          ← 15% of best film rating × billing multiplier
+    #     + attention_score    ← X mentions + news, scaled
+    #     + source_diversity   ← bonus for signal from multiple sources
+    #   ) × confidence_multiplier
+    #
+    # Confidence based on total mentions:
+    #   0 mentions     → cap at 700, confidence 0.50
+    #   1-10 mentions  → cap at 850, confidence 0.65
+    #   11-25 mentions → cap at 950, confidence 0.80
+    #   25+ mentions   → uncapped,   confidence 1.00
+    #
+    # New entries without prior pulse data get an additional 0.7× dampener.
+
     def _score_people(people: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if not people:
             return people
 
-        import math
-
-        def _calibrate(raw: float) -> int:
-            if raw <= 0:
-                return 0
-            return min(1500, int(round(raw ** 0.50 * 74)))
-
         for p in people:
-            # Per-performance: each film contributes its rating weighted by billing
-            # Billing 0 (lead) gets full credit, billing 5 gets ~50%
-            films_with_billing = []
+            # Film halo: 15% of best film rating, weighted by billing
+            best_film_contribution = 0
             for f in p.get("films", []):
                 billing = f.get("billing", 3)
-                # Billing multiplier: 0→1.0, 1→0.90, 2→0.80, 3→0.70, 4→0.60, 5→0.50
                 billing_mult = max(0.50, 1.0 - billing * 0.10)
-                films_with_billing.append((f.get("score", 0) * billing_mult, f))
-            films_with_billing.sort(key=lambda x: -x[0])
-            film_ratings = [r for r, _ in films_with_billing]
+                contribution = f.get("score", 0) * billing_mult * 0.15
+                best_film_contribution = max(best_film_contribution, contribution)
 
-            # Career view: top performance dominates
-            if len(film_ratings) == 0:
-                career_base = 0
-            elif len(film_ratings) == 1:
-                career_base = film_ratings[0]
-            elif len(film_ratings) == 2:
-                career_base = 0.60 * film_ratings[0] + 0.40 * film_ratings[1]
-            else:
-                rest_w = 0.15 / (len(film_ratings) - 2)
-                career_base = (
-                    0.60 * film_ratings[0] +
-                    0.25 * film_ratings[1] +
-                    sum(rest_w * r for r in film_ratings[2:])
-                )
-
-            # Differentiators: X mentions and news lift above the film base
+            # Attention score: X mentions and news are the primary drivers
             x = p.get("x_mentions", 0)
-            news = len(p.get("news_mentions", []))
+            news_count = len(p.get("news_mentions", []))
+            total_mentions = x + news_count
 
-            # X and news contribute a bonus scaled to signal strength
-            x_bonus = min(x / 50000, 1.0) * 100 if x > 0 else 0
-            news_bonus = min(news / 5, 1.0) * 100 if news > 0 else 0
+            # X scaled: 50K = max contribution of 800 points
+            x_score = min(x / 50000, 1.0) * 800 if x > 0 else 0
+            # News scaled: 5 mentions = max contribution of 400 points
+            news_score = min(news_count / 5, 1.0) * 400 if news_count > 0 else 0
 
-            raw_rating = career_base + x_bonus + news_bonus
-            p["score"] = min(1500, int(round(raw_rating)))
+            attention_score = x_score + news_score
+
+            # Source diversity bonus: having signal from multiple sources
+            sources_active = sum([
+                1 if x > 0 else 0,
+                1 if news_count > 0 else 0,
+                1 if p.get("event_youtube_views", 0) > 0 else 0,
+            ])
+            diversity_bonus = sources_active * 30  # up to 90 points
+
+            raw_rating = best_film_contribution + attention_score + diversity_bonus
+
+            # Confidence multiplier based on total mentions
+            if total_mentions == 0:
+                confidence = 0.50
+                cap = 700
+            elif total_mentions <= 10:
+                confidence = 0.65
+                cap = 850
+            elif total_mentions <= 25:
+                confidence = 0.80
+                cap = 950
+            else:
+                confidence = 1.00
+                cap = 1500
+
+            final = min(cap, int(round(raw_rating * confidence)))
+
+            # New entry dampener
+            if p.get("is_new", False):
+                final = int(final * 0.70)
+
+            # Store scoring breakdown for debugging
+            p["score_breakdown"] = {
+                "film_halo": int(round(best_film_contribution)),
+                "x_score": int(round(x_score)),
+                "news_score": int(round(news_score)),
+                "diversity_bonus": diversity_bonus,
+                "raw_rating": int(round(raw_rating)),
+                "confidence": confidence,
+                "cap": cap,
+                "total_mentions": total_mentions,
+            }
+
+            p["score"] = max(0, final)
             p["rating"] = p["score"]
             p["scores"] = {"1d": p["score"], "7d": p["score"], "30d": p["score"]}
 
