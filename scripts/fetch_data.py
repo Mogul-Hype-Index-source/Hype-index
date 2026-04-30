@@ -1818,16 +1818,23 @@ def derive_people(movies: List[Dict[str, Any]],
                 # Title halo: 15% of film score × billing
                 title_halo = film_score * billing_mult * 0.15 * role_mult
 
-                # X score: title-specific X gets 2x, allocated general gets 1x
+                # X score: if title-specific X exists, use it (measured signal
+                # supersedes estimated allocation). Apply 2x multiplier.
+                # If no title-specific, fall back to allocated general at 1x.
                 ts_x_key = f"ts:{role}:{pid}:film:{film_id}"
                 title_specific_x = x_cached_counts.get(ts_x_key, 0)
 
-                # Title-specific X: log scale × 2x multiplier
-                ts_x_score = min(math.log10(max(title_specific_x, 1)) / math.log10(1000000), 1.0) * 800 * TITLE_SPECIFIC_MULT if title_specific_x > 0 else 0
-                # Allocated general X: log scale × 1x
-                gen_x_score = min(math.log10(max(allocated_general, 1)) / math.log10(1000000), 1.0) * 800 if allocated_general > 0 else 0
+                if title_specific_x > 0:
+                    # Measured title-specific signal — use this, not the estimate
+                    ts_x_score = min(math.log10(max(title_specific_x, 1)) / math.log10(1000000), 1.0) * 800 * TITLE_SPECIFIC_MULT
+                    gen_x_score = 0  # superseded by measurement
+                    total_x = title_specific_x
+                else:
+                    # No title-specific measurement — use allocated general
+                    ts_x_score = 0
+                    gen_x_score = min(math.log10(max(allocated_general, 1)) / math.log10(1000000), 1.0) * 800
+                    total_x = allocated_general
 
-                total_x = title_specific_x + allocated_general
                 x_score = ts_x_score + gen_x_score
 
                 # News: title-specific news gets 2x weight, allocated general gets 1x
@@ -1858,6 +1865,32 @@ def derive_people(movies: List[Dict[str, Any]],
 
                 final = min(cap, int(round(raw * confidence)))
 
+                # --- Attention classification ---
+                title_signal = title_specific_x + title_specific_news
+                general_signal = allocated_general + allocated_news
+
+                if title_signal > 0 and title_signal >= general_signal:
+                    attention_type = "title-driven"
+                elif title_signal > 0 and general_signal > title_signal:
+                    attention_type = "mixed"
+                else:
+                    attention_type = "attention-driven"
+
+                # Shock score: ratio of general to title-specific × log volume
+                if title_signal > 0:
+                    shock_score = round((general_signal / max(title_signal, 1)) * math.log10(max(total_mentions, 1)), 2)
+                else:
+                    shock_score = round(math.log10(max(general_signal, 1)) * 2, 2) if general_signal > 0 else 0
+
+                # Soft cap for attention-driven pairings:
+                # Cannot exceed rank ~4 equivalent score unless extreme signal (>500K)
+                # Applied as a score ceiling that still allows high ranking but
+                # prevents pure celebrity halo from dominating the top 3
+                if attention_type == "attention-driven" and total_mentions < 500000:
+                    attention_cap = 800  # soft ceiling
+                    if final > attention_cap:
+                        final = attention_cap
+
                 pairing = {
                     "pairing_id":   f"{role}:{pid}:film:{film_id}",
                     "entity_name":  name,
@@ -1871,6 +1904,8 @@ def derive_people(movies: List[Dict[str, Any]],
                     "poster_url":   f.get("poster_url"),
                     "score":        max(0, final),
                     "rating":       max(0, final),
+                    "attention_type": attention_type,
+                    "shock_score":  shock_score,
                     "debug": {
                         "entity_general_mentions": entity_x,
                         "title_specific_x": title_specific_x,
