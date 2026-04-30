@@ -1490,7 +1490,9 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     _pulse_counter_path = REPO_ROOT / "data" / "cache" / "x_pulse_counter.json"
     _pc = _load_json(_pulse_counter_path)
     pulse_number = int(_pc.get("n", 0)) + 1
-    x_mode = "movies" if (pulse_number % 2 == 1) else "people"
+    # Triple-alternate: movies → people-general → people-title-specific
+    x_modes = ["movies", "people", "title-specific"]
+    x_mode = x_modes[pulse_number % 3]
     _save_json(_pulse_counter_path, {"n": pulse_number})
     LOG.info("X mode: %s (pulse #%d)", x_mode, pulse_number)
 
@@ -1501,7 +1503,7 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
             key = f"movie:{m['tmdb_id']}"
             clean_title = _sanitize_title(m["title"])
             x_queries[key] = f'"{clean_title}"'
-    else:
+    elif x_mode == "people":
         seen_people: set = set()
         for m in movies:
             for c in (m.get("cast_full") or [])[:6]:
@@ -1516,6 +1518,58 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
                 if pid and name and pid not in seen_people:
                     x_queries[f"director:{pid}"] = f'"{name}"'
                     seen_people.add(pid)
+    else:
+        # title-specific mode: query "entity" "title" for top pairings
+        # Read current X cache to find top entities by general X volume
+        _ts_cache = _load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")
+        _ts_counts = _ts_cache.get("counts") or {}
+
+        # Build entity→films mapping from cast data
+        entity_films: Dict[str, List[Dict[str, str]]] = {}  # "actor:pid" → [{name, title, film_id}]
+        for m in movies:
+            clean_film = _sanitize_title(m.get("title", ""))
+            for idx, c in enumerate((m.get("cast_full") or [])[:6]):
+                pid = c.get("id")
+                name = c.get("name")
+                if pid and name:
+                    ekey = f"actor:{pid}"
+                    entity_films.setdefault(ekey, []).append({
+                        "name": name, "title": clean_film,
+                        "film_id": m.get("tmdb_id"),
+                    })
+            for d in (m.get("directors_full") or []):
+                pid = d.get("id")
+                name = d.get("name")
+                if pid and name:
+                    ekey = f"director:{pid}"
+                    entity_films.setdefault(ekey, []).append({
+                        "name": name, "title": clean_film,
+                        "film_id": m.get("tmdb_id"),
+                    })
+
+        # Sort entities by general X volume, take top 50
+        ranked_entities = sorted(
+            entity_films.keys(),
+            key=lambda k: _ts_counts.get(k, 0),
+            reverse=True
+        )[:50]
+
+        # Generate title-specific queries for each entity's films (cap at 100 total)
+        query_count = 0
+        for ekey in ranked_entities:
+            if query_count >= 100:
+                break
+            for ef in entity_films[ekey]:
+                if query_count >= 100:
+                    break
+                ts_key = f"ts:{ekey}:film:{ef['film_id']}"
+                clean_name = _sanitize_title(ef["name"])
+                clean_title = ef["title"]
+                # AND query: both entity name and title must appear
+                x_queries[ts_key] = f'"{clean_name}" "{clean_title}"'
+                query_count += 1
+
+        LOG.info("X title-specific: %d queries for %d entities", query_count, len(ranked_entities))
 
     x_counts = fetch_x_mentions_batch(x_queries, force=True)
 
@@ -1764,20 +1818,24 @@ def derive_people(movies: List[Dict[str, Any]],
                 # Title halo: 15% of film score × billing
                 title_halo = film_score * billing_mult * 0.15 * role_mult
 
-                # X score: title-specific (if we had it) gets 2x, general gets 1x
-                # Currently all X is entity-general (bare name query), so
-                # allocated_general IS the X signal. Title-specific X would come
-                # from queries like "Zendaya Spider-Man" which we don't run yet.
-                # For now, title-specific news is the differentiator.
-                total_x = allocated_general
-                x_score = min(math.log10(max(total_x, 1)) / math.log10(1000000), 1.0) * 800 if total_x > 0 else 0
+                # X score: title-specific X gets 2x, allocated general gets 1x
+                ts_x_key = f"ts:{role}:{pid}:film:{film_id}"
+                title_specific_x = x_cached_counts.get(ts_x_key, 0)
+
+                # Title-specific X: log scale × 2x multiplier
+                ts_x_score = min(math.log10(max(title_specific_x, 1)) / math.log10(1000000), 1.0) * 800 * TITLE_SPECIFIC_MULT if title_specific_x > 0 else 0
+                # Allocated general X: log scale × 1x
+                gen_x_score = min(math.log10(max(allocated_general, 1)) / math.log10(1000000), 1.0) * 800 if allocated_general > 0 else 0
+
+                total_x = title_specific_x + allocated_general
+                x_score = ts_x_score + gen_x_score
 
                 # News: title-specific news gets 2x weight, allocated general gets 1x
                 title_news_score = min(title_specific_news * TITLE_SPECIFIC_MULT / 5, 1.0) * 400 if title_specific_news > 0 else 0
                 general_news_score = min(allocated_news / 5, 1.0) * 200 if allocated_news > 0 else 0
                 news_score = title_news_score + general_news_score
 
-                total_mentions = total_x + title_specific_news + allocated_news
+                total_mentions = title_specific_x + allocated_general + title_specific_news + allocated_news
 
                 # Velocity: use film's YouTube velocity as proxy
                 velocity_bonus = 0
@@ -1815,6 +1873,9 @@ def derive_people(movies: List[Dict[str, Any]],
                     "rating":       max(0, final),
                     "debug": {
                         "entity_general_mentions": entity_x,
+                        "title_specific_x": title_specific_x,
+                        "ts_x_score": int(round(ts_x_score)),
+                        "gen_x_score": int(round(gen_x_score)),
                         "title_specific_mentions": len(title_news),
                         "allocated_general_mentions": allocated_general,
                         "allocated_general_news": allocated_news,
