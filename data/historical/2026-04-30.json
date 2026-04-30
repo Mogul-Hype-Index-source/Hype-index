@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-30T19:22:37+00:00",
-  "next_update_at": "2026-04-30T20:22:37+00:00",
+  "generated_at": "2026-04-30T19:37:16+00:00",
+  "next_update_at": "2026-04-30T20:37:16+00:00",
   "snapshot_date": "2026-04-30",
   "summary": {
     "total": 174,
     "total_streaming": 21,
-    "rising": 38,
-    "falling": 20,
-    "flat": 137,
+    "rising": 40,
+    "falling": 9,
+    "flat": 146,
     "avg_score": 97,
     "total_mentions_24h": 3
   },
@@ -153,39 +153,39 @@
   ],
   "movers_up": [
     {
+      "tmdb_id": 1382802,
+      "title": "Family Movie",
+      "poster_url": "https://image.tmdb.org/t/p/w185/iKGb52exgPMsoy9v3wR51SjQcdY.jpg",
+      "move": 2,
+      "score": 247
+    },
+    {
+      "tmdb_id": 950028,
+      "title": "The Invite",
+      "poster_url": "https://image.tmdb.org/t/p/w185/amxSk5CAVZ907gDEdgyiRZNjiwU.jpg",
+      "move": 1,
+      "score": 288
+    },
+    {
       "tmdb_id": 1108427,
       "title": "Moana",
       "poster_url": "https://image.tmdb.org/t/p/w185/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
-      "move": 6,
-      "score": 269
+      "move": 1,
+      "score": 273
     },
     {
       "tmdb_id": 1339713,
       "title": "Obsession",
       "poster_url": "https://image.tmdb.org/t/p/w185/40I66L7QKguTFDPvcLcdiTbAD7I.jpg",
-      "move": 5,
-      "score": 245
-    },
-    {
-      "tmdb_id": 1102883,
-      "title": "Mother Mary",
-      "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-      "move": 4,
-      "score": 204
+      "move": 1,
+      "score": 250
     },
     {
       "tmdb_id": 1430077,
       "title": "Hokum",
       "poster_url": "https://image.tmdb.org/t/p/w185/gC4FtEthYvx6XV2JHCQibf4P3FT.jpg",
-      "move": 3,
-      "score": 197
-    },
-    {
-      "tmdb_id": 1170608,
-      "title": "Dune: Part Three",
-      "poster_url": "https://image.tmdb.org/t/p/w185/b4wekkUaxExzOeGe7hKXzhnyXHt.jpg",
-      "move": 3,
-      "score": 26
+      "move": 1,
+      "score": 201
     }
   ],
   "movers_down": [
@@ -193,36 +193,36 @@
       "tmdb_id": 1616131,
       "title": "A Child of My Own",
       "poster_url": "https://image.tmdb.org/t/p/w185/OP9GDVWBKdWW6xsrPw8bq1hEjQ.jpg",
-      "move": -21,
-      "score": 10
-    },
-    {
-      "tmdb_id": 1318413,
-      "title": "Pressure",
-      "poster_url": "https://image.tmdb.org/t/p/w185/9RkDrI8V8QJBjhtyRX7y6Qow3aq.jpg",
-      "move": -7,
-      "score": 245
+      "move": -31,
+      "score": 1
     },
     {
       "tmdb_id": 1127384,
       "title": "Deep Water",
       "poster_url": "https://image.tmdb.org/t/p/w185/2cikvQU83ecoZncnjOmAAATr3Sp.jpg",
-      "move": -7,
-      "score": 19
+      "move": -5,
+      "score": 15
     },
     {
-      "tmdb_id": 1248832,
-      "title": "Digger",
-      "poster_url": "https://image.tmdb.org/t/p/w185/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
-      "move": -4,
-      "score": 43
-    },
-    {
-      "tmdb_id": 1171145,
-      "title": "Crime 101",
-      "poster_url": "https://image.tmdb.org/t/p/w185/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
+      "tmdb_id": 1275779,
+      "title": "Disclosure Day",
+      "poster_url": "https://image.tmdb.org/t/p/w185/7RYO0KTXIJ0rS0LqnCQLxeNR3P3.jpg",
       "move": -3,
-      "score": 193
+      "score": 87
+    },
+    {
+      "tmdb_id": 1003596,
+      "title": "Avengers: Doomsday",
+      "poster_url": "https://image.tmdb.org/t/p/w185/8HkIe2i4ScpCkcX9SzZ9IPasqWV.jpg",
+      "move": -2,
+      "score": 246
+    },
+    {
+      "tmdb_id": 1366906,
+      "title": "The Gates",
+      "poster_url": "https://image.tmdb.org/t/p/w185/u6hKIlDIpRkWOqTaesDzS0EOmx6.jpg",
+      "move": -1,
+      "score": 286
     }
   ],
   "movies": [
@@ -249,13 +249,13 @@
       "mentions": 0,
       "sentiment_pct": 60,
       "scores": {
-        "1d": 1097,
-        "7d": 1097,
-        "30d": 1097
+        "1d": 1098,
+        "7d": 1098,
+        "30d": 1098
       },
-      "rating": 1097,
+      "rating": 1098,
       "rating_band": "STRONG",
-      "score": 1097,
+      "score": 1098,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -475,13 +475,13 @@
       "mentions": 1,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 570,
-        "7d": 570,
-        "30d": 570
+        "1d": 573,
+        "7d": 573,
+        "30d": 573
       },
-      "rating": 570,
+      "rating": 573,
       "rating_band": "MODEST",
-      "score": 570,
+      "score": 573,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -786,7 +786,7 @@
     },
     {
       "rank": 6,
-      "prev_rank": 7,
+      "prev_rank": 6,
       "tmdb_id": 1433367,
       "title": "One Night Only",
       "director": "Will Gluck",
@@ -807,14 +807,14 @@
       "mentions": 1,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 387,
-        "7d": 387,
-        "30d": 387
+        "1d": 390,
+        "7d": 390,
+        "30d": 390
       },
-      "rating": 387,
+      "rating": 390,
       "rating_band": "LOW",
-      "score": 387,
-      "move": 1,
+      "score": 390,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -904,7 +904,7 @@
     },
     {
       "rank": 7,
-      "prev_rank": 6,
+      "prev_rank": 7,
       "tmdb_id": 936075,
       "title": "Michael",
       "director": "Antoine Fuqua",
@@ -925,14 +925,14 @@
       "mentions": 0,
       "sentiment_pct": 76,
       "scores": {
-        "1d": 379,
-        "7d": 379,
-        "30d": 379
+        "1d": 369,
+        "7d": 369,
+        "30d": 369
       },
-      "rating": 379,
+      "rating": 369,
       "rating_band": "LOW",
-      "score": 379,
-      "move": -1,
+      "score": 369,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1038,13 +1038,13 @@
       "mentions": 0,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 344,
-        "7d": 344,
-        "30d": 344
+        "1d": 343,
+        "7d": 343,
+        "30d": 343
       },
-      "rating": 344,
+      "rating": 343,
       "rating_band": "LOW",
-      "score": 344,
+      "score": 343,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1130,7 +1130,7 @@
     },
     {
       "rank": 10,
-      "prev_rank": 11,
+      "prev_rank": 10,
       "tmdb_id": 1325734,
       "title": "The Drama",
       "director": "Kristoffer Borgli",
@@ -1151,14 +1151,14 @@
       "mentions": 0,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 337,
-        "7d": 337,
-        "30d": 337
+        "1d": 339,
+        "7d": 339,
+        "30d": 339
       },
-      "rating": 337,
+      "rating": 339,
       "rating_band": "LOW",
-      "score": 337,
-      "move": 1,
+      "score": 339,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1469,7 +1469,7 @@
     },
     {
       "rank": 14,
-      "prev_rank": 15,
+      "prev_rank": 14,
       "tmdb_id": 1049471,
       "title": "Outcome",
       "director": "Jonah Hill",
@@ -1490,14 +1490,14 @@
       "mentions": 0,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 293,
-        "7d": 293,
-        "30d": 293
+        "1d": 294,
+        "7d": 294,
+        "30d": 294
       },
-      "rating": 293,
+      "rating": 294,
       "rating_band": "LOW",
-      "score": 293,
-      "move": 1,
+      "score": 294,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1582,7 +1582,7 @@
     },
     {
       "rank": 15,
-      "prev_rank": 14,
+      "prev_rank": 15,
       "tmdb_id": 1292415,
       "title": "Beast",
       "director": "Tyler Atkins",
@@ -1610,7 +1610,7 @@
       "rating": 292,
       "rating_band": "LOW",
       "score": 292,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1695,6 +1695,93 @@
     },
     {
       "rank": 16,
+      "prev_rank": 17,
+      "tmdb_id": 950028,
+      "title": "The Invite",
+      "director": "Olivia Wilde",
+      "cast": "Olivia Wilde, Seth Rogen",
+      "release_date": "2026-06-25",
+      "poster_url": "https://image.tmdb.org/t/p/w185/amxSk5CAVZ907gDEdgyiRZNjiwU.jpg",
+      "youtube_views": 9932407,
+      "youtube_likes": 39533,
+      "youtube_comments": 1759,
+      "youtube_video_id": "OJ19I9q_hOQ",
+      "views_today": 13252,
+      "views_7d_avg": 42359,
+      "views_trend": "decelerating",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 56,
+      "scores": {
+        "1d": 288,
+        "7d": 288,
+        "30d": 288
+      },
+      "rating": 288,
+      "rating_band": "LOW",
+      "score": 288,
+      "move": 1,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0056,
+        "youtube_engagement": 0.155,
+        "google_trends": 0.51,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.079,
+        "short": 0.079,
+        "acceleration": 0.0,
+        "raw_hype": 15.197
+      },
+      "cast_full": [
+        {
+          "id": 59315,
+          "name": "Olivia Wilde",
+          "character": "Angela",
+          "profile_path": "/jYopRE6nhYGqpb64fVUKrbJVMy1.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 19274,
+          "name": "Seth Rogen",
+          "character": "Joe",
+          "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 955,
+          "name": "Penélope Cruz",
+          "character": "Pina",
+          "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 819,
+          "name": "Edward Norton",
+          "character": "Hawk",
+          "profile_path": "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg",
+          "_billing": 3
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 59315,
+          "name": "Olivia Wilde",
+          "profile_path": "/jYopRE6nhYGqpb64fVUKrbJVMy1.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 51
+    },
+    {
+      "rank": 17,
       "prev_rank": 16,
       "tmdb_id": 1366906,
       "title": "The Gates",
@@ -1723,7 +1810,7 @@
       "rating": 286,
       "rating_band": "LOW",
       "score": 286,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1805,93 +1892,6 @@
       ],
       "news_mentions": [],
       "trends": 52
-    },
-    {
-      "rank": 17,
-      "prev_rank": 18,
-      "tmdb_id": 950028,
-      "title": "The Invite",
-      "director": "Olivia Wilde",
-      "cast": "Olivia Wilde, Seth Rogen",
-      "release_date": "2026-06-25",
-      "poster_url": "https://image.tmdb.org/t/p/w185/amxSk5CAVZ907gDEdgyiRZNjiwU.jpg",
-      "youtube_views": 9932407,
-      "youtube_likes": 39533,
-      "youtube_comments": 1759,
-      "youtube_video_id": "OJ19I9q_hOQ",
-      "views_today": 13252,
-      "views_7d_avg": 42359,
-      "views_trend": "decelerating",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 56,
-      "scores": {
-        "1d": 284,
-        "7d": 284,
-        "30d": 284
-      },
-      "rating": 284,
-      "rating_band": "LOW",
-      "score": 284,
-      "move": 1,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0056,
-        "youtube_engagement": 0.155,
-        "google_trends": 0.51,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.079,
-        "short": 0.079,
-        "acceleration": 0.0,
-        "raw_hype": 15.197
-      },
-      "cast_full": [
-        {
-          "id": 59315,
-          "name": "Olivia Wilde",
-          "character": "Angela",
-          "profile_path": "/jYopRE6nhYGqpb64fVUKrbJVMy1.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 19274,
-          "name": "Seth Rogen",
-          "character": "Joe",
-          "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 955,
-          "name": "Penélope Cruz",
-          "character": "Pina",
-          "profile_path": "/n5SFgmvJSENQt8poE4qYacUnKOi.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 819,
-          "name": "Edward Norton",
-          "character": "Hawk",
-          "profile_path": "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg",
-          "_billing": 3
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 59315,
-          "name": "Olivia Wilde",
-          "profile_path": "/jYopRE6nhYGqpb64fVUKrbJVMy1.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 51
     },
     {
       "rank": 19,
@@ -2008,6 +2008,100 @@
     },
     {
       "rank": 20,
+      "prev_rank": 21,
+      "tmdb_id": 1108427,
+      "title": "Moana",
+      "director": "Thomas Kail",
+      "cast": "Catherine Laga‘aia, Dwayne Johnson",
+      "release_date": "2026-07-08",
+      "poster_url": "https://image.tmdb.org/t/p/w185/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
+      "youtube_views": 7185281,
+      "youtube_likes": 57557,
+      "youtube_comments": 14322,
+      "youtube_video_id": "n7f6hlKsxxo",
+      "views_today": 30415,
+      "views_7d_avg": 99251,
+      "views_trend": "decelerating",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 62,
+      "scores": {
+        "1d": 273,
+        "7d": 273,
+        "30d": 273
+      },
+      "rating": 273,
+      "rating_band": "LOW",
+      "score": 273,
+      "move": 1,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0132,
+        "youtube_engagement": 0.0302,
+        "google_trends": 0.46,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0749,
+        "short": 0.0749,
+        "acceleration": 0.0,
+        "raw_hype": 13.6882
+      },
+      "cast_full": [
+        {
+          "id": 4247263,
+          "name": "Catherine Laga‘aia",
+          "character": "Moana",
+          "profile_path": "/2KRIRDwy1CtY7Bge3aqVZrORelc.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 18918,
+          "name": "Dwayne Johnson",
+          "character": "Maui",
+          "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 7241,
+          "name": "Rena Owen",
+          "character": "Gramma Tala",
+          "profile_path": "/648ZdDBmlx6OFDFRmgAbh6q5LBo.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 205406,
+          "name": "John Tui",
+          "character": "Chief Tui",
+          "profile_path": "/2jIc9M5kl2GmK8fZtbtUr2s1jkS.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 1753341,
+          "name": "Frankie Adams",
+          "character": "Sina",
+          "profile_path": "/aAUHUSf0lh3OBRoaiCRL9ep8lfL.jpg",
+          "_billing": 4
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1485823,
+          "name": "Thomas Kail",
+          "profile_path": "/eZx5j2AARIZcrSVpTFyD5fAJWsn.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 46
+    },
+    {
+      "rank": 21,
       "prev_rank": 20,
       "tmdb_id": 1084244,
       "title": "Toy Story 5",
@@ -2036,7 +2130,7 @@
       "rating": 271,
       "rating_band": "LOW",
       "score": 271,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2120,102 +2214,8 @@
       "trends": 43
     },
     {
-      "rank": 21,
-      "prev_rank": 27,
-      "tmdb_id": 1108427,
-      "title": "Moana",
-      "director": "Thomas Kail",
-      "cast": "Catherine Laga‘aia, Dwayne Johnson",
-      "release_date": "2026-07-08",
-      "poster_url": "https://image.tmdb.org/t/p/w185/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
-      "youtube_views": 7185281,
-      "youtube_likes": 57557,
-      "youtube_comments": 14322,
-      "youtube_video_id": "n7f6hlKsxxo",
-      "views_today": 30415,
-      "views_7d_avg": 99251,
-      "views_trend": "decelerating",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 62,
-      "scores": {
-        "1d": 269,
-        "7d": 269,
-        "30d": 269
-      },
-      "rating": 269,
-      "rating_band": "LOW",
-      "score": 269,
-      "move": 6,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0132,
-        "youtube_engagement": 0.0302,
-        "google_trends": 0.46,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0749,
-        "short": 0.0749,
-        "acceleration": 0.0,
-        "raw_hype": 13.6882
-      },
-      "cast_full": [
-        {
-          "id": 4247263,
-          "name": "Catherine Laga‘aia",
-          "character": "Moana",
-          "profile_path": "/2KRIRDwy1CtY7Bge3aqVZrORelc.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 18918,
-          "name": "Dwayne Johnson",
-          "character": "Maui",
-          "profile_path": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 7241,
-          "name": "Rena Owen",
-          "character": "Gramma Tala",
-          "profile_path": "/648ZdDBmlx6OFDFRmgAbh6q5LBo.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 205406,
-          "name": "John Tui",
-          "character": "Chief Tui",
-          "profile_path": "/2jIc9M5kl2GmK8fZtbtUr2s1jkS.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 1753341,
-          "name": "Frankie Adams",
-          "character": "Sina",
-          "profile_path": "/aAUHUSf0lh3OBRoaiCRL9ep8lfL.jpg",
-          "_billing": 4
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1485823,
-          "name": "Thomas Kail",
-          "profile_path": "/eZx5j2AARIZcrSVpTFyD5fAJWsn.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 46
-    },
-    {
       "rank": 22,
-      "prev_rank": 21,
+      "prev_rank": 22,
       "tmdb_id": 1153576,
       "title": "Street Fighter",
       "director": "Kitao Sakurai",
@@ -2243,7 +2243,7 @@
       "rating": 269,
       "rating_band": "LOW",
       "score": 269,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2328,7 +2328,7 @@
     },
     {
       "rank": 23,
-      "prev_rank": 22,
+      "prev_rank": 23,
       "tmdb_id": 1582770,
       "title": "Dhurandhar: The Revenge",
       "director": "Aditya Dhar",
@@ -2356,7 +2356,7 @@
       "rating": 268,
       "rating_band": "LOW",
       "score": 268,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2441,7 +2441,7 @@
     },
     {
       "rank": 24,
-      "prev_rank": 23,
+      "prev_rank": 24,
       "tmdb_id": 1398655,
       "title": "Blue Film",
       "director": "Elliot Tuttle",
@@ -2469,7 +2469,7 @@
       "rating": 267,
       "rating_band": "LOW",
       "score": 267,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2627,7 +2627,7 @@
     },
     {
       "rank": 27,
-      "prev_rank": 28,
+      "prev_rank": 27,
       "tmdb_id": 1288445,
       "title": "Mutiny",
       "director": "Jean-François Richet",
@@ -2648,14 +2648,14 @@
       "mentions": 0,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 252,
-        "7d": 252,
-        "30d": 252
+        "1d": 253,
+        "7d": 253,
+        "30d": 253
       },
-      "rating": 252,
+      "rating": 253,
       "rating_band": "LOW",
-      "score": 252,
-      "move": 1,
+      "score": 253,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2740,7 +2740,7 @@
     },
     {
       "rank": 28,
-      "prev_rank": 29,
+      "prev_rank": 28,
       "tmdb_id": 1213243,
       "title": "Toxic",
       "director": "Geethu Mohandas",
@@ -2768,7 +2768,7 @@
       "rating": 252,
       "rating_band": "LOW",
       "score": 252,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2854,125 +2854,6 @@
     {
       "rank": 29,
       "prev_rank": 30,
-      "tmdb_id": 1003596,
-      "title": "Avengers: Doomsday",
-      "director": "Joe Russo, Anthony Russo",
-      "cast": "Robert Downey Jr., Chris Evans",
-      "release_date": "2026-12-16",
-      "poster_url": "https://image.tmdb.org/t/p/w185/8HkIe2i4ScpCkcX9SzZ9IPasqWV.jpg",
-      "youtube_views": 16277692,
-      "youtube_likes": 471788,
-      "youtube_comments": 15688,
-      "youtube_video_id": "399Ez7WHK5s",
-      "views_today": 33157,
-      "views_7d_avg": 93788,
-      "views_trend": "decelerating",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 93,
-      "scores": {
-        "1d": 246,
-        "7d": 246,
-        "30d": 246
-      },
-      "rating": 246,
-      "rating_band": "MINIMAL",
-      "score": 246,
-      "move": 1,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0126,
-        "youtube_engagement": 0.116,
-        "google_trends": 0.41,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0672,
-        "short": 0.0672,
-        "acceleration": 0.0,
-        "raw_hype": 11.0325
-      },
-      "cast_full": [
-        {
-          "id": 3223,
-          "name": "Robert Downey Jr.",
-          "character": "Victor von Doom  / Doctor Doom",
-          "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 16828,
-          "name": "Chris Evans",
-          "character": "Steve Rogers / Captain America",
-          "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 74568,
-          "name": "Chris Hemsworth",
-          "character": "Thor",
-          "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 1253360,
-          "name": "Pedro Pascal",
-          "character": "Reed Richards / Mr. Fantastic",
-          "profile_path": "/9VYK7oxcqhjd5LAH6ZFJ3XzOlID.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 22226,
-          "name": "Paul Rudd",
-          "character": "Scott Lang / Ant-Man",
-          "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 53650,
-          "name": "Anthony Mackie",
-          "character": "Sam Wilson / Captain America",
-          "profile_path": "/kfTwOYr3iUucmYz8kPjhYy07G2Z.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 1373737,
-          "name": "Florence Pugh",
-          "character": "Yelena Belova",
-          "profile_path": "/1Uvfh7xL4U2evkhs0M3C7BbBYFf.jpg"
-        },
-        {
-          "id": 556356,
-          "name": "Vanessa Kirby",
-          "character": "Sue Storm / The Invisible Woman",
-          "profile_path": "/tViEEsjvbhrJxWsOipUqIYjdHEb.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 19272,
-          "name": "Joe Russo",
-          "profile_path": "/o0OXjFzL10jCy89iAs7UzzSbyoK.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 19271,
-          "name": "Anthony Russo",
-          "profile_path": "/xbINBnWn28YygYWUJ1aSAw0xPRv.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 41
-    },
-    {
-      "rank": 30,
-      "prev_rank": 35,
       "tmdb_id": 1339713,
       "title": "Obsession",
       "director": "Curry Barker",
@@ -2993,14 +2874,14 @@
       "mentions": 0,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 245,
-        "7d": 245,
-        "30d": 245
+        "1d": 250,
+        "7d": 250,
+        "30d": 250
       },
-      "rating": 245,
-      "rating_band": "MINIMAL",
-      "score": 245,
-      "move": 5,
+      "rating": 250,
+      "rating_band": "LOW",
+      "score": 250,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3084,121 +2965,8 @@
       "trends": 45
     },
     {
-      "rank": 31,
-      "prev_rank": 24,
-      "tmdb_id": 1318413,
-      "title": "Pressure",
-      "director": "Anthony Maras",
-      "cast": "Andrew Scott, Brendan Fraser",
-      "release_date": "2026-05-28",
-      "poster_url": "https://image.tmdb.org/t/p/w185/9RkDrI8V8QJBjhtyRX7y6Qow3aq.jpg",
-      "youtube_views": 17618,
-      "youtube_likes": 217,
-      "youtube_comments": 18,
-      "youtube_video_id": "_gQwG9Xi13g",
-      "views_today": 122,
-      "views_7d_avg": 454,
-      "views_trend": "flat",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 68,
-      "scores": {
-        "1d": 245,
-        "7d": 245,
-        "30d": 245
-      },
-      "rating": 245,
-      "rating_band": "MINIMAL",
-      "score": 245,
-      "move": -7,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0001,
-        "youtube_engagement": 0.1558,
-        "google_trends": 0.43,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0645,
-        "short": 0.0645,
-        "acceleration": 0.0,
-        "raw_hype": 10.1988
-      },
-      "cast_full": [
-        {
-          "id": 125660,
-          "name": "Andrew Scott",
-          "character": "James Stagg",
-          "profile_path": "/4F8XpjyQCvtuu21WFm5d8RF5Rl.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 18269,
-          "name": "Brendan Fraser",
-          "character": "Dwight D. Eisenhower",
-          "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 62105,
-          "name": "Kerry Condon",
-          "character": "Captain Kay Summersby",
-          "profile_path": "/8RO25vJxQSoNdhsVbiAHOsiGfvl.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 61659,
-          "name": "Chris Messina",
-          "character": "Irving P. Krick",
-          "profile_path": "/qbT7jHfk3SFtfvVvJI3mbAEkVYy.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 20186,
-          "name": "Damian Lewis",
-          "character": "Marshall Bernard Montgomery",
-          "profile_path": "/puOXtVatFnAxoOmsFO8z7KTfyJW.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 96279,
-          "name": "Con O'Neill",
-          "character": "Marshall Leigh-Mallory",
-          "profile_path": "/7Fnj1dB9kStTuy29eEVK4IuOxWO.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 1605791,
-          "name": "Tamsin Topolski",
-          "character": "Liz Stagg",
-          "profile_path": "/fsOY0Fe3KX8zseeaYjzOy5htLUl.jpg"
-        },
-        {
-          "id": 2979572,
-          "name": "Henry Ashton",
-          "character": "John Eisenhower",
-          "profile_path": "/t14RWrU5E8uRn1ilBQ7ELc23j1I.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1484509,
-          "name": "Anthony Maras",
-          "profile_path": "/lTuavfsrkm0mJv2FNzJhe9UEukv.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 43
-    },
-    {
-      "rank": 32,
-      "prev_rank": 34,
+      "rank": 30,
+      "prev_rank": 32,
       "tmdb_id": 1382802,
       "title": "Family Movie",
       "director": "Kyra Sedgwick, Kevin Bacon",
@@ -3219,13 +2987,13 @@
       "mentions": 0,
       "sentiment_pct": 68,
       "scores": {
-        "1d": 243,
-        "7d": 243,
-        "30d": 243
+        "1d": 247,
+        "7d": 247,
+        "30d": 247
       },
-      "rating": 243,
+      "rating": 247,
       "rating_band": "MINIMAL",
-      "score": 243,
+      "score": 247,
       "move": 2,
       "is_new": false,
       "hot": false,
@@ -3316,8 +3084,240 @@
       "trends": 45
     },
     {
-      "rank": 33,
+      "rank": 31,
+      "prev_rank": 29,
+      "tmdb_id": 1003596,
+      "title": "Avengers: Doomsday",
+      "director": "Joe Russo, Anthony Russo",
+      "cast": "Robert Downey Jr., Chris Evans",
+      "release_date": "2026-12-16",
+      "poster_url": "https://image.tmdb.org/t/p/w185/8HkIe2i4ScpCkcX9SzZ9IPasqWV.jpg",
+      "youtube_views": 16277692,
+      "youtube_likes": 471788,
+      "youtube_comments": 15688,
+      "youtube_video_id": "399Ez7WHK5s",
+      "views_today": 33157,
+      "views_7d_avg": 93788,
+      "views_trend": "decelerating",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 93,
+      "scores": {
+        "1d": 246,
+        "7d": 246,
+        "30d": 246
+      },
+      "rating": 246,
+      "rating_band": "MINIMAL",
+      "score": 246,
+      "move": -2,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0126,
+        "youtube_engagement": 0.116,
+        "google_trends": 0.41,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0672,
+        "short": 0.0672,
+        "acceleration": 0.0,
+        "raw_hype": 11.0325
+      },
+      "cast_full": [
+        {
+          "id": 3223,
+          "name": "Robert Downey Jr.",
+          "character": "Victor von Doom  / Doctor Doom",
+          "profile_path": "/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 16828,
+          "name": "Chris Evans",
+          "character": "Steve Rogers / Captain America",
+          "profile_path": "/3bOGNsHlrswhyW79uvIHH1V43JI.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 74568,
+          "name": "Chris Hemsworth",
+          "character": "Thor",
+          "profile_path": "/piQGdoIQOF3C1EI5cbYZLAW1gfj.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 1253360,
+          "name": "Pedro Pascal",
+          "character": "Reed Richards / Mr. Fantastic",
+          "profile_path": "/9VYK7oxcqhjd5LAH6ZFJ3XzOlID.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 22226,
+          "name": "Paul Rudd",
+          "character": "Scott Lang / Ant-Man",
+          "profile_path": "/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 53650,
+          "name": "Anthony Mackie",
+          "character": "Sam Wilson / Captain America",
+          "profile_path": "/kfTwOYr3iUucmYz8kPjhYy07G2Z.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 1373737,
+          "name": "Florence Pugh",
+          "character": "Yelena Belova",
+          "profile_path": "/1Uvfh7xL4U2evkhs0M3C7BbBYFf.jpg"
+        },
+        {
+          "id": 556356,
+          "name": "Vanessa Kirby",
+          "character": "Sue Storm / The Invisible Woman",
+          "profile_path": "/tViEEsjvbhrJxWsOipUqIYjdHEb.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 19272,
+          "name": "Joe Russo",
+          "profile_path": "/o0OXjFzL10jCy89iAs7UzzSbyoK.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 19271,
+          "name": "Anthony Russo",
+          "profile_path": "/xbINBnWn28YygYWUJ1aSAw0xPRv.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 41
+    },
+    {
+      "rank": 32,
       "prev_rank": 31,
+      "tmdb_id": 1318413,
+      "title": "Pressure",
+      "director": "Anthony Maras",
+      "cast": "Andrew Scott, Brendan Fraser",
+      "release_date": "2026-05-28",
+      "poster_url": "https://image.tmdb.org/t/p/w185/9RkDrI8V8QJBjhtyRX7y6Qow3aq.jpg",
+      "youtube_views": 17618,
+      "youtube_likes": 217,
+      "youtube_comments": 18,
+      "youtube_video_id": "_gQwG9Xi13g",
+      "views_today": 122,
+      "views_7d_avg": 454,
+      "views_trend": "flat",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 68,
+      "scores": {
+        "1d": 237,
+        "7d": 237,
+        "30d": 237
+      },
+      "rating": 237,
+      "rating_band": "MINIMAL",
+      "score": 237,
+      "move": -1,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0001,
+        "youtube_engagement": 0.1558,
+        "google_trends": 0.43,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0645,
+        "short": 0.0645,
+        "acceleration": 0.0,
+        "raw_hype": 10.1988
+      },
+      "cast_full": [
+        {
+          "id": 125660,
+          "name": "Andrew Scott",
+          "character": "James Stagg",
+          "profile_path": "/4F8XpjyQCvtuu21WFm5d8RF5Rl.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 18269,
+          "name": "Brendan Fraser",
+          "character": "Dwight D. Eisenhower",
+          "profile_path": "/tFj5PaWWQbb8rHBBhu1EHklznph.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 62105,
+          "name": "Kerry Condon",
+          "character": "Captain Kay Summersby",
+          "profile_path": "/8RO25vJxQSoNdhsVbiAHOsiGfvl.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 61659,
+          "name": "Chris Messina",
+          "character": "Irving P. Krick",
+          "profile_path": "/qbT7jHfk3SFtfvVvJI3mbAEkVYy.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 20186,
+          "name": "Damian Lewis",
+          "character": "Marshall Bernard Montgomery",
+          "profile_path": "/puOXtVatFnAxoOmsFO8z7KTfyJW.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 96279,
+          "name": "Con O'Neill",
+          "character": "Marshall Leigh-Mallory",
+          "profile_path": "/7Fnj1dB9kStTuy29eEVK4IuOxWO.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 1605791,
+          "name": "Tamsin Topolski",
+          "character": "Liz Stagg",
+          "profile_path": "/fsOY0Fe3KX8zseeaYjzOy5htLUl.jpg"
+        },
+        {
+          "id": 2979572,
+          "name": "Henry Ashton",
+          "character": "John Eisenhower",
+          "profile_path": "/t14RWrU5E8uRn1ilBQ7ELc23j1I.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1484509,
+          "name": "Anthony Maras",
+          "profile_path": "/lTuavfsrkm0mJv2FNzJhe9UEukv.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 43
+    },
+    {
+      "rank": 33,
+      "prev_rank": 33,
       "tmdb_id": 1288341,
       "title": "Seven Snipers",
       "director": "Sandra Sciberras",
@@ -3345,7 +3345,7 @@
       "rating": 236,
       "rating_band": "MINIMAL",
       "score": 236,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3430,7 +3430,7 @@
     },
     {
       "rank": 34,
-      "prev_rank": 32,
+      "prev_rank": 34,
       "tmdb_id": 539745,
       "title": "Animal Farm",
       "director": "Andy Serkis",
@@ -3458,7 +3458,7 @@
       "rating": 235,
       "rating_band": "MINIMAL",
       "score": 235,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3543,7 +3543,7 @@
     },
     {
       "rank": 35,
-      "prev_rank": 33,
+      "prev_rank": 35,
       "tmdb_id": 1375646,
       "title": "Colony",
       "director": "Yeon Sang-ho",
@@ -3564,14 +3564,14 @@
       "mentions": 0,
       "sentiment_pct": 91,
       "scores": {
-        "1d": 232,
-        "7d": 232,
-        "30d": 232
+        "1d": 231,
+        "7d": 231,
+        "30d": 231
       },
-      "rating": 232,
+      "rating": 231,
       "rating_band": "MINIMAL",
-      "score": 232,
-      "move": -2,
+      "score": 231,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4007,7 +4007,7 @@
     },
     {
       "rank": 42,
-      "prev_rank": 46,
+      "prev_rank": 42,
       "tmdb_id": 1102883,
       "title": "Mother Mary",
       "director": "David Lowery",
@@ -4028,14 +4028,14 @@
       "mentions": 0,
       "sentiment_pct": 61,
       "scores": {
-        "1d": 204,
-        "7d": 204,
-        "30d": 204
+        "1d": 208,
+        "7d": 208,
+        "30d": 208
       },
-      "rating": 204,
+      "rating": 208,
       "rating_band": "MINIMAL",
-      "score": 204,
-      "move": 4,
+      "score": 208,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4120,7 +4120,120 @@
     },
     {
       "rank": 43,
-      "prev_rank": 42,
+      "prev_rank": 44,
+      "tmdb_id": 1430077,
+      "title": "Hokum",
+      "director": "Damian McCarthy",
+      "cast": "Adam Scott, Peter Coonan",
+      "release_date": "2026-04-29",
+      "poster_url": "https://image.tmdb.org/t/p/w185/gC4FtEthYvx6XV2JHCQibf4P3FT.jpg",
+      "youtube_views": 421430,
+      "youtube_likes": 2057,
+      "youtube_comments": 120,
+      "youtube_video_id": "qU_i5e48KzQ",
+      "views_today": 6543,
+      "views_7d_avg": 121991,
+      "views_trend": "decelerating",
+      "youtube_state": "decaying",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 57,
+      "scores": {
+        "1d": 201,
+        "7d": 201,
+        "30d": 201
+      },
+      "rating": 201,
+      "rating_band": "MINIMAL",
+      "score": 201,
+      "move": 1,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0156,
+        "youtube_engagement": 0.0384,
+        "google_trends": 0.32,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.055,
+        "short": 0.055,
+        "acceleration": 0.0,
+        "raw_hype": 7.4451
+      },
+      "cast_full": [
+        {
+          "id": 36801,
+          "name": "Adam Scott",
+          "character": "Ohm Bauman",
+          "profile_path": "/b82C29R6fGiPoqIglQ4lzS6q2YX.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 523748,
+          "name": "Peter Coonan",
+          "character": "Mal",
+          "profile_path": "/4CIPj53v871Gwwyean91BhXesfW.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 73287,
+          "name": "David Wilmot",
+          "character": "Jerry",
+          "profile_path": "/epb46N0iJyAmSOguMdFn6qQGSsy.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 3249431,
+          "name": "Florence Ordesh",
+          "character": "Fiona",
+          "profile_path": null,
+          "_billing": 3
+        },
+        {
+          "id": 1865592,
+          "name": "Will O'Connell",
+          "character": "Alby",
+          "profile_path": "/9aQlrstSFoKQdsCigFWQibyfZhW.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 1368268,
+          "name": "Michael Patric",
+          "character": "Fergal",
+          "profile_path": "/mHbEIuUbc9wuqDRhVgLn4hnxVvn.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 26865,
+          "name": "Brendan Conroy",
+          "character": "Mr. Cobb",
+          "profile_path": "/pUyjqFWqBERIW0wIJkxwgvfq1VY.jpg"
+        },
+        {
+          "id": 1552436,
+          "name": "Austin Amelio",
+          "character": "Conquistador",
+          "profile_path": "/y4QTXuSSmD99n8dinMiTRBkUnAp.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1102882,
+          "name": "Damian McCarthy",
+          "profile_path": "/mCY9Q0rJcmbj165O3qOutFMOEoH.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 32
+    },
+    {
+      "rank": 44,
+      "prev_rank": 43,
       "tmdb_id": 1511057,
       "title": "Roommates",
       "director": "Chandler Levack",
@@ -4232,121 +4345,8 @@
       "trends": 35
     },
     {
-      "rank": 44,
-      "prev_rank": 47,
-      "tmdb_id": 1430077,
-      "title": "Hokum",
-      "director": "Damian McCarthy",
-      "cast": "Adam Scott, Peter Coonan",
-      "release_date": "2026-04-29",
-      "poster_url": "https://image.tmdb.org/t/p/w185/gC4FtEthYvx6XV2JHCQibf4P3FT.jpg",
-      "youtube_views": 421430,
-      "youtube_likes": 2057,
-      "youtube_comments": 120,
-      "youtube_video_id": "qU_i5e48KzQ",
-      "views_today": 6543,
-      "views_7d_avg": 121991,
-      "views_trend": "decelerating",
-      "youtube_state": "decaying",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 57,
-      "scores": {
-        "1d": 197,
-        "7d": 197,
-        "30d": 197
-      },
-      "rating": 197,
-      "rating_band": "MINIMAL",
-      "score": 197,
-      "move": 3,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0156,
-        "youtube_engagement": 0.0384,
-        "google_trends": 0.32,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.055,
-        "short": 0.055,
-        "acceleration": 0.0,
-        "raw_hype": 7.4451
-      },
-      "cast_full": [
-        {
-          "id": 36801,
-          "name": "Adam Scott",
-          "character": "Ohm Bauman",
-          "profile_path": "/b82C29R6fGiPoqIglQ4lzS6q2YX.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 523748,
-          "name": "Peter Coonan",
-          "character": "Mal",
-          "profile_path": "/4CIPj53v871Gwwyean91BhXesfW.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 73287,
-          "name": "David Wilmot",
-          "character": "Jerry",
-          "profile_path": "/epb46N0iJyAmSOguMdFn6qQGSsy.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 3249431,
-          "name": "Florence Ordesh",
-          "character": "Fiona",
-          "profile_path": null,
-          "_billing": 3
-        },
-        {
-          "id": 1865592,
-          "name": "Will O'Connell",
-          "character": "Alby",
-          "profile_path": "/9aQlrstSFoKQdsCigFWQibyfZhW.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 1368268,
-          "name": "Michael Patric",
-          "character": "Fergal",
-          "profile_path": "/mHbEIuUbc9wuqDRhVgLn4hnxVvn.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 26865,
-          "name": "Brendan Conroy",
-          "character": "Mr. Cobb",
-          "profile_path": "/pUyjqFWqBERIW0wIJkxwgvfq1VY.jpg"
-        },
-        {
-          "id": 1552436,
-          "name": "Austin Amelio",
-          "character": "Conquistador",
-          "profile_path": "/y4QTXuSSmD99n8dinMiTRBkUnAp.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1102882,
-          "name": "Damian McCarthy",
-          "profile_path": "/mCY9Q0rJcmbj165O3qOutFMOEoH.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 32
-    },
-    {
-      "rank": 46,
-      "prev_rank": 45,
+      "rank": 45,
+      "prev_rank": 46,
       "tmdb_id": 1438392,
       "title": "Euphoria",
       "director": "Gunasekhar",
@@ -4367,14 +4367,14 @@
       "mentions": 0,
       "sentiment_pct": 70,
       "scores": {
-        "1d": 194,
-        "7d": 194,
-        "30d": 194
+        "1d": 195,
+        "7d": 195,
+        "30d": 195
       },
-      "rating": 194,
+      "rating": 195,
       "rating_band": "MINIMAL",
-      "score": 194,
-      "move": -1,
+      "score": 195,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4459,7 +4459,7 @@
     },
     {
       "rank": 47,
-      "prev_rank": 44,
+      "prev_rank": 47,
       "tmdb_id": 1171145,
       "title": "Crime 101",
       "director": "Bart Layton",
@@ -4487,7 +4487,7 @@
       "rating": 193,
       "rating_band": "MINIMAL",
       "score": 193,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4798,7 +4798,7 @@
     },
     {
       "rank": 50,
-      "prev_rank": 51,
+      "prev_rank": 50,
       "tmdb_id": 1273221,
       "title": "Scary Movie",
       "director": "Michael Tiddes",
@@ -4826,7 +4826,7 @@
       "rating": 177,
       "rating_band": "MINIMAL",
       "score": 177,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4911,7 +4911,7 @@
     },
     {
       "rank": 51,
-      "prev_rank": 50,
+      "prev_rank": 51,
       "tmdb_id": 1368314,
       "title": "Passenger",
       "director": "André Øvredal",
@@ -4932,14 +4932,14 @@
       "mentions": 0,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 168,
-        "7d": 168,
-        "30d": 168
+        "1d": 164,
+        "7d": 164,
+        "30d": 164
       },
-      "rating": 168,
+      "rating": 164,
       "rating_band": "MINIMAL",
-      "score": 168,
-      "move": -1,
+      "score": 164,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5137,119 +5137,6 @@
     },
     {
       "rank": 53,
-      "prev_rank": 53,
-      "tmdb_id": 1413097,
-      "title": "Melania",
-      "director": "Brett Ratner",
-      "cast": "Melania Trump, Donald Trump",
-      "release_date": "2026-01-30",
-      "poster_url": "https://image.tmdb.org/t/p/w185/ba6Silct0Y4pyvrSv0Tj0Urmx9f.jpg",
-      "youtube_views": 15021500,
-      "youtube_likes": 9455,
-      "youtube_comments": 8209,
-      "youtube_video_id": "dxXJAqOU00g",
-      "views_today": 590,
-      "views_7d_avg": 1603,
-      "views_trend": "flat",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 51,
-      "scores": {
-        "1d": 155,
-        "7d": 155,
-        "30d": 155
-      },
-      "rating": 155,
-      "rating_band": "MINIMAL",
-      "score": 155,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "release_type": "both",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0002,
-        "youtube_engagement": 0.0337,
-        "google_trends": 0.28,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0421,
-        "short": 0.0421,
-        "acceleration": 0.0,
-        "raw_hype": 4.3876
-      },
-      "cast_full": [
-        {
-          "id": 1600272,
-          "name": "Melania Trump",
-          "character": "Self",
-          "profile_path": "/bKFDuRpcFwXNoQeDjfbYLGzON7G.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 33663,
-          "name": "Donald Trump",
-          "character": "Self",
-          "profile_path": "/nkQrZELEgxsvwDSlYkNfpFmsFx4.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 2346426,
-          "name": "Barron Trump",
-          "character": "Self",
-          "profile_path": "/yJ9h8uYvtL76tYSkmioFgSrfjBB.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 146720,
-          "name": "Hervé Pierre",
-          "character": "Self",
-          "profile_path": "/dFjFLiRdyLGkMFlHed7aNRPiJrK.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 2311145,
-          "name": "Queen Rania of Jordan",
-          "character": "Self",
-          "profile_path": "/uy1zDDFsbvX8tQa6yW7d2JOXoQM.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 1755528,
-          "name": "Brigitte Macron",
-          "character": "Self",
-          "profile_path": "/eSP4pbmwbgNVUlIZMWkU5asXisC.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 5979900,
-          "name": "Peter Sohn",
-          "character": "Self",
-          "profile_path": null
-        },
-        {
-          "id": 5963406,
-          "name": "Adam Lippes",
-          "character": "Self",
-          "profile_path": null
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 11091,
-          "name": "Brett Ratner",
-          "profile_path": "/y40YzrI2ooWiWxfisx6zCZGueEu.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 28
-    },
-    {
-      "rank": 54,
       "prev_rank": 54,
       "tmdb_id": 467905,
       "title": "How to Make a Killing",
@@ -5271,14 +5158,14 @@
       "mentions": 0,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 154,
-        "7d": 154,
-        "30d": 154
+        "1d": 155,
+        "7d": 155,
+        "30d": 155
       },
-      "rating": 154,
+      "rating": 155,
       "rating_band": "MINIMAL",
-      "score": 154,
-      "move": 0,
+      "score": 155,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5355,6 +5242,119 @@
           "id": 1099792,
           "name": "John Patton Ford",
           "profile_path": "/9JuEmMR8xNWZ1vBesh6YC4WhTe7.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 28
+    },
+    {
+      "rank": 54,
+      "prev_rank": 53,
+      "tmdb_id": 1413097,
+      "title": "Melania",
+      "director": "Brett Ratner",
+      "cast": "Melania Trump, Donald Trump",
+      "release_date": "2026-01-30",
+      "poster_url": "https://image.tmdb.org/t/p/w185/ba6Silct0Y4pyvrSv0Tj0Urmx9f.jpg",
+      "youtube_views": 15021500,
+      "youtube_likes": 9455,
+      "youtube_comments": 8209,
+      "youtube_video_id": "dxXJAqOU00g",
+      "views_today": 590,
+      "views_7d_avg": 1603,
+      "views_trend": "flat",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 51,
+      "scores": {
+        "1d": 155,
+        "7d": 155,
+        "30d": 155
+      },
+      "rating": 155,
+      "rating_band": "MINIMAL",
+      "score": 155,
+      "move": -1,
+      "is_new": false,
+      "hot": false,
+      "release_type": "both",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0002,
+        "youtube_engagement": 0.0337,
+        "google_trends": 0.28,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0421,
+        "short": 0.0421,
+        "acceleration": 0.0,
+        "raw_hype": 4.3876
+      },
+      "cast_full": [
+        {
+          "id": 1600272,
+          "name": "Melania Trump",
+          "character": "Self",
+          "profile_path": "/bKFDuRpcFwXNoQeDjfbYLGzON7G.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 33663,
+          "name": "Donald Trump",
+          "character": "Self",
+          "profile_path": "/nkQrZELEgxsvwDSlYkNfpFmsFx4.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 2346426,
+          "name": "Barron Trump",
+          "character": "Self",
+          "profile_path": "/yJ9h8uYvtL76tYSkmioFgSrfjBB.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 146720,
+          "name": "Hervé Pierre",
+          "character": "Self",
+          "profile_path": "/dFjFLiRdyLGkMFlHed7aNRPiJrK.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 2311145,
+          "name": "Queen Rania of Jordan",
+          "character": "Self",
+          "profile_path": "/uy1zDDFsbvX8tQa6yW7d2JOXoQM.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 1755528,
+          "name": "Brigitte Macron",
+          "character": "Self",
+          "profile_path": "/eSP4pbmwbgNVUlIZMWkU5asXisC.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 5979900,
+          "name": "Peter Sohn",
+          "character": "Self",
+          "profile_path": null
+        },
+        {
+          "id": 5963406,
+          "name": "Adam Lippes",
+          "character": "Self",
+          "profile_path": null
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 11091,
+          "name": "Brett Ratner",
+          "profile_path": "/y40YzrI2ooWiWxfisx6zCZGueEu.jpg",
           "_billing": 0
         }
       ],
@@ -6255,7 +6255,7 @@
     },
     {
       "rank": 63,
-      "prev_rank": 64,
+      "prev_rank": 63,
       "tmdb_id": 1242265,
       "title": "Fuze",
       "director": "David Mackenzie",
@@ -6283,7 +6283,7 @@
       "rating": 101,
       "rating_band": "MINIMAL",
       "score": 101,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6368,7 +6368,7 @@
     },
     {
       "rank": 64,
-      "prev_rank": 65,
+      "prev_rank": 64,
       "tmdb_id": 1400940,
       "title": "Clayface",
       "director": "James Watkins",
@@ -6396,7 +6396,7 @@
       "rating": 100,
       "rating_band": "MINIMAL",
       "score": 100,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6481,7 +6481,7 @@
     },
     {
       "rank": 65,
-      "prev_rank": 66,
+      "prev_rank": 65,
       "tmdb_id": 1602727,
       "title": "Night King",
       "director": "Jack Ng Wai-Lun",
@@ -6509,7 +6509,7 @@
       "rating": 100,
       "rating_band": "MINIMAL",
       "score": 100,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6594,119 +6594,6 @@
     },
     {
       "rank": 66,
-      "prev_rank": 63,
-      "tmdb_id": 1275779,
-      "title": "Disclosure Day",
-      "director": "Steven Spielberg",
-      "cast": "Emily Blunt, Josh O'Connor",
-      "release_date": "2026-06-10",
-      "poster_url": "https://image.tmdb.org/t/p/w185/7RYO0KTXIJ0rS0LqnCQLxeNR3P3.jpg",
-      "youtube_views": 30424895,
-      "youtube_likes": 76628,
-      "youtube_comments": 5436,
-      "youtube_video_id": "SCYT8vb2siQ",
-      "views_today": 20655,
-      "views_7d_avg": 67860,
-      "views_trend": "decelerating",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 54,
-      "scores": {
-        "1d": 92,
-        "7d": 92,
-        "30d": 92
-      },
-      "rating": 92,
-      "rating_band": "UNRATED",
-      "score": 92,
-      "move": -3,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.009,
-        "youtube_engagement": 0.1016,
-        "google_trends": 0.13,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0236,
-        "short": 0.0236,
-        "acceleration": 0.0,
-        "raw_hype": 1.3867
-      },
-      "cast_full": [
-        {
-          "id": 5081,
-          "name": "Emily Blunt",
-          "character": "Margaret Fairchild",
-          "profile_path": "/kqsEGTXC1GATSIUVnE8lRggCZPp.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 1206334,
-          "name": "Josh O'Connor",
-          "character": "Daniel Kellner",
-          "profile_path": "/iFGxCv7wMaComYR40Mt7fwbfY1k.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 5472,
-          "name": "Colin Firth",
-          "character": "Noah Scanlon",
-          "profile_path": "/4VBeYEUQbfhnivdkqInM36u5fda.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 933271,
-          "name": "Eve Hewson",
-          "character": "Jane Blakenship",
-          "profile_path": "/Dj3osDr5zSP7uMtBBbbUeIgRMu.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 91671,
-          "name": "Colman Domingo",
-          "character": "Hugo Wakefield",
-          "profile_path": "/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 986808,
-          "name": "Wyatt Russell",
-          "character": "",
-          "profile_path": "/zIldBzXdBWskPZB7x35G2hYEVDo.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 513677,
-          "name": "Henry Lloyd-Hughes",
-          "character": "",
-          "profile_path": "/m8zSYF7KmQS0x0o7wnWSuWLc0LW.jpg"
-        },
-        {
-          "id": 126713,
-          "name": "Elizabeth Marvel",
-          "character": "",
-          "profile_path": "/zJaDO2YI0XHeUDB5onVSgAVrvg2.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 488,
-          "name": "Steven Spielberg",
-          "profile_path": "/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 13
-    },
-    {
-      "rank": 67,
       "prev_rank": 67,
       "tmdb_id": 1308767,
       "title": "Young Washington",
@@ -6735,7 +6622,7 @@
       "rating": 92,
       "rating_band": "UNRATED",
       "score": 92,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6819,7 +6706,7 @@
       "trends": 7
     },
     {
-      "rank": 69,
+      "rank": 68,
       "prev_rank": 69,
       "tmdb_id": 1620996,
       "title": "The Blue Box",
@@ -6848,7 +6735,7 @@
       "rating": 90,
       "rating_band": "UNRATED",
       "score": 90,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6924,6 +6811,119 @@
       ],
       "news_mentions": [],
       "trends": 16
+    },
+    {
+      "rank": 69,
+      "prev_rank": 66,
+      "tmdb_id": 1275779,
+      "title": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "cast": "Emily Blunt, Josh O'Connor",
+      "release_date": "2026-06-10",
+      "poster_url": "https://image.tmdb.org/t/p/w185/7RYO0KTXIJ0rS0LqnCQLxeNR3P3.jpg",
+      "youtube_views": 30424895,
+      "youtube_likes": 76628,
+      "youtube_comments": 5436,
+      "youtube_video_id": "SCYT8vb2siQ",
+      "views_today": 20655,
+      "views_7d_avg": 67860,
+      "views_trend": "decelerating",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 54,
+      "scores": {
+        "1d": 87,
+        "7d": 87,
+        "30d": 87
+      },
+      "rating": 87,
+      "rating_band": "UNRATED",
+      "score": 87,
+      "move": -3,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.009,
+        "youtube_engagement": 0.1016,
+        "google_trends": 0.13,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0236,
+        "short": 0.0236,
+        "acceleration": 0.0,
+        "raw_hype": 1.3867
+      },
+      "cast_full": [
+        {
+          "id": 5081,
+          "name": "Emily Blunt",
+          "character": "Margaret Fairchild",
+          "profile_path": "/kqsEGTXC1GATSIUVnE8lRggCZPp.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 1206334,
+          "name": "Josh O'Connor",
+          "character": "Daniel Kellner",
+          "profile_path": "/iFGxCv7wMaComYR40Mt7fwbfY1k.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 5472,
+          "name": "Colin Firth",
+          "character": "Noah Scanlon",
+          "profile_path": "/4VBeYEUQbfhnivdkqInM36u5fda.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 933271,
+          "name": "Eve Hewson",
+          "character": "Jane Blakenship",
+          "profile_path": "/Dj3osDr5zSP7uMtBBbbUeIgRMu.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 91671,
+          "name": "Colman Domingo",
+          "character": "Hugo Wakefield",
+          "profile_path": "/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 986808,
+          "name": "Wyatt Russell",
+          "character": "",
+          "profile_path": "/zIldBzXdBWskPZB7x35G2hYEVDo.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 513677,
+          "name": "Henry Lloyd-Hughes",
+          "character": "",
+          "profile_path": "/m8zSYF7KmQS0x0o7wnWSuWLc0LW.jpg"
+        },
+        {
+          "id": 126713,
+          "name": "Elizabeth Marvel",
+          "character": "",
+          "profile_path": "/zJaDO2YI0XHeUDB5onVSgAVrvg2.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 488,
+          "name": "Steven Spielberg",
+          "profile_path": "/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 13
     },
     {
       "rank": 71,
@@ -7492,7 +7492,7 @@
     },
     {
       "rank": 76,
-      "prev_rank": 78,
+      "prev_rank": 76,
       "tmdb_id": 1612018,
       "title": "Jackass: Best and Last",
       "director": "Jeff Tremaine",
@@ -7513,14 +7513,14 @@
       "mentions": 0,
       "sentiment_pct": 58,
       "scores": {
-        "1d": 60,
-        "7d": 60,
-        "30d": 60
+        "1d": 61,
+        "7d": 61,
+        "30d": 61
       },
-      "rating": 60,
+      "rating": 61,
       "rating_band": "UNRATED",
-      "score": 60,
-      "move": 2,
+      "score": 61,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7605,7 +7605,7 @@
     },
     {
       "rank": 77,
-      "prev_rank": 76,
+      "prev_rank": 77,
       "tmdb_id": 1292695,
       "title": "They Will Kill You",
       "director": "Kirill Sokolov",
@@ -7633,7 +7633,7 @@
       "rating": 59,
       "rating_band": "UNRATED",
       "score": 59,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -7718,7 +7718,7 @@
     },
     {
       "rank": 78,
-      "prev_rank": 77,
+      "prev_rank": 78,
       "tmdb_id": 1283515,
       "title": "Verity",
       "director": "Michael Showalter",
@@ -7746,7 +7746,7 @@
       "rating": 58,
       "rating_band": "UNRATED",
       "score": 58,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -7852,13 +7852,13 @@
       "mentions": 0,
       "sentiment_pct": 59,
       "scores": {
-        "1d": 54,
-        "7d": 54,
-        "30d": 54
+        "1d": 55,
+        "7d": 55,
+        "30d": 55
       },
-      "rating": 54,
+      "rating": 55,
       "rating_band": "UNRATED",
-      "score": 54,
+      "score": 55,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -7938,7 +7938,7 @@
     },
     {
       "rank": 82,
-      "prev_rank": 83,
+      "prev_rank": 82,
       "tmdb_id": 1107166,
       "title": "Psycho Killer",
       "director": "Gavin Polone",
@@ -7966,7 +7966,7 @@
       "rating": 46,
       "rating_band": "UNRATED",
       "score": 46,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8051,7 +8051,7 @@
     },
     {
       "rank": 83,
-      "prev_rank": 84,
+      "prev_rank": 83,
       "tmdb_id": 1403737,
       "title": "Funky",
       "director": "Anudeep",
@@ -8079,7 +8079,7 @@
       "rating": 45,
       "rating_band": "UNRATED",
       "score": 45,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8164,7 +8164,7 @@
     },
     {
       "rank": 84,
-      "prev_rank": 85,
+      "prev_rank": 84,
       "tmdb_id": 1634949,
       "title": "Lorne",
       "director": "Morgan Neville",
@@ -8192,7 +8192,7 @@
       "rating": 45,
       "rating_band": "UNRATED",
       "score": 45,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8277,7 +8277,7 @@
     },
     {
       "rank": 85,
-      "prev_rank": 81,
+      "prev_rank": 85,
       "tmdb_id": 1248832,
       "title": "Digger",
       "director": "Alejandro G. Iñárritu",
@@ -8298,14 +8298,14 @@
       "mentions": 0,
       "sentiment_pct": 55,
       "scores": {
-        "1d": 43,
-        "7d": 43,
-        "30d": 43
+        "1d": 40,
+        "7d": 40,
+        "30d": 40
       },
-      "rating": 43,
+      "rating": 40,
       "rating_band": "UNRATED",
-      "score": 43,
-      "move": -4,
+      "score": 40,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8729,7 +8729,7 @@
     },
     {
       "rank": 89,
-      "prev_rank": 91,
+      "prev_rank": 89,
       "tmdb_id": 1367642,
       "title": "Reminders of Him",
       "director": "Vanessa Caswill",
@@ -8757,7 +8757,7 @@
       "rating": 26,
       "rating_band": "UNRATED",
       "score": 26,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -8842,7 +8842,7 @@
     },
     {
       "rank": 90,
-      "prev_rank": 93,
+      "prev_rank": 90,
       "tmdb_id": 1170608,
       "title": "Dune: Part Three",
       "director": "Denis Villeneuve",
@@ -8870,7 +8870,7 @@
       "rating": 26,
       "rating_band": "UNRATED",
       "score": 26,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8955,7 +8955,7 @@
     },
     {
       "rank": 91,
-      "prev_rank": 94,
+      "prev_rank": 91,
       "tmdb_id": 1300968,
       "title": "The Hunger Games: Sunrise on the Reaping",
       "director": "Francis Lawrence",
@@ -8983,7 +8983,7 @@
       "rating": 26,
       "rating_band": "UNRATED",
       "score": 26,
-      "move": 3,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9089,13 +9089,13 @@
       "mentions": 0,
       "sentiment_pct": 76,
       "scores": {
-        "1d": 24,
-        "7d": 24,
-        "30d": 24
+        "1d": 23,
+        "7d": 23,
+        "30d": 23
       },
-      "rating": 24,
+      "rating": 23,
       "rating_band": "UNRATED",
-      "score": 24,
+      "score": 23,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -9181,7 +9181,7 @@
     },
     {
       "rank": 93,
-      "prev_rank": 95,
+      "prev_rank": 93,
       "tmdb_id": 1440735,
       "title": "Couple Friendly",
       "director": "Ashwin Chandrasekar",
@@ -9209,7 +9209,7 @@
       "rating": 23,
       "rating_band": "UNRATED",
       "score": 23,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -9294,7 +9294,7 @@
     },
     {
       "rank": 94,
-      "prev_rank": 96,
+      "prev_rank": 94,
       "tmdb_id": 1226863,
       "title": "The Super Mario Galaxy Movie",
       "director": "Aaron Horvath, Michael Jelenic",
@@ -9322,7 +9322,7 @@
       "rating": 22,
       "rating_band": "UNRATED",
       "score": 22,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9413,7 +9413,7 @@
     },
     {
       "rank": 96,
-      "prev_rank": 98,
+      "prev_rank": 96,
       "tmdb_id": 1212763,
       "title": "Evil Dead Burn",
       "director": "Sébastien Vaniček",
@@ -9441,7 +9441,7 @@
       "rating": 21,
       "rating_band": "UNRATED",
       "score": 21,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9526,120 +9526,7 @@
     },
     {
       "rank": 97,
-      "prev_rank": 90,
-      "tmdb_id": 1127384,
-      "title": "Deep Water",
-      "director": "Renny Harlin",
-      "cast": "Aaron Eckhart, Molly Belle Wright",
-      "release_date": "2026-04-30",
-      "poster_url": "https://image.tmdb.org/t/p/w185/2cikvQU83ecoZncnjOmAAATr3Sp.jpg",
-      "youtube_views": 16413664,
-      "youtube_likes": 3885,
-      "youtube_comments": 489,
-      "youtube_video_id": "f0ptq0Lzdh8",
-      "views_today": 10133,
-      "views_7d_avg": 18315,
-      "views_trend": "flat",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 50,
-      "scores": {
-        "1d": 19,
-        "7d": 19,
-        "30d": 19
-      },
-      "rating": 19,
-      "rating_band": "UNRATED",
-      "score": 19,
-      "move": -7,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0025,
-        "youtube_engagement": 0.1197,
-        "google_trends": 0.02,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0041,
-        "short": 0.0041,
-        "acceleration": 0.0,
-        "raw_hype": 0.0432
-      },
-      "cast_full": [
-        {
-          "id": 6383,
-          "name": "Aaron Eckhart",
-          "character": "",
-          "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 3663805,
-          "name": "Molly Belle Wright",
-          "character": "Cora",
-          "profile_path": "/h0E3MOyx0YumMLpQ4MpiPC0xCii.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 1701014,
-          "name": "Kelly Gale",
-          "character": "Jaya",
-          "profile_path": "/bU9w5FITuN7TUa9VxFH3whhXFkP.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 2282,
-          "name": "Ben Kingsley",
-          "character": "",
-          "profile_path": "/vQtBqpF2HDdzbfXHDzR4u37i1Ac.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 59117,
-          "name": "Angus Sampson",
-          "character": "",
-          "profile_path": "/aFmRmydMoTDwR3l1Re1T5XtQE3s.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 5439529,
-          "name": "Rosie Zhao",
-          "character": "Lilly",
-          "profile_path": null,
-          "_billing": 5
-        },
-        {
-          "id": 2466900,
-          "name": "Richard Crouchley",
-          "character": "",
-          "profile_path": "/8AIFy9NYA4PCNkVtDj03B2hXucA.jpg"
-        },
-        {
-          "id": 1704578,
-          "name": "Rob Kipa-Williams",
-          "character": "",
-          "profile_path": "/tXYQ32sNo45F8CDe9f8CeGdz6qB.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 16938,
-          "name": "Renny Harlin",
-          "profile_path": "/IhXiDrZBrsLZpB5K5BmzUGkp4G.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 2
-    },
-    {
-      "rank": 98,
-      "prev_rank": 99,
+      "prev_rank": 98,
       "tmdb_id": 1341137,
       "title": "A Great Awakening",
       "director": "Joshua Enck",
@@ -9751,8 +9638,8 @@
       "trends": 3
     },
     {
-      "rank": 99,
-      "prev_rank": 100,
+      "rank": 98,
+      "prev_rank": 99,
       "tmdb_id": 1418657,
       "title": "The Yeti",
       "director": "Gene Gallerano, William Pisciotta",
@@ -9870,8 +9757,8 @@
       "trends": 3
     },
     {
-      "rank": 100,
-      "prev_rank": 102,
+      "rank": 99,
+      "prev_rank": 100,
       "tmdb_id": 1363974,
       "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
       "director": "Yasuhito Kikuchi",
@@ -9899,7 +9786,7 @@
       "rating": 17,
       "rating_band": "UNRATED",
       "score": 17,
-      "move": 2,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9983,7 +9870,7 @@
       "trends": 3
     },
     {
-      "rank": 101,
+      "rank": 100,
       "prev_rank": 101,
       "tmdb_id": 1022046,
       "title": "Youngblood",
@@ -10012,7 +9899,7 @@
       "rating": 17,
       "rating_band": "UNRATED",
       "score": 17,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10096,8 +9983,8 @@
       "trends": 3
     },
     {
-      "rank": 102,
-      "prev_rank": 103,
+      "rank": 101,
+      "prev_rank": 102,
       "tmdb_id": 1228710,
       "title": "Star Wars: The Mandalorian and Grogu",
       "director": "Jon Favreau",
@@ -10209,8 +10096,121 @@
       "trends": 0
     },
     {
+      "rank": 102,
+      "prev_rank": 97,
+      "tmdb_id": 1127384,
+      "title": "Deep Water",
+      "director": "Renny Harlin",
+      "cast": "Aaron Eckhart, Molly Belle Wright",
+      "release_date": "2026-04-30",
+      "poster_url": "https://image.tmdb.org/t/p/w185/2cikvQU83ecoZncnjOmAAATr3Sp.jpg",
+      "youtube_views": 16413664,
+      "youtube_likes": 3885,
+      "youtube_comments": 489,
+      "youtube_video_id": "f0ptq0Lzdh8",
+      "views_today": 10133,
+      "views_7d_avg": 18315,
+      "views_trend": "flat",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 50,
+      "scores": {
+        "1d": 15,
+        "7d": 15,
+        "30d": 15
+      },
+      "rating": 15,
+      "rating_band": "UNRATED",
+      "score": 15,
+      "move": -5,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0025,
+        "youtube_engagement": 0.1197,
+        "google_trends": 0.02,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0041,
+        "short": 0.0041,
+        "acceleration": 0.0,
+        "raw_hype": 0.0432
+      },
+      "cast_full": [
+        {
+          "id": 6383,
+          "name": "Aaron Eckhart",
+          "character": "",
+          "profile_path": "/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 3663805,
+          "name": "Molly Belle Wright",
+          "character": "Cora",
+          "profile_path": "/h0E3MOyx0YumMLpQ4MpiPC0xCii.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 1701014,
+          "name": "Kelly Gale",
+          "character": "Jaya",
+          "profile_path": "/bU9w5FITuN7TUa9VxFH3whhXFkP.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 2282,
+          "name": "Ben Kingsley",
+          "character": "",
+          "profile_path": "/vQtBqpF2HDdzbfXHDzR4u37i1Ac.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 59117,
+          "name": "Angus Sampson",
+          "character": "",
+          "profile_path": "/aFmRmydMoTDwR3l1Re1T5XtQE3s.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 5439529,
+          "name": "Rosie Zhao",
+          "character": "Lilly",
+          "profile_path": null,
+          "_billing": 5
+        },
+        {
+          "id": 2466900,
+          "name": "Richard Crouchley",
+          "character": "",
+          "profile_path": "/8AIFy9NYA4PCNkVtDj03B2hXucA.jpg"
+        },
+        {
+          "id": 1704578,
+          "name": "Rob Kipa-Williams",
+          "character": "",
+          "profile_path": "/tXYQ32sNo45F8CDe9f8CeGdz6qB.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 16938,
+          "name": "Renny Harlin",
+          "profile_path": "/IhXiDrZBrsLZpB5K5BmzUGkp4G.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 2
+    },
+    {
       "rank": 103,
-      "prev_rank": 104,
+      "prev_rank": 103,
       "tmdb_id": 1381071,
       "title": "Godzilla Minus Zero",
       "director": "Takashi Yamazaki",
@@ -10238,7 +10238,7 @@
       "rating": 13,
       "rating_band": "UNRATED",
       "score": 13,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10304,7 +10304,7 @@
     },
     {
       "rank": 104,
-      "prev_rank": 105,
+      "prev_rank": 104,
       "tmdb_id": 1470130,
       "title": "The Mortuary Assistant",
       "director": "Jeremiah Kipp",
@@ -10332,7 +10332,7 @@
       "rating": 12,
       "rating_band": "UNRATED",
       "score": 12,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -10411,7 +10411,7 @@
     },
     {
       "rank": 105,
-      "prev_rank": 106,
+      "prev_rank": 105,
       "tmdb_id": 1393326,
       "title": "Ghost in the Cell",
       "director": "Joko Anwar",
@@ -10439,7 +10439,7 @@
       "rating": 12,
       "rating_band": "UNRATED",
       "score": 12,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10524,7 +10524,7 @@
     },
     {
       "rank": 106,
-      "prev_rank": 107,
+      "prev_rank": 106,
       "tmdb_id": 1391074,
       "title": "Busboys",
       "director": "Jonah Feingold",
@@ -10552,7 +10552,7 @@
       "rating": 11,
       "rating_band": "UNRATED",
       "score": 11,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10637,7 +10637,7 @@
     },
     {
       "rank": 107,
-      "prev_rank": 108,
+      "prev_rank": 107,
       "tmdb_id": 1538497,
       "title": "Hexed",
       "director": "Jason Hand, Fawn Veerasunthorn",
@@ -10665,7 +10665,7 @@
       "rating": 11,
       "rating_band": "UNRATED",
       "score": 11,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -10716,7 +10716,7 @@
     },
     {
       "rank": 109,
-      "prev_rank": 110,
+      "prev_rank": 109,
       "tmdb_id": 1227241,
       "title": "Maa Inti Bangaram",
       "director": "B. V. Nandini Reddy",
@@ -10744,7 +10744,7 @@
       "rating": 10,
       "rating_band": "UNRATED",
       "score": 10,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -10823,114 +10823,7 @@
     },
     {
       "rank": 110,
-      "prev_rank": 89,
-      "tmdb_id": 1616131,
-      "title": "A Child of My Own",
-      "director": "Maite Alberdi",
-      "cast": "Ana Celeste, Armando Espitia",
-      "release_date": "2026-02-14",
-      "poster_url": "https://image.tmdb.org/t/p/w185/OP9GDVWBKdWW6xsrPw8bq1hEjQ.jpg",
-      "youtube_views": 6,
-      "youtube_likes": 0,
-      "youtube_comments": 0,
-      "youtube_video_id": "qZUP_ZYFdkM",
-      "views_today": 0,
-      "views_7d_avg": 0,
-      "views_trend": "flat",
-      "youtube_state": "new",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "mentions": 0,
-      "sentiment_pct": 50,
-      "scores": {
-        "1d": 10,
-        "7d": 10,
-        "30d": 10
-      },
-      "rating": 10,
-      "rating_band": "UNRATED",
-      "score": 10,
-      "move": -21,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0,
-        "youtube_engagement": 0.0,
-        "google_trends": 0.0,
-        "news_impact": 0.0,
-        "x_mentions": 0.0,
-        "baseline": 0.0,
-        "short": 0.0,
-        "acceleration": 0.0,
-        "raw_hype": 0.0
-      },
-      "cast_full": [
-        {
-          "id": 4060453,
-          "name": "Ana Celeste",
-          "character": "Self",
-          "profile_path": null,
-          "_billing": 0
-        },
-        {
-          "id": 1187081,
-          "name": "Armando Espitia",
-          "character": "Self",
-          "profile_path": "/xPazE1PHtCTpkWB114koUW523iz.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 1033241,
-          "name": "Ángeles Cruz",
-          "character": "Self",
-          "profile_path": "/4WQqDxiNgDOvw2jN4bbrEQ9B7mV.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 17687,
-          "name": "Mayra Sérbulo",
-          "character": "Self",
-          "profile_path": "/m4KqGu9SHxccOk2fLOPzuYLftB0.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 5938669,
-          "name": "Luisa Guzmán",
-          "character": "Self",
-          "profile_path": null,
-          "_billing": 4
-        },
-        {
-          "id": 5947336,
-          "name": "Casio figueroa",
-          "character": "Self",
-          "profile_path": null,
-          "_billing": 5
-        },
-        {
-          "id": 4861849,
-          "name": "Alejandro Porter",
-          "character": "Self",
-          "profile_path": null
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1066930,
-          "name": "Maite Alberdi",
-          "profile_path": "/71QbmYWxf33odXcPcfaFiaXfoCP.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [],
-      "trends": 0
-    },
-    {
-      "rank": 111,
-      "prev_rank": 112,
+      "prev_rank": 111,
       "tmdb_id": 1284465,
       "title": "The Death of Robin Hood",
       "director": "Michael Sarnoski",
@@ -11042,7 +10935,7 @@
       "trends": 1
     },
     {
-      "rank": 114,
+      "rank": 113,
       "prev_rank": 114,
       "tmdb_id": 1315772,
       "title": "Minions & Monsters",
@@ -11071,7 +10964,7 @@
       "rating": 8,
       "rating_band": "UNRATED",
       "score": 8,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11155,7 +11048,7 @@
       "trends": 0
     },
     {
-      "rank": 115,
+      "rank": 114,
       "prev_rank": 115,
       "tmdb_id": 1304313,
       "title": "Lee Cronins The Mummy",
@@ -11184,7 +11077,7 @@
       "rating": 7,
       "rating_band": "UNRATED",
       "score": 7,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11268,7 +11161,7 @@
       "trends": 1
     },
     {
-      "rank": 117,
+      "rank": 116,
       "prev_rank": 117,
       "tmdb_id": 1510745,
       "title": "Bodycam",
@@ -11297,7 +11190,7 @@
       "rating": 6,
       "rating_band": "UNRATED",
       "score": 6,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -11381,7 +11274,7 @@
       "trends": 1
     },
     {
-      "rank": 118,
+      "rank": 117,
       "prev_rank": 118,
       "tmdb_id": 1242876,
       "title": "500 Miles",
@@ -11410,7 +11303,7 @@
       "rating": 6,
       "rating_band": "UNRATED",
       "score": 6,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11494,7 +11387,7 @@
       "trends": 1
     },
     {
-      "rank": 119,
+      "rank": 118,
       "prev_rank": 119,
       "tmdb_id": 1477836,
       "title": "Bone Keeper",
@@ -11523,7 +11416,7 @@
       "rating": 6,
       "rating_band": "UNRATED",
       "score": 6,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -11607,7 +11500,7 @@
       "trends": 1
     },
     {
-      "rank": 120,
+      "rank": 119,
       "prev_rank": 120,
       "tmdb_id": 1101383,
       "title": "The End of Oak Street",
@@ -11636,7 +11529,7 @@
       "rating": 6,
       "rating_band": "UNRATED",
       "score": 6,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11714,7 +11607,7 @@
       "trends": 1
     },
     {
-      "rank": 121,
+      "rank": 120,
       "prev_rank": 121,
       "tmdb_id": 1336770,
       "title": "Vaazha II",
@@ -11743,7 +11636,7 @@
       "rating": 5,
       "rating_band": "UNRATED",
       "score": 5,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11827,8 +11720,8 @@
       "trends": 0
     },
     {
-      "rank": 122,
-      "prev_rank": 123,
+      "rank": 121,
+      "prev_rank": 122,
       "tmdb_id": 1301421,
       "title": "The Sheep Detectives",
       "director": "Kyle Balda",
@@ -11940,8 +11833,8 @@
       "trends": 0
     },
     {
-      "rank": 123,
-      "prev_rank": 122,
+      "rank": 122,
+      "prev_rank": 123,
       "tmdb_id": 1260649,
       "title": "Jumanji: Open World",
       "director": "Jake Kasdan",
@@ -11969,7 +11862,7 @@
       "rating": 4,
       "rating_band": "UNRATED",
       "score": 4,
-      "move": -1,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12053,7 +11946,7 @@
       "trends": 0
     },
     {
-      "rank": 124,
+      "rank": 123,
       "prev_rank": 124,
       "tmdb_id": 1119449,
       "title": "Good Luck, Have Fun, Dont Die",
@@ -12082,7 +11975,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12166,7 +12059,7 @@
       "trends": 0
     },
     {
-      "rank": 125,
+      "rank": 124,
       "prev_rank": 125,
       "tmdb_id": 1288438,
       "title": "Godzilla x Kong: Supernova",
@@ -12195,7 +12088,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12279,7 +12172,7 @@
       "trends": 0
     },
     {
-      "rank": 126,
+      "rank": 125,
       "prev_rank": 126,
       "tmdb_id": 875828,
       "title": "Peaky Blinders: The Immortal Man",
@@ -12308,7 +12201,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12392,7 +12285,7 @@
       "trends": 0
     },
     {
-      "rank": 127,
+      "rank": 126,
       "prev_rank": 127,
       "tmdb_id": 1523145,
       "title": "Your Heart Will Be Broken",
@@ -12421,7 +12314,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12505,7 +12398,7 @@
       "trends": 0
     },
     {
-      "rank": 128,
+      "rank": 127,
       "prev_rank": 128,
       "tmdb_id": 1115544,
       "title": "Mike & Nick & Nick & Alice",
@@ -12534,7 +12427,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12618,7 +12511,7 @@
       "trends": 0
     },
     {
-      "rank": 129,
+      "rank": 128,
       "prev_rank": 129,
       "tmdb_id": 1084187,
       "title": "Pretty Lethal",
@@ -12647,7 +12540,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12731,7 +12624,7 @@
       "trends": 0
     },
     {
-      "rank": 130,
+      "rank": 129,
       "prev_rank": 130,
       "tmdb_id": 1266127,
       "title": "Ready or Not 2: Here I Come",
@@ -12760,7 +12653,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12850,7 +12743,7 @@
       "trends": 0
     },
     {
-      "rank": 131,
+      "rank": 130,
       "prev_rank": 131,
       "tmdb_id": 931285,
       "title": "Mortal Kombat II",
@@ -12879,7 +12772,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12963,7 +12856,7 @@
       "trends": 0
     },
     {
-      "rank": 132,
+      "rank": 131,
       "prev_rank": 132,
       "tmdb_id": 1515899,
       "title": "Billie Eilish - Hit Me Hard and Soft: The Tour (Live in 3D)",
@@ -12992,7 +12885,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13063,7 +12956,7 @@
       "trends": 0
     },
     {
-      "rank": 133,
+      "rank": 132,
       "prev_rank": 133,
       "tmdb_id": 1421155,
       "title": "Ikatan Darah",
@@ -13092,7 +12985,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13176,7 +13069,7 @@
       "trends": 0
     },
     {
-      "rank": 134,
+      "rank": 133,
       "prev_rank": 134,
       "tmdb_id": 1140521,
       "title": "The Magic Faraway Tree",
@@ -13205,7 +13098,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13289,7 +13182,7 @@
       "trends": 0
     },
     {
-      "rank": 135,
+      "rank": 134,
       "prev_rank": 135,
       "tmdb_id": 1227877,
       "title": "I Love Boosters",
@@ -13318,7 +13211,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13402,7 +13295,7 @@
       "trends": 0
     },
     {
-      "rank": 136,
+      "rank": 135,
       "prev_rank": 136,
       "tmdb_id": 1601797,
       "title": "¿Quieres ser mi novia?",
@@ -13431,7 +13324,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13503,7 +13396,7 @@
       "trends": 0
     },
     {
-      "rank": 138,
+      "rank": 137,
       "prev_rank": 138,
       "tmdb_id": 1010755,
       "title": "The Strangers: Chapter 3",
@@ -13532,7 +13425,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13616,7 +13509,7 @@
       "trends": 0
     },
     {
-      "rank": 140,
+      "rank": 139,
       "prev_rank": 140,
       "tmdb_id": 1307373,
       "title": "Wasteman",
@@ -13645,7 +13538,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13729,7 +13622,7 @@
       "trends": 0
     },
     {
-      "rank": 141,
+      "rank": 140,
       "prev_rank": 141,
       "tmdb_id": 1445363,
       "title": "EPiC: Elvis Presley in Concert",
@@ -13758,7 +13651,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13835,6 +13728,113 @@
           "id": 6201,
           "name": "Baz Luhrmann",
           "profile_path": "/8K8ih7uFyGanOApYYzlzdxzcfDF.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 0
+    },
+    {
+      "rank": 141,
+      "prev_rank": 110,
+      "tmdb_id": 1616131,
+      "title": "A Child of My Own",
+      "director": "Maite Alberdi",
+      "cast": "Ana Celeste, Armando Espitia",
+      "release_date": "2026-02-14",
+      "poster_url": "https://image.tmdb.org/t/p/w185/OP9GDVWBKdWW6xsrPw8bq1hEjQ.jpg",
+      "youtube_views": 6,
+      "youtube_likes": 0,
+      "youtube_comments": 0,
+      "youtube_video_id": "qZUP_ZYFdkM",
+      "views_today": 0,
+      "views_7d_avg": 0,
+      "views_trend": "flat",
+      "youtube_state": "new",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "mentions": 0,
+      "sentiment_pct": 50,
+      "scores": {
+        "1d": 1,
+        "7d": 1,
+        "30d": 1
+      },
+      "rating": 1,
+      "rating_band": "UNRATED",
+      "score": 1,
+      "move": -31,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0,
+        "youtube_engagement": 0.0,
+        "google_trends": 0.0,
+        "news_impact": 0.0,
+        "x_mentions": 0.0,
+        "baseline": 0.0,
+        "short": 0.0,
+        "acceleration": 0.0,
+        "raw_hype": 0.0
+      },
+      "cast_full": [
+        {
+          "id": 4060453,
+          "name": "Ana Celeste",
+          "character": "Self",
+          "profile_path": null,
+          "_billing": 0
+        },
+        {
+          "id": 1187081,
+          "name": "Armando Espitia",
+          "character": "Self",
+          "profile_path": "/xPazE1PHtCTpkWB114koUW523iz.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 1033241,
+          "name": "Ángeles Cruz",
+          "character": "Self",
+          "profile_path": "/4WQqDxiNgDOvw2jN4bbrEQ9B7mV.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 17687,
+          "name": "Mayra Sérbulo",
+          "character": "Self",
+          "profile_path": "/m4KqGu9SHxccOk2fLOPzuYLftB0.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 5938669,
+          "name": "Luisa Guzmán",
+          "character": "Self",
+          "profile_path": null,
+          "_billing": 4
+        },
+        {
+          "id": 5947336,
+          "name": "Casio figueroa",
+          "character": "Self",
+          "profile_path": null,
+          "_billing": 5
+        },
+        {
+          "id": 4861849,
+          "name": "Alejandro Porter",
+          "character": "Self",
+          "profile_path": null
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1066930,
+          "name": "Maite Alberdi",
+          "profile_path": "/71QbmYWxf33odXcPcfaFiaXfoCP.jpg",
           "_billing": 0
         }
       ],
@@ -20112,7 +20112,7 @@
       "trends": 40
     },
     {
-      "rank": 45,
+      "rank": 46,
       "prev_rank": null,
       "tmdb_id": 1416391,
       "title": "Toaster",
@@ -20225,7 +20225,7 @@
       "trends": 33
     },
     {
-      "rank": 68,
+      "rank": 67,
       "prev_rank": null,
       "tmdb_id": 1207162,
       "title": "Rise of the Conqueror",
@@ -20860,7 +20860,7 @@
       "trends": 0
     },
     {
-      "rank": 112,
+      "rank": 111,
       "prev_rank": null,
       "tmdb_id": 1330021,
       "title": "Remarkably Bright Creatures",
@@ -20973,7 +20973,7 @@
       "trends": 0
     },
     {
-      "rank": 113,
+      "rank": 112,
       "prev_rank": null,
       "tmdb_id": 1446616,
       "title": "Tu Yaa Main",
@@ -21086,7 +21086,7 @@
       "trends": 1
     },
     {
-      "rank": 116,
+      "rank": 115,
       "prev_rank": null,
       "tmdb_id": 1380291,
       "title": "Tom Clancys Jack Ryan: Ghost War",
@@ -21199,7 +21199,7 @@
       "trends": 0
     },
     {
-      "rank": 137,
+      "rank": 136,
       "prev_rank": null,
       "tmdb_id": 1641319,
       "title": "Sniper: No Nation",
@@ -21312,7 +21312,7 @@
       "trends": 0
     },
     {
-      "rank": 139,
+      "rank": 138,
       "prev_rank": null,
       "tmdb_id": 1472951,
       "title": "Infiltrate",
@@ -21583,7 +21583,7 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 570,
+          "score": 573,
           "character": "Andy Sachs",
           "billing": 1
         },
@@ -21601,7 +21601,7 @@
           "title": "Mother Mary",
           "release_date": "2026-04-16",
           "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-          "score": 204,
+          "score": 208,
           "character": "Mother Mary",
           "billing": 0
         },
@@ -21626,7 +21626,7 @@
       ],
       "popularity": 89.8749,
       "sentiment_pct": 67,
-      "avg_film_score": 219,
+      "avg_film_score": 221,
       "news_mentions": [
         {
           "source": "IndieWire",
@@ -21636,17 +21636,17 @@
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 1,
-      "score": 1361,
-      "rating": 1361,
+      "score": 1362,
+      "rating": 1362,
       "scores": {
-        "1d": 1361,
-        "7d": 1361,
-        "30d": 1361
+        "1d": 1362,
+        "7d": 1362,
+        "30d": 1362
       },
       "rank": 1,
-      "move": 2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 3
+      "prev_rank": 1
     },
     {
       "tmdb_id": 5064,
@@ -21659,14 +21659,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 570,
+          "score": 573,
           "character": "Miranda Priestly",
           "billing": 0
         }
       ],
       "popularity": 89.8749,
       "sentiment_pct": 56,
-      "avg_film_score": 570,
+      "avg_film_score": 573,
       "news_mentions": [
         {
           "source": "IndieWire",
@@ -21676,12 +21676,12 @@
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 1,
-      "score": 1313,
-      "rating": 1313,
+      "score": 1314,
+      "rating": 1314,
       "scores": {
-        "1d": 1313,
-        "7d": 1313,
-        "30d": 1313
+        "1d": 1314,
+        "7d": 1314,
+        "30d": 1314
       },
       "rank": 2,
       "move": 0,
@@ -21699,29 +21699,29 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 379,
+          "score": 369,
           "character": "Michael Jackson",
           "billing": 0
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 379,
+      "avg_film_score": 369,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 1303,
-      "rating": 1303,
+      "score": 1302,
+      "rating": 1302,
       "scores": {
-        "1d": 1303,
-        "7d": 1303,
-        "30d": 1303
+        "1d": 1302,
+        "7d": 1302,
+        "30d": 1302
       },
       "rank": 3,
-      "move": 2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 5
+      "prev_rank": 3
     },
     {
       "tmdb_id": 1525043,
@@ -21734,7 +21734,7 @@
           "title": "One Night Only",
           "release_date": "2026-08-06",
           "poster_url": null,
-          "score": 387,
+          "score": 390,
           "character": "Allie",
           "billing": 0
         },
@@ -21750,7 +21750,7 @@
       ],
       "popularity": 122.0718,
       "sentiment_pct": 54,
-      "avg_film_score": 290,
+      "avg_film_score": 292,
       "news_mentions": [
         {
           "source": "IndieWire",
@@ -21768,9 +21768,9 @@
         "30d": 1159
       },
       "rank": 4,
-      "move": 4,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 8
+      "prev_rank": 4
     },
     {
       "tmdb_id": 5081,
@@ -21783,7 +21783,7 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 570,
+          "score": 573,
           "character": "Emily Charlton",
           "billing": 2
         },
@@ -21792,29 +21792,29 @@
           "title": "Disclosure Day",
           "release_date": "2026-06-10",
           "poster_url": "https://image.tmdb.org/t/p/w185/7RYO0KTXIJ0rS0LqnCQLxeNR3P3.jpg",
-          "score": 92,
+          "score": 87,
           "character": "Margaret Fairchild",
           "billing": 0
         }
       ],
       "popularity": 89.8749,
       "sentiment_pct": 55,
-      "avg_film_score": 331,
+      "avg_film_score": 330,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 1036,
-      "rating": 1036,
+      "score": 1037,
+      "rating": 1037,
       "scores": {
-        "1d": 1036,
-        "7d": 1036,
-        "30d": 1036
+        "1d": 1037,
+        "7d": 1037,
+        "30d": 1037
       },
       "rank": 5,
-      "move": -1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 4
+      "prev_rank": 5
     },
     {
       "tmdb_id": 30614,
@@ -21847,9 +21847,9 @@
         "30d": 1027
       },
       "rank": 6,
-      "move": 3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 9
+      "prev_rank": 6
     },
     {
       "tmdb_id": 6885,
@@ -21882,9 +21882,9 @@
         "30d": 1012
       },
       "rank": 7,
-      "move": 3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 10
+      "prev_rank": 7
     },
     {
       "tmdb_id": 91671,
@@ -21897,7 +21897,7 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 379,
+          "score": 369,
           "character": "Joseph Jackson",
           "billing": 1
         },
@@ -21906,29 +21906,29 @@
           "title": "Disclosure Day",
           "release_date": "2026-06-10",
           "poster_url": "https://image.tmdb.org/t/p/w185/7RYO0KTXIJ0rS0LqnCQLxeNR3P3.jpg",
-          "score": 92,
+          "score": 87,
           "character": "Hugo Wakefield",
           "billing": 4
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 65,
-      "avg_film_score": 236,
+      "avg_film_score": 228,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 1010,
-      "rating": 1010,
+      "score": 1009,
+      "rating": 1009,
       "scores": {
-        "1d": 1010,
-        "7d": 1010,
-        "30d": 1010
+        "1d": 1009,
+        "7d": 1009,
+        "30d": 1009
       },
       "rank": 8,
-      "move": -2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 6
+      "prev_rank": 8
     },
     {
       "tmdb_id": 1303037,
@@ -21961,9 +21961,9 @@
         "30d": 953
       },
       "rank": 9,
-      "move": 2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 11
+      "prev_rank": 9
     },
     {
       "tmdb_id": 9781,
@@ -21976,29 +21976,29 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 379,
+          "score": 369,
           "character": "Katherine Jackson",
           "billing": 2
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 379,
+      "avg_film_score": 369,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 947,
-      "rating": 947,
+      "score": 946,
+      "rating": 946,
       "scores": {
-        "1d": 947,
-        "7d": 947,
-        "30d": 947
+        "1d": 946,
+        "7d": 946,
+        "30d": 946
       },
       "rank": 10,
-      "move": -3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 7
+      "prev_rank": 10
     },
     {
       "tmdb_id": 505710,
@@ -22020,7 +22020,7 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-          "score": 337,
+          "score": 339,
           "character": "Emma Harwood",
           "billing": 0
         },
@@ -22045,7 +22045,7 @@
       ],
       "popularity": 29.7968,
       "sentiment_pct": 73,
-      "avg_film_score": 363,
+      "avg_film_score": 364,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 58120,
@@ -22058,9 +22058,9 @@
         "30d": 944
       },
       "rank": 11,
-      "move": -10,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 1
+      "prev_rank": 11
     },
     {
       "tmdb_id": 2283,
@@ -22073,24 +22073,24 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 570,
+          "score": 573,
           "character": "Nigel Kipling",
           "billing": 3
         }
       ],
       "popularity": 89.8749,
       "sentiment_pct": 56,
-      "avg_film_score": 570,
+      "avg_film_score": 573,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 929,
-      "rating": 929,
+      "score": 930,
+      "rating": 930,
       "scores": {
-        "1d": 929,
-        "7d": 929,
-        "30d": 929
+        "1d": 930,
+        "7d": 930,
+        "30d": 930
       },
       "rank": 12,
       "move": 0,
@@ -22108,7 +22108,7 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-          "score": 337,
+          "score": 339,
           "character": "Charlie Thompson",
           "billing": 1
         },
@@ -22124,7 +22124,7 @@
       ],
       "popularity": 29.7968,
       "sentiment_pct": 63,
-      "avg_film_score": 298,
+      "avg_film_score": 299,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22187,29 +22187,29 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 379,
+          "score": 369,
           "character": "John Branca",
           "billing": 5
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 379,
+      "avg_film_score": 369,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 842,
-      "rating": 842,
+      "score": 841,
+      "rating": 841,
       "scores": {
-        "1d": 842,
-        "7d": 842,
-        "30d": 842
+        "1d": 841,
+        "7d": 841,
+        "30d": 841
       },
       "rank": 15,
-      "move": 1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 16
+      "prev_rank": 15
     },
     {
       "tmdb_id": 7152,
@@ -22231,14 +22231,14 @@
           "title": "Digger",
           "release_date": "2026-09-30",
           "poster_url": "https://image.tmdb.org/t/p/w185/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
-          "score": 43,
+          "score": 40,
           "character": "",
           "billing": 1
         }
       ],
       "popularity": 156.4572,
       "sentiment_pct": 56,
-      "avg_film_score": 135,
+      "avg_film_score": 134,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22251,9 +22251,9 @@
         "30d": 791
       },
       "rank": 16,
-      "move": 2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 18
+      "prev_rank": 16
     },
     {
       "tmdb_id": 1718307,
@@ -22286,9 +22286,9 @@
         "30d": 782
       },
       "rank": 17,
-      "move": -2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 15
+      "prev_rank": 17
     },
     {
       "tmdb_id": 2096164,
@@ -22321,9 +22321,9 @@
         "30d": 715
       },
       "rank": 18,
-      "move": 4,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 22
+      "prev_rank": 18
     },
     {
       "tmdb_id": 234352,
@@ -22356,9 +22356,9 @@
         "30d": 707
       },
       "rank": 19,
-      "move": -2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 17
+      "prev_rank": 19
     },
     {
       "tmdb_id": 1372369,
@@ -22400,9 +22400,9 @@
         "30d": 696
       },
       "rank": 20,
-      "move": 4,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 24
+      "prev_rank": 20
     },
     {
       "tmdb_id": 1372,
@@ -22435,9 +22435,9 @@
         "30d": 689
       },
       "rank": 21,
-      "move": -1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 20
+      "prev_rank": 21
     },
     {
       "tmdb_id": 2034418,
@@ -22459,14 +22459,14 @@
           "title": "The Dog Stars",
           "release_date": "2026-08-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ePWFnyCQQr4fvBOD1lgKtcvfnCd.jpg",
-          "score": 54,
+          "score": 55,
           "character": "Hig",
           "billing": 0
         }
       ],
       "popularity": 44.8825,
       "sentiment_pct": 56,
-      "avg_film_score": 92,
+      "avg_film_score": 93,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22479,9 +22479,9 @@
         "30d": 676
       },
       "rank": 22,
-      "move": -3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 19
+      "prev_rank": 22
     },
     {
       "tmdb_id": 1267240,
@@ -22523,9 +22523,9 @@
         "30d": 658
       },
       "rank": 23,
-      "move": 5,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 28
+      "prev_rank": 23
     },
     {
       "tmdb_id": 13240,
@@ -22558,9 +22558,9 @@
         "30d": 641
       },
       "rank": 24,
-      "move": -3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 21
+      "prev_rank": 24
     },
     {
       "tmdb_id": 6730,
@@ -22628,9 +22628,9 @@
         "30d": 594
       },
       "rank": 26,
-      "move": -3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 23
+      "prev_rank": 26
     },
     {
       "tmdb_id": 215055,
@@ -22663,9 +22663,9 @@
         "30d": 528
       },
       "rank": 27,
-      "move": 17,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 44
+      "prev_rank": 27
     },
     {
       "tmdb_id": 11181,
@@ -22678,14 +22678,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 570,
+          "score": 573,
           "character": "Stuart",
           "billing": 4
         }
       ],
       "popularity": 89.8749,
       "sentiment_pct": 56,
-      "avg_film_score": 570,
+      "avg_film_score": 573,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -22698,9 +22698,9 @@
         "30d": 507
       },
       "rank": 28,
-      "move": 2,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 30
+      "prev_rank": 28
     },
     {
       "tmdb_id": 1391986,
@@ -22733,9 +22733,9 @@
         "30d": 497
       },
       "rank": 29,
-      "move": 16,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 45
+      "prev_rank": 29
     },
     {
       "tmdb_id": 74568,
@@ -22777,9 +22777,9 @@
         "30d": 495
       },
       "rank": 30,
-      "move": -3,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 27
+      "prev_rank": 30
     },
     {
       "tmdb_id": 938,
@@ -22812,9 +22812,9 @@
         "30d": 453
       },
       "rank": 31,
-      "move": 15,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 46
+      "prev_rank": 31
     },
     {
       "tmdb_id": 14405,
@@ -22847,9 +22847,9 @@
         "30d": 453
       },
       "rank": 32,
-      "move": -1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 31
+      "prev_rank": 32
     },
     {
       "tmdb_id": 64295,
@@ -22882,9 +22882,9 @@
         "30d": 451
       },
       "rank": 33,
-      "move": 15,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 48
+      "prev_rank": 33
     },
     {
       "tmdb_id": 1990676,
@@ -22897,29 +22897,29 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 379,
+          "score": 369,
           "character": "Bill Bray",
           "billing": 4
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 379,
+      "avg_film_score": 369,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 450,
-      "rating": 450,
+      "score": 449,
+      "rating": 449,
       "scores": {
-        "1d": 450,
-        "7d": 450,
-        "30d": 450
+        "1d": 449,
+        "7d": 449,
+        "30d": 449
       },
       "rank": 34,
-      "move": 13,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 47
+      "prev_rank": 34
     },
     {
       "tmdb_id": 1474123,
@@ -22952,9 +22952,9 @@
         "30d": 447
       },
       "rank": 35,
-      "move": 14,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 49
+      "prev_rank": 35
     },
     {
       "tmdb_id": 1202534,
@@ -22987,9 +22987,9 @@
         "30d": 433
       },
       "rank": 36,
-      "move": 14,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 50
+      "prev_rank": 36
     },
     {
       "tmdb_id": 2117434,
@@ -23023,8 +23023,8 @@
       },
       "rank": 37,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 37
     },
     {
       "tmdb_id": 1498158,
@@ -23057,9 +23057,9 @@
         "30d": 422
       },
       "rank": 38,
-      "move": -6,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 32
+      "prev_rank": 38
     },
     {
       "tmdb_id": 65827,
@@ -23093,8 +23093,8 @@
       },
       "rank": 39,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 39
     },
     {
       "tmdb_id": 63,
@@ -23128,8 +23128,8 @@
       },
       "rank": 40,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 40
     },
     {
       "tmdb_id": 17773,
@@ -23171,9 +23171,9 @@
         "30d": 414
       },
       "rank": 41,
-      "move": -8,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 33
+      "prev_rank": 41
     },
     {
       "tmdb_id": 1610783,
@@ -23207,8 +23207,8 @@
       },
       "rank": 42,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 42
     },
     {
       "tmdb_id": 4587,
@@ -23241,9 +23241,9 @@
         "30d": 409
       },
       "rank": 43,
-      "move": -14,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 29
+      "prev_rank": 43
     },
     {
       "tmdb_id": 35029,
@@ -23277,8 +23277,8 @@
       },
       "rank": 44,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 44
     },
     {
       "tmdb_id": 221192,
@@ -23312,8 +23312,8 @@
       },
       "rank": 45,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 45
     },
     {
       "tmdb_id": 936932,
@@ -23326,14 +23326,14 @@
           "title": "undertone",
           "release_date": "2026-03-12",
           "poster_url": "https://image.tmdb.org/t/p/w185/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
-          "score": 1097,
+          "score": 1098,
           "character": "Justin (voice)",
           "billing": 1
         }
       ],
       "popularity": 51.9697,
       "sentiment_pct": 60,
-      "avg_film_score": 1097,
+      "avg_film_score": 1098,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -23347,8 +23347,8 @@
       },
       "rank": 46,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 46
     },
     {
       "tmdb_id": 1763709,
@@ -23382,8 +23382,8 @@
       },
       "rank": 47,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 47
     },
     {
       "tmdb_id": 36594,
@@ -23417,8 +23417,8 @@
       },
       "rank": 48,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 48
     },
     {
       "tmdb_id": 2673750,
@@ -23452,8 +23452,8 @@
       },
       "rank": 49,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 49
     },
     {
       "tmdb_id": 3052321,
@@ -23487,8 +23487,8 @@
       },
       "rank": 50,
       "move": 0,
-      "is_new": true,
-      "prev_rank": null
+      "is_new": false,
+      "prev_rank": 50
     }
   ],
   "directors": [
@@ -23503,24 +23503,24 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 379,
+          "score": 369,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 258.2666,
       "sentiment_pct": 76,
-      "avg_film_score": 379,
+      "avg_film_score": 369,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
       "mentions": 0,
-      "score": 873,
-      "rating": 873,
+      "score": 872,
+      "rating": 872,
       "scores": {
-        "1d": 873,
-        "7d": 873,
-        "30d": 873
+        "1d": 872,
+        "7d": 872,
+        "30d": 872
       },
       "rank": 1,
       "move": 0,
@@ -23643,14 +23643,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 570,
+          "score": 573,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 89.8749,
       "sentiment_pct": 56,
-      "avg_film_score": 570,
+      "avg_film_score": 573,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -23678,14 +23678,14 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-          "score": 337,
+          "score": 339,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 29.7968,
       "sentiment_pct": 57,
-      "avg_film_score": 337,
+      "avg_film_score": 339,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -23888,14 +23888,14 @@
           "title": "undertone",
           "release_date": "2026-03-12",
           "poster_url": "https://image.tmdb.org/t/p/w185/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
-          "score": 1097,
+          "score": 1098,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 51.9697,
       "sentiment_pct": 60,
-      "avg_film_score": 1097,
+      "avg_film_score": 1098,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -24028,7 +24028,7 @@
           "title": "Deep Water",
           "release_date": "2026-04-30",
           "poster_url": "https://image.tmdb.org/t/p/w185/2cikvQU83ecoZncnjOmAAATr3Sp.jpg",
-          "score": 19,
+          "score": 15,
           "character": null,
           "billing": 0
         },
@@ -24044,7 +24044,7 @@
       ],
       "popularity": 68.2247,
       "sentiment_pct": 52,
-      "avg_film_score": 10,
+      "avg_film_score": 8,
       "news_mentions": [],
       "x_mentions": 0,
       "event_youtube_views": 0,
@@ -24398,8 +24398,8 @@
       "billing": 1,
       "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1361,
-      "rating": 1361,
+      "score": 1362,
+      "rating": 1362,
       "attention_type": "mixed",
       "shock_score": 23.75,
       "debug": {
@@ -24410,7 +24410,11 @@
         "title_specific_mentions": 1,
         "allocated_general_mentions": 78424,
         "allocated_general_news": 0,
-        "title_weight": 0.52,
+        "title_weight": 0.83,
+        "title_momentum_weight": 0.519,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 77,
@@ -24419,7 +24423,7 @@
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1361,
+        "raw_rating": 1362,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 94860,
@@ -24439,8 +24443,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1313,
-      "rating": 1313,
+      "score": 1314,
+      "rating": 1314,
       "attention_type": "mixed",
       "shock_score": 27.34,
       "debug": {
@@ -24451,7 +24455,11 @@
         "title_specific_mentions": 1,
         "allocated_general_mentions": 57078,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 86,
@@ -24460,7 +24468,7 @@
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1313,
+        "raw_rating": 1314,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 67156,
@@ -24480,8 +24488,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/tVSzFjQxOrLOcvnzFto0772Q9Bw.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1303,
-      "rating": 1303,
+      "score": 1302,
+      "rating": 1302,
       "attention_type": "mixed",
       "shock_score": 7.9,
       "debug": {
@@ -24492,16 +24500,20 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 73442,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 57,
+        "title_halo": 55,
         "x_score": 1247,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1303,
+        "raw_rating": 1302,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 120695,
@@ -24533,7 +24545,11 @@
         "title_specific_mentions": 1,
         "allocated_general_mentions": 1909,
         "allocated_general_news": 0,
-        "title_weight": 0.667,
+        "title_weight": 0.937,
+        "title_momentum_weight": 0.669,
+        "days_to_release": 97,
+        "release_proximity_weight": 1.4,
+        "lifecycle_phase": "marketing-ramp",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 58,
@@ -24565,17 +24581,21 @@
       "score": 1119,
       "rating": 1119,
       "attention_type": "title-driven",
-      "shock_score": 2.45,
+      "shock_score": 3.46,
       "debug": {
         "entity_general_mentions": 156849,
         "title_specific_x": 14747,
         "ts_x_score": 1112,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 8292,
+        "allocated_general_mentions": 11536,
         "allocated_general_news": 0,
-        "title_weight": 0.053,
-        "capped_weight": 0.053,
+        "title_weight": 0.074,
+        "title_momentum_weight": 0.053,
+        "days_to_release": 152,
+        "release_proximity_weight": 1.4,
+        "lifecycle_phase": "marketing-ramp",
+        "capped_weight": 0.074,
         "role_multiplier": 1.0,
         "title_halo": 8,
         "x_score": 1112,
@@ -24586,7 +24606,7 @@
         "raw_rating": 1119,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 23039,
+        "total_mentions": 26283,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -24603,8 +24623,8 @@
       "billing": 2,
       "profile_url": "https://image.tmdb.org/t/p/w300/kqsEGTXC1GATSIUVnE8lRggCZPp.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1036,
-      "rating": 1036,
+      "score": 1037,
+      "rating": 1037,
       "attention_type": "mixed",
       "shock_score": 11.74,
       "debug": {
@@ -24615,16 +24635,20 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 11881,
         "allocated_general_news": 0,
-        "title_weight": 0.861,
+        "title_weight": 1.389,
+        "title_momentum_weight": 0.868,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 68,
+        "title_halo": 69,
         "x_score": 968,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1036,
+        "raw_rating": 1037,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 16138,
@@ -24644,20 +24668,24 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/qMgUI6pxkPtIuoXX4DcJ6X7bdt2.jpg",
-      "score": 1032,
-      "rating": 1032,
+      "score": 1033,
+      "rating": 1033,
       "attention_type": "mixed",
-      "shock_score": 23.26,
+      "shock_score": 28.73,
       "debug": {
         "entity_general_mentions": 156849,
         "title_specific_x": 5695,
         "ts_x_score": 1001,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 29167,
+        "allocated_general_mentions": 35461,
         "allocated_general_news": 0,
-        "title_weight": 0.186,
-        "capped_weight": 0.186,
+        "title_weight": 0.226,
+        "title_momentum_weight": 0.188,
+        "days_to_release": -15,
+        "release_proximity_weight": 1.2000000000000002,
+        "lifecycle_phase": "theatrical-run",
+        "capped_weight": 0.226,
         "role_multiplier": 1.0,
         "title_halo": 31,
         "x_score": 1001,
@@ -24665,10 +24693,10 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1032,
+        "raw_rating": 1033,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 34862,
+        "total_mentions": 41156,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -24697,7 +24725,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 58481,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -47,
+        "release_proximity_weight": 1.2000000000000002,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 34,
@@ -24738,7 +24770,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 25417,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -7,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 27,
@@ -24767,8 +24803,8 @@
       "billing": 1,
       "profile_url": "https://image.tmdb.org/t/p/w300/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1010,
-      "rating": 1010,
+      "score": 1009,
+      "rating": 1009,
       "attention_type": "mixed",
       "shock_score": 5.36,
       "debug": {
@@ -24779,16 +24815,20 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 5328,
         "allocated_general_news": 0,
-        "title_weight": 0.805,
+        "title_weight": 1.295,
+        "title_momentum_weight": 0.809,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 51,
+        "title_halo": 50,
         "x_score": 959,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1010,
+        "raw_rating": 1009,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 9271,
@@ -24820,7 +24860,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6630,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -7,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 24,
@@ -24849,8 +24893,8 @@
       "billing": 2,
       "profile_url": "https://image.tmdb.org/t/p/w300/heVQkCGKUuKKRjRJaZIBrEKGhYA.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 947,
-      "rating": 947,
+      "score": 946,
+      "rating": 946,
       "attention_type": "mixed",
       "shock_score": 26.74,
       "debug": {
@@ -24861,16 +24905,20 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 15198,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 45,
+        "title_halo": 44,
         "x_score": 902,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 947,
+        "raw_rating": 946,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 17611,
@@ -24893,17 +24941,21 @@
       "score": 944,
       "rating": 944,
       "attention_type": "mixed",
-      "shock_score": 41.61,
+      "shock_score": 51.01,
       "debug": {
         "entity_general_mentions": 91629,
         "title_specific_x": 2234,
         "ts_x_score": 893,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 21266,
+        "allocated_general_mentions": 25635,
         "allocated_general_news": 0,
-        "title_weight": 0.232,
-        "capped_weight": 0.232,
+        "title_weight": 0.28,
+        "title_momentum_weight": 0.233,
+        "days_to_release": -36,
+        "release_proximity_weight": 1.2000000000000002,
+        "lifecycle_phase": "theatrical-run",
+        "capped_weight": 0.28,
         "role_multiplier": 1.0,
         "title_halo": 51,
         "x_score": 893,
@@ -24914,7 +24966,7 @@
         "raw_rating": 944,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 23500,
+        "total_mentions": 27869,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -24931,8 +24983,8 @@
       "billing": 3,
       "profile_url": "https://image.tmdb.org/t/p/w300/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 929,
-      "rating": 929,
+      "score": 930,
+      "rating": 930,
       "attention_type": "mixed",
       "shock_score": 14.44,
       "debug": {
@@ -24943,7 +24995,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6694,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 60,
@@ -24952,7 +25008,7 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 929,
+        "raw_rating": 930,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 8516,
@@ -24984,10 +25040,14 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6528,
         "allocated_general_news": 0,
-        "title_weight": 0.565,
+        "title_weight": 0.68,
+        "title_momentum_weight": 0.567,
+        "days_to_release": -36,
+        "release_proximity_weight": 1.2000000000000002,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 45,
+        "title_halo": 46,
         "x_score": 863,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -25013,8 +25073,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 873,
-      "rating": 873,
+      "score": 872,
+      "rating": 872,
       "attention_type": "mixed",
       "shock_score": 4.81,
       "debug": {
@@ -25025,16 +25085,20 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 9433,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
-        "title_halo": 45,
+        "title_halo": 44,
         "x_score": 1046,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 873,
+        "raw_rating": 872,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 17766,
@@ -25066,7 +25130,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6895,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -36,
+        "release_proximity_weight": 1.2000000000000002,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 5,
@@ -25095,8 +25163,8 @@
       "billing": 5,
       "profile_url": "https://image.tmdb.org/t/p/w300/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 842,
-      "rating": 842,
+      "score": 841,
+      "rating": 841,
       "attention_type": "mixed",
       "shock_score": 7.03,
       "debug": {
@@ -25107,7 +25175,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 2243,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 28,
@@ -25116,7 +25188,7 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 842,
+        "raw_rating": 841,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 3369,
@@ -25148,7 +25220,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1896,
         "allocated_general_news": 0,
-        "title_weight": 0.841,
+        "title_weight": 0.68,
+        "title_momentum_weight": 0.85,
+        "days_to_release": -47,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 27,
@@ -25189,7 +25265,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 14308,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 37,
@@ -25230,7 +25310,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1739,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -47,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 31,
@@ -25271,7 +25355,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 8362,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 20,
@@ -25312,7 +25400,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1086,
         "allocated_general_news": 0,
-        "title_weight": 0.983,
+        "title_weight": 1.179,
+        "title_momentum_weight": 0.983,
+        "days_to_release": -7,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 15,
@@ -25353,7 +25445,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 4936,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 5,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "pre-release-peak",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -25385,17 +25481,21 @@
       "score": 688,
       "rating": 688,
       "attention_type": "mixed",
-      "shock_score": 237.07,
+      "shock_score": 315.91,
       "debug": {
         "entity_general_mentions": 91629,
         "title_specific_x": 291,
         "ts_x_score": 657,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 16344,
+        "allocated_general_mentions": 21218,
         "allocated_general_news": 0,
-        "title_weight": 0.178,
-        "capped_weight": 0.178,
+        "title_weight": 0.232,
+        "title_momentum_weight": 0.178,
+        "days_to_release": 75,
+        "release_proximity_weight": 1.3,
+        "lifecycle_phase": "active-campaign",
+        "capped_weight": 0.232,
         "role_multiplier": 1.0,
         "title_halo": 31,
         "x_score": 657,
@@ -25406,7 +25506,7 @@
         "raw_rating": 688,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 16635,
+        "total_mentions": 21509,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25426,17 +25526,21 @@
       "score": 676,
       "rating": 676,
       "attention_type": "mixed",
-      "shock_score": 176.53,
+      "shock_score": 119.85,
       "debug": {
         "entity_general_mentions": 25249,
         "title_specific_x": 294,
         "ts_x_score": 658,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 12624,
+        "allocated_general_mentions": 8891,
         "allocated_general_news": 0,
-        "title_weight": 0.708,
-        "capped_weight": 0.5,
+        "title_weight": 0.352,
+        "title_momentum_weight": 0.704,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
+        "capped_weight": 0.352,
         "role_multiplier": 1.0,
         "title_halo": 18,
         "x_score": 658,
@@ -25447,7 +25551,7 @@
         "raw_rating": 676,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 12918,
+        "total_mentions": 9185,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25467,17 +25571,21 @@
       "score": 658,
       "rating": 658,
       "attention_type": "title-driven",
-      "shock_score": 0.8,
+      "shock_score": 0.64,
       "debug": {
         "entity_general_mentions": 14242,
         "title_specific_x": 293,
         "ts_x_score": 658,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 91,
+        "allocated_general_mentions": 73,
         "allocated_general_news": 0,
-        "title_weight": 0.006,
-        "capped_weight": 0.006,
+        "title_weight": 0.005,
+        "title_momentum_weight": 0.006,
+        "days_to_release": -36,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
+        "capped_weight": 0.005,
         "role_multiplier": 1.0,
         "title_halo": 0,
         "x_score": 658,
@@ -25488,7 +25596,7 @@
         "raw_rating": 658,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 384,
+        "total_mentions": 366,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25508,17 +25616,21 @@
       "score": 649,
       "rating": 649,
       "attention_type": "mixed",
-      "shock_score": 20.45,
+      "shock_score": 15.92,
       "debug": {
         "entity_general_mentions": 91629,
         "title_specific_x": 263,
         "ts_x_score": 645,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 1640,
+        "allocated_general_mentions": 1310,
         "allocated_general_news": 0,
-        "title_weight": 0.018,
-        "capped_weight": 0.018,
+        "title_weight": 0.014,
+        "title_momentum_weight": 0.018,
+        "days_to_release": 229,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "pre-production",
+        "capped_weight": 0.014,
         "role_multiplier": 1.0,
         "title_halo": 4,
         "x_score": 645,
@@ -25529,7 +25641,7 @@
         "raw_rating": 649,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 1903,
+        "total_mentions": 1573,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25549,17 +25661,21 @@
       "score": 646,
       "rating": 646,
       "attention_type": "mixed",
-      "shock_score": 95.92,
+      "shock_score": 112.1,
       "debug": {
         "entity_general_mentions": 13056,
         "title_specific_x": 223,
         "ts_x_score": 626,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 5673,
+        "allocated_general_mentions": 6528,
         "allocated_general_news": 0,
-        "title_weight": 0.435,
-        "capped_weight": 0.435,
+        "title_weight": 0.563,
+        "title_momentum_weight": 0.433,
+        "days_to_release": 75,
+        "release_proximity_weight": 1.3,
+        "lifecycle_phase": "active-campaign",
+        "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 19,
         "x_score": 626,
@@ -25570,7 +25686,7 @@
         "raw_rating": 646,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 5896,
+        "total_mentions": 6751,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25599,7 +25715,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 2439,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -47,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
         "title_halo": 27,
@@ -25640,7 +25760,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6664,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -16,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 34,
@@ -25681,7 +25805,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 45814,
         "allocated_general_news": 0,
-        "title_weight": 0.572,
+        "title_weight": 0.742,
+        "title_momentum_weight": 0.571,
+        "days_to_release": 89,
+        "release_proximity_weight": 1.3,
+        "lifecycle_phase": "active-campaign",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 112,
@@ -25722,7 +25850,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1820,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -16,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 27,
@@ -25763,7 +25895,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 7652,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -36,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 5,
@@ -25795,17 +25931,21 @@
       "score": 575,
       "rating": 575,
       "attention_type": "mixed",
-      "shock_score": 1497.59,
+      "shock_score": 1981.5,
       "debug": {
         "entity_general_mentions": 156849,
         "title_specific_x": 113,
         "ts_x_score": 547,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 37031,
+        "allocated_general_mentions": 47836,
         "allocated_general_news": 0,
-        "title_weight": 0.236,
-        "capped_weight": 0.236,
+        "title_weight": 0.305,
+        "title_momentum_weight": 0.235,
+        "days_to_release": 75,
+        "release_proximity_weight": 1.3,
+        "lifecycle_phase": "active-campaign",
+        "capped_weight": 0.305,
         "role_multiplier": 1.0,
         "title_halo": 27,
         "x_score": 547,
@@ -25816,7 +25956,7 @@
         "raw_rating": 575,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 37144,
+        "total_mentions": 47949,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25833,31 +25973,35 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/kqsEGTXC1GATSIUVnE8lRggCZPp.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/7RYO0KTXIJ0rS0LqnCQLxeNR3P3.jpg",
-      "score": 539,
-      "rating": 539,
+      "score": 538,
+      "rating": 538,
       "attention_type": "mixed",
-      "shock_score": 125.36,
+      "shock_score": 158.44,
       "debug": {
         "entity_general_mentions": 23762,
         "title_specific_x": 93,
         "ts_x_score": 525,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 3302,
+        "allocated_general_mentions": 4071,
         "allocated_general_news": 0,
-        "title_weight": 0.139,
-        "capped_weight": 0.139,
+        "title_weight": 0.171,
+        "title_momentum_weight": 0.132,
+        "days_to_release": 40,
+        "release_proximity_weight": 1.3,
+        "lifecycle_phase": "active-campaign",
+        "capped_weight": 0.171,
         "role_multiplier": 1.0,
-        "title_halo": 14,
+        "title_halo": 13,
         "x_score": 525,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 539,
+        "raw_rating": 538,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 3395,
+        "total_mentions": 4164,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25887,6 +26031,10 @@
         "allocated_general_mentions": 8360,
         "allocated_general_news": 0,
         "title_weight": 1.0,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 161,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 5,
@@ -25918,17 +26066,21 @@
       "score": 508,
       "rating": 508,
       "attention_type": "title-driven",
-      "shock_score": 0.96,
+      "shock_score": 0.77,
       "debug": {
         "entity_general_mentions": 2172,
         "title_specific_x": 80,
         "ts_x_score": 507,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 37,
+        "allocated_general_mentions": 30,
         "allocated_general_news": 0,
-        "title_weight": 0.017,
-        "capped_weight": 0.017,
+        "title_weight": 0.014,
+        "title_momentum_weight": 0.017,
+        "days_to_release": -43,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
+        "capped_weight": 0.014,
         "role_multiplier": 1.0,
         "title_halo": 0,
         "x_score": 507,
@@ -25939,7 +26091,7 @@
         "raw_rating": 508,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 117,
+        "total_mentions": 110,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25968,10 +26120,14 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1456,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 51,
+        "title_halo": 52,
         "x_score": 455,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -26009,7 +26165,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 5253,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -77,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 1,
@@ -26041,17 +26201,21 @@
       "score": 495,
       "rating": 495,
       "attention_type": "mixed",
-      "shock_score": 234.54,
+      "shock_score": 107.57,
       "debug": {
         "entity_general_mentions": 8365,
         "title_specific_x": 56,
         "ts_x_score": 466,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 3677,
+        "allocated_general_mentions": 1838,
         "allocated_general_news": 0,
-        "title_weight": 0.44,
-        "capped_weight": 0.44,
+        "title_weight": 0.22,
+        "title_momentum_weight": 0.44,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
+        "capped_weight": 0.22,
         "role_multiplier": 1.0,
         "title_halo": 29,
         "x_score": 466,
@@ -26062,7 +26226,7 @@
         "raw_rating": 495,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 3733,
+        "total_mentions": 1894,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -26079,20 +26243,24 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/lC9pK3ADyPpH4dRo2BKZBaTZPfu.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/ePWFnyCQQr4fvBOD1lgKtcvfnCd.jpg",
-      "score": 463,
-      "rating": 463,
+      "score": 464,
+      "rating": 464,
       "attention_type": "mixed",
-      "shock_score": 559.24,
+      "shock_score": 567.42,
       "debug": {
         "entity_general_mentions": 25249,
         "title_specific_x": 51,
         "ts_x_score": 455,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 7369,
+        "allocated_general_mentions": 7466,
         "allocated_general_news": 0,
-        "title_weight": 0.292,
-        "capped_weight": 0.292,
+        "title_weight": 0.296,
+        "title_momentum_weight": 0.296,
+        "days_to_release": 117,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
+        "capped_weight": 0.296,
         "role_multiplier": 1.0,
         "title_halo": 8,
         "x_score": 455,
@@ -26100,10 +26268,10 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 463,
+        "raw_rating": 464,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 7420,
+        "total_mentions": 7517,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -26123,17 +26291,21 @@
       "score": 455,
       "rating": 455,
       "attention_type": "mixed",
-      "shock_score": 686.28,
+      "shock_score": 681.35,
       "debug": {
         "entity_general_mentions": 14242,
         "title_specific_x": 40,
         "ts_x_score": 427,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 7121,
+        "allocated_general_mentions": 7075,
         "allocated_general_news": 0,
-        "title_weight": 0.994,
-        "capped_weight": 0.5,
+        "title_weight": 0.497,
+        "title_momentum_weight": 0.994,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
+        "capped_weight": 0.497,
         "role_multiplier": 1.0,
         "title_halo": 28,
         "x_score": 427,
@@ -26144,7 +26316,7 @@
         "raw_rating": 455,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 7161,
+        "total_mentions": 7115,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -26173,7 +26345,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 3246,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -16,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
         "title_halo": 1,
@@ -26214,7 +26390,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1406,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -21,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 33,
@@ -26255,7 +26435,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1604,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -65,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 9,
@@ -26296,7 +26480,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1225,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -78,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 39,
@@ -26325,8 +26513,8 @@
       "billing": 4,
       "profile_url": "https://image.tmdb.org/t/p/w300/4wDO3Zt9KJg9CARCEgjuVdhWa8x.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 450,
-      "rating": 450,
+      "score": 449,
+      "rating": 449,
       "attention_type": "attention-driven",
       "shock_score": 6.24,
       "debug": {
@@ -26337,16 +26525,20 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1314,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 34,
+        "title_halo": 33,
         "x_score": 416,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 450,
+        "raw_rating": 449,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 1314,
@@ -26378,7 +26570,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1017,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 46,
@@ -26420,6 +26616,10 @@
         "allocated_general_mentions": 1935,
         "allocated_general_news": 0,
         "title_weight": 1.0,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 161,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
         "title_halo": 6,
@@ -26460,7 +26660,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1067,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -18,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 30,
@@ -26492,17 +26696,21 @@
       "score": 431,
       "rating": 431,
       "attention_type": "mixed",
-      "shock_score": 473.7,
+      "shock_score": 419.14,
       "debug": {
         "entity_general_mentions": 8365,
         "title_specific_x": 32,
         "ts_x_score": 401,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 4182,
+        "allocated_general_mentions": 3749,
         "allocated_general_news": 0,
-        "title_weight": 0.56,
-        "capped_weight": 0.5,
+        "title_weight": 0.448,
+        "title_momentum_weight": 0.56,
+        "days_to_release": 229,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "pre-production",
+        "capped_weight": 0.448,
         "role_multiplier": 1.0,
         "title_halo": 30,
         "x_score": 401,
@@ -26513,7 +26721,7 @@
         "raw_rating": 431,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 4214,
+        "total_mentions": 3781,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -26542,7 +26750,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1416,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -36,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 4,
@@ -26583,7 +26795,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1932,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -58,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 24,
@@ -26624,7 +26840,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1333,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -48,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -26665,7 +26885,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 811,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -70,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 27,
@@ -26697,17 +26921,21 @@
       "score": 414,
       "rating": 414,
       "attention_type": "mixed",
-      "shock_score": 248.58,
+      "shock_score": 220.83,
       "debug": {
         "entity_general_mentions": 3787,
         "title_specific_x": 25,
         "ts_x_score": 373,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 1893,
+        "allocated_general_mentions": 1705,
         "allocated_general_news": 0,
-        "title_weight": 0.901,
-        "capped_weight": 0.5,
+        "title_weight": 0.45,
+        "title_momentum_weight": 0.901,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
+        "capped_weight": 0.45,
         "role_multiplier": 1.0,
         "title_halo": 42,
         "x_score": 373,
@@ -26718,7 +26946,7 @@
         "raw_rating": 414,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 1918,
+        "total_mentions": 1730,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -26748,6 +26976,10 @@
         "allocated_general_mentions": 1099,
         "allocated_general_news": 0,
         "title_weight": 1.0,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 161,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 8,
@@ -26788,7 +27020,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 8675,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 23,
@@ -26829,7 +27065,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 762,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 23,
@@ -26870,7 +27110,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1082,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -43,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -26911,7 +27155,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 74,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -50,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 148,
@@ -26952,7 +27200,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 545,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 32,
@@ -26993,7 +27245,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 931,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -77,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -27034,7 +27290,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 774,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -37,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 7,
@@ -27075,7 +27335,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 818,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -51,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 4,
@@ -27116,10 +27380,14 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1389,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
-        "title_halo": 68,
+        "title_halo": 69,
         "x_score": 419,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -27157,7 +27425,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 448,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -78,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 35,
@@ -27199,6 +27471,10 @@
         "allocated_general_mentions": 698,
         "allocated_general_news": 0,
         "title_weight": 1.0,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 161,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 7,
@@ -27239,7 +27515,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 458,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -16,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 30,
@@ -27280,7 +27560,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 654,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -16,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 5,
@@ -27321,7 +27605,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 3450,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -58,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 22,
@@ -27362,7 +27650,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 686,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 1,
@@ -27403,7 +27695,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 331,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -21,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 42,
@@ -27444,7 +27740,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 653,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -30,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 2,
@@ -27461,6 +27761,51 @@
         "x_stale": false
       },
       "rank": 75
+    },
+    {
+      "pairing_id": "actor:15009:film:1314481",
+      "entity_name": "Justin Theroux",
+      "entity_id": 15009,
+      "title": "The Devil Wears Prada 2",
+      "film_id": 1314481,
+      "role": "actor",
+      "character": "Benji Barnes",
+      "billing": 5,
+      "profile_url": "https://image.tmdb.org/t/p/w300/vnI9L0rXBAw1HeC0Q8hJGeJMGAW.jpg",
+      "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
+      "score": 376,
+      "rating": 376,
+      "attention_type": "attention-driven",
+      "shock_score": 4.99,
+      "debug": {
+        "entity_general_mentions": 312,
+        "title_specific_x": 0,
+        "ts_x_score": 0,
+        "gen_x_score": 333,
+        "title_specific_mentions": 0,
+        "allocated_general_mentions": 312,
+        "allocated_general_news": 0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -2,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
+        "capped_weight": 1.0,
+        "role_multiplier": 1.0,
+        "title_halo": 43,
+        "x_score": 333,
+        "title_news_score": 0,
+        "general_news_score": 0,
+        "news_score": 0,
+        "title_specific_multiplier": 2.0,
+        "raw_rating": 376,
+        "confidence": 1.0,
+        "cap": 1500,
+        "total_mentions": 312,
+        "excluded_mentions": 0,
+        "x_stale": false
+      },
+      "rank": 76
     },
     {
       "pairing_id": "actor:3291945:film:1290417",
@@ -27485,7 +27830,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 433,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -21,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 25,
@@ -27498,47 +27847,6 @@
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 433,
-        "excluded_mentions": 0,
-        "x_stale": false
-      },
-      "rank": 76
-    },
-    {
-      "pairing_id": "actor:15009:film:1314481",
-      "entity_name": "Justin Theroux",
-      "entity_id": 15009,
-      "title": "The Devil Wears Prada 2",
-      "film_id": 1314481,
-      "role": "actor",
-      "character": "Benji Barnes",
-      "billing": 5,
-      "profile_url": "https://image.tmdb.org/t/p/w300/vnI9L0rXBAw1HeC0Q8hJGeJMGAW.jpg",
-      "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 375,
-      "rating": 375,
-      "attention_type": "attention-driven",
-      "shock_score": 4.99,
-      "debug": {
-        "entity_general_mentions": 312,
-        "title_specific_x": 0,
-        "ts_x_score": 0,
-        "gen_x_score": 333,
-        "title_specific_mentions": 0,
-        "allocated_general_mentions": 312,
-        "allocated_general_news": 0,
-        "title_weight": 1.0,
-        "capped_weight": 1.0,
-        "role_multiplier": 1.0,
-        "title_halo": 43,
-        "x_score": 333,
-        "title_news_score": 0,
-        "general_news_score": 0,
-        "news_score": 0,
-        "title_specific_multiplier": 2.0,
-        "raw_rating": 375,
-        "confidence": 1.0,
-        "cap": 1500,
-        "total_mentions": 312,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -27567,7 +27875,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 619,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -49,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -27608,7 +27920,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 536,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -37,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 5,
@@ -27649,7 +27965,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 62183,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -79,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 26,
@@ -27690,7 +28010,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 506,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -65,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 5,
@@ -27731,10 +28055,14 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1351,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -36,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
-        "title_halo": 40,
+        "title_halo": 41,
         "x_score": 417,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -27763,16 +28091,20 @@
       "score": 364,
       "rating": 364,
       "attention_type": "mixed",
-      "shock_score": 109.71,
+      "shock_score": 108.98,
       "debug": {
         "entity_general_mentions": 156849,
         "title_specific_x": 23,
         "ts_x_score": 363,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 857,
+        "allocated_general_mentions": 852,
         "allocated_general_news": 0,
         "title_weight": 0.005,
+        "title_momentum_weight": 0.005,
+        "days_to_release": 103,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
         "capped_weight": 0.005,
         "role_multiplier": 1.0,
         "title_halo": 1,
@@ -27784,7 +28116,7 @@
         "raw_rating": 364,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 880,
+        "total_mentions": 875,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -27813,7 +28145,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 365,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -7,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 22,
@@ -27854,7 +28190,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 512,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -43,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -27871,47 +28211,6 @@
         "x_stale": false
       },
       "rank": 85
-    },
-    {
-      "pairing_id": "actor:1134885:film:1613798",
-      "entity_name": "Omar Chaparro",
-      "entity_id": 1134885,
-      "title": "Vengeance",
-      "film_id": 1613798,
-      "role": "actor",
-      "character": "Carlos Estrada",
-      "billing": 0,
-      "profile_url": "https://image.tmdb.org/t/p/w300/fAIDrbtyHBcDDbRdRZ3bvNesKU7.jpg",
-      "poster_url": "https://image.tmdb.org/t/p/w185/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg",
-      "score": 358,
-      "rating": 358,
-      "attention_type": "attention-driven",
-      "shock_score": 5.09,
-      "debug": {
-        "entity_general_mentions": 701,
-        "title_specific_x": 0,
-        "ts_x_score": 0,
-        "gen_x_score": 339,
-        "title_specific_mentions": 0,
-        "allocated_general_mentions": 350,
-        "allocated_general_news": 0,
-        "title_weight": 0.784,
-        "capped_weight": 0.5,
-        "role_multiplier": 1.0,
-        "title_halo": 19,
-        "x_score": 339,
-        "title_news_score": 0,
-        "general_news_score": 0,
-        "news_score": 0,
-        "title_specific_multiplier": 2.0,
-        "raw_rating": 358,
-        "confidence": 1.0,
-        "cap": 1500,
-        "total_mentions": 350,
-        "excluded_mentions": 0,
-        "x_stale": false
-      },
-      "rank": 86
     },
     {
       "pairing_id": "actor:9206:film:1159559",
@@ -27936,7 +28235,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 396,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -65,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 10,
@@ -27952,7 +28255,7 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 87
+      "rank": 86
     },
     {
       "pairing_id": "actor:7152:film:1248832",
@@ -27965,76 +28268,39 @@
       "billing": 1,
       "profile_url": "https://image.tmdb.org/t/p/w300/jQfKXVCPTH9KEnzHHU4QemCnlMe.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
-      "score": 353,
-      "rating": 353,
+      "score": 352,
+      "rating": 352,
       "attention_type": "mixed",
-      "shock_score": 84.25,
+      "shock_score": 78.65,
       "debug": {
         "entity_general_mentions": 3792,
         "title_specific_x": 20,
         "ts_x_score": 347,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 603,
+        "allocated_general_mentions": 568,
         "allocated_general_news": 0,
-        "title_weight": 0.159,
-        "capped_weight": 0.159,
+        "title_weight": 0.15,
+        "title_momentum_weight": 0.15,
+        "days_to_release": 152,
+        "release_proximity_weight": 1.0,
+        "lifecycle_phase": "marketing-ramp",
+        "capped_weight": 0.15,
         "role_multiplier": 1.0,
-        "title_halo": 6,
+        "title_halo": 5,
         "x_score": 347,
         "title_news_score": 0,
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 353,
+        "raw_rating": 352,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 623,
+        "total_mentions": 588,
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 88
-    },
-    {
-      "pairing_id": "actor:4487890:film:936075",
-      "entity_name": "Juliano Krue Valdi",
-      "entity_id": 4487890,
-      "title": "Michael",
-      "film_id": 936075,
-      "role": "actor",
-      "character": "Young Michael Jackson",
-      "billing": 3,
-      "profile_url": "https://image.tmdb.org/t/p/w300/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg",
-      "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 350,
-      "rating": 350,
-      "attention_type": "attention-driven",
-      "shock_score": 4.65,
-      "debug": {
-        "entity_general_mentions": 212,
-        "title_specific_x": 0,
-        "ts_x_score": 0,
-        "gen_x_score": 310,
-        "title_specific_mentions": 0,
-        "allocated_general_mentions": 212,
-        "allocated_general_news": 0,
-        "title_weight": 1.0,
-        "capped_weight": 1.0,
-        "role_multiplier": 1.0,
-        "title_halo": 40,
-        "x_score": 310,
-        "title_news_score": 0,
-        "general_news_score": 0,
-        "news_score": 0,
-        "title_specific_multiplier": 2.0,
-        "raw_rating": 350,
-        "confidence": 1.0,
-        "cap": 1500,
-        "total_mentions": 212,
-        "excluded_mentions": 0,
-        "x_stale": false
-      },
-      "rank": 89
+      "rank": 87
     },
     {
       "pairing_id": "actor:1452046:film:1084187",
@@ -28059,7 +28325,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 417,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -49,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -28075,7 +28345,7 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 90
+      "rank": 88
     },
     {
       "pairing_id": "director:155267:film:687163",
@@ -28100,7 +28370,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 1202,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -47,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
         "title_halo": 27,
@@ -28116,7 +28390,52 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 91
+      "rank": 89
+    },
+    {
+      "pairing_id": "actor:4487890:film:936075",
+      "entity_name": "Juliano Krue Valdi",
+      "entity_id": 4487890,
+      "title": "Michael",
+      "film_id": 936075,
+      "role": "actor",
+      "character": "Young Michael Jackson",
+      "billing": 3,
+      "profile_url": "https://image.tmdb.org/t/p/w300/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg",
+      "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
+      "score": 349,
+      "rating": 349,
+      "attention_type": "attention-driven",
+      "shock_score": 4.65,
+      "debug": {
+        "entity_general_mentions": 212,
+        "title_specific_x": 0,
+        "ts_x_score": 0,
+        "gen_x_score": 310,
+        "title_specific_mentions": 0,
+        "allocated_general_mentions": 212,
+        "allocated_general_news": 0,
+        "title_weight": 1.2,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -9,
+        "release_proximity_weight": 1.2,
+        "lifecycle_phase": "opening-window",
+        "capped_weight": 1.0,
+        "role_multiplier": 1.0,
+        "title_halo": 39,
+        "x_score": 310,
+        "title_news_score": 0,
+        "general_news_score": 0,
+        "news_score": 0,
+        "title_specific_multiplier": 2.0,
+        "raw_rating": 349,
+        "confidence": 1.0,
+        "cap": 1500,
+        "total_mentions": 212,
+        "excluded_mentions": 0,
+        "x_stale": false
+      },
+      "rank": 90
     },
     {
       "pairing_id": "actor:1222992:film:1122573",
@@ -28141,7 +28460,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 384,
         "allocated_general_news": 0,
-        "title_weight": 0.9,
+        "title_weight": 1.44,
+        "title_momentum_weight": 0.9,
+        "days_to_release": 12,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "pre-release-peak",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 4,
@@ -28157,7 +28480,7 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 92
+      "rank": 91
     },
     {
       "pairing_id": "actor:136347:film:931285",
@@ -28182,7 +28505,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 400,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 5,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "pre-release-peak",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -28198,7 +28525,7 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 93
+      "rank": 92
     },
     {
       "pairing_id": "actor:189230:film:931285",
@@ -28223,7 +28550,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 397,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 5,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "pre-release-peak",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -28239,7 +28570,7 @@
         "excluded_mentions": 0,
         "x_stale": false
       },
-      "rank": 94
+      "rank": 93
     },
     {
       "pairing_id": "actor:1842860:film:1290417",
@@ -28264,7 +28595,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 200,
         "allocated_general_news": 0,
-        "title_weight": 0.914,
+        "title_weight": 0.731,
+        "title_momentum_weight": 0.914,
+        "days_to_release": -21,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
         "title_halo": 37,
@@ -28277,6 +28612,51 @@
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 200,
+        "excluded_mentions": 0,
+        "x_stale": false
+      },
+      "rank": 94
+    },
+    {
+      "pairing_id": "actor:1134885:film:1613798",
+      "entity_name": "Omar Chaparro",
+      "entity_id": 1134885,
+      "title": "Vengeance",
+      "film_id": 1613798,
+      "role": "actor",
+      "character": "Carlos Estrada",
+      "billing": 0,
+      "profile_url": "https://image.tmdb.org/t/p/w300/fAIDrbtyHBcDDbRdRZ3bvNesKU7.jpg",
+      "poster_url": "https://image.tmdb.org/t/p/w185/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg",
+      "score": 344,
+      "rating": 344,
+      "attention_type": "attention-driven",
+      "shock_score": 4.88,
+      "debug": {
+        "entity_general_mentions": 701,
+        "title_specific_x": 0,
+        "ts_x_score": 0,
+        "gen_x_score": 325,
+        "title_specific_mentions": 0,
+        "allocated_general_mentions": 274,
+        "allocated_general_news": 0,
+        "title_weight": 0.392,
+        "title_momentum_weight": 0.784,
+        "days_to_release": -64,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
+        "capped_weight": 0.392,
+        "role_multiplier": 1.0,
+        "title_halo": 19,
+        "x_score": 325,
+        "title_news_score": 0,
+        "general_news_score": 0,
+        "news_score": 0,
+        "title_specific_multiplier": 2.0,
+        "raw_rating": 344,
+        "confidence": 1.0,
+        "cap": 1500,
+        "total_mentions": 274,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -28305,7 +28685,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 380,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.5,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -77,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -28346,7 +28730,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 365,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -27,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 1,
@@ -28387,7 +28775,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 209,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 0.8,
+        "title_momentum_weight": 1.0,
+        "days_to_release": -27,
+        "release_proximity_weight": 0.8,
+        "lifecycle_phase": "theatrical-run",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 31,
@@ -28428,7 +28820,11 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 351,
         "allocated_general_news": 0,
-        "title_weight": 1.0,
+        "title_weight": 1.6,
+        "title_momentum_weight": 1.0,
+        "days_to_release": 5,
+        "release_proximity_weight": 1.6,
+        "lifecycle_phase": "pre-release-peak",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,
@@ -28470,6 +28866,10 @@
         "allocated_general_mentions": 349,
         "allocated_general_news": 0,
         "title_weight": 0.0,
+        "title_momentum_weight": 0.0,
+        "days_to_release": -63,
+        "release_proximity_weight": 0.5,
+        "lifecycle_phase": "post-theatrical",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
         "title_halo": 0,

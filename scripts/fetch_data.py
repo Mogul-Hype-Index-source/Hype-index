@@ -1789,11 +1789,58 @@ def derive_people(movies: List[Dict[str, Any]],
                 billing = f.get("billing", 3)
                 billing_mult = max(0.50, 1.0 - billing * 0.10)
 
-                # Title weight for pari passu
-                title_weight = film_score / total_weight
+                # Release proximity lifecycle weighting
+                rd = f.get("release_date") or ""
+                try:
+                    release_date = datetime.strptime(rd, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                    days_to_release = (release_date - datetime.now(timezone.utc)).days
+                except (ValueError, TypeError):
+                    days_to_release = 180  # unknown → mid-range default
+
+                if days_to_release > 365:
+                    proximity_weight = 0.5
+                    lifecycle_phase = "early-announcement"
+                elif days_to_release > 180:
+                    proximity_weight = 0.8
+                    lifecycle_phase = "pre-production"
+                elif days_to_release > 90:
+                    proximity_weight = 1.0
+                    lifecycle_phase = "marketing-ramp"
+                elif days_to_release > 30:
+                    proximity_weight = 1.3
+                    lifecycle_phase = "active-campaign"
+                elif days_to_release > 0:
+                    proximity_weight = 1.6
+                    lifecycle_phase = "pre-release-peak"
+                elif days_to_release > -14:
+                    proximity_weight = 1.2
+                    lifecycle_phase = "opening-window"
+                elif days_to_release > -60:
+                    proximity_weight = 0.8
+                    lifecycle_phase = "theatrical-run"
+                else:
+                    proximity_weight = 0.5
+                    lifecycle_phase = "post-theatrical"
+
+                # Trailer/casting exception: title-specific news or X spike
+                # temporarily boosts proximity weight
+                ts_x_key_check = f"ts:{role}:{pid}:film:{film_id}"
+                has_title_spike = (x_cached_counts.get(ts_x_key_check, 0) > 1000)
+                has_title_news_check = any(
+                    film_title.lower() in (n.get("headline", "").lower())
+                    for n in person_news
+                )
+                if has_title_spike or has_title_news_check:
+                    proximity_weight += 0.4
+
+                # Title weight: momentum × lifecycle
+                title_momentum_weight = film_score / total_weight
+                title_weight = title_momentum_weight * proximity_weight
+
+                # Re-normalize weights across this entity's films
+                # (done after the loop via proportional allocation)
 
                 # Allocation cap: no single title gets >50% of general signal
-                # unless it has dominant title-specific signal
                 capped_weight = min(title_weight, 0.50) if len(active_films) > 1 else 1.0
 
                 # Single-title rule: 100% allocation
@@ -1915,6 +1962,10 @@ def derive_people(movies: List[Dict[str, Any]],
                         "allocated_general_mentions": allocated_general,
                         "allocated_general_news": allocated_news,
                         "title_weight": round(title_weight, 3),
+                        "title_momentum_weight": round(title_momentum_weight, 3),
+                        "days_to_release": days_to_release,
+                        "release_proximity_weight": proximity_weight,
+                        "lifecycle_phase": lifecycle_phase,
                         "capped_weight": round(capped_weight, 3),
                         "role_multiplier": role_mult,
                         "title_halo": int(round(title_halo)),
