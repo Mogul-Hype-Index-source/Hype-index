@@ -1458,32 +1458,43 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         q = reverse_map.get(m["title"], m["title"])
         m["trends"] = int(trends.get(q, 0))
 
-    # 5. X (Twitter) mention counts — bare title query
-    # X volume is high enough that "title + movie" over-filters (52x loss for
-    # Spider-Man). Bare title with 50K sanity cap is the right approach.
-    x_queries: Dict[str, str] = {}
+    # 5. X (Twitter) mention counts — split into movie batch + people batch
+    # to avoid rate limit short-circuit killing actor queries.
+    # Movie queries run first, then a separate batch for actors/directors
+    # after a cooldown period.
+
+    # 5a. Movie queries — bare title
+    x_movie_queries: Dict[str, str] = {}
     for m in movies:
         key = f"movie:{m['tmdb_id']}"
         clean_title = _sanitize_title(m["title"])
-        x_queries[key] = f'"{clean_title}"'
-    # Also query actors and directors (by name) — these will be attached
-    # to person entries downstream in derive_people().
+        x_movie_queries[key] = f'"{clean_title}"'
+
+    x_counts = fetch_x_mentions_batch(x_movie_queries)
+
+    # 5b. People queries — separate batch with cooldown
+    LOG.info("X people batch: cooling down before actor/director queries...")
+    time.sleep(15)  # 15s cooldown to let rate limit window recover
+
+    x_people_queries: Dict[str, str] = {}
     seen_people: set = set()
     for m in movies:
         for c in (m.get("cast_full") or [])[:6]:
             pid = c.get("id")
             name = c.get("name")
             if pid and name and pid not in seen_people:
-                x_queries[f"actor:{pid}"] = f'"{name}"'
+                x_people_queries[f"actor:{pid}"] = f'"{name}"'
                 seen_people.add(pid)
         for d in (m.get("directors_full") or []):
             pid = d.get("id")
             name = d.get("name")
             if pid and name and pid not in seen_people:
-                x_queries[f"director:{pid}"] = f'"{name}"'
+                x_people_queries[f"director:{pid}"] = f'"{name}"'
                 seen_people.add(pid)
 
-    x_counts = fetch_x_mentions_batch(x_queries)
+    LOG.info("X people batch: %d actor/director queries", len(x_people_queries))
+    x_people_counts = fetch_x_mentions_batch(x_people_queries, force=True)
+    x_counts.update(x_people_counts)
     for m in movies:
         raw_x = x_counts.get(f"movie:{m['tmdb_id']}", 0)
         # Sanity cap: >50K mentions is suspicious — discount by 50%
