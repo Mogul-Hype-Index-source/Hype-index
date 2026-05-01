@@ -1739,11 +1739,37 @@ def derive_people(movies: List[Dict[str, Any]],
     _x_cache_for_people = _x_cache_blob.get("counts") or {}
     _x_cache_stale = _x_cache_blob.get("x_stale", False)
 
+    # Build movie news lookup: tmdb_id → news_mentions list
+    _movie_news: Dict[int, List[Dict[str, Any]]] = {}
+    for m in movies:
+        mid = m.get("tmdb_id")
+        if mid:
+            _movie_news[mid] = m.get("news_mentions") or []
+
     def _finalize(slot: Dict[str, Any], kind: str) -> Dict[str, Any]:
         n = slot["sentiment_n"] or 1
         slot["sentiment_pct"] = int(round(slot["sentiment_acc"] / n))
         slot["avg_film_score"] = int(round(slot["score_acc"] / n))
-        slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
+
+        # Inherit news from attached movies (not person-name matching)
+        seen_headlines: set = set()
+        inherited_news: List[Dict[str, Any]] = []
+        for f in slot.get("films", []):
+            film_id = f.get("tmdb_id")
+            film_title = f.get("title", "")
+            for article in _movie_news.get(film_id, []):
+                headline = article.get("headline", "")
+                if headline and headline not in seen_headlines:
+                    seen_headlines.add(headline)
+                    inherited_news.append({
+                        "headline": headline,
+                        "source": article.get("source", ""),
+                        "linked_title": film_title,
+                        "is_event": article.get("is_event", False),
+                    })
+        # Most recent first, limit to 3
+        inherited_news = inherited_news[:3]
+        slot["news_mentions"] = inherited_news
 
         cache_key = f"{kind}:{slot['tmdb_id']}"
         x_val = _x_cache_for_people.get(cache_key)
