@@ -529,12 +529,21 @@ function render(data, m){
       </section>
 
       <section class="panel">
+        <h3>X MENTIONS</h3>
+        <div class="src-row">
+          <div class="src-stat"><div class="v">${m.x_status === 'pending' ? '—' : fmtCount(m.x_mentions || 0)}</div><div class="l">7-Day Total${m.x_status === 'stale' ? ' <span style="color:var(--mute);font-size:9px">● stale</span>' : ''}</div></div>
+          <div class="src-stat"><div class="v">${fmtCount(m.mentions || 0)}</div><div class="l">Total Mentions</div></div>
+        </div>
+      </section>
+
+      <section class="panel">
         <h3>YOUTUBE TRAILER</h3>
         <div class="src-row">
           <div class="src-stat"><div class="v">${yv}</div><div class="l">Views</div></div>
           <div class="src-stat"><div class="v">${yl}</div><div class="l">Likes</div></div>
           <div class="src-stat"><div class="v">${yc}</div><div class="l">Comments</div></div>
         </div>
+        ${(m.views_today || 0) > 0 ? `<div style="font-family:Rajdhani;font-size:11px;color:var(--green);letter-spacing:.08em;margin-top:6px">+${fmtCount(m.views_today)} views today${m.views_7d_avg ? ' · ' + fmtCount(m.views_7d_avg) + '/day avg' : ''}</div>` : ''}
         <div class="sent-bar"><i style="width:${m.sentiment_pct}%;background:${sentColor(m.sentiment_pct)}"></i></div>
         <div style="display:flex;justify-content:space-between;margin-top:8px;font-family:Rajdhani;font-size:11px;color:var(--mute);letter-spacing:.12em">
           <span>SENTIMENT ${m.sentiment_pct}%</span>${ytLink}
