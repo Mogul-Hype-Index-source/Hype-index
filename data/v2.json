@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-05-01T16:09:49+00:00",
-  "next_update_at": "2026-05-01T17:09:49+00:00",
+  "generated_at": "2026-05-01T16:30:23+00:00",
+  "next_update_at": "2026-05-01T17:30:23+00:00",
   "snapshot_date": "2026-05-01",
   "summary": {
     "total": 173,
     "total_streaming": 20,
-    "rising": 7,
-    "falling": 13,
-    "flat": 173,
+    "rising": 0,
+    "falling": 0,
+    "flat": 193,
     "avg_score": 97,
-    "total_mentions_24h": 13331460
+    "total_mentions_24h": 13336845
   },
   "news": [
     {
@@ -157,80 +157,8 @@
       "category": "box-office"
     }
   ],
-  "movers_up": [
-    {
-      "tmdb_id": 539745,
-      "title": "Animal Farm",
-      "poster_url": "https://image.tmdb.org/t/p/w185/8hFMsL9II5Rx2agQKsRqNggUnnE.jpg",
-      "move": 2,
-      "score": 150
-    },
-    {
-      "tmdb_id": 1314481,
-      "title": "The Devil Wears Prada 2",
-      "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "move": 1,
-      "score": 690
-    },
-    {
-      "tmdb_id": 1318447,
-      "title": "Apex",
-      "poster_url": "https://image.tmdb.org/t/p/w185/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg",
-      "move": 1,
-      "score": 238
-    },
-    {
-      "tmdb_id": 1320660,
-      "title": "Pati Patni Aur Woh Do",
-      "poster_url": "https://image.tmdb.org/t/p/w185/5MweEeMzPbueb65BcJpdiy0ihwU.jpg",
-      "move": 1,
-      "score": 28
-    },
-    {
-      "tmdb_id": 1440050,
-      "title": "The Breadwinner",
-      "poster_url": "https://image.tmdb.org/t/p/w185/4apG9Xk6HQvV48JKEjSUeiebju7.jpg",
-      "move": 1,
-      "score": 28
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1418657,
-      "title": "The Yeti",
-      "poster_url": "https://image.tmdb.org/t/p/w185/zaqEfoKcWkVni2eONhJ7DRhMO8Q.jpg",
-      "move": -3,
-      "score": 27
-    },
-    {
-      "tmdb_id": 1480387,
-      "title": "undertone",
-      "poster_url": "https://image.tmdb.org/t/p/w185/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
-      "move": -1,
-      "score": 684
-    },
-    {
-      "tmdb_id": 1297842,
-      "title": "GOAT",
-      "poster_url": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-      "move": -1,
-      "score": 238
-    },
-    {
-      "tmdb_id": 1248832,
-      "title": "Digger",
-      "poster_url": "https://image.tmdb.org/t/p/w185/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
-      "move": -1,
-      "score": 150
-    },
-    {
-      "tmdb_id": 950028,
-      "title": "The Invite",
-      "poster_url": "https://image.tmdb.org/t/p/w185/amxSk5CAVZ907gDEdgyiRZNjiwU.jpg",
-      "move": -1,
-      "score": 150
-    }
-  ],
+  "movers_up": [],
+  "movers_down": [],
   "movies": [
     {
       "rank": 1,
@@ -251,9 +179,9 @@
       "youtube_state": "new",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4824755,
-      "x_status": "stale",
-      "mentions": 4824755,
+      "x_mentions": 4827499,
+      "x_status": "live",
+      "mentions": 4827499,
       "sentiment_pct": 65,
       "scores": {
         "1d": 1143,
@@ -365,18 +293,18 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2965458,
-      "x_status": "stale",
-      "mentions": 2965459,
+      "x_mentions": 2965912,
+      "x_status": "live",
+      "mentions": 2965913,
       "sentiment_pct": 77,
       "scores": {
-        "1d": 1072,
+        "1d": 1071,
         "7d": 885,
-        "30d": 1072
+        "30d": 1071
       },
-      "rating": 1072,
+      "rating": 1071,
       "rating_band": "STRONG",
-      "score": 1072,
+      "score": 1071,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -387,11 +315,11 @@
         "youtube_engagement": 0.1755,
         "google_trends": 0.48,
         "news_impact": 0.35,
-        "x_mentions": 0.6146,
-        "baseline": 0.3242,
-        "short": 0.3242,
+        "x_mentions": 0.6144,
+        "baseline": 0.3241,
+        "short": 0.3241,
         "acceleration": 0.0,
-        "raw_hype": 209.664
+        "raw_hype": 209.5713
       },
       "cast_full": [
         {
@@ -700,7 +628,7 @@
     },
     {
       "rank": 5,
-      "prev_rank": 6,
+      "prev_rank": 5,
       "tmdb_id": 1314481,
       "title": "The Devil Wears Prada 2",
       "director": "David Frankel",
@@ -717,19 +645,19 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 182663,
-      "x_status": "stale",
-      "mentions": 182665,
+      "x_mentions": 183869,
+      "x_status": "live",
+      "mentions": 183871,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 690,
+        "1d": 692,
         "7d": 911,
-        "30d": 690
+        "30d": 692
       },
-      "rating": 690,
+      "rating": 692,
       "rating_band": "DECENT",
-      "score": 690,
-      "move": 1,
+      "score": 692,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -739,11 +667,11 @@
         "youtube_engagement": 0.0696,
         "google_trends": 0.18,
         "news_impact": 1.0,
-        "x_mentions": 0.0379,
+        "x_mentions": 0.0381,
         "baseline": 0.2044,
         "short": 0.2044,
         "acceleration": 0.0,
-        "raw_hype": 87.5477
+        "raw_hype": 87.6038
       },
       "cast_full": [
         {
@@ -823,7 +751,7 @@
     },
     {
       "rank": 6,
-      "prev_rank": 5,
+      "prev_rank": 6,
       "tmdb_id": 1480387,
       "title": "undertone",
       "director": "Ian Tuason",
@@ -840,9 +768,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4207,
-      "x_status": "stale",
-      "mentions": 4207,
+      "x_mentions": 4214,
+      "x_status": "live",
+      "mentions": 4214,
       "sentiment_pct": 60,
       "scores": {
         "1d": 684,
@@ -852,7 +780,7 @@
       "rating": 684,
       "rating_band": "DECENT",
       "score": 684,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -866,7 +794,7 @@
         "baseline": 0.2017,
         "short": 0.2017,
         "acceleration": 0.0,
-        "raw_hype": 85.4
+        "raw_hype": 85.4002
       },
       "cast_full": [
         {
@@ -954,18 +882,18 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1394,
-      "x_status": "stale",
-      "mentions": 1394,
+      "x_mentions": 1402,
+      "x_status": "live",
+      "mentions": 1402,
       "sentiment_pct": 53,
       "scores": {
-        "1d": 646,
+        "1d": 647,
         "7d": 781,
-        "30d": 646
+        "30d": 647
       },
-      "rating": 646,
+      "rating": 647,
       "rating_band": "MODEST",
-      "score": 646,
+      "score": 647,
       "move": 0,
       "is_new": false,
       "hot": true,
@@ -980,7 +908,7 @@
         "baseline": 0.1904,
         "short": 0.1904,
         "acceleration": 0.0,
-        "raw_hype": 76.4296
+        "raw_hype": 76.43
       },
       "cast_full": [
         {
@@ -1069,7 +997,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1033308,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1033308,
       "sentiment_pct": 68,
       "scores": {
@@ -1090,11 +1018,11 @@
         "youtube_engagement": 0.1785,
         "google_trends": 0.62,
         "news_impact": 0.0,
-        "x_mentions": 0.2142,
+        "x_mentions": 0.214,
         "baseline": 0.1573,
         "short": 0.1573,
         "acceleration": 0.0,
-        "raw_hype": 52.9334
+        "raw_hype": 52.9096
       },
       "cast_full": [
         {
@@ -1182,18 +1110,18 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 85835,
-      "x_status": "stale",
-      "mentions": 85835,
+      "x_mentions": 85754,
+      "x_status": "live",
+      "mentions": 85754,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 368,
+        "1d": 367,
         "7d": 863,
-        "30d": 368
+        "30d": 367
       },
-      "rating": 368,
+      "rating": 367,
       "rating_band": "LOW",
-      "score": 368,
+      "score": 367,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1208,7 +1136,7 @@
         "baseline": 0.1061,
         "short": 0.1061,
         "acceleration": 0.0,
-        "raw_hype": 24.6662
+        "raw_hype": 24.6625
       },
       "cast_full": [
         {
@@ -1296,18 +1224,18 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 75228,
-      "x_status": "stale",
-      "mentions": 75228,
+      "x_mentions": 74877,
+      "x_status": "live",
+      "mentions": 74877,
       "sentiment_pct": 80,
       "scores": {
-        "1d": 354,
+        "1d": 353,
         "7d": 939,
-        "30d": 354
+        "30d": 353
       },
-      "rating": 354,
+      "rating": 353,
       "rating_band": "LOW",
-      "score": 354,
+      "score": 353,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1318,11 +1246,11 @@
         "youtube_engagement": 0.2083,
         "google_trends": 0.21,
         "news_impact": 0.0,
-        "x_mentions": 0.0156,
+        "x_mentions": 0.0155,
         "baseline": 0.102,
         "short": 0.102,
         "acceleration": 0.0,
-        "raw_hype": 22.8212
+        "raw_hype": 22.8105
       },
       "cast_full": [
         {
@@ -1398,9 +1326,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 347244,
-      "x_status": "stale",
-      "mentions": 347244,
+      "x_mentions": 347658,
+      "x_status": "live",
+      "mentions": 347658,
       "sentiment_pct": 52,
       "scores": {
         "1d": 353,
@@ -1424,7 +1352,7 @@
         "baseline": 0.1019,
         "short": 0.1019,
         "acceleration": 0.0,
-        "raw_hype": 22.7854
+        "raw_hype": 22.7912
       },
       "cast_full": [
         {
@@ -1626,9 +1554,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 258113,
-      "x_status": "stale",
-      "mentions": 258113,
+      "x_mentions": 258011,
+      "x_status": "live",
+      "mentions": 258011,
       "sentiment_pct": 58,
       "scores": {
         "1d": 337,
@@ -1648,11 +1576,11 @@
         "youtube_engagement": 0.0734,
         "google_trends": 0.53,
         "news_impact": 0.0,
-        "x_mentions": 0.0535,
-        "baseline": 0.0973,
-        "short": 0.0973,
+        "x_mentions": 0.0534,
+        "baseline": 0.0972,
+        "short": 0.0972,
         "acceleration": 0.0,
-        "raw_hype": 20.7971
+        "raw_hype": 20.7907
       },
       "cast_full": [
         {
@@ -1854,9 +1782,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 10446,
-      "x_status": "stale",
-      "mentions": 10446,
+      "x_mentions": 10411,
+      "x_status": "live",
+      "mentions": 10411,
       "sentiment_pct": 62,
       "scores": {
         "1d": 285,
@@ -1880,7 +1808,7 @@
         "baseline": 0.0819,
         "short": 0.0819,
         "acceleration": 0.0,
-        "raw_hype": 14.8481
+        "raw_hype": 14.8472
       },
       "cast_full": [
         {
@@ -1949,9 +1877,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 179218,
-      "x_status": "stale",
-      "mentions": 179218,
+      "x_mentions": 179246,
+      "x_status": "live",
+      "mentions": 179246,
       "sentiment_pct": 63,
       "scores": {
         "1d": 269,
@@ -1975,7 +1903,7 @@
         "baseline": 0.0772,
         "short": 0.0772,
         "acceleration": 0.0,
-        "raw_hype": 13.221
+        "raw_hype": 13.2194
       },
       "cast_full": [
         {
@@ -2057,9 +1985,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 42686,
-      "x_status": "stale",
-      "mentions": 42686,
+      "x_mentions": 42564,
+      "x_status": "live",
+      "mentions": 42564,
       "sentiment_pct": 57,
       "scores": {
         "1d": 266,
@@ -2080,10 +2008,10 @@
         "google_trends": 0.49,
         "news_impact": 0.0,
         "x_mentions": 0.0088,
-        "baseline": 0.0764,
-        "short": 0.0764,
+        "baseline": 0.0763,
+        "short": 0.0763,
         "acceleration": 0.0,
-        "raw_hype": 12.9419
+        "raw_hype": 12.9389
       },
       "cast_full": [
         {
@@ -2165,9 +2093,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2196,
-      "x_status": "stale",
-      "mentions": 2196,
+      "x_mentions": 2200,
+      "x_status": "live",
+      "mentions": 2200,
       "sentiment_pct": 54,
       "scores": {
         "1d": 262,
@@ -2191,7 +2119,7 @@
         "baseline": 0.0752,
         "short": 0.0752,
         "acceleration": 0.0,
-        "raw_hype": 12.5521
+        "raw_hype": 12.5522
       },
       "cast_full": [
         {
@@ -2383,19 +2311,19 @@
       "cast": "Gianna Jun, Koo Kyo-hwan",
       "release_date": "2026-05-21",
       "poster_url": "https://image.tmdb.org/t/p/w185/zc5vqIeqV0ShsbBQPqvhQ0LZpnn.jpg",
-      "youtube_views": 28361,
+      "youtube_views": 28374,
       "youtube_likes": 775,
       "youtube_comments": 48,
       "youtube_video_id": "LW6dpj1uCK8",
-      "views_today": 464,
-      "views_7d_avg": 499,
+      "views_today": 477,
+      "views_7d_avg": 506,
       "views_trend": "flat",
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 76827,
-      "x_status": "stale",
-      "mentions": 76827,
+      "x_mentions": 78066,
+      "x_status": "live",
+      "mentions": 78066,
       "sentiment_pct": 91,
       "scores": {
         "1d": 258,
@@ -2412,14 +2340,14 @@
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0002,
-        "youtube_engagement": 0.2195,
+        "youtube_engagement": 0.2147,
         "google_trends": 0.46,
         "news_impact": 0.0,
-        "x_mentions": 0.0159,
+        "x_mentions": 0.0162,
         "baseline": 0.0739,
         "short": 0.0739,
         "acceleration": 0.0,
-        "raw_hype": 12.1233
+        "raw_hype": 12.1479
       },
       "cast_full": [
         {
@@ -2621,9 +2549,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 64326,
-      "x_status": "stale",
-      "mentions": 64326,
+      "x_mentions": 64233,
+      "x_status": "live",
+      "mentions": 64233,
       "sentiment_pct": 58,
       "scores": {
         "1d": 251,
@@ -2644,10 +2572,10 @@
         "google_trends": 0.45,
         "news_impact": 0.0,
         "x_mentions": 0.0133,
-        "baseline": 0.072,
-        "short": 0.072,
+        "baseline": 0.0719,
+        "short": 0.0719,
         "acceleration": 0.0,
-        "raw_hype": 11.5179
+        "raw_hype": 11.5154
       },
       "cast_full": [
         {
@@ -2724,7 +2652,7 @@
     },
     {
       "rank": 26,
-      "prev_rank": 27,
+      "prev_rank": 26,
       "tmdb_id": 1318447,
       "title": "Apex",
       "director": "Baltasar Kormákur",
@@ -2741,9 +2669,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 188301,
-      "x_status": "stale",
-      "mentions": 188301,
+      "x_mentions": 188069,
+      "x_status": "live",
+      "mentions": 188069,
       "sentiment_pct": 59,
       "scores": {
         "1d": 238,
@@ -2753,7 +2681,7 @@
       "rating": 238,
       "rating_band": "MINIMAL",
       "score": 238,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2767,7 +2695,7 @@
         "baseline": 0.0681,
         "short": 0.0681,
         "acceleration": 0.0,
-        "raw_hype": 10.3401
+        "raw_hype": 10.3338
       },
       "cast_full": [
         {
@@ -2838,7 +2766,7 @@
     },
     {
       "rank": 27,
-      "prev_rank": 26,
+      "prev_rank": 27,
       "tmdb_id": 1297842,
       "title": "GOAT",
       "director": "Tyree Dillihay",
@@ -2855,9 +2783,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 802697,
-      "x_status": "stale",
-      "mentions": 802697,
+      "x_mentions": 803319,
+      "x_status": "live",
+      "mentions": 803319,
       "sentiment_pct": 53,
       "scores": {
         "1d": 238,
@@ -2867,7 +2795,7 @@
       "rating": 238,
       "rating_band": "MINIMAL",
       "score": 238,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2881,7 +2809,7 @@
         "baseline": 0.1351,
         "short": 0.1351,
         "acceleration": 0.0,
-        "raw_hype": 39.4534
+        "raw_hype": 39.4592
       },
       "cast_full": [
         {
@@ -2970,7 +2898,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 2582,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 2582,
       "sentiment_pct": 73,
       "scores": {
@@ -2995,7 +2923,7 @@
         "baseline": 0.0627,
         "short": 0.0627,
         "acceleration": 0.0,
-        "raw_hype": 8.7868
+        "raw_hype": 8.7867
       },
       "cast_full": [
         {
@@ -3089,9 +3017,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 24139,
-      "x_status": "stale",
-      "mentions": 24139,
+      "x_mentions": 24152,
+      "x_status": "live",
+      "mentions": 24152,
       "sentiment_pct": 58,
       "scores": {
         "1d": 200,
@@ -3203,9 +3131,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 115199,
-      "x_status": "stale",
-      "mentions": 115199,
+      "x_mentions": 115314,
+      "x_status": "live",
+      "mentions": 115314,
       "sentiment_pct": 55,
       "scores": {
         "1d": 197,
@@ -3229,7 +3157,7 @@
         "baseline": 0.0562,
         "short": 0.0562,
         "acceleration": 0.0,
-        "raw_hype": 7.0787
+        "raw_hype": 7.0794
       },
       "cast_full": [
         {
@@ -3317,9 +3245,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 13279,
-      "x_status": "stale",
-      "mentions": 13279,
+      "x_mentions": 13359,
+      "x_status": "live",
+      "mentions": 13359,
       "sentiment_pct": 57,
       "scores": {
         "1d": 194,
@@ -3343,7 +3271,7 @@
         "baseline": 0.0553,
         "short": 0.0553,
         "acceleration": 0.0,
-        "raw_hype": 6.8608
+        "raw_hype": 6.8619
       },
       "cast_full": [
         {
@@ -3431,9 +3359,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 29731,
-      "x_status": "stale",
-      "mentions": 29731,
+      "x_mentions": 29113,
+      "x_status": "live",
+      "mentions": 29113,
       "sentiment_pct": 59,
       "scores": {
         "1d": 180,
@@ -3453,11 +3381,11 @@
         "youtube_engagement": 0.0,
         "google_trends": 0.33,
         "news_impact": 0.0,
-        "x_mentions": 0.0062,
-        "baseline": 0.0514,
-        "short": 0.0514,
+        "x_mentions": 0.006,
+        "baseline": 0.0513,
+        "short": 0.0513,
         "acceleration": 0.0,
-        "raw_hype": 5.9246
+        "raw_hype": 5.9156
       },
       "cast_full": [
         {
@@ -3545,9 +3473,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 44002,
-      "x_status": "stale",
-      "mentions": 44002,
+      "x_mentions": 44006,
+      "x_status": "live",
+      "mentions": 44006,
       "sentiment_pct": 75,
       "scores": {
         "1d": 178,
@@ -3571,7 +3499,7 @@
         "baseline": 0.0509,
         "short": 0.0509,
         "acceleration": 0.0,
-        "raw_hype": 5.813
+        "raw_hype": 5.8127
       },
       "cast_full": [
         {
@@ -3659,9 +3587,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 40922,
-      "x_status": "stale",
-      "mentions": 40922,
+      "x_mentions": 40868,
+      "x_status": "live",
+      "mentions": 40868,
       "sentiment_pct": 64,
       "scores": {
         "1d": 175,
@@ -3685,7 +3613,7 @@
         "baseline": 0.0986,
         "short": 0.0986,
         "acceleration": 0.0,
-        "raw_hype": 21.3526
+        "raw_hype": 21.3506
       },
       "cast_full": [
         {
@@ -3773,9 +3701,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 30251,
-      "x_status": "stale",
-      "mentions": 30251,
+      "x_mentions": 30432,
+      "x_status": "live",
+      "mentions": 30432,
       "sentiment_pct": 93,
       "scores": {
         "1d": 173,
@@ -3799,7 +3727,7 @@
         "baseline": 0.0494,
         "short": 0.0494,
         "acceleration": 0.0,
-        "raw_hype": 5.4769
+        "raw_hype": 5.4791
       },
       "cast_full": [
         {
@@ -4007,9 +3935,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2168,
-      "x_status": "stale",
-      "mentions": 2168,
+      "x_mentions": 2158,
+      "x_status": "live",
+      "mentions": 2158,
       "sentiment_pct": 52,
       "scores": {
         "1d": 166,
@@ -4033,7 +3961,7 @@
         "baseline": 0.0474,
         "short": 0.0474,
         "acceleration": 0.0,
-        "raw_hype": 5.0624
+        "raw_hype": 5.0622
       },
       "cast_full": [
         {
@@ -4235,9 +4163,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 90874,
-      "x_status": "stale",
-      "mentions": 90874,
+      "x_mentions": 90821,
+      "x_status": "live",
+      "mentions": 90821,
       "sentiment_pct": 51,
       "scores": {
         "1d": 163,
@@ -4258,10 +4186,10 @@
         "google_trends": 0.57,
         "news_impact": 0.0,
         "x_mentions": 0.0188,
-        "baseline": 0.092,
-        "short": 0.092,
+        "baseline": 0.0919,
+        "short": 0.0919,
         "acceleration": 0.0,
-        "raw_hype": 18.6342
+        "raw_hype": 18.6316
       },
       "cast_full": [
         {
@@ -4349,9 +4277,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1237,
-      "x_status": "stale",
-      "mentions": 1237,
+      "x_mentions": 1238,
+      "x_status": "live",
+      "mentions": 1238,
       "sentiment_pct": 52,
       "scores": {
         "1d": 160,
@@ -4423,9 +4351,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5560,
-      "x_status": "stale",
-      "mentions": 5560,
+      "x_mentions": 5564,
+      "x_status": "live",
+      "mentions": 5564,
       "sentiment_pct": 50,
       "scores": {
         "1d": 157,
@@ -4449,7 +4377,7 @@
         "baseline": 0.0447,
         "short": 0.0447,
         "acceleration": 0.0,
-        "raw_hype": 4.508
+        "raw_hype": 4.5081
       },
       "cast_full": [
         {
@@ -4537,9 +4465,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 16011,
-      "x_status": "stale",
-      "mentions": 16011,
+      "x_mentions": 15969,
+      "x_status": "live",
+      "mentions": 15969,
       "sentiment_pct": 57,
       "scores": {
         "1d": 151,
@@ -4563,7 +4491,7 @@
         "baseline": 0.043,
         "short": 0.043,
         "acceleration": 0.0,
-        "raw_hype": 4.1646
+        "raw_hype": 4.164
       },
       "cast_full": [
         {
@@ -4634,7 +4562,7 @@
     },
     {
       "rank": 46,
-      "prev_rank": 48,
+      "prev_rank": 46,
       "tmdb_id": 539745,
       "title": "Animal Farm",
       "director": "Andy Serkis",
@@ -4651,9 +4579,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 17291,
-      "x_status": "stale",
-      "mentions": 17291,
+      "x_mentions": 17427,
+      "x_status": "live",
+      "mentions": 17427,
       "sentiment_pct": 52,
       "scores": {
         "1d": 150,
@@ -4663,7 +4591,7 @@
       "rating": 150,
       "rating_band": "MINIMAL",
       "score": 150,
-      "move": 2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4677,7 +4605,7 @@
         "baseline": 0.0426,
         "short": 0.0426,
         "acceleration": 0.0,
-        "raw_hype": 4.0861
+        "raw_hype": 4.0876
       },
       "cast_full": [
         {
@@ -4748,7 +4676,7 @@
     },
     {
       "rank": 47,
-      "prev_rank": 46,
+      "prev_rank": 47,
       "tmdb_id": 1248832,
       "title": "Digger",
       "director": "Alejandro G. Iñárritu",
@@ -4765,9 +4693,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 31359,
-      "x_status": "stale",
-      "mentions": 31359,
+      "x_mentions": 31375,
+      "x_status": "live",
+      "mentions": 31375,
       "sentiment_pct": 55,
       "scores": {
         "1d": 150,
@@ -4777,7 +4705,7 @@
       "rating": 150,
       "rating_band": "MINIMAL",
       "score": 150,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4862,7 +4790,7 @@
     },
     {
       "rank": 48,
-      "prev_rank": 47,
+      "prev_rank": 48,
       "tmdb_id": 950028,
       "title": "The Invite",
       "director": "Olivia Wilde",
@@ -4891,7 +4819,7 @@
       "rating": 150,
       "rating_band": "MINIMAL",
       "score": 150,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5081,9 +5009,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 45493,
-      "x_status": "stale",
-      "mentions": 45493,
+      "x_mentions": 45189,
+      "x_status": "live",
+      "mentions": 45189,
       "sentiment_pct": 76,
       "scores": {
         "1d": 133,
@@ -5107,7 +5035,7 @@
         "baseline": 0.0752,
         "short": 0.0752,
         "acceleration": 0.0,
-        "raw_hype": 12.5646
+        "raw_hype": 12.5579
       },
       "cast_full": [
         {
@@ -5196,7 +5124,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 630,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 630,
       "sentiment_pct": 52,
       "scores": {
@@ -5309,9 +5237,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 554141,
-      "x_status": "stale",
-      "mentions": 554141,
+      "x_mentions": 554458,
+      "x_status": "live",
+      "mentions": 554458,
       "sentiment_pct": 70,
       "scores": {
         "1d": 129,
@@ -5537,18 +5465,18 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 242602,
-      "x_status": "stale",
-      "mentions": 242602,
+      "x_mentions": 243102,
+      "x_status": "live",
+      "mentions": 243102,
       "sentiment_pct": 50,
       "scores": {
-        "1d": 112,
+        "1d": 113,
         "7d": 833,
-        "30d": 112
+        "30d": 113
       },
-      "rating": 112,
+      "rating": 113,
       "rating_band": "MINIMAL",
-      "score": 112,
+      "score": 113,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -5559,11 +5487,11 @@
         "youtube_engagement": 0.0167,
         "google_trends": 0.1,
         "news_impact": 0.0,
-        "x_mentions": 0.0503,
+        "x_mentions": 0.0504,
         "baseline": 0.0319,
         "short": 0.0319,
         "acceleration": 0.0,
-        "raw_hype": 2.3084
+        "raw_hype": 2.3116
       },
       "cast_full": [
         {
@@ -5765,9 +5693,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1721,
-      "x_status": "stale",
-      "mentions": 1721,
+      "x_mentions": 1720,
+      "x_status": "live",
+      "mentions": 1720,
       "sentiment_pct": 51,
       "scores": {
         "1d": 106,
@@ -5879,9 +5807,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2248,
-      "x_status": "stale",
-      "mentions": 2248,
+      "x_mentions": 2240,
+      "x_status": "live",
+      "mentions": 2240,
       "sentiment_pct": 72,
       "scores": {
         "1d": 98,
@@ -5905,7 +5833,7 @@
         "baseline": 0.0277,
         "short": 0.0277,
         "acceleration": 0.0,
-        "raw_hype": 1.7424
+        "raw_hype": 1.7423
       },
       "cast_full": [
         {
@@ -5993,9 +5921,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4849,
-      "x_status": "stale",
-      "mentions": 4849,
+      "x_mentions": 4886,
+      "x_status": "live",
+      "mentions": 4886,
       "sentiment_pct": 53,
       "scores": {
         "1d": 81,
@@ -6019,7 +5947,7 @@
         "baseline": 0.0453,
         "short": 0.0453,
         "acceleration": 0.0,
-        "raw_hype": 4.6238
+        "raw_hype": 4.6242
       },
       "cast_full": [
         {
@@ -6107,9 +6035,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5056,
-      "x_status": "stale",
-      "mentions": 5056,
+      "x_mentions": 5035,
+      "x_status": "live",
+      "mentions": 5035,
       "sentiment_pct": 80,
       "scores": {
         "1d": 77,
@@ -6133,7 +6061,7 @@
         "baseline": 0.0217,
         "short": 0.0217,
         "acceleration": 0.0,
-        "raw_hype": 1.0697
+        "raw_hype": 1.0696
       },
       "cast_full": [
         {
@@ -6335,9 +6263,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 11023,
-      "x_status": "stale",
-      "mentions": 11023,
+      "x_mentions": 11051,
+      "x_status": "live",
+      "mentions": 11051,
       "sentiment_pct": 55,
       "scores": {
         "1d": 71,
@@ -6361,7 +6289,7 @@
         "baseline": 0.0202,
         "short": 0.0202,
         "acceleration": 0.0,
-        "raw_hype": 0.9309
+        "raw_hype": 0.931
       },
       "cast_full": [
         {
@@ -6449,9 +6377,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 43790,
-      "x_status": "stale",
-      "mentions": 43790,
+      "x_mentions": 43872,
+      "x_status": "live",
+      "mentions": 43872,
       "sentiment_pct": 65,
       "scores": {
         "1d": 70,
@@ -6475,7 +6403,7 @@
         "baseline": 0.0393,
         "short": 0.0393,
         "acceleration": 0.0,
-        "raw_hype": 3.4843
+        "raw_hype": 3.4849
       },
       "cast_full": [
         {
@@ -6563,9 +6491,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 3504,
-      "x_status": "stale",
-      "mentions": 3504,
+      "x_mentions": 3521,
+      "x_status": "live",
+      "mentions": 3521,
       "sentiment_pct": 54,
       "scores": {
         "1d": 70,
@@ -6589,7 +6517,7 @@
         "baseline": 0.0395,
         "short": 0.0395,
         "acceleration": 0.0,
-        "raw_hype": 3.5256
+        "raw_hype": 3.5257
       },
       "cast_full": [
         {
@@ -6677,9 +6605,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 29452,
-      "x_status": "stale",
-      "mentions": 29452,
+      "x_mentions": 29332,
+      "x_status": "live",
+      "mentions": 29332,
       "sentiment_pct": 63,
       "scores": {
         "1d": 60,
@@ -6703,7 +6631,7 @@
         "baseline": 0.0169,
         "short": 0.0169,
         "acceleration": 0.0,
-        "raw_hype": 0.6547
+        "raw_hype": 0.654
       },
       "cast_full": [
         {
@@ -6791,9 +6719,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 3009,
-      "x_status": "stale",
-      "mentions": 3009,
+      "x_mentions": 3006,
+      "x_status": "live",
+      "mentions": 3006,
       "sentiment_pct": 68,
       "scores": {
         "1d": 60,
@@ -7019,9 +6947,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6520,
-      "x_status": "stale",
-      "mentions": 6520,
+      "x_mentions": 6578,
+      "x_status": "live",
+      "mentions": 6578,
       "sentiment_pct": 55,
       "scores": {
         "1d": 48,
@@ -7042,10 +6970,10 @@
         "google_trends": 0.07,
         "news_impact": 0.0,
         "x_mentions": 0.0014,
-        "baseline": 0.0136,
-        "short": 0.0136,
+        "baseline": 0.0137,
+        "short": 0.0137,
         "acceleration": 0.0,
-        "raw_hype": 0.4263
+        "raw_hype": 0.4265
       },
       "cast_full": [
         {
@@ -7133,9 +7061,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5266,
-      "x_status": "stale",
-      "mentions": 5266,
+      "x_mentions": 5234,
+      "x_status": "live",
+      "mentions": 5234,
       "sentiment_pct": 58,
       "scores": {
         "1d": 40,
@@ -7159,7 +7087,7 @@
         "baseline": 0.0113,
         "short": 0.0113,
         "acceleration": 0.0,
-        "raw_hype": 0.2934
+        "raw_hype": 0.2932
       },
       "cast_full": [
         {
@@ -7248,7 +7176,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 99,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 99,
       "sentiment_pct": 54,
       "scores": {
@@ -7361,9 +7289,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2428,
-      "x_status": "stale",
-      "mentions": 2428,
+      "x_mentions": 2420,
+      "x_status": "live",
+      "mentions": 2420,
       "sentiment_pct": 55,
       "scores": {
         "1d": 39,
@@ -7475,9 +7403,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 981,
-      "x_status": "stale",
-      "mentions": 981,
+      "x_mentions": 984,
+      "x_status": "live",
+      "mentions": 984,
       "sentiment_pct": 75,
       "scores": {
         "1d": 38,
@@ -7589,9 +7517,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2584,
-      "x_status": "stale",
-      "mentions": 2584,
+      "x_mentions": 2586,
+      "x_status": "live",
+      "mentions": 2586,
       "sentiment_pct": 58,
       "scores": {
         "1d": 37,
@@ -7703,9 +7631,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 13230,
-      "x_status": "stale",
-      "mentions": 13230,
+      "x_mentions": 12518,
+      "x_status": "live",
+      "mentions": 12518,
       "sentiment_pct": 55,
       "scores": {
         "1d": 36,
@@ -7725,11 +7653,11 @@
         "youtube_engagement": 0.0421,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0027,
+        "x_mentions": 0.0026,
         "baseline": 0.0102,
         "short": 0.0102,
         "acceleration": 0.0,
-        "raw_hype": 0.2383
+        "raw_hype": 0.2362
       },
       "cast_full": [
         {
@@ -7824,7 +7752,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1997,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1997,
       "sentiment_pct": 62,
       "scores": {
@@ -7937,9 +7865,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 267,
-      "x_status": "stale",
-      "mentions": 267,
+      "x_mentions": 270,
+      "x_status": "live",
+      "mentions": 270,
       "sentiment_pct": 95,
       "scores": {
         "1d": 33,
@@ -8045,9 +7973,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 15315,
-      "x_status": "stale",
-      "mentions": 15315,
+      "x_mentions": 15244,
+      "x_status": "live",
+      "mentions": 15244,
       "sentiment_pct": 61,
       "scores": {
         "1d": 32,
@@ -8071,7 +7999,7 @@
         "baseline": 0.009,
         "short": 0.009,
         "acceleration": 0.0,
-        "raw_hype": 0.1843
+        "raw_hype": 0.1841
       },
       "cast_full": [
         {
@@ -8159,9 +8087,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 234,
-      "x_status": "stale",
-      "mentions": 234,
+      "x_mentions": 233,
+      "x_status": "live",
+      "mentions": 233,
       "sentiment_pct": 52,
       "scores": {
         "1d": 29,
@@ -8256,7 +8184,7 @@
     },
     {
       "rank": 83,
-      "prev_rank": 84,
+      "prev_rank": 83,
       "tmdb_id": 1320660,
       "title": "Pati Patni Aur Woh Do",
       "director": "Mudassar Aziz",
@@ -8274,7 +8202,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 77,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 77,
       "sentiment_pct": 59,
       "scores": {
@@ -8285,7 +8213,7 @@
       "rating": 28,
       "rating_band": "UNRATED",
       "score": 28,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8370,7 +8298,7 @@
     },
     {
       "rank": 84,
-      "prev_rank": 85,
+      "prev_rank": 84,
       "tmdb_id": 1440050,
       "title": "The Breadwinner",
       "director": "Eric Appel",
@@ -8399,7 +8327,7 @@
       "rating": 28,
       "rating_band": "UNRATED",
       "score": 28,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8484,7 +8412,7 @@
     },
     {
       "rank": 85,
-      "prev_rank": 86,
+      "prev_rank": 85,
       "tmdb_id": 1300968,
       "title": "The Hunger Games: Sunrise on the Reaping",
       "director": "Francis Lawrence",
@@ -8513,7 +8441,7 @@
       "rating": 28,
       "rating_band": "UNRATED",
       "score": 28,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -8598,7 +8526,7 @@
     },
     {
       "rank": 86,
-      "prev_rank": 83,
+      "prev_rank": 86,
       "tmdb_id": 1418657,
       "title": "The Yeti",
       "director": "Gene Gallerano, William Pisciotta",
@@ -8615,9 +8543,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 557,
-      "x_status": "stale",
-      "mentions": 557,
+      "x_mentions": 554,
+      "x_status": "live",
+      "mentions": 554,
       "sentiment_pct": 52,
       "scores": {
         "1d": 27,
@@ -8627,7 +8555,7 @@
       "rating": 27,
       "rating_band": "UNRATED",
       "score": 27,
-      "move": -3,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "both",
@@ -8735,9 +8663,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4287,
-      "x_status": "stale",
-      "mentions": 4287,
+      "x_mentions": 4288,
+      "x_status": "live",
+      "mentions": 4288,
       "sentiment_pct": 95,
       "scores": {
         "1d": 26,
@@ -8849,9 +8777,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 152,
-      "x_status": "stale",
-      "mentions": 152,
+      "x_mentions": 153,
+      "x_status": "live",
+      "mentions": 153,
       "sentiment_pct": 56,
       "scores": {
         "1d": 24,
@@ -8963,9 +8891,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 39516,
-      "x_status": "stale",
-      "mentions": 39516,
+      "x_mentions": 39560,
+      "x_status": "live",
+      "mentions": 39560,
       "sentiment_pct": 72,
       "scores": {
         "1d": 23,
@@ -8989,7 +8917,7 @@
         "baseline": 0.013,
         "short": 0.013,
         "acceleration": 0.0,
-        "raw_hype": 0.3864
+        "raw_hype": 0.3865
       },
       "cast_full": [
         {
@@ -9067,19 +8995,19 @@
       "cast": "Pedro Pascal, Jeremy Allen White",
       "release_date": "2026-05-20",
       "poster_url": "https://image.tmdb.org/t/p/w185/qSWiY6KAvkapXJWeyNrmDGYWQwr.jpg",
-      "youtube_views": 4378710,
-      "youtube_likes": 77319,
-      "youtube_comments": 5017,
+      "youtube_views": 4378986,
+      "youtube_likes": 77320,
+      "youtube_comments": 5018,
       "youtube_video_id": "uwild1rw7Aw",
-      "views_today": 18321,
-      "views_7d_avg": 55544,
+      "views_today": 18597,
+      "views_7d_avg": 55613,
       "views_trend": "decelerating",
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5632,
-      "x_status": "stale",
-      "mentions": 5632,
+      "x_mentions": 5688,
+      "x_status": "live",
+      "mentions": 5688,
       "sentiment_pct": 76,
       "scores": {
         "1d": 22,
@@ -9095,15 +9023,15 @@
       "release_type": "theatrical",
       "highlight": false,
       "sub_scores": {
-        "youtube_views": 0.013,
-        "youtube_engagement": 0.2349,
+        "youtube_views": 0.0131,
+        "youtube_engagement": 0.2341,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "x_mentions": 0.0012,
         "baseline": 0.0062,
         "short": 0.0062,
         "acceleration": 0.0,
-        "raw_hype": 0.0881
+        "raw_hype": 0.0891
       },
       "cast_full": [
         {
@@ -9191,9 +9119,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5649,
-      "x_status": "stale",
-      "mentions": 5649,
+      "x_mentions": 5659,
+      "x_status": "live",
+      "mentions": 5659,
       "sentiment_pct": 65,
       "scores": {
         "1d": 20,
@@ -9305,9 +9233,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 876,
-      "x_status": "stale",
-      "mentions": 876,
+      "x_mentions": 867,
+      "x_status": "live",
+      "mentions": 867,
       "sentiment_pct": 52,
       "scores": {
         "1d": 19,
@@ -9331,7 +9259,7 @@
         "baseline": 0.0108,
         "short": 0.0108,
         "acceleration": 0.0,
-        "raw_hype": 0.2685
+        "raw_hype": 0.2684
       },
       "cast_full": [
         {
@@ -9419,9 +9347,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2692,
-      "x_status": "stale",
-      "mentions": 2692,
+      "x_mentions": 2654,
+      "x_status": "live",
+      "mentions": 2654,
       "sentiment_pct": 95,
       "scores": {
         "1d": 18,
@@ -9441,11 +9369,11 @@
         "youtube_engagement": 0.3212,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0006,
+        "x_mentions": 0.0005,
         "baseline": 0.0051,
         "short": 0.0051,
         "acceleration": 0.0,
-        "raw_hype": 0.0593
+        "raw_hype": 0.0592
       },
       "cast_full": [
         {
@@ -9497,7 +9425,7 @@
     },
     {
       "rank": 95,
-      "prev_rank": 96,
+      "prev_rank": 95,
       "tmdb_id": 1227241,
       "title": "Maa Inti Bangaram",
       "director": "B. V. Nandini Reddy",
@@ -9515,7 +9443,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 87,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 87,
       "sentiment_pct": 71,
       "scores": {
@@ -9526,7 +9454,7 @@
       "rating": 17,
       "rating_band": "UNRATED",
       "score": 17,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -9605,7 +9533,7 @@
     },
     {
       "rank": 96,
-      "prev_rank": 95,
+      "prev_rank": 96,
       "tmdb_id": 1634949,
       "title": "Lorne",
       "director": "Morgan Neville",
@@ -9622,9 +9550,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2638,
-      "x_status": "stale",
-      "mentions": 2638,
+      "x_mentions": 2576,
+      "x_status": "live",
+      "mentions": 2576,
       "sentiment_pct": 51,
       "scores": {
         "1d": 17,
@@ -9634,7 +9562,7 @@
       "rating": 17,
       "rating_band": "UNRATED",
       "score": 17,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -9648,7 +9576,7 @@
         "baseline": 0.0048,
         "short": 0.0048,
         "acceleration": 0.0,
-        "raw_hype": 0.0536
+        "raw_hype": 0.0535
       },
       "cast_full": [
         {
@@ -9850,9 +9778,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 41395,
-      "x_status": "stale",
-      "mentions": 41395,
+      "x_mentions": 41126,
+      "x_status": "live",
+      "mentions": 41126,
       "sentiment_pct": 75,
       "scores": {
         "1d": 15,
@@ -9872,11 +9800,11 @@
         "youtube_engagement": 0.0844,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "x_mentions": 0.0086,
+        "x_mentions": 0.0085,
         "baseline": 0.0041,
         "short": 0.0041,
         "acceleration": 0.0,
-        "raw_hype": 0.0393
+        "raw_hype": 0.0389
       },
       "cast_full": [
         {
@@ -9964,9 +9892,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 32703,
-      "x_status": "stale",
-      "mentions": 32703,
+      "x_mentions": 33371,
+      "x_status": "live",
+      "mentions": 33371,
       "sentiment_pct": 66,
       "scores": {
         "1d": 13,
@@ -9986,11 +9914,11 @@
         "youtube_engagement": 0.0241,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "x_mentions": 0.0068,
-        "baseline": 0.0037,
-        "short": 0.0037,
+        "x_mentions": 0.0069,
+        "baseline": 0.0038,
+        "short": 0.0038,
         "acceleration": 0.0,
-        "raw_hype": 0.0322
+        "raw_hype": 0.0329
       },
       "cast_full": [
         {
@@ -10078,9 +10006,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 380,
-      "x_status": "stale",
-      "mentions": 380,
+      "x_mentions": 381,
+      "x_status": "live",
+      "mentions": 381,
       "sentiment_pct": 57,
       "scores": {
         "1d": 13,
@@ -10192,9 +10120,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 986,
-      "x_status": "stale",
-      "mentions": 986,
+      "x_mentions": 990,
+      "x_status": "live",
+      "mentions": 990,
       "sentiment_pct": 54,
       "scores": {
         "1d": 13,
@@ -10307,7 +10235,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 10505,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 10505,
       "sentiment_pct": 76,
       "scores": {
@@ -10420,9 +10348,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 287,
-      "x_status": "stale",
-      "mentions": 287,
+      "x_mentions": 284,
+      "x_status": "live",
+      "mentions": 284,
       "sentiment_pct": 95,
       "scores": {
         "1d": 12,
@@ -10534,9 +10462,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 3848,
-      "x_status": "stale",
-      "mentions": 3848,
+      "x_mentions": 3879,
+      "x_status": "live",
+      "mentions": 3879,
       "sentiment_pct": 52,
       "scores": {
         "1d": 11,
@@ -10649,7 +10577,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 5,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 5,
       "sentiment_pct": 57,
       "scores": {
@@ -10762,9 +10690,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1684,
-      "x_status": "stale",
-      "mentions": 1684,
+      "x_mentions": 1682,
+      "x_status": "live",
+      "mentions": 1682,
       "sentiment_pct": 59,
       "scores": {
         "1d": 11,
@@ -10842,9 +10770,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 108,
-      "x_status": "stale",
-      "mentions": 108,
+      "x_mentions": 123,
+      "x_status": "live",
+      "mentions": 123,
       "sentiment_pct": 64,
       "scores": {
         "1d": 10,
@@ -10956,9 +10884,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 182,
-      "x_status": "stale",
-      "mentions": 182,
+      "x_mentions": 192,
+      "x_status": "live",
+      "mentions": 192,
       "sentiment_pct": 69,
       "scores": {
         "1d": 10,
@@ -11071,7 +10999,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 125,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 125,
       "sentiment_pct": 85,
       "scores": {
@@ -11184,9 +11112,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6609,
-      "x_status": "stale",
-      "mentions": 6609,
+      "x_mentions": 6608,
+      "x_status": "live",
+      "mentions": 6608,
       "sentiment_pct": 58,
       "scores": {
         "1d": 7,
@@ -11298,9 +11226,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 25270,
-      "x_status": "stale",
-      "mentions": 25270,
+      "x_mentions": 25395,
+      "x_status": "live",
+      "mentions": 25395,
       "sentiment_pct": 59,
       "scores": {
         "1d": 6,
@@ -11320,7 +11248,7 @@
         "youtube_engagement": 0.1882,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0052,
+        "x_mentions": 0.0053,
         "baseline": 0.0017,
         "short": 0.0017,
         "acceleration": 0.0,
@@ -11472,9 +11400,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6746,
-      "x_status": "stale",
-      "mentions": 6746,
+      "x_mentions": 6774,
+      "x_status": "live",
+      "mentions": 6774,
       "sentiment_pct": 50,
       "scores": {
         "1d": 5,
@@ -11586,9 +11514,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 8884,
-      "x_status": "stale",
-      "mentions": 8884,
+      "x_mentions": 8919,
+      "x_status": "live",
+      "mentions": 8919,
       "sentiment_pct": 95,
       "scores": {
         "1d": 5,
@@ -11701,7 +11629,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 55,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 55,
       "sentiment_pct": 64,
       "scores": {
@@ -11814,9 +11742,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1173,
-      "x_status": "stale",
-      "mentions": 1173,
+      "x_mentions": 1174,
+      "x_status": "live",
+      "mentions": 1174,
       "sentiment_pct": 90,
       "scores": {
         "1d": 5,
@@ -12036,9 +11964,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 688,
-      "x_status": "stale",
-      "mentions": 688,
+      "x_mentions": 694,
+      "x_status": "live",
+      "mentions": 694,
       "sentiment_pct": 77,
       "scores": {
         "1d": 4,
@@ -12150,9 +12078,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4184,
-      "x_status": "stale",
-      "mentions": 4184,
+      "x_mentions": 4209,
+      "x_status": "live",
+      "mentions": 4209,
       "sentiment_pct": 52,
       "scores": {
         "1d": 4,
@@ -12265,7 +12193,7 @@
       "event_youtube_views": 124465,
       "event_boost": true,
       "x_mentions": 62,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 62,
       "sentiment_pct": 64,
       "scores": {
@@ -12379,7 +12307,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 48,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 48,
       "sentiment_pct": 65,
       "scores": {
@@ -12482,19 +12410,19 @@
       "cast": "Maddie Ziegler, Lana Condor",
       "release_date": "2026-03-13",
       "poster_url": "https://image.tmdb.org/t/p/w185/znTPnXCK3lEQJgqXCvP7e5FUz6f.jpg",
-      "youtube_views": 917952,
+      "youtube_views": 918004,
       "youtube_likes": 10629,
       "youtube_comments": 644,
       "youtube_video_id": "MpNobYCw0mg",
-      "views_today": 2126,
-      "views_7d_avg": 7293,
+      "views_today": 2178,
+      "views_7d_avg": 7306,
       "views_trend": "flat",
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 642,
-      "x_status": "stale",
-      "mentions": 642,
+      "x_mentions": 637,
+      "x_status": "live",
+      "mentions": 637,
       "sentiment_pct": 67,
       "scores": {
         "1d": 3,
@@ -12511,7 +12439,7 @@
       "highlight": false,
       "sub_scores": {
         "youtube_views": 0.0017,
-        "youtube_engagement": 0.0892,
+        "youtube_engagement": 0.0881,
         "google_trends": 0.0,
         "news_impact": 0.0,
         "x_mentions": 0.0001,
@@ -12589,7 +12517,7 @@
     },
     {
       "rank": 129,
-      "prev_rank": 128,
+      "prev_rank": 129,
       "tmdb_id": 1266127,
       "title": "Ready or Not 2: Here I Come",
       "director": "Matt Bettinelli-Olpin, Tyler Gillett",
@@ -12607,7 +12535,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 744,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 744,
       "sentiment_pct": 75,
       "scores": {
@@ -12618,7 +12546,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12709,7 +12637,7 @@
     },
     {
       "rank": 130,
-      "prev_rank": 129,
+      "prev_rank": 130,
       "tmdb_id": 1515899,
       "title": "Billie Eilish - Hit Me Hard and Soft: The Tour (Live in 3D)",
       "director": "James Cameron, Billie Eilish",
@@ -12726,9 +12654,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 303,
-      "x_status": "stale",
-      "mentions": 303,
+      "x_mentions": 301,
+      "x_status": "live",
+      "mentions": 301,
       "sentiment_pct": 95,
       "scores": {
         "1d": 3,
@@ -12738,7 +12666,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12810,7 +12738,7 @@
     },
     {
       "rank": 131,
-      "prev_rank": 130,
+      "prev_rank": 131,
       "tmdb_id": 1307373,
       "title": "Wasteman",
       "director": "Cal McMau",
@@ -12827,9 +12755,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1040,
-      "x_status": "stale",
-      "mentions": 1040,
+      "x_mentions": 1045,
+      "x_status": "live",
+      "mentions": 1045,
       "sentiment_pct": 77,
       "scores": {
         "1d": 3,
@@ -12839,7 +12767,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12924,7 +12852,7 @@
     },
     {
       "rank": 132,
-      "prev_rank": 131,
+      "prev_rank": 132,
       "tmdb_id": 1363974,
       "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
       "director": "Yasuhito Kikuchi",
@@ -12941,9 +12869,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 347,
-      "x_status": "stale",
-      "mentions": 347,
+      "x_mentions": 353,
+      "x_status": "live",
+      "mentions": 353,
       "sentiment_pct": 95,
       "scores": {
         "1d": 3,
@@ -12953,7 +12881,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13038,7 +12966,7 @@
     },
     {
       "rank": 133,
-      "prev_rank": 132,
+      "prev_rank": 133,
       "tmdb_id": 1664583,
       "title": "Stranger Things: Tales from 85 Theatrical Preview",
       "director": "Eric Robles, JJ Conway",
@@ -13067,7 +12995,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13158,7 +13086,7 @@
     },
     {
       "rank": 135,
-      "prev_rank": 134,
+      "prev_rank": 135,
       "tmdb_id": 1304313,
       "title": "Lee Cronins The Mummy",
       "director": "Lee Cronin",
@@ -13175,9 +13103,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 213,
-      "x_status": "stale",
-      "mentions": 213,
+      "x_mentions": 212,
+      "x_status": "live",
+      "mentions": 212,
       "sentiment_pct": 64,
       "scores": {
         "1d": 2,
@@ -13187,7 +13115,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13272,7 +13200,7 @@
     },
     {
       "rank": 136,
-      "prev_rank": 135,
+      "prev_rank": 136,
       "tmdb_id": 1115544,
       "title": "Mike & Nick & Nick & Alice",
       "director": "BenDavid Grabinski",
@@ -13289,9 +13217,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 158,
-      "x_status": "stale",
-      "mentions": 158,
+      "x_mentions": 157,
+      "x_status": "live",
+      "mentions": 157,
       "sentiment_pct": 63,
       "scores": {
         "1d": 2,
@@ -13301,7 +13229,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13403,9 +13331,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4821,
-      "x_status": "stale",
-      "mentions": 4821,
+      "x_mentions": 4811,
+      "x_status": "live",
+      "mentions": 4811,
       "sentiment_pct": 52,
       "scores": {
         "1d": 2,
@@ -13512,7 +13440,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 419,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 419,
       "sentiment_pct": 51,
       "scores": {
@@ -13625,9 +13553,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 8539,
-      "x_status": "stale",
-      "mentions": 8539,
+      "x_mentions": 8562,
+      "x_status": "live",
+      "mentions": 8562,
       "sentiment_pct": 61,
       "scores": {
         "1d": 2,
@@ -13854,7 +13782,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 43,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 43,
       "sentiment_pct": 53,
       "scores": {
@@ -13967,9 +13895,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 960,
-      "x_status": "stale",
-      "mentions": 960,
+      "x_mentions": 959,
+      "x_status": "live",
+      "mentions": 959,
       "sentiment_pct": 73,
       "scores": {
         "1d": 1,
@@ -14081,9 +14009,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 69,
-      "x_status": "stale",
-      "mentions": 69,
+      "x_mentions": 68,
+      "x_status": "live",
+      "mentions": 68,
       "sentiment_pct": 53,
       "scores": {
         "1d": 1,
@@ -14195,9 +14123,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 34,
-      "x_status": "stale",
-      "mentions": 34,
+      "x_mentions": 33,
+      "x_status": "live",
+      "mentions": 33,
       "sentiment_pct": 52,
       "scores": {
         "1d": 1,
@@ -14310,7 +14238,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 318,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 318,
       "sentiment_pct": 50,
       "scores": {
@@ -14423,9 +14351,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2443,
-      "x_status": "stale",
-      "mentions": 2443,
+      "x_mentions": 2413,
+      "x_status": "live",
+      "mentions": 2413,
       "sentiment_pct": 50,
       "scores": {
         "1d": 1,
@@ -14537,9 +14465,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5746,
-      "x_status": "stale",
-      "mentions": 5746,
+      "x_mentions": 5735,
+      "x_status": "live",
+      "mentions": 5735,
       "sentiment_pct": 54,
       "scores": {
         "1d": 1,
@@ -14651,9 +14579,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 375,
-      "x_status": "stale",
-      "mentions": 375,
+      "x_mentions": 374,
+      "x_status": "live",
+      "mentions": 374,
       "sentiment_pct": 83,
       "scores": {
         "1d": 1,
@@ -14747,7 +14675,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 21,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 21,
       "sentiment_pct": 69,
       "scores": {
@@ -14805,9 +14733,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 56,
-      "x_status": "stale",
-      "mentions": 56,
+      "x_mentions": 57,
+      "x_status": "live",
+      "mentions": 57,
       "sentiment_pct": 83,
       "scores": {
         "1d": 1,
@@ -14906,9 +14834,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 39,
-      "x_status": "stale",
-      "mentions": 39,
+      "x_mentions": 37,
+      "x_status": "live",
+      "mentions": 37,
       "sentiment_pct": 71,
       "scores": {
         "1d": 1,
@@ -14974,7 +14902,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 642,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 642,
       "sentiment_pct": 50,
       "scores": {
@@ -15316,7 +15244,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 172,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 172,
       "sentiment_pct": 77,
       "scores": {
@@ -15423,9 +15351,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 246,
-      "x_status": "stale",
-      "mentions": 246,
+      "x_mentions": 245,
+      "x_status": "live",
+      "mentions": 245,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -15525,9 +15453,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 438,
-      "x_status": "stale",
-      "mentions": 438,
+      "x_mentions": 441,
+      "x_status": "live",
+      "mentions": 441,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -15639,9 +15567,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 297,
-      "x_status": "stale",
-      "mentions": 297,
+      "x_mentions": 306,
+      "x_status": "live",
+      "mentions": 306,
       "sentiment_pct": 52,
       "scores": {
         "1d": 0,
@@ -15754,7 +15682,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 12,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 12,
       "sentiment_pct": 56,
       "scores": {
@@ -15867,9 +15795,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 757,
-      "x_status": "stale",
-      "mentions": 757,
+      "x_mentions": 762,
+      "x_status": "live",
+      "mentions": 762,
       "sentiment_pct": 53,
       "scores": {
         "1d": 0,
@@ -15988,7 +15916,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 45,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 45,
       "sentiment_pct": 55,
       "scores": {
@@ -16102,7 +16030,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 22,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 22,
       "sentiment_pct": 62,
       "scores": {
@@ -16209,9 +16137,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 127,
-      "x_status": "stale",
-      "mentions": 127,
+      "x_mentions": 122,
+      "x_status": "live",
+      "mentions": 122,
       "sentiment_pct": 53,
       "scores": {
         "1d": 0,
@@ -16323,9 +16251,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 331,
-      "x_status": "stale",
-      "mentions": 331,
+      "x_mentions": 328,
+      "x_status": "live",
+      "mentions": 328,
       "sentiment_pct": 54,
       "scores": {
         "1d": 0,
@@ -16438,7 +16366,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 30,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 30,
       "sentiment_pct": 50,
       "scores": {
@@ -16545,9 +16473,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 161,
-      "x_status": "stale",
-      "mentions": 161,
+      "x_mentions": 160,
+      "x_status": "live",
+      "mentions": 160,
       "sentiment_pct": 54,
       "scores": {
         "1d": 0,
@@ -16659,9 +16587,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 141,
-      "x_status": "stale",
-      "mentions": 141,
+      "x_mentions": 139,
+      "x_status": "live",
+      "mentions": 139,
       "sentiment_pct": 74,
       "scores": {
         "1d": 0,
@@ -16881,9 +16809,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 112,
-      "x_status": "stale",
-      "mentions": 112,
+      "x_mentions": 109,
+      "x_status": "live",
+      "mentions": 109,
       "sentiment_pct": 69,
       "scores": {
         "1d": 0,
@@ -16996,7 +16924,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 25,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 25,
       "sentiment_pct": 71,
       "scores": {
@@ -17116,7 +17044,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1,
       "sentiment_pct": 70,
       "scores": {
@@ -17229,9 +17157,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 126,
-      "x_status": "stale",
-      "mentions": 126,
+      "x_mentions": 121,
+      "x_status": "live",
+      "mentions": 121,
       "sentiment_pct": 82,
       "scores": {
         "1d": 0,
@@ -17325,7 +17253,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1,
       "sentiment_pct": 56,
       "scores": {
@@ -17515,7 +17443,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 304,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 304,
       "sentiment_pct": 59,
       "scores": {
@@ -17629,7 +17557,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 38,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 38,
       "sentiment_pct": 52,
       "scores": {
@@ -17749,7 +17677,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 47,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 47,
       "sentiment_pct": 60,
       "scores": {
@@ -17863,7 +17791,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 12,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 12,
       "sentiment_pct": 50,
       "scores": {
@@ -17976,9 +17904,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 18,
-      "x_status": "stale",
-      "mentions": 18,
+      "x_mentions": 19,
+      "x_status": "live",
+      "mentions": 19,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -18090,9 +18018,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 353,
-      "x_status": "stale",
-      "mentions": 353,
+      "x_mentions": 347,
+      "x_status": "live",
+      "mentions": 347,
       "sentiment_pct": 55,
       "scores": {
         "1d": 0,
@@ -18158,7 +18086,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 307,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 307,
       "sentiment_pct": 63,
       "scores": {
@@ -19434,9 +19362,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 404611,
-      "x_status": "stale",
-      "mentions": 404611,
+      "x_mentions": 404440,
+      "x_status": "live",
+      "mentions": 404440,
       "sentiment_pct": 66,
       "scores": {
         "1d": 415,
@@ -19456,11 +19384,11 @@
         "youtube_engagement": 0.0577,
         "google_trends": 0.62,
         "news_impact": 0.0,
-        "x_mentions": 0.0839,
-        "baseline": 0.1203,
-        "short": 0.1203,
+        "x_mentions": 0.0838,
+        "baseline": 0.1202,
+        "short": 0.1202,
         "acceleration": 0.0,
-        "raw_hype": 31.4632
+        "raw_hype": 31.4506
       },
       "cast_full": [
         {
@@ -19548,9 +19476,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2930,
-      "x_status": "stale",
-      "mentions": 2930,
+      "x_mentions": 2927,
+      "x_status": "live",
+      "mentions": 2927,
       "sentiment_pct": 52,
       "scores": {
         "1d": 343,
@@ -19574,7 +19502,7 @@
         "baseline": 0.099,
         "short": 0.099,
         "acceleration": 0.0,
-        "raw_hype": 21.5145
+        "raw_hype": 21.5144
       },
       "cast_full": [
         {
@@ -19636,9 +19564,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 13892,
-      "x_status": "stale",
-      "mentions": 13892,
+      "x_mentions": 13883,
+      "x_status": "live",
+      "mentions": 13883,
       "sentiment_pct": 65,
       "scores": {
         "1d": 245,
@@ -19662,7 +19590,7 @@
         "baseline": 0.0701,
         "short": 0.0701,
         "acceleration": 0.0,
-        "raw_hype": 10.9301
+        "raw_hype": 10.9298
       },
       "cast_full": [
         {
@@ -19864,9 +19792,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1562,
-      "x_status": "stale",
-      "mentions": 1562,
+      "x_mentions": 1561,
+      "x_status": "live",
+      "mentions": 1561,
       "sentiment_pct": 57,
       "scores": {
         "1d": 197,
@@ -19978,9 +19906,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 22886,
-      "x_status": "stale",
-      "mentions": 22886,
+      "x_mentions": 22854,
+      "x_status": "live",
+      "mentions": 22854,
       "sentiment_pct": 70,
       "scores": {
         "1d": 157,
@@ -20004,7 +19932,7 @@
         "baseline": 0.075,
         "short": 0.075,
         "acceleration": 0.0,
-        "raw_hype": 12.5046
+        "raw_hype": 12.5037
       },
       "cast_full": [
         {
@@ -20092,9 +20020,9 @@
       "youtube_state": "new",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6019,
-      "x_status": "stale",
-      "mentions": 6020,
+      "x_mentions": 6031,
+      "x_status": "live",
+      "mentions": 6032,
       "sentiment_pct": 82,
       "scores": {
         "1d": 136,
@@ -20118,7 +20046,7 @@
         "baseline": 0.0386,
         "short": 0.0386,
         "acceleration": 0.0,
-        "raw_hype": 3.3724
+        "raw_hype": 3.3725
       },
       "cast_full": [
         {
@@ -20211,9 +20139,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1367,
-      "x_status": "stale",
-      "mentions": 1367,
+      "x_mentions": 1325,
+      "x_status": "live",
+      "mentions": 1325,
       "sentiment_pct": 79,
       "scores": {
         "1d": 128,
@@ -20237,7 +20165,7 @@
         "baseline": 0.0364,
         "short": 0.0364,
         "acceleration": 0.0,
-        "raw_hype": 3.0025
+        "raw_hype": 3.0021
       },
       "cast_full": [
         {
@@ -20325,9 +20253,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 882,
-      "x_status": "stale",
-      "mentions": 882,
+      "x_mentions": 885,
+      "x_status": "live",
+      "mentions": 885,
       "sentiment_pct": 70,
       "scores": {
         "1d": 93,
@@ -20439,9 +20367,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6038,
-      "x_status": "stale",
-      "mentions": 6038,
+      "x_mentions": 5944,
+      "x_status": "live",
+      "mentions": 5944,
       "sentiment_pct": 56,
       "scores": {
         "1d": 87,
@@ -20461,11 +20389,11 @@
         "youtube_engagement": 0.0472,
         "google_trends": 0.16,
         "news_impact": 0.0,
-        "x_mentions": 0.0013,
+        "x_mentions": 0.0012,
         "baseline": 0.0246,
         "short": 0.0246,
         "acceleration": 0.0,
-        "raw_hype": 1.3755
+        "raw_hype": 1.3748
       },
       "cast_full": [
         {
@@ -20547,9 +20475,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 498,
-      "x_status": "stale",
-      "mentions": 498,
+      "x_mentions": 497,
+      "x_status": "live",
+      "mentions": 497,
       "sentiment_pct": 59,
       "scores": {
         "1d": 70,
@@ -20649,9 +20577,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 71,
-      "x_status": "stale",
-      "mentions": 71,
+      "x_mentions": 70,
+      "x_status": "live",
+      "mentions": 70,
       "sentiment_pct": 70,
       "scores": {
         "1d": 22,
@@ -20764,7 +20692,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 60,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 60,
       "sentiment_pct": 95,
       "scores": {
@@ -20859,7 +20787,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 705,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 705,
       "sentiment_pct": 68,
       "scores": {
@@ -20973,7 +20901,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 2,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 2,
       "sentiment_pct": 54,
       "scores": {
@@ -21086,9 +21014,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 56,
-      "x_status": "stale",
-      "mentions": 56,
+      "x_mentions": 55,
+      "x_status": "live",
+      "mentions": 55,
       "sentiment_pct": 65,
       "scores": {
         "1d": 6,
@@ -21200,9 +21128,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 23075,
-      "x_status": "stale",
-      "mentions": 23075,
+      "x_mentions": 22918,
+      "x_status": "live",
+      "mentions": 22918,
       "sentiment_pct": 52,
       "scores": {
         "1d": 6,
@@ -21222,11 +21150,11 @@
         "youtube_engagement": 0.0072,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0048,
+        "x_mentions": 0.0047,
         "baseline": 0.0017,
         "short": 0.0017,
         "acceleration": 0.0,
-        "raw_hype": 0.0067
+        "raw_hype": 0.0066
       },
       "cast_full": [
         {
@@ -21315,7 +21243,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 12,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 12,
       "sentiment_pct": 59,
       "scores": {
@@ -21417,7 +21345,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 213,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 213,
       "sentiment_pct": 60,
       "scores": {
@@ -21530,9 +21458,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 445,
-      "x_status": "stale",
-      "mentions": 445,
+      "x_mentions": 443,
+      "x_status": "live",
+      "mentions": 443,
       "sentiment_pct": 61,
       "scores": {
         "1d": 0,
@@ -21605,17 +21533,17 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": "Michael Jackson",
           "billing": 0
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 77,
-      "avg_film_score": 1072,
+      "avg_film_score": 1071,
       "news_mentions": [],
       "x_mentions": 72757,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 72757,
       "news_count": 0,
@@ -21642,7 +21570,7 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 690,
+          "score": 692,
           "character": "Andy Sachs",
           "billing": 1
         },
@@ -21688,7 +21616,7 @@
       "avg_film_score": 231,
       "news_mentions": [],
       "x_mentions": 139617,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 139617,
       "news_count": 0,
@@ -21715,26 +21643,26 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 690,
+          "score": 692,
           "character": "Miranda Priestly",
           "billing": 0
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 57,
-      "avg_film_score": 690,
+      "avg_film_score": 692,
       "news_mentions": [],
       "x_mentions": 54990,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 54990,
       "news_count": 0,
-      "score": 1134,
-      "rating": 1134,
+      "score": 1135,
+      "rating": 1135,
       "scores": {
-        "1d": 1134,
-        "7d": 1134,
-        "30d": 1134
+        "1d": 1135,
+        "7d": 1135,
+        "30d": 1135
       },
       "rank": 3,
       "move": 0,
@@ -21752,7 +21680,7 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": "Joseph Jackson",
           "billing": 1
         },
@@ -21768,10 +21696,10 @@
       ],
       "popularity": 261.3779,
       "sentiment_pct": 66,
-      "avg_film_score": 667,
+      "avg_film_score": 666,
       "news_mentions": [],
       "x_mentions": 9634,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9634,
       "news_count": 0,
@@ -21798,17 +21726,17 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": "Katherine Jackson",
           "billing": 2
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 77,
-      "avg_film_score": 1072,
+      "avg_film_score": 1071,
       "news_mentions": [],
       "x_mentions": 13663,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 13663,
       "news_count": 0,
@@ -21835,7 +21763,7 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 690,
+          "score": 692,
           "character": "Emily Charlton",
           "billing": 2
         },
@@ -21851,10 +21779,10 @@
       ],
       "popularity": 139.4225,
       "sentiment_pct": 56,
-      "avg_film_score": 476,
+      "avg_film_score": 477,
       "news_mentions": [],
       "x_mentions": 37436,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 37436,
       "news_count": 0,
@@ -21891,7 +21819,7 @@
       "avg_film_score": 251,
       "news_mentions": [],
       "x_mentions": 58820,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 58820,
       "news_count": 0,
@@ -21928,7 +21856,7 @@
       "avg_film_score": 238,
       "news_mentions": [],
       "x_mentions": 24447,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 24447,
       "news_count": 0,
@@ -21974,7 +21902,7 @@
       "avg_film_score": 45,
       "news_mentions": [],
       "x_mentions": 4166,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 4166,
       "news_count": 0,
@@ -22010,7 +21938,7 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-          "score": 368,
+          "score": 367,
           "character": "Emma Harwood",
           "billing": 0
         },
@@ -22035,10 +21963,10 @@
       ],
       "popularity": 29.1717,
       "sentiment_pct": 73,
-      "avg_film_score": 365,
+      "avg_film_score": 364,
       "news_mentions": [],
       "x_mentions": 99829,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 58120,
       "mentions": 99829,
       "news_count": 0,
@@ -22065,17 +21993,17 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 690,
+          "score": 692,
           "character": "Nigel Kipling",
           "billing": 3
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 57,
-      "avg_film_score": 690,
+      "avg_film_score": 692,
       "news_mentions": [],
       "x_mentions": 11994,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 11994,
       "news_count": 0,
@@ -22087,9 +22015,9 @@
         "30d": 936
       },
       "rank": 11,
-      "move": 1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 12
+      "prev_rank": 11
     },
     {
       "tmdb_id": 1303037,
@@ -22112,7 +22040,7 @@
       "avg_film_score": 238,
       "news_mentions": [],
       "x_mentions": 5957,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5957,
       "news_count": 0,
@@ -22124,9 +22052,9 @@
         "30d": 933
       },
       "rank": 12,
-      "move": -1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 11
+      "prev_rank": 12
     },
     {
       "tmdb_id": 11288,
@@ -22139,7 +22067,7 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-          "score": 368,
+          "score": 367,
           "character": "Charlie Thompson",
           "billing": 1
         },
@@ -22158,7 +22086,7 @@
       "avg_film_score": 314,
       "news_mentions": [],
       "x_mentions": 13259,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 13259,
       "news_count": 0,
@@ -22185,17 +22113,17 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": "John Branca",
           "billing": 5
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 77,
-      "avg_film_score": 1072,
+      "avg_film_score": 1071,
       "news_mentions": [],
       "x_mentions": 1975,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1975,
       "news_count": 0,
@@ -22232,7 +22160,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 8899,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 8899,
       "news_count": 0,
@@ -22269,7 +22197,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 1834,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1834,
       "news_count": 0,
@@ -22315,7 +22243,7 @@
       "avg_film_score": 200,
       "news_mentions": [],
       "x_mentions": 4684,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 4684,
       "news_count": 0,
@@ -22361,7 +22289,7 @@
       "avg_film_score": 8,
       "news_mentions": [],
       "x_mentions": 5522,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5522,
       "news_count": 0,
@@ -22398,7 +22326,7 @@
       "avg_film_score": 238,
       "news_mentions": [],
       "x_mentions": 14888,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 14888,
       "news_count": 0,
@@ -22435,7 +22363,7 @@
       "avg_film_score": 70,
       "news_mentions": [],
       "x_mentions": 8215,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 10891862,
       "mentions": 8215,
       "news_count": 0,
@@ -22472,7 +22400,7 @@
       "avg_film_score": 251,
       "news_mentions": [],
       "x_mentions": 1762,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1762,
       "news_count": 0,
@@ -22509,7 +22437,7 @@
       "avg_film_score": 5,
       "news_mentions": [],
       "x_mentions": 5071,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5071,
       "news_count": 0,
@@ -22555,7 +22483,7 @@
       "avg_film_score": 60,
       "news_mentions": [],
       "x_mentions": 22354,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 22354,
       "news_count": 0,
@@ -22567,9 +22495,9 @@
         "30d": 679
       },
       "rank": 23,
-      "move": 1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 24
+      "prev_rank": 23
     },
     {
       "tmdb_id": 1372369,
@@ -22601,7 +22529,7 @@
       "avg_film_score": 84,
       "news_mentions": [],
       "x_mentions": 1602,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1602,
       "news_count": 0,
@@ -22613,9 +22541,9 @@
         "30d": 677
       },
       "rank": 24,
-      "move": -1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 23
+      "prev_rank": 24
     },
     {
       "tmdb_id": 1267240,
@@ -22647,7 +22575,7 @@
       "avg_film_score": 120,
       "news_mentions": [],
       "x_mentions": 13467,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 13467,
       "news_count": 0,
@@ -22684,7 +22612,7 @@
       "avg_film_score": 98,
       "news_mentions": [],
       "x_mentions": 9402,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9402,
       "news_count": 0,
@@ -22721,7 +22649,7 @@
       "avg_film_score": 197,
       "news_mentions": [],
       "x_mentions": 9826,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9826,
       "news_count": 0,
@@ -22758,7 +22686,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 12471,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 12471,
       "news_count": 0,
@@ -22795,7 +22723,7 @@
       "avg_film_score": 197,
       "news_mentions": [],
       "x_mentions": 2244,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2244,
       "news_count": 0,
@@ -22832,7 +22760,7 @@
       "avg_film_score": 11,
       "news_mentions": [],
       "x_mentions": 2542,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2542,
       "news_count": 0,
@@ -22869,7 +22797,7 @@
       "avg_film_score": 1,
       "news_mentions": [],
       "x_mentions": 12632,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 12632,
       "news_count": 0,
@@ -22896,26 +22824,26 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 690,
+          "score": 692,
           "character": "Stuart",
           "billing": 4
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 57,
-      "avg_film_score": 690,
+      "avg_film_score": 692,
       "news_mentions": [],
       "x_mentions": 1509,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1509,
       "news_count": 0,
-      "score": 517,
-      "rating": 517,
+      "score": 518,
+      "rating": 518,
       "scores": {
-        "1d": 517,
-        "7d": 517,
-        "30d": 517
+        "1d": 518,
+        "7d": 518,
+        "30d": 518
       },
       "rank": 32,
       "move": 0,
@@ -22933,17 +22861,17 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": "Bill Bray",
           "billing": 4
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 77,
-      "avg_film_score": 1072,
+      "avg_film_score": 1071,
       "news_mentions": [],
       "x_mentions": 1334,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1334,
       "news_count": 0,
@@ -22980,7 +22908,7 @@
       "avg_film_score": 0,
       "news_mentions": [],
       "x_mentions": 5100,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5100,
       "news_count": 0,
@@ -23017,7 +22945,7 @@
       "avg_film_score": 128,
       "news_mentions": [],
       "x_mentions": 4061,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 4061,
       "news_count": 0,
@@ -23044,17 +22972,17 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": "Young Michael Jackson",
           "billing": 3
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 77,
-      "avg_film_score": 1072,
+      "avg_film_score": 1071,
       "news_mentions": [],
       "x_mentions": 667,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 667,
       "news_count": 0,
@@ -23066,9 +22994,9 @@
         "30d": 489
       },
       "rank": 36,
-      "move": 1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 37
+      "prev_rank": 36
     },
     {
       "tmdb_id": 6384,
@@ -23091,7 +23019,7 @@
       "avg_film_score": 337,
       "news_mentions": [],
       "x_mentions": 9977,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9977,
       "news_count": 0,
@@ -23103,9 +23031,9 @@
         "30d": 486
       },
       "rank": 37,
-      "move": -1,
+      "move": 0,
       "is_new": false,
-      "prev_rank": 36
+      "prev_rank": 37
     },
     {
       "tmdb_id": 74568,
@@ -23137,7 +23065,7 @@
       "avg_film_score": 96,
       "news_mentions": [],
       "x_mentions": 9306,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9306,
       "news_count": 0,
@@ -23174,7 +23102,7 @@
       "avg_film_score": 337,
       "news_mentions": [],
       "x_mentions": 1521,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1521,
       "news_count": 0,
@@ -23211,7 +23139,7 @@
       "avg_film_score": 163,
       "news_mentions": [],
       "x_mentions": 1927,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1927,
       "news_count": 0,
@@ -23248,7 +23176,7 @@
       "avg_film_score": 238,
       "news_mentions": [],
       "x_mentions": 1448,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1448,
       "news_count": 0,
@@ -23285,7 +23213,7 @@
       "avg_film_score": 337,
       "news_mentions": [],
       "x_mentions": 1203,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1203,
       "news_count": 0,
@@ -23331,7 +23259,7 @@
       "avg_film_score": 352,
       "news_mentions": [],
       "x_mentions": 930,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 930,
       "news_count": 0,
@@ -23368,7 +23296,7 @@
       "avg_film_score": 33,
       "news_mentions": [],
       "x_mentions": 1604,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1604,
       "news_count": 0,
@@ -23414,7 +23342,7 @@
       "avg_film_score": 12,
       "news_mentions": [],
       "x_mentions": 1863,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1863,
       "news_count": 0,
@@ -23451,7 +23379,7 @@
       "avg_film_score": 157,
       "news_mentions": [],
       "x_mentions": 1263,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1263,
       "news_count": 0,
@@ -23497,7 +23425,7 @@
       "avg_film_score": 37,
       "news_mentions": [],
       "x_mentions": 14150,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 14150,
       "news_count": 0,
@@ -23534,7 +23462,7 @@
       "avg_film_score": 0,
       "news_mentions": [],
       "x_mentions": 1522,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1522,
       "news_count": 0,
@@ -23580,7 +23508,7 @@
       "avg_film_score": 143,
       "news_mentions": [],
       "x_mentions": 3789,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 3789,
       "news_count": 0,
@@ -23617,7 +23545,7 @@
       "avg_film_score": 197,
       "news_mentions": [],
       "x_mentions": 1013,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1013,
       "news_count": 0,
@@ -23646,26 +23574,26 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1072,
+          "score": 1071,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 77,
-      "avg_film_score": 1072,
+      "avg_film_score": 1071,
       "news_mentions": [],
       "x_mentions": 9847,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9847,
       "news_count": 0,
-      "score": 944,
-      "rating": 944,
+      "score": 943,
+      "rating": 943,
       "scores": {
-        "1d": 944,
-        "7d": 944,
-        "30d": 944
+        "1d": 943,
+        "7d": 943,
+        "30d": 943
       },
       "rank": 1,
       "move": 0,
@@ -23693,7 +23621,7 @@
       "avg_film_score": 251,
       "news_mentions": [],
       "x_mentions": 2431,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2431,
       "news_count": 0,
@@ -23730,7 +23658,7 @@
       "avg_film_score": 98,
       "news_mentions": [],
       "x_mentions": 13138,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 13138,
       "news_count": 0,
@@ -23767,7 +23695,7 @@
       "avg_film_score": 128,
       "news_mentions": [],
       "x_mentions": 1944,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1944,
       "news_count": 0,
@@ -23804,7 +23732,7 @@
       "avg_film_score": 2,
       "news_mentions": [],
       "x_mentions": 3102,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 3102,
       "news_count": 0,
@@ -23831,17 +23759,17 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 690,
+          "score": 692,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 57,
-      "avg_film_score": 690,
+      "avg_film_score": 692,
       "news_mentions": [],
       "x_mentions": 1050,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1050,
       "news_count": 0,
@@ -23868,17 +23796,17 @@
           "title": "The Drama",
           "release_date": "2026-03-26",
           "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
-          "score": 368,
+          "score": 367,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 29.1717,
       "sentiment_pct": 57,
-      "avg_film_score": 368,
+      "avg_film_score": 367,
       "news_mentions": [],
       "x_mentions": 1287,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1287,
       "news_count": 0,
@@ -23915,7 +23843,7 @@
       "avg_film_score": 251,
       "news_mentions": [],
       "x_mentions": 1198,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1198,
       "news_count": 0,
@@ -23952,7 +23880,7 @@
       "avg_film_score": 70,
       "news_mentions": [],
       "x_mentions": 1096,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1096,
       "news_count": 0,
@@ -23989,7 +23917,7 @@
       "avg_film_score": 1,
       "news_mentions": [],
       "x_mentions": 667,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 667,
       "news_count": 0,
@@ -24026,7 +23954,7 @@
       "avg_film_score": 60,
       "news_mentions": [],
       "x_mentions": 534,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 534,
       "news_count": 0,
@@ -24063,7 +23991,7 @@
       "avg_film_score": 238,
       "news_mentions": [],
       "x_mentions": 241,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 241,
       "news_count": 0,
@@ -24109,7 +24037,7 @@
       "avg_film_score": 79,
       "news_mentions": [],
       "x_mentions": 387,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 387,
       "news_count": 0,
@@ -24146,7 +24074,7 @@
       "avg_film_score": 151,
       "news_mentions": [],
       "x_mentions": 186,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 186,
       "news_count": 0,
@@ -24183,7 +24111,7 @@
       "avg_film_score": 157,
       "news_mentions": [],
       "x_mentions": 178,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 178,
       "news_count": 0,
@@ -24220,7 +24148,7 @@
       "avg_film_score": 343,
       "news_mentions": [],
       "x_mentions": 115,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 115,
       "news_count": 0,
@@ -24257,7 +24185,7 @@
       "avg_film_score": 70,
       "news_mentions": [],
       "x_mentions": 161,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 161,
       "news_count": 0,
@@ -24294,7 +24222,7 @@
       "avg_film_score": 178,
       "news_mentions": [],
       "x_mentions": 123,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 123,
       "news_count": 0,
@@ -24331,7 +24259,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 137,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 137,
       "news_count": 0,
@@ -24368,7 +24296,7 @@
       "avg_film_score": 684,
       "news_mentions": [],
       "x_mentions": 31,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 31,
       "news_count": 0,
@@ -24405,7 +24333,7 @@
       "avg_film_score": 33,
       "news_mentions": [],
       "x_mentions": 97,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 97,
       "news_count": 0,
@@ -24442,7 +24370,7 @@
       "avg_film_score": 5,
       "news_mentions": [],
       "x_mentions": 86,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 86,
       "news_count": 0,
@@ -24479,7 +24407,7 @@
       "avg_film_score": 238,
       "news_mentions": [],
       "x_mentions": 52,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 52,
       "news_count": 0,
@@ -24516,7 +24444,7 @@
       "avg_film_score": 5,
       "news_mentions": [],
       "x_mentions": 73,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 73,
       "news_count": 0,
@@ -24553,7 +24481,7 @@
       "avg_film_score": 3,
       "news_mentions": [],
       "x_mentions": 65,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 65,
       "news_count": 0,
@@ -24616,9 +24544,9 @@
       },
       "rank": 1,
       "prev_rank": 1,
-      "prev_score": 1406,
+      "prev_score": 1405,
       "rank_delta": 0,
-      "score_delta": -1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -24645,7 +24573,7 @@
         "allocated_general_mentions": 69808,
         "allocated_general_news": 0,
         "title_weight": 0.687,
-        "title_momentum_weight": 0.598,
+        "title_momentum_weight": 0.599,
         "days_to_release": -3,
         "release_proximity_weight": 2.0,
         "lifecycle_phase": "opening-window",
@@ -24666,9 +24594,9 @@
       },
       "rank": 2,
       "prev_rank": 2,
-      "prev_score": 1189,
+      "prev_score": 1184,
       "rank_delta": 0,
-      "score_delta": -5,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -24682,8 +24610,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1134,
-      "rating": 1134,
+      "score": 1135,
+      "rating": 1135,
       "attention_type": "mixed",
       "shock_score": 35.95,
       "debug": {
@@ -24707,7 +24635,7 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1134,
+        "raw_rating": 1135,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 62324,
@@ -24716,9 +24644,9 @@
       },
       "rank": 3,
       "prev_rank": 3,
-      "prev_score": 1141,
+      "prev_score": 1134,
       "rank_delta": 0,
-      "score_delta": -7,
+      "score_delta": 1,
       "is_new": false
     },
     {
@@ -24744,7 +24672,7 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 25759,
         "allocated_general_news": 0,
-        "title_weight": 0.116,
+        "title_weight": 0.115,
         "title_momentum_weight": 0.144,
         "days_to_release": 151,
         "release_proximity_weight": 1.4,
@@ -24795,7 +24723,7 @@
         "allocated_general_mentions": 4817,
         "allocated_general_news": 0,
         "title_weight": 0.863,
-        "title_momentum_weight": 0.804,
+        "title_momentum_weight": 0.803,
         "days_to_release": -10,
         "release_proximity_weight": 2.0,
         "lifecycle_phase": "opening-window",
@@ -24816,9 +24744,9 @@
       },
       "rank": 5,
       "prev_rank": 5,
-      "prev_score": 1087,
+      "prev_score": 1084,
       "rank_delta": 0,
-      "score_delta": -3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -24866,9 +24794,9 @@
       },
       "rank": 6,
       "prev_rank": 6,
-      "prev_score": 1057,
+      "prev_score": 1070,
       "rank_delta": 0,
-      "score_delta": 13,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -24894,7 +24822,7 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 18718,
         "allocated_general_news": 0,
-        "title_weight": 0.802,
+        "title_weight": 0.803,
         "title_momentum_weight": 0.725,
         "days_to_release": -3,
         "release_proximity_weight": 2.0,
@@ -24916,9 +24844,9 @@
       },
       "rank": 7,
       "prev_rank": 7,
-      "prev_score": 1042,
+      "prev_score": 1035,
       "rank_delta": 0,
-      "score_delta": -7,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -24966,9 +24894,9 @@
       },
       "rank": 8,
       "prev_rank": 8,
-      "prev_score": 1019,
+      "prev_score": 1016,
       "rank_delta": 0,
-      "score_delta": -3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25016,9 +24944,9 @@
       },
       "rank": 9,
       "prev_rank": 9,
-      "prev_score": 1007,
+      "prev_score": 1000,
       "rank_delta": 0,
-      "score_delta": -7,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25066,9 +24994,9 @@
       },
       "rank": 10,
       "prev_rank": 10,
-      "prev_score": 981,
+      "prev_score": 978,
       "rank_delta": 0,
-      "score_delta": -3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25116,9 +25044,9 @@
       },
       "rank": 11,
       "prev_rank": 11,
-      "prev_score": 959,
+      "prev_score": 961,
       "rank_delta": 0,
-      "score_delta": 2,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25135,21 +25063,21 @@
       "score": 950,
       "rating": 950,
       "attention_type": "mixed",
-      "shock_score": 57.78,
+      "shock_score": 57.7,
       "debug": {
         "entity_general_mentions": 99829,
         "title_specific_x": 2265,
         "ts_x_score": 895,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 29103,
+        "allocated_general_mentions": 29070,
         "allocated_general_news": 0,
         "title_weight": 0.269,
         "title_momentum_weight": 0.252,
         "days_to_release": -37,
         "release_proximity_weight": 1.4,
         "lifecycle_phase": "theatrical-run",
-        "capped_weight": 0.292,
+        "capped_weight": 0.291,
         "role_multiplier": 1.0,
         "title_halo": 55,
         "x_score": 895,
@@ -25160,15 +25088,15 @@
         "raw_rating": 950,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 31368,
+        "total_mentions": 31335,
         "excluded_mentions": 0,
         "x_stale": false
       },
       "rank": 12,
       "prev_rank": 12,
-      "prev_score": 952,
+      "prev_score": 950,
       "rank_delta": 0,
-      "score_delta": -2,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25182,8 +25110,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 944,
-      "rating": 944,
+      "score": 943,
+      "rating": 943,
       "attention_type": "mixed",
       "shock_score": 4.82,
       "debug": {
@@ -25207,7 +25135,7 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 944,
+        "raw_rating": 943,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 18566,
@@ -25215,10 +25143,10 @@
         "x_stale": false
       },
       "rank": 13,
-      "prev_rank": 14,
+      "prev_rank": 13,
       "prev_score": 944,
-      "rank_delta": 1,
-      "score_delta": 0,
+      "rank_delta": 0,
+      "score_delta": -1,
       "is_new": false
     },
     {
@@ -25251,7 +25179,7 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 72,
+        "title_halo": 73,
         "x_score": 863,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -25265,10 +25193,10 @@
         "x_stale": false
       },
       "rank": 14,
-      "prev_rank": 15,
-      "prev_score": 937,
-      "rank_delta": 1,
-      "score_delta": -1,
+      "prev_rank": 14,
+      "prev_score": 936,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25315,10 +25243,10 @@
         "x_stale": false
       },
       "rank": 15,
-      "prev_rank": 13,
-      "prev_score": 945,
-      "rank_delta": -2,
-      "score_delta": -12,
+      "prev_rank": 15,
+      "prev_score": 933,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25344,8 +25272,8 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6629,
         "allocated_general_news": 0,
-        "title_weight": 0.604,
-        "title_momentum_weight": 0.586,
+        "title_weight": 0.603,
+        "title_momentum_weight": 0.585,
         "days_to_release": -37,
         "release_proximity_weight": 1.4,
         "lifecycle_phase": "theatrical-run",
@@ -25366,9 +25294,9 @@
       },
       "rank": 16,
       "prev_rank": 16,
-      "prev_score": 927,
+      "prev_score": 926,
       "rank_delta": 0,
-      "score_delta": -1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25466,9 +25394,9 @@
       },
       "rank": 18,
       "prev_rank": 18,
-      "prev_score": 873,
+      "prev_score": 876,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25716,9 +25644,9 @@
       },
       "rank": 23,
       "prev_rank": 23,
-      "prev_score": 710,
+      "prev_score": 713,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25816,9 +25744,9 @@
       },
       "rank": 25,
       "prev_rank": 25,
-      "prev_score": 701,
+      "prev_score": 702,
       "rank_delta": 0,
-      "score_delta": 1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25835,21 +25763,21 @@
       "score": 700,
       "rating": 700,
       "attention_type": "mixed",
-      "shock_score": 253.48,
+      "shock_score": 253.92,
       "debug": {
         "entity_general_mentions": 99829,
         "title_specific_x": 323,
         "ts_x_score": 669,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 19093,
+        "allocated_general_mentions": 19123,
         "allocated_general_news": 0,
         "title_weight": 0.177,
         "title_momentum_weight": 0.178,
         "days_to_release": 74,
         "release_proximity_weight": 1.3,
         "lifecycle_phase": "active-campaign",
-        "capped_weight": 0.191,
+        "capped_weight": 0.192,
         "role_multiplier": 1.0,
         "title_halo": 31,
         "x_score": 669,
@@ -25860,7 +25788,7 @@
         "raw_rating": 700,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 19416,
+        "total_mentions": 19446,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -25894,7 +25822,7 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 49914,
         "allocated_general_news": 0,
-        "title_weight": 0.538,
+        "title_weight": 0.539,
         "title_momentum_weight": 0.544,
         "days_to_release": 88,
         "release_proximity_weight": 1.3,
@@ -25916,9 +25844,9 @@
       },
       "rank": 27,
       "prev_rank": 27,
-      "prev_score": 679,
+      "prev_score": 683,
       "rank_delta": 0,
-      "score_delta": 4,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25965,10 +25893,10 @@
         "x_stale": false
       },
       "rank": 28,
-      "prev_rank": 29,
-      "prev_score": 677,
-      "rank_delta": 1,
-      "score_delta": 2,
+      "prev_rank": 28,
+      "prev_score": 679,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26015,9 +25943,9 @@
         "x_stale": false
       },
       "rank": 29,
-      "prev_rank": 28,
+      "prev_rank": 29,
       "prev_score": 677,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -26035,14 +25963,14 @@
       "score": 663,
       "rating": 663,
       "attention_type": "mixed",
-      "shock_score": 19.42,
+      "shock_score": 19.46,
       "debug": {
         "entity_general_mentions": 99829,
         "title_specific_x": 292,
         "ts_x_score": 657,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 1717,
+        "allocated_general_mentions": 1720,
         "allocated_general_news": 0,
         "title_weight": 0.016,
         "title_momentum_weight": 0.026,
@@ -26060,7 +25988,7 @@
         "raw_rating": 663,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 2009,
+        "total_mentions": 2012,
         "excluded_mentions": 0,
         "x_stale": false
       },
@@ -26166,9 +26094,9 @@
       },
       "rank": 32,
       "prev_rank": 32,
-      "prev_score": 653,
+      "prev_score": 654,
       "rank_delta": 0,
-      "score_delta": 1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26265,10 +26193,10 @@
         "x_stale": false
       },
       "rank": 34,
-      "prev_rank": 35,
-      "prev_score": 632,
-      "rank_delta": 1,
-      "score_delta": -2,
+      "prev_rank": 34,
+      "prev_score": 630,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26294,8 +26222,8 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 6629,
         "allocated_general_news": 0,
-        "title_weight": 0.396,
-        "title_momentum_weight": 0.414,
+        "title_weight": 0.397,
+        "title_momentum_weight": 0.415,
         "days_to_release": 74,
         "release_proximity_weight": 1.3,
         "lifecycle_phase": "active-campaign",
@@ -26315,10 +26243,10 @@
         "x_stale": false
       },
       "rank": 35,
-      "prev_rank": 34,
-      "prev_score": 634,
-      "rank_delta": -1,
-      "score_delta": -9,
+      "prev_rank": 35,
+      "prev_score": 625,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26366,9 +26294,9 @@
       },
       "rank": 36,
       "prev_rank": 36,
-      "prev_score": 618,
+      "prev_score": 624,
       "rank_delta": 0,
-      "score_delta": 6,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26394,7 +26322,7 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 18718,
         "allocated_general_news": 0,
-        "title_weight": 0.198,
+        "title_weight": 0.197,
         "title_momentum_weight": 0.275,
         "days_to_release": 39,
         "release_proximity_weight": 1.3,
@@ -26416,9 +26344,9 @@
       },
       "rank": 37,
       "prev_rank": 37,
-      "prev_score": 613,
+      "prev_score": 616,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26466,9 +26394,9 @@
       },
       "rank": 38,
       "prev_rank": 38,
-      "prev_score": 608,
+      "prev_score": 607,
       "rank_delta": 0,
-      "score_delta": -1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26615,9 +26543,9 @@
         "x_stale": false
       },
       "rank": 41,
-      "prev_rank": 42,
+      "prev_rank": 41,
       "prev_score": 547,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -26665,10 +26593,10 @@
         "x_stale": false
       },
       "rank": 42,
-      "prev_rank": 41,
-      "prev_score": 565,
-      "rank_delta": -1,
-      "score_delta": -19,
+      "prev_rank": 42,
+      "prev_score": 546,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26732,8 +26660,8 @@
       "billing": 4,
       "profile_url": "https://image.tmdb.org/t/p/w300/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 517,
-      "rating": 517,
+      "score": 518,
+      "rating": 518,
       "attention_type": "mixed",
       "shock_score": 94.48,
       "debug": {
@@ -26757,7 +26685,7 @@
         "general_news_score": 0,
         "news_score": 0,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 517,
+        "raw_rating": 518,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 1560,
@@ -26768,7 +26696,7 @@
       "prev_rank": 44,
       "prev_score": 517,
       "rank_delta": 0,
-      "score_delta": 0,
+      "score_delta": 1,
       "is_new": false
     },
     {
@@ -26965,10 +26893,10 @@
         "x_stale": false
       },
       "rank": 48,
-      "prev_rank": 49,
-      "prev_score": 491,
-      "rank_delta": 1,
-      "score_delta": -1,
+      "prev_rank": 48,
+      "prev_score": 490,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27001,7 +26929,7 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 113,
+        "title_halo": 112,
         "x_score": 377,
         "title_news_score": 0,
         "general_news_score": 0,
@@ -27015,9 +26943,9 @@
         "x_stale": false
       },
       "rank": 49,
-      "prev_rank": 50,
+      "prev_rank": 49,
       "prev_score": 489,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27065,10 +26993,10 @@
         "x_stale": false
       },
       "rank": 50,
-      "prev_rank": 48,
-      "prev_score": 491,
-      "rank_delta": -2,
-      "score_delta": -5,
+      "prev_rank": 50,
+      "prev_score": 486,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27266,9 +27194,9 @@
       },
       "rank": 54,
       "prev_rank": 54,
-      "prev_score": 461,
+      "prev_score": 458,
       "rank_delta": 0,
-      "score_delta": -3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27365,9 +27293,9 @@
         "x_stale": false
       },
       "rank": 56,
-      "prev_rank": 57,
+      "prev_rank": 56,
       "prev_score": 456,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27415,9 +27343,9 @@
         "x_stale": false
       },
       "rank": 57,
-      "prev_rank": 58,
+      "prev_rank": 57,
       "prev_score": 452,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27465,9 +27393,9 @@
         "x_stale": false
       },
       "rank": 58,
-      "prev_rank": 59,
+      "prev_rank": 58,
       "prev_score": 451,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27515,10 +27443,10 @@
         "x_stale": false
       },
       "rank": 59,
-      "prev_rank": 56,
-      "prev_score": 457,
-      "rank_delta": -3,
-      "score_delta": -6,
+      "prev_rank": 59,
+      "prev_score": 451,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27665,9 +27593,9 @@
         "x_stale": false
       },
       "rank": 62,
-      "prev_rank": 63,
+      "prev_rank": 62,
       "prev_score": 440,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27715,9 +27643,9 @@
         "x_stale": false
       },
       "rank": 63,
-      "prev_rank": 64,
+      "prev_rank": 63,
       "prev_score": 437,
-      "rank_delta": 1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27765,10 +27693,10 @@
         "x_stale": false
       },
       "rank": 64,
-      "prev_rank": 62,
-      "prev_score": 441,
-      "rank_delta": -2,
-      "score_delta": -5,
+      "prev_rank": 64,
+      "prev_score": 436,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27816,9 +27744,9 @@
       },
       "rank": 65,
       "prev_rank": 65,
-      "prev_score": 430,
+      "prev_score": 427,
       "rank_delta": 0,
-      "score_delta": -3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -28465,10 +28393,10 @@
         "x_stale": false
       },
       "rank": 78,
-      "prev_rank": 80,
-      "prev_score": 388,
-      "rank_delta": 2,
-      "score_delta": 1,
+      "prev_rank": 78,
+      "prev_score": 389,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -28515,9 +28443,9 @@
         "x_stale": false
       },
       "rank": 79,
-      "prev_rank": 78,
+      "prev_rank": 79,
       "prev_score": 388,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -28565,9 +28493,9 @@
         "x_stale": false
       },
       "rank": 80,
-      "prev_rank": 79,
+      "prev_rank": 80,
       "prev_score": 388,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -28766,9 +28694,9 @@
       },
       "rank": 84,
       "prev_rank": 84,
-      "prev_score": 383,
+      "prev_score": 384,
       "rank_delta": 0,
-      "score_delta": 1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -29115,10 +29043,10 @@
         "x_stale": false
       },
       "rank": 91,
-      "prev_rank": 92,
-      "prev_score": 369,
-      "rank_delta": 1,
-      "score_delta": 5,
+      "prev_rank": 91,
+      "prev_score": 374,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -29165,9 +29093,9 @@
         "x_stale": false
       },
       "rank": 92,
-      "prev_rank": 91,
+      "prev_rank": 92,
       "prev_score": 371,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
