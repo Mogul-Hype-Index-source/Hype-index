@@ -1724,17 +1724,21 @@ def derive_people(movies: List[Dict[str, Any]],
             d["_billing"] = 0
             _bucket(directors, d, m, "director")
 
-    xc = x_counts or {}
     eyt = event_youtube or {}
+
+    # Read X from cache directly (not pulse-scoped x_counts which only
+    # has the current mode's entries). Same source the pairing system uses.
+    _x_cache_for_people = (_load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")).get("counts") or {}
 
     def _finalize(slot: Dict[str, Any], kind: str) -> Dict[str, Any]:
         n = slot["sentiment_n"] or 1
         slot["sentiment_pct"] = int(round(slot["sentiment_acc"] / n))
         slot["avg_film_score"] = int(round(slot["score_acc"] / n))
         slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
-        slot["x_mentions"] = xc.get(f"{kind}:{slot['tmdb_id']}", 0)
+        slot["x_mentions"] = _x_cache_for_people.get(f"{kind}:{slot['tmdb_id']}", 0)
         slot["event_youtube_views"] = eyt.get(slot["name"], 0)
-        slot["mentions"] = len(slot["news_mentions"]) + slot["x_mentions"]
+        slot["mentions"] = slot["x_mentions"]  # X is the primary mention signal
+        slot["news_count"] = len(slot["news_mentions"])  # news shown separately
         del slot["sentiment_acc"]
         del slot["sentiment_n"]
         del slot["score_acc"]
