@@ -1362,7 +1362,7 @@ function renderMovieRow(m, rank){
           <div class="title">${escapeHtml(m.title||'')} ${badges.join(' ')}</div>
           <div class="strip">
             <span><span class="lbl">VIEWS</span><span class="num-col">${fmtCount(m.youtube_views)}</span>${(m.views_today||0)>0?`<span class="views-delta">+${fmtCount(m.views_today)} today</span>`:''}</span>
-            <span><span class="lbl">MENTIONS</span><span class="num-col">${fmtCount(m.mentions)}</span></span>
+            <span><span class="lbl">MENTIONS</span><span class="num-col">${m.x_status==='pending'?'—':fmtCount(m.mentions)}${m.x_status==='stale'?'<span style="color:var(--mute);font-size:8px"> ●</span>':''}</span></span>
             <span class="sent-mini">
               <span class="lbl sent-lbl-short">SENT</span>
               <span class="lbl sent-lbl-full">SENTIMENT</span>
@@ -1441,7 +1441,7 @@ function renderPersonRow(p, rank, detail){
           <div class="title">${escapeHtml(p.name||'')} ${badges.join(' ')}</div>
           <div class="strip">
             <span><span class="lbl">FILMS</span><span class="val">${p.film_count || 0}</span></span>
-            <span><span class="lbl">X MENTIONS</span><span class="num-col">${fmtCount(p.mentions || p.x_mentions || 0)}</span></span>
+            <span><span class="lbl">X MENTIONS</span><span class="num-col">${p.x_status==='pending'?'—':fmtCount(p.mentions || p.x_mentions || 0)}${p.x_status==='stale'?'<span style="color:var(--mute);font-size:8px"> ●</span>':''}</span></span>
             <span class="sent-mini">
               <span class="lbl sent-lbl-short">SENT</span>
               <span class="lbl sent-lbl-full">SENTIMENT</span>

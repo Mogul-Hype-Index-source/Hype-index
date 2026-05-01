@@ -1581,16 +1581,23 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
              "true" if x_fetched < len(x_queries) * 0.5 else "false")
 
     # Apply to movies — use fresh data or preserve existing from cache
+    # Also read from cache for movies not queried this pulse
+    _movie_x_cache = (_load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")).get("counts") or {}
     for m in movies:
         key = f"movie:{m['tmdb_id']}"
         if key in x_counts and x_counts[key] > 0:
             m["x_mentions"] = x_counts[key]
-        elif key in x_counts:
-            # 429 fallback returned 0 — don't overwrite with zero if we have prior data
-            m["x_mentions"] = m.get("x_mentions") or x_counts[key]
+            m["x_status"] = "live"
+        elif key in x_counts and m.get("x_mentions", 0) > 0:
+            # 429 fallback — keep prior value
+            m["x_status"] = "stale"
+        elif _movie_x_cache.get(key, 0) > 0:
+            # Not queried this pulse — use cached value
+            m["x_mentions"] = _movie_x_cache[key]
+            m["x_status"] = "stale"
         else:
-            # Not queried this pulse (alternate mode) — keep existing
-            pass
+            m.setdefault("x_mentions", 0)
+            m["x_status"] = "pending"
 
     x_hits = sum(1 for m in movies if m.get("x_mentions", 0) > 0)
     LOG.info("X mentions coverage (%s): %d/%d (%d%%)", x_mode, x_hits, len(movies),
@@ -1728,17 +1735,34 @@ def derive_people(movies: List[Dict[str, Any]],
 
     # Read X from cache directly (not pulse-scoped x_counts which only
     # has the current mode's entries). Same source the pairing system uses.
-    _x_cache_for_people = (_load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")).get("counts") or {}
+    _x_cache_blob = _load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")
+    _x_cache_for_people = _x_cache_blob.get("counts") or {}
+    _x_cache_stale = _x_cache_blob.get("x_stale", False)
 
     def _finalize(slot: Dict[str, Any], kind: str) -> Dict[str, Any]:
         n = slot["sentiment_n"] or 1
         slot["sentiment_pct"] = int(round(slot["sentiment_acc"] / n))
         slot["avg_film_score"] = int(round(slot["score_acc"] / n))
         slot["news_mentions"] = _name_news_mentions(slot["name"], news_items)
-        slot["x_mentions"] = _x_cache_for_people.get(f"{kind}:{slot['tmdb_id']}", 0)
+
+        cache_key = f"{kind}:{slot['tmdb_id']}"
+        x_val = _x_cache_for_people.get(cache_key)
+
+        if x_val is not None and x_val > 0:
+            slot["x_mentions"] = x_val
+            slot["x_status"] = "stale" if _x_cache_stale else "live"
+        elif cache_key in _x_cache_for_people:
+            # In cache but zero — rate-limited fallback, not real zero
+            slot["x_mentions"] = 0
+            slot["x_status"] = "pending"
+        else:
+            # Never fetched
+            slot["x_mentions"] = 0
+            slot["x_status"] = "pending"
+
         slot["event_youtube_views"] = eyt.get(slot["name"], 0)
-        slot["mentions"] = slot["x_mentions"]  # X is the primary mention signal
-        slot["news_count"] = len(slot["news_mentions"])  # news shown separately
+        slot["mentions"] = slot["x_mentions"]
+        slot["news_count"] = len(slot["news_mentions"])
         del slot["sentiment_acc"]
         del slot["sentiment_n"]
         del slot["score_acc"]
