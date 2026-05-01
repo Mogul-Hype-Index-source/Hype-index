@@ -345,6 +345,22 @@ def score_movies(movies: List[Dict[str, Any]],
         else:
             smoothed = raw_rating
 
+        # Theatrical lifecycle decay — suppress post-theatrical titles
+        rd = m.get("release_date") or ""
+        try:
+            from datetime import datetime as _dt, timezone as _tz
+            _rel = _dt.strptime(rd, "%Y-%m-%d").replace(tzinfo=_tz.utc)
+            _days_out = (_dt.now(_tz.utc) - _rel).days  # positive = released
+        except (ValueError, TypeError):
+            _days_out = 0
+
+        if _days_out > 120:
+            smoothed = int(smoothed * 0.1)  # hard fade
+        elif _days_out > 90:
+            smoothed = int(smoothed * 0.3)
+        elif _days_out > 60:
+            smoothed = int(smoothed * 0.6)
+
         new_smooth[tid_str] = smoothed
 
         m["sub_scores"]    = sub
@@ -352,6 +368,7 @@ def score_movies(movies: List[Dict[str, Any]],
         m["rating_raw"]    = raw_rating
         m["rating_band"]   = _band(smoothed)
         m["score"]         = smoothed  # backward compat
+        m["days_since_release"] = _days_out if _days_out > 0 else 0
         m["scores"]        = {"1d": smoothed, "7d": smoothed, "30d": smoothed}
         m["sentiment_pct"] = _sentiment_pct(m)
         # Clean up internal field

@@ -1826,6 +1826,7 @@ def derive_people(movies: List[Dict[str, Any]],
                 except (ValueError, TypeError):
                     days_to_release = 180
 
+                # Theatrical lifecycle — 90-day window focus
                 if days_to_release > 365:
                     proximity_weight = 0.5; lifecycle_phase = "early-announcement"
                 elif days_to_release > 180:
@@ -1837,11 +1838,17 @@ def derive_people(movies: List[Dict[str, Any]],
                 elif days_to_release > 0:
                     proximity_weight = 1.6; lifecycle_phase = "pre-release-peak"
                 elif days_to_release > -14:
-                    proximity_weight = 1.2; lifecycle_phase = "opening-window"
+                    proximity_weight = 1.6; lifecycle_phase = "opening-window"
+                elif days_to_release > -30:
+                    proximity_weight = 1.3; lifecycle_phase = "opening-run"
                 elif days_to_release > -60:
-                    proximity_weight = 0.8; lifecycle_phase = "theatrical-run"
+                    proximity_weight = 1.0; lifecycle_phase = "theatrical-run"
+                elif days_to_release > -90:
+                    proximity_weight = 0.6; lifecycle_phase = "late-theatrical"
+                elif days_to_release > -120:
+                    proximity_weight = 0.3; lifecycle_phase = "post-theatrical"
                 else:
-                    proximity_weight = 0.5; lifecycle_phase = "post-theatrical"
+                    proximity_weight = 0.1; lifecycle_phase = "faded"
 
                 # Trailer/casting exception
                 ts_x_key_check = f"ts:{role}:{pid}:film:{film_id}"
