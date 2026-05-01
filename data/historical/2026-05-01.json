@@ -1,17 +1,29 @@
 {
-  "generated_at": "2026-05-01T20:45:19+00:00",
-  "next_update_at": "2026-05-01T21:45:19+00:00",
+  "generated_at": "2026-05-01T21:18:10+00:00",
+  "next_update_at": "2026-05-01T22:18:10+00:00",
   "snapshot_date": "2026-05-01",
   "summary": {
-    "total": 173,
+    "total": 174,
     "total_streaming": 20,
-    "rising": 10,
-    "falling": 85,
-    "flat": 98,
-    "avg_score": 103,
-    "total_mentions_24h": 15763421
+    "rising": 4,
+    "falling": 77,
+    "flat": 113,
+    "avg_score": 102,
+    "total_mentions_24h": 15810580
   },
   "news": [
+    {
+      "headline": "John Travolta Movie ‘November 1963’ About JFK Assassination Acquired By Ketchup Entertainment",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/05/john-travolta-november-1963-movie-1236878215/",
+      "category": "production"
+    },
+    {
+      "headline": "Greta Gerwig’s ‘Narnia’ Moves to 2027 With Global Theatrical Release Before Netflix Debut",
+      "source": "Variety",
+      "url": "https://variety.com/2026/film/news/greta-gerwig-narnia-netflix-release-date-1236735796/",
+      "category": "production"
+    },
     {
       "headline": "Netflix’s ‘Narnia’ From Greta Gerwig Getting Full Wide Theatrical Window, Heads To 2027",
       "source": "Deadline",
@@ -22,12 +34,6 @@
       "headline": "Greta Gerwig’s ‘Narnia’ Moves to 2027 with Wide Theatrical Release From Netflix",
       "source": "Hollywood Reporter",
       "url": "https://www.hollywoodreporter.com/movies/movie-news/netflix-narnia-movie-greta-gerwig-release-date-1236581880/",
-      "category": "production"
-    },
-    {
-      "headline": "Kara Young Just Became Broadway’s New Queen. Is Hollywood Next?",
-      "source": "Hollywood Reporter",
-      "url": "https://www.hollywoodreporter.com/movies/movie-features/is-god-is-kara-young-broadway-1236581484/",
       "category": "production"
     },
     {
@@ -73,21 +79,15 @@
       "category": "international"
     },
     {
+      "headline": "Greta Gerwig’s ‘Narnia’ Film at Netflix Moves Into 2027 — Now with a Wide Theatrical Release",
+      "source": "IndieWire",
+      "url": "https://www.indiewire.com/news/breaking-news/greta-gerwigs-narnia-netflix-moves-2027-wide-theatrical-1235191910/",
+      "category": "creative"
+    },
+    {
       "headline": "‘Swapped’ Review: Michael B. Jordan’s First Post-Oscar Performance? Voicing a Prejudiced Sea Otter in Animated Netflix Movie for Babies",
       "source": "IndieWire",
       "url": "https://www.indiewire.com/criticism/movies/swapped-movie-review-netflix-michael-b-jordan-1235191540/",
-      "category": "creative"
-    },
-    {
-      "headline": "Some of the Original ‘Blair Witch’ Stars and Filmmakers Are Involved with the Lionsgate Reboot After All",
-      "source": "IndieWire",
-      "url": "https://www.indiewire.com/news/breaking-news/original-blair-witch-stars-involved-lionsgate-reboot-1235191572/",
-      "category": "creative"
-    },
-    {
-      "headline": "Quentin Tarantino’s New Beverly Cinema Pays Tribute to Tony Scott and Denzel Washington",
-      "source": "IndieWire",
-      "url": "https://www.indiewire.com/news/general-news/new-beverly-cinema-celebrates-denzel-washington-tony-scott-1235191481/",
       "category": "creative"
     },
     {
@@ -95,12 +95,6 @@
       "source": "IndieWire",
       "url": "https://www.indiewire.com/news/trailers/milky-way-trailer-vasilis-kekatos-series-1235191636/",
       "category": "pr-marketing"
-    },
-    {
-      "headline": "Oscar Rule Changes: AI Crackdown, Actors Can Get Multiple Nominations in Same Category and International Film Eligibility Expands",
-      "source": "Variety",
-      "url": "https://variety.com/2026/film/awards/oscars-rule-changes-ai-acting-nominations-international-1236734659/",
-      "category": "ai-tech"
     },
     {
       "headline": "Oscars: Film Academy Cracks Down on AI, Opens Up International and Acting Categories",
@@ -145,12 +139,6 @@
       "category": "festivals"
     },
     {
-      "headline": "Jane Fonda Tributes Late Co-Star Robert Redford At TCM Classic Film Festival Opening: “I Had Such A Crush On Him It Was Painful”",
-      "source": "Deadline",
-      "url": "https://deadline.com/2026/05/jane-fonda-tributes-robert-redford-tcm-classic-film-festival-1236878054/",
-      "category": "festivals"
-    },
-    {
       "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
       "source": "Hollywood Reporter",
       "url": "https://www.hollywoodreporter.com/movies/movie-news/box-office-the-devil-wears-prada-2-1236581489/",
@@ -168,73 +156,66 @@
       "tmdb_id": 1147572,
       "title": "Narnia",
       "poster_url": "https://image.tmdb.org/t/p/w185/lnVdfYxsPCYcgplY6h5dNl5fvjg.jpg",
-      "move": 37,
-      "score": 316
-    },
-    {
-      "tmdb_id": 1582770,
-      "title": "Dhurandhar: The Revenge",
-      "poster_url": "https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg",
-      "move": 1,
-      "score": 98
-    },
-    {
-      "tmdb_id": 1620996,
-      "title": "The Blue Box",
-      "poster_url": "https://image.tmdb.org/t/p/w185/dkIzjzfv7TbXqjbJKM51CZYORaR.jpg",
-      "move": 1,
-      "score": 33
-    },
-    {
-      "tmdb_id": 1297446,
-      "title": "Slanted",
-      "poster_url": "https://image.tmdb.org/t/p/w185/cr2SfN854IlEoZQBtIfpyC0zXR5.jpg",
-      "move": 1,
-      "score": 33
-    },
-    {
-      "tmdb_id": 1304313,
-      "title": "Lee Cronin's The Mummy",
-      "poster_url": "https://image.tmdb.org/t/p/w185/8L8efNkz8rUmwR7sV0g3vnC9yjn.jpg",
-      "move": 1,
-      "score": 2
-    }
-  ],
-  "movers_down": [
-    {
-      "tmdb_id": 1440050,
-      "title": "The Breadwinner",
-      "poster_url": "https://image.tmdb.org/t/p/w185/4apG9Xk6HQvV48JKEjSUeiebju7.jpg",
-      "move": -7,
-      "score": 2
-    },
-    {
-      "tmdb_id": 1493859,
-      "title": "Pizza Movie",
-      "poster_url": "https://image.tmdb.org/t/p/w185/v2qH9CiGWup1Ddzai76ofgtSTAh.jpg",
-      "move": -2,
-      "score": 199
-    },
-    {
-      "tmdb_id": 1340206,
-      "title": "Tuner",
-      "poster_url": "https://image.tmdb.org/t/p/w185/oGZd4xQJBt4mtuBhTdlOalsdqtT.jpg",
-      "move": -2,
-      "score": 32
+      "move": 8,
+      "score": 446
     },
     {
       "tmdb_id": 1083381,
       "title": "Backrooms",
       "poster_url": "https://image.tmdb.org/t/p/w185/vpkNMkbisv5cTaIfCzUduYzXnjb.jpg",
-      "move": -1,
+      "move": 1,
       "score": 313
     },
     {
       "tmdb_id": 1339713,
       "title": "Obsession",
       "poster_url": "https://image.tmdb.org/t/p/w185/40I66L7QKguTFDPvcLcdiTbAD7I.jpg",
-      "move": -1,
+      "move": 1,
       "score": 305
+    },
+    {
+      "tmdb_id": 1153576,
+      "title": "Street Fighter",
+      "poster_url": "https://image.tmdb.org/t/p/w185/wOnoOeDcsLSo72ON1UC6c1VHKk1.jpg",
+      "move": 1,
+      "score": 298
+    }
+  ],
+  "movers_down": [
+    {
+      "tmdb_id": 1514328,
+      "title": "Wishful Thinking",
+      "poster_url": "https://image.tmdb.org/t/p/w185/36vsIO0FkNNm9CfzDQargqWjktC.jpg",
+      "move": -8,
+      "score": 283
+    },
+    {
+      "tmdb_id": 1325734,
+      "title": "The Drama",
+      "poster_url": "https://image.tmdb.org/t/p/w185/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
+      "move": -1,
+      "score": 368
+    },
+    {
+      "tmdb_id": 1213243,
+      "title": "Toxic",
+      "poster_url": "https://image.tmdb.org/t/p/w185/tZ8eSBXbza96vzCYeVTG9RBJ78E.jpg",
+      "move": -1,
+      "score": 350
+    },
+    {
+      "tmdb_id": 1292415,
+      "title": "Beast",
+      "poster_url": "https://image.tmdb.org/t/p/w185/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg",
+      "move": -1,
+      "score": 349
+    },
+    {
+      "tmdb_id": 931285,
+      "title": "Mortal Kombat II",
+      "poster_url": "https://image.tmdb.org/t/p/w185/lIsMeDbwntNXSUVHmWMMRXEZOVc.jpg",
+      "move": -1,
+      "score": 5
     }
   ],
   "movies": [
@@ -257,9 +238,9 @@
       "youtube_state": "new",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4865783,
-      "x_status": "stale",
-      "mentions": 4865783,
+      "x_mentions": 4869450,
+      "x_status": "live",
+      "mentions": 4869450,
       "sentiment_pct": 65,
       "scores": {
         "1d": 1141,
@@ -371,18 +352,18 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2967920,
-      "x_status": "stale",
-      "mentions": 2967922,
+      "x_mentions": 2972618,
+      "x_status": "live",
+      "mentions": 2972620,
       "sentiment_pct": 78,
       "scores": {
-        "1d": 1076,
+        "1d": 1063,
         "7d": 885,
-        "30d": 1076
+        "30d": 1063
       },
-      "rating": 1076,
+      "rating": 1063,
       "rating_band": "STRONG",
-      "score": 1076,
+      "score": 1063,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -392,12 +373,12 @@
         "youtube_views": 0.0728,
         "youtube_engagement": 0.1755,
         "google_trends": 0.5,
-        "news_impact": 0.3704,
-        "x_mentions": 0.61,
-        "baseline": 0.3278,
-        "short": 0.3278,
+        "news_impact": 0.2703,
+        "x_mentions": 0.6105,
+        "baseline": 0.3179,
+        "short": 0.3179,
         "acceleration": 0.0,
-        "raw_hype": 215.0128
+        "raw_hype": 203.0644
       },
       "cast_full": [
         {
@@ -608,9 +589,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4264,
-      "x_status": "stale",
-      "mentions": 4264,
+      "x_mentions": 4262,
+      "x_status": "live",
+      "mentions": 4262,
       "sentiment_pct": 60,
       "scores": {
         "1d": 685,
@@ -634,7 +615,7 @@
         "baseline": 0.2017,
         "short": 0.2017,
         "acceleration": 0.0,
-        "raw_hype": 85.7715
+        "raw_hype": 85.7713
       },
       "cast_full": [
         {
@@ -727,13 +708,13 @@
       "mentions": 1,
       "sentiment_pct": 65,
       "scores": {
-        "1d": 673,
-        "7d": 673,
-        "30d": 673
+        "1d": 663,
+        "7d": 663,
+        "30d": 663
       },
-      "rating": 673,
+      "rating": 663,
       "rating_band": "DECENT",
-      "score": 673,
+      "score": 663,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -743,12 +724,12 @@
         "youtube_views": 0.3704,
         "youtube_engagement": 0.1829,
         "google_trends": 0.05,
-        "news_impact": 0.2593,
+        "news_impact": 0.1892,
         "x_mentions": 0.0,
-        "baseline": 0.2001,
-        "short": 0.2001,
+        "baseline": 0.1931,
+        "short": 0.1931,
         "acceleration": 0.0,
-        "raw_hype": 84.4335
+        "raw_hype": 78.8608
       },
       "cast_full": [
         {
@@ -841,9 +822,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1447,
-      "x_status": "stale",
-      "mentions": 1447,
+      "x_mentions": 1483,
+      "x_status": "live",
+      "mentions": 1483,
       "sentiment_pct": 53,
       "scores": {
         "1d": 648,
@@ -867,7 +848,7 @@
         "baseline": 0.1904,
         "short": 0.1904,
         "acceleration": 0.0,
-        "raw_hype": 76.7631
+        "raw_hype": 76.7648
       },
       "cast_full": [
         {
@@ -956,7 +937,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1033308,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1033308,
       "sentiment_pct": 68,
       "scores": {
@@ -977,11 +958,11 @@
         "youtube_engagement": 0.1785,
         "google_trends": 0.61,
         "news_impact": 0.0,
-        "x_mentions": 0.2124,
-        "baseline": 0.1553,
-        "short": 0.1553,
+        "x_mentions": 0.2122,
+        "baseline": 0.1552,
+        "short": 0.1552,
         "acceleration": 0.0,
-        "raw_hype": 51.8386
+        "raw_hype": 51.8077
       },
       "cast_full": [
         {
@@ -1069,9 +1050,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2367824,
-      "x_status": "stale",
-      "mentions": 2367824,
+      "x_mentions": 2368376,
+      "x_status": "live",
+      "mentions": 2368376,
       "sentiment_pct": 55,
       "scores": {
         "1d": 508,
@@ -1091,11 +1072,11 @@
         "youtube_engagement": 0.068,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.4866,
-        "baseline": 0.1478,
-        "short": 0.1478,
+        "x_mentions": 0.4864,
+        "baseline": 0.1477,
+        "short": 0.1477,
         "acceleration": 0.0,
-        "raw_hype": 47.1236
+        "raw_hype": 47.0768
       },
       "cast_full": [
         {
@@ -1183,18 +1164,18 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 188057,
-      "x_status": "stale",
-      "mentions": 188058,
+      "x_mentions": 189856,
+      "x_status": "live",
+      "mentions": 189857,
       "sentiment_pct": 56,
       "scores": {
-        "1d": 488,
+        "1d": 474,
         "7d": 911,
-        "30d": 488
+        "30d": 474
       },
-      "rating": 488,
+      "rating": 474,
       "rating_band": "MODEST",
-      "score": 488,
+      "score": 474,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -1204,12 +1185,12 @@
         "youtube_views": 0.1467,
         "youtube_engagement": 0.0696,
         "google_trends": 0.2,
-        "news_impact": 0.3704,
-        "x_mentions": 0.0386,
-        "baseline": 0.1446,
-        "short": 0.1446,
+        "news_impact": 0.2703,
+        "x_mentions": 0.039,
+        "baseline": 0.1347,
+        "short": 0.1347,
         "acceleration": 0.0,
-        "raw_hype": 45.2097
+        "raw_hype": 39.4029
       },
       "cast_full": [
         {
@@ -1285,6 +1266,137 @@
     },
     {
       "rank": 10,
+      "prev_rank": 18,
+      "tmdb_id": 1147572,
+      "title": "Narnia",
+      "director": "Greta Gerwig",
+      "cast": "Emma Mackey, Carey Mulligan",
+      "release_date": "2026-11-26",
+      "poster_url": "https://image.tmdb.org/t/p/w185/lnVdfYxsPCYcgplY6h5dNl5fvjg.jpg",
+      "youtube_views": 63096,
+      "youtube_likes": 345,
+      "youtube_comments": 75,
+      "youtube_video_id": "Q7AUgj11ia8",
+      "views_today": 29,
+      "views_7d_avg": 91,
+      "views_trend": "flat",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 25635,
+      "x_status": "live",
+      "mentions": 25639,
+      "sentiment_pct": 62,
+      "scores": {
+        "1d": 446,
+        "7d": 775,
+        "30d": 446
+      },
+      "rating": 446,
+      "rating_band": "MODEST",
+      "score": 446,
+      "move": 8,
+      "is_new": false,
+      "hot": false,
+      "release_type": "both",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0,
+        "youtube_engagement": 0.0,
+        "google_trends": 0.25,
+        "news_impact": 1.0,
+        "x_mentions": 0.0053,
+        "baseline": 0.1391,
+        "short": 0.1391,
+        "acceleration": 0.0,
+        "raw_hype": 41.9075
+      },
+      "cast_full": [
+        {
+          "id": 2201315,
+          "name": "Emma Mackey",
+          "character": "Jadis / The White Witch",
+          "profile_path": "/l4JOGnGOAeZr3BQvAerFyvakrU0.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 36662,
+          "name": "Carey Mulligan",
+          "character": "Mabel Kirke",
+          "profile_path": "/iwVHhqoz5b62FR0SDpZ7wfsuTBI.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 4925207,
+          "name": "David McKenna",
+          "character": "Digory Kirke",
+          "profile_path": "/m3iSEe5F8oAQkE0kRN3LTqMTpG.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 5386629,
+          "name": "Beatrice Campbell",
+          "character": "Polly Plummer",
+          "profile_path": null,
+          "_billing": 3
+        },
+        {
+          "id": 1347129,
+          "name": "Tom Bonington",
+          "character": "Mr. Potts",
+          "profile_path": "/2atuaW9Aw0bNKebJoRrX0ZGkqlz.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 1182597,
+          "name": "Denise Gough",
+          "character": "",
+          "profile_path": "/wWcby4ARYqr8d92ZdjyQcfaiJBW.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 4593555,
+          "name": "Ava Jager",
+          "character": "Violet Plummer",
+          "profile_path": null
+        },
+        {
+          "id": 8784,
+          "name": "Daniel Craig",
+          "character": "",
+          "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 45400,
+          "name": "Greta Gerwig",
+          "profile_path": "/3H0xzU12GTNJyQTpGysEuI9KyiQ.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [
+        {
+          "source": "IndieWire",
+          "headline": "Greta Gerwig’s ‘Narnia’ Film at Netflix Moves Into 2027 — Now with a Wide Theatrical Release"
+        },
+        {
+          "source": "Variety",
+          "headline": "Greta Gerwig’s ‘Narnia’ Moves to 2027 With Global Theatrical Release Before Netflix Debut"
+        },
+        {
+          "source": "Deadline",
+          "headline": "Netflix’s ‘Narnia’ From Greta Gerwig Getting Full Wide Theatrical Window, Heads To 2027"
+        },
+        {
+          "source": "Hollywood Reporter",
+          "headline": "Greta Gerwig’s ‘Narnia’ Moves to 2027 with Wide Theatrical Release From Netflix"
+        }
+      ],
+      "trends": 25
+    },
+    {
+      "rank": 11,
       "prev_rank": 10,
       "tmdb_id": 1325734,
       "title": "The Drama",
@@ -1302,9 +1414,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 86154,
-      "x_status": "stale",
-      "mentions": 86154,
+      "x_mentions": 86935,
+      "x_status": "live",
+      "mentions": 86935,
       "sentiment_pct": 57,
       "scores": {
         "1d": 368,
@@ -1314,7 +1426,7 @@
       "rating": 368,
       "rating_band": "LOW",
       "score": 368,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1324,11 +1436,11 @@
         "youtube_engagement": 0.118,
         "google_trends": 0.67,
         "news_impact": 0.0,
-        "x_mentions": 0.0177,
-        "baseline": 0.1061,
-        "short": 0.1061,
+        "x_mentions": 0.0179,
+        "baseline": 0.1062,
+        "short": 0.1062,
         "acceleration": 0.0,
-        "raw_hype": 24.7616
+        "raw_hype": 24.7817
       },
       "cast_full": [
         {
@@ -1398,7 +1510,7 @@
       "trends": 67
     },
     {
-      "rank": 11,
+      "rank": 12,
       "prev_rank": 11,
       "tmdb_id": 1213243,
       "title": "Toxic",
@@ -1428,7 +1540,7 @@
       "rating": 350,
       "rating_band": "LOW",
       "score": 350,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -1512,7 +1624,7 @@
       "trends": 63
     },
     {
-      "rank": 12,
+      "rank": 13,
       "prev_rank": 12,
       "tmdb_id": 1292415,
       "title": "Beast",
@@ -1530,9 +1642,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 349504,
-      "x_status": "stale",
-      "mentions": 349504,
+      "x_mentions": 348936,
+      "x_status": "live",
+      "mentions": 348936,
       "sentiment_pct": 52,
       "scores": {
         "1d": 349,
@@ -1542,7 +1654,7 @@
       "rating": 349,
       "rating_band": "LOW",
       "score": 349,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -1552,11 +1664,11 @@
         "youtube_engagement": 0.1119,
         "google_trends": 0.52,
         "news_impact": 0.0,
-        "x_mentions": 0.0718,
-        "baseline": 0.1004,
-        "short": 0.1004,
+        "x_mentions": 0.0717,
+        "baseline": 0.1003,
+        "short": 0.1003,
         "acceleration": 0.0,
-        "raw_hype": 22.2125
+        "raw_hype": 22.1903
       },
       "cast_full": [
         {
@@ -1626,133 +1738,6 @@
       "trends": 52
     },
     {
-      "rank": 13,
-      "prev_rank": 13,
-      "tmdb_id": 1514328,
-      "title": "Wishful Thinking",
-      "director": "Graham Parkes",
-      "cast": "Lewis Pullman, Maya Hawke",
-      "release_date": "2026-03-12",
-      "poster_url": "https://image.tmdb.org/t/p/w185/36vsIO0FkNNm9CfzDQargqWjktC.jpg",
-      "youtube_views": 214,
-      "youtube_likes": 9,
-      "youtube_comments": 1,
-      "youtube_video_id": "-M5DKeniVkU",
-      "views_today": 2,
-      "views_7d_avg": 8,
-      "views_trend": "flat",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 0,
-      "x_status": "pending",
-      "mentions": 3,
-      "sentiment_pct": 95,
-      "scores": {
-        "1d": 347,
-        "7d": 689,
-        "30d": 347
-      },
-      "rating": 347,
-      "rating_band": "LOW",
-      "score": 347,
-      "move": 0,
-      "is_new": false,
-      "hot": false,
-      "release_type": "theatrical",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0,
-        "youtube_engagement": 0.0,
-        "google_trends": 0.0,
-        "news_impact": 1.0,
-        "x_mentions": 0.0,
-        "baseline": 0.1,
-        "short": 0.1,
-        "acceleration": 0.0,
-        "raw_hype": 22.0515
-      },
-      "cast_full": [
-        {
-          "id": 1700685,
-          "name": "Lewis Pullman",
-          "character": "Charlie",
-          "profile_path": "/ws3WR1F2DfjtLLbK8XOGHEZbX1A.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 1903874,
-          "name": "Maya Hawke",
-          "character": "Julia",
-          "profile_path": "/evjbbHM1bzA6Ma5Ptjwa4WkYkkj.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 4855824,
-          "name": "Amita Rao",
-          "character": "Ella",
-          "profile_path": "/e48ULfNeCY3YeKkhiLJGHiFeJlA.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 3707208,
-          "name": "Eric Rahill",
-          "character": "Milo",
-          "profile_path": "/zJGmDvV5avrr9cta8wkdkU7irRu.jpg",
-          "_billing": 3
-        },
-        {
-          "id": 4579130,
-          "name": "Sophie Lachman",
-          "character": "Gracie",
-          "profile_path": "/t7v2qJZLPXRqlq5vqRM2NvJa2UE.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 79082,
-          "name": "Randall Park",
-          "character": "",
-          "profile_path": "/u1QpbjVIKegk79DJG9HFmg9Ljv4.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 63220,
-          "name": "Kerri Kenney",
-          "character": "Charlie’s Mom",
-          "profile_path": "/xamVMZJDIcEuclUNO1E5dVala9e.jpg"
-        },
-        {
-          "id": 95697,
-          "name": "Dileep Rao",
-          "character": "",
-          "profile_path": "/jRNn8SZqFXuI5wOOlHwYsWh0hXs.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 1592209,
-          "name": "Graham Parkes",
-          "profile_path": "/pNBSbjX84SiV3rdFMYYpAfsRKOV.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [
-        {
-          "source": "Deadline",
-          "headline": "Sony Pictures Classics Takes Global Rights To SXSW Winner ‘Wishful Thinking’"
-        },
-        {
-          "source": "Hollywood Reporter",
-          "headline": "Maya Hawke, Lewis Pullman’s ‘Wishful Thinking’ Lands at Sony Pictures Classics"
-        },
-        {
-          "source": "IndieWire",
-          "headline": "‘Wishful Thinking,’ SXSW Top Prize Winner Starring Lewis Pullman and Maya Hawke, Lands at Sony Pictures Classics"
-        }
-      ],
-      "trends": 0
-    },
-    {
       "rank": 16,
       "prev_rank": 16,
       "tmdb_id": 1375646,
@@ -1771,9 +1756,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 85539,
-      "x_status": "stale",
-      "mentions": 85539,
+      "x_mentions": 87138,
+      "x_status": "live",
+      "mentions": 87138,
       "sentiment_pct": 91,
       "scores": {
         "1d": 342,
@@ -1793,11 +1778,11 @@
         "youtube_engagement": 0.2147,
         "google_trends": 0.62,
         "news_impact": 0.0,
-        "x_mentions": 0.0176,
+        "x_mentions": 0.0179,
         "baseline": 0.0984,
         "short": 0.0984,
         "acceleration": 0.0,
-        "raw_hype": 21.3478
+        "raw_hype": 21.3879
       },
       "cast_full": [
         {
@@ -1885,9 +1870,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 257865,
-      "x_status": "stale",
-      "mentions": 257865,
+      "x_mentions": 258041,
+      "x_status": "live",
+      "mentions": 258041,
       "sentiment_pct": 58,
       "scores": {
         "1d": 338,
@@ -1911,7 +1896,7 @@
         "baseline": 0.0971,
         "short": 0.0971,
         "acceleration": 0.0,
-        "raw_hype": 20.8242
+        "raw_hype": 20.8237
       },
       "cast_full": [
         {
@@ -1982,130 +1967,7 @@
     },
     {
       "rank": 18,
-      "prev_rank": 55,
-      "tmdb_id": 1147572,
-      "title": "Narnia",
-      "director": "Greta Gerwig",
-      "cast": "Emma Mackey, Carey Mulligan",
-      "release_date": "2026-11-26",
-      "poster_url": "https://image.tmdb.org/t/p/w185/lnVdfYxsPCYcgplY6h5dNl5fvjg.jpg",
-      "youtube_views": 63096,
-      "youtube_likes": 345,
-      "youtube_comments": 75,
-      "youtube_video_id": "Q7AUgj11ia8",
-      "views_today": 29,
-      "views_7d_avg": 91,
-      "views_trend": "flat",
-      "youtube_state": "normal",
-      "event_youtube_views": 0,
-      "event_boost": false,
-      "x_mentions": 24223,
-      "x_status": "stale",
-      "mentions": 24225,
-      "sentiment_pct": 60,
-      "scores": {
-        "1d": 316,
-        "7d": 775,
-        "30d": 316
-      },
-      "rating": 316,
-      "rating_band": "LOW",
-      "score": 316,
-      "move": 37,
-      "is_new": false,
-      "hot": false,
-      "release_type": "both",
-      "highlight": false,
-      "sub_scores": {
-        "youtube_views": 0.0,
-        "youtube_engagement": 0.0,
-        "google_trends": 0.25,
-        "news_impact": 0.7407,
-        "x_mentions": 0.005,
-        "baseline": 0.1131,
-        "short": 0.1131,
-        "acceleration": 0.0,
-        "raw_hype": 28.0267
-      },
-      "cast_full": [
-        {
-          "id": 2201315,
-          "name": "Emma Mackey",
-          "character": "Jadis / The White Witch",
-          "profile_path": "/l4JOGnGOAeZr3BQvAerFyvakrU0.jpg",
-          "_billing": 0
-        },
-        {
-          "id": 36662,
-          "name": "Carey Mulligan",
-          "character": "Mabel Kirke",
-          "profile_path": "/iwVHhqoz5b62FR0SDpZ7wfsuTBI.jpg",
-          "_billing": 1
-        },
-        {
-          "id": 4925207,
-          "name": "David McKenna",
-          "character": "Digory Kirke",
-          "profile_path": "/m3iSEe5F8oAQkE0kRN3LTqMTpG.jpg",
-          "_billing": 2
-        },
-        {
-          "id": 5386629,
-          "name": "Beatrice Campbell",
-          "character": "Polly Plummer",
-          "profile_path": null,
-          "_billing": 3
-        },
-        {
-          "id": 1347129,
-          "name": "Tom Bonington",
-          "character": "Mr. Potts",
-          "profile_path": "/2atuaW9Aw0bNKebJoRrX0ZGkqlz.jpg",
-          "_billing": 4
-        },
-        {
-          "id": 1182597,
-          "name": "Denise Gough",
-          "character": "",
-          "profile_path": "/wWcby4ARYqr8d92ZdjyQcfaiJBW.jpg",
-          "_billing": 5
-        },
-        {
-          "id": 4593555,
-          "name": "Ava Jager",
-          "character": "Violet Plummer",
-          "profile_path": null
-        },
-        {
-          "id": 8784,
-          "name": "Daniel Craig",
-          "character": "",
-          "profile_path": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
-        }
-      ],
-      "directors_full": [
-        {
-          "id": 45400,
-          "name": "Greta Gerwig",
-          "profile_path": "/3H0xzU12GTNJyQTpGysEuI9KyiQ.jpg",
-          "_billing": 0
-        }
-      ],
-      "news_mentions": [
-        {
-          "source": "Deadline",
-          "headline": "Netflix’s ‘Narnia’ From Greta Gerwig Getting Full Wide Theatrical Window, Heads To 2027"
-        },
-        {
-          "source": "Hollywood Reporter",
-          "headline": "Greta Gerwig’s ‘Narnia’ Moves to 2027 with Wide Theatrical Release From Netflix"
-        }
-      ],
-      "trends": 25
-    },
-    {
-      "rank": 19,
-      "prev_rank": 18,
+      "prev_rank": 19,
       "tmdb_id": 1083381,
       "title": "Backrooms",
       "director": "Kane Parsons",
@@ -2122,9 +1984,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 74313,
-      "x_status": "stale",
-      "mentions": 74313,
+      "x_mentions": 74116,
+      "x_status": "live",
+      "mentions": 74116,
       "sentiment_pct": 80,
       "scores": {
         "1d": 313,
@@ -2134,7 +1996,7 @@
       "rating": 313,
       "rating_band": "LOW",
       "score": 313,
-      "move": -1,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2144,11 +2006,11 @@
         "youtube_engagement": 0.2083,
         "google_trends": 0.13,
         "news_impact": 0.0,
-        "x_mentions": 0.0153,
+        "x_mentions": 0.0152,
         "baseline": 0.0899,
         "short": 0.0899,
         "acceleration": 0.0,
-        "raw_hype": 17.9064
+        "raw_hype": 17.9003
       },
       "cast_full": [
         {
@@ -2206,8 +2068,8 @@
       "trends": 13
     },
     {
-      "rank": 20,
-      "prev_rank": 19,
+      "rank": 19,
+      "prev_rank": 20,
       "tmdb_id": 1339713,
       "title": "Obsession",
       "director": "Curry Barker",
@@ -2224,9 +2086,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 245507,
-      "x_status": "stale",
-      "mentions": 245507,
+      "x_mentions": 246489,
+      "x_status": "live",
+      "mentions": 246489,
       "sentiment_pct": 50,
       "scores": {
         "1d": 305,
@@ -2236,7 +2098,7 @@
       "rating": 305,
       "rating_band": "LOW",
       "score": 305,
-      "move": -1,
+      "move": 1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2246,11 +2108,11 @@
         "youtube_engagement": 0.0167,
         "google_trends": 0.47,
         "news_impact": 0.0,
-        "x_mentions": 0.0505,
+        "x_mentions": 0.0506,
         "baseline": 0.0875,
         "short": 0.0875,
         "acceleration": 0.0,
-        "raw_hype": 16.965
+        "raw_hype": 16.9837
       },
       "cast_full": [
         {
@@ -2320,8 +2182,8 @@
       "trends": 47
     },
     {
-      "rank": 21,
-      "prev_rank": 20,
+      "rank": 20,
+      "prev_rank": 21,
       "tmdb_id": 1153576,
       "title": "Street Fighter",
       "director": "Kitao Sakurai",
@@ -2350,7 +2212,7 @@
       "rating": 298,
       "rating_band": "LOW",
       "score": 298,
-      "move": -1,
+      "move": 1,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -2434,8 +2296,135 @@
       "trends": 46
     },
     {
+      "rank": 21,
+      "prev_rank": 13,
+      "tmdb_id": 1514328,
+      "title": "Wishful Thinking",
+      "director": "Graham Parkes",
+      "cast": "Lewis Pullman, Maya Hawke",
+      "release_date": "2026-03-12",
+      "poster_url": "https://image.tmdb.org/t/p/w185/36vsIO0FkNNm9CfzDQargqWjktC.jpg",
+      "youtube_views": 214,
+      "youtube_likes": 9,
+      "youtube_comments": 1,
+      "youtube_video_id": "-M5DKeniVkU",
+      "views_today": 2,
+      "views_7d_avg": 8,
+      "views_trend": "flat",
+      "youtube_state": "normal",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 0,
+      "x_status": "pending",
+      "mentions": 3,
+      "sentiment_pct": 95,
+      "scores": {
+        "1d": 283,
+        "7d": 689,
+        "30d": 283
+      },
+      "rating": 283,
+      "rating_band": "LOW",
+      "score": 283,
+      "move": -8,
+      "is_new": false,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0,
+        "youtube_engagement": 0.0,
+        "google_trends": 0.0,
+        "news_impact": 0.7297,
+        "x_mentions": 0.0,
+        "baseline": 0.073,
+        "short": 0.073,
+        "acceleration": 0.0,
+        "raw_hype": 11.8916
+      },
+      "cast_full": [
+        {
+          "id": 1700685,
+          "name": "Lewis Pullman",
+          "character": "Charlie",
+          "profile_path": "/ws3WR1F2DfjtLLbK8XOGHEZbX1A.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 1903874,
+          "name": "Maya Hawke",
+          "character": "Julia",
+          "profile_path": "/evjbbHM1bzA6Ma5Ptjwa4WkYkkj.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 4855824,
+          "name": "Amita Rao",
+          "character": "Ella",
+          "profile_path": "/e48ULfNeCY3YeKkhiLJGHiFeJlA.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 3707208,
+          "name": "Eric Rahill",
+          "character": "Milo",
+          "profile_path": "/zJGmDvV5avrr9cta8wkdkU7irRu.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 4579130,
+          "name": "Sophie Lachman",
+          "character": "Gracie",
+          "profile_path": "/t7v2qJZLPXRqlq5vqRM2NvJa2UE.jpg",
+          "_billing": 4
+        },
+        {
+          "id": 79082,
+          "name": "Randall Park",
+          "character": "",
+          "profile_path": "/u1QpbjVIKegk79DJG9HFmg9Ljv4.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 63220,
+          "name": "Kerri Kenney",
+          "character": "Charlie’s Mom",
+          "profile_path": "/xamVMZJDIcEuclUNO1E5dVala9e.jpg"
+        },
+        {
+          "id": 95697,
+          "name": "Dileep Rao",
+          "character": "",
+          "profile_path": "/jRNn8SZqFXuI5wOOlHwYsWh0hXs.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 1592209,
+          "name": "Graham Parkes",
+          "profile_path": "/pNBSbjX84SiV3rdFMYYpAfsRKOV.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [
+        {
+          "source": "Deadline",
+          "headline": "Sony Pictures Classics Takes Global Rights To SXSW Winner ‘Wishful Thinking’"
+        },
+        {
+          "source": "Hollywood Reporter",
+          "headline": "Maya Hawke, Lewis Pullman’s ‘Wishful Thinking’ Lands at Sony Pictures Classics"
+        },
+        {
+          "source": "IndieWire",
+          "headline": "‘Wishful Thinking,’ SXSW Top Prize Winner Starring Lewis Pullman and Maya Hawke, Lands at Sony Pictures Classics"
+        }
+      ],
+      "trends": 0
+    },
+    {
       "rank": 22,
-      "prev_rank": 21,
+      "prev_rank": 22,
       "tmdb_id": 1108427,
       "title": "Moana",
       "director": "Thomas Kail",
@@ -2452,9 +2441,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 10327,
-      "x_status": "stale",
-      "mentions": 10327,
+      "x_mentions": 10295,
+      "x_status": "live",
+      "mentions": 10295,
       "sentiment_pct": 62,
       "scores": {
         "1d": 281,
@@ -2464,7 +2453,7 @@
       "rating": 281,
       "rating_band": "LOW",
       "score": 281,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2478,7 +2467,7 @@
         "baseline": 0.0804,
         "short": 0.0804,
         "acceleration": 0.0,
-        "raw_hype": 14.3768
+        "raw_hype": 14.3759
       },
       "cast_full": [
         {
@@ -2530,7 +2519,7 @@
     },
     {
       "rank": 23,
-      "prev_rank": 22,
+      "prev_rank": 23,
       "tmdb_id": 950028,
       "title": "The Invite",
       "director": "Olivia Wilde",
@@ -2559,7 +2548,7 @@
       "rating": 280,
       "rating_band": "LOW",
       "score": 280,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": true,
       "release_type": "theatrical",
@@ -2618,7 +2607,7 @@
     },
     {
       "rank": 24,
-      "prev_rank": 23,
+      "prev_rank": 24,
       "tmdb_id": 1368337,
       "title": "The Odyssey",
       "director": "Christopher Nolan",
@@ -2647,7 +2636,7 @@
       "rating": 260,
       "rating_band": "LOW",
       "score": 260,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2732,7 +2721,7 @@
     },
     {
       "rank": 25,
-      "prev_rank": 24,
+      "prev_rank": 25,
       "tmdb_id": 1366906,
       "title": "The Gates",
       "director": "John Burr",
@@ -2761,7 +2750,7 @@
       "rating": 259,
       "rating_band": "LOW",
       "score": 259,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2846,7 +2835,7 @@
     },
     {
       "rank": 27,
-      "prev_rank": 26,
+      "prev_rank": 27,
       "tmdb_id": 1318447,
       "title": "Apex",
       "director": "Baltasar Kormákur",
@@ -2863,9 +2852,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 186922,
-      "x_status": "stale",
-      "mentions": 186922,
+      "x_mentions": 186592,
+      "x_status": "live",
+      "mentions": 186592,
       "sentiment_pct": 59,
       "scores": {
         "1d": 243,
@@ -2875,7 +2864,7 @@
       "rating": 243,
       "rating_band": "MINIMAL",
       "score": 243,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -2885,11 +2874,11 @@
         "youtube_engagement": 0.1163,
         "google_trends": 0.17,
         "news_impact": 0.0,
-        "x_mentions": 0.0384,
+        "x_mentions": 0.0383,
         "baseline": 0.0694,
         "short": 0.0694,
         "acceleration": 0.0,
-        "raw_hype": 10.7835
+        "raw_hype": 10.7746
       },
       "cast_full": [
         {
@@ -2960,7 +2949,7 @@
     },
     {
       "rank": 28,
-      "prev_rank": 27,
+      "prev_rank": 28,
       "tmdb_id": 687163,
       "title": "Project Hail Mary",
       "director": "Phil Lord, Christopher Miller",
@@ -2977,9 +2966,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 64130,
-      "x_status": "stale",
-      "mentions": 64130,
+      "x_mentions": 63926,
+      "x_status": "live",
+      "mentions": 63926,
       "sentiment_pct": 58,
       "scores": {
         "1d": 241,
@@ -2989,7 +2978,7 @@
       "rating": 241,
       "rating_band": "MINIMAL",
       "score": 241,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -2999,11 +2988,11 @@
         "youtube_engagement": 0.1019,
         "google_trends": 0.43,
         "news_impact": 0.0,
-        "x_mentions": 0.0132,
+        "x_mentions": 0.0131,
         "baseline": 0.0689,
         "short": 0.0689,
         "acceleration": 0.0,
-        "raw_hype": 10.6246
+        "raw_hype": 10.6199
       },
       "cast_full": [
         {
@@ -3080,7 +3069,7 @@
     },
     {
       "rank": 29,
-      "prev_rank": 28,
+      "prev_rank": 29,
       "tmdb_id": 1297842,
       "title": "GOAT",
       "director": "Tyree Dillihay",
@@ -3097,9 +3086,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 804948,
-      "x_status": "stale",
-      "mentions": 804948,
+      "x_mentions": 806455,
+      "x_status": "live",
+      "mentions": 806455,
       "sentiment_pct": 53,
       "scores": {
         "1d": 235,
@@ -3109,7 +3098,7 @@
       "rating": 235,
       "rating_band": "MINIMAL",
       "score": 235,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3119,11 +3108,11 @@
         "youtube_engagement": 0.0771,
         "google_trends": 0.55,
         "news_impact": 0.0,
-        "x_mentions": 0.1654,
-        "baseline": 0.1333,
-        "short": 0.1333,
+        "x_mentions": 0.1656,
+        "baseline": 0.1334,
+        "short": 0.1334,
         "acceleration": 0.0,
-        "raw_hype": 38.6172
+        "raw_hype": 38.6484
       },
       "cast_full": [
         {
@@ -3194,7 +3183,7 @@
     },
     {
       "rank": 31,
-      "prev_rank": 30,
+      "prev_rank": 31,
       "tmdb_id": 1382802,
       "title": "Family Movie",
       "director": "Kyra Sedgwick, Kevin Bacon",
@@ -3211,9 +3200,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2978,
-      "x_status": "stale",
-      "mentions": 2978,
+      "x_mentions": 2982,
+      "x_status": "live",
+      "mentions": 2982,
       "sentiment_pct": 68,
       "scores": {
         "1d": 227,
@@ -3223,7 +3212,7 @@
       "rating": 227,
       "rating_band": "MINIMAL",
       "score": 227,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3237,7 +3226,7 @@
         "baseline": 0.0649,
         "short": 0.0649,
         "acceleration": 0.0,
-        "raw_hype": 9.4417
+        "raw_hype": 9.4418
       },
       "cast_full": [
         {
@@ -3314,7 +3303,7 @@
     },
     {
       "rank": 32,
-      "prev_rank": 31,
+      "prev_rank": 32,
       "tmdb_id": 1127384,
       "title": "Deep Water",
       "director": "Renny Harlin",
@@ -3331,9 +3320,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5655,
-      "x_status": "stale",
-      "mentions": 5655,
+      "x_mentions": 5663,
+      "x_status": "live",
+      "mentions": 5663,
       "sentiment_pct": 50,
       "scores": {
         "1d": 210,
@@ -3343,7 +3332,7 @@
       "rating": 210,
       "rating_band": "MINIMAL",
       "score": 210,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3357,7 +3346,7 @@
         "baseline": 0.0597,
         "short": 0.0597,
         "acceleration": 0.0,
-        "raw_hype": 8.0167
+        "raw_hype": 8.0168
       },
       "cast_full": [
         {
@@ -3445,18 +3434,18 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 13632,
-      "x_status": "stale",
-      "mentions": 13632,
+      "x_mentions": 13787,
+      "x_status": "live",
+      "mentions": 13787,
       "sentiment_pct": 57,
       "scores": {
-        "1d": 199,
+        "1d": 200,
         "7d": 767,
-        "30d": 199
+        "30d": 200
       },
-      "rating": 199,
+      "rating": 200,
       "rating_band": "MINIMAL",
-      "score": 199,
+      "score": 200,
       "move": 0,
       "is_new": false,
       "hot": false,
@@ -3471,7 +3460,7 @@
         "baseline": 0.0568,
         "short": 0.0568,
         "acceleration": 0.0,
-        "raw_hype": 7.2679
+        "raw_hype": 7.2702
       },
       "cast_full": [
         {
@@ -3542,7 +3531,7 @@
     },
     {
       "rank": 34,
-      "prev_rank": 32,
+      "prev_rank": 34,
       "tmdb_id": 1493859,
       "title": "Pizza Movie",
       "director": "Nick Kocher, Brian McElhaney",
@@ -3560,7 +3549,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 2582,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 2582,
       "sentiment_pct": 73,
       "scores": {
@@ -3571,7 +3560,7 @@
       "rating": 199,
       "rating_band": "MINIMAL",
       "score": 199,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -3662,7 +3651,7 @@
     },
     {
       "rank": 36,
-      "prev_rank": 35,
+      "prev_rank": 36,
       "tmdb_id": 1288445,
       "title": "Mutiny",
       "director": "Jean-François Richet",
@@ -3679,9 +3668,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5114,
-      "x_status": "stale",
-      "mentions": 5114,
+      "x_mentions": 5081,
+      "x_status": "live",
+      "mentions": 5081,
       "sentiment_pct": 58,
       "scores": {
         "1d": 192,
@@ -3691,7 +3680,7 @@
       "rating": 192,
       "rating_band": "MINIMAL",
       "score": 192,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3701,11 +3690,11 @@
         "youtube_engagement": 0.1713,
         "google_trends": 0.32,
         "news_impact": 0.0,
-        "x_mentions": 0.0011,
+        "x_mentions": 0.001,
         "baseline": 0.0548,
         "short": 0.0548,
         "acceleration": 0.0,
-        "raw_hype": 6.7653
+        "raw_hype": 6.7648
       },
       "cast_full": [
         {
@@ -3776,7 +3765,7 @@
     },
     {
       "rank": 37,
-      "prev_rank": 36,
+      "prev_rank": 37,
       "tmdb_id": 1368314,
       "title": "Passenger",
       "director": "André Øvredal",
@@ -3793,9 +3782,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 116815,
-      "x_status": "stale",
-      "mentions": 116815,
+      "x_mentions": 117143,
+      "x_status": "live",
+      "mentions": 117143,
       "sentiment_pct": 55,
       "scores": {
         "1d": 187,
@@ -3805,7 +3794,7 @@
       "rating": 187,
       "rating_band": "MINIMAL",
       "score": 187,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3815,11 +3804,11 @@
         "youtube_engagement": 0.3241,
         "google_trends": 0.28,
         "news_impact": 0.0,
-        "x_mentions": 0.024,
-        "baseline": 0.0532,
-        "short": 0.0532,
+        "x_mentions": 0.0241,
+        "baseline": 0.0533,
+        "short": 0.0533,
         "acceleration": 0.0,
-        "raw_hype": 6.389
+        "raw_hype": 6.3926
       },
       "cast_full": [
         {
@@ -3890,7 +3879,7 @@
     },
     {
       "rank": 38,
-      "prev_rank": 37,
+      "prev_rank": 38,
       "tmdb_id": 1102883,
       "title": "Mother Mary",
       "director": "David Lowery",
@@ -3907,9 +3896,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 14910,
-      "x_status": "stale",
-      "mentions": 14910,
+      "x_mentions": 14851,
+      "x_status": "live",
+      "mentions": 14851,
       "sentiment_pct": 61,
       "scores": {
         "1d": 184,
@@ -3919,7 +3908,7 @@
       "rating": 184,
       "rating_band": "MINIMAL",
       "score": 184,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -3929,11 +3918,11 @@
         "youtube_engagement": 0.0838,
         "google_trends": 0.32,
         "news_impact": 0.0,
-        "x_mentions": 0.0031,
+        "x_mentions": 0.003,
         "baseline": 0.0524,
         "short": 0.0524,
         "acceleration": 0.0,
-        "raw_hype": 6.1992
+        "raw_hype": 6.1982
       },
       "cast_full": [
         {
@@ -4004,7 +3993,7 @@
     },
     {
       "rank": 39,
-      "prev_rank": 38,
+      "prev_rank": 39,
       "tmdb_id": 1511057,
       "title": "Roommates",
       "director": "Chandler Levack",
@@ -4021,9 +4010,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 43997,
-      "x_status": "stale",
-      "mentions": 43997,
+      "x_mentions": 44130,
+      "x_status": "live",
+      "mentions": 44130,
       "sentiment_pct": 75,
       "scores": {
         "1d": 179,
@@ -4033,7 +4022,7 @@
       "rating": 179,
       "rating_band": "MINIMAL",
       "score": 179,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -4043,11 +4032,11 @@
         "youtube_engagement": 0.118,
         "google_trends": 0.31,
         "news_impact": 0.0,
-        "x_mentions": 0.009,
+        "x_mentions": 0.0091,
         "baseline": 0.0508,
         "short": 0.0508,
         "acceleration": 0.0,
-        "raw_hype": 5.8329
+        "raw_hype": 5.8343
       },
       "cast_full": [
         {
@@ -4118,7 +4107,7 @@
     },
     {
       "rank": 40,
-      "prev_rank": 39,
+      "prev_rank": 40,
       "tmdb_id": 1248832,
       "title": "Digger",
       "director": "Alejandro G. Iñárritu",
@@ -4135,9 +4124,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 31363,
-      "x_status": "stale",
-      "mentions": 31363,
+      "x_mentions": 31705,
+      "x_status": "live",
+      "mentions": 31705,
       "sentiment_pct": 55,
       "scores": {
         "1d": 177,
@@ -4147,7 +4136,7 @@
       "rating": 177,
       "rating_band": "MINIMAL",
       "score": 177,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4157,11 +4146,11 @@
         "youtube_engagement": 0.1667,
         "google_trends": 0.32,
         "news_impact": 0.0,
-        "x_mentions": 0.0064,
-        "baseline": 0.0502,
-        "short": 0.0502,
+        "x_mentions": 0.0065,
+        "baseline": 0.0503,
+        "short": 0.0503,
         "acceleration": 0.0,
-        "raw_hype": 5.6982
+        "raw_hype": 5.7026
       },
       "cast_full": [
         {
@@ -4232,7 +4221,7 @@
     },
     {
       "rank": 41,
-      "prev_rank": 40,
+      "prev_rank": 41,
       "tmdb_id": 1355496,
       "title": "By Design",
       "director": "Amanda Kramer",
@@ -4249,9 +4238,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 42319,
-      "x_status": "stale",
-      "mentions": 42319,
+      "x_mentions": 42844,
+      "x_status": "live",
+      "mentions": 42844,
       "sentiment_pct": 64,
       "scores": {
         "1d": 175,
@@ -4261,7 +4250,7 @@
       "rating": 175,
       "rating_band": "MINIMAL",
       "score": 175,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4271,11 +4260,11 @@
         "youtube_engagement": 0.1809,
         "google_trends": 0.64,
         "news_impact": 0.0,
-        "x_mentions": 0.0087,
-        "baseline": 0.0986,
-        "short": 0.0986,
+        "x_mentions": 0.0088,
+        "baseline": 0.0987,
+        "short": 0.0987,
         "acceleration": 0.0,
-        "raw_hype": 21.4728
+        "raw_hype": 21.4857
       },
       "cast_full": [
         {
@@ -4346,7 +4335,7 @@
     },
     {
       "rank": 42,
-      "prev_rank": 41,
+      "prev_rank": 42,
       "tmdb_id": 1400940,
       "title": "Clayface",
       "director": "James Watkins",
@@ -4363,19 +4352,19 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 26883,
-      "x_status": "stale",
-      "mentions": 26883,
+      "x_mentions": 26107,
+      "x_status": "live",
+      "mentions": 26107,
       "sentiment_pct": 59,
       "scores": {
-        "1d": 175,
+        "1d": 174,
         "7d": 732,
-        "30d": 175
+        "30d": 174
       },
-      "rating": 175,
+      "rating": 174,
       "rating_band": "MINIMAL",
-      "score": 175,
-      "move": -1,
+      "score": 174,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4385,11 +4374,11 @@
         "youtube_engagement": 0.0,
         "google_trends": 0.32,
         "news_impact": 0.0,
-        "x_mentions": 0.0055,
-        "baseline": 0.0497,
-        "short": 0.0497,
+        "x_mentions": 0.0054,
+        "baseline": 0.0496,
+        "short": 0.0496,
         "acceleration": 0.0,
-        "raw_hype": 5.5694
+        "raw_hype": 5.5585
       },
       "cast_full": [
         {
@@ -4460,7 +4449,7 @@
     },
     {
       "rank": 43,
-      "prev_rank": 42,
+      "prev_rank": 43,
       "tmdb_id": 1283515,
       "title": "Verity",
       "director": "Michael Showalter",
@@ -4489,7 +4478,7 @@
       "rating": 172,
       "rating_band": "MINIMAL",
       "score": 172,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4574,7 +4563,7 @@
     },
     {
       "rank": 44,
-      "prev_rank": 43,
+      "prev_rank": 44,
       "tmdb_id": 1273221,
       "title": "Scary Movie",
       "director": "Michael Tiddes",
@@ -4592,7 +4581,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 10505,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 10505,
       "sentiment_pct": 76,
       "scores": {
@@ -4603,7 +4592,7 @@
       "rating": 171,
       "rating_band": "MINIMAL",
       "score": 171,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4617,7 +4606,7 @@
         "baseline": 0.0487,
         "short": 0.0487,
         "acceleration": 0.0,
-        "raw_hype": 5.3493
+        "raw_hype": 5.3492
       },
       "cast_full": [
         {
@@ -4688,7 +4677,7 @@
     },
     {
       "rank": 45,
-      "prev_rank": 44,
+      "prev_rank": 45,
       "tmdb_id": 1003596,
       "title": "Avengers: Doomsday",
       "director": "Joe Russo, Anthony Russo",
@@ -4705,9 +4694,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 31373,
-      "x_status": "stale",
-      "mentions": 31373,
+      "x_mentions": 31666,
+      "x_status": "live",
+      "mentions": 31666,
       "sentiment_pct": 93,
       "scores": {
         "1d": 169,
@@ -4717,7 +4706,7 @@
       "rating": 169,
       "rating_band": "MINIMAL",
       "score": 169,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4727,11 +4716,11 @@
         "youtube_engagement": 0.1859,
         "google_trends": 0.25,
         "news_impact": 0.0,
-        "x_mentions": 0.0064,
+        "x_mentions": 0.0065,
         "baseline": 0.0479,
         "short": 0.0479,
         "acceleration": 0.0,
-        "raw_hype": 5.1865
+        "raw_hype": 5.19
       },
       "cast_full": [
         {
@@ -4808,7 +4797,7 @@
     },
     {
       "rank": 46,
-      "prev_rank": 45,
+      "prev_rank": 46,
       "tmdb_id": 1383731,
       "title": "Protector",
       "director": "Adrian Grünberg",
@@ -4825,9 +4814,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 90900,
-      "x_status": "stale",
-      "mentions": 90900,
+      "x_mentions": 91003,
+      "x_status": "live",
+      "mentions": 91003,
       "sentiment_pct": 51,
       "scores": {
         "1d": 163,
@@ -4837,7 +4826,7 @@
       "rating": 163,
       "rating_band": "MINIMAL",
       "score": 163,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -4851,7 +4840,7 @@
         "baseline": 0.0919,
         "short": 0.0919,
         "acceleration": 0.0,
-        "raw_hype": 18.6967
+        "raw_hype": 18.6976
       },
       "cast_full": [
         {
@@ -4922,7 +4911,7 @@
     },
     {
       "rank": 47,
-      "prev_rank": 46,
+      "prev_rank": 47,
       "tmdb_id": 1508564,
       "title": "With Love",
       "director": "Madhan",
@@ -4951,7 +4940,7 @@
       "rating": 162,
       "rating_band": "MINIMAL",
       "score": 162,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5036,7 +5025,7 @@
     },
     {
       "rank": 48,
-      "prev_rank": 47,
+      "prev_rank": 48,
       "tmdb_id": 1211598,
       "title": "Kill Me",
       "director": "Peter Warren",
@@ -5053,9 +5042,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 179786,
-      "x_status": "stale",
-      "mentions": 179786,
+      "x_mentions": 179915,
+      "x_status": "live",
+      "mentions": 179915,
       "sentiment_pct": 63,
       "scores": {
         "1d": 161,
@@ -5065,7 +5054,7 @@
       "rating": 161,
       "rating_band": "MINIMAL",
       "score": 161,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5079,7 +5068,7 @@
         "baseline": 0.0456,
         "short": 0.0456,
         "acceleration": 0.0,
-        "raw_hype": 4.7103
+        "raw_hype": 4.7102
       },
       "cast_full": [
         {
@@ -5144,7 +5133,7 @@
     },
     {
       "rank": 49,
-      "prev_rank": 48,
+      "prev_rank": 49,
       "tmdb_id": 1398655,
       "title": "Blue Film",
       "director": "Elliot Tuttle",
@@ -5161,9 +5150,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1224,
-      "x_status": "stale",
-      "mentions": 1224,
+      "x_mentions": 1217,
+      "x_status": "live",
+      "mentions": 1217,
       "sentiment_pct": 52,
       "scores": {
         "1d": 160,
@@ -5173,7 +5162,7 @@
       "rating": 160,
       "rating_band": "MINIMAL",
       "score": 160,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5183,11 +5172,11 @@
         "youtube_engagement": 0.0112,
         "google_trends": 0.28,
         "news_impact": 0.0,
-        "x_mentions": 0.0003,
+        "x_mentions": 0.0002,
         "baseline": 0.0456,
         "short": 0.0456,
         "acceleration": 0.0,
-        "raw_hype": 4.6986
+        "raw_hype": 4.6985
       },
       "cast_full": [
         {
@@ -5218,7 +5207,7 @@
     },
     {
       "rank": 50,
-      "prev_rank": 49,
+      "prev_rank": 50,
       "tmdb_id": 1390300,
       "title": "Over Your Dead Body",
       "director": "Jorma Taccone",
@@ -5235,9 +5224,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2126,
-      "x_status": "stale",
-      "mentions": 2126,
+      "x_mentions": 2112,
+      "x_status": "live",
+      "mentions": 2112,
       "sentiment_pct": 52,
       "scores": {
         "1d": 156,
@@ -5247,7 +5236,7 @@
       "rating": 156,
       "rating_band": "MINIMAL",
       "score": 156,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5261,7 +5250,7 @@
         "baseline": 0.0444,
         "short": 0.0444,
         "acceleration": 0.0,
-        "raw_hype": 4.4672
+        "raw_hype": 4.467
       },
       "cast_full": [
         {
@@ -5332,7 +5321,7 @@
     },
     {
       "rank": 51,
-      "prev_rank": 50,
+      "prev_rank": 51,
       "tmdb_id": 539745,
       "title": "Animal Farm",
       "director": "Andy Serkis",
@@ -5349,9 +5338,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 18698,
-      "x_status": "stale",
-      "mentions": 18698,
+      "x_mentions": 19020,
+      "x_status": "live",
+      "mentions": 19020,
       "sentiment_pct": 52,
       "scores": {
         "1d": 155,
@@ -5361,7 +5350,7 @@
       "rating": 155,
       "rating_band": "MINIMAL",
       "score": 155,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5371,11 +5360,11 @@
         "youtube_engagement": 0.0119,
         "google_trends": 0.13,
         "news_impact": 0.0,
-        "x_mentions": 0.0038,
-        "baseline": 0.0441,
-        "short": 0.0441,
+        "x_mentions": 0.0039,
+        "baseline": 0.0442,
+        "short": 0.0442,
         "acceleration": 0.0,
-        "raw_hype": 4.4103
+        "raw_hype": 4.4141
       },
       "cast_full": [
         {
@@ -5446,7 +5435,7 @@
     },
     {
       "rank": 52,
-      "prev_rank": 51,
+      "prev_rank": 52,
       "tmdb_id": 1327819,
       "title": "Hoppers",
       "director": "Daniel Chong",
@@ -5463,9 +5452,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 15986,
-      "x_status": "stale",
-      "mentions": 15986,
+      "x_mentions": 16082,
+      "x_status": "live",
+      "mentions": 16082,
       "sentiment_pct": 57,
       "scores": {
         "1d": 151,
@@ -5475,7 +5464,7 @@
       "rating": 151,
       "rating_band": "MINIMAL",
       "score": 151,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -5489,7 +5478,7 @@
         "baseline": 0.043,
         "short": 0.043,
         "acceleration": 0.0,
-        "raw_hype": 4.1807
+        "raw_hype": 4.1817
       },
       "cast_full": [
         {
@@ -5560,7 +5549,7 @@
     },
     {
       "rank": 54,
-      "prev_rank": 53,
+      "prev_rank": 54,
       "tmdb_id": 1302904,
       "title": "Practical Magic 2",
       "director": "Susanne Bier",
@@ -5578,7 +5567,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 630,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 630,
       "sentiment_pct": 52,
       "scores": {
@@ -5589,7 +5578,7 @@
       "rating": 141,
       "rating_band": "MINIMAL",
       "score": 141,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5674,7 +5663,7 @@
     },
     {
       "rank": 55,
-      "prev_rank": 54,
+      "prev_rank": 55,
       "tmdb_id": 1084244,
       "title": "Toy Story 5",
       "director": "Andrew Stanton",
@@ -5703,7 +5692,7 @@
       "rating": 140,
       "rating_band": "MINIMAL",
       "score": 140,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -5805,9 +5794,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 44608,
-      "x_status": "stale",
-      "mentions": 44608,
+      "x_mentions": 44457,
+      "x_status": "live",
+      "mentions": 44457,
       "sentiment_pct": 76,
       "scores": {
         "1d": 129,
@@ -5827,11 +5816,11 @@
         "youtube_engagement": 0.0626,
         "google_trends": 0.46,
         "news_impact": 0.0,
-        "x_mentions": 0.0092,
+        "x_mentions": 0.0091,
         "baseline": 0.0721,
         "short": 0.0721,
         "acceleration": 0.0,
-        "raw_hype": 11.6241
+        "raw_hype": 11.6205
       },
       "cast_full": [
         {
@@ -5919,9 +5908,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 553683,
-      "x_status": "stale",
-      "mentions": 553683,
+      "x_mentions": 553370,
+      "x_status": "live",
+      "mentions": 553370,
       "sentiment_pct": 70,
       "scores": {
         "1d": 129,
@@ -5941,11 +5930,11 @@
         "youtube_engagement": 0.0874,
         "google_trends": 0.25,
         "news_impact": 0.0,
-        "x_mentions": 0.1138,
+        "x_mentions": 0.1136,
         "baseline": 0.0722,
         "short": 0.0722,
         "acceleration": 0.0,
-        "raw_hype": 11.6513
+        "raw_hype": 11.637
       },
       "cast_full": [
         {
@@ -6033,9 +6022,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 39893,
-      "x_status": "stale",
-      "mentions": 39893,
+      "x_mentions": 40066,
+      "x_status": "live",
+      "mentions": 40066,
       "sentiment_pct": 72,
       "scores": {
         "1d": 104,
@@ -6059,7 +6048,7 @@
         "baseline": 0.058,
         "short": 0.058,
         "acceleration": 0.0,
-        "raw_hype": 7.5646
+        "raw_hype": 7.5669
       },
       "cast_full": [
         {
@@ -6358,7 +6347,7 @@
     },
     {
       "rank": 62,
-      "prev_rank": 63,
+      "prev_rank": 62,
       "tmdb_id": 1582770,
       "title": "Dhurandhar: The Revenge",
       "director": "Aditya Dhar",
@@ -6375,9 +6364,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2223,
-      "x_status": "stale",
-      "mentions": 2223,
+      "x_mentions": 2217,
+      "x_status": "live",
+      "mentions": 2217,
       "sentiment_pct": 72,
       "scores": {
         "1d": 98,
@@ -6387,7 +6376,7 @@
       "rating": 98,
       "rating_band": "UNRATED",
       "score": 98,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6401,7 +6390,7 @@
         "baseline": 0.0277,
         "short": 0.0277,
         "acceleration": 0.0,
-        "raw_hype": 1.7496
+        "raw_hype": 1.7495
       },
       "cast_full": [
         {
@@ -6472,7 +6461,7 @@
     },
     {
       "rank": 63,
-      "prev_rank": 62,
+      "prev_rank": 63,
       "tmdb_id": 1309083,
       "title": "Dolly",
       "director": "Rod Blackhurst",
@@ -6489,9 +6478,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 41920,
-      "x_status": "stale",
-      "mentions": 41920,
+      "x_mentions": 41387,
+      "x_status": "live",
+      "mentions": 41387,
       "sentiment_pct": 57,
       "scores": {
         "1d": 95,
@@ -6501,7 +6490,7 @@
       "rating": 95,
       "rating_band": "UNRATED",
       "score": 95,
-      "move": -1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -6511,11 +6500,11 @@
         "youtube_engagement": 0.0582,
         "google_trends": 0.16,
         "news_impact": 0.0,
-        "x_mentions": 0.0086,
-        "baseline": 0.0268,
-        "short": 0.0268,
+        "x_mentions": 0.0085,
+        "baseline": 0.0267,
+        "short": 0.0267,
         "acceleration": 0.0,
-        "raw_hype": 1.6379
+        "raw_hype": 1.6337
       },
       "cast_full": [
         {
@@ -6597,9 +6586,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2115,
-      "x_status": "stale",
-      "mentions": 2115,
+      "x_mentions": 2100,
+      "x_status": "live",
+      "mentions": 2100,
       "sentiment_pct": 54,
       "scores": {
         "1d": 86,
@@ -6623,7 +6612,7 @@
         "baseline": 0.0242,
         "short": 0.0242,
         "acceleration": 0.0,
-        "raw_hype": 1.3353
+        "raw_hype": 1.3352
       },
       "cast_full": [
         {
@@ -6711,9 +6700,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4903,
-      "x_status": "stale",
-      "mentions": 4903,
+      "x_mentions": 4905,
+      "x_status": "live",
+      "mentions": 4905,
       "sentiment_pct": 53,
       "scores": {
         "1d": 78,
@@ -6826,7 +6815,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 4961,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 4961,
       "sentiment_pct": 80,
       "scores": {
@@ -6939,9 +6928,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 11140,
-      "x_status": "stale",
-      "mentions": 11140,
+      "x_mentions": 11230,
+      "x_status": "live",
+      "mentions": 11230,
       "sentiment_pct": 55,
       "scores": {
         "1d": 77,
@@ -6965,7 +6954,7 @@
         "baseline": 0.0217,
         "short": 0.0217,
         "acceleration": 0.0,
-        "raw_hype": 1.0782
+        "raw_hype": 1.0787
       },
       "cast_full": [
         {
@@ -7053,9 +7042,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 43828,
-      "x_status": "stale",
-      "mentions": 43828,
+      "x_mentions": 43919,
+      "x_status": "live",
+      "mentions": 43919,
       "sentiment_pct": 65,
       "scores": {
         "1d": 70,
@@ -7076,10 +7065,10 @@
         "google_trends": 0.23,
         "news_impact": 0.0,
         "x_mentions": 0.009,
-        "baseline": 0.0392,
-        "short": 0.0392,
+        "baseline": 0.0393,
+        "short": 0.0393,
         "acceleration": 0.0,
-        "raw_hype": 3.4958
+        "raw_hype": 3.4964
       },
       "cast_full": [
         {
@@ -7167,9 +7156,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 3611,
-      "x_status": "stale",
-      "mentions": 3611,
+      "x_mentions": 3654,
+      "x_status": "live",
+      "mentions": 3654,
       "sentiment_pct": 54,
       "scores": {
         "1d": 63,
@@ -7189,11 +7178,11 @@
         "youtube_engagement": 0.0669,
         "google_trends": 0.22,
         "news_impact": 0.0,
-        "x_mentions": 0.0007,
+        "x_mentions": 0.0008,
         "baseline": 0.035,
         "short": 0.035,
         "acceleration": 0.0,
-        "raw_hype": 2.7869
+        "raw_hype": 2.7873
       },
       "cast_full": [
         {
@@ -7281,9 +7270,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 29063,
-      "x_status": "stale",
-      "mentions": 29063,
+      "x_mentions": 29141,
+      "x_status": "live",
+      "mentions": 29141,
       "sentiment_pct": 63,
       "scores": {
         "1d": 60,
@@ -7307,7 +7296,7 @@
         "baseline": 0.0169,
         "short": 0.0169,
         "acceleration": 0.0,
-        "raw_hype": 0.6545
+        "raw_hype": 0.6548
       },
       "cast_full": [
         {
@@ -7395,9 +7384,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2382,
-      "x_status": "stale",
-      "mentions": 2382,
+      "x_mentions": 2370,
+      "x_status": "live",
+      "mentions": 2370,
       "sentiment_pct": 55,
       "scores": {
         "1d": 55,
@@ -7509,9 +7498,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6738,
-      "x_status": "stale",
-      "mentions": 6738,
+      "x_mentions": 6882,
+      "x_status": "live",
+      "mentions": 6882,
       "sentiment_pct": 55,
       "scores": {
         "1d": 48,
@@ -7535,7 +7524,7 @@
         "baseline": 0.0137,
         "short": 0.0137,
         "acceleration": 0.0,
-        "raw_hype": 0.4288
+        "raw_hype": 0.4293
       },
       "cast_full": [
         {
@@ -7623,9 +7612,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2594,
-      "x_status": "stale",
-      "mentions": 2594,
+      "x_mentions": 2601,
+      "x_status": "live",
+      "mentions": 2601,
       "sentiment_pct": 58,
       "scores": {
         "1d": 42,
@@ -7737,9 +7726,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 976,
-      "x_status": "stale",
-      "mentions": 976,
+      "x_mentions": 980,
+      "x_status": "live",
+      "mentions": 980,
       "sentiment_pct": 75,
       "scores": {
         "1d": 38,
@@ -7851,9 +7840,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 12557,
-      "x_status": "stale",
-      "mentions": 12557,
+      "x_mentions": 12513,
+      "x_status": "live",
+      "mentions": 12513,
       "sentiment_pct": 55,
       "scores": {
         "1d": 36,
@@ -7877,7 +7866,7 @@
         "baseline": 0.0101,
         "short": 0.0101,
         "acceleration": 0.0,
-        "raw_hype": 0.2371
+        "raw_hype": 0.2369
       },
       "cast_full": [
         {
@@ -7971,9 +7960,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1985,
-      "x_status": "stale",
-      "mentions": 1985,
+      "x_mentions": 1988,
+      "x_status": "live",
+      "mentions": 1988,
       "sentiment_pct": 62,
       "scores": {
         "1d": 36,
@@ -8086,7 +8075,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 96,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 96,
       "sentiment_pct": 54,
       "scores": {
@@ -8182,7 +8171,7 @@
     },
     {
       "rank": 81,
-      "prev_rank": 82,
+      "prev_rank": 81,
       "tmdb_id": 1620996,
       "title": "The Blue Box",
       "director": "Martín Hodara",
@@ -8199,9 +8188,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 265,
-      "x_status": "stale",
-      "mentions": 265,
+      "x_mentions": 261,
+      "x_status": "live",
+      "mentions": 261,
       "sentiment_pct": 95,
       "scores": {
         "1d": 33,
@@ -8211,7 +8200,7 @@
       "rating": 33,
       "rating_band": "UNRATED",
       "score": 33,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8290,7 +8279,7 @@
     },
     {
       "rank": 82,
-      "prev_rank": 83,
+      "prev_rank": 82,
       "tmdb_id": 1297446,
       "title": "Slanted",
       "director": "Amy Wang",
@@ -8319,7 +8308,7 @@
       "rating": 33,
       "rating_band": "UNRATED",
       "score": 33,
-      "move": 1,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8404,7 +8393,7 @@
     },
     {
       "rank": 83,
-      "prev_rank": 81,
+      "prev_rank": 83,
       "tmdb_id": 1340206,
       "title": "Tuner",
       "director": "Daniel Roher",
@@ -8421,9 +8410,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1742,
-      "x_status": "stale",
-      "mentions": 1742,
+      "x_mentions": 1748,
+      "x_status": "live",
+      "mentions": 1748,
       "sentiment_pct": 51,
       "scores": {
         "1d": 32,
@@ -8433,7 +8422,7 @@
       "rating": 32,
       "rating_band": "UNRATED",
       "score": 32,
-      "move": -2,
+      "move": 0,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -8643,9 +8632,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 558,
-      "x_status": "stale",
-      "mentions": 558,
+      "x_mentions": 550,
+      "x_status": "live",
+      "mentions": 550,
       "sentiment_pct": 52,
       "scores": {
         "1d": 28,
@@ -8877,9 +8866,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4291,
-      "x_status": "stale",
-      "mentions": 4291,
+      "x_mentions": 4622,
+      "x_status": "live",
+      "mentions": 4622,
       "sentiment_pct": 95,
       "scores": {
         "1d": 27,
@@ -8903,7 +8892,7 @@
         "baseline": 0.0075,
         "short": 0.0075,
         "acceleration": 0.0,
-        "raw_hype": 0.1287
+        "raw_hype": 0.1294
       },
       "cast_full": [
         {
@@ -8991,9 +8980,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5718,
-      "x_status": "stale",
-      "mentions": 5718,
+      "x_mentions": 5724,
+      "x_status": "live",
+      "mentions": 5724,
       "sentiment_pct": 65,
       "scores": {
         "1d": 25,
@@ -9105,9 +9094,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 150,
-      "x_status": "stale",
-      "mentions": 150,
+      "x_mentions": 148,
+      "x_status": "live",
+      "mentions": 148,
       "sentiment_pct": 56,
       "scores": {
         "1d": 24,
@@ -9131,7 +9120,7 @@
         "baseline": 0.0136,
         "short": 0.0136,
         "acceleration": 0.0,
-        "raw_hype": 0.4261
+        "raw_hype": 0.426
       },
       "cast_full": [
         {
@@ -9219,9 +9208,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 234,
-      "x_status": "stale",
-      "mentions": 234,
+      "x_mentions": 232,
+      "x_status": "live",
+      "mentions": 232,
       "sentiment_pct": 52,
       "scores": {
         "1d": 23,
@@ -9333,9 +9322,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2548,
-      "x_status": "stale",
-      "mentions": 2548,
+      "x_mentions": 2518,
+      "x_status": "live",
+      "mentions": 2518,
       "sentiment_pct": 95,
       "scores": {
         "1d": 23,
@@ -9359,7 +9348,7 @@
         "baseline": 0.0066,
         "short": 0.0066,
         "acceleration": 0.0,
-        "raw_hype": 0.0995
+        "raw_hype": 0.0994
       },
       "cast_full": [
         {
@@ -9428,9 +9417,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5751,
-      "x_status": "stale",
-      "mentions": 5751,
+      "x_mentions": 5756,
+      "x_status": "live",
+      "mentions": 5756,
       "sentiment_pct": 76,
       "scores": {
         "1d": 22,
@@ -9542,9 +9531,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 835,
-      "x_status": "stale",
-      "mentions": 835,
+      "x_mentions": 833,
+      "x_status": "live",
+      "mentions": 833,
       "sentiment_pct": 52,
       "scores": {
         "1d": 19,
@@ -9656,9 +9645,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 406,
-      "x_status": "stale",
-      "mentions": 406,
+      "x_mentions": 404,
+      "x_status": "live",
+      "mentions": 404,
       "sentiment_pct": 57,
       "scores": {
         "1d": 19,
@@ -9771,7 +9760,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 88,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 88,
       "sentiment_pct": 71,
       "scores": {
@@ -9878,9 +9867,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2347,
-      "x_status": "stale",
-      "mentions": 2347,
+      "x_mentions": 2273,
+      "x_status": "live",
+      "mentions": 2273,
       "sentiment_pct": 51,
       "scores": {
         "1d": 17,
@@ -9904,7 +9893,7 @@
         "baseline": 0.0048,
         "short": 0.0048,
         "acceleration": 0.0,
-        "raw_hype": 0.0534
+        "raw_hype": 0.0533
       },
       "cast_full": [
         {
@@ -10106,9 +10095,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 36475,
-      "x_status": "stale",
-      "mentions": 36475,
+      "x_mentions": 37312,
+      "x_status": "live",
+      "mentions": 37312,
       "sentiment_pct": 66,
       "scores": {
         "1d": 14,
@@ -10128,11 +10117,11 @@
         "youtube_engagement": 0.0241,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "x_mentions": 0.0075,
+        "x_mentions": 0.0077,
         "baseline": 0.004,
         "short": 0.004,
         "acceleration": 0.0,
-        "raw_hype": 0.0362
+        "raw_hype": 0.0371
       },
       "cast_full": [
         {
@@ -10220,9 +10209,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 40082,
-      "x_status": "stale",
-      "mentions": 40082,
+      "x_mentions": 39812,
+      "x_status": "live",
+      "mentions": 39812,
       "sentiment_pct": 75,
       "scores": {
         "1d": 14,
@@ -10246,7 +10235,7 @@
         "baseline": 0.004,
         "short": 0.004,
         "acceleration": 0.0,
-        "raw_hype": 0.0375
+        "raw_hype": 0.0372
       },
       "cast_full": [
         {
@@ -10335,7 +10324,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 203,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 203,
       "sentiment_pct": 69,
       "scores": {
@@ -10448,9 +10437,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1023,
-      "x_status": "stale",
-      "mentions": 1023,
+      "x_mentions": 1035,
+      "x_status": "live",
+      "mentions": 1035,
       "sentiment_pct": 54,
       "scores": {
         "1d": 13,
@@ -10562,9 +10551,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 278,
-      "x_status": "stale",
-      "mentions": 278,
+      "x_mentions": 277,
+      "x_status": "live",
+      "mentions": 277,
       "sentiment_pct": 95,
       "scores": {
         "1d": 12,
@@ -10676,9 +10665,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4027,
-      "x_status": "stale",
-      "mentions": 4027,
+      "x_mentions": 4068,
+      "x_status": "live",
+      "mentions": 4068,
       "sentiment_pct": 52,
       "scores": {
         "1d": 11,
@@ -10702,7 +10691,7 @@
         "baseline": 0.0032,
         "short": 0.0032,
         "acceleration": 0.0,
-        "raw_hype": 0.0233
+        "raw_hype": 0.0234
       },
       "cast_full": [
         {
@@ -10790,9 +10779,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 143,
-      "x_status": "stale",
-      "mentions": 143,
+      "x_mentions": 146,
+      "x_status": "live",
+      "mentions": 146,
       "sentiment_pct": 64,
       "scores": {
         "1d": 10,
@@ -10905,7 +10894,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 116,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 116,
       "sentiment_pct": 85,
       "scores": {
@@ -11018,9 +11007,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6516,
-      "x_status": "stale",
-      "mentions": 6516,
+      "x_mentions": 6476,
+      "x_status": "live",
+      "mentions": 6476,
       "sentiment_pct": 58,
       "scores": {
         "1d": 7,
@@ -11132,9 +11121,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 382,
-      "x_status": "stale",
-      "mentions": 382,
+      "x_mentions": 381,
+      "x_status": "live",
+      "mentions": 381,
       "sentiment_pct": 83,
       "scores": {
         "1d": 6,
@@ -11227,9 +11216,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 25702,
-      "x_status": "stale",
-      "mentions": 25702,
+      "x_mentions": 25771,
+      "x_status": "live",
+      "mentions": 25771,
       "sentiment_pct": 59,
       "scores": {
         "1d": 6,
@@ -11401,9 +11390,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6806,
-      "x_status": "stale",
-      "mentions": 6806,
+      "x_mentions": 6798,
+      "x_status": "live",
+      "mentions": 6798,
       "sentiment_pct": 50,
       "scores": {
         "1d": 5,
@@ -11498,6 +11487,120 @@
     },
     {
       "rank": 117,
+      "prev_rank": null,
+      "tmdb_id": 1110034,
+      "title": "Kraken",
+      "director": "Pål Øie",
+      "cast": "Sara Khorami, Mikkel Bratt Silset",
+      "release_date": "2026-02-06",
+      "poster_url": "https://image.tmdb.org/t/p/w185/xdZ8k5s8DTwWyPBMIcflrYLgcAK.jpg",
+      "youtube_views": 430281,
+      "youtube_likes": 2767,
+      "youtube_comments": 204,
+      "youtube_video_id": "EUTatY1-oBI",
+      "views_today": 5122,
+      "views_7d_avg": 5122,
+      "views_trend": "accelerating",
+      "youtube_state": "new",
+      "event_youtube_views": 0,
+      "event_boost": false,
+      "x_mentions": 29447,
+      "x_status": "live",
+      "mentions": 29447,
+      "sentiment_pct": 60,
+      "scores": {
+        "1d": 5,
+        "7d": 779,
+        "30d": 5
+      },
+      "rating": 5,
+      "rating_band": "UNRATED",
+      "score": 5,
+      "move": 0,
+      "is_new": true,
+      "hot": false,
+      "release_type": "theatrical",
+      "highlight": false,
+      "sub_scores": {
+        "youtube_views": 0.0019,
+        "youtube_engagement": 0.1261,
+        "google_trends": 0.0,
+        "news_impact": 0.0,
+        "x_mentions": 0.006,
+        "baseline": 0.0027,
+        "short": 0.0027,
+        "acceleration": 0.0,
+        "raw_hype": 0.0163
+      },
+      "cast_full": [
+        {
+          "id": 1904884,
+          "name": "Sara Khorami",
+          "character": "Johanne",
+          "profile_path": "/jh49k9oVAVGdApgSCiRyJmrAgoG.jpg",
+          "_billing": 0
+        },
+        {
+          "id": 234783,
+          "name": "Mikkel Bratt Silset",
+          "character": "Erik",
+          "profile_path": "/ooFYSgaxUxZHIwh1dYjs6qVerDK.jpg",
+          "_billing": 1
+        },
+        {
+          "id": 1475929,
+          "name": "Ingvild Holthe Bygdnes",
+          "character": "Henriette",
+          "profile_path": "/3AABshTodEIQ9v5JCmEG10qgfSb.jpg",
+          "_billing": 2
+        },
+        {
+          "id": 2302835,
+          "name": "Øyvind Brandtzæg",
+          "character": "Avaldsnes",
+          "profile_path": "/89knc7MjxpY4OJ7AxEnkpaUesVS.jpg",
+          "_billing": 3
+        },
+        {
+          "id": 3573975,
+          "name": "Jenny Evensen",
+          "character": "Maria",
+          "profile_path": null,
+          "_billing": 4
+        },
+        {
+          "id": 1887978,
+          "name": "Steinar Klouman Hallert",
+          "character": "Cato",
+          "profile_path": "/gA6QvgLkvQ13JliAOu4M7ZjhHzJ.jpg",
+          "_billing": 5
+        },
+        {
+          "id": 3613559,
+          "name": "Filip Bargee Ramberg",
+          "character": "Hallvard",
+          "profile_path": "/kHvul9jNaLtSr0pCAdkQXXSO4lh.jpg"
+        },
+        {
+          "id": 2584408,
+          "name": "Jon Erik Myre",
+          "character": "Georg",
+          "profile_path": "/9AU9oYNBnI8yQsGLarm6IkgrFts.jpg"
+        }
+      ],
+      "directors_full": [
+        {
+          "id": 111532,
+          "name": "Pål Øie",
+          "profile_path": "/m7wKPkvWj0d9yPNSLapbXwg94at.jpg",
+          "_billing": 0
+        }
+      ],
+      "news_mentions": [],
+      "trends": 0
+    },
+    {
+      "rank": 118,
       "prev_rank": 117,
       "tmdb_id": 931285,
       "title": "Mortal Kombat II",
@@ -11515,9 +11618,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 9068,
-      "x_status": "stale",
-      "mentions": 9068,
+      "x_mentions": 9165,
+      "x_status": "live",
+      "mentions": 9165,
       "sentiment_pct": 95,
       "scores": {
         "1d": 5,
@@ -11527,7 +11630,7 @@
       "rating": 5,
       "rating_band": "UNRATED",
       "score": 5,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11611,7 +11714,7 @@
       "trends": 0
     },
     {
-      "rank": 118,
+      "rank": 119,
       "prev_rank": 118,
       "tmdb_id": 1227877,
       "title": "I Love Boosters",
@@ -11629,9 +11732,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4586,
-      "x_status": "stale",
-      "mentions": 4586,
+      "x_mentions": 4735,
+      "x_status": "live",
+      "mentions": 4735,
       "sentiment_pct": 52,
       "scores": {
         "1d": 5,
@@ -11641,7 +11744,7 @@
       "rating": 5,
       "rating_band": "UNRATED",
       "score": 5,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11651,7 +11754,7 @@
         "youtube_engagement": 0.6191,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0009,
+        "x_mentions": 0.001,
         "baseline": 0.0013,
         "short": 0.0013,
         "acceleration": 0.0,
@@ -11725,7 +11828,7 @@
       "trends": 0
     },
     {
-      "rank": 119,
+      "rank": 120,
       "prev_rank": 119,
       "tmdb_id": 1567605,
       "title": "Ebenezer: A Christmas Carol",
@@ -11744,7 +11847,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 53,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 53,
       "sentiment_pct": 64,
       "scores": {
@@ -11755,7 +11858,7 @@
       "rating": 5,
       "rating_band": "UNRATED",
       "score": 5,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11839,7 +11942,7 @@
       "trends": 1
     },
     {
-      "rank": 120,
+      "rank": 121,
       "prev_rank": 120,
       "tmdb_id": 1288438,
       "title": "Godzilla x Kong: Supernova",
@@ -11857,9 +11960,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1221,
-      "x_status": "stale",
-      "mentions": 1221,
+      "x_mentions": 1227,
+      "x_status": "live",
+      "mentions": 1227,
       "sentiment_pct": 90,
       "scores": {
         "1d": 5,
@@ -11869,7 +11972,7 @@
       "rating": 5,
       "rating_band": "UNRATED",
       "score": 5,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -11953,7 +12056,7 @@
       "trends": 0
     },
     {
-      "rank": 121,
+      "rank": 122,
       "prev_rank": 121,
       "tmdb_id": 1421155,
       "title": "Ikatan Darah",
@@ -11971,9 +12074,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 709,
-      "x_status": "stale",
-      "mentions": 709,
+      "x_mentions": 710,
+      "x_status": "live",
+      "mentions": 710,
       "sentiment_pct": 77,
       "scores": {
         "1d": 4,
@@ -11983,7 +12086,7 @@
       "rating": 4,
       "rating_band": "UNRATED",
       "score": 4,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12067,7 +12170,7 @@
       "trends": 0
     },
     {
-      "rank": 122,
+      "rank": 123,
       "prev_rank": 122,
       "tmdb_id": 1260649,
       "title": "Jumanji: Open World",
@@ -12085,9 +12188,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 124465,
       "event_boost": true,
-      "x_mentions": 61,
-      "x_status": "stale",
-      "mentions": 61,
+      "x_mentions": 63,
+      "x_status": "live",
+      "mentions": 63,
       "sentiment_pct": 64,
       "scores": {
         "1d": 4,
@@ -12097,7 +12200,7 @@
       "rating": 4,
       "rating_band": "UNRATED",
       "score": 4,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12181,7 +12284,7 @@
       "trends": 0
     },
     {
-      "rank": 123,
+      "rank": 124,
       "prev_rank": 123,
       "tmdb_id": 1523145,
       "title": "Your Heart Will Be Broken",
@@ -12200,7 +12303,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 49,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 49,
       "sentiment_pct": 65,
       "scores": {
@@ -12211,7 +12314,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12295,7 +12398,7 @@
       "trends": 0
     },
     {
-      "rank": 125,
+      "rank": 126,
       "prev_rank": 125,
       "tmdb_id": 1084187,
       "title": "Pretty Lethal",
@@ -12313,9 +12416,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 598,
-      "x_status": "stale",
-      "mentions": 598,
+      "x_mentions": 579,
+      "x_status": "live",
+      "mentions": 579,
       "sentiment_pct": 67,
       "scores": {
         "1d": 3,
@@ -12325,7 +12428,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12409,7 +12512,7 @@
       "trends": 0
     },
     {
-      "rank": 127,
+      "rank": 128,
       "prev_rank": 127,
       "tmdb_id": 1266127,
       "title": "Ready or Not 2: Here I Come",
@@ -12427,9 +12530,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 748,
-      "x_status": "stale",
-      "mentions": 748,
+      "x_mentions": 751,
+      "x_status": "live",
+      "mentions": 751,
       "sentiment_pct": 75,
       "scores": {
         "1d": 3,
@@ -12439,7 +12542,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12529,7 +12632,7 @@
       "trends": 0
     },
     {
-      "rank": 128,
+      "rank": 129,
       "prev_rank": 128,
       "tmdb_id": 1515899,
       "title": "Billie Eilish - Hit Me Hard and Soft: The Tour (Live in 3D)",
@@ -12547,9 +12650,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 302,
-      "x_status": "stale",
-      "mentions": 302,
+      "x_mentions": 303,
+      "x_status": "live",
+      "mentions": 303,
       "sentiment_pct": 95,
       "scores": {
         "1d": 3,
@@ -12559,7 +12662,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12630,7 +12733,7 @@
       "trends": 0
     },
     {
-      "rank": 129,
+      "rank": 130,
       "prev_rank": 129,
       "tmdb_id": 1664583,
       "title": "Stranger Things: Tales from 85 Theatrical Preview",
@@ -12660,7 +12763,7 @@
       "rating": 3,
       "rating_band": "UNRATED",
       "score": 3,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12750,8 +12853,8 @@
       "trends": 0
     },
     {
-      "rank": 131,
-      "prev_rank": 132,
+      "rank": 132,
+      "prev_rank": 131,
       "tmdb_id": 1304313,
       "title": "Lee Cronins The Mummy",
       "director": "Lee Cronin",
@@ -12768,9 +12871,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 205,
-      "x_status": "stale",
-      "mentions": 205,
+      "x_mentions": 202,
+      "x_status": "live",
+      "mentions": 202,
       "sentiment_pct": 64,
       "scores": {
         "1d": 2,
@@ -12780,7 +12883,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -12864,8 +12967,8 @@
       "trends": 0
     },
     {
-      "rank": 132,
-      "prev_rank": 133,
+      "rank": 133,
+      "prev_rank": 132,
       "tmdb_id": 1115544,
       "title": "Mike & Nick & Nick & Alice",
       "director": "BenDavid Grabinski",
@@ -12882,9 +12985,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 155,
-      "x_status": "stale",
-      "mentions": 155,
+      "x_mentions": 151,
+      "x_status": "live",
+      "mentions": 151,
       "sentiment_pct": 63,
       "scores": {
         "1d": 2,
@@ -12894,7 +12997,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -12978,8 +13081,8 @@
       "trends": 0
     },
     {
-      "rank": 133,
-      "prev_rank": 134,
+      "rank": 134,
+      "prev_rank": 133,
       "tmdb_id": 1461254,
       "title": "Salmokji: Whispering Water",
       "director": "Lee Sang-min",
@@ -12996,9 +13099,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 4839,
-      "x_status": "stale",
-      "mentions": 4839,
+      "x_mentions": 4842,
+      "x_status": "live",
+      "mentions": 4842,
       "sentiment_pct": 52,
       "scores": {
         "1d": 2,
@@ -13008,7 +13111,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13086,8 +13189,8 @@
       "trends": 0
     },
     {
-      "rank": 134,
-      "prev_rank": 135,
+      "rank": 135,
+      "prev_rank": 134,
       "tmdb_id": 1140521,
       "title": "The Magic Faraway Tree",
       "director": "Ben Gregor",
@@ -13104,9 +13207,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 417,
-      "x_status": "stale",
-      "mentions": 417,
+      "x_mentions": 420,
+      "x_status": "live",
+      "mentions": 420,
       "sentiment_pct": 51,
       "scores": {
         "1d": 2,
@@ -13116,7 +13219,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13127,8 +13230,8 @@
         "google_trends": 0.0,
         "news_impact": 0.0,
         "x_mentions": 0.0001,
-        "baseline": 0.0006,
-        "short": 0.0006,
+        "baseline": 0.0007,
+        "short": 0.0007,
         "acceleration": 0.0,
         "raw_hype": 0.001
       },
@@ -13200,8 +13303,8 @@
       "trends": 0
     },
     {
-      "rank": 135,
-      "prev_rank": 136,
+      "rank": 136,
+      "prev_rank": 135,
       "tmdb_id": 1120556,
       "title": "Cliffhanger",
       "director": "Jaume Collet-Serra",
@@ -13218,9 +13321,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 8717,
-      "x_status": "stale",
-      "mentions": 8717,
+      "x_mentions": 8725,
+      "x_status": "live",
+      "mentions": 8725,
       "sentiment_pct": 61,
       "scores": {
         "1d": 2,
@@ -13230,7 +13333,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13314,8 +13417,8 @@
       "trends": 0
     },
     {
-      "rank": 136,
-      "prev_rank": 137,
+      "rank": 137,
+      "prev_rank": 136,
       "tmdb_id": 1038727,
       "title": "Stolen Kingdom",
       "director": "Joshua Bailey",
@@ -13344,7 +13447,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": 1,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13428,8 +13531,8 @@
       "trends": 0
     },
     {
-      "rank": 137,
-      "prev_rank": 130,
+      "rank": 138,
+      "prev_rank": 137,
       "tmdb_id": 1440050,
       "title": "The Breadwinner",
       "director": "Eric Appel",
@@ -13458,7 +13561,7 @@
       "rating": 2,
       "rating_band": "UNRATED",
       "score": 2,
-      "move": -7,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13542,7 +13645,7 @@
       "trends": 0
     },
     {
-      "rank": 138,
+      "rank": 139,
       "prev_rank": 138,
       "tmdb_id": 1010755,
       "title": "The Strangers: Chapter 3",
@@ -13560,9 +13663,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 49,
-      "x_status": "stale",
-      "mentions": 49,
+      "x_mentions": 51,
+      "x_status": "live",
+      "mentions": 51,
       "sentiment_pct": 53,
       "scores": {
         "1d": 1,
@@ -13572,7 +13675,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13656,7 +13759,7 @@
       "trends": 0
     },
     {
-      "rank": 139,
+      "rank": 140,
       "prev_rank": 139,
       "tmdb_id": 1107166,
       "title": "Psycho Killer",
@@ -13674,9 +13777,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 961,
-      "x_status": "stale",
-      "mentions": 961,
+      "x_mentions": 948,
+      "x_status": "live",
+      "mentions": 948,
       "sentiment_pct": 73,
       "scores": {
         "1d": 1,
@@ -13686,7 +13789,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13770,7 +13873,7 @@
       "trends": 0
     },
     {
-      "rank": 140,
+      "rank": 141,
       "prev_rank": 140,
       "tmdb_id": 1119449,
       "title": "Good Luck, Have Fun, Dont Die",
@@ -13788,9 +13891,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 66,
-      "x_status": "stale",
-      "mentions": 66,
+      "x_mentions": 67,
+      "x_status": "live",
+      "mentions": 67,
       "sentiment_pct": 53,
       "scores": {
         "1d": 1,
@@ -13800,7 +13903,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "both",
@@ -13884,7 +13987,7 @@
       "trends": 0
     },
     {
-      "rank": 141,
+      "rank": 142,
       "prev_rank": 141,
       "tmdb_id": 1455079,
       "title": "You, Me & Tuscany",
@@ -13902,9 +14005,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2342,
-      "x_status": "stale",
-      "mentions": 2342,
+      "x_mentions": 2318,
+      "x_status": "live",
+      "mentions": 2318,
       "sentiment_pct": 50,
       "scores": {
         "1d": 1,
@@ -13914,7 +14017,7 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
+      "move": -1,
       "is_new": false,
       "hot": false,
       "release_type": "theatrical",
@@ -13998,8 +14101,8 @@
       "trends": 0
     },
     {
-      "rank": 142,
-      "prev_rank": null,
+      "rank": 143,
+      "prev_rank": 142,
       "tmdb_id": 1242876,
       "title": "500 Miles",
       "director": "Morgan Matthews",
@@ -14016,9 +14119,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5830,
-      "x_status": "stale",
-      "mentions": 5830,
+      "x_mentions": 5837,
+      "x_status": "live",
+      "mentions": 5837,
       "sentiment_pct": 54,
       "scores": {
         "1d": 1,
@@ -14028,8 +14131,8 @@
       "rating": 1,
       "rating_band": "UNRATED",
       "score": 1,
-      "move": 0,
-      "is_new": true,
+      "move": -1,
+      "is_new": false,
       "hot": false,
       "release_type": "theatrical",
       "highlight": false,
@@ -14112,8 +14215,8 @@
       "trends": 0
     },
     {
-      "rank": 143,
-      "prev_rank": 142,
+      "rank": 144,
+      "prev_rank": 143,
       "tmdb_id": 1505252,
       "title": "Final Destination 7",
       "director": "Michiel Blanchart",
@@ -14130,9 +14233,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 21,
-      "x_status": "stale",
-      "mentions": 21,
+      "x_mentions": 20,
+      "x_status": "live",
+      "mentions": 20,
       "sentiment_pct": 69,
       "scores": {
         "1d": 1,
@@ -14171,8 +14274,8 @@
       "trends": 0
     },
     {
-      "rank": 144,
-      "prev_rank": 143,
+      "rank": 145,
+      "prev_rank": 144,
       "tmdb_id": 1538497,
       "title": "Hexed",
       "director": "Jason Hand, Fawn Veerasunthorn",
@@ -14189,9 +14292,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1691,
-      "x_status": "stale",
-      "mentions": 1691,
+      "x_mentions": 1706,
+      "x_status": "live",
+      "mentions": 1706,
       "sentiment_pct": 59,
       "scores": {
         "1d": 1,
@@ -14211,7 +14314,7 @@
         "youtube_engagement": 0.1521,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0003,
+        "x_mentions": 0.0004,
         "baseline": 0.0002,
         "short": 0.0002,
         "acceleration": 0.0,
@@ -14251,8 +14354,8 @@
       "trends": 0
     },
     {
-      "rank": 145,
-      "prev_rank": 144,
+      "rank": 146,
+      "prev_rank": 145,
       "tmdb_id": 1384758,
       "title": "Ice Age: Boiling Point",
       "director": "",
@@ -14270,7 +14373,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 57,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 57,
       "sentiment_pct": 83,
       "scores": {
@@ -14352,8 +14455,8 @@
       "trends": 0
     },
     {
-      "rank": 146,
-      "prev_rank": 145,
+      "rank": 147,
+      "prev_rank": 146,
       "tmdb_id": 1492341,
       "title": "Noah Kahan: Out of Body",
       "director": "Nick Sweeney",
@@ -14370,9 +14473,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 32,
-      "x_status": "stale",
-      "mentions": 32,
+      "x_mentions": 33,
+      "x_status": "live",
+      "mentions": 33,
       "sentiment_pct": 71,
       "scores": {
         "1d": 1,
@@ -14419,8 +14522,8 @@
       "trends": 0
     },
     {
-      "rank": 147,
-      "prev_rank": 146,
+      "rank": 148,
+      "prev_rank": 147,
       "tmdb_id": 1284016,
       "title": "Power Ballad",
       "director": "John Carney",
@@ -14438,7 +14541,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 642,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 642,
       "sentiment_pct": 50,
       "scores": {
@@ -14533,8 +14636,8 @@
       "trends": 0
     },
     {
-      "rank": 148,
-      "prev_rank": 147,
+      "rank": 149,
+      "prev_rank": 148,
       "tmdb_id": 1440769,
       "title": "The Beekeeper 2",
       "director": "Timo Tjahjanto",
@@ -14647,8 +14750,8 @@
       "trends": 0
     },
     {
-      "rank": 149,
-      "prev_rank": 148,
+      "rank": 150,
+      "prev_rank": 149,
       "tmdb_id": 891621,
       "title": "Wild Horse Nine",
       "director": "Martin McDonagh",
@@ -14761,8 +14864,8 @@
       "trends": 0
     },
     {
-      "rank": 150,
-      "prev_rank": 149,
+      "rank": 151,
+      "prev_rank": 150,
       "tmdb_id": 1470130,
       "title": "The Mortuary Assistant",
       "director": "Jeremiah Kipp",
@@ -14780,7 +14883,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 168,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 168,
       "sentiment_pct": 77,
       "scores": {
@@ -14869,8 +14972,8 @@
       "trends": 0
     },
     {
-      "rank": 151,
-      "prev_rank": 150,
+      "rank": 152,
+      "prev_rank": 151,
       "tmdb_id": 1601797,
       "title": "¿Quieres ser mi novia?",
       "director": "Ihtzi Hurtado",
@@ -14887,9 +14990,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 246,
-      "x_status": "stale",
-      "mentions": 246,
+      "x_mentions": 245,
+      "x_status": "live",
+      "mentions": 245,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -14971,8 +15074,8 @@
       "trends": 0
     },
     {
-      "rank": 152,
-      "prev_rank": 151,
+      "rank": 153,
+      "prev_rank": 152,
       "tmdb_id": 662707,
       "title": "Starbright",
       "director": "Francesco Lucente",
@@ -14989,9 +15092,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 453,
-      "x_status": "stale",
-      "mentions": 453,
+      "x_mentions": 457,
+      "x_status": "live",
+      "mentions": 457,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -15085,8 +15188,8 @@
       "trends": 0
     },
     {
-      "rank": 153,
-      "prev_rank": 152,
+      "rank": 154,
+      "prev_rank": 153,
       "tmdb_id": 1321179,
       "title": "The Kings Warden",
       "director": "Chang Hang-jun",
@@ -15103,9 +15206,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 314,
-      "x_status": "stale",
-      "mentions": 314,
+      "x_mentions": 316,
+      "x_status": "live",
+      "mentions": 316,
       "sentiment_pct": 52,
       "scores": {
         "1d": 0,
@@ -15199,8 +15302,8 @@
       "trends": 0
     },
     {
-      "rank": 154,
-      "prev_rank": 153,
+      "rank": 155,
+      "prev_rank": 154,
       "tmdb_id": 1462229,
       "title": "Pegasus 3",
       "director": "Han Han",
@@ -15218,7 +15321,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 37,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 37,
       "sentiment_pct": 50,
       "scores": {
@@ -15313,8 +15416,8 @@
       "trends": 0
     },
     {
-      "rank": 155,
-      "prev_rank": 154,
+      "rank": 156,
+      "prev_rank": 155,
       "tmdb_id": 1305781,
       "title": "Blades of the Guardians: Wind Rises in the Desert",
       "director": "Yuen Woo-Ping",
@@ -15332,7 +15435,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 12,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 12,
       "sentiment_pct": 56,
       "scores": {
@@ -15427,8 +15530,8 @@
       "trends": 0
     },
     {
-      "rank": 156,
-      "prev_rank": 155,
+      "rank": 157,
+      "prev_rank": 156,
       "tmdb_id": 1291335,
       "title": "Solo Mio",
       "director": "Charles Kinnane, Daniel Kinnane",
@@ -15445,9 +15548,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 765,
-      "x_status": "stale",
-      "mentions": 765,
+      "x_mentions": 761,
+      "x_status": "live",
+      "mentions": 761,
       "sentiment_pct": 53,
       "scores": {
         "1d": 0,
@@ -15547,8 +15650,8 @@
       "trends": 0
     },
     {
-      "rank": 157,
-      "prev_rank": 156,
+      "rank": 158,
+      "prev_rank": 157,
       "tmdb_id": 1443374,
       "title": "All the Good Eyes",
       "director": "Zhi Zheng",
@@ -15566,7 +15669,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 45,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 45,
       "sentiment_pct": 55,
       "scores": {
@@ -15661,8 +15764,8 @@
       "trends": 0
     },
     {
-      "rank": 158,
-      "prev_rank": 157,
+      "rank": 159,
+      "prev_rank": 158,
       "tmdb_id": 1307373,
       "title": "Wasteman",
       "director": "Cal McMau",
@@ -15679,9 +15782,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1105,
-      "x_status": "stale",
-      "mentions": 1105,
+      "x_mentions": 1109,
+      "x_status": "live",
+      "mentions": 1109,
       "sentiment_pct": 77,
       "scores": {
         "1d": 0,
@@ -15775,8 +15878,8 @@
       "trends": 0
     },
     {
-      "rank": 159,
-      "prev_rank": 158,
+      "rank": 160,
+      "prev_rank": 159,
       "tmdb_id": 1421609,
       "title": "Now I Met Her",
       "director": "Xiao Luxi",
@@ -15794,7 +15897,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 22,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 22,
       "sentiment_pct": 62,
       "scores": {
@@ -15883,8 +15986,8 @@
       "trends": 0
     },
     {
-      "rank": 160,
-      "prev_rank": 159,
+      "rank": 161,
+      "prev_rank": 160,
       "tmdb_id": 1445363,
       "title": "EPiC: Elvis Presley in Concert",
       "director": "Baz Luhrmann",
@@ -15901,9 +16004,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 111,
-      "x_status": "stale",
-      "mentions": 111,
+      "x_mentions": 108,
+      "x_status": "live",
+      "mentions": 108,
       "sentiment_pct": 53,
       "scores": {
         "1d": 0,
@@ -15997,8 +16100,8 @@
       "trends": 0
     },
     {
-      "rank": 161,
-      "prev_rank": 160,
+      "rank": 162,
+      "prev_rank": 161,
       "tmdb_id": 1154538,
       "title": "Nirvanna the Band the Show the Movie",
       "director": "Matt Johnson",
@@ -16015,9 +16118,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 352,
-      "x_status": "stale",
-      "mentions": 352,
+      "x_mentions": 357,
+      "x_status": "live",
+      "mentions": 357,
       "sentiment_pct": 54,
       "scores": {
         "1d": 0,
@@ -16111,8 +16214,8 @@
       "trends": 0
     },
     {
-      "rank": 162,
-      "prev_rank": 161,
+      "rank": 163,
+      "prev_rank": 162,
       "tmdb_id": 1363974,
       "title": "That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea",
       "director": "Yasuhito Kikuchi",
@@ -16129,9 +16232,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 384,
-      "x_status": "stale",
-      "mentions": 384,
+      "x_mentions": 386,
+      "x_status": "live",
+      "mentions": 386,
       "sentiment_pct": 95,
       "scores": {
         "1d": 0,
@@ -16225,8 +16328,8 @@
       "trends": 0
     },
     {
-      "rank": 163,
-      "prev_rank": 162,
+      "rank": 164,
+      "prev_rank": 163,
       "tmdb_id": 1477836,
       "title": "Bone Keeper",
       "director": "Howard J. Ford",
@@ -16244,7 +16347,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 7,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 7,
       "sentiment_pct": 57,
       "scores": {
@@ -16339,8 +16442,8 @@
       "trends": 0
     },
     {
-      "rank": 164,
-      "prev_rank": 163,
+      "rank": 165,
+      "prev_rank": 164,
       "tmdb_id": 1499071,
       "title": "Cold War 1994",
       "director": "Leung Lok-Man",
@@ -16358,7 +16461,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 98,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 98,
       "sentiment_pct": 50,
       "scores": {
@@ -16453,8 +16556,8 @@
       "trends": 0
     },
     {
-      "rank": 165,
-      "prev_rank": 164,
+      "rank": 166,
+      "prev_rank": 165,
       "tmdb_id": 1616131,
       "title": "A Child of My Own",
       "director": "Maite Alberdi",
@@ -16471,9 +16574,9 @@
       "youtube_state": "new",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 30,
-      "x_status": "stale",
-      "mentions": 30,
+      "x_mentions": 29,
+      "x_status": "live",
+      "mentions": 29,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -16561,8 +16664,8 @@
       "trends": 0
     },
     {
-      "rank": 166,
-      "prev_rank": 165,
+      "rank": 167,
+      "prev_rank": 166,
       "tmdb_id": 1618321,
       "title": "A Gift From Heaven",
       "director": "Lê Thanh Sơn",
@@ -16579,9 +16682,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 160,
-      "x_status": "stale",
-      "mentions": 160,
+      "x_mentions": 159,
+      "x_status": "live",
+      "mentions": 159,
       "sentiment_pct": 54,
       "scores": {
         "1d": 0,
@@ -16675,8 +16778,8 @@
       "trends": 0
     },
     {
-      "rank": 167,
-      "prev_rank": 166,
+      "rank": 168,
+      "prev_rank": 167,
       "tmdb_id": 1309121,
       "title": "Anomie",
       "director": "Riyas Marath",
@@ -16694,7 +16797,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 131,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 131,
       "sentiment_pct": 74,
       "scores": {
@@ -16789,8 +16892,8 @@
       "trends": 0
     },
     {
-      "rank": 168,
-      "prev_rank": 167,
+      "rank": 169,
+      "prev_rank": 168,
       "tmdb_id": 1640663,
       "title": "BTS World Tour Arirang in Goyang: Live Viewing",
       "director": "Ha Jung-jae",
@@ -16807,9 +16910,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 0,
-      "x_status": "pending",
-      "mentions": 0,
+      "x_mentions": 2,
+      "x_status": "live",
+      "mentions": 2,
       "sentiment_pct": 95,
       "scores": {
         "1d": 0,
@@ -16897,8 +17000,8 @@
       "trends": 0
     },
     {
-      "rank": 169,
-      "prev_rank": 168,
+      "rank": 170,
+      "prev_rank": 169,
       "tmdb_id": 621304,
       "title": "Children of Blood and Bone",
       "director": "Gina Prince-Bythewood",
@@ -16915,9 +17018,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 104,
-      "x_status": "stale",
-      "mentions": 104,
+      "x_mentions": 105,
+      "x_status": "live",
+      "mentions": 105,
       "sentiment_pct": 69,
       "scores": {
         "1d": 0,
@@ -17011,8 +17114,8 @@
       "trends": 0
     },
     {
-      "rank": 170,
-      "prev_rank": 169,
+      "rank": 171,
+      "prev_rank": 170,
       "tmdb_id": 1382782,
       "title": "Chili Finger",
       "director": "Edd Benda, Stephen Helstad",
@@ -17030,7 +17133,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 25,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 25,
       "sentiment_pct": 71,
       "scores": {
@@ -17131,8 +17234,8 @@
       "trends": 0
     },
     {
-      "rank": 171,
-      "prev_rank": 170,
+      "rank": 172,
+      "prev_rank": 171,
       "tmdb_id": 1391847,
       "title": "Gale: Yellow Brick Road",
       "director": "Daniel Alexander",
@@ -17150,7 +17253,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1,
       "sentiment_pct": 70,
       "scores": {
@@ -17245,8 +17348,8 @@
       "trends": 0
     },
     {
-      "rank": 172,
-      "prev_rank": 171,
+      "rank": 173,
+      "prev_rank": 172,
       "tmdb_id": 1616685,
       "title": "He Calls Me Daughter",
       "director": "Rick Altizer",
@@ -17263,9 +17366,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 119,
-      "x_status": "stale",
-      "mentions": 119,
+      "x_mentions": 117,
+      "x_status": "live",
+      "mentions": 117,
       "sentiment_pct": 82,
       "scores": {
         "1d": 0,
@@ -17340,8 +17443,8 @@
       "trends": 0
     },
     {
-      "rank": 173,
-      "prev_rank": 172,
+      "rank": 174,
+      "prev_rank": 173,
       "tmdb_id": 1531852,
       "title": "Hey Balwanth",
       "director": "Gopi Atchara",
@@ -17359,7 +17462,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 1,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 1,
       "sentiment_pct": 56,
       "scores": {
@@ -17435,8 +17538,8 @@
       "trends": 0
     },
     {
-      "rank": 174,
-      "prev_rank": 173,
+      "rank": 175,
+      "prev_rank": 174,
       "tmdb_id": 1584911,
       "title": "Homecoming: The Tokyo Series",
       "director": "Jason Sterman",
@@ -17530,8 +17633,8 @@
       "trends": 0
     },
     {
-      "rank": 175,
-      "prev_rank": 174,
+      "rank": 176,
+      "prev_rank": 175,
       "tmdb_id": 1437511,
       "title": "How to Rob a Bank",
       "director": "David Leitch",
@@ -17549,7 +17652,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 304,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 304,
       "sentiment_pct": 59,
       "scores": {
@@ -17644,8 +17747,8 @@
       "trends": 0
     },
     {
-      "rank": 176,
-      "prev_rank": 175,
+      "rank": 177,
+      "prev_rank": 176,
       "tmdb_id": 1405769,
       "title": "I Can Only Imagine 2",
       "director": "Brent McCorkle, Andrew Erwin",
@@ -17662,9 +17765,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 40,
-      "x_status": "stale",
-      "mentions": 40,
+      "x_mentions": 41,
+      "x_status": "live",
+      "mentions": 41,
       "sentiment_pct": 52,
       "scores": {
         "1d": 0,
@@ -17764,8 +17867,8 @@
       "trends": 0
     },
     {
-      "rank": 177,
-      "prev_rank": 176,
+      "rank": 178,
+      "prev_rank": 177,
       "tmdb_id": 1286656,
       "title": "I Play Rocky",
       "director": "Peter Farrelly",
@@ -17783,7 +17886,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 48,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 48,
       "sentiment_pct": 60,
       "scores": {
@@ -17878,8 +17981,8 @@
       "trends": 0
     },
     {
-      "rank": 179,
-      "prev_rank": 178,
+      "rank": 180,
+      "prev_rank": 179,
       "tmdb_id": 1125701,
       "title": "Midwinter Break",
       "director": "Polly Findlay",
@@ -17896,9 +17999,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 11,
-      "x_status": "stale",
-      "mentions": 11,
+      "x_mentions": 10,
+      "x_status": "live",
+      "mentions": 10,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -17992,8 +18095,8 @@
       "trends": 0
     },
     {
-      "rank": 180,
-      "prev_rank": 179,
+      "rank": 181,
+      "prev_rank": 180,
       "tmdb_id": 1418901,
       "title": "Mothers Pride",
       "director": "Nick Moorcroft",
@@ -18010,9 +18113,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 19,
-      "x_status": "stale",
-      "mentions": 19,
+      "x_mentions": 18,
+      "x_status": "live",
+      "mentions": 18,
       "sentiment_pct": 50,
       "scores": {
         "1d": 0,
@@ -18106,8 +18209,8 @@
       "trends": 0
     },
     {
-      "rank": 181,
-      "prev_rank": 180,
+      "rank": 182,
+      "prev_rank": 181,
       "tmdb_id": 1188748,
       "title": "Murder, She Wrote",
       "director": "Jason Moore",
@@ -18124,9 +18227,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 347,
-      "x_status": "stale",
-      "mentions": 347,
+      "x_mentions": 344,
+      "x_status": "live",
+      "mentions": 344,
       "sentiment_pct": 55,
       "scores": {
         "1d": 0,
@@ -18173,8 +18276,8 @@
       "trends": 0
     },
     {
-      "rank": 182,
-      "prev_rank": 181,
+      "rank": 183,
+      "prev_rank": 182,
       "tmdb_id": 1170600,
       "title": "Return of the Living Dead",
       "director": "Steve Wolsh",
@@ -18192,7 +18295,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 307,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 307,
       "sentiment_pct": 63,
       "scores": {
@@ -18261,8 +18364,8 @@
       "trends": 0
     },
     {
-      "rank": 183,
-      "prev_rank": 182,
+      "rank": 184,
+      "prev_rank": 183,
       "tmdb_id": 874860,
       "title": "Storm Rider: Legend of Hammerhead",
       "director": "Zoran Lisinac, Domagoj Mazuran",
@@ -18381,8 +18484,8 @@
       "trends": 0
     },
     {
-      "rank": 184,
-      "prev_rank": 183,
+      "rank": 185,
+      "prev_rank": 184,
       "tmdb_id": 1240889,
       "title": "Teenage Sex and Death at Camp Miasma",
       "director": "Jane Schoenbrun",
@@ -18495,8 +18598,8 @@
       "trends": 0
     },
     {
-      "rank": 185,
-      "prev_rank": 184,
+      "rank": 186,
+      "prev_rank": 185,
       "tmdb_id": 1540305,
       "title": "Call of Duty",
       "director": "Peter Berg",
@@ -18554,8 +18657,8 @@
       "trends": 0
     },
     {
-      "rank": 186,
-      "prev_rank": 185,
+      "rank": 187,
+      "prev_rank": 186,
       "tmdb_id": 1101383,
       "title": "The End of Oak Street",
       "director": "David Robert Mitchell",
@@ -18662,8 +18765,8 @@
       "trends": 0
     },
     {
-      "rank": 187,
-      "prev_rank": 186,
+      "rank": 188,
+      "prev_rank": 187,
       "tmdb_id": 1288211,
       "title": "The Great Beyond",
       "director": "J.J. Abrams",
@@ -18764,8 +18867,8 @@
       "trends": 0
     },
     {
-      "rank": 188,
-      "prev_rank": 187,
+      "rank": 189,
+      "prev_rank": 188,
       "tmdb_id": 1090869,
       "title": "The Lord of the Rings: The Hunt for Gollum",
       "director": "Andy Serkis",
@@ -18872,8 +18975,8 @@
       "trends": 0
     },
     {
-      "rank": 189,
-      "prev_rank": 188,
+      "rank": 190,
+      "prev_rank": 189,
       "tmdb_id": 1206628,
       "title": "The Third Parent",
       "director": "David Michaels",
@@ -18986,8 +19089,8 @@
       "trends": 0
     },
     {
-      "rank": 190,
-      "prev_rank": 189,
+      "rank": 191,
+      "prev_rank": 190,
       "tmdb_id": 1217584,
       "title": "Torrente for President",
       "director": "Santiago Segura",
@@ -19100,8 +19203,8 @@
       "trends": 0
     },
     {
-      "rank": 191,
-      "prev_rank": 190,
+      "rank": 192,
+      "prev_rank": 191,
       "tmdb_id": 1217931,
       "title": "Vampires of the Velvet Lounge",
       "director": "Adam Sherman",
@@ -19214,8 +19317,8 @@
       "trends": 0
     },
     {
-      "rank": 192,
-      "prev_rank": 191,
+      "rank": 193,
+      "prev_rank": 192,
       "tmdb_id": 1379486,
       "title": "Victorian Psycho",
       "director": "Zachary Wigon",
@@ -19328,8 +19431,8 @@
       "trends": 0
     },
     {
-      "rank": 193,
-      "prev_rank": 192,
+      "rank": 194,
+      "prev_rank": 193,
       "tmdb_id": 1421903,
       "title": "Werwulf",
       "director": "Robert Eggers",
@@ -19462,9 +19565,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 403285,
-      "x_status": "stale",
-      "mentions": 403285,
+      "x_mentions": 403161,
+      "x_status": "live",
+      "mentions": 403161,
       "sentiment_pct": 66,
       "scores": {
         "1d": 344,
@@ -19484,11 +19587,11 @@
         "youtube_engagement": 0.0577,
         "google_trends": 0.48,
         "news_impact": 0.0,
-        "x_mentions": 0.0829,
-        "baseline": 0.099,
-        "short": 0.099,
+        "x_mentions": 0.0828,
+        "baseline": 0.0989,
+        "short": 0.0989,
         "acceleration": 0.0,
-        "raw_hype": 21.6104
+        "raw_hype": 21.5991
       },
       "cast_full": [
         {
@@ -19576,9 +19679,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 2927,
-      "x_status": "stale",
-      "mentions": 2927,
+      "x_mentions": 2931,
+      "x_status": "live",
+      "mentions": 2931,
       "sentiment_pct": 52,
       "scores": {
         "1d": 344,
@@ -19602,7 +19705,7 @@
         "baseline": 0.099,
         "short": 0.099,
         "acceleration": 0.0,
-        "raw_hype": 21.6071
+        "raw_hype": 21.6072
       },
       "cast_full": [
         {
@@ -19664,9 +19767,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 13967,
-      "x_status": "stale",
-      "mentions": 13967,
+      "x_mentions": 13946,
+      "x_status": "live",
+      "mentions": 13946,
       "sentiment_pct": 65,
       "scores": {
         "1d": 256,
@@ -19690,7 +19793,7 @@
         "baseline": 0.0731,
         "short": 0.0731,
         "acceleration": 0.0,
-        "raw_hype": 11.9479
+        "raw_hype": 11.9473
       },
       "cast_full": [
         {
@@ -19892,9 +19995,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1568,
-      "x_status": "stale",
-      "mentions": 1568,
+      "x_mentions": 1559,
+      "x_status": "live",
+      "mentions": 1559,
       "sentiment_pct": 57,
       "scores": {
         "1d": 197,
@@ -19918,7 +20021,7 @@
         "baseline": 0.0562,
         "short": 0.0562,
         "acceleration": 0.0,
-        "raw_hype": 7.1059
+        "raw_hype": 7.1058
       },
       "cast_full": [
         {
@@ -20006,9 +20109,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 22788,
-      "x_status": "stale",
-      "mentions": 22788,
+      "x_mentions": 22808,
+      "x_status": "live",
+      "mentions": 22808,
       "sentiment_pct": 70,
       "scores": {
         "1d": 148,
@@ -20032,7 +20135,7 @@
         "baseline": 0.0705,
         "short": 0.0705,
         "acceleration": 0.0,
-        "raw_hype": 11.1155
+        "raw_hype": 11.1156
       },
       "cast_full": [
         {
@@ -20120,9 +20223,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 1252,
-      "x_status": "stale",
-      "mentions": 1252,
+      "x_mentions": 1237,
+      "x_status": "live",
+      "mentions": 1237,
       "sentiment_pct": 79,
       "scores": {
         "1d": 123,
@@ -20146,7 +20249,7 @@
         "baseline": 0.0349,
         "short": 0.0349,
         "acceleration": 0.0,
-        "raw_hype": 2.7731
+        "raw_hype": 2.773
       },
       "cast_full": [
         {
@@ -20234,9 +20337,9 @@
       "youtube_state": "decaying",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 5763,
-      "x_status": "stale",
-      "mentions": 5763,
+      "x_mentions": 5752,
+      "x_status": "live",
+      "mentions": 5752,
       "sentiment_pct": 56,
       "scores": {
         "1d": 87,
@@ -20260,7 +20363,7 @@
         "baseline": 0.0246,
         "short": 0.0246,
         "acceleration": 0.0,
-        "raw_hype": 1.3792
+        "raw_hype": 1.3791
       },
       "cast_full": [
         {
@@ -20342,9 +20445,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 484,
-      "x_status": "stale",
-      "mentions": 484,
+      "x_mentions": 482,
+      "x_status": "live",
+      "mentions": 482,
       "sentiment_pct": 59,
       "scores": {
         "1d": 70,
@@ -20444,9 +20547,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 885,
-      "x_status": "stale",
-      "mentions": 885,
+      "x_mentions": 889,
+      "x_status": "live",
+      "mentions": 889,
       "sentiment_pct": 70,
       "scores": {
         "1d": 61,
@@ -20559,7 +20662,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 70,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 70,
       "sentiment_pct": 70,
       "scores": {
@@ -20673,7 +20776,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 59,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 59,
       "sentiment_pct": 95,
       "scores": {
@@ -20768,7 +20871,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 705,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 705,
       "sentiment_pct": 68,
       "scores": {
@@ -20882,7 +20985,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 3,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 3,
       "sentiment_pct": 54,
       "scores": {
@@ -20995,9 +21098,9 @@
       "youtube_state": "new",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 6079,
-      "x_status": "stale",
-      "mentions": 6079,
+      "x_mentions": 6098,
+      "x_status": "live",
+      "mentions": 6098,
       "sentiment_pct": 81,
       "scores": {
         "1d": 8,
@@ -21017,7 +21120,7 @@
         "youtube_engagement": 0.2479,
         "google_trends": 0.01,
         "news_impact": 0.0,
-        "x_mentions": 0.0012,
+        "x_mentions": 0.0013,
         "baseline": 0.0021,
         "short": 0.0021,
         "acceleration": 0.0,
@@ -21109,9 +21212,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 22207,
-      "x_status": "stale",
-      "mentions": 22207,
+      "x_mentions": 21965,
+      "x_status": "live",
+      "mentions": 21965,
       "sentiment_pct": 52,
       "scores": {
         "1d": 6,
@@ -21131,11 +21234,11 @@
         "youtube_engagement": 0.0072,
         "google_trends": 0.0,
         "news_impact": 0.0,
-        "x_mentions": 0.0046,
+        "x_mentions": 0.0045,
         "baseline": 0.0016,
         "short": 0.0016,
         "acceleration": 0.0,
-        "raw_hype": 0.0062
+        "raw_hype": 0.0061
       },
       "cast_full": [
         {
@@ -21205,7 +21308,7 @@
       "trends": 0
     },
     {
-      "rank": 124,
+      "rank": 125,
       "prev_rank": null,
       "tmdb_id": 1446616,
       "title": "Tu Yaa Main",
@@ -21224,7 +21327,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 53,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 53,
       "sentiment_pct": 65,
       "scores": {
@@ -21319,7 +21422,7 @@
       "trends": 0
     },
     {
-      "rank": 126,
+      "rank": 127,
       "prev_rank": null,
       "tmdb_id": 829487,
       "title": "Je mappelle Agneta",
@@ -21338,7 +21441,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 12,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 12,
       "sentiment_pct": 59,
       "scores": {
@@ -21421,7 +21524,7 @@
       "trends": 0
     },
     {
-      "rank": 130,
+      "rank": 131,
       "prev_rank": null,
       "tmdb_id": 1641319,
       "title": "Sniper: No Nation",
@@ -21440,7 +21543,7 @@
       "event_youtube_views": 0,
       "event_boost": false,
       "x_mentions": 211,
-      "x_status": "stale",
+      "x_status": "live",
       "mentions": 211,
       "sentiment_pct": 60,
       "scores": {
@@ -21535,7 +21638,7 @@
       "trends": 0
     },
     {
-      "rank": 178,
+      "rank": 179,
       "prev_rank": null,
       "tmdb_id": 1303145,
       "title": "JAUNT",
@@ -21553,9 +21656,9 @@
       "youtube_state": "normal",
       "event_youtube_views": 0,
       "event_boost": false,
-      "x_mentions": 436,
-      "x_status": "stale",
-      "mentions": 436,
+      "x_mentions": 432,
+      "x_status": "live",
+      "mentions": 432,
       "sentiment_pct": 61,
       "scores": {
         "1d": 0,
@@ -21628,14 +21731,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": "Michael Jackson",
           "billing": 0
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 78,
-      "avg_film_score": 1076,
+      "avg_film_score": 1063,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -21651,7 +21754,7 @@
         }
       ],
       "x_mentions": 69812,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 69812,
       "news_count": 2,
@@ -21678,7 +21781,7 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": "Joseph Jackson",
           "billing": 1
         },
@@ -21694,7 +21797,7 @@
       ],
       "popularity": 261.3779,
       "sentiment_pct": 66,
-      "avg_film_score": 581,
+      "avg_film_score": 574,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -21710,16 +21813,16 @@
         }
       ],
       "x_mentions": 8943,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 8943,
       "news_count": 2,
-      "score": 1384,
-      "rating": 1384,
+      "score": 1382,
+      "rating": 1382,
       "scores": {
-        "1d": 1384,
-        "7d": 1384,
-        "30d": 1384
+        "1d": 1382,
+        "7d": 1382,
+        "30d": 1382
       },
       "rank": 2,
       "move": 0,
@@ -21737,14 +21840,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": "Katherine Jackson",
           "billing": 2
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 78,
-      "avg_film_score": 1076,
+      "avg_film_score": 1063,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -21760,16 +21863,16 @@
         }
       ],
       "x_mentions": 12555,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 12555,
       "news_count": 2,
-      "score": 1383,
-      "rating": 1383,
+      "score": 1382,
+      "rating": 1382,
       "scores": {
-        "1d": 1383,
-        "7d": 1383,
-        "30d": 1383
+        "1d": 1382,
+        "7d": 1382,
+        "30d": 1382
       },
       "rank": 3,
       "move": 0,
@@ -21787,7 +21890,7 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": "Andy Sachs",
           "billing": 1
         },
@@ -21830,7 +21933,7 @@
       ],
       "popularity": 139.4225,
       "sentiment_pct": 67,
-      "avg_film_score": 221,
+      "avg_film_score": 218,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -21840,16 +21943,16 @@
         }
       ],
       "x_mentions": 134151,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 134151,
       "news_count": 1,
-      "score": 1311,
-      "rating": 1311,
+      "score": 1309,
+      "rating": 1309,
       "scores": {
-        "1d": 1311,
-        "7d": 1311,
-        "30d": 1311
+        "1d": 1309,
+        "7d": 1309,
+        "30d": 1309
       },
       "rank": 4,
       "move": 0,
@@ -21867,14 +21970,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": "Miranda Priestly",
           "billing": 0
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 56,
-      "avg_film_score": 488,
+      "avg_film_score": 474,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -21884,16 +21987,16 @@
         }
       ],
       "x_mentions": 53676,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 53676,
       "news_count": 1,
-      "score": 1266,
-      "rating": 1266,
+      "score": 1264,
+      "rating": 1264,
       "scores": {
-        "1d": 1266,
-        "7d": 1266,
-        "30d": 1266
+        "1d": 1264,
+        "7d": 1264,
+        "30d": 1264
       },
       "rank": 5,
       "move": 0,
@@ -21911,14 +22014,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": "John Branca",
           "billing": 5
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 78,
-      "avg_film_score": 1076,
+      "avg_film_score": 1063,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -21934,16 +22037,16 @@
         }
       ],
       "x_mentions": 1841,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1841,
       "news_count": 2,
-      "score": 1217,
-      "rating": 1217,
+      "score": 1216,
+      "rating": 1216,
       "scores": {
-        "1d": 1217,
-        "7d": 1217,
-        "30d": 1217
+        "1d": 1216,
+        "7d": 1216,
+        "30d": 1216
       },
       "rank": 6,
       "move": 0,
@@ -21961,7 +22064,7 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": "Emily Charlton",
           "billing": 2
         },
@@ -21977,7 +22080,7 @@
       ],
       "popularity": 139.4225,
       "sentiment_pct": 55,
-      "avg_film_score": 287,
+      "avg_film_score": 280,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -21987,16 +22090,16 @@
         }
       ],
       "x_mentions": 38430,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 38430,
       "news_count": 1,
-      "score": 1178,
-      "rating": 1178,
+      "score": 1176,
+      "rating": 1176,
       "scores": {
-        "1d": 1178,
-        "7d": 1178,
-        "30d": 1178
+        "1d": 1176,
+        "7d": 1176,
+        "30d": 1176
       },
       "rank": 7,
       "move": 0,
@@ -22014,14 +22117,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": "Nigel Kipling",
           "billing": 3
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 56,
-      "avg_film_score": 488,
+      "avg_film_score": 474,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -22031,16 +22134,16 @@
         }
       ],
       "x_mentions": 12812,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 12812,
       "news_count": 1,
-      "score": 1074,
-      "rating": 1074,
+      "score": 1072,
+      "rating": 1072,
       "scores": {
-        "1d": 1074,
-        "7d": 1074,
-        "30d": 1074
+        "1d": 1072,
+        "7d": 1072,
+        "30d": 1072
       },
       "rank": 8,
       "move": 0,
@@ -22068,7 +22171,7 @@
       "avg_film_score": 241,
       "news_mentions": [],
       "x_mentions": 58955,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 58955,
       "news_count": 0,
@@ -22105,7 +22208,7 @@
       "avg_film_score": 243,
       "news_mentions": [],
       "x_mentions": 24194,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 24194,
       "news_count": 0,
@@ -22151,7 +22254,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 4243,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 4243,
       "news_count": 0,
@@ -22215,7 +22318,7 @@
       "avg_film_score": 372,
       "news_mentions": [],
       "x_mentions": 104188,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 58120,
       "mentions": 104188,
       "news_count": 0,
@@ -22261,7 +22364,7 @@
       "avg_film_score": 314,
       "news_mentions": [],
       "x_mentions": 13199,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 13199,
       "news_count": 0,
@@ -22298,7 +22401,7 @@
       "avg_film_score": 243,
       "news_mentions": [],
       "x_mentions": 5604,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5604,
       "news_count": 0,
@@ -22335,7 +22438,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 8899,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 8899,
       "news_count": 0,
@@ -22362,14 +22465,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": "Bill Bray",
           "billing": 4
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 78,
-      "avg_film_score": 1076,
+      "avg_film_score": 1063,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -22385,16 +22488,16 @@
         }
       ],
       "x_mentions": 1297,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1297,
       "news_count": 2,
-      "score": 832,
-      "rating": 832,
+      "score": 831,
+      "rating": 831,
       "scores": {
-        "1d": 832,
-        "7d": 832,
-        "30d": 832
+        "1d": 831,
+        "7d": 831,
+        "30d": 831
       },
       "rank": 16,
       "move": 0,
@@ -22422,7 +22525,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 1834,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1834,
       "news_count": 0,
@@ -22449,14 +22552,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": "Young Michael Jackson",
           "billing": 3
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 78,
-      "avg_film_score": 1076,
+      "avg_film_score": 1063,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -22472,16 +22575,16 @@
         }
       ],
       "x_mentions": 715,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 715,
       "news_count": 2,
-      "score": 814,
-      "rating": 814,
+      "score": 812,
+      "rating": 812,
       "scores": {
-        "1d": 814,
-        "7d": 814,
-        "30d": 814
+        "1d": 812,
+        "7d": 812,
+        "30d": 812
       },
       "rank": 18,
       "move": 0,
@@ -22518,7 +22621,7 @@
       "avg_film_score": 209,
       "news_mentions": [],
       "x_mentions": 4901,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 4901,
       "news_count": 0,
@@ -22564,7 +22667,7 @@
       "avg_film_score": 8,
       "news_mentions": [],
       "x_mentions": 5522,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5522,
       "news_count": 0,
@@ -22601,7 +22704,7 @@
       "avg_film_score": 235,
       "news_mentions": [],
       "x_mentions": 14913,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 14913,
       "news_count": 0,
@@ -22638,7 +22741,7 @@
       "avg_film_score": 63,
       "news_mentions": [],
       "x_mentions": 8225,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 10891862,
       "mentions": 8225,
       "news_count": 0,
@@ -22675,7 +22778,7 @@
       "avg_film_score": 241,
       "news_mentions": [],
       "x_mentions": 1825,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1825,
       "news_count": 0,
@@ -22712,7 +22815,7 @@
       "avg_film_score": 5,
       "news_mentions": [],
       "x_mentions": 5114,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 5114,
       "news_count": 0,
@@ -22758,7 +22861,7 @@
       "avg_film_score": 80,
       "news_mentions": [],
       "x_mentions": 1521,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1521,
       "news_count": 0,
@@ -22804,7 +22907,7 @@
       "avg_film_score": 46,
       "news_mentions": [],
       "x_mentions": 22988,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 22988,
       "news_count": 0,
@@ -22831,14 +22934,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": "Stuart",
           "billing": 4
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 56,
-      "avg_film_score": 488,
+      "avg_film_score": 474,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -22848,16 +22951,16 @@
         }
       ],
       "x_mentions": 1528,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1528,
       "news_count": 1,
-      "score": 659,
-      "rating": 659,
+      "score": 658,
+      "rating": 658,
       "scores": {
-        "1d": 659,
-        "7d": 659,
-        "30d": 659
+        "1d": 658,
+        "7d": 658,
+        "30d": 658
       },
       "rank": 27,
       "move": 0,
@@ -22894,7 +22997,7 @@
       "avg_film_score": 118,
       "news_mentions": [],
       "x_mentions": 12854,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 12854,
       "news_count": 0,
@@ -22931,7 +23034,7 @@
       "avg_film_score": 98,
       "news_mentions": [],
       "x_mentions": 9402,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9402,
       "news_count": 0,
@@ -22968,7 +23071,7 @@
       "avg_film_score": 197,
       "news_mentions": [],
       "x_mentions": 9831,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9831,
       "news_count": 0,
@@ -23005,7 +23108,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 12471,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 12471,
       "news_count": 0,
@@ -23042,7 +23145,7 @@
       "avg_film_score": 197,
       "news_mentions": [],
       "x_mentions": 2259,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2259,
       "news_count": 0,
@@ -23069,7 +23172,7 @@
           "title": "Swapped",
           "release_date": "2026-05-01",
           "poster_url": "https://image.tmdb.org/t/p/w185/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg",
-          "score": 673,
+          "score": 663,
           "character": "Ivy (voice)",
           "billing": 1
         },
@@ -23085,7 +23188,7 @@
       ],
       "popularity": 27.6427,
       "sentiment_pct": 59,
-      "avg_film_score": 337,
+      "avg_film_score": 332,
       "news_mentions": [
         {
           "headline": "‘Swapped’ Review: Michael B. Jordan’s First Post-Oscar Performance? Voicing a Prejudiced Sea Otter in Animated Netflix Movie for Babies",
@@ -23095,16 +23198,16 @@
         }
       ],
       "x_mentions": 930,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 930,
       "news_count": 1,
-      "score": 607,
-      "rating": 607,
+      "score": 605,
+      "rating": 605,
       "scores": {
-        "1d": 607,
-        "7d": 607,
-        "30d": 607
+        "1d": 605,
+        "7d": 605,
+        "30d": 605
       },
       "rank": 33,
       "move": 0,
@@ -23132,7 +23235,7 @@
       "avg_film_score": 11,
       "news_mentions": [],
       "x_mentions": 2542,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2542,
       "news_count": 0,
@@ -23159,14 +23262,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": "Benji Barnes",
           "billing": 5
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 56,
-      "avg_film_score": 488,
+      "avg_film_score": 474,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -23176,16 +23279,16 @@
         }
       ],
       "x_mentions": 301,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 301,
       "news_count": 1,
-      "score": 527,
-      "rating": 527,
+      "score": 526,
+      "rating": 526,
       "scores": {
-        "1d": 527,
-        "7d": 527,
-        "30d": 527
+        "1d": 526,
+        "7d": 526,
+        "30d": 526
       },
       "rank": 35,
       "move": 0,
@@ -23213,7 +23316,7 @@
       "avg_film_score": 163,
       "news_mentions": [],
       "x_mentions": 2342,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2342,
       "news_count": 0,
@@ -23259,7 +23362,7 @@
       "avg_film_score": 94,
       "news_mentions": [],
       "x_mentions": 9134,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9134,
       "news_count": 0,
@@ -23296,7 +23399,7 @@
       "avg_film_score": 0,
       "news_mentions": [],
       "x_mentions": 4947,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 4947,
       "news_count": 0,
@@ -23333,7 +23436,7 @@
       "avg_film_score": 123,
       "news_mentions": [],
       "x_mentions": 3837,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 3837,
       "news_count": 0,
@@ -23370,7 +23473,7 @@
       "avg_film_score": 338,
       "news_mentions": [],
       "x_mentions": 9977,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9977,
       "news_count": 0,
@@ -23407,7 +23510,7 @@
       "avg_film_score": 338,
       "news_mentions": [],
       "x_mentions": 1521,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1521,
       "news_count": 0,
@@ -23444,7 +23547,7 @@
       "avg_film_score": 235,
       "news_mentions": [],
       "x_mentions": 1481,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1481,
       "news_count": 0,
@@ -23481,7 +23584,7 @@
       "avg_film_score": 338,
       "news_mentions": [],
       "x_mentions": 1203,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1203,
       "news_count": 0,
@@ -23518,7 +23621,7 @@
       "avg_film_score": 36,
       "news_mentions": [],
       "x_mentions": 1630,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1630,
       "news_count": 0,
@@ -23564,7 +23667,7 @@
       "avg_film_score": 12,
       "news_mentions": [],
       "x_mentions": 1863,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1863,
       "news_count": 0,
@@ -23601,7 +23704,7 @@
       "avg_film_score": 148,
       "news_mentions": [],
       "x_mentions": 1282,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1282,
       "news_count": 0,
@@ -23647,7 +23750,7 @@
       "avg_film_score": 142,
       "news_mentions": [],
       "x_mentions": 3417,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 3417,
       "news_count": 0,
@@ -23684,7 +23787,7 @@
       "avg_film_score": 197,
       "news_mentions": [],
       "x_mentions": 1184,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1184,
       "news_count": 0,
@@ -23730,7 +23833,7 @@
       "avg_film_score": 26,
       "news_mentions": [],
       "x_mentions": 14150,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 14150,
       "news_count": 0,
@@ -23767,7 +23870,7 @@
       "avg_film_score": 0,
       "news_mentions": [],
       "x_mentions": 1522,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1522,
       "news_count": 0,
@@ -23796,14 +23899,14 @@
           "title": "Michael",
           "release_date": "2026-04-22",
           "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-          "score": 1076,
+          "score": 1063,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 261.3779,
       "sentiment_pct": 78,
-      "avg_film_score": 1076,
+      "avg_film_score": 1063,
       "news_mentions": [
         {
           "headline": "Michael Jackson’s biopic and what it leaves out",
@@ -23819,16 +23922,16 @@
         }
       ],
       "x_mentions": 9769,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 9769,
       "news_count": 2,
-      "score": 1200,
-      "rating": 1200,
+      "score": 1198,
+      "rating": 1198,
       "scores": {
-        "1d": 1200,
-        "7d": 1200,
-        "30d": 1200
+        "1d": 1198,
+        "7d": 1198,
+        "30d": 1198
       },
       "rank": 1,
       "move": 0,
@@ -23856,7 +23959,7 @@
       "avg_film_score": 241,
       "news_mentions": [],
       "x_mentions": 2427,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2427,
       "news_count": 0,
@@ -23883,14 +23986,14 @@
           "title": "The Devil Wears Prada 2",
           "release_date": "2026-04-29",
           "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-          "score": 488,
+          "score": 474,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 139.4225,
       "sentiment_pct": 56,
-      "avg_film_score": 488,
+      "avg_film_score": 474,
       "news_mentions": [
         {
           "headline": "Box Office: ‘The Devil Wears Prada 2’ Struts With Trend-Setting $10M in Previews",
@@ -23900,16 +24003,16 @@
         }
       ],
       "x_mentions": 1166,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1166,
       "news_count": 1,
-      "score": 502,
-      "rating": 502,
+      "score": 501,
+      "rating": 501,
       "scores": {
-        "1d": 502,
-        "7d": 502,
-        "30d": 502
+        "1d": 501,
+        "7d": 501,
+        "30d": 501
       },
       "rank": 3,
       "move": 0,
@@ -23937,7 +24040,7 @@
       "avg_film_score": 98,
       "news_mentions": [],
       "x_mentions": 13138,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 13138,
       "news_count": 0,
@@ -23974,7 +24077,7 @@
       "avg_film_score": 123,
       "news_mentions": [],
       "x_mentions": 1941,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1941,
       "news_count": 0,
@@ -24011,7 +24114,7 @@
       "avg_film_score": 2,
       "news_mentions": [],
       "x_mentions": 2999,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 2999,
       "news_count": 0,
@@ -24048,7 +24151,7 @@
       "avg_film_score": 368,
       "news_mentions": [],
       "x_mentions": 1287,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1287,
       "news_count": 0,
@@ -24085,7 +24188,7 @@
       "avg_film_score": 241,
       "news_mentions": [],
       "x_mentions": 1195,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1195,
       "news_count": 0,
@@ -24122,7 +24225,7 @@
       "avg_film_score": 63,
       "news_mentions": [],
       "x_mentions": 1169,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 1169,
       "news_count": 0,
@@ -24159,7 +24262,7 @@
       "avg_film_score": 1,
       "news_mentions": [],
       "x_mentions": 667,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 667,
       "news_count": 0,
@@ -24196,7 +24299,7 @@
       "avg_film_score": 60,
       "news_mentions": [],
       "x_mentions": 528,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 528,
       "news_count": 0,
@@ -24233,7 +24336,7 @@
       "avg_film_score": 243,
       "news_mentions": [],
       "x_mentions": 229,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 229,
       "news_count": 0,
@@ -24279,7 +24382,7 @@
       "avg_film_score": 106,
       "news_mentions": [],
       "x_mentions": 406,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 406,
       "news_count": 0,
@@ -24316,7 +24419,7 @@
       "avg_film_score": 151,
       "news_mentions": [],
       "x_mentions": 179,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 179,
       "news_count": 0,
@@ -24353,7 +24456,7 @@
       "avg_film_score": 148,
       "news_mentions": [],
       "x_mentions": 178,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 178,
       "news_count": 0,
@@ -24390,7 +24493,7 @@
       "avg_film_score": 344,
       "news_mentions": [],
       "x_mentions": 114,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 114,
       "news_count": 0,
@@ -24427,7 +24530,7 @@
       "avg_film_score": 70,
       "news_mentions": [],
       "x_mentions": 165,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 165,
       "news_count": 0,
@@ -24464,7 +24567,7 @@
       "avg_film_score": 179,
       "news_mentions": [],
       "x_mentions": 117,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 117,
       "news_count": 0,
@@ -24479,6 +24582,62 @@
       "move": 0,
       "is_new": false,
       "prev_rank": 18
+    },
+    {
+      "tmdb_id": 45400,
+      "name": "Greta Gerwig",
+      "profile_url": "https://image.tmdb.org/t/p/w300/3H0xzU12GTNJyQTpGysEuI9KyiQ.jpg",
+      "film_count": 1,
+      "films": [
+        {
+          "tmdb_id": 1147572,
+          "title": "Narnia",
+          "release_date": "2026-11-26",
+          "poster_url": "https://image.tmdb.org/t/p/w185/lnVdfYxsPCYcgplY6h5dNl5fvjg.jpg",
+          "score": 446,
+          "character": null,
+          "billing": 0
+        }
+      ],
+      "popularity": 2.9034,
+      "sentiment_pct": 62,
+      "avg_film_score": 446,
+      "news_mentions": [
+        {
+          "headline": "Greta Gerwig’s ‘Narnia’ Film at Netflix Moves Into 2027 — Now with a Wide Theatrical Release",
+          "source": "IndieWire",
+          "linked_title": "Narnia",
+          "is_event": false
+        },
+        {
+          "headline": "Greta Gerwig’s ‘Narnia’ Moves to 2027 With Global Theatrical Release Before Netflix Debut",
+          "source": "Variety",
+          "linked_title": "Narnia",
+          "is_event": false
+        },
+        {
+          "headline": "Netflix’s ‘Narnia’ From Greta Gerwig Getting Full Wide Theatrical Window, Heads To 2027",
+          "source": "Deadline",
+          "linked_title": "Narnia",
+          "is_event": false
+        }
+      ],
+      "x_mentions": 0,
+      "x_status": "pending",
+      "event_youtube_views": 0,
+      "mentions": 0,
+      "news_count": 3,
+      "score": 236,
+      "rating": 236,
+      "scores": {
+        "1d": 236,
+        "7d": 236,
+        "30d": 236
+      },
+      "rank": 19,
+      "move": 0,
+      "is_new": true,
+      "prev_rank": null
     },
     {
       "tmdb_id": 2347139,
@@ -24501,7 +24660,7 @@
       "avg_film_score": 48,
       "news_mentions": [],
       "x_mentions": 137,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 137,
       "news_count": 0,
@@ -24512,8 +24671,8 @@
         "7d": 233,
         "30d": 233
       },
-      "rank": 19,
-      "move": 0,
+      "rank": 20,
+      "move": -1,
       "is_new": false,
       "prev_rank": 19
     },
@@ -24528,14 +24687,14 @@
           "title": "Wishful Thinking",
           "release_date": "2026-03-12",
           "poster_url": "https://image.tmdb.org/t/p/w185/36vsIO0FkNNm9CfzDQargqWjktC.jpg",
-          "score": 347,
+          "score": 283,
           "character": null,
           "billing": 0
         }
       ],
       "popularity": 0.8778,
       "sentiment_pct": 95,
-      "avg_film_score": 347,
+      "avg_film_score": 283,
       "news_mentions": [
         {
           "headline": "Sony Pictures Classics Takes Global Rights To SXSW Winner ‘Wishful Thinking’",
@@ -24561,15 +24720,15 @@
       "event_youtube_views": 0,
       "mentions": 0,
       "news_count": 3,
-      "score": 230,
-      "rating": 230,
+      "score": 226,
+      "rating": 226,
       "scores": {
-        "1d": 230,
-        "7d": 230,
-        "30d": 230
+        "1d": 226,
+        "7d": 226,
+        "30d": 226
       },
-      "rank": 20,
-      "move": 0,
+      "rank": 21,
+      "move": -1,
       "is_new": false,
       "prev_rank": 20
     },
@@ -24594,7 +24753,7 @@
       "avg_film_score": 685,
       "news_mentions": [],
       "x_mentions": 29,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 29,
       "news_count": 0,
@@ -24605,8 +24764,8 @@
         "7d": 222,
         "30d": 222
       },
-      "rank": 21,
-      "move": 0,
+      "rank": 22,
+      "move": -1,
       "is_new": false,
       "prev_rank": 21
     },
@@ -24631,7 +24790,7 @@
       "avg_film_score": 36,
       "news_mentions": [],
       "x_mentions": 94,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 94,
       "news_count": 0,
@@ -24642,8 +24801,8 @@
         "7d": 214,
         "30d": 214
       },
-      "rank": 22,
-      "move": 0,
+      "rank": 23,
+      "move": -1,
       "is_new": false,
       "prev_rank": 22
     },
@@ -24668,7 +24827,7 @@
       "avg_film_score": 235,
       "news_mentions": [],
       "x_mentions": 60,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 60,
       "news_count": 0,
@@ -24679,8 +24838,8 @@
         "7d": 212,
         "30d": 212
       },
-      "rank": 23,
-      "move": 0,
+      "rank": 24,
+      "move": -1,
       "is_new": false,
       "prev_rank": 23
     },
@@ -24705,7 +24864,7 @@
       "avg_film_score": 5,
       "news_mentions": [],
       "x_mentions": 88,
-      "x_status": "live",
+      "x_status": "stale",
       "event_youtube_views": 0,
       "mentions": 88,
       "news_count": 0,
@@ -24716,47 +24875,10 @@
         "7d": 208,
         "30d": 208
       },
-      "rank": 24,
-      "move": 0,
+      "rank": 25,
+      "move": -1,
       "is_new": false,
       "prev_rank": 24
-    },
-    {
-      "tmdb_id": 2008993,
-      "name": "Kirill Sokolov",
-      "profile_url": "https://image.tmdb.org/t/p/w300/9ZaHNNeJDrMEiHOwSta7fYiG9Rq.jpg",
-      "film_count": 1,
-      "films": [
-        {
-          "tmdb_id": 1292695,
-          "title": "They Will Kill You",
-          "release_date": "2026-03-25",
-          "poster_url": "https://image.tmdb.org/t/p/w185/6oI4oQKTWMVUlr8Ivqydp28Ruu6.jpg",
-          "score": 5,
-          "character": null,
-          "billing": 0
-        }
-      ],
-      "popularity": 210.8282,
-      "sentiment_pct": 50,
-      "avg_film_score": 5,
-      "news_mentions": [],
-      "x_mentions": 75,
-      "x_status": "live",
-      "event_youtube_views": 0,
-      "mentions": 75,
-      "news_count": 0,
-      "score": 200,
-      "rating": 200,
-      "scores": {
-        "1d": 200,
-        "7d": 200,
-        "30d": 200
-      },
-      "rank": 25,
-      "move": 0,
-      "is_new": false,
-      "prev_rank": 25
     }
   ],
   "pairings": [
@@ -24790,13 +24912,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 161,
+        "title_halo": 159,
         "x_score": 1239,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1720,
+        "raw_rating": 1718,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 114109,
@@ -24821,8 +24943,8 @@
       "billing": 1,
       "profile_url": "https://image.tmdb.org/t/p/w300/t0cgfvtA7Thxnrtj5baRi656zlc.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1384,
-      "rating": 1384,
+      "score": 1382,
+      "rating": 1382,
       "attention_type": "mixed",
       "shock_score": 6.18,
       "debug": {
@@ -24833,20 +24955,20 @@
         "title_specific_mentions": 2,
         "allocated_general_mentions": 4471,
         "allocated_general_news": 0,
-        "title_weight": 0.951,
-        "title_momentum_weight": 0.926,
+        "title_weight": 0.95,
+        "title_momentum_weight": 0.925,
         "days_to_release": -10,
         "release_proximity_weight": 2.0,
         "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 145,
+        "title_halo": 144,
         "x_score": 919,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1384,
+        "raw_rating": 1382,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 7266,
@@ -24855,9 +24977,9 @@
       },
       "rank": 2,
       "prev_rank": 2,
-      "prev_score": 1388,
+      "prev_score": 1384,
       "rank_delta": 0,
-      "score_delta": -4,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -24871,8 +24993,8 @@
       "billing": 2,
       "profile_url": "https://image.tmdb.org/t/p/w300/heVQkCGKUuKKRjRJaZIBrEKGhYA.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1383,
-      "rating": 1383,
+      "score": 1382,
+      "rating": 1382,
       "attention_type": "mixed",
       "shock_score": 16.53,
       "debug": {
@@ -24890,13 +25012,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 129,
+        "title_halo": 128,
         "x_score": 934,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1383,
+        "raw_rating": 1382,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 15743,
@@ -24905,7 +25027,7 @@
       },
       "rank": 3,
       "prev_rank": 3,
-      "prev_score": 1384,
+      "prev_score": 1383,
       "rank_delta": 0,
       "score_delta": -1,
       "is_new": false
@@ -24921,8 +25043,8 @@
       "billing": 1,
       "profile_url": "https://image.tmdb.org/t/p/w300/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1311,
-      "rating": 1311,
+      "score": 1309,
+      "rating": 1309,
       "attention_type": "mixed",
       "shock_score": 28.08,
       "debug": {
@@ -24933,20 +25055,20 @@
         "title_specific_mentions": 1,
         "allocated_general_mentions": 67075,
         "allocated_general_news": 0,
-        "title_weight": 0.523,
-        "title_momentum_weight": 0.442,
+        "title_weight": 0.515,
+        "title_momentum_weight": 0.435,
         "days_to_release": -3,
         "release_proximity_weight": 2.0,
         "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 66,
+        "title_halo": 64,
         "x_score": 1085,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1311,
+        "raw_rating": 1309,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 78772,
@@ -24955,9 +25077,9 @@
       },
       "rank": 4,
       "prev_rank": 4,
-      "prev_score": 1305,
+      "prev_score": 1311,
       "rank_delta": 0,
-      "score_delta": 6,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -24971,8 +25093,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1266,
-      "rating": 1266,
+      "score": 1264,
+      "rating": 1264,
       "attention_type": "mixed",
       "shock_score": 34.35,
       "debug": {
@@ -24990,13 +25112,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 73,
+        "title_halo": 71,
         "x_score": 1033,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1266,
+        "raw_rating": 1264,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 61156,
@@ -25005,9 +25127,9 @@
       },
       "rank": 5,
       "prev_rank": 5,
-      "prev_score": 1261,
+      "prev_score": 1266,
       "rank_delta": 0,
-      "score_delta": 5,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -25021,8 +25143,8 @@
       "billing": 5,
       "profile_url": "https://image.tmdb.org/t/p/w300/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1217,
-      "rating": 1217,
+      "score": 1216,
+      "rating": 1216,
       "attention_type": "mixed",
       "shock_score": 5.57,
       "debug": {
@@ -25040,13 +25162,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 81,
+        "title_halo": 80,
         "x_score": 816,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1217,
+        "raw_rating": 1216,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 2990,
@@ -25055,9 +25177,9 @@
       },
       "rank": 6,
       "prev_rank": 6,
-      "prev_score": 1215,
+      "prev_score": 1217,
       "rank_delta": 0,
-      "score_delta": 2,
+      "score_delta": -1,
       "is_new": false
     },
     {
@@ -25071,8 +25193,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 1200,
-      "rating": 1200,
+      "score": 1198,
+      "rating": 1198,
       "attention_type": "mixed",
       "shock_score": 4.79,
       "debug": {
@@ -25090,13 +25212,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
-        "title_halo": 129,
+        "title_halo": 128,
         "x_score": 1050,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1200,
+        "raw_rating": 1198,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 18466,
@@ -25105,9 +25227,9 @@
       },
       "rank": 7,
       "prev_rank": 7,
-      "prev_score": 1197,
+      "prev_score": 1200,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -25121,8 +25243,8 @@
       "billing": 2,
       "profile_url": "https://image.tmdb.org/t/p/w300/kqsEGTXC1GATSIUVnE8lRggCZPp.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1178,
-      "rating": 1178,
+      "score": 1176,
+      "rating": 1176,
       "attention_type": "mixed",
       "shock_score": 21.23,
       "debug": {
@@ -25133,20 +25255,20 @@
         "title_specific_mentions": 1,
         "allocated_general_mentions": 19215,
         "allocated_general_news": 0,
-        "title_weight": 0.897,
-        "title_momentum_weight": 0.85,
+        "title_weight": 0.895,
+        "title_momentum_weight": 0.846,
         "days_to_release": -3,
         "release_proximity_weight": 2.0,
         "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 59,
+        "title_halo": 57,
         "x_score": 959,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1178,
+        "raw_rating": 1176,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 23166,
@@ -25155,9 +25277,9 @@
       },
       "rank": 8,
       "prev_rank": 8,
-      "prev_score": 1161,
+      "prev_score": 1178,
       "rank_delta": 0,
-      "score_delta": 17,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -25183,8 +25305,8 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 18115,
         "allocated_general_news": 0,
-        "title_weight": 0.129,
-        "title_momentum_weight": 0.156,
+        "title_weight": 0.131,
+        "title_momentum_weight": 0.158,
         "days_to_release": 151,
         "release_proximity_weight": 1.4,
         "lifecycle_phase": "marketing-ramp",
@@ -25221,8 +25343,8 @@
       "billing": 3,
       "profile_url": "https://image.tmdb.org/t/p/w300/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 1074,
-      "rating": 1074,
+      "score": 1072,
+      "rating": 1072,
       "attention_type": "mixed",
       "shock_score": 31.06,
       "debug": {
@@ -25240,13 +25362,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 51,
+        "title_halo": 50,
         "x_score": 863,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 1074,
+        "raw_rating": 1072,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 14529,
@@ -25255,9 +25377,9 @@
       },
       "rank": 10,
       "prev_rank": 10,
-      "prev_score": 1071,
+      "prev_score": 1074,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -25305,9 +25427,9 @@
       },
       "rank": 11,
       "prev_rank": 11,
-      "prev_score": 1012,
+      "prev_score": 1011,
       "rank_delta": 0,
-      "score_delta": -1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25333,8 +25455,8 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 23532,
         "allocated_general_news": 0,
-        "title_weight": 0.167,
-        "title_momentum_weight": 0.167,
+        "title_weight": 0.17,
+        "title_momentum_weight": 0.169,
         "days_to_release": -16,
         "release_proximity_weight": 1.7000000000000002,
         "lifecycle_phase": "opening-run",
@@ -25355,9 +25477,9 @@
       },
       "rank": 12,
       "prev_rank": 12,
-      "prev_score": 997,
+      "prev_score": 995,
       "rank_delta": 0,
-      "score_delta": -2,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25405,9 +25527,9 @@
       },
       "rank": 13,
       "prev_rank": 13,
-      "prev_score": 997,
+      "prev_score": 992,
       "rank_delta": 0,
-      "score_delta": -5,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25605,9 +25727,9 @@
       },
       "rank": 17,
       "prev_rank": 17,
-      "prev_score": 927,
+      "prev_score": 923,
       "rank_delta": 0,
-      "score_delta": -4,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25655,9 +25777,9 @@
       },
       "rank": 18,
       "prev_rank": 18,
-      "prev_score": 877,
+      "prev_score": 879,
       "rank_delta": 0,
-      "score_delta": 2,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -25671,8 +25793,8 @@
       "billing": 4,
       "profile_url": "https://image.tmdb.org/t/p/w300/4wDO3Zt9KJg9CARCEgjuVdhWa8x.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 832,
-      "rating": 832,
+      "score": 831,
+      "rating": 831,
       "attention_type": "mixed",
       "shock_score": 2019.18,
       "debug": {
@@ -25690,13 +25812,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 97,
+        "title_halo": 96,
         "x_score": 415,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 832,
+        "raw_rating": 831,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 1299,
@@ -25705,9 +25827,9 @@
       },
       "rank": 19,
       "prev_rank": 19,
-      "prev_score": 830,
+      "prev_score": 832,
       "rank_delta": 0,
-      "score_delta": 2,
+      "score_delta": -1,
       "is_new": false
     },
     {
@@ -25771,8 +25893,8 @@
       "billing": 3,
       "profile_url": "https://image.tmdb.org/t/p/w300/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/j57QWe3OoaXL9Idi9gLtsAybWLP.jpg",
-      "score": 814,
-      "rating": 814,
+      "score": 812,
+      "rating": 812,
       "attention_type": "mixed",
       "shock_score": 1020.85,
       "debug": {
@@ -25790,13 +25912,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 113,
+        "title_halo": 112,
         "x_score": 381,
         "title_news_score": 320,
         "general_news_score": 0,
         "news_score": 320,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 814,
+        "raw_rating": 812,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 717,
@@ -25805,9 +25927,9 @@
       },
       "rank": 21,
       "prev_rank": 21,
-      "prev_score": 811,
+      "prev_score": 814,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -25955,9 +26077,9 @@
       },
       "rank": 24,
       "prev_rank": 24,
-      "prev_score": 771,
+      "prev_score": 750,
       "rank_delta": 0,
-      "score_delta": -21,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26004,10 +26126,10 @@
         "x_stale": false
       },
       "rank": 25,
-      "prev_rank": 26,
-      "prev_score": 708,
-      "rank_delta": 1,
-      "score_delta": 7,
+      "prev_rank": 25,
+      "prev_score": 715,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26054,10 +26176,10 @@
         "x_stale": false
       },
       "rank": 26,
-      "prev_rank": 25,
-      "prev_score": 709,
-      "rank_delta": -1,
-      "score_delta": -2,
+      "prev_rank": 26,
+      "prev_score": 707,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26155,9 +26277,9 @@
       },
       "rank": 28,
       "prev_rank": 28,
-      "prev_score": 702,
+      "prev_score": 703,
       "rank_delta": 0,
-      "score_delta": 1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26305,9 +26427,9 @@
       },
       "rank": 31,
       "prev_rank": 31,
-      "prev_score": 674,
+      "prev_score": 672,
       "rank_delta": 0,
-      "score_delta": -2,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26371,8 +26493,8 @@
       "billing": 4,
       "profile_url": "https://image.tmdb.org/t/p/w300/AbCqqFxNi5w3nDUFdQt0DGMFh5H.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 659,
-      "rating": 659,
+      "score": 658,
+      "rating": 658,
       "attention_type": "mixed",
       "shock_score": 93.99,
       "debug": {
@@ -26390,13 +26512,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 44,
+        "title_halo": 43,
         "x_score": 455,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 659,
+        "raw_rating": 658,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 1580,
@@ -26405,9 +26527,9 @@
       },
       "rank": 33,
       "prev_rank": 33,
-      "prev_score": 657,
+      "prev_score": 659,
       "rank_delta": 0,
-      "score_delta": 2,
+      "score_delta": -1,
       "is_new": false
     },
     {
@@ -26505,9 +26627,9 @@
       },
       "rank": 35,
       "prev_rank": 35,
-      "prev_score": 656,
+      "prev_score": 655,
       "rank_delta": 0,
-      "score_delta": -1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26655,9 +26777,9 @@
       },
       "rank": 38,
       "prev_rank": 38,
-      "prev_score": 624,
+      "prev_score": 628,
       "rank_delta": 0,
-      "score_delta": 4,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26705,9 +26827,9 @@
       },
       "rank": 39,
       "prev_rank": 39,
-      "prev_score": 621,
+      "prev_score": 625,
       "rank_delta": 0,
-      "score_delta": 4,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26771,8 +26893,8 @@
       "billing": 1,
       "profile_url": "https://image.tmdb.org/t/p/w300/n20TNExAma6q9iVcWtPRxLl7pEc.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg",
-      "score": 607,
-      "rating": 607,
+      "score": 605,
+      "rating": 605,
       "attention_type": "mixed",
       "shock_score": 1240.8,
       "debug": {
@@ -26784,19 +26906,19 @@
         "allocated_general_mentions": 465,
         "allocated_general_news": 0,
         "title_weight": 1.0,
-        "title_momentum_weight": 0.999,
+        "title_momentum_weight": 0.998,
         "days_to_release": -1,
         "release_proximity_weight": 2.0,
         "lifecycle_phase": "opening-window",
         "capped_weight": 0.5,
         "role_multiplier": 1.0,
-        "title_halo": 91,
+        "title_halo": 90,
         "x_score": 356,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 607,
+        "raw_rating": 605,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 466,
@@ -26805,9 +26927,9 @@
       },
       "rank": 41,
       "prev_rank": 41,
-      "prev_score": 604,
+      "prev_score": 607,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": -2,
       "is_new": false
     },
     {
@@ -26833,8 +26955,8 @@
         "title_specific_mentions": 0,
         "allocated_general_mentions": 25427,
         "allocated_general_news": 0,
-        "title_weight": 0.181,
-        "title_momentum_weight": 0.236,
+        "title_weight": 0.184,
+        "title_momentum_weight": 0.239,
         "days_to_release": 74,
         "release_proximity_weight": 1.3,
         "lifecycle_phase": "active-campaign",
@@ -26854,10 +26976,10 @@
         "x_stale": false
       },
       "rank": 42,
-      "prev_rank": 43,
-      "prev_score": 582,
-      "rank_delta": 1,
-      "score_delta": 13,
+      "prev_rank": 42,
+      "prev_score": 595,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -26874,17 +26996,17 @@
       "score": 592,
       "rating": 592,
       "attention_type": "mixed",
-      "shock_score": 556.58,
+      "shock_score": 556.55,
       "debug": {
         "entity_general_mentions": 38430,
         "title_specific_x": 148,
         "ts_x_score": 579,
         "gen_x_score": 0,
         "title_specific_mentions": 0,
-        "allocated_general_mentions": 19215,
+        "allocated_general_mentions": 19214,
         "allocated_general_news": 0,
-        "title_weight": 0.103,
-        "title_momentum_weight": 0.15,
+        "title_weight": 0.105,
+        "title_momentum_weight": 0.154,
         "days_to_release": 39,
         "release_proximity_weight": 1.3,
         "lifecycle_phase": "active-campaign",
@@ -26899,14 +27021,14 @@
         "raw_rating": 592,
         "confidence": 1.0,
         "cap": 1500,
-        "total_mentions": 19363,
+        "total_mentions": 19362,
         "excluded_mentions": 0,
         "x_stale": false
       },
       "rank": 43,
-      "prev_rank": 42,
+      "prev_rank": 43,
       "prev_score": 592,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -27005,9 +27127,9 @@
       },
       "rank": 45,
       "prev_rank": 45,
-      "prev_score": 537,
+      "prev_score": 533,
       "rank_delta": 0,
-      "score_delta": -4,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27071,8 +27193,8 @@
       "billing": 5,
       "profile_url": "https://image.tmdb.org/t/p/w300/vnI9L0rXBAw1HeC0Q8hJGeJMGAW.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 527,
-      "rating": 527,
+      "score": 526,
+      "rating": 526,
       "attention_type": "mixed",
       "shock_score": 746.48,
       "debug": {
@@ -27090,13 +27212,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 1.0,
-        "title_halo": 37,
+        "title_halo": 36,
         "x_score": 330,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 527,
+        "raw_rating": 526,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 302,
@@ -27105,9 +27227,9 @@
       },
       "rank": 47,
       "prev_rank": 47,
-      "prev_score": 525,
+      "prev_score": 527,
       "rank_delta": 0,
-      "score_delta": 2,
+      "score_delta": -1,
       "is_new": false
     },
     {
@@ -27121,8 +27243,8 @@
       "billing": 0,
       "profile_url": "https://image.tmdb.org/t/p/w300/ouq2ODK5MbbnCC72B8x29tJpKC7.jpg",
       "poster_url": "https://image.tmdb.org/t/p/w185/sRTYF65JvbHLoC3LoBj4UKYqIlA.jpg",
-      "score": 502,
-      "rating": 502,
+      "score": 501,
+      "rating": 501,
       "attention_type": "mixed",
       "shock_score": 3576.2,
       "debug": {
@@ -27140,13 +27262,13 @@
         "lifecycle_phase": "opening-window",
         "capped_weight": 1.0,
         "role_multiplier": 0.8,
-        "title_halo": 59,
+        "title_halo": 57,
         "x_score": 409,
         "title_news_score": 160,
         "general_news_score": 0,
         "news_score": 160,
         "title_specific_multiplier": 2.0,
-        "raw_rating": 502,
+        "raw_rating": 501,
         "confidence": 1.0,
         "cap": 1500,
         "total_mentions": 1167,
@@ -27155,9 +27277,9 @@
       },
       "rank": 48,
       "prev_rank": 48,
-      "prev_score": 499,
+      "prev_score": 502,
       "rank_delta": 0,
-      "score_delta": 3,
+      "score_delta": -1,
       "is_new": false
     },
     {
@@ -27255,9 +27377,9 @@
       },
       "rank": 50,
       "prev_rank": 50,
-      "prev_score": 493,
+      "prev_score": 494,
       "rank_delta": 0,
-      "score_delta": 1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27355,9 +27477,9 @@
       },
       "rank": 52,
       "prev_rank": 52,
-      "prev_score": 491,
+      "prev_score": 490,
       "rank_delta": 0,
-      "score_delta": -1,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -27455,9 +27577,9 @@
       },
       "rank": 54,
       "prev_rank": 54,
-      "prev_score": 484,
+      "prev_score": 481,
       "rank_delta": 0,
-      "score_delta": -3,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -28005,9 +28127,9 @@
       },
       "rank": 65,
       "prev_rank": 65,
-      "prev_score": 432,
+      "prev_score": 430,
       "rank_delta": 0,
-      "score_delta": -2,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -28354,10 +28476,10 @@
         "x_stale": false
       },
       "rank": 72,
-      "prev_rank": 77,
-      "prev_score": 401,
-      "rank_delta": 5,
-      "score_delta": 5,
+      "prev_rank": 72,
+      "prev_score": 406,
+      "rank_delta": 0,
+      "score_delta": 0,
       "is_new": false
     },
     {
@@ -28404,9 +28526,9 @@
         "x_stale": false
       },
       "rank": 73,
-      "prev_rank": 72,
+      "prev_rank": 73,
       "prev_score": 406,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -28454,9 +28576,9 @@
         "x_stale": false
       },
       "rank": 74,
-      "prev_rank": 73,
+      "prev_rank": 74,
       "prev_score": 406,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -28504,9 +28626,9 @@
         "x_stale": false
       },
       "rank": 75,
-      "prev_rank": 74,
+      "prev_rank": 75,
       "prev_score": 405,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -28554,9 +28676,9 @@
         "x_stale": false
       },
       "rank": 76,
-      "prev_rank": 75,
+      "prev_rank": 76,
       "prev_score": 402,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -28604,9 +28726,9 @@
         "x_stale": false
       },
       "rank": 77,
-      "prev_rank": 76,
+      "prev_rank": 77,
       "prev_score": 401,
-      "rank_delta": -1,
+      "rank_delta": 0,
       "score_delta": 0,
       "is_new": false
     },
@@ -29684,7 +29806,7 @@
         "allocated_general_mentions": 465,
         "allocated_general_news": 0,
         "title_weight": 0.0,
-        "title_momentum_weight": 0.001,
+        "title_momentum_weight": 0.002,
         "days_to_release": -78,
         "release_proximity_weight": 0.6,
         "lifecycle_phase": "late-theatrical",
