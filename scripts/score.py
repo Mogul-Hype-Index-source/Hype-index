@@ -1,8 +1,8 @@
 """
-MoviePass Hype Index V2 — Rating (100-1500 calibrated scale)
-=============================================================
+MoviePass Hype Index V2 — Theatrical Attention Model
+=====================================================
 
-Proprietary momentum-based scoring formula:
+Hype Score = 0.50 × Altitude + 0.30 × Velocity + 0.20 × Consensus
 
     HYPE_SCORE = (
         0.4 × normalize(short) +
@@ -40,11 +40,14 @@ from typing import Any, Dict, List
 
 LOG = logging.getLogger("score")
 
+# Hype Score = 0.50 × Altitude + 0.30 × Velocity + 0.20 × Consensus
+# Altitude weights: YT 0.35, X 0.30, Trends 0.25, News 0.10
+# Velocity weights: ΔX 0.40, ΔTrends 0.30, ΔYT 0.20, ΔNews 0.10
 WEIGHTS = {
-    "youtube_views":  0.50,   # velocity (views_today / 7d avg) — primary momentum signal
-    "x_mentions":     0.25,   # social conversation — reduced from 0.30
-    "google_trends":  0.15,   # search interest — unchanged
-    "news_impact":    0.10,   # press coverage — unchanged
+    "youtube_views":  0.35,
+    "x_mentions":     0.30,
+    "google_trends":  0.25,
+    "news_impact":    0.10,
 }
 
 
@@ -227,65 +230,102 @@ def score_movies(movies: List[Dict[str, Any]],
 
     weights = outlet_weights or {}
 
-    yt_views = _youtube_views(movies)
-    yt_eng   = _youtube_engagement(movies)
-    gt       = _google_trends(movies)
-    nis      = _news_impact(movies, weights)
-    xm       = _x_mentions(movies)
+    # -----------------------------------------------------------------------
+    # ALTITUDE — size/capacity of attention (log-scaled, normalized)
+    # -----------------------------------------------------------------------
+    # Raw signal extraction (log-scaled)
+    raw_yt = [math.log(1 + float((m.get("youtube_velocity") or {}).get("views_24h", 0)
+                                  or (m.get("youtube") or {}).get("views", 0)))
+              for m in movies]
+    raw_x  = [math.log(1 + float(m.get("x_mentions", 0))) for m in movies]
+    raw_gt = [math.log(1 + float(m.get("trends", 0))) for m in movies]
+    raw_ni = [math.log(1 + sum(weights.get(n.get("source", ""), 0.3)
+              for n in (m.get("news_mentions") or [])))
+              for m in movies]
 
-    # Pass 1: compute baseline per movie (weighted sum of source scores)
-    baselines: List[float] = []
+    # Normalize each signal across the universe (0..1)
+    norm_yt = _normalize(raw_yt)
+    norm_x  = _normalize(raw_x)
+    norm_gt = _normalize(raw_gt)
+    norm_ni = _normalize(raw_ni)
+
+    # Altitude = weighted sum
+    ALTITUDE_W = {"yt": 0.35, "x": 0.30, "gt": 0.25, "ni": 0.10}
+    altitudes: List[float] = []
     for i in range(len(movies)):
-        bl = (
-            yt_views[i] * WEIGHTS["youtube_views"]  +
-            xm[i]       * WEIGHTS["x_mentions"]     +
-            gt[i]       * WEIGHTS["google_trends"]  +
-            nis[i]      * WEIGHTS["news_impact"]
+        alt = (
+            norm_yt[i] * ALTITUDE_W["yt"] +
+            norm_x[i]  * ALTITUDE_W["x"]  +
+            norm_gt[i] * ALTITUDE_W["gt"] +
+            norm_ni[i] * ALTITUDE_W["ni"]
         )
-        baselines.append(bl)
+        altitudes.append(alt)
 
-    # Pass 2: compute short (avg of last 3 data points) and acceleration.
-    # _momentum_history holds the last 3 baseline values per movie.
-    # On first run there's no history, so short = baseline and accel = 0.
+    # -----------------------------------------------------------------------
+    # VELOCITY — movement / momentum (deltas normalized by sqrt of Altitude)
+    # -----------------------------------------------------------------------
+    # Delta computation: compare current signal to previous pulse's value
+    # stored in _momentum_history on each movie dict
+    VELOCITY_W = {"dx": 0.40, "dgt": 0.30, "dyt": 0.20, "dni": 0.10}
+    velocities: List[float] = []
+
     for i, m in enumerate(movies):
         history = list(m.get("_momentum_history") or [])
-        history.append(baselines[i])
-        # Keep only last 3
-        history = history[-3:]
-        m["_momentum_history"] = history
+        prev = history[-1] if history else {}
 
-    shorts: List[float] = []
-    accels: List[float] = []
-    for i, m in enumerate(movies):
-        history = m["_momentum_history"]
-        short = sum(history) / len(history)
-        shorts.append(short)
+        # Compute deltas (current - previous, clamped to 0 minimum)
+        dx  = max(0, raw_x[i]  - prev.get("x", 0))
+        dgt = max(0, raw_gt[i] - prev.get("gt", 0))
+        dyt = max(0, raw_yt[i] - prev.get("yt", 0))
+        dni = max(0, raw_ni[i] - prev.get("ni", 0))
 
-        # Acceleration: difference between current short and previous short window
-        if len(history) >= 2:
-            prev_short = sum(history[:-1]) / len(history[:-1])
-            accel = short - prev_short
-        else:
-            accel = 0.0
-        accels.append(accel)
+        raw_vel = (
+            dx  * VELOCITY_W["dx"]  +
+            dgt * VELOCITY_W["dgt"] +
+            dyt * VELOCITY_W["dyt"] +
+            dni * VELOCITY_W["dni"]
+        )
+        # Normalize by sqrt(altitude) — high-altitude titles need bigger deltas
+        vel = raw_vel / math.sqrt(altitudes[i] + 0.01)
+        velocities.append(vel)
 
-    # Normalize short and acceleration across the batch
-    norm_short = _normalize(shorts)
-    # Acceleration can be negative — shift to 0-based before normalizing
-    accel_min = min(accels) if accels else 0.0
-    shifted_accels = [a - accel_min for a in accels]
-    norm_accel = _normalize(shifted_accels)
-    norm_baseline = _normalize(baselines)
+        # Save current signals for next pulse's delta computation
+        m["_momentum_history"] = [{"x": raw_x[i], "gt": raw_gt[i],
+                                   "yt": raw_yt[i], "ni": raw_ni[i]}]
 
-    # Pass 3: HypeScore formula
+    norm_vel = _normalize(velocities)
+
+    # -----------------------------------------------------------------------
+    # CONSENSUS — signal breadth (how many sources confirm attention)
+    # -----------------------------------------------------------------------
+    medians = {
+        "yt": sorted(raw_yt)[len(raw_yt) // 2] if raw_yt else 0,
+        "x":  sorted(raw_x)[len(raw_x) // 2] if raw_x else 0,
+        "gt": sorted(raw_gt)[len(raw_gt) // 2] if raw_gt else 0,
+        "ni": sorted(raw_ni)[len(raw_ni) // 2] if raw_ni else 0,
+    }
+
+    consensus_vals: List[float] = []
+    for i in range(len(movies)):
+        active = sum([
+            1 if raw_yt[i] > medians["yt"] else 0,
+            1 if raw_x[i]  > medians["x"]  else 0,
+            1 if raw_gt[i] > medians["gt"] else 0,
+            1 if raw_ni[i] > medians["ni"] else 0,
+        ])
+        consensus_vals.append(active / 4.0)
+
+    # -----------------------------------------------------------------------
+    # HYPE SCORE = 0.50 × Altitude + 0.30 × Velocity + 0.20 × Consensus
+    # -----------------------------------------------------------------------
+    norm_alt = _normalize(altitudes)
     raw_scores: List[float] = []
     for i in range(len(movies)):
-        momentum = (
-            0.4 * norm_short[i] +
-            0.2 * norm_accel[i] +
-            0.4 * norm_baseline[i]
-        )
-        hype = momentum * math.log(1 + baselines[i]) * 1000
+        hype = (
+            0.50 * norm_alt[i] +
+            0.30 * norm_vel[i] +
+            0.20 * consensus_vals[i]
+        ) * 1000
         raw_scores.append(hype)
 
     # Pass 4: calibrated Rating (100-1500 absolute scale)
@@ -325,14 +365,15 @@ def score_movies(movies: List[Dict[str, Any]],
 
     for i, m in enumerate(movies):
         sub = {
-            "youtube_views":      round(yt_views[i], 4),
-            "youtube_engagement": round(yt_eng[i],   4),
-            "google_trends":      round(gt[i],       4),
-            "news_impact":        round(nis[i],      4),
-            "x_mentions":         round(xm[i],       4),
-            "baseline":           round(baselines[i], 4),
-            "short":              round(shorts[i],    4),
-            "acceleration":       round(accels[i],    4),
+            "altitude":           round(altitudes[i], 4),
+            "velocity":           round(velocities[i], 4),
+            "consensus":          round(consensus_vals[i], 4),
+            "norm_altitude":      round(norm_alt[i], 4),
+            "norm_velocity":      round(norm_vel[i], 4),
+            "youtube_views":      round(norm_yt[i], 4),
+            "x_mentions":         round(norm_x[i], 4),
+            "google_trends":      round(norm_gt[i], 4),
+            "news_impact":        round(norm_ni[i], 4),
             "raw_hype":           round(raw_scores[i], 4),
         }
         raw_rating = _calibrate(raw_scores[i])
@@ -380,8 +421,9 @@ def score_movies(movies: List[Dict[str, Any]],
         m["days_since_release"] = _days_out if _days_out > 0 else 0
         m["scores"]        = {"1d": smoothed, "7d": smoothed, "30d": smoothed}
         m["sentiment_pct"] = _sentiment_pct(m)
-        # Clean up internal field
-        del m["_momentum_history"]
+        # Clean up internal field (keep history for next pulse's velocity)
+        if "_momentum_history" in m:
+            del m["_momentum_history"]
 
     # Persist smoothed ratings for next pulse
     try:
