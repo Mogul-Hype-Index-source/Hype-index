@@ -2,7 +2,8 @@
 MoviePass Hype Index V2 — Theatrical Attention Model
 =====================================================
 
-Hype Score = 0.50 × Altitude + 0.30 × Velocity + 0.20 × Consensus
+Hype Rank Score = 0.75 × Altitude + 0.25 × Consensus
+Velocity computed separately for movers/alerts (not in rank)
 
     HYPE_SCORE = (
         0.4 × normalize(short) +
@@ -316,25 +317,25 @@ def score_movies(movies: List[Dict[str, Any]],
         consensus_vals.append(active / 4.0)
 
     # -----------------------------------------------------------------------
-    # HYPE SCORE = 0.50 × Altitude + 0.30 × Velocity + 0.20 × Consensus
+    # HYPE RANK SCORE = 0.75 × Altitude + 0.25 × Consensus
+    # Velocity is computed but NOT used in rank — used for movers/alerts only
     # -----------------------------------------------------------------------
     norm_alt = _normalize(altitudes)
     raw_scores: List[float] = []
     for i in range(len(movies)):
         hype = (
-            0.50 * norm_alt[i] +
-            0.30 * norm_vel[i] +
-            0.20 * consensus_vals[i]
+            0.75 * norm_alt[i] +
+            0.25 * consensus_vals[i]
         ) * 1000
         raw_scores.append(hype)
 
     # Pass 4: calibrated Rating (100-1500 absolute scale)
-    # Curve: raw^0.50 × 74, capped at 1500. Anchored so:
-    #   raw ~295 → ~1270 (today's top), raw ~150 → ~900, raw ~100 → ~740
+    # Linear scale: raw × 1.5, capped at 1500
+    # Formula produces raw 0-1000, maps to 0-1500 with headroom
     def _calibrate(raw: float) -> int:
         if raw <= 0:
             return 0
-        return min(1500, int(round(raw ** 0.50 * 74)))
+        return min(1500, int(round(raw * 1.5)))
 
     RATING_BANDS = [
         (1350, "GENERATIONAL"),
