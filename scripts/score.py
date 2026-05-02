@@ -41,10 +41,10 @@ from typing import Any, Dict, List
 LOG = logging.getLogger("score")
 
 WEIGHTS = {
-    "youtube_views":  0.45,
-    "x_mentions":     0.30,
-    "google_trends":  0.15,
-    "news_impact":    0.10,
+    "youtube_views":  0.50,   # velocity (views_today / 7d avg) — primary momentum signal
+    "x_mentions":     0.25,   # social conversation — reduced from 0.30
+    "google_trends":  0.15,   # search interest — unchanged
+    "news_impact":    0.10,   # press coverage — unchanged
 }
 
 
@@ -345,17 +345,26 @@ def score_movies(movies: List[Dict[str, Any]],
         else:
             smoothed = raw_rating
 
-        # Theatrical lifecycle decay — suppress post-theatrical titles
+        # Theatrical lifecycle — boost opening titles, decay post-theatrical
         rd = m.get("release_date") or ""
         try:
             from datetime import datetime as _dt, timezone as _tz
             _rel = _dt.strptime(rd, "%Y-%m-%d").replace(tzinfo=_tz.utc)
             _days_out = (_dt.now(_tz.utc) - _rel).days  # positive = released
+            _days_until = -_days_out  # positive = upcoming
         except (ValueError, TypeError):
             _days_out = 0
+            _days_until = 0
 
+        # Upcoming boost
+        if _days_until > 0 and _days_until <= 30:
+            smoothed = int(smoothed * 1.15)  # pre-release peak boost
+        elif _days_out > 0 and _days_out <= 14:
+            smoothed = int(smoothed * 1.10)  # opening window boost
+
+        # Post-theatrical decay
         if _days_out > 120:
-            smoothed = int(smoothed * 0.1)  # hard fade
+            smoothed = int(smoothed * 0.1)
         elif _days_out > 90:
             smoothed = int(smoothed * 0.3)
         elif _days_out > 60:
