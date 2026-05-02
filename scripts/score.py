@@ -365,11 +365,11 @@ def score_movies(movies: List[Dict[str, Any]],
 
     for i, m in enumerate(movies):
         sub = {
-            "altitude":           round(altitudes[i], 4),
-            "velocity":           round(velocities[i], 4),
+            "altitude":           round(norm_alt[i], 4),
+            "velocity":           round(norm_vel[i], 4),
             "consensus":          round(consensus_vals[i], 4),
-            "norm_altitude":      round(norm_alt[i], 4),
-            "norm_velocity":      round(norm_vel[i], 4),
+            "altitude_raw":       round(altitudes[i], 4),
+            "velocity_raw":       round(velocities[i], 4),
             "youtube_views":      round(norm_yt[i], 4),
             "x_mentions":         round(norm_x[i], 4),
             "google_trends":      round(norm_gt[i], 4),
