@@ -543,10 +543,10 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
         prev = snap_by_id.get(tid)
 
         if prev:
-            # X mentions delta
+            # X mentions delta (can be negative — 7-day rolling window shrinks as old tweets age out)
             curr_x = int(m.get("x_mentions") or 0)
             prev_x = int(prev.get("x_mentions") or 0)
-            m["x_mentions_24h"] = max(0, curr_x - prev_x) if curr_x > 0 and prev_x > 0 else None
+            m["x_mentions_24h"] = (curr_x - prev_x) if curr_x > 0 or prev_x > 0 else None
 
             # YouTube views delta — use view snapshot files for accuracy
             tid_str = str(tid)
