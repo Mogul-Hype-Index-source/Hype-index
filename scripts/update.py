@@ -492,6 +492,80 @@ def _enrich_and_return_pairings(pairings: List[Dict[str, Any]],
 
 
 # ---------------------------------------------------------------------------
+# True 24-hour signal deltas from historical snapshots
+# ---------------------------------------------------------------------------
+
+def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
+    """
+    Compute true 24h deltas for each movie by comparing current values
+    to the closest snapshot from ~24h ago. Mutates movies in place.
+
+    Fields added:
+        x_mentions_24h, youtube_views_24h, google_delta_24h, news_24h
+    """
+    yesterday = (today - timedelta(days=1)).date().isoformat()
+
+    # Try yesterday's snapshot, fall back to 2 days ago
+    snap = _load_snapshot(yesterday)
+    if not snap:
+        two_days = (today - timedelta(days=2)).date().isoformat()
+        snap = _load_snapshot(two_days)
+
+    if not snap:
+        # No valid 24h history — set all to null
+        for m in movies:
+            m["x_mentions_24h"] = None
+            m["youtube_views_24h"] = None
+            m["google_delta_24h"] = None
+            m["news_24h"] = None
+        LOG.info("24h deltas: no valid snapshot found — all null")
+        return
+
+    # Build lookup from snapshot
+    snap_by_id: Dict[int, Dict[str, Any]] = {}
+    for sm in (snap.get("movies") or []):
+        tid = sm.get("tmdb_id")
+        if tid:
+            snap_by_id[tid] = sm
+
+    computed = 0
+    for m in movies:
+        tid = m.get("tmdb_id")
+        prev = snap_by_id.get(tid)
+
+        if prev:
+            # X mentions delta
+            curr_x = int(m.get("x_mentions") or 0)
+            prev_x = int(prev.get("x_mentions") or 0)
+            m["x_mentions_24h"] = max(0, curr_x - prev_x) if curr_x > 0 and prev_x > 0 else None
+
+            # YouTube views delta
+            curr_yt = int(m.get("youtube_views") or 0)
+            prev_yt = int(prev.get("youtube_views") or 0)
+            m["youtube_views_24h"] = max(0, curr_yt - prev_yt) if curr_yt > 0 and prev_yt > 0 else None
+
+            # Google Trends delta
+            curr_gt = int(m.get("trends") or 0)
+            prev_gt = int(prev.get("trends") or 0)
+            m["google_delta_24h"] = curr_gt - prev_gt
+
+            # News delta — count articles not in previous snapshot
+            curr_headlines = set(n.get("headline", "") for n in (m.get("news_mentions") or []))
+            prev_headlines = set(n.get("headline", "") for n in (prev.get("news_mentions") or []))
+            m["news_24h"] = len(curr_headlines - prev_headlines)
+
+            computed += 1
+        else:
+            # New title — no history
+            m["x_mentions_24h"] = None
+            m["youtube_views_24h"] = None
+            m["google_delta_24h"] = None
+            m["news_24h"] = None
+
+    LOG.info("24h deltas: computed for %d/%d movies", computed, len(movies))
+
+
+# ---------------------------------------------------------------------------
 # Assemble the public index.json the frontend reads
 # ---------------------------------------------------------------------------
 
@@ -615,6 +689,10 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "event_youtube_views": int(m.get("event_youtube_views") or 0),
             "event_boost":    bool(int(m.get("event_youtube_views") or 0) > 0 or any(n.get("is_event") for n in (m.get("news_mentions") or []))),
             "x_mentions":     int(m.get("x_mentions") or 0),
+            "x_mentions_24h": m.get("x_mentions_24h"),
+            "youtube_views_24h": m.get("youtube_views_24h"),
+            "google_delta_24h": m.get("google_delta_24h"),
+            "news_24h":       m.get("news_24h"),
             "x_status":       m.get("x_status") or ("live" if int(m.get("x_mentions") or 0) > 0 else "pending"),
             "mentions":       int(len(m.get("news_mentions") or []) + int(m.get("x_mentions") or 0)),
             "sentiment_pct":  int(m.get("sentiment_pct", 50)),
@@ -736,6 +814,10 @@ def run_once(limit: Optional[int] = None, *, skip_fetch: bool = False,
 
     # 2a. Save view snapshot for tomorrow's velocity calculation
     _save_view_snapshot(raw["movies"], generated_at.date().isoformat())
+
+    # 2b. Compute true 24h signal deltas from historical snapshots
+    _compute_24h_deltas(scored, generated_at)
+
     payload = build_index_payload(
         scored, raw["news"], generated_at,
         poster_base=cfg.get("tmdb_image_base", "https://image.tmdb.org/t/p/w185"),
