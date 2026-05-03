@@ -502,6 +502,10 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
 
     Fields added:
         x_mentions_24h, youtube_views_24h, google_delta_24h, news_24h
+
+    YouTube views use the dedicated view snapshot files
+    (data/historical/views/) which capture actual API responses,
+    not the main snapshot (which stores cached/stale values).
     """
     yesterday = (today - timedelta(days=1)).date().isoformat()
 
@@ -510,6 +514,11 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
     if not snap:
         two_days = (today - timedelta(days=2)).date().isoformat()
         snap = _load_snapshot(two_days)
+
+    # Load YouTube view snapshots separately (more accurate than main snapshot)
+    yt_snap_prev = _load_view_snapshot(yesterday)
+    if not yt_snap_prev:
+        yt_snap_prev = _load_view_snapshot((today - timedelta(days=2)).date().isoformat())
 
     if not snap:
         # No valid 24h history — set all to null
@@ -539,10 +548,19 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
             prev_x = int(prev.get("x_mentions") or 0)
             m["x_mentions_24h"] = max(0, curr_x - prev_x) if curr_x > 0 and prev_x > 0 else None
 
-            # YouTube views delta
-            curr_yt = int(m.get("youtube_views") or 0)
-            prev_yt = int(prev.get("youtube_views") or 0)
-            m["youtube_views_24h"] = max(0, curr_yt - prev_yt) if curr_yt > 0 and prev_yt > 0 else None
+            # YouTube views delta — use view snapshot files for accuracy
+            tid_str = str(tid)
+            curr_yt = int((m.get("youtube") or {}).get("views", 0) or m.get("youtube_views") or 0)
+            prev_yt_snap = yt_snap_prev.get(tid_str, {}) if yt_snap_prev else {}
+            prev_yt = int(prev_yt_snap.get("views", 0))
+            if curr_yt > 0 and prev_yt > 0 and curr_yt != prev_yt:
+                m["youtube_views_24h"] = max(0, curr_yt - prev_yt)
+            elif curr_yt > 0 and prev_yt > 0:
+                # Same value — stale, mark as null not 0
+                m["youtube_views_24h"] = None
+                m["youtube_views_24h_stale"] = True
+            else:
+                m["youtube_views_24h"] = None
 
             # Google Trends delta
             curr_gt = int(m.get("trends") or 0)
