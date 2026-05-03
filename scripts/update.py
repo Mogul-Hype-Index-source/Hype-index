@@ -548,17 +548,28 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
             prev_x = int(prev.get("x_mentions") or 0)
             m["x_mentions_24h"] = (curr_x - prev_x) if curr_x > 0 or prev_x > 0 else None
 
-            # YouTube views delta — use view snapshot files for accuracy
+            # YouTube views delta — scan back through view snapshots to find
+            # the most recent DIFFERENT value (YouTube's counter updates slowly,
+            # so consecutive snapshots often have identical counts)
             tid_str = str(tid)
             curr_yt = int((m.get("youtube") or {}).get("views", 0) or m.get("youtube_views") or 0)
-            prev_yt_snap = yt_snap_prev.get(tid_str, {}) if yt_snap_prev else {}
-            prev_yt = int(prev_yt_snap.get("views", 0))
-            if curr_yt > 0 and prev_yt > 0 and curr_yt != prev_yt:
-                m["youtube_views_24h"] = max(0, curr_yt - prev_yt)
-            elif curr_yt > 0 and prev_yt > 0:
-                # Same value — stale, mark as null not 0
-                m["youtube_views_24h"] = None
-                m["youtube_views_24h_stale"] = True
+            prev_yt = 0
+            days_back = 0
+            for lookback in range(1, 8):  # scan up to 7 days back
+                snap_date = (today - timedelta(days=lookback)).date().isoformat()
+                old_snap = _load_view_snapshot(snap_date)
+                if old_snap:
+                    old_views = int(old_snap.get(tid_str, {}).get("views", 0))
+                    if old_views > 0 and old_views != curr_yt:
+                        prev_yt = old_views
+                        days_back = lookback
+                        break
+
+            if curr_yt > 0 and prev_yt > 0:
+                m["youtube_views_24h"] = curr_yt - prev_yt
+                m["youtube_views_24h_days"] = days_back  # how many days back the delta spans
+            elif curr_yt > 0:
+                m["youtube_views_24h"] = None  # no prior different value found
             else:
                 m["youtube_views_24h"] = None
 
