@@ -1061,17 +1061,19 @@ def _get_x_bearer_token() -> Optional[str]:
     return os.environ.get("X_BEARER_TOKEN") or None
 
 
-def fetch_x_mention_count(query: str, bearer_token: str) -> int:
+def fetch_x_mention_count(query: str, bearer_token: str) -> tuple:
     """
-    GET /2/tweets/counts/recent for `query`.
-    Returns total tweet count over the last 7 days (summed from hourly buckets).
-    Returns 0 on any failure. Raises RuntimeError on 402/403 so the
+    GET /2/tweets/counts/recent for `query` with hourly granularity.
+    Returns (total_7d, volume_24h) tuple.
+    total_7d:   total tweet count over the last 7 days.
+    volume_24h: sum of the most recent 24 hourly buckets (true 24h volume).
+    Returns (0, 0) on any failure. Raises RuntimeError on 402/403 so the
     batch caller can short-circuit instead of retrying every query.
     """
     try:
         r = requests.get(
             f"{X_API_BASE}/tweets/counts/recent",
-            params={"query": query},
+            params={"query": query, "granularity": "hour"},
             headers={"Authorization": f"Bearer {bearer_token}"},
             timeout=REQUEST_TIMEOUT,
         )
@@ -1081,14 +1083,19 @@ def fetch_x_mention_count(query: str, bearer_token: str) -> int:
             raise RuntimeError("X API rate limited (429)")
         if r.status_code != 200:
             LOG.warning("X API HTTP %s for query: %s", r.status_code, query[:60])
-            return 0
+            return (0, 0)
         data = r.json()
     except RuntimeError:
         raise
     except Exception as exc:  # noqa: BLE001
         LOG.warning("X API request failed: %s", exc)
-        return 0
-    return int(data.get("meta", {}).get("total_tweet_count", 0))
+        return (0, 0)
+    total_7d = int(data.get("meta", {}).get("total_tweet_count", 0))
+    # Sum last 24 hourly buckets for true 24h volume
+    buckets = data.get("data") or []
+    buckets.sort(key=lambda b: b.get("start", ""), reverse=True)
+    volume_24h = sum(b.get("tweet_count", 0) for b in buckets[:24])
+    return (total_7d, volume_24h)
 
 
 def fetch_x_mentions_batch(queries: Dict[str, str],
@@ -1096,7 +1103,8 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
     """
     Fetch X mention counts for a {key: search_query} dict.
     Never overwrites fresh data with zero on 429. Preserves last successful
-    cached values when rate limited. Returns {key: count}.
+    cached values when rate limited. Returns {key: count} (7-day totals).
+    Also stores true 24h volumes in the cache under "counts_24h".
     """
     bearer = _get_x_bearer_token()
     if not bearer:
@@ -1106,21 +1114,24 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
     cache = _load_json(_x_cache_path())
     age = _cache_age(cache)
     cached_counts: Dict[str, int] = cache.get("counts") or {}
+    cached_24h: Dict[str, int] = cache.get("counts_24h") or {}
 
     if not force and age is not None and age < timedelta(hours=X_MENTIONS_TTL_HOURS):
         LOG.info("X mentions cache HIT — %d entries, age %s", len(cached_counts), age)
         return {k: int(cached_counts.get(k, 0)) for k in queries}
 
     out: Dict[str, int] = {}
+    out_24h: Dict[str, int] = {}
     fresh_fetched = 0
     stale_used = 0
     rate_limited = False
 
     for key, q in queries.items():
         try:
-            count = fetch_x_mention_count(q, bearer)
-            if count > 0:
-                out[key] = count
+            total_7d, volume_24h = fetch_x_mention_count(q, bearer)
+            if total_7d > 0:
+                out[key] = total_7d
+                out_24h[key] = volume_24h
                 fresh_fetched += 1
             else:
                 # API returned 0 — could be real zero or soft failure
@@ -1128,9 +1139,11 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
                 prev = cached_counts.get(key, 0)
                 if prev > 0:
                     out[key] = prev
+                    out_24h[key] = cached_24h.get(key, 0)
                     stale_used += 1
                 else:
                     out[key] = 0
+                    out_24h[key] = 0
         except RuntimeError as exc:
             # 402/403/429 — stop hammering, preserve all remaining cached values
             rate_limited = True
@@ -1140,26 +1153,33 @@ def fetch_x_mentions_batch(queries: Dict[str, str],
                 if remaining_key not in out:
                     prev = cached_counts.get(remaining_key, 0)
                     out[remaining_key] = prev
+                    out_24h[remaining_key] = cached_24h.get(remaining_key, 0)
                     if prev > 0:
                         stale_used += 1
             break
         except Exception as exc:  # noqa: BLE001
             LOG.warning("X mentions failed for %s: %s", key, exc)
             out[key] = int(cached_counts.get(key, 0))
+            out_24h[key] = int(cached_24h.get(key, 0))
             if out[key] > 0:
                 stale_used += 1
         time.sleep(1.0)
 
     # Always save — merge fresh data into existing cache, never lose old values
     merged = dict(cached_counts)
+    merged_24h = dict(cached_24h)
     for k, v in out.items():
         if v > 0 or k not in merged:
             merged[k] = v
+    for k, v in out_24h.items():
+        if v > 0 or k not in merged_24h:
+            merged_24h[k] = v
     _save_json(_x_cache_path(), {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "x_last_success_at": datetime.now(timezone.utc).isoformat() if fresh_fetched > 0 else cache.get("x_last_success_at", ""),
         "x_stale": rate_limited or fresh_fetched == 0,
         "counts": merged,
+        "counts_24h": merged_24h,
     })
 
     LOG.info("X batch: fetched=%d, stale_used=%d, rate_limited=%s",
@@ -1395,6 +1415,23 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     LOG.info("Manual movie merge: %d V1 titles, %d new (total %d)",
              len(manual), added, len(movies))
 
+    # Overlay x_query overrides from manual_movies.json
+    try:
+        manual_entries = json.loads(MANUAL_MOVIES_PATH.read_text()) if MANUAL_MOVIES_PATH.exists() else []
+    except Exception:
+        manual_entries = []
+    _xq_by_title: Dict[str, str] = {}
+    for e in manual_entries:
+        xq = e.get("x_query")
+        if xq and e.get("title"):
+            _xq_by_title[e["title"].strip()] = xq
+    if _xq_by_title:
+        for m in movies:
+            xq = _xq_by_title.get(m["title"])
+            if xq:
+                m["x_query"] = xq
+        LOG.info("X query overrides: %d titles", len(_xq_by_title))
+
     # 2. News feeds (single shot, used for both ticker + per-movie NIS)
     entity_tags = _load_entity_tags()
     news_items = fetch_news_feeds(feeds, entity_tags=entity_tags)
@@ -1501,8 +1538,12 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
     if x_mode == "movies":
         for m in movies:
             key = f"movie:{m['tmdb_id']}"
-            clean_title = _sanitize_title(m["title"])
-            x_queries[key] = f'"{clean_title}"'
+            # Use x_query override if provided (from manual_movies.json)
+            if m.get("x_query"):
+                x_queries[key] = m["x_query"]
+            else:
+                clean_title = _sanitize_title(m["title"])
+                x_queries[key] = f'"{clean_title}"'
     elif x_mode == "people":
         seen_people: set = set()
         for m in movies:
@@ -1582,7 +1623,9 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
 
     # Apply to movies — use fresh data or preserve existing from cache
     # Also read from cache for movies not queried this pulse
-    _movie_x_cache = (_load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")).get("counts") or {}
+    _movie_x_blob = _load_json(REPO_ROOT / "data" / "cache" / "x_mentions.json")
+    _movie_x_cache = _movie_x_blob.get("counts") or {}
+    _movie_x_24h = _movie_x_blob.get("counts_24h") or {}
     for m in movies:
         key = f"movie:{m['tmdb_id']}"
         if key in x_counts and x_counts[key] > 0:
@@ -1598,6 +1641,8 @@ def fetch_all(config: Dict[str, Any], limit: Optional[int] = None) -> Dict[str, 
         else:
             m.setdefault("x_mentions", 0)
             m["x_status"] = "pending"
+        # True 24h volume from hourly buckets (not a delta)
+        m["x_mentions_24h_vol"] = _movie_x_24h.get(key, 0)
 
     x_hits = sum(1 for m in movies if m.get("x_mentions", 0) > 0)
     LOG.info("X mentions coverage (%s): %d/%d (%d%%)", x_mode, x_hits, len(movies),
@@ -1648,7 +1693,12 @@ def _news_mentions_for(title: str, news_items: List[Dict[str, Any]]) -> List[Dic
                     continue
         except Exception:  # noqa: BLE001
             pass
-        mention: Dict[str, Any] = {"source": item.get("source", ""), "headline": item.get("headline", "")}
+        mention: Dict[str, Any] = {
+            "source": item.get("source", ""),
+            "headline": item.get("headline", ""),
+            "published": item.get("published", ""),
+            "url": item.get("url", ""),
+        }
         if item.get("is_event"):
             mention["is_event"] = True
         out.append(mention)

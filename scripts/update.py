@@ -501,12 +501,18 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
     to the closest snapshot from ~24h ago. Mutates movies in place.
 
     Fields added:
-        x_mentions_24h, youtube_views_24h, google_delta_24h, news_24h
+        x_mentions_24h (true 24h volume from API hourly buckets),
+        youtube_views_24h, google_delta_24h, news_24h
 
     YouTube views use the dedicated view snapshot files
     (data/historical/views/) which capture actual API responses,
     not the main snapshot (which stores cached/stale values).
     """
+    # Load true 24h X volumes from X cache (works even with --skip-fetch)
+    _x_path = CACHE_DIR / "x_mentions.json"
+    _x_cache = json.loads(_x_path.read_text()) if _x_path.exists() else {}
+    _x_24h_cache: Dict[str, int] = _x_cache.get("counts_24h") or {}
+
     yesterday = (today - timedelta(days=1)).date().isoformat()
 
     # Try yesterday's snapshot, fall back to 2 days ago
@@ -521,13 +527,16 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
         yt_snap_prev = _load_view_snapshot((today - timedelta(days=2)).date().isoformat())
 
     if not snap:
-        # No valid 24h history — set all to null
+        # No valid 24h history — YouTube/Trends/News are null
+        # X 24h uses true volume from API, so it can still be set
         for m in movies:
-            m["x_mentions_24h"] = None
+            x_key = f"movie:{m.get('tmdb_id')}"
+            vol = m.get("x_mentions_24h_vol") or _x_24h_cache.get(x_key, 0)
+            m["x_mentions_24h"] = vol if vol and vol > 0 else None
             m["youtube_views_24h"] = None
             m["google_delta_24h"] = None
             m["news_24h"] = None
-        LOG.info("24h deltas: no valid snapshot found — all null")
+        LOG.info("24h deltas: no valid snapshot found — YT/GT/News null, X uses API 24h volume")
         return
 
     # Build lookup from snapshot
@@ -543,10 +552,10 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
         prev = snap_by_id.get(tid)
 
         if prev:
-            # X mentions delta (can be negative — 7-day rolling window shrinks as old tweets age out)
-            curr_x = int(m.get("x_mentions") or 0)
-            prev_x = int(prev.get("x_mentions") or 0)
-            m["x_mentions_24h"] = (curr_x - prev_x) if curr_x > 0 or prev_x > 0 else None
+            # X 24h: true volume from API hourly buckets (not a delta)
+            x_key = f"movie:{m.get('tmdb_id')}"
+            vol = m.get("x_mentions_24h_vol") or _x_24h_cache.get(x_key, 0)
+            m["x_mentions_24h"] = vol if vol and vol > 0 else None
 
             # YouTube views delta — scan back through view snapshots to find
             # the most recent DIFFERENT value (YouTube's counter updates slowly,
@@ -578,15 +587,36 @@ def _compute_24h_deltas(movies: List[Dict[str, Any]], today: datetime) -> None:
             prev_gt = int(prev.get("trends") or 0)
             m["google_delta_24h"] = curr_gt - prev_gt
 
-            # News delta — count articles not in previous snapshot
-            curr_headlines = set(n.get("headline", "") for n in (m.get("news_mentions") or []))
-            prev_headlines = set(n.get("headline", "") for n in (prev.get("news_mentions") or []))
-            m["news_24h"] = len(curr_headlines - prev_headlines)
+            # News 24h — count articles published in the last 24 hours
+            # Uses published timestamp when available, falls back to headline set diff
+            cutoff_24h = (today - timedelta(hours=24)).isoformat()
+            news_mentions = m.get("news_mentions") or []
+            has_timestamps = any(n.get("published") for n in news_mentions)
+            if has_timestamps:
+                # Count articles with published timestamp in last 24h
+                # Deduplicate by (source, headline) to avoid counting the same story twice
+                seen_news: set = set()
+                news_count = 0
+                for n in news_mentions:
+                    pub = n.get("published", "")
+                    if pub and pub >= cutoff_24h:
+                        key = (n.get("source", ""), n.get("headline", ""))
+                        if key not in seen_news:
+                            seen_news.add(key)
+                            news_count += 1
+                m["news_24h"] = news_count
+            else:
+                # Fallback: headline set difference vs yesterday
+                curr_headlines = set(n.get("headline", "") for n in news_mentions)
+                prev_headlines = set(n.get("headline", "") for n in (prev.get("news_mentions") or []))
+                m["news_24h"] = len(curr_headlines - prev_headlines)
 
             computed += 1
         else:
-            # New title — no history
-            m["x_mentions_24h"] = None
+            # New title — no history for YT/GT/News, X uses true volume
+            x_key = f"movie:{m.get('tmdb_id')}"
+            vol = m.get("x_mentions_24h_vol") or _x_24h_cache.get(x_key, 0)
+            m["x_mentions_24h"] = vol if vol and vol > 0 else None
             m["youtube_views_24h"] = None
             m["google_delta_24h"] = None
             m["news_24h"] = None
@@ -631,13 +661,28 @@ def build_index_payload(scored: List[Dict[str, Any]],
     _enrich_people_with_history(people["directors"], "directors")
 
     # Movers strip — top 5 up, top 5 down by absolute move
+    # Filter to theatrical window: only titles releasing within 365 days
+    def _in_theatrical_window(m: Dict[str, Any]) -> bool:
+        rd = m.get("release_date", "")
+        if not rd:
+            return False
+        try:
+            rel = datetime.strptime(rd, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            days_out = (rel - generated_at).days
+            days_since = (generated_at - rel).days
+            # Include: up to 365 days before release, up to 90 days after
+            return days_out <= 365 and days_since <= 90
+        except (ValueError, TypeError):
+            return False
+
+    theatrical = [m for m in scored if _in_theatrical_window(m)]
     movers_up = sorted(
-        (m for m in scored if (m.get("move") or 0) > 0),
+        (m for m in theatrical if (m.get("move") or 0) > 0),
         key=lambda m: m["move"],
         reverse=True,
     )[:5]
     movers_down = sorted(
-        (m for m in scored if (m.get("move") or 0) < 0),
+        (m for m in theatrical if (m.get("move") or 0) < 0),
         key=lambda m: m["move"],
     )[:5]
 
@@ -733,6 +778,7 @@ def build_index_payload(scored: List[Dict[str, Any]],
             "is_new":         bool(m.get("is_new", False)),
             "hot":            bool(m.get("hot", False)),
             "release_type":   m.get("release_type", "unknown"),
+            "theatrical_active": _in_theatrical_window(m),
             "highlight":      bool(m.get("highlight", False)),
             "sub_scores":     m.get("sub_scores", {}),
             "cast_full":      m.get("cast_full") or [],

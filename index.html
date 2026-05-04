@@ -1302,6 +1302,12 @@ function renderMoviesTable(){
     m._score = (m.scores && m.scores[w] != null) ? m.scores[w] : m.score;
   });
 
+  // 1D view: filter to theatrical-active movies only (excludes far-future
+  // titles like video game adaptations 600+ days out)
+  if (w === '1d') {
+    movies = movies.filter(m => m.theatrical_active !== false);
+  }
+
   // Always rank by score now that the sort row is gone
   movies.sort((a,b) => (b._score || 0) - (a._score || 0));
 
