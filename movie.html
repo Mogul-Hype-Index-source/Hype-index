@@ -431,24 +431,24 @@ function render(data, m){
   // game backend is wired up.
   const pickPct = Math.max(35, Math.min(92, Math.round(50 + (m.score - 800) * 0.22)));
 
-  // Sub-scores — rescale to 0..100 for visual bars.
-  // update.py writes sub_scores (normalized 0..1 per component) which we
-  // multiply by the rough weight to show breakdown totals per V1.
+  // Per-source signal strength bars (each shown 0-100 from the backend's
+  // 0..1 normalized sub_score). These are diagnostic only — the hero
+  // Hype Rating below is the canonical score from scripts/score.py, which
+  // also factors in consensus, smoothing, and release-window multipliers
+  // that aren't represented in these four bars.
   const sub = m.sub_scores || {};
   const brkItems = [
-    { l:'YOUTUBE VELOCITY', k:'youtube_views',      w:0.35, max:350 },
-    { l:'X MENTIONS',       k:'x_mentions',         w:0.25, max:250 },
-    { l:'GOOGLE TRENDS',    k:'google_trends',      w:0.15, max:150 },
-    { l:'NEWS IMPACT',      k:'news_impact',        w:0.05, max:50  },
+    { l:'CONTENT',  k:'youtube_views'  },
+    { l:'MENTIONS', k:'x_mentions'     },
+    { l:'SEARCH',   k:'google_trends'  },
+    { l:'NEWS',     k:'news_impact'    },
   ];
-  let brkTotal = 0;
   const brkRows = brkItems.map(item => {
-    const v = (sub[item.k] || 0) * item.max;
-    brkTotal += v;
+    const pct = Math.max(0, Math.min(100, Math.round((sub[item.k] || 0) * 100)));
     return `<div class="brk-row">
       <span class="l">${item.l}</span>
-      <div class="bar"><i style="width:${(v/item.max)*100}%"></i></div>
-      <span class="v">${Math.round(v)}/${item.max}</span>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <span class="v">${pct}/100</span>
     </div>`;
   }).join('');
 
@@ -494,7 +494,7 @@ function render(data, m){
     <section class="hero">
       <div class="hero-poster" style="${poster}"></div>
       <div class="hero-meta">
-        <div class="sub">${escapeHtml(rel)}${m.release_date ? '<span class="dot"></span>' : ''}Directed by ${dirHtml}</div>
+        <div class="sub">Release Date: ${escapeHtml(rel)}${m.release_date ? '<span class="dot"></span>' : ''}Directed by ${dirHtml}</div>
         <h1>${escapeHtml(m.title || '')}</h1>
         <div class="score-badge">
           <div class="v" id="ratingVal">${m.score}</div>
@@ -520,16 +520,19 @@ function render(data, m){
       </section>
 
       <section class="panel">
-        <h3>SCORE BREAKDOWN</h3>
+        <h3>SIGNAL BREAKDOWN</h3>
         ${brkRows}
         <div class="brk-total">
-          <span class="l">TOTAL HYPE</span>
-          <span class="v">${Math.round(brkTotal)}<span style="font-size:16px;color:var(--mute)">/1000</span></span>
+          <span class="l">HYPE RATING</span>
+          <span class="v">${m.score}</span>
+        </div>
+        <div style="margin-top:8px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);letter-spacing:.04em;line-height:1.45">
+          Per-source signal strength (0–100). Final Hype Rating also reflects consensus, smoothing, and release-window weighting.
         </div>
       </section>
 
       <section class="panel">
-        <h3>X MENTIONS</h3>
+        <h3>MENTIONS</h3>
         <div class="src-row">
           <div class="src-stat"><div class="v">${m.x_status === 'pending' ? '—' : fmtCount(m.x_mentions || 0)}</div><div class="l">7-Day Total${m.x_status === 'stale' ? ' <span style="color:var(--mute);font-size:9px">● stale</span>' : ''}</div></div>
           <div class="src-stat"><div class="v">${fmtCount(m.mentions || 0)}</div><div class="l">Total Mentions</div></div>
@@ -537,7 +540,7 @@ function render(data, m){
       </section>
 
       <section class="panel">
-        <h3>YOUTUBE TRAILER</h3>
+        <h3>CONTENT</h3>
         <div class="src-row">
           <div class="src-stat"><div class="v">${yv}</div><div class="l">Views</div></div>
           <div class="src-stat"><div class="v">${yl}</div><div class="l">Likes</div></div>

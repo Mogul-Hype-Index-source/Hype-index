@@ -267,6 +267,12 @@
   .movers .label small{display:block;color:var(--mute);font-family:'Rajdhani',sans-serif;letter-spacing:.12em;font-size:11px}
   .movers .strip{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
   .movers .strip::-webkit-scrollbar{display:none}
+  /* Visual grouping — green/up movers render left, red/down movers right.
+     Pure flex `order` reflow: doesn't touch the underlying DOM, data
+     array, magnitude sort, or click targets. Within each group the
+     existing magnitude sort is preserved (CSS `order` is stable). */
+  .movers .strip .mcard.up   { order: 0; }
+  .movers .strip .mcard.down { order: 1; }
   /* Mover cards reduced ~40% — 160px → 96px so 3-3.5 cards fit on a 390px
      phone viewport without scrolling. Poster + title + delta scale together. */
   .mcard{
@@ -447,11 +453,15 @@
   .score.flash{color:var(--gold-flash);text-shadow:0 0 14px var(--score-glow);transition:color .08s ease-out,text-shadow .08s ease-out}
   /* Score cell — lock the number's right edge in a fixed position so it
      never shifts when an up/down trend arrow appears next to it. The arrow
-     is absolutely positioned in a 22px gutter to the right of the number. */
-  .rankings tbody td.score-cell{position:relative;text-align:right;padding-right:14px}
-  .rankings thead th.score-cell{padding-right:14px}
+     is absolutely positioned in a gutter to the right of the number.
+     Right inset (28px) is set wide so the score visually mirrors the left
+     inset of the poster column rather than kissing the table edge.
+     Universal: the same .score-cell class is rendered for movie rows
+     and people (actor/director) rows, so this aligns all three tabs. */
+  .rankings tbody td.score-cell{position:relative;text-align:right;padding-right:28px}
+  .rankings thead th.score-cell{padding-right:28px}
   .rankings tbody td.score-cell .trend{
-    position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    position:absolute;right:22px;top:50%;transform:translateY(-50%);
     margin-left:0;line-height:1;
   }
 
@@ -559,6 +569,70 @@
     30%  { transform:scale(1.12);  color:var(--gold-flash); text-shadow:0 0 12px var(--score-glow); }
     100% { transform:scale(1);     color:var(--gold); text-shadow:none; }
   }
+  /* ---------- Top 20 Attention Pulse — ambient micro-activity ----------
+     Soft gold shimmer applied to a handful of top-20 rows every ~1s as
+     ambient market activity between real data pulses. Layers harmlessly
+     on top of the .flash-*/.pulse-* energy classes via its own .atn-*
+     namespace. Higher amplitude than the original draft — still glow
+     only, no scale, no fake score change, no row reorder. */
+  .score.atn-shimmer{ animation: atn-score-shimmer 1.5s ease-out; }
+  @keyframes atn-score-shimmer{
+    0%   { text-shadow: 0 0 0 transparent; }
+    35%  { text-shadow: 0 0 10px rgba(212,175,55,.85), 0 0 22px rgba(212,175,55,.40); }
+    100% { text-shadow: 0 0 0 transparent; }
+  }
+  /* Poster pulse — outer glow ONLY. No ring/border (a previous 2px ring
+     read as a white box at certain zoom levels and against the dark
+     theme). Just a soft halo that blooms and fades. */
+  .poster.atn-shimmer{ animation: atn-poster-shimmer 1.7s ease-out; }
+  @keyframes atn-poster-shimmer{
+    0%   { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+    40%  { box-shadow: 0 0 22px rgba(212,175,55,.40); }
+    100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+  }
+  .atn-metric{ animation: atn-metric-shimmer 1.3s ease-out; }
+  @keyframes atn-metric-shimmer{
+    0%   { color: inherit; text-shadow: 0 0 0 transparent; }
+    30%  { color: var(--gold); text-shadow: 0 0 8px rgba(212,175,55,.55); }
+    100% { color: inherit; text-shadow: 0 0 0 transparent; }
+  }
+  /* Row panel bloom — the entire row lights up at once in a flat,
+     solid color overlay, then fades. No gradient, no inset halo, no
+     directional movement. Three color variants signal the type of
+     attention: green = positive energy, red = negative pressure,
+     gold = neutral/high activity. Color is chosen per-row by the JS
+     engine from the row's existing sentiment + movement signals. */
+  tr.atn-panel-green > td{ animation: atn-panel-green 1.5s ease-out; }
+  tr.atn-panel-red   > td{ animation: atn-panel-red   1.5s ease-out; }
+  tr.atn-panel-gold  > td{ animation: atn-panel-gold  1.5s ease-out; }
+  @keyframes atn-panel-green{
+    0%   { background-color: transparent; }
+    18%  { background-color: rgba(0,255,135,.22); }
+    100% { background-color: transparent; }
+  }
+  @keyframes atn-panel-red{
+    0%   { background-color: transparent; }
+    18%  { background-color: rgba(255,59,92,.22); }
+    100% { background-color: transparent; }
+  }
+  @keyframes atn-panel-gold{
+    0%   { background-color: transparent; }
+    18%  { background-color: rgba(212,175,55,.22); }
+    100% { background-color: transparent; }
+  }
+
+  /* Full-table refresh flash — one-shot flat gold bloom across the
+     rankings wrapper, fired only when autoRefresh() actually swaps in
+     a new generated_at payload. Marks the moment new data arrives so
+     the FLIP rank glide that follows reads as "the market just moved",
+     not as ambient micro-activity. */
+  .rankings-wrap.atn-refresh{ animation: atn-table-refresh 1.5s ease-out; }
+  @keyframes atn-table-refresh{
+    0%   { background-color: transparent; }
+    16%  { background-color: rgba(212,175,55,.10); }
+    100% { background-color: transparent; }
+  }
+
   .trend{display:inline-block;margin-left:6px;font-family:'Rajdhani',sans-serif;font-size:11px;color:var(--mute);vertical-align:middle}
   .trend.up{color:var(--green)}
   .trend.down{color:var(--red)}
@@ -662,7 +736,7 @@
     .rankings thead th:first-child,
     .rankings tbody td:first-child{padding-left:14px}
     .rankings thead th:last-child,
-    .rankings tbody td:last-child{padding-right:14px}
+    .rankings tbody td:last-child{padding-right:28px}
 
     .rk-cell{gap:4px}
     .rk{font-size:22px}
@@ -1028,13 +1102,26 @@ function _applyRowReorder(){
     if (!firstRect) return;
     const dy = firstRect.top - lastRect.top;
     if (Math.abs(dy) < 2) return;  // didn't move
-    // FLIP: Invert + Play
+    // FLIP: Invert + Play — premium glide easing
     row.style.transition = 'none';
     row.style.transform = `translateY(${dy}px)`;
     row.offsetHeight;  // force reflow
-    row.style.transition = 'transform .3s ease-out';
+    row.style.transition = 'transform .55s cubic-bezier(.22,.61,.36,1)';
     row.style.transform = '';
   });
+}
+
+// One-shot full-table flash. Fires only from autoRefresh() once we've
+// confirmed the server returned a new generated_at — i.e. a real data
+// swap, not a polled no-op. Visual cue only; the data swap and FLIP
+// reorder are driven entirely by the new payload.
+function _flashTableRefresh(){
+  const wrap = document.querySelector('.rankings-wrap');
+  if (!wrap) return;
+  wrap.classList.remove('atn-refresh');
+  void wrap.offsetWidth;        // restart cleanly if mid-animation
+  wrap.classList.add('atn-refresh');
+  setTimeout(() => wrap.classList.remove('atn-refresh'), 1600);
 }
 
 async function autoRefresh(){
@@ -1042,12 +1129,14 @@ async function autoRefresh(){
     const res = await fetch('data/v2.json?t=' + Date.now(), {cache:'no-store'});
     if (!res.ok) return;
     const newData = await res.json();
-    // Only update if generation timestamp changed
+    // Only update if generation timestamp changed — gates everything
+    // below (flash + reorder + tick) on a *real* data refresh.
     if (newData.generated_at === (STATE.data || {}).generated_at) return;
     _captureScores();
     STATE.data = newData;
-    _applyRowReorder();
-    _applyTickFlash();
+    _flashTableRefresh();   // table-wide bloom marks the data swap
+    _applyRowReorder();     // FLIP glide for any actual rank changes
+    _applyTickFlash();      // score tick-up/down on rows whose score changed
     console.info('[refresh] data updated', newData.generated_at);
   } catch(e) {
     console.warn('[refresh] failed', e.message);
@@ -1368,7 +1457,7 @@ function renderMovieRow(m, rank){
         <div class="ent">
           <div class="title">${escapeHtml(m.title||'')} ${badges.join(' ')}</div>
           <div class="strip">
-            <span><span class="lbl">VIEWS</span><span class="num-col">${fmtCount(m.youtube_views)}</span>${(m.views_today||0)>0?`<span class="views-delta">+${fmtCount(m.views_today)} today</span>`:''}</span>
+            <span><span class="lbl">CONTENT</span><span class="num-col">${fmtCount(m.youtube_views)}</span>${(m.views_today||0)>0?`<span class="views-delta">+${fmtCount(m.views_today)} today</span>`:''}</span>
             <span><span class="lbl">MENTIONS</span><span class="num-col">${m.x_status==='pending'?'—':fmtCount(m.mentions)}${m.x_status==='stale'?'<span style="color:var(--mute);font-size:8px"> ●</span>':''}</span></span>
             <span class="sent-mini">
               <span class="lbl sent-lbl-short">SENT</span>
@@ -1448,7 +1537,7 @@ function renderPersonRow(p, rank, detail){
           <div class="title">${escapeHtml(p.name||'')} ${badges.join(' ')}</div>
           <div class="strip">
             <span><span class="lbl">FILMS</span><span class="val">${p.film_count || 0}</span></span>
-            <span><span class="lbl">X MENTIONS</span><span class="num-col">${p.x_status==='pending'?'—':fmtCount(p.mentions || p.x_mentions || 0)}${p.x_status==='stale'?'<span style="color:var(--mute);font-size:8px"> ●</span>':''}</span></span>
+            <span><span class="lbl">MENTIONS</span><span class="num-col">${p.x_status==='pending'?'—':fmtCount(p.mentions || p.x_mentions || 0)}${p.x_status==='stale'?'<span style="color:var(--mute);font-size:8px"> ●</span>':''}</span></span>
             <span class="sent-mini">
               <span class="lbl sent-lbl-short">SENT</span>
               <span class="lbl sent-lbl-full">SENTIMENT</span>
@@ -1773,6 +1862,152 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   setTimeout(rankSwap,    65000);   // first swap ~65s after load
 
   console.info('[anim] all timers armed: tickMentions (3-6s), pulseScore (4-7s), refreshPulse (8-15s), redDrop (6-12s), moverPulse (5s), rankSwap (60-90s)');
+})();
+
+/* ===========================================================
+   TOP 20 ATTENTION PULSE — ambient market shimmer
+   ===========================================================
+   Picks 2–5 rows from the top 20 every 800–1600ms and applies
+   a brief gold shimmer to one of four targets per row: the
+   score number, the poster edge, a row-wide light sweep, or
+   one of the micro-metric chips. Designed as ambient visual
+   activity between real data pulses — does NOT change scores,
+   ranks, counts, or any underlying data.
+
+   Lives in its own .atn-* class namespace so it layers cleanly
+   on top of the louder live-energy engine above (flash-*,
+   pulse-*). Lower ranks (#21+) are deliberately untouched so
+   attention visually concentrates at the top of the board.
+
+   Per-tick: random 2–5 distinct rows, each staggered 0–280ms
+   so they don't all land on the same animation frame (keeps
+   the table from feeling synchronized or rhythmic).
+
+   Per-row target distribution:
+     35%  score number shimmer (text glow)
+     25%  row panel bloom — full row lights up in one of three colors
+          (green = positive, red = negative, gold = neutral attention)
+          followed 150–350ms later by a chained pulse on one of the
+          row's Content / Mentions / Sentiment micro-metrics
+     20%  poster edge glow (soft halo only — no border ring)
+     20%  a standalone Content / Mentions / Sentiment chip pulse
+   =========================================================== */
+(function attentionPulse(){
+  console.info('[atn] attention-pulse engine booting (top 20, 800–1600ms, 2–5 rows)');
+
+  const rand = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+
+  function topTwenty(){
+    const tbody = document.getElementById('tbody');
+    if (!tbody) return [];
+    // tr.clickable excludes the decile-break divider rows that the
+    // renderer interleaves every 10 rows.
+    return Array.from(tbody.querySelectorAll('tr.clickable')).slice(0, 20);
+  }
+
+  // Apply a CSS class briefly, restarting any in-flight animation cleanly.
+  function flashClass(el, cls, holdMs){
+    if (!el) return;
+    el.classList.remove(cls);
+    void el.offsetWidth;
+    el.classList.add(cls);
+    setTimeout(() => el.classList.remove(cls), holdMs);
+  }
+
+  // Row-panel color is derived from the row's own DOM — the displayed
+  // sentiment percentage (.sent-mini .val) and the rank-movement arrow
+  // class (.mv up/down/flat). Same shape for movie rows and people
+  // (actor/director) rows, so one picker covers all three categories.
+  //
+  // Logic (matches sentColor() thresholds at lines ~917):
+  //   sentiment ≥ 60                       → green  (positive)
+  //   40 ≤ sentiment < 60                  → gold   (neutral / yellow)
+  //   sentiment < 40 AND moved down (.mv.down) → red    (low + falling)
+  //   sentiment < 40 otherwise             → gold   (low but not falling)
+  //   sentiment missing / unparseable      → gold   (default)
+  function pickPanelColor(row){
+    const sentEl = row.querySelector('.sent-mini .val');
+    const sent = sentEl ? parseFloat(sentEl.textContent) : NaN;
+    if (!Number.isFinite(sent)) return 'gold';
+    if (sent >= 60) return 'green';
+    if (sent >= 40) return 'gold';
+    const mv = row.querySelector('.mv');
+    if (mv && mv.classList.contains('down')) return 'red';
+    return 'gold';
+  }
+
+  // Collect the row's "alive" micro-metric chips: Content (.num-col on a
+  // movie row), Mentions (.num-col on movie and people rows), and
+  // Sentiment (.sent-mini .val on all rows). Deliberately excludes the
+  // FILMS .val on people rows since it's a static count that shouldn't
+  // pulse like a live signal. Same selector covers movies, actors, and
+  // directors because they share the same .strip / .sent-mini shape.
+  function liveMetrics(row){
+    return row.querySelectorAll('.ent .strip .num-col, .ent .strip .sent-mini .val');
+  }
+
+  // Pulse `count` distinct live metric chips in this row. If the row
+  // has fewer chips than requested, pulse all of them. Each chip is
+  // staggered 0–120ms after the previous so they don't all fire on
+  // exactly the same frame — feels like a small ripple, not a snap.
+  function pulseMetrics(row, count){
+    const metrics = Array.from(liveMetrics(row));
+    if (!metrics.length) return;
+    const n = Math.min(count, metrics.length);
+    // Fisher-Yates partial shuffle for n unique picks
+    for (let i = 0; i < n; i++) {
+      const j = i + Math.floor(Math.random() * (metrics.length - i));
+      [metrics[i], metrics[j]] = [metrics[j], metrics[i]];
+    }
+    for (let i = 0; i < n; i++) {
+      const el = metrics[i];
+      setTimeout(() => flashClass(el, 'atn-metric', 1400), i * rand(40, 120));
+    }
+  }
+
+  function shimmerRow(row){
+    const r = Math.random();
+    if (r < 0.35) {
+      // Score text glow
+      flashClass(row.querySelector('.score'), 'atn-shimmer', 1600);
+    } else if (r < 0.60) {
+      // Full-row panel bloom — color reflects this row's own sentiment +
+      // movement signals (see pickPanelColor). Blooms across all cells
+      // simultaneously in a flat color, then fades.
+      flashClass(row, 'atn-panel-' + pickPanelColor(row), 1550);
+      // Chained follow-up: 150–350ms later, pulse 2–3 of the row's
+      // live micro-metrics (Content / Mentions / Sentiment / etc.).
+      // Reads as "row lights up → multiple signals in it tick".
+      const chipCount = rand(2, 3);
+      setTimeout(() => pulseMetrics(row, chipCount), rand(150, 350));
+    } else if (r < 0.80) {
+      // Poster edge soft halo (no border ring)
+      flashClass(row.querySelector('.poster'), 'atn-shimmer', 1800);
+    } else {
+      // Standalone micro-metric chip pulse — one chip in this branch
+      pulseMetrics(row, 1);
+    }
+  }
+
+  function tick(){
+    const rows = topTwenty();
+    if (rows.length) {
+      const n = rand(2, Math.min(5, rows.length));
+      const chosen = new Set();
+      while (chosen.size < n) {
+        chosen.add(rows[Math.floor(Math.random() * rows.length)]);
+      }
+      [...chosen].forEach(row => {
+        // Stagger within the tick — multi-row pulses spread across a
+        // narrow window so they read as related-but-independent activity.
+        setTimeout(() => shimmerRow(row), rand(0, 280));
+      });
+    }
+    setTimeout(tick, rand(800, 1600));
+  }
+
+  // Start ~2.5s after page load so the initial render settles first.
+  setTimeout(tick, 2500);
 })();
 
 loadData();
